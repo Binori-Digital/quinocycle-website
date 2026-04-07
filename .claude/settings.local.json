@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/Users/Gino -maxdepth 3 -type d -name *node_modules* -prune -o -type f \\\\\\(-name package.json -o -name docker-compose.yml -o -name Dockerfile \\\\\\) -print)",
+      "Bash(find /c/Users/Gino/wiseflow -maxdepth 2 -type f \\\\\\(-name package.json -o -name *.config.* -o -name Dockerfile -o -name docker-compose* -o -name requirements.txt -o -name *.py \\\\\\))",
+      "Bash(find /c/Users/Gino -maxdepth 3 -type f -name .env*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npm install:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/)"
+    ]
+  }
+}

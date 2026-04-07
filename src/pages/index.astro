@@ -1,0 +1,1095 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const WA_NUMBER = '60168916381'; // TODO: Replace with your WhatsApp number
+const WA_LINK   = `https://wa.me/${WA_NUMBER}?text=Hi%20Quinocycle!%20I%20would%20like%20to%20enquire%20about%20your%20carton%20boxes.`;
+
+const audiences = [
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+    label: 'Retail & SME',
+    headline: 'Never run out of packaging.',
+    body: 'Stock up once, save more per box. Consistent supply for your daily operations — no more last-minute runs.',
+    cta: 'Shop Now',
+    href: '/shop?segment=retail',
+  },
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>`,
+    label: 'Online Sellers',
+    headline: 'Right box for every order.',
+    body: 'From Shopee to TikTok Shop — get bulk boxes in sizes that protect your products and impress your buyers.',
+    cta: 'See Sizes',
+    href: '/shop?segment=online',
+  },
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
+    label: 'Mover Companies',
+    headline: 'High volume. Fast turnaround.',
+    body: 'Moving more clients every month? We handle your bulk orders reliably so you can keep every move on schedule.',
+    cta: 'Get a Quote',
+    href: `${WA_LINK}&text=Hi%20Quinocycle!%20I%20am%20a%20mover%20company%20looking%20for%20bulk%20box%20supply.`,
+  },
+  {
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>`,
+    label: 'Logistics & Warehousing',
+    headline: 'Reliable supply. B2B-ready.',
+    body: 'Consistent quality, volume pricing, and proper invoicing. We understand logistics — so your supply never stops.',
+    cta: 'Talk to Us',
+    href: WA_LINK,
+  },
+];
+
+const steps = [
+  { num: '01', title: 'Browse & Pick', body: 'Choose your box type (new or used) and the sizes you need from our fixed price catalogue.' },
+  { num: '02', title: 'Order or WhatsApp', body: 'Place your order online or send us a WhatsApp. Min. order is RM 1,000. We confirm within 1 business day.' },
+  { num: '03', title: 'We Deliver', body: 'Fast delivery across Peninsular Malaysia. Track your shipment and unbox your savings.' },
+];
+
+const features = [
+  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>`, title: 'Fixed Wholesale Prices', body: 'No hidden fees. No negotiation fatigue. Transparent pricing you can budget around.' },
+  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>`, title: 'New & Used Options', body: 'Budget-conscious? Used boxes save up to 50%. Eco-conscious? Recycling reduces your carbon footprint.' },
+  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`, title: 'Fast Delivery', body: 'Covering all of Peninsular Malaysia. Efficient logistics so you get your boxes when you need them.' },
+  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>`, title: 'WhatsApp Support', body: 'Talk to a real person fast. We respond on WhatsApp within business hours — no robots, no waiting.' },
+];
+
+const testimonials = [
+  { quote: 'We order 500+ boxes a month for our Shopee store. Quinocycle is the most reliable supplier we\'ve worked with. Pricing is clear, no surprises.', name: 'Ahmad Razif', role: 'Shopee Seller, Selangor' },
+  { quote: 'As a mover company, box supply is critical. Quinocycle delivers on time every time. The used boxes are strong and our customers love that we\'re being eco-friendly.', name: 'Lim Wei Hong', role: 'Operations Manager, KL Movers' },
+  { quote: 'Setup costs were high when we started our warehouse. Quinocycle\'s wholesale pricing helped us cut packaging cost by 40%. B2B invoice is a bonus.', name: 'Siti Norzalina', role: 'Logistics Manager, Penang' },
+];
+
+const blogPosts = [
+  {
+    slug: 'choose-right-carton-box-size',
+    category: 'Packaging Tips',
+    title: 'How to Choose the Right Carton Box Size for Your Business',
+    excerpt: 'Choosing the wrong size wastes money and damages goods. Here\'s the simple guide to sizing your boxes perfectly.',
+    date: '2026-03-15',
+    readTime: '5 min',
+  },
+  {
+    slug: 'new-vs-used-carton-boxes',
+    category: 'Buyer Guide',
+    title: 'New vs Used Carton Boxes — Which is Right for You?',
+    excerpt: 'Used boxes can cut your packaging cost by up to 50%. But are they right for your products? We break it down.',
+    date: '2026-03-08',
+    readTime: '4 min',
+  },
+  {
+    slug: 'cut-packaging-costs-online-seller',
+    category: 'Business Tips',
+    title: 'How Online Sellers Can Cut Packaging Costs by 40%',
+    excerpt: 'Small margins matter for e-commerce. These practical steps will save you thousands in packaging every year.',
+    date: '2026-02-28',
+    readTime: '6 min',
+  },
+];
+---
+
+<Layout>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="tag tag--dark fade-up">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
+          Wholesale Carton Box Supplier · Malaysia
+        </div>
+
+        <h1 class="hero__heading fade-up fade-up-1">
+          Box More.<br />
+          <span class="hero__heading-accent">Spend Less.</span>
+        </h1>
+
+        <p class="hero__sub fade-up fade-up-2">
+          New &amp; used carton boxes in bulk — fixed wholesale prices, Peninsular Malaysia delivery.
+          Trusted by retailers, online sellers, movers and logistics companies.
+        </p>
+
+        <div class="hero__meta fade-up fade-up-3">
+          <span class="meta-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Min. Order RM 1,000
+          </span>
+          <span class="meta-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Fixed Wholesale Pricing
+          </span>
+          <span class="meta-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Peninsular Malaysia Delivery
+          </span>
+        </div>
+
+        <div class="hero__ctas fade-up fade-up-4">
+          <a href="/shop" class="btn btn-primary btn-lg">Browse the Shop</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero visual: CSS box illustration -->
+      <div class="hero__visual fade-up fade-up-2" aria-hidden="true">
+        <div class="box-art">
+          <div class="box-art__word">BOXES</div>
+          <div class="box-art__stack">
+            <div class="box-art__box box-art__box--1"></div>
+            <div class="box-art__box box-art__box--2"></div>
+            <div class="box-art__box box-art__box--3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="hero__scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===================== TRUST BAR ===================== -->
+  <section class="trust-bar" aria-label="Trust indicators">
+    <div class="trust-bar__inner">
+      <div class="marquee-track">
+        {[...Array(2)].map(() => (
+          <>
+            <span class="trust-item">500+ Businesses Served</span>
+            <span class="trust-dot" aria-hidden="true">◆</span>
+            <span class="trust-item">Fixed Wholesale Pricing</span>
+            <span class="trust-dot" aria-hidden="true">◆</span>
+            <span class="trust-item">New &amp; Used Boxes Available</span>
+            <span class="trust-dot" aria-hidden="true">◆</span>
+            <span class="trust-item">Peninsular Malaysia Delivery</span>
+            <span class="trust-dot" aria-hidden="true">◆</span>
+            <span class="trust-item">Min. Order RM 1,000</span>
+            <span class="trust-dot" aria-hidden="true">◆</span>
+            <span class="trust-item">WhatsApp Support</span>
+            <span class="trust-dot" aria-hidden="true">◆</span>
+            <span class="trust-item">Eco-Friendly Used Boxes</span>
+            <span class="trust-dot" aria-hidden="true">◆</span>
+          </>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHO WE SERVE ===================== -->
+  <section class="audiences" id="who-we-serve">
+    <div class="container">
+      <div class="section-eyebrow">Who We Serve</div>
+      <h2 class="section-title audiences__heading">
+        Built for Malaysian<br />businesses that move.
+      </h2>
+
+      <div class="audiences__grid">
+        {audiences.map((a, i) => (
+          <div class="aud-card" style={`--delay: ${i * 0.1}s`}>
+            <div class="aud-card__icon" set:html={a.icon} />
+            <div class="aud-card__tag">{a.label}</div>
+            <h3 class="aud-card__title">{a.headline}</h3>
+            <p class="aud-card__body">{a.body}</p>
+            <a href={a.href} class="aud-card__link">
+              {a.cta}
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRODUCTS ===================== -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-eyebrow">What We Sell</div>
+      <h2 class="section-title products__heading">Two great options.<br />One trusted supplier.</h2>
+    </div>
+
+    <div class="products__split">
+      <!-- NEW BOXES -->
+      <div class="prod-panel prod-panel--new">
+        <div class="prod-panel__content">
+          <div class="tag tag--dark">New Boxes</div>
+          <h3 class="prod-panel__title">Brand New<br />Carton Boxes</h3>
+          <ul class="prod-panel__list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Consistent quality &amp; dimensions
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Single and double wall options
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Professional finish for e-commerce
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Available in S / M / L / XL sizes
+            </li>
+          </ul>
+          <div class="prod-panel__price">From <strong>RM 1.90</strong> / box</div>
+          <a href="/shop?filter=new" class="btn btn-dark">Shop New Boxes</a>
+        </div>
+        <div class="prod-panel__visual prod-panel__visual--new" aria-hidden="true">
+          <div class="box-illus box-illus--new">
+            <div class="box-illus__face box-illus__top"></div>
+            <div class="box-illus__face box-illus__front"></div>
+            <div class="box-illus__face box-illus__side"></div>
+          </div>
+          <div class="prod-badge prod-badge--new">NEW</div>
+        </div>
+      </div>
+
+      <!-- USED BOXES -->
+      <div class="prod-panel prod-panel--used">
+        <div class="prod-panel__visual prod-panel__visual--used" aria-hidden="true">
+          <div class="box-illus box-illus--used">
+            <div class="box-illus__face box-illus__top"></div>
+            <div class="box-illus__face box-illus__front"></div>
+            <div class="box-illus__face box-illus__side"></div>
+          </div>
+          <div class="prod-badge prod-badge--used">USED</div>
+        </div>
+        <div class="prod-panel__content">
+          <div class="tag tag--yellow">Used Boxes</div>
+          <h3 class="prod-panel__title prod-panel__title--light">Used &amp; Recycled<br />Carton Boxes</h3>
+          <ul class="prod-panel__list prod-panel__list--light">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Save up to 50% vs new boxes
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Still sturdy — quality checked
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Eco-friendly packaging choice
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Ideal for movers &amp; storage
+            </li>
+          </ul>
+          <div class="prod-panel__price prod-panel__price--light">From <strong>RM 0.90</strong> / box</div>
+          <a href="/shop?filter=used" class="btn btn-primary">Shop Used Boxes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOW IT WORKS ===================== -->
+  <section class="how-it-works">
+    <div class="container">
+      <div class="section-eyebrow" style="color: rgba(255,255,255,0.5)">How It Works</div>
+      <h2 class="section-title hiw__heading">Order in 3 simple steps.</h2>
+      <div class="hiw__steps">
+        {steps.map((s, i) => (
+          <div class="hiw-step" style={`--delay: ${i * 0.12}s`}>
+            <div class="hiw-step__num">{s.num}</div>
+            <div class="hiw-step__content">
+              <h3 class="hiw-step__title">{s.title}</h3>
+              <p class="hiw-step__body">{s.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="hiw__cta">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-lg">
+          Start Your Order
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHY CHOOSE ===================== -->
+  <section class="why">
+    <div class="container">
+      <div class="section-eyebrow">Why Quinocycle</div>
+      <h2 class="section-title why__heading">We make bulk buying<br />straightforward.</h2>
+      <div class="why__grid">
+        {features.map((f, i) => (
+          <div class="why-card" style={`--delay: ${i * 0.08}s`}>
+            <div class="why-card__icon" set:html={f.icon} />
+            <h3 class="why-card__title">{f.title}</h3>
+            <p class="why-card__body">{f.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-eyebrow">What Customers Say</div>
+      <h2 class="section-title testi__heading">Trusted by<br />businesses across Malaysia.</h2>
+      <div class="testi__grid">
+        {testimonials.map((t, i) => (
+          <div class="testi-card" style={`--delay: ${i * 0.1}s`}>
+            <div class="testi-card__quote-mark">"</div>
+            <p class="testi-card__quote">{t.quote}</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar" aria-hidden="true">{t.name[0]}</div>
+              <div>
+                <div class="testi-card__name">{t.name}</div>
+                <div class="testi-card__role">{t.role}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BLOG PREVIEW ===================== -->
+  <section class="blog-preview">
+    <div class="container">
+      <div class="blog-preview__header">
+        <div>
+          <div class="section-eyebrow">From the Blog</div>
+          <h2 class="section-title blog-preview__heading">Packaging tips &amp;<br />business insights.</h2>
+        </div>
+        <a href="/blog" class="btn btn-outline hide-mobile">View All Articles</a>
+      </div>
+
+      <div class="blog-preview__grid">
+        {blogPosts.map((p, i) => (
+          <a href={`/blog/${p.slug}`} class="blog-card" style={`--delay: ${i * 0.1}s`}>
+            <div class="blog-card__img-wrap">
+              <div class="blog-card__img-placeholder" aria-hidden="true">
+                <div class="blog-card__img-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="blog-card__body">
+              <div class="tag tag--yellow" style="font-size:0.62rem">{p.category}</div>
+              <h3 class="blog-card__title">{p.title}</h3>
+              <p class="blog-card__excerpt">{p.excerpt}</p>
+              <div class="blog-card__meta">
+                <time datetime={p.date}>{new Date(p.date).toLocaleDateString('en-MY', { day:'numeric', month:'short', year:'numeric' })}</time>
+                <span>{p.readTime} read</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="blog-preview__mobile-cta hide-desktop">
+        <a href="/blog" class="btn btn-outline">View All Articles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FINAL CTA ===================== -->
+  <section class="final-cta">
+    <div class="container final-cta__inner">
+      <div class="final-cta__content">
+        <div class="tag tag--yellow">Ready to Order?</div>
+        <h2 class="final-cta__heading">
+          Great prices.<br />Simple ordering.<br />
+          <span class="final-cta__heading-accent">Let's talk boxes.</span>
+        </h2>
+        <p class="final-cta__sub">
+          Minimum order RM 1,000 · Fixed pricing · Delivery across Peninsular Malaysia
+        </p>
+      </div>
+      <div class="final-cta__actions">
+        <a href="/shop" class="btn btn-primary btn-lg">Browse the Shop</a>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-outline-white btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+/* ====== HERO ====== */
+.hero {
+  min-height: calc(100vh - var(--nav-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: clamp(3rem, 6vw, 5rem);
+  position: relative;
+  overflow: hidden;
+}
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__visual { display: none; }
+}
+.hero__content { max-width: 600px; }
+.hero__heading {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(3.5rem, 7vw, 7.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-block: 1rem 1.25rem;
+  color: var(--black);
+}
+.hero__heading-accent {
+  color: var(--yellow);
+  -webkit-text-stroke: 2px var(--black);
+  paint-order: stroke fill;
+}
+.hero__sub {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.6;
+  color: var(--grey-600);
+  max-width: 480px;
+  margin-bottom: 1.5rem;
+}
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--grey-600);
+  background: var(--grey-100);
+  border: 1px solid var(--grey-200);
+  padding: 5px 10px;
+  border-radius: 100px;
+}
+.meta-chip svg { color: var(--yellow-dim); stroke: var(--yellow-dim); flex-shrink: 0; }
+.hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Box Art */
+.hero__visual { display: flex; justify-content: center; align-items: center; position: relative; }
+.box-art { position: relative; width: 100%; max-width: 420px; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; }
+.box-art__word {
+  position: absolute;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(5rem, 12vw, 10rem);
+  letter-spacing: -0.04em;
+  color: var(--yellow);
+  opacity: 0.15;
+  user-select: none;
+  z-index: 0;
+  white-space: nowrap;
+}
+.box-art__stack {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.box-art__box {
+  border: 3px solid var(--black);
+  border-radius: 4px;
+  background: var(--white);
+  box-shadow: 4px 4px 0 var(--black);
+  transition: transform 0.3s ease;
+}
+.box-art__box--1 { width: 160px; height: 90px; background: var(--yellow); }
+.box-art__box--2 { width: 200px; height: 110px; background: var(--white); }
+.box-art__box--3 { width: 240px; height: 130px; background: var(--grey-100); }
+.box-art__box--1:hover { transform: translateY(-4px); }
+.box-art__box--2:hover { transform: translateY(-4px); }
+.box-art__box--3:hover { transform: translateY(-4px); }
+
+/* Scroll hint */
+.hero__scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+}
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--grey-400), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.2); }
+}
+@media (max-width: 768px) { .hero__scroll { display: none; } }
+
+/* ====== TRUST BAR ====== */
+.trust-bar {
+  background: var(--black);
+  overflow: hidden;
+  padding-block: 14px;
+  border-top: 3px solid var(--yellow);
+  border-bottom: 3px solid var(--yellow);
+}
+.trust-bar__inner { overflow: hidden; }
+.trust-item {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  padding-inline: 2.5rem;
+  white-space: nowrap;
+}
+.trust-dot {
+  color: var(--yellow);
+  font-size: 0.5rem;
+  padding-inline: 0.25rem;
+  white-space: nowrap;
+}
+
+/* ====== AUDIENCES ====== */
+.audiences {
+  padding-block: var(--section-py);
+  background: var(--grey-50);
+}
+.audiences__heading {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 3rem;
+  max-width: 560px;
+}
+.audiences__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 1024px) { .audiences__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px)  { .audiences__grid { grid-template-columns: 1fr; } }
+
+.aud-card {
+  background: var(--white);
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s var(--ease-out-expo);
+}
+.aud-card:hover {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 3px var(--yellow-pale), var(--shadow-lift);
+  transform: translateY(-4px);
+}
+.aud-card__icon {
+  width: 40px;
+  height: 40px;
+  color: var(--black);
+}
+.aud-card__icon svg { width: 100%; height: 100%; }
+.aud-card__tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+}
+.aud-card__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.3rem;
+  line-height: 1.15;
+  color: var(--black);
+}
+.aud-card__body {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--grey-600);
+  flex: 1;
+}
+.aud-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-top: 0.5rem;
+  transition: gap 0.15s ease;
+}
+.aud-card__link:hover { gap: 10px; }
+.aud-card__link svg { flex-shrink: 0; }
+
+/* ====== PRODUCTS ====== */
+.products {
+  padding-block: var(--section-py);
+  background: var(--white);
+}
+.products__heading {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 3rem;
+}
+.products__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 3rem;
+}
+@media (max-width: 900px) {
+  .products__split { grid-template-columns: 1fr; }
+  .prod-panel--used .prod-panel__visual { order: -1; }
+}
+
+.prod-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+@media (max-width: 640px) {
+  .prod-panel { grid-template-columns: 1fr; }
+}
+
+.prod-panel--new { background: var(--grey-50); }
+.prod-panel--used { background: var(--black); }
+
+.prod-panel__content {
+  padding: clamp(2rem, 5vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  justify-content: center;
+}
+.prod-panel__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  color: var(--black);
+}
+.prod-panel__title--light { color: var(--white); }
+.prod-panel__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.prod-panel__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--grey-600);
+}
+.prod-panel__list li svg { color: var(--yellow-dim); stroke: var(--yellow-dim); flex-shrink: 0; margin-top: 2px; }
+.prod-panel__list--light li { color: rgba(255,255,255,0.7); }
+.prod-panel__list--light li svg { color: var(--yellow); stroke: var(--yellow); }
+.prod-panel__price {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--grey-600);
+  letter-spacing: 0.02em;
+}
+.prod-panel__price strong { font-size: 1.6rem; color: var(--black); }
+.prod-panel__price--light { color: rgba(255,255,255,0.6); }
+.prod-panel__price--light strong { color: var(--yellow); }
+
+.prod-panel__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  position: relative;
+}
+.prod-panel__visual--new { background: var(--yellow); }
+.prod-panel__visual--used { background: var(--black-soft); }
+
+/* CSS Box Illustration */
+.box-illus {
+  position: relative;
+  width: 120px;
+  height: 100px;
+  transform-style: preserve-3d;
+  transform: perspective(500px) rotateX(15deg) rotateY(-25deg);
+}
+.box-illus__face {
+  position: absolute;
+  border: 2px solid currentColor;
+}
+.box-illus--new .box-illus__face { color: var(--black); }
+.box-illus--used .box-illus__face { color: rgba(255,255,255,0.3); }
+
+.box-illus__front {
+  width: 100px; height: 80px;
+  background: var(--white);
+  bottom: 0; left: 10px;
+}
+.box-illus--used .box-illus__front { background: rgba(255,255,255,0.08); }
+.box-illus__side {
+  width: 40px; height: 80px;
+  background: var(--grey-200);
+  bottom: 0; right: 0;
+  transform: skewY(-30deg);
+  transform-origin: top right;
+}
+.box-illus--used .box-illus__side { background: rgba(255,255,255,0.04); }
+.box-illus__top {
+  width: 100px; height: 40px;
+  background: var(--grey-100);
+  top: 0; left: 10px;
+  transform: skewX(-30deg);
+  transform-origin: bottom left;
+}
+.box-illus--used .box-illus__top { background: rgba(255,255,255,0.06); }
+
+.prod-badge {
+  position: absolute;
+  top: 1.5rem; right: 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+.prod-badge--new { background: var(--black); color: var(--yellow); }
+.prod-badge--used { background: var(--yellow); color: var(--black); }
+
+/* ====== HOW IT WORKS ====== */
+.how-it-works {
+  background: var(--yellow);
+  padding-block: var(--section-py);
+}
+.hiw__heading {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: var(--black);
+  margin-bottom: 3rem;
+}
+.hiw__steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 768px) { .hiw__steps { grid-template-columns: 1fr; } }
+
+.hiw-step {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--black);
+  box-shadow: 6px 6px 0 var(--black);
+  transition: transform 0.2s var(--ease-out-expo), box-shadow 0.2s;
+}
+.hiw-step:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 var(--black);
+}
+.hiw-step__num {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--yellow);
+  -webkit-text-stroke: 2px var(--black);
+}
+.hiw-step__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--black);
+}
+.hiw-step__body {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--grey-600);
+}
+.hiw__cta { margin-top: 3rem; display: flex; justify-content: center; }
+
+/* ====== WHY ====== */
+.why {
+  padding-block: var(--section-py);
+  background: var(--white);
+}
+.why__heading {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 3rem;
+}
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 1024px) { .why__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px)  { .why__grid { grid-template-columns: 1fr; } }
+
+.why-card {
+  padding: 2rem 1.75rem;
+  background: var(--grey-50);
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color 0.2s, transform 0.2s var(--ease-out-expo);
+}
+.why-card:hover { border-color: var(--yellow); transform: translateY(-3px); }
+.why-card__icon {
+  width: 36px; height: 36px;
+  color: var(--black);
+}
+.why-card__icon svg { width: 100%; height: 100%; }
+.why-card__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--black);
+  line-height: 1.2;
+}
+.why-card__body { font-size: 0.875rem; line-height: 1.65; color: var(--grey-600); }
+
+/* ====== TESTIMONIALS ====== */
+.testimonials {
+  padding-block: var(--section-py);
+  background: var(--black);
+}
+.testi__heading {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+.testi__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 900px) { .testi__grid { grid-template-columns: 1fr; } }
+
+.testi-card {
+  background: var(--black-soft);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.testi-card:hover { border-color: var(--yellow); transform: translateY(-3px); }
+.testi-card__quote-mark {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 0.6;
+  color: var(--yellow);
+  opacity: 0.4;
+}
+.testi-card__quote {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.8);
+  flex: 1;
+}
+.testi-card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 1rem;
+}
+.testi-card__avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.testi-card__name {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--white);
+}
+.testi-card__role {
+  font-size: 0.75rem;
+  color: var(--grey-400);
+  font-family: var(--font-mono);
+}
+
+/* ====== BLOG PREVIEW ====== */
+.blog-preview {
+  padding-block: var(--section-py);
+  background: var(--grey-50);
+}
+.blog-preview__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+  gap: 1rem;
+}
+.blog-preview__heading {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-top: 0.5rem;
+}
+.blog-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 900px) { .blog-preview__grid { grid-template-columns: 1fr; } }
+.blog-preview__mobile-cta { margin-top: 2rem; display: flex; justify-content: center; }
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s var(--ease-out-expo), box-shadow 0.2s;
+}
+.blog-card:hover {
+  border-color: var(--yellow);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
+}
+.blog-card__img-wrap { overflow: hidden; }
+.blog-card__img-placeholder {
+  height: 180px;
+  background: linear-gradient(135deg, var(--grey-100) 0%, var(--grey-200) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s var(--ease-out-expo);
+}
+.blog-card:hover .blog-card__img-placeholder { transform: scale(1.03); }
+.blog-card__img-icon { color: var(--grey-400); opacity: 0.5; }
+.blog-card__body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+.blog-card__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  color: var(--black);
+  transition: color 0.15s;
+}
+.blog-card:hover .blog-card__title { color: var(--black); }
+.blog-card__excerpt {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: var(--grey-600);
+  flex: 1;
+}
+.blog-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--grey-400);
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--grey-100);
+}
+
+/* ====== FINAL CTA ====== */
+.final-cta {
+  background: var(--black);
+  padding-block: var(--section-py);
+  position: relative;
+  overflow: hidden;
+}
+.final-cta::before {
+  content: 'QUINOCYCLE';
+  position: absolute;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(5rem, 15vw, 15rem);
+  letter-spacing: -0.04em;
+  color: var(--white);
+  opacity: 0.025;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+.final-cta__inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .final-cta__inner { grid-template-columns: 1fr; }
+  .final-cta__actions { flex-direction: row; flex-wrap: wrap; }
+}
+.final-cta__content { display: flex; flex-direction: column; gap: 1rem; }
+.final-cta__heading {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+.final-cta__heading-accent { color: var(--yellow); }
+.final-cta__sub {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+}
+.final-cta__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+</style>

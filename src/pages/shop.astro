@@ -1,0 +1,799 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const WA_NUMBER = '60168916381'; // TODO: Replace with your WhatsApp number
+
+const products = [
+  // NEW BOXES
+  { id: 'n-s', condition: 'new', size: 'S', name: 'Small New Box', dims: '30 × 20 × 20 cm', wall: 'Single Wall', price: 1.90, minQty: 100, use: 'Accessories, small items, gifts' },
+  { id: 'n-m', condition: 'new', size: 'M', name: 'Medium New Box', dims: '40 × 30 × 25 cm', wall: 'Single Wall', price: 2.80, minQty: 100, use: 'Apparel, electronics, books' },
+  { id: 'n-l', condition: 'new', size: 'L', name: 'Large New Box', dims: '60 × 40 × 40 cm', wall: 'Double Wall', price: 4.50, minQty: 50, use: 'Home goods, bulk orders, moving' },
+  { id: 'n-xl', condition: 'new', size: 'XL', name: 'Extra Large New Box', dims: '70 × 50 × 50 cm', wall: 'Double Wall', price: 6.50, minQty: 50, use: 'Furniture parts, appliances, heavy goods' },
+  // USED BOXES
+  { id: 'u-s', condition: 'used', size: 'S', name: 'Small Used Box', dims: '~30 × 20 × 20 cm', wall: 'Single Wall', price: 0.90, minQty: 200, use: 'Storage, moving, seasonal packing' },
+  { id: 'u-m', condition: 'used', size: 'M', name: 'Medium Used Box', dims: '~40 × 30 × 25 cm', wall: 'Single Wall', price: 1.50, minQty: 150, use: 'Moving, general storage' },
+  { id: 'u-l', condition: 'used', size: 'L', name: 'Large Used Box', dims: '~60 × 40 × 40 cm', wall: 'Double Wall', price: 2.50, minQty: 100, use: 'Movers, warehouse, heavy storage' },
+  { id: 'u-xl', condition: 'used', size: 'XL', name: 'Extra Large Used Box', dims: '~70 × 50 × 50 cm', wall: 'Double Wall', price: 3.80, minQty: 50, use: 'Large moving jobs, bulk storage' },
+];
+---
+
+<Layout
+  title="Shop Carton Boxes — Quinocycle Wholesale"
+  description="Buy new and used carton boxes in bulk at fixed wholesale prices. Small, medium, large and XL sizes. Peninsular Malaysia delivery. Min order RM1,000."
+>
+  <!-- Page Header -->
+  <section class="shop-hero">
+    <div class="container">
+      <div class="section-eyebrow">Wholesale Catalogue</div>
+      <h1 class="shop-hero__title">Carton Boxes<br /><span>at wholesale prices.</span></h1>
+      <p class="shop-hero__sub">Fixed pricing · Min. order RM 1,000 · Peninsular Malaysia delivery</p>
+    </div>
+  </section>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar" id="filterBar">
+    <div class="container filter-bar__inner">
+      <div class="filter-group" id="filterGroup">
+        <button class="filter-btn filter-btn--active" data-filter="all">All Boxes</button>
+        <button class="filter-btn" data-filter="new">New Only</button>
+        <button class="filter-btn" data-filter="used">Used Only</button>
+        <button class="filter-btn" data-filter="S">Size S</button>
+        <button class="filter-btn" data-filter="M">Size M</button>
+        <button class="filter-btn" data-filter="L">Size L</button>
+        <button class="filter-btn" data-filter="XL">Size XL</button>
+      </div>
+      <button class="cart-toggle" id="cartToggle" aria-label="Open cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+        Cart
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- MOQ Notice -->
+  <div class="container">
+    <div class="moq-notice">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      Minimum order value is <strong>RM 1,000</strong>. Prices shown are per box. Add to cart and we'll send your order via WhatsApp for confirmation.
+    </div>
+  </div>
+
+  <!-- Product Grid -->
+  <section class="shop-grid-section">
+    <div class="container">
+      <div class="shop-grid" id="shopGrid">
+        {products.map(p => (
+          <div
+            class="prod-card"
+            data-condition={p.condition}
+            data-size={p.size}
+            data-id={p.id}
+            data-name={p.name}
+            data-price={p.price}
+          >
+            <!-- Visual -->
+            <div class={`prod-card__img prod-card__img--${p.condition}`}>
+              <div class="prod-card__box-icon" aria-hidden="true">
+                <svg viewBox="0 0 60 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="5" y="15" width="40" height="32" fill={p.condition === 'new' ? '#F5C400' : 'rgba(255,255,255,0.1)'} stroke={p.condition === 'new' ? '#0A0A0A' : 'rgba(255,255,255,0.3)'} stroke-width="1.5"/>
+                  <path d="M5 15 L20 5 L60 5 L45 15" fill={p.condition === 'new' ? '#D4A900' : 'rgba(255,255,255,0.06)'} stroke={p.condition === 'new' ? '#0A0A0A' : 'rgba(255,255,255,0.2)'} stroke-width="1.5"/>
+                  <path d="M45 15 L60 5 L60 37 L45 47" fill={p.condition === 'new' ? '#B89200' : 'rgba(255,255,255,0.04)'} stroke={p.condition === 'new' ? '#0A0A0A' : 'rgba(255,255,255,0.15)'} stroke-width="1.5"/>
+                  <line x1="5" y1="20" x2="45" y2="20" stroke={p.condition === 'new' ? '#0A0A0A' : 'rgba(255,255,255,0.15)'} stroke-width="1" stroke-dasharray="3,3"/>
+                  <line x1="25" y1="20" x2="25" y2="47" stroke={p.condition === 'new' ? '#0A0A0A' : 'rgba(255,255,255,0.15)'} stroke-width="1" stroke-dasharray="3,3"/>
+                </svg>
+              </div>
+              <div class={`prod-card__badge ${p.condition === 'new' ? 'prod-card__badge--new' : 'prod-card__badge--used'}`}>
+                {p.condition === 'new' ? 'NEW' : 'USED'}
+              </div>
+              <div class="prod-card__size-tag">Size {p.size}</div>
+            </div>
+
+            <!-- Info -->
+            <div class="prod-card__body">
+              <h3 class="prod-card__name">{p.name}</h3>
+              <div class="prod-card__specs">
+                <span>{p.dims}</span>
+                <span>·</span>
+                <span>{p.wall}</span>
+              </div>
+              <p class="prod-card__use">{p.use}</p>
+
+              <div class="prod-card__pricing">
+                <div class="prod-card__price">
+                  <span class="prod-card__price-rm">RM</span>
+                  <span class="prod-card__price-val">{p.price.toFixed(2)}</span>
+                  <span class="prod-card__price-unit">/ box</span>
+                </div>
+                <div class="prod-card__min">Min. {p.minQty} boxes</div>
+              </div>
+
+              <!-- Qty + Add -->
+              <div class="prod-card__order">
+                <div class="qty-control">
+                  <button class="qty-btn qty-minus" aria-label="Decrease quantity">−</button>
+                  <input
+                    type="number"
+                    class="qty-input"
+                    value={p.minQty}
+                    min={p.minQty}
+                    step={p.condition === 'new' ? 50 : 100}
+                    aria-label="Quantity"
+                  />
+                  <button class="qty-btn qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+                <button class="btn btn-dark btn-sm add-to-cart" data-id={p.id}>
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Empty state -->
+      <div class="shop-empty" id="shopEmpty" style="display:none">
+        <p>No products match this filter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-sidebar__header">
+      <h2 class="cart-sidebar__title">Your Cart</h2>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+        <p>Your cart is empty.</p>
+        <p>Add some boxes to get started.</p>
+      </div>
+    </div>
+
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-summary">
+        <div class="cart-summary__row">
+          <span>Total Boxes</span>
+          <span id="cartTotalBoxes">0</span>
+        </div>
+        <div class="cart-summary__row cart-summary__row--total">
+          <span>Est. Total</span>
+          <span id="cartTotalPrice">RM 0.00</span>
+        </div>
+        <div class="cart-moq" id="cartMoq"></div>
+      </div>
+      <button class="btn btn-wa" id="cartWhatsApp" style="width:100%; justify-content:center; font-size:1rem; padding:16px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Send Order via WhatsApp
+      </button>
+      <p class="cart-note">We'll confirm availability and payment details via WhatsApp.</p>
+    </div>
+  </aside>
+</Layout>
+
+<script define:vars={{ WA_NUMBER }}>
+  // ---- STATE ----
+  let cart = {}; // { id: { name, price, qty } }
+
+  // ---- FILTER ----
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards      = document.querySelectorAll('.prod-card');
+  const emptyState = document.getElementById('shopEmpty');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('filter-btn--active'));
+      btn.classList.add('filter-btn--active');
+
+      const f = btn.dataset.filter;
+      let visible = 0;
+      cards.forEach(card => {
+        const show = f === 'all'
+          || card.dataset.condition === f
+          || card.dataset.size === f;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      emptyState.style.display = visible === 0 ? 'flex' : 'none';
+    });
+  });
+
+  // ---- QTY CONTROLS ----
+  document.querySelectorAll('.prod-card').forEach(card => {
+    const minus = card.querySelector('.qty-minus');
+    const plus  = card.querySelector('.qty-plus');
+    const input = card.querySelector('.qty-input');
+    const min   = parseInt(input.min);
+    const step  = parseInt(input.step);
+
+    minus.addEventListener('click', () => {
+      const v = parseInt(input.value) - step;
+      input.value = Math.max(min, v);
+    });
+    plus.addEventListener('click', () => {
+      input.value = parseInt(input.value) + step;
+    });
+  });
+
+  // ---- CART ----
+  function updateCart() {
+    const items = Object.values(cart);
+    const totalBoxes = items.reduce((s, i) => s + i.qty, 0);
+    const totalPrice = items.reduce((s, i) => s + i.qty * i.price, 0);
+
+    document.getElementById('cartBadge').textContent = items.length;
+    document.getElementById('cartTotalBoxes').textContent = totalBoxes.toLocaleString();
+    document.getElementById('cartTotalPrice').textContent = `RM ${totalPrice.toFixed(2)}`;
+
+    const moqEl = document.getElementById('cartMoq');
+    if (totalPrice < 1000) {
+      const needed = (1000 - totalPrice).toFixed(2);
+      moqEl.textContent = `Add RM ${needed} more to meet min. order of RM 1,000`;
+      moqEl.style.color = '#D4A900';
+    } else {
+      moqEl.textContent = '✓ Minimum order met!';
+      moqEl.style.color = '#25D366';
+    }
+
+    const cartItemsEl = document.getElementById('cartItems');
+    const emptyEl     = document.getElementById('cartEmpty');
+    const footerEl    = document.getElementById('cartFooter');
+
+    if (items.length === 0) {
+      emptyEl.style.display = 'flex';
+      footerEl.style.display = 'none';
+      cartItemsEl.innerHTML = '';
+      cartItemsEl.appendChild(emptyEl);
+    } else {
+      emptyEl.style.display = 'none';
+      footerEl.style.display = 'block';
+
+      cartItemsEl.innerHTML = '';
+      items.forEach(item => {
+        const el = document.createElement('div');
+        el.className = 'cart-item';
+        el.innerHTML = `
+          <div class="cart-item__info">
+            <div class="cart-item__name">${item.name}</div>
+            <div class="cart-item__qty">${item.qty.toLocaleString()} boxes × RM ${item.price.toFixed(2)}</div>
+          </div>
+          <div class="cart-item__right">
+            <div class="cart-item__subtotal">RM ${(item.qty * item.price).toFixed(2)}</div>
+            <button class="cart-item__remove" data-id="${item.id}" aria-label="Remove ${item.name}">×</button>
+          </div>
+        `;
+        cartItemsEl.appendChild(el);
+      });
+
+      // Remove buttons
+      cartItemsEl.querySelectorAll('.cart-item__remove').forEach(btn => {
+        btn.addEventListener('click', () => {
+          delete cart[btn.dataset.id];
+          updateCart();
+        });
+      });
+    }
+  }
+
+  document.querySelectorAll('.add-to-cart').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card  = btn.closest('.prod-card');
+      const id    = card.dataset.id;
+      const name  = card.dataset.name;
+      const price = parseFloat(card.dataset.price);
+      const qty   = parseInt(card.querySelector('.qty-input').value);
+
+      cart[id] = { id, name, price, qty };
+      updateCart();
+      openCart();
+
+      // Flash feedback
+      btn.textContent = 'Added ✓';
+      btn.style.background = '#25D366';
+      setTimeout(() => {
+        btn.textContent = 'Add to Cart';
+        btn.style.background = '';
+      }, 1500);
+    });
+  });
+
+  // WhatsApp order
+  document.getElementById('cartWhatsApp')?.addEventListener('click', () => {
+    const items = Object.values(cart);
+    if (items.length === 0) return;
+
+    const total = items.reduce((s, i) => s + i.qty * i.price, 0);
+    let msg = `Hi Quinocycle! I would like to place a wholesale order:\n\n`;
+    items.forEach(i => {
+      msg += `• ${i.name} — ${i.qty.toLocaleString()} boxes @ RM ${i.price.toFixed(2)} = RM ${(i.qty * i.price).toFixed(2)}\n`;
+    });
+    msg += `\n*Total: RM ${total.toFixed(2)}*\n\nPlease confirm availability and payment details. Thank you!`;
+
+    const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  });
+
+  // ---- CART SIDEBAR OPEN/CLOSE ----
+  function openCart() {
+    document.getElementById('cartSidebar').classList.add('cart-sidebar--open');
+    document.getElementById('cartOverlay').classList.add('cart-overlay--active');
+    document.getElementById('cartSidebar').setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeCart() {
+    document.getElementById('cartSidebar').classList.remove('cart-sidebar--open');
+    document.getElementById('cartOverlay').classList.remove('cart-overlay--active');
+    document.getElementById('cartSidebar').setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('cartToggle')?.addEventListener('click', openCart);
+  document.getElementById('cartClose')?.addEventListener('click', closeCart);
+  document.getElementById('cartOverlay')?.addEventListener('click', closeCart);
+
+  // Init
+  updateCart();
+</script>
+
+<style>
+/* --- Shop Hero --- */
+.shop-hero {
+  background: var(--black);
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+.shop-hero__title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-block: 1rem;
+}
+.shop-hero__title span { color: var(--yellow); }
+.shop-hero__sub {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+}
+
+/* --- Filter Bar --- */
+.filter-bar {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 50;
+  background: var(--white);
+  border-bottom: 2px solid var(--grey-200);
+  padding-block: 0.75rem;
+}
+.filter-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.filter-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border: 1.5px solid var(--grey-200);
+  border-radius: 100px;
+  background: var(--white);
+  color: var(--grey-600);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.filter-btn:hover { border-color: var(--black); color: var(--black); }
+.filter-btn--active {
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--white);
+}
+.cart-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  background: var(--yellow);
+  border: 2px solid var(--black);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: transform 0.15s;
+  position: relative;
+}
+.cart-toggle:hover { transform: translateY(-1px); }
+.cart-badge {
+  background: var(--black);
+  color: var(--yellow);
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 4px;
+}
+
+/* --- MOQ Notice --- */
+.moq-notice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--yellow-pale);
+  border: 1px solid var(--yellow);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  color: var(--black);
+  margin-block: 1.5rem 0;
+}
+.moq-notice svg { flex-shrink: 0; color: var(--yellow-dim); }
+
+/* --- Shop Grid --- */
+.shop-grid-section { padding-block: 2rem var(--section-py); }
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+@media (max-width: 1100px) { .shop-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 800px)  { .shop-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px)  { .shop-grid { grid-template-columns: 1fr; } }
+
+.shop-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 4rem;
+  color: var(--grey-400);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+/* --- Product Card --- */
+.prod-card {
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--white);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s var(--ease-out-expo);
+  display: flex;
+  flex-direction: column;
+}
+.prod-card:hover {
+  border-color: var(--yellow);
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-4px);
+}
+
+.prod-card__img {
+  position: relative;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.prod-card__img--new { background: var(--grey-50); }
+.prod-card__img--used { background: var(--black-soft); }
+.prod-card__box-icon { width: 100px; }
+.prod-card__box-icon svg { width: 100%; height: auto; }
+
+.prod-card__badge {
+  position: absolute;
+  top: 10px; left: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+.prod-card__badge--new { background: var(--black); color: var(--yellow); }
+.prod-card__badge--used { background: var(--yellow); color: var(--black); }
+
+.prod-card__size-tag {
+  position: absolute;
+  top: 10px; right: 10px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  color: var(--grey-400);
+}
+
+.prod-card__body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+.prod-card__name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  color: var(--black);
+}
+.prod-card__specs {
+  display: flex;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--grey-400);
+}
+.prod-card__use {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--grey-600);
+  flex: 1;
+}
+.prod-card__pricing {
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--grey-100);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.prod-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+.prod-card__price-rm {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--grey-600);
+  margin-right: 2px;
+}
+.prod-card__price-val {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--black);
+}
+.prod-card__price-unit {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--grey-400);
+  margin-left: 2px;
+}
+.prod-card__min {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--grey-400);
+}
+
+.prod-card__order {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+.qty-control {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.qty-btn {
+  width: 30px; height: 34px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--grey-50);
+  color: var(--black);
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.qty-btn:hover { background: var(--grey-200); }
+.qty-input {
+  width: 60px; height: 34px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  border: none;
+  border-inline: 1px solid var(--grey-200);
+  outline: none;
+  -moz-appearance: textfield;
+}
+.qty-input::-webkit-inner-spin-button,
+.qty-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+
+/* --- Cart Sidebar --- */
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.cart-overlay--active { opacity: 1; pointer-events: all; }
+
+.cart-sidebar {
+  position: fixed;
+  top: 0; right: 0;
+  width: min(420px, 100vw);
+  height: 100dvh;
+  background: var(--white);
+  z-index: 201;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.35s var(--ease-out-expo);
+  box-shadow: -4px 0 32px rgba(0,0,0,0.12);
+}
+.cart-sidebar--open { transform: translateX(0); }
+
+.cart-sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.5rem 1.25rem;
+  border-bottom: 2px solid var(--yellow);
+}
+.cart-sidebar__title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+.cart-close {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-sm);
+  background: var(--grey-100);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.cart-close:hover { background: var(--grey-200); }
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cart-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--grey-400);
+  text-align: center;
+  padding: 3rem;
+}
+.cart-empty svg { margin-bottom: 0.5rem; }
+.cart-empty p:first-of-type { font-weight: 600; color: var(--black); }
+.cart-empty p { font-size: 0.85rem; }
+
+.cart-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--grey-50);
+  border: 1px solid var(--grey-200);
+  border-radius: var(--radius-sm);
+}
+.cart-item__info { flex: 1; }
+.cart-item__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+.cart-item__qty {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--grey-400);
+}
+.cart-item__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+.cart-item__subtotal {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--black);
+}
+.cart-item__remove {
+  width: 24px; height: 24px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  color: var(--grey-400);
+  background: none;
+  cursor: pointer;
+  border: none;
+  transition: background 0.15s, color 0.15s;
+}
+.cart-item__remove:hover { background: var(--grey-200); color: var(--black); }
+
+.cart-footer {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--grey-200);
+}
+.cart-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.cart-summary__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--grey-600);
+}
+.cart-summary__row--total {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--black);
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--grey-200);
+  margin-top: 0.25rem;
+}
+.cart-moq {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin-top: 0.25rem;
+}
+.cart-note {
+  font-size: 0.75rem;
+  color: var(--grey-400);
+  text-align: center;
+  margin-top: 0.75rem;
+  line-height: 1.5;
+}
+</style>
