@@ -35,17 +35,47 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20have%20an
 
         <div class="contact-details">
           <div class="contact-detail">
-            <div class="contact-detail__label">Business Hours</div>
-            <div class="contact-detail__val">Mon – Sat: 9am – 6pm</div>
-            <div class="contact-detail__val">Sunday & Public Holiday: Closed</div>
+            <div class="contact-detail__label">Company</div>
+            <div class="contact-detail__val"><strong>Quinocycle Sdn. Bhd.</strong></div>
+            <div class="contact-detail__val contact-detail__ssm">SSM Reg No: 202001029919</div>
           </div>
           <div class="contact-detail">
-            <div class="contact-detail__label">Service Area</div>
-            <div class="contact-detail__val">Peninsular Malaysia</div>
+            <div class="contact-detail__label">Office &amp; Retail Warehouse</div>
+            <div class="contact-detail__val">
+              No.13, Jalan Taming P/1, Taming Jaya,<br />
+              43300 Balakong, Selangor, Malaysia.
+            </div>
+            <a
+              href="https://maps.google.com/?q=No.13+Jalan+Taming+P/1+Taming+Jaya+43300+Balakong+Selangor"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-detail__map"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              View on Google Maps
+            </a>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail__label">Operating Hours</div>
+            <div class="contact-detail__hours-grid">
+              <span>Mon – Fri</span><span>8.30am – 5.00pm</span>
+              <span>Saturday</span><span>8.30am – 1.00pm</span>
+              <span>Sun &amp; Public Holidays</span><span class="contact-detail__closed">CLOSED</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail__label">Phone</div>
+            <div class="contact-detail__val"><a href="tel:+60389626381">03-8962 6381</a></div>
+            <div class="contact-detail__val"><a href="tel:+60389616381">03-8961 6381</a></div>
+            <div class="contact-detail__val"><a href="tel:+60168916381">016-891 6381</a> <span class="contact-detail__tag">Mobile / WhatsApp</span></div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail__label">Email</div>
+            <div class="contact-detail__val"><a href="mailto:sales@quinocycle.com">sales@quinocycle.com</a></div>
           </div>
           <div class="contact-detail">
             <div class="contact-detail__label">Min. Order</div>
-            <div class="contact-detail__val">RM 1,000 (fixed wholesale pricing)</div>
+            <div class="contact-detail__val">RM 1,000 · Fixed wholesale pricing</div>
           </div>
         </div>
       </div>
@@ -225,6 +255,66 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20have%20an
   font-weight: 500;
 }
 .contact-detail + .contact-detail { border-top: 1px solid var(--grey-200); padding-top: 1rem; }
+.contact-detail__ssm {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--grey-400);
+  margin-top: 2px;
+}
+.contact-detail__map {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--yellow-dim);
+  margin-top: 6px;
+  transition: color 0.15s;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.contact-detail__map:hover { color: var(--black); }
+.contact-detail__hours-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 16px;
+  font-size: 0.875rem;
+  color: var(--black);
+  margin-top: 4px;
+}
+.contact-detail__hours-grid span:nth-child(odd) { color: var(--grey-600); }
+.contact-detail__closed {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #e53e3e;
+}
+.contact-detail__val a {
+  color: var(--black);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+.contact-detail__val a:hover { color: var(--yellow-dim); }
+.contact-detail__tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 2px 6px;
+  border-radius: 2px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
 
 /* Form */
 .contact-form-wrap { display: flex; flex-direction: column; gap: 0.5rem; }
