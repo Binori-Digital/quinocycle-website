@@ -1,0 +1,821 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'How to Choose the Right Carton Box Size for Your Business',
+  description: 'Choosing the wrong box size wastes money, damages products, and frustrates customers. This simple guide helps Malaysian businesses pick the right carton box size every time.',
+  date: '2026-03-15',
+  readTime: '5 min',
+  category: 'Packaging Tips',
+  author: 'Quinocycle Team',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20like%20to%20enquire%20about%20carton%20box%20sizes.';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What size carton box do I need for my business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose a box that gives 3–5 cm clearance around your product on all sides. For small accessories, Size S (30×20×20 cm) works well. For apparel or electronics, Size M (40×30×25 cm). For home goods or moving, Size L (60×40×40 cm). For appliances or heavy items, Size XL (70×50×50 cm)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between single wall and double wall carton boxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Single wall boxes have one layer of corrugated fluting and are suitable for items under 10 kg, ideal for online sellers and retail. Double wall boxes have two layers for extra strength and are recommended for heavy items (10–30 kg), moving, and logistics."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I measure a carton box?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Carton boxes are measured as Length × Width × Height (L×W×H) in internal dimensions — the usable space inside the box. External dimensions are slightly larger due to cardboard thickness. Always match box dimensions to your product's size plus 3–5 cm padding allowance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I buy carton boxes in bulk in Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quinocycle Sdn. Bhd. supplies new and used carton boxes wholesale across Peninsular Malaysia. Located at No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor. Minimum order RM1,000. Fixed wholesale prices. Contact: 03-8962 6381 or WhatsApp 016-891 6381."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use new or used carton boxes for my business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use new boxes when you need consistent dimensions, professional presentation, or for fragile products. Used boxes are ideal for moving, storage, or general logistics — they save up to 50% and are still sturdy for most purposes."
+      }
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "author": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd.",
+    "url": "https://www.quinocycle.com.my"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.quinocycle.com.my/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.quinocycle.com.my/blog/choose-right-carton-box-size"
+  },
+  "keywords": "carton box size Malaysia, carton box wholesale Malaysia, how to choose carton box, packaging boxes bulk Malaysia, Quinocycle, Balakong carton box"
+};
+---
+
+<Layout title={`${post.title} — Quinocycle Blog`} description={post.description}>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container article-hero__inner">
+      <a href="/blog" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to Blog
+      </a>
+      <div class="tag tag--yellow" style="margin-top:1.5rem">{post.category}</div>
+      <h1 class="article-hero__title">{post.title}</h1>
+      <div class="article-meta">
+        <time datetime={post.date}>{new Date(post.date).toLocaleDateString('en-MY', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        <span>·</span>
+        <span>{post.readTime} read</span>
+        <span>·</span>
+        <span>By {post.author}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <article class="article-body">
+    <div class="container article-body__inner">
+
+      <div class="article-content">
+
+        <p class="article-lead">
+          Every year, Malaysian businesses waste thousands of ringgit on packaging — not because they buy expensive boxes, but because they buy the <em>wrong size</em>. A box that's too big wastes filler material and increases shipping cost. A box that's too small gets stuffed, bends, and damages your product. Getting the size right is one of the simplest ways to cut costs and improve your customer's unboxing experience.
+        </p>
+
+        <p>This guide walks you through everything you need to know — from understanding box measurements to matching sizes to your products.</p>
+
+        ---
+
+        <h2>Understanding Box Dimensions: L × W × H</h2>
+
+        <p>All carton boxes are measured in three dimensions, always in this order:</p>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>Length (L) × Width (W) × Height (H)</strong><br />
+          These are the <em>internal</em> dimensions — the usable space inside the box. Always measure your product and match it to the internal size.
+        </div>
+
+        <p>For example, a box listed as <strong>40 × 30 × 25 cm</strong> has 40 cm of internal length, 30 cm of internal width, and 25 cm of internal depth. The external dimensions will be slightly larger due to the cardboard thickness — typically 1–2 cm per side.</p>
+
+        <p><strong>Key rule:</strong> Always size your box to the product's dimensions, not the other way around. Your product should fit with <strong>3–5 cm of clearance</strong> on each side for protective padding.</p>
+
+        ---
+
+        <h2>The 4 Standard Sizes We Carry — and What They're For</h2>
+
+        <p>At Quinocycle, we stock four standard sizes in both new and used carton boxes. Here's a practical breakdown of which size suits which products:</p>
+
+        <div class="article-size-table">
+          <div class="size-row size-row--header">
+            <span>Size</span>
+            <span>Dimensions (L×W×H)</span>
+            <span>Wall Type</span>
+            <span>Best For</span>
+          </div>
+          <div class="size-row">
+            <span class="size-badge">S</span>
+            <span>30 × 20 × 20 cm</span>
+            <span>Single Wall</span>
+            <span>Accessories, cosmetics, small gifts, phone cases, stationery</span>
+          </div>
+          <div class="size-row">
+            <span class="size-badge">M</span>
+            <span>40 × 30 × 25 cm</span>
+            <span>Single Wall</span>
+            <span>Apparel, books, electronics, shoes, kitchenware</span>
+          </div>
+          <div class="size-row">
+            <span class="size-badge">L</span>
+            <span>60 × 40 × 40 cm</span>
+            <span>Double Wall</span>
+            <span>Home goods, bulky clothing, multiple item orders, moving</span>
+          </div>
+          <div class="size-row">
+            <span class="size-badge">XL</span>
+            <span>70 × 50 × 50 cm</span>
+            <span>Double Wall</span>
+            <span>Furniture parts, appliances, heavy equipment, large moving boxes</span>
+          </div>
+        </div>
+
+        ---
+
+        <h2>Single Wall vs Double Wall: Which Do You Need?</h2>
+
+        <p>This is a question we get a lot. Here's the simple answer:</p>
+
+        <div class="article-two-col">
+          <div class="article-panel article-panel--light">
+            <h3>Single Wall</h3>
+            <p>One layer of corrugated fluting between two flat sheets. Lighter, cheaper, and sufficient for most e-commerce parcels under 10 kg.</p>
+            <ul>
+              <li>✓ Best for retail, online sellers</li>
+              <li>✓ Lighter shipping weight</li>
+              <li>✓ Lower cost per box</li>
+              <li>✗ Not ideal for heavy or fragile items</li>
+            </ul>
+          </div>
+          <div class="article-panel article-panel--dark">
+            <h3>Double Wall</h3>
+            <p>Two layers of fluting for extra strength and cushioning. Recommended for anything heavy, fragile, or being moved long distances.</p>
+            <ul>
+              <li>✓ Best for movers, logistics</li>
+              <li>✓ Handles heavier loads (10–30 kg)</li>
+              <li>✓ Better stacking strength</li>
+              <li>✗ Slightly heavier and costs more</li>
+            </ul>
+          </div>
+        </div>
+
+        ---
+
+        <h2>Practical Sizing Guide by Business Type</h2>
+
+        <h3>For Online Sellers (Shopee, Lazada, TikTok Shop)</h3>
+        <p>Your main concern is keeping shipping costs low and ensuring your product arrives safely. Courier companies like J&T and Poslaju charge by volumetric weight, so oversized boxes directly increase your shipping cost.</p>
+        <ul>
+          <li>For items under 500g: Size <strong>S</strong> is usually sufficient</li>
+          <li>For fashion, shoes, accessories: Size <strong>M</strong> works for most SKUs</li>
+          <li>For bundle deals or multi-item orders: Size <strong>L</strong></li>
+          <li>Avoid boxes that are more than 5 cm larger than your product on any side</li>
+        </ul>
+
+        <div class="article-callout">
+          <strong>💡 Pro tip:</strong> Standardise on 2–3 box sizes. Fewer SKUs means you can buy in higher volume, which reduces your per-box cost significantly when ordering wholesale.
+        </div>
+
+        <h3>For Retail Businesses (Physical Stores)</h3>
+        <p>Retail packaging serves double duty — protection during delivery and presentation in-store. For products displayed in boxes, the outer dimension matters too.</p>
+        <ul>
+          <li>Match box size to product tightly — minimal filler looks more premium</li>
+          <li>Single wall is fine for most retail products</li>
+          <li>If you sell fragile items (ceramics, glass), go one size up and add padding</li>
+        </ul>
+
+        <h3>For Mover Companies</h3>
+        <p>Moving boxes need to be versatile and strong. Customers pack everything from clothes to books to kitchenware — sometimes all in the same box.</p>
+        <ul>
+          <li>Keep a mix of <strong>M, L, and XL</strong> sizes on hand</li>
+          <li>Always use double wall for L and XL boxes — they'll be stacked and loaded</li>
+          <li>Used boxes are a cost-effective choice for moving — they're strong enough for one-time use and significantly cheaper</li>
+        </ul>
+
+        <h3>For Logistics &amp; Warehousing</h3>
+        <p>Consistency is key. Standardised box sizes make stacking, labelling, and palletising far more efficient.</p>
+        <ul>
+          <li>Work with your operations team to define 3–5 standard sizes</li>
+          <li>Order in bulk to reduce unit cost and simplify reordering</li>
+          <li>Double wall for anything going into cold storage or heavy-load racking</li>
+        </ul>
+
+        ---
+
+        <h2>The Quick Sizing Checklist</h2>
+
+        <p>Before placing your next order, run through this checklist:</p>
+
+        <div class="article-checklist">
+          <div class="checklist-item">
+            <span class="checklist-num">1</span>
+            <div>
+              <strong>Measure your product</strong>
+              <p>Length × Width × Height. Round up to the nearest centimetre.</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <span class="checklist-num">2</span>
+            <div>
+              <strong>Add clearance</strong>
+              <p>Add 3–5 cm on each dimension for padding material (bubble wrap, paper, etc.).</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <span class="checklist-num">3</span>
+            <div>
+              <strong>Check the weight</strong>
+              <p>If your packed box will exceed 10 kg, choose double wall.</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <span class="checklist-num">4</span>
+            <div>
+              <strong>Consider fragility</strong>
+              <p>Fragile or irregular items need more clearance and stronger walls.</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <span class="checklist-num">5</span>
+            <div>
+              <strong>Standardise where possible</strong>
+              <p>Fewer sizes = higher volume per SKU = lower cost per box.</p>
+            </div>
+          </div>
+        </div>
+
+        ---
+
+        <h2>New vs Used — Does It Matter for Sizing?</h2>
+
+        <p>Used boxes are a great cost-saving option, especially for movers, storage, or internal logistics. One thing to note: used boxes come in <em>assorted dimensions</em> within a size range (e.g., "Large" used boxes are approximately 60 × 40 × 40 cm, but may vary slightly by ±5 cm).</p>
+
+        <p>If you need exact, consistent dimensions — for example, fitting into specific packaging lines or branded unboxing — go with <strong>new boxes</strong>. If you need strong, functional boxes for general use and want to save up to 50% on cost, <strong>used boxes</strong> are excellent value.</p>
+
+        ---
+
+        <h2>Ready to Order?</h2>
+
+        <p>All our box sizes are available in bulk at fixed wholesale prices. Minimum order is RM 1,000, with delivery across Peninsular Malaysia.</p>
+
+        <p>Not sure which size suits your products? WhatsApp us — our team is happy to help you figure out the right combination before you commit to a bulk order.</p>
+
+        <div class="article-cta">
+          <a href="/shop" class="btn btn-primary btn-lg">Browse Box Sizes &amp; Prices</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Ask Us on WhatsApp
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card">
+          <div class="sidebar-card__title">Quick Size Reference</div>
+          <div class="sidebar-sizes">
+            <div class="sidebar-size">
+              <span class="size-badge size-badge--sm">S</span>
+              <div>
+                <div class="sidebar-size__dim">30 × 20 × 20 cm</div>
+                <div class="sidebar-size__use">Small items, accessories</div>
+              </div>
+            </div>
+            <div class="sidebar-size">
+              <span class="size-badge size-badge--sm">M</span>
+              <div>
+                <div class="sidebar-size__dim">40 × 30 × 25 cm</div>
+                <div class="sidebar-size__use">Apparel, electronics</div>
+              </div>
+            </div>
+            <div class="sidebar-size">
+              <span class="size-badge size-badge--sm">L</span>
+              <div>
+                <div class="sidebar-size__dim">60 × 40 × 40 cm</div>
+                <div class="sidebar-size__use">Home goods, moving</div>
+              </div>
+            </div>
+            <div class="sidebar-size">
+              <span class="size-badge size-badge--sm">XL</span>
+              <div>
+                <div class="sidebar-size__dim">70 × 50 × 50 cm</div>
+                <div class="sidebar-size__use">Appliances, furniture</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-card sidebar-card--dark">
+          <div class="sidebar-card__title sidebar-card__title--light">Need help choosing?</div>
+          <p class="sidebar-card__body">WhatsApp us your product dimensions and we'll recommend the right size and quantity for your business.</p>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-sm" style="margin-top:1rem;width:100%;justify-content:center;">
+            WhatsApp Us
+          </a>
+        </div>
+
+        <div class="sidebar-card">
+          <div class="sidebar-card__title">Min. Order</div>
+          <div class="sidebar-moq">RM 1,000</div>
+          <p style="font-size:0.8rem;color:var(--grey-600);margin-top:0.5rem;">Fixed wholesale pricing. Delivery across Peninsular Malaysia.</p>
+          <a href="/shop" class="btn btn-primary btn-sm" style="margin-top:1rem;width:100%;justify-content:center;">Browse Shop</a>
+        </div>
+      </aside>
+
+    </div>
+  </article>
+
+  <!-- FAQ Section (AEO / GEO) -->
+  <section class="faq-section">
+    <div class="container faq-section__inner">
+      <div>
+        <div class="section-eyebrow">Frequently Asked Questions</div>
+        <h2 class="faq-section__title">Common questions about<br />carton box sizing</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">What size carton box do I need for my business?</summary>
+          <div class="faq-answer">Choose a box that gives 3–5 cm clearance around your product on all sides. For small accessories use <strong>Size S (30×20×20 cm)</strong>. For apparel or electronics use <strong>Size M (40×30×25 cm)</strong>. For home goods or moving use <strong>Size L (60×40×40 cm)</strong>. For appliances or heavy items use <strong>Size XL (70×50×50 cm)</strong>.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">What is the difference between single wall and double wall carton boxes?</summary>
+          <div class="faq-answer">Single wall boxes have one layer of corrugated fluting and are suitable for items under 10 kg — ideal for online sellers and retail. Double wall boxes have two layers for extra strength, recommended for heavy items (10–30 kg), moving, and logistics operations.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">How do I measure a carton box?</summary>
+          <div class="faq-answer">Carton boxes are measured as <strong>Length × Width × Height (L×W×H)</strong> using internal dimensions — the usable space inside. External dimensions are slightly larger due to cardboard thickness. Always match box dimensions to your product's size plus 3–5 cm padding allowance on each side.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Where can I buy carton boxes in bulk in Malaysia?</summary>
+          <div class="faq-answer">Quinocycle Sdn. Bhd. (SSM: 202001029919) supplies new and used carton boxes wholesale across Peninsular Malaysia. We are located at No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor. Minimum order RM 1,000 with fixed wholesale pricing. Call 03-8962 6381 or WhatsApp 016-891 6381.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Should I use new or used carton boxes for my business?</summary>
+          <div class="faq-answer">Use <strong>new boxes</strong> when you need consistent dimensions, professional presentation, or are shipping fragile products. <strong>Used boxes</strong> are ideal for moving, storage, or general logistics — they save up to 50% on cost and are still sturdy enough for most purposes.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Posts -->
+  <section class="related-posts">
+    <div class="container">
+      <div class="section-eyebrow">Keep Reading</div>
+      <h2 class="related-posts__title">More from the blog</h2>
+      <div class="related-grid">
+        <a href="/blog/new-vs-used-carton-boxes" class="related-card">
+          <div class="tag tag--yellow" style="font-size:0.62rem">Buyer Guide</div>
+          <h3>New vs Used Carton Boxes — Which is Right for You?</h3>
+          <p>Used boxes can save up to 50%. But are they right for your products?</p>
+          <span class="related-card__cta">Read Article →</span>
+        </a>
+        <a href="/blog/cut-packaging-costs-online-seller" class="related-card">
+          <div class="tag tag--yellow" style="font-size:0.62rem">Business Tips</div>
+          <h3>How Online Sellers Can Cut Packaging Costs by 40%</h3>
+          <p>Small margins matter for e-commerce. Save thousands on packaging every year.</p>
+          <span class="related-card__cta">Read Article →</span>
+        </a>
+        <a href="/blog/how-many-boxes-moving-house" class="related-card">
+          <div class="tag tag--yellow" style="font-size:0.62rem">Moving Guide</div>
+          <h3>Moving House in Malaysia? Here's How Many Boxes You'll Need</h3>
+          <p>A room-by-room guide so you never run short on moving day.</p>
+          <span class="related-card__cta">Read Article →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+/* ---- Hero ---- */
+.article-hero {
+  background: var(--black);
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+.article-hero__inner { max-width: 800px; }
+.article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+  transition: color 0.15s;
+}
+.article-back:hover { color: var(--yellow); }
+.article-hero__title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  margin-block: 1rem 0.75rem;
+}
+.article-meta {
+  display: flex;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--grey-400);
+  flex-wrap: wrap;
+}
+
+/* ---- Body Layout ---- */
+.article-body { padding-block: clamp(2.5rem, 5vw, 4rem) var(--section-py); }
+.article-body__inner {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 4rem;
+  align-items: start;
+}
+@media (max-width: 1024px) {
+  .article-body__inner { grid-template-columns: 1fr; }
+  .article-sidebar { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+}
+
+/* ---- Article Content ---- */
+.article-content {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--grey-600);
+  max-width: 680px;
+}
+.article-content hr,
+.article-content --- { display: none; }
+.article-lead {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--black);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.article-content h2 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  color: var(--black);
+  line-height: 1.15;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--yellow);
+}
+.article-content h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--black);
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+.article-content p { margin-bottom: 1rem; }
+.article-content ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+.article-content ul li {
+  padding-left: 1rem;
+  position: relative;
+  font-size: 0.95rem;
+}
+.article-content ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--yellow-dim);
+  font-weight: 700;
+}
+.article-content strong { color: var(--black); font-weight: 600; }
+.article-content em { font-style: italic; }
+
+/* Callout */
+.article-callout {
+  background: var(--grey-50);
+  border: 1.5px solid var(--grey-200);
+  border-left: 4px solid var(--yellow);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+  margin-block: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--black);
+  line-height: 1.65;
+}
+.article-callout--yellow {
+  background: var(--yellow-pale);
+  border-color: var(--yellow);
+}
+
+/* Size Table */
+.article-size-table {
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-block: 1.5rem;
+  font-size: 0.875rem;
+}
+.size-row {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 2fr;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  align-items: center;
+  border-bottom: 1px solid var(--grey-100);
+}
+.size-row:last-child { border-bottom: none; }
+.size-row--header {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.size-row:not(.size-row--header):hover { background: var(--grey-50); }
+@media (max-width: 640px) {
+  .size-row { grid-template-columns: 40px 1fr 1fr; }
+  .size-row > span:last-child { grid-column: 1 / -1; color: var(--grey-600); font-size: 0.8rem; }
+}
+.size-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; height: 32px;
+  background: var(--yellow);
+  color: var(--black);
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--black);
+  flex-shrink: 0;
+}
+.size-badge--sm {
+  width: 28px; height: 28px;
+  font-size: 0.8rem;
+}
+
+/* Two col */
+.article-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+@media (max-width: 600px) { .article-two-col { grid-template-columns: 1fr; } }
+.article-panel {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--grey-200);
+}
+.article-panel h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+.article-panel p { font-size: 0.875rem; line-height: 1.6; margin-bottom: 0.75rem; }
+.article-panel ul { margin-bottom: 0; }
+.article-panel ul li { font-size: 0.85rem; }
+.article-panel ul li::before { content: none; }
+.article-panel--light { background: var(--grey-50); }
+.article-panel--dark { background: var(--black); color: rgba(255,255,255,0.8); border-color: transparent; }
+.article-panel--dark h3 { color: var(--yellow); }
+.article-panel--dark p { color: rgba(255,255,255,0.7); }
+.article-panel--dark ul li { color: rgba(255,255,255,0.7); }
+
+/* Checklist */
+.article-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+.checklist-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.checklist-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; height: 32px;
+  background: var(--yellow);
+  color: var(--black);
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1rem;
+  border-radius: 50%;
+  border: 2px solid var(--black);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.checklist-item strong { color: var(--black); display: block; margin-bottom: 2px; }
+.checklist-item p { font-size: 0.875rem; margin: 0; }
+
+/* CTA */
+.article-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--grey-200);
+}
+
+/* ---- Sidebar ---- */
+.article-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+.sidebar-card {
+  background: var(--white);
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+.sidebar-card--dark { background: var(--black); border-color: transparent; }
+.sidebar-card__title {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+  margin-bottom: 1rem;
+}
+.sidebar-card__title--light { color: rgba(255,255,255,0.4); }
+.sidebar-card__body { font-size: 0.85rem; line-height: 1.6; color: rgba(255,255,255,0.7); }
+.sidebar-sizes { display: flex; flex-direction: column; gap: 0.75rem; }
+.sidebar-size { display: flex; align-items: center; gap: 0.75rem; }
+.sidebar-size__dim { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; color: var(--black); }
+.sidebar-size__use { font-size: 0.75rem; color: var(--grey-600); }
+.sidebar-moq {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--black);
+}
+
+/* ---- Related Posts ---- */
+.related-posts {
+  background: var(--grey-50);
+  padding-block: var(--section-py);
+}
+.related-posts__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin-block: 0.5rem 2rem;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 900px) { .related-grid { grid-template-columns: 1fr; } }
+.related-card {
+  background: var(--white);
+  border: 1.5px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: border-color 0.2s, transform 0.2s var(--ease-out-expo);
+}
+.related-card:hover { border-color: var(--yellow); transform: translateY(-3px); }
+.related-card h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  color: var(--black);
+}
+.related-card p { font-size: 0.85rem; line-height: 1.6; color: var(--grey-600); flex: 1; }
+/* ---- FAQ ---- */
+.faq-section {
+  background: var(--black);
+  padding-block: var(--section-py);
+}
+.faq-section__inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+@media (max-width: 900px) { .faq-section__inner { grid-template-columns: 1fr; gap: 2rem; } }
+.faq-section__title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  color: var(--white);
+  margin-top: 0.5rem;
+}
+.faq-list { display: flex; flex-direction: column; }
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.faq-item:first-child { border-top: 1px solid rgba(255,255,255,0.08); }
+.faq-question {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--white);
+  padding-block: 1.1rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: color 0.15s;
+}
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::after {
+  content: '+';
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--yellow);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.faq-item[open] .faq-question { color: var(--yellow); }
+.faq-item[open] .faq-question::after { transform: rotate(45deg); }
+.faq-answer {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.65);
+  padding-bottom: 1.25rem;
+}
+.faq-answer strong { color: var(--white); }
+
+.related-card__cta {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-top: 0.5rem;
+}
+</style>
