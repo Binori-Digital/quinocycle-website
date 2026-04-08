@@ -169,8 +169,19 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20have%20an
 
 <style>
 .contact-hero {
-  background: var(--black);
+  background: var(--bg-base);
   padding-block: clamp(3rem, 6vw, 5rem);
+  position: relative;
+  overflow: hidden;
+}
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  top: -30%; right: -5%;
+  width: 600px; height: 500px;
+  background: radial-gradient(circle, rgba(245,196,0,0.07) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(60px);
 }
 .contact-hero__title {
   font-family: var(--font-display);
@@ -178,18 +189,22 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20have%20an
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1.0;
   letter-spacing: -0.02em;
-  color: var(--white);
+  color: var(--text-1);
   margin-block: 1rem;
+  position: relative;
+  z-index: 1;
 }
-.contact-hero__title span { color: var(--yellow); }
+.contact-hero__title span { color: var(--yellow); text-shadow: var(--glow-text); }
 .contact-hero__sub {
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--grey-400);
+  color: var(--text-2);
   max-width: 480px;
+  position: relative;
+  z-index: 1;
 }
 
-.contact-body { padding-block: var(--section-py); }
+.contact-body { padding-block: var(--section-py); background: var(--bg-base); }
 .contact-body__inner {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -207,9 +222,20 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20have%20an
   gap: 1.25rem;
   padding: 1.75rem;
   border-radius: var(--radius-md);
-  border: 1.5px solid var(--grey-200);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
-.contact-card--wa { border-color: #25D366; background: rgba(37,211,102,0.04); }
+.contact-card--wa {
+  border-color: rgba(37,211,102,0.3);
+  background: rgba(37,211,102,0.04);
+}
+.contact-card--wa:hover { box-shadow: 0 0 20px rgba(37,211,102,0.15); }
+.contact-card:not(.contact-card--wa):hover {
+  border-color: var(--border-yellow);
+  box-shadow: var(--glow-sm);
+}
 .contact-card__icon {
   width: 48px; height: 48px;
   background: #25D366;
@@ -222,13 +248,13 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20have%20an
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.1rem;
-  color: var(--black);
+  color: var(--text-1);
   margin-bottom: 0.5rem;
 }
 .contact-card__body {
   font-size: 0.875rem;
   line-height: 1.65;
-  color: var(--grey-600);
+  color: var(--text-2);
 }
 
 .contact-details {
@@ -236,9 +262,10 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20have%20an
   flex-direction: column;
   gap: 1rem;
   padding: 1.5rem;
-  background: var(--grey-50);
+  background: var(--bg-card);
   border-radius: var(--radius-md);
-  border: 1.5px solid var(--grey-200);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
 }
 .contact-detail { display: flex; flex-direction: column; gap: 2px; }
 .contact-detail__label {
@@ -247,18 +274,18 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20have%20an
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--grey-400);
+  color: var(--text-3);
 }
 .contact-detail__val {
   font-size: 0.9rem;
-  color: var(--black);
+  color: var(--text-1);
   font-weight: 500;
 }
-.contact-detail + .contact-detail { border-top: 1px solid var(--grey-200); padding-top: 1rem; }
+.contact-detail + .contact-detail { border-top: 1px solid var(--border); padding-top: 1rem; }
 .contact-detail__ssm {
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  color: var(--grey-400);
+  color: var(--text-3);
   margin-top: 2px;
 }
 .contact-detail__map {
@@ -270,37 +297,37 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20have%20an
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--yellow-dim);
+  color: var(--yellow);
   margin-top: 6px;
-  transition: color 0.15s;
+  transition: text-shadow 0.15s;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.contact-detail__map:hover { color: var(--black); }
+.contact-detail__map:hover { text-shadow: var(--glow-text); }
 .contact-detail__hours-grid {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 4px 16px;
   font-size: 0.875rem;
-  color: var(--black);
+  color: var(--text-1);
   margin-top: 4px;
 }
-.contact-detail__hours-grid span:nth-child(odd) { color: var(--grey-600); }
+.contact-detail__hours-grid span:nth-child(odd) { color: var(--text-3); }
 .contact-detail__closed {
   font-family: var(--font-mono);
   font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.1em;
-  color: #e53e3e;
+  color: #fc8181;
 }
 .contact-detail__val a {
-  color: var(--black);
+  color: var(--text-1);
   font-weight: 500;
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color 0.15s;
 }
-.contact-detail__val a:hover { color: var(--yellow-dim); }
+.contact-detail__val a:hover { color: var(--yellow); }
 .contact-detail__tag {
   display: inline-block;
   font-family: var(--font-mono);
@@ -308,8 +335,9 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20have%20an
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: var(--yellow);
-  color: var(--black);
+  background: rgba(245,196,0,0.15);
+  color: var(--yellow);
+  border: 1px solid var(--border-yellow);
   padding: 2px 6px;
   border-radius: 2px;
   margin-left: 6px;
@@ -322,11 +350,11 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20have%20an
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(1.5rem, 2.5vw, 2rem);
-  color: var(--black);
+  color: var(--text-1);
 }
 .contact-form-sub {
   font-size: 0.875rem;
-  color: var(--grey-600);
+  color: var(--text-2);
   margin-bottom: 1rem;
 }
 .contact-form {
@@ -345,43 +373,14 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20have%20an
   flex-direction: column;
   gap: 0.4rem;
 }
-.form-field label {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--grey-600);
-}
-.form-field label span { color: var(--yellow-dim); }
-.form-field input,
-.form-field select,
-.form-field textarea {
-  padding: 12px 14px;
-  border: 1.5px solid var(--grey-200);
-  border-radius: var(--radius-sm);
-  background: var(--white);
-  font-size: 0.9rem;
-  color: var(--black);
-  transition: border-color 0.15s, box-shadow 0.15s;
-  outline: none;
-  width: 100%;
-}
-.form-field input::placeholder,
-.form-field textarea::placeholder { color: var(--grey-400); }
-.form-field input:focus,
-.form-field select:focus,
-.form-field textarea:focus {
-  border-color: var(--yellow);
-  box-shadow: 0 0 0 3px var(--yellow-pale);
-}
+.form-field label span { color: var(--yellow); }
 .form-field textarea { resize: vertical; min-height: 120px; }
 .form-field select { cursor: pointer; }
 
 .form-submit { align-self: flex-start; transition: background 0.3s, transform 0.15s; }
 .form-note {
   font-size: 0.75rem;
-  color: var(--grey-400);
+  color: var(--text-3);
   line-height: 1.5;
 }
 </style>

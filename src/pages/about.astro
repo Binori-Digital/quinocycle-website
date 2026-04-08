@@ -9,7 +9,7 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20l
 >
   <section class="about-hero">
     <div class="container">
-      <div class="section-eyebrow" style="color:rgba(255,255,255,0.5)">About Us</div>
+      <div class="section-eyebrow">About Us</div>
       <h1 class="about-hero__title">We make bulk<br /><span>buying simple.</span></h1>
     </div>
   </section>
@@ -85,8 +85,20 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20l
 
 <style>
 .about-hero {
-  background: var(--black);
+  background: var(--bg-base);
   padding-block: clamp(3rem, 6vw, 5rem);
+  position: relative;
+  overflow: hidden;
+}
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -10%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(245,196,0,0.07) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(60px);
 }
 .about-hero__title {
   font-family: var(--font-display);
@@ -94,12 +106,14 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20l
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1.0;
   letter-spacing: -0.02em;
-  color: var(--white);
+  color: var(--text-1);
   margin-block: 1rem;
+  position: relative;
+  z-index: 1;
 }
-.about-hero__title span { color: var(--yellow); }
+.about-hero__title span { color: var(--yellow); text-shadow: var(--glow-text); }
 
-.about-body { padding-block: var(--section-py); }
+.about-body { padding-block: var(--section-py); background: var(--bg-base); }
 .about-body__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -116,6 +130,7 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20l
   font-size: clamp(1.75rem, 3vw, 2.75rem);
   line-height: 1.1;
   margin-block: 0.75rem 1.5rem;
+  color: var(--text-1);
 }
 .about-story__text {
   display: flex;
@@ -125,7 +140,7 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20l
 .about-story__text p {
   font-size: 1rem;
   line-height: 1.75;
-  color: var(--grey-600);
+  color: var(--text-2);
 }
 
 .about-stats {
@@ -135,17 +150,24 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20l
 }
 .about-stat {
   padding: 2rem 1.5rem;
-  background: var(--grey-50);
-  border: 1.5px solid var(--grey-200);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  border-left: 4px solid var(--yellow);
+  border-left: 3px solid var(--yellow);
+  backdrop-filter: blur(12px);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.25s var(--ease-out-expo);
+}
+.about-stat:hover {
+  border-color: var(--border-yellow-h);
+  box-shadow: var(--glow-sm);
+  transform: translateY(-3px);
 }
 .about-stat__num {
   font-family: var(--font-display);
   font-weight: 900;
   font-size: 3rem;
   line-height: 1;
-  color: var(--black);
+  color: var(--text-1);
   margin-bottom: 0.5rem;
 }
 .about-stat__num span { color: var(--yellow); }
@@ -155,44 +177,63 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20l
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--grey-600);
+  color: var(--text-3);
   line-height: 1.5;
 }
 
 .about-values {
-  background: var(--yellow);
+  background: var(--bg-2);
   padding-block: var(--section-py);
+  position: relative;
+  overflow: hidden;
+}
+.about-values::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px; height: 400px;
+  background: radial-gradient(ellipse, rgba(245,196,0,0.08) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(50px);
 }
 .about-values__title {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(1.75rem, 3.5vw, 3rem);
   line-height: 1.1;
-  color: var(--black);
+  color: var(--text-1);
   margin-block: 0.75rem 3rem;
   max-width: 500px;
+  position: relative;
+  z-index: 1;
 }
+.about-values__title span { color: var(--yellow); }
 .about-values__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 900px) { .about-values__grid { grid-template-columns: 1fr; } }
 
 .value-card {
-  background: var(--white);
-  border: 2px solid var(--black);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 2rem;
-  box-shadow: 5px 5px 0 var(--black);
+  backdrop-filter: blur(12px);
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  transition: transform 0.2s var(--ease-out-expo), box-shadow 0.2s;
+  transition: border-color 0.2s, box-shadow 0.25s, transform 0.25s var(--ease-out-expo), background 0.2s;
 }
 .value-card:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 8px 8px 0 var(--black);
+  border-color: var(--border-yellow-h);
+  box-shadow: var(--glow-sm), 0 20px 60px rgba(0,0,0,0.4);
+  transform: translateY(-5px);
+  background: var(--bg-card-hov);
 }
 .value-card__num {
   font-family: var(--font-display);
@@ -200,23 +241,35 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20l
   font-size: 2.5rem;
   line-height: 1;
   color: var(--yellow);
-  -webkit-text-stroke: 2px var(--black);
+  text-shadow: var(--glow-text);
+  opacity: 0.8;
 }
 .value-card__title {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.25rem;
-  color: var(--black);
+  color: var(--text-1);
 }
 .value-card__body {
   font-size: 0.875rem;
   line-height: 1.65;
-  color: var(--grey-600);
+  color: var(--text-2);
 }
 
 .about-cta {
-  background: var(--black);
+  background: var(--bg-base);
   padding-block: clamp(3rem, 6vw, 5rem);
+  position: relative;
+  overflow: hidden;
+}
+.about-cta::before {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 500px; height: 300px;
+  background: radial-gradient(ellipse, rgba(245,196,0,0.08) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(60px);
 }
 .about-cta__inner {
   display: flex;
@@ -224,13 +277,15 @@ const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20l
   align-items: center;
   text-align: center;
   gap: 2rem;
+  position: relative;
+  z-index: 1;
 }
 .about-cta__title {
   font-family: var(--font-display);
   font-weight: 900;
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.1;
-  color: var(--white);
+  color: var(--text-1);
 }
 .about-cta__btns {
   display: flex;

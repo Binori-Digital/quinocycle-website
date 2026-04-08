@@ -166,8 +166,19 @@ const categories = ['All', 'Packaging Tips', 'Buyer Guide', 'Business Tips', 'Mo
 
 <style>
 .blog-hero {
-  background: var(--black);
+  background: var(--bg-base);
   padding-block: clamp(3rem, 6vw, 5rem);
+  position: relative;
+  overflow: hidden;
+}
+.blog-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -10%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(245,196,0,0.07) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(60px);
 }
 .blog-hero__title {
   font-family: var(--font-display);
@@ -175,21 +186,26 @@ const categories = ['All', 'Packaging Tips', 'Buyer Guide', 'Business Tips', 'Mo
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1.0;
   letter-spacing: -0.02em;
-  color: var(--white);
+  color: var(--text-1);
   margin-block: 1rem;
+  position: relative;
+  z-index: 1;
 }
-.blog-hero__title span { color: var(--yellow); }
+.blog-hero__title span { color: var(--yellow); text-shadow: var(--glow-text); }
 .blog-hero__sub {
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--grey-400);
+  color: var(--text-2);
   max-width: 480px;
+  position: relative;
+  z-index: 1;
 }
 
 .blog-filter {
-  border-bottom: 2px solid var(--grey-200);
+  border-bottom: 1px solid var(--border);
   padding-block: 1rem;
-  background: var(--white);
+  background: rgba(6,6,8,0.85);
+  backdrop-filter: blur(20px);
   position: sticky;
   top: var(--nav-h);
   z-index: 50;
@@ -207,45 +223,56 @@ const categories = ['All', 'Packaging Tips', 'Buyer Guide', 'Business Tips', 'Mo
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 6px 14px;
-  border: 1.5px solid var(--grey-200);
+  border: 1px solid var(--border);
   border-radius: 100px;
-  background: var(--white);
-  color: var(--grey-600);
+  background: var(--bg-card);
+  color: var(--text-2);
   cursor: pointer;
   transition: all 0.15s;
   white-space: nowrap;
 }
-.blog-filter__btn:hover { border-color: var(--black); color: var(--black); }
-.blog-filter__btn--active { background: var(--black); border-color: var(--black); color: var(--white); }
+.blog-filter__btn:hover { border-color: var(--border-yellow); color: var(--text-1); }
+.blog-filter__btn--active {
+  background: rgba(245,196,0,0.15);
+  border-color: var(--border-yellow-h);
+  color: var(--yellow);
+}
 
-.blog-section { padding-block: clamp(2.5rem, 5vw, 4rem) var(--section-py); }
+.blog-section {
+  padding-block: clamp(2.5rem, 5vw, 4rem) var(--section-py);
+  background: var(--bg-base);
+}
 
 /* Featured */
 .blog-featured {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 1.5px solid var(--grey-200);
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
   margin-bottom: 2.5rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.25s var(--ease-out-expo);
 }
 .blog-featured:hover {
-  border-color: var(--yellow);
-  box-shadow: var(--shadow-lift);
+  border-color: var(--border-yellow);
+  box-shadow: var(--glow-sm), 0 20px 60px rgba(0,0,0,0.4);
+  transform: translateY(-3px);
 }
 @media (max-width: 768px) {
   .blog-featured { grid-template-columns: 1fr; }
 }
 .blog-featured__img {
-  background: var(--yellow);
+  background: linear-gradient(135deg, rgba(245,196,0,0.15) 0%, rgba(245,196,0,0.05) 100%);
   min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  border-right: 1px solid var(--border-yellow);
 }
-.blog-featured__img-inner { opacity: 0.3; }
+.blog-featured__img-inner { opacity: 0.25; color: var(--yellow); }
 .blog-featured__body {
   padding: clamp(2rem, 4vw, 3rem);
   display: flex;
@@ -260,19 +287,21 @@ const categories = ['All', 'Packaging Tips', 'Buyer Guide', 'Business Tips', 'Mo
   font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.08em;
-  color: var(--grey-400);
+  color: var(--text-3);
 }
 .blog-featured__title {
   font-family: var(--font-display);
   font-weight: 900;
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   line-height: 1.15;
-  color: var(--black);
+  color: var(--text-1);
+  transition: color 0.15s;
 }
+.blog-featured:hover .blog-featured__title { color: var(--yellow); }
 .blog-featured__excerpt {
   font-size: 0.9rem;
   line-height: 1.65;
-  color: var(--grey-600);
+  color: var(--text-2);
 }
 .blog-featured__cta {
   display: inline-flex;
@@ -283,11 +312,11 @@ const categories = ['All', 'Packaging Tips', 'Buyer Guide', 'Business Tips', 'Mo
   font-size: 0.9rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--black);
+  color: var(--yellow);
   margin-top: 0.5rem;
-  transition: gap 0.15s;
+  transition: gap 0.15s, text-shadow 0.15s;
 }
-.blog-featured:hover .blog-featured__cta { gap: 10px; }
+.blog-featured:hover .blog-featured__cta { gap: 10px; text-shadow: var(--glow-text); }
 
 /* Grid */
 .blog-grid {
@@ -301,28 +330,31 @@ const categories = ['All', 'Packaging Tips', 'Buyer Guide', 'Business Tips', 'Mo
 .blog-card {
   display: flex;
   flex-direction: column;
-  background: var(--white);
-  border: 1.5px solid var(--grey-200);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
   overflow: hidden;
-  transition: border-color 0.2s, transform 0.2s var(--ease-out-expo), box-shadow 0.2s;
+  backdrop-filter: blur(12px);
+  transition: border-color 0.2s, transform 0.25s var(--ease-out-expo), box-shadow 0.2s, background 0.2s;
 }
 .blog-card:hover {
-  border-color: var(--yellow);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lift);
+  border-color: var(--border-yellow);
+  transform: translateY(-5px);
+  box-shadow: var(--glow-sm), 0 20px 60px rgba(0,0,0,0.4);
+  background: var(--bg-card-hov);
 }
 .blog-card__img-wrap { overflow: hidden; }
 .blog-card__img-placeholder {
   height: 160px;
-  background: linear-gradient(135deg, var(--grey-100) 0%, var(--grey-200) 100%);
+  background: linear-gradient(135deg, rgba(245,196,0,0.08) 0%, rgba(255,255,255,0.03) 100%);
+  border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.3s var(--ease-out-expo);
 }
 .blog-card:hover .blog-card__img-placeholder { transform: scale(1.04); }
-.blog-card__img-icon { color: var(--grey-400); opacity: 0.5; }
+.blog-card__img-icon { color: var(--yellow); opacity: 0.3; }
 .blog-card__body {
   padding: 1.5rem;
   display: flex;
@@ -335,12 +367,14 @@ const categories = ['All', 'Packaging Tips', 'Buyer Guide', 'Business Tips', 'Mo
   font-weight: 800;
   font-size: 1.1rem;
   line-height: 1.2;
-  color: var(--black);
+  color: var(--text-1);
+  transition: color 0.15s;
 }
+.blog-card:hover .blog-card__title { color: var(--yellow); }
 .blog-card__excerpt {
   font-size: 0.84rem;
   line-height: 1.65;
-  color: var(--grey-600);
+  color: var(--text-2);
   flex: 1;
 }
 .blog-card__meta {
@@ -351,15 +385,27 @@ const categories = ['All', 'Packaging Tips', 'Buyer Guide', 'Business Tips', 'Mo
   font-size: 0.65rem;
   font-weight: 500;
   letter-spacing: 0.08em;
-  color: var(--grey-400);
+  color: var(--text-3);
   padding-top: 0.75rem;
-  border-top: 1px solid var(--grey-100);
+  border-top: 1px solid var(--border);
 }
 
 /* CTA */
 .blog-cta {
-  background: var(--black);
+  background: var(--bg-2);
   padding-block: clamp(3rem, 6vw, 5rem);
+  position: relative;
+  overflow: hidden;
+}
+.blog-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; height: 300px;
+  background: radial-gradient(ellipse, rgba(245,196,0,0.08) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(50px);
 }
 .blog-cta__inner {
   display: flex;
@@ -367,13 +413,15 @@ const categories = ['All', 'Packaging Tips', 'Buyer Guide', 'Business Tips', 'Mo
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 .blog-cta__title {
   font-family: var(--font-display);
   font-weight: 900;
   font-size: clamp(1.75rem, 3.5vw, 3rem);
   line-height: 1.1;
-  color: var(--white);
+  color: var(--text-1);
   margin-top: 0.5rem;
 }
 </style>
