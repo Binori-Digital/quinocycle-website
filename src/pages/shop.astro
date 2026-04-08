@@ -5,15 +5,15 @@ const WA_NUMBER = '60168916381'; // TODO: Replace with your WhatsApp number
 
 const products = [
   // NEW BOXES
-  { id: 'n-s', condition: 'new', size: 'S', name: 'Small New Box', dims: '30 × 20 × 20 cm', wall: 'Single Wall', price: 1.90, minQty: 100, use: 'Accessories, small items, gifts' },
-  { id: 'n-m', condition: 'new', size: 'M', name: 'Medium New Box', dims: '40 × 30 × 25 cm', wall: 'Single Wall', price: 2.80, minQty: 100, use: 'Apparel, electronics, books' },
-  { id: 'n-l', condition: 'new', size: 'L', name: 'Large New Box', dims: '60 × 40 × 40 cm', wall: 'Double Wall', price: 4.50, minQty: 50, use: 'Home goods, bulk orders, moving' },
-  { id: 'n-xl', condition: 'new', size: 'XL', name: 'Extra Large New Box', dims: '70 × 50 × 50 cm', wall: 'Double Wall', price: 6.50, minQty: 50, use: 'Furniture parts, appliances, heavy goods' },
+  { id: 'n-s',  condition: 'new',  size: 'S',  img: '/images/box-new-s.jpg',  name: 'Small New Box',       dims: '30 × 20 × 20 cm', wall: 'Single Wall', price: 1.90, minQty: 100, use: 'Accessories, small items, gifts' },
+  { id: 'n-m',  condition: 'new',  size: 'M',  img: '/images/box-new-m.jpg',  name: 'Medium New Box',      dims: '40 × 30 × 25 cm', wall: 'Single Wall', price: 2.80, minQty: 100, use: 'Apparel, electronics, books' },
+  { id: 'n-l',  condition: 'new',  size: 'L',  img: '/images/box-new-l.jpg',  name: 'Large New Box',       dims: '60 × 40 × 40 cm', wall: 'Double Wall', price: 4.50, minQty: 50,  use: 'Home goods, bulk orders, moving' },
+  { id: 'n-xl', condition: 'new',  size: 'XL', img: '/images/box-new-xl.jpg', name: 'Extra Large New Box', dims: '70 × 50 × 50 cm', wall: 'Double Wall', price: 6.50, minQty: 50,  use: 'Furniture parts, appliances, heavy goods' },
   // USED BOXES
-  { id: 'u-s', condition: 'used', size: 'S', name: 'Small Used Box', dims: '~30 × 20 × 20 cm', wall: 'Single Wall', price: 0.90, minQty: 200, use: 'Storage, moving, seasonal packing' },
-  { id: 'u-m', condition: 'used', size: 'M', name: 'Medium Used Box', dims: '~40 × 30 × 25 cm', wall: 'Single Wall', price: 1.50, minQty: 150, use: 'Moving, general storage' },
-  { id: 'u-l', condition: 'used', size: 'L', name: 'Large Used Box', dims: '~60 × 40 × 40 cm', wall: 'Double Wall', price: 2.50, minQty: 100, use: 'Movers, warehouse, heavy storage' },
-  { id: 'u-xl', condition: 'used', size: 'XL', name: 'Extra Large Used Box', dims: '~70 × 50 × 50 cm', wall: 'Double Wall', price: 3.80, minQty: 50, use: 'Large moving jobs, bulk storage' },
+  { id: 'u-s',  condition: 'used', size: 'S',  img: '/images/box-used-s.jpg',  name: 'Small Used Box',       dims: '~30 × 20 × 20 cm', wall: 'Single Wall', price: 0.90, minQty: 200, use: 'Storage, moving, seasonal packing' },
+  { id: 'u-m',  condition: 'used', size: 'M',  img: '/images/box-used-m.jpg',  name: 'Medium Used Box',      dims: '~40 × 30 × 25 cm', wall: 'Single Wall', price: 1.50, minQty: 150, use: 'Moving, general storage' },
+  { id: 'u-l',  condition: 'used', size: 'L',  img: '/images/box-used-l.jpg',  name: 'Large Used Box',       dims: '~60 × 40 × 40 cm', wall: 'Double Wall', price: 2.50, minQty: 100, use: 'Movers, warehouse, heavy storage' },
+  { id: 'u-xl', condition: 'used', size: 'XL', img: '/images/box-used-xl.jpg', name: 'Extra Large Used Box', dims: '~70 × 50 × 50 cm', wall: 'Double Wall', price: 3.80, minQty: 50,  use: 'Large moving jobs, bulk storage' },
 ];
 ---
 
@@ -73,15 +73,14 @@ const products = [
           >
             <!-- Visual -->
             <div class={`prod-card__img prod-card__img--${p.condition}`}>
-              <div class="prod-card__box-icon" aria-hidden="true">
-                <svg viewBox="0 0 60 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="5" y="15" width="40" height="32" fill={p.condition === 'new' ? '#F5C400' : 'rgba(255,255,255,0.1)'} stroke={p.condition === 'new' ? '#0A0A0A' : 'rgba(255,255,255,0.3)'} stroke-width="1.5"/>
-                  <path d="M5 15 L20 5 L60 5 L45 15" fill={p.condition === 'new' ? '#D4A900' : 'rgba(255,255,255,0.06)'} stroke={p.condition === 'new' ? '#0A0A0A' : 'rgba(255,255,255,0.2)'} stroke-width="1.5"/>
-                  <path d="M45 15 L60 5 L60 37 L45 47" fill={p.condition === 'new' ? '#B89200' : 'rgba(255,255,255,0.04)'} stroke={p.condition === 'new' ? '#0A0A0A' : 'rgba(255,255,255,0.15)'} stroke-width="1.5"/>
-                  <line x1="5" y1="20" x2="45" y2="20" stroke={p.condition === 'new' ? '#0A0A0A' : 'rgba(255,255,255,0.15)'} stroke-width="1" stroke-dasharray="3,3"/>
-                  <line x1="25" y1="20" x2="25" y2="47" stroke={p.condition === 'new' ? '#0A0A0A' : 'rgba(255,255,255,0.15)'} stroke-width="1" stroke-dasharray="3,3"/>
-                </svg>
-              </div>
+              <img
+                src={p.img}
+                alt={p.name}
+                class="prod-card__photo"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
               <div class={`prod-card__badge ${p.condition === 'new' ? 'prod-card__badge--new' : 'prod-card__badge--used'}`}>
                 {p.condition === 'new' ? 'NEW' : 'USED'}
               </div>
@@ -521,21 +520,19 @@ const products = [
 
 .prod-card__img {
   position: relative;
-  height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 180px;
+  overflow: hidden;
 }
-.prod-card__img--new {
-  background: linear-gradient(135deg, rgba(245,196,0,0.1) 0%, rgba(245,196,0,0.03) 100%);
-  border-bottom: 1px solid var(--border-yellow);
+.prod-card__img--new { border-bottom: 1px solid var(--border-yellow); }
+.prod-card__img--used { border-bottom: 1px solid var(--border); }
+.prod-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s var(--ease-out-expo);
 }
-.prod-card__img--used {
-  background: var(--bg-3);
-  border-bottom: 1px solid var(--border);
-}
-.prod-card__box-icon { width: 100px; }
-.prod-card__box-icon svg { width: 100%; height: auto; }
+.prod-card:hover .prod-card__photo { transform: scale(1.06); }
 
 .prod-card__badge {
   position: absolute;

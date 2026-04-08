@@ -6,6 +6,7 @@ const WA_LINK   = `https://wa.me/${WA_NUMBER}?text=Hi%20Quinocycle!%20I%20would%
 
 const audiences = [
   {
+    img: '/images/audience-retail.jpg',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
     label: 'Retail & SME',
     headline: 'Never run out of packaging.',
@@ -14,6 +15,7 @@ const audiences = [
     href: '/shop?segment=retail',
   },
   {
+    img: '/images/audience-online.jpg',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>`,
     label: 'Online Sellers',
     headline: 'Right box for every order.',
@@ -22,6 +24,7 @@ const audiences = [
     href: '/shop?segment=online',
   },
   {
+    img: '/images/audience-mover.jpg',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
     label: 'Mover Companies',
     headline: 'High volume. Fast turnaround.',
@@ -30,6 +33,7 @@ const audiences = [
     href: `${WA_LINK}&text=Hi%20Quinocycle!%20I%20am%20a%20mover%20company%20looking%20for%20bulk%20box%20supply.`,
   },
   {
+    img: '/images/audience-logistics.jpg',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>`,
     label: 'Logistics & Warehousing',
     headline: 'Reliable supply. B2B-ready.',
@@ -62,6 +66,7 @@ const blogPosts = [
   {
     slug: 'choose-right-carton-box-size',
     category: 'Packaging Tips',
+    img: '/images/blog-choose-box-size.jpg',
     title: 'How to Choose the Right Carton Box Size for Your Business',
     excerpt: 'Choosing the wrong size wastes money and damages goods. Here\'s the simple guide to sizing your boxes perfectly.',
     date: '2026-03-15',
@@ -70,6 +75,7 @@ const blogPosts = [
   {
     slug: 'new-vs-used-carton-boxes',
     category: 'Buyer Guide',
+    img: '/images/blog-new-vs-used.jpg',
     title: 'New vs Used Carton Boxes — Which is Right for You?',
     excerpt: 'Used boxes can cut your packaging cost by up to 50%. But are they right for your products? We break it down.',
     date: '2026-03-08',
@@ -78,6 +84,7 @@ const blogPosts = [
   {
     slug: 'cut-packaging-costs-online-seller',
     category: 'Business Tips',
+    img: '/images/blog-cut-packaging-costs.jpg',
     title: 'How Online Sellers Can Cut Packaging Costs by 40%',
     excerpt: 'Small margins matter for e-commerce. These practical steps will save you thousands in packaging every year.',
     date: '2026-02-28',
@@ -130,19 +137,16 @@ const blogPosts = [
         </div>
       </div>
 
-      <!-- Hero visual: CSS box illustration -->
-      <div class="hero__visual fade-up fade-up-2" aria-hidden="true">
-        <div class="hero__orb-wrap">
-          <div class="orb orb--yellow hero__orb-main"></div>
-        </div>
-        <div class="box-art">
-          <div class="box-art__word">BOXES</div>
-          <div class="box-art__stack">
-            <div class="box-art__box box-art__box--1"></div>
-            <div class="box-art__box box-art__box--2"></div>
-            <div class="box-art__box box-art__box--3"></div>
-          </div>
-        </div>
+      <!-- Hero visual -->
+      <div class="hero__visual fade-up fade-up-2">
+        <img
+          src="/images/hero-boxes.jpg"
+          alt="Stacked carton boxes in warehouse"
+          class="hero__img"
+          loading="eager"
+          width="640"
+          height="360"
+        />
       </div>
     </div>
 
@@ -190,6 +194,9 @@ const blogPosts = [
       <div class="audiences__grid">
         {audiences.map((a, i) => (
           <div class="aud-card" style={`--delay: ${i * 0.1}s`}>
+            <div class="aud-card__img-wrap">
+              <img src={a.img} alt={a.label} class="aud-card__img" loading="lazy" width="400" height="300" />
+            </div>
             <div class="aud-card__icon" set:html={a.icon} />
             <div class="aud-card__tag">{a.label}</div>
             <h3 class="aud-card__title">{a.headline}</h3>
@@ -238,24 +245,30 @@ const blogPosts = [
           <div class="prod-panel__price">From <strong>RM 1.90</strong> / box</div>
           <a href="/shop?filter=new" class="btn btn-dark">Shop New Boxes</a>
         </div>
-        <div class="prod-panel__visual prod-panel__visual--new" aria-hidden="true">
-          <div class="box-illus box-illus--new">
-            <div class="box-illus__face box-illus__top"></div>
-            <div class="box-illus__face box-illus__front"></div>
-            <div class="box-illus__face box-illus__side"></div>
-          </div>
+        <div class="prod-panel__visual prod-panel__visual--new">
+          <img
+            src="/images/product-new.jpg"
+            alt="Brand new corrugated carton boxes"
+            class="prod-panel__img"
+            loading="lazy"
+            width="480"
+            height="640"
+          />
           <div class="prod-badge prod-badge--new">NEW</div>
         </div>
       </div>
 
       <!-- USED BOXES -->
       <div class="prod-panel prod-panel--used">
-        <div class="prod-panel__visual prod-panel__visual--used" aria-hidden="true">
-          <div class="box-illus box-illus--used">
-            <div class="box-illus__face box-illus__top"></div>
-            <div class="box-illus__face box-illus__front"></div>
-            <div class="box-illus__face box-illus__side"></div>
-          </div>
+        <div class="prod-panel__visual prod-panel__visual--used">
+          <img
+            src="/images/product-used.jpg"
+            alt="Recycled used carton boxes — eco-friendly"
+            class="prod-panel__img"
+            loading="lazy"
+            width="480"
+            height="640"
+          />
           <div class="prod-badge prod-badge--used">USED</div>
         </div>
         <div class="prod-panel__content">
@@ -366,11 +379,7 @@ const blogPosts = [
         {blogPosts.map((p, i) => (
           <a href={`/blog/${p.slug}`} class="blog-card" style={`--delay: ${i * 0.1}s`}>
             <div class="blog-card__img-wrap">
-              <div class="blog-card__img-placeholder" aria-hidden="true">
-                <div class="blog-card__img-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-                </div>
-              </div>
+              <img src={p.img} alt={p.title} class="blog-card__img" loading="lazy" width="640" height="360" />
             </div>
             <div class="blog-card__body">
               <div class="tag tag--yellow" style="font-size:0.62rem">{p.category}</div>
@@ -495,79 +504,25 @@ const blogPosts = [
   gap: 0.75rem;
 }
 
-/* Hero Visual / Box Art */
+/* Hero Visual */
 .hero__visual {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
 }
-.hero__orb-wrap {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-.hero__orb-main {
-  width: 400px;
-  height: 400px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.box-art {
-  position: relative;
+.hero__img {
   width: 100%;
-  max-width: 420px;
-  aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
+  height: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: 0 0 60px rgba(245,196,0,0.12), 0 30px 80px rgba(0,0,0,0.6);
+  display: block;
 }
-.box-art__word {
-  position: absolute;
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: clamp(5rem, 12vw, 10rem);
-  letter-spacing: -0.04em;
-  color: var(--yellow);
-  opacity: 0.08;
-  user-select: none;
-  z-index: 0;
-  white-space: nowrap;
-}
-.box-art__stack {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
-}
-.box-art__box {
-  border: 1px solid var(--border-yellow);
-  border-radius: var(--radius-sm);
-  background: var(--bg-card);
-  backdrop-filter: blur(8px);
-  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
-}
-.box-art__box--1 {
-  width: 160px; height: 90px;
-  background: rgba(245,196,0,0.15);
-  border-color: rgba(245,196,0,0.5);
-  box-shadow: 0 0 30px rgba(245,196,0,0.2);
-}
-.box-art__box--2 {
-  width: 200px; height: 110px;
-  background: rgba(255,255,255,0.05);
-}
-.box-art__box--3 {
-  width: 240px; height: 130px;
-  background: rgba(255,255,255,0.03);
-}
-.box-art__box--1:hover { transform: translateY(-6px); box-shadow: 0 0 50px rgba(245,196,0,0.35); }
-.box-art__box--2:hover { transform: translateY(-6px); box-shadow: var(--glow-sm); }
-.box-art__box--3:hover { transform: translateY(-6px); box-shadow: var(--glow-sm); }
 
 /* Scroll hint */
 .hero__scroll {
@@ -654,6 +609,22 @@ const blogPosts = [
 }
 @media (max-width: 1024px) { .audiences__grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px)  { .audiences__grid { grid-template-columns: 1fr; } }
+
+.aud-card__img-wrap {
+  overflow: hidden;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  margin: -1.5rem -1.5rem 1rem;
+  width: calc(100% + 3rem);
+  height: 160px;
+}
+.aud-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s var(--ease-out-expo);
+}
+.aud-card:hover .aud-card__img { transform: scale(1.06); }
 
 .aud-card {
   background: var(--bg-card);
@@ -791,58 +762,21 @@ const blogPosts = [
 .prod-panel__price--light strong { color: var(--yellow); text-shadow: var(--glow-sm); }
 
 .prod-panel__visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2.5rem;
   position: relative;
+  overflow: hidden;
+  min-height: 320px;
 }
-.prod-panel__visual--new {
-  background: linear-gradient(135deg, rgba(245,196,0,0.15) 0%, rgba(245,196,0,0.05) 100%);
-  border-left: 1px solid var(--border-yellow);
+.prod-panel__visual--new { border-left: 1px solid var(--border-yellow); }
+.prod-panel__visual--used { border-left: 1px solid var(--border); }
+.prod-panel__img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s var(--ease-out-expo);
 }
-.prod-panel__visual--used {
-  background: var(--bg-card);
-  border-left: 1px solid var(--border);
-}
-
-/* CSS Box Illustration */
-.box-illus {
-  position: relative;
-  width: 120px;
-  height: 100px;
-  transform-style: preserve-3d;
-  transform: perspective(500px) rotateX(15deg) rotateY(-25deg);
-}
-.box-illus__face {
-  position: absolute;
-  border: 1px solid currentColor;
-}
-.box-illus--new .box-illus__face { color: rgba(245,196,0,0.5); }
-.box-illus--used .box-illus__face { color: rgba(255,255,255,0.15); }
-
-.box-illus__front {
-  width: 100px; height: 80px;
-  background: rgba(245,196,0,0.08);
-  bottom: 0; left: 10px;
-}
-.box-illus--used .box-illus__front { background: rgba(255,255,255,0.04); }
-.box-illus__side {
-  width: 40px; height: 80px;
-  background: rgba(245,196,0,0.04);
-  bottom: 0; right: 0;
-  transform: skewY(-30deg);
-  transform-origin: top right;
-}
-.box-illus--used .box-illus__side { background: rgba(255,255,255,0.02); }
-.box-illus__top {
-  width: 100px; height: 40px;
-  background: rgba(245,196,0,0.12);
-  top: 0; left: 10px;
-  transform: skewX(-30deg);
-  transform-origin: bottom left;
-}
-.box-illus--used .box-illus__top { background: rgba(255,255,255,0.04); }
+.prod-panel:hover .prod-panel__img { transform: scale(1.04); }
 
 .prod-badge {
   position: absolute;
@@ -1123,17 +1057,15 @@ const blogPosts = [
   background: var(--bg-card-hov);
 }
 .blog-card__img-wrap { overflow: hidden; }
-.blog-card__img-placeholder {
+.blog-card__img {
+  width: 100%;
   height: 180px;
-  background: linear-gradient(135deg, rgba(245,196,0,0.08) 0%, rgba(255,255,255,0.03) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s var(--ease-out-expo);
+  object-fit: cover;
+  display: block;
   border-bottom: 1px solid var(--border);
+  transition: transform 0.5s var(--ease-out-expo);
 }
-.blog-card:hover .blog-card__img-placeholder { transform: scale(1.04); }
-.blog-card__img-icon { color: var(--yellow); opacity: 0.3; }
+.blog-card:hover .blog-card__img { transform: scale(1.05); }
 .blog-card__body {
   padding: 1.5rem;
   display: flex;
