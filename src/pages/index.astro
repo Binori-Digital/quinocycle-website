@@ -1,65 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const WA_NUMBER = '60168916381'; // TODO: Replace with your WhatsApp number
+const WA_NUMBER = '60168916381';
 const WA_LINK   = `https://wa.me/${WA_NUMBER}?text=Hi%20Quinocycle!%20I%20would%20like%20to%20enquire%20about%20your%20carton%20boxes.`;
 
 const audiences = [
   {
-    img: '/images/audience-retail.jpg',
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
-    label: 'Retail & SME',
-    headline: 'Never run out of packaging.',
-    body: 'Stock up once, save more per box. Consistent supply for your daily operations — no more last-minute runs.',
-    cta: 'Shop Now',
-    href: '/shop?segment=retail',
-  },
-  {
     img: '/images/audience-online.jpg',
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>`,
     label: 'Online Sellers',
     headline: 'Right box for every order.',
-    body: 'From Shopee to TikTok Shop — get bulk boxes in sizes that protect your products and impress your buyers.',
+    body: 'From Shopee to TikTok Shop — bulk boxes in sizes that protect your products and impress your buyers.',
     cta: 'See Sizes',
     href: '/shop?segment=online',
+    span: 'md:col-span-8',
+  },
+  {
+    img: '/images/audience-retail.jpg',
+    label: 'Retail & SME',
+    headline: 'Never run out of packaging.',
+    body: 'Stock up once, save more per box. Consistent supply for your daily operations.',
+    cta: 'Shop Now',
+    href: '/shop?segment=retail',
+    span: 'md:col-span-4',
   },
   {
     img: '/images/audience-mover.jpg',
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
     label: 'Mover Companies',
     headline: 'High volume. Fast turnaround.',
-    body: 'Moving more clients every month? We handle your bulk orders reliably so you can keep every move on schedule.',
+    body: 'We handle bulk orders reliably so you can keep every move on schedule.',
     cta: 'Get a Quote',
-    href: `${WA_LINK}&text=Hi%20Quinocycle!%20I%20am%20a%20mover%20company%20looking%20for%20bulk%20box%20supply.`,
+    href: WA_LINK,
+    span: 'md:col-span-4',
   },
   {
     img: '/images/audience-logistics.jpg',
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>`,
     label: 'Logistics & Warehousing',
     headline: 'Reliable supply. B2B-ready.',
-    body: 'Consistent quality, volume pricing, and proper invoicing. We understand logistics — so your supply never stops.',
+    body: 'Consistent quality, volume pricing, and proper invoicing.',
     cta: 'Talk to Us',
     href: WA_LINK,
+    span: 'md:col-span-8',
   },
 ];
 
-const steps = [
-  { num: '01', title: 'Browse & Pick', body: 'Choose your box type (new or used) and the sizes you need from our fixed price catalogue.' },
-  { num: '02', title: 'Order or WhatsApp', body: 'Place your order online or send us a WhatsApp. Min. order is RM 1,000. We confirm within 1 business day.' },
-  { num: '03', title: 'We Deliver', body: 'Fast delivery across Peninsular Malaysia. Track your shipment and unbox your savings.' },
+const features = [
+  { icon: 'paid',           title: 'Fixed Wholesale Prices',  body: 'No hidden fees. No negotiation fatigue. Transparent pricing you can budget around.' },
+  { icon: 'inventory_2',    title: 'New & Used Options',       body: 'Used boxes save up to 50%. Eco-conscious buying that reduces your carbon footprint.' },
+  { icon: 'local_shipping', title: 'Fast Delivery',            body: 'Covering all of Peninsular Malaysia. Efficient logistics so boxes arrive when needed.' },
+  { icon: 'chat',           title: 'WhatsApp Support',         body: 'Talk to a real person fast. We respond on WhatsApp within business hours.' },
 ];
 
-const features = [
-  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>`, title: 'Fixed Wholesale Prices', body: 'No hidden fees. No negotiation fatigue. Transparent pricing you can budget around.' },
-  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>`, title: 'New & Used Options', body: 'Budget-conscious? Used boxes save up to 50%. Eco-conscious? Recycling reduces your carbon footprint.' },
-  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`, title: 'Fast Delivery', body: 'Covering all of Peninsular Malaysia. Efficient logistics so you get your boxes when you need them.' },
-  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>`, title: 'WhatsApp Support', body: 'Talk to a real person fast. We respond on WhatsApp within business hours — no robots, no waiting.' },
+const steps = [
+  { num: '01', title: 'Browse & Pick',       body: 'Choose your box type (new or used) and sizes from our fixed-price catalogue.' },
+  { num: '02', title: 'Order or WhatsApp',   body: 'Place online or send a WhatsApp. Min. order RM 1,000. We confirm within 1 business day.' },
+  { num: '03', title: 'We Deliver',          body: 'Fast delivery across Peninsular Malaysia. Track your shipment and unbox your savings.' },
 ];
 
 const testimonials = [
   { quote: 'We order 500+ boxes a month for our Shopee store. Quinocycle is the most reliable supplier we\'ve worked with. Pricing is clear, no surprises.', name: 'Ahmad Razif', role: 'Shopee Seller, Selangor' },
-  { quote: 'As a mover company, box supply is critical. Quinocycle delivers on time every time. The used boxes are strong and our customers love that we\'re being eco-friendly.', name: 'Lim Wei Hong', role: 'Operations Manager, KL Movers' },
-  { quote: 'Setup costs were high when we started our warehouse. Quinocycle\'s wholesale pricing helped us cut packaging cost by 40%. B2B invoice is a bonus.', name: 'Siti Norzalina', role: 'Logistics Manager, Penang' },
+  { quote: 'As a mover company, box supply is critical. Quinocycle delivers on time every time. The used boxes are strong and our customers love the eco angle.', name: 'Lim Wei Hong', role: 'Operations Manager, KL Movers' },
+  { quote: 'Quinocycle\'s wholesale pricing helped us cut packaging cost by 40%. B2B invoice is a great bonus for our accounting.', name: 'Siti Norzalina', role: 'Logistics Manager, Penang' },
 ];
 
 const blogPosts = [
@@ -68,7 +68,7 @@ const blogPosts = [
     category: 'Panduan Pindah Rumah',
     img: '/images/blog-movers-guide.jpg',
     title: 'Kedai Kotak Pindah Malaysia — Quinocycle, Balakong Selangor',
-    excerpt: 'Cari kotak pindah rumah murah? Kami jual kotak kardus baru & terpakai dari RM 0.90/kotak. Senarai lengkap barang penting untuk pindah rumah.',
+    excerpt: 'Cari kotak pindah rumah murah? Kami jual kotak kardus baru & terpakai dari RM 0.90/kotak.',
     date: '2026-04-08',
     readTime: '7 min',
   },
@@ -76,8 +76,8 @@ const blogPosts = [
     slug: 'choose-right-carton-box-size',
     category: 'Packaging Tips',
     img: '/images/blog-choose-box-size.jpg',
-    title: 'How to Choose the Right Carton Box Size for Your Business',
-    excerpt: 'Choosing the wrong size wastes money and damages goods. Here\'s the simple guide to sizing your boxes perfectly.',
+    title: 'How to Choose the Right Carton Box Size',
+    excerpt: 'Choosing the wrong size wastes money and damages goods. Here\'s the simple sizing guide.',
     date: '2026-03-15',
     readTime: '5 min',
   },
@@ -86,7 +86,7 @@ const blogPosts = [
     category: 'Buyer Guide',
     img: '/images/blog-new-vs-used.jpg',
     title: 'New vs Used Carton Boxes — Which is Right for You?',
-    excerpt: 'Used boxes can cut your packaging cost by up to 50%. But are they right for your products? We break it down.',
+    excerpt: 'Used boxes can cut your packaging cost by up to 50%. But are they right for your products?',
     date: '2026-03-08',
     readTime: '4 min',
   },
@@ -95,7 +95,7 @@ const blogPosts = [
     category: 'Business Tips',
     img: '/images/blog-cut-packaging-costs.jpg',
     title: 'How Online Sellers Can Cut Packaging Costs by 40%',
-    excerpt: 'Small margins matter for e-commerce. These practical steps will save you thousands in packaging every year.',
+    excerpt: 'Small margins matter for e-commerce. These practical steps will save you thousands yearly.',
     date: '2026-02-28',
     readTime: '6 min',
   },
@@ -103,247 +103,346 @@ const blogPosts = [
 ---
 
 <Layout>
-  <!-- ===================== HERO ===================== -->
-  <section class="hero">
-    <div class="container hero__inner">
-      <div class="hero__content">
-        <div class="tag tag--dark fade-up">
-          <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
-          Wholesale Carton Box Supplier · Malaysia
-        </div>
+  <!-- ===================== IMAGE TRAIL HERO ===================== -->
+  <section
+    id="trailHero"
+    class="relative min-h-screen flex items-center overflow-hidden bg-surface select-none"
+    style="cursor: none;"
+  >
+    <!-- Trail images render here (JS-injected) -->
+    <div id="trailContainer" class="absolute inset-0 pointer-events-none z-10"></div>
 
-        <h1 class="hero__heading fade-up fade-up-1">
-          Box More.<br />
-          <span class="hero__heading-accent">Spend Less.</span>
-        </h1>
+    <!-- Custom cursor dot -->
+    <div
+      id="trailCursor"
+      class="fixed pointer-events-none z-[999] w-3 h-3 rounded-full bg-primary opacity-0 transition-opacity duration-300"
+      style="transform: translate(-50%, -50%); top: 0; left: 0;"
+    ></div>
 
-        <p class="hero__sub fade-up fade-up-2">
-          New &amp; used carton boxes in bulk — fixed wholesale prices, Peninsular Malaysia delivery.
-          Trusted by retailers, online sellers, movers and logistics companies.
-        </p>
-
-        <div class="hero__meta fade-up fade-up-3">
-          <span class="meta-chip">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            Min. Order RM 1,000
-          </span>
-          <span class="meta-chip">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            Fixed Wholesale Pricing
-          </span>
-          <span class="meta-chip">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            Peninsular Malaysia Delivery
-          </span>
-        </div>
-
-        <div class="hero__ctas fade-up fade-up-4">
-          <a href="/shop" class="btn btn-primary btn-lg">Browse the Shop</a>
-          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp Us
-          </a>
-        </div>
-      </div>
-
-      <!-- Hero visual -->
-      <div class="hero__visual fade-up fade-up-2">
-        <img
-          src="/images/hero-boxes.jpg"
-          alt="Stacked carton boxes in warehouse"
-          class="hero__img"
-          loading="eager"
-          width="640"
-          height="360"
-        />
-      </div>
+    <!-- Subtle grid texture background -->
+    <div class="absolute inset-0 z-0 opacity-[0.025]"
+      style="background-image: linear-gradient(#1d1c16 1px, transparent 1px), linear-gradient(90deg, #1d1c16 1px, transparent 1px); background-size: 60px 60px;">
     </div>
 
-    <!-- Scroll hint -->
-    <div class="hero__scroll">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
-    </div>
-  </section>
+    <!-- Main content -->
+    <div class="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-8 py-24 md:py-32">
 
-  <!-- ===================== TRUST BAR ===================== -->
-  <section class="trust-bar" aria-label="Trust indicators">
-    <div class="trust-bar__inner">
-      <div class="marquee-track">
-        {[...Array(2)].map(() => (
-          <>
-            <span class="trust-item">500+ Businesses Served</span>
-            <span class="trust-dot" aria-hidden="true">◆</span>
-            <span class="trust-item">Fixed Wholesale Pricing</span>
-            <span class="trust-dot" aria-hidden="true">◆</span>
-            <span class="trust-item">New &amp; Used Boxes Available</span>
-            <span class="trust-dot" aria-hidden="true">◆</span>
-            <span class="trust-item">Peninsular Malaysia Delivery</span>
-            <span class="trust-dot" aria-hidden="true">◆</span>
-            <span class="trust-item">Min. Order RM 1,000</span>
-            <span class="trust-dot" aria-hidden="true">◆</span>
-            <span class="trust-item">WhatsApp Support</span>
-            <span class="trust-dot" aria-hidden="true">◆</span>
-            <span class="trust-item">Eco-Friendly Used Boxes</span>
-            <span class="trust-dot" aria-hidden="true">◆</span>
-          </>
+      <!-- Eyebrow -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 bg-primary-container/20 rounded-full border border-primary/15 fade-up">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+        <span class="font-label text-xs font-bold uppercase tracking-[0.22em] text-primary">Wholesale Carton Box Supplier · Malaysia</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="font-headline font-black tracking-tighter leading-[0.88] text-on-surface mb-8 fade-up fade-up-1"
+          style="font-size: clamp(3.5rem, 10vw, 8.5rem);">
+        Box More.<br />
+        <span class="text-primary italic">Spend Less.</span>
+      </h1>
+
+      <!-- Sub -->
+      <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed fade-up fade-up-2">
+        New &amp; used carton boxes in bulk — fixed wholesale prices,
+        Peninsular Malaysia delivery. Trusted by retailers, online sellers,
+        movers and logistics companies.
+      </p>
+
+      <!-- Meta chips -->
+      <div class="flex flex-wrap gap-3 mb-12 fade-up fade-up-3">
+        {['Min. Order RM 1,000', 'Fixed Wholesale Pricing', 'Peninsular Malaysia Delivery'].map(chip => (
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container rounded-full border border-outline-variant/40 text-xs font-label font-semibold text-on-surface-variant">
+            <span class="material-symbols-outlined text-primary" style="font-size:13px;">check_circle</span>
+            {chip}
+          </span>
         ))}
       </div>
+
+      <!-- CTAs -->
+      <div class="flex flex-wrap gap-4 fade-up fade-up-4">
+        <a href="/shop"
+           class="bg-primary-container text-on-primary-container px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all duration-200 pointer-events-auto">
+          Browse the Shop
+        </a>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-2 bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors duration-200 pointer-events-auto">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+
+      <!-- Move hint -->
+      <p class="mt-16 font-label text-xs uppercase tracking-[0.25em] text-outline flex items-center gap-2 fade-up fade-up-4 pointer-events-none" id="trailHint">
+        <span class="inline-block w-6 h-px bg-outline"></span>
+        Move your mouse to explore
+      </p>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 opacity-40">
+      <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Scroll</span>
+      <div class="w-px h-8 bg-on-surface-variant" style="animation: scrollPulse 1.8s ease-in-out infinite;"></div>
     </div>
   </section>
 
-  <!-- ===================== WHO WE SERVE ===================== -->
-  <section class="audiences" id="who-we-serve">
-    <div class="container">
-      <div class="section-eyebrow">Who We Serve</div>
-      <h2 class="section-title audiences__heading">
-        Built for Malaysian<br />businesses that move.
-      </h2>
+  <style>
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.2; transform: scaleY(1); }
+      50%       { opacity: 1;   transform: scaleY(0.6); }
+    }
+    /* Trail image entry/exit handled by JS inline styles */
+    .trail-img {
+      position: absolute;
+      pointer-events: none;
+      border-radius: 16px;
+      overflow: hidden;
+      will-change: transform, opacity;
+      box-shadow: 0 12px 40px rgba(29, 28, 22, 0.18), 0 2px 8px rgba(29, 28, 22, 0.1);
+    }
+    .trail-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
 
-      <div class="audiences__grid">
+  <script define:vars={{ WA_LINK }}>
+    (function () {
+      const TRAIL_IMAGES = [
+        '/images/box-new-s.jpg',
+        '/images/box-new-m.jpg',
+        '/images/box-new-l.jpg',
+        '/images/box-new-xl.jpg',
+        '/images/box-used-s.jpg',
+        '/images/box-used-m.jpg',
+        '/images/box-used-l.jpg',
+        '/images/box-used-xl.jpg',
+        '/images/audience-retail.jpg',
+        '/images/audience-online.jpg',
+        '/images/audience-mover.jpg',
+        '/images/audience-logistics.jpg',
+        '/images/hero-boxes.jpg',
+        '/images/product-new.jpg',
+        '/images/product-used.jpg',
+      ];
+
+      const MIN_DISTANCE   = 90;   // px the cursor must travel before spawning
+      const MAX_ON_SCREEN  = 10;   // max simultaneous images
+      const LINGER_MS      = 900;  // ms before fade-out starts
+      const FADE_MS        = 600;  // fade-out duration
+
+      const hero      = document.getElementById('trailHero');
+      const container = document.getElementById('trailContainer');
+      const cursor    = document.getElementById('trailCursor');
+      const hint      = document.getElementById('trailHint');
+
+      if (!hero || !container) return;
+
+      let imgIndex = 0;
+      let lastX = 0;
+      let lastY = 0;
+      let hasInteracted = false;
+
+      /* ── Custom cursor ── */
+      document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top  = e.clientY + 'px';
+      });
+
+      /* ── Show/hide cursor & hint when entering/leaving hero ── */
+      hero.addEventListener('mouseenter', () => {
+        cursor.style.opacity = '1';
+      });
+      hero.addEventListener('mouseleave', () => {
+        cursor.style.opacity = '0';
+      });
+
+      /* ── Trail logic ── */
+      hero.addEventListener('mousemove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const dx   = x - lastX;
+        const dy   = y - lastY;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < MIN_DISTANCE) return;
+
+        lastX = x;
+        lastY = y;
+
+        /* Hide hint after first interaction */
+        if (!hasInteracted) {
+          hasInteracted = true;
+          if (hint) {
+            hint.style.transition = 'opacity 0.5s ease';
+            hint.style.opacity = '0';
+          }
+        }
+
+        /* Cull oldest if over limit */
+        const existing = container.querySelectorAll('.trail-img');
+        if (existing.length >= MAX_ON_SCREEN) {
+          killImage(existing[0]);
+        }
+
+        spawnImage(x, y);
+      });
+
+      function spawnImage(x, y) {
+        const src      = TRAIL_IMAGES[imgIndex % TRAIL_IMAGES.length];
+        imgIndex++;
+
+        /* Randomise size & rotation */
+        const w        = 130 + Math.random() * 80;        /* 130–210 px */
+        const ratio    = 0.7 + Math.random() * 0.45;      /* portrait–landscape */
+        const h        = w * ratio;
+        const rot      = (Math.random() - 0.5) * 28;      /* ±14 deg */
+        const zBase    = 5 + (imgIndex % 8);
+
+        const wrapper  = document.createElement('div');
+        wrapper.className = 'trail-img';
+        wrapper.style.cssText = [
+          `width:${w}px`,
+          `height:${h}px`,
+          `left:${x}px`,
+          `top:${y}px`,
+          `z-index:${zBase}`,
+          `transform:translate(-50%,-50%) rotate(${rot}deg) scale(0)`,
+          `opacity:1`,
+          `transition:transform 0.45s cubic-bezier(0.34,1.56,0.64,1)`,
+        ].join(';');
+
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = '';
+        img.loading = 'eager';
+        wrapper.appendChild(img);
+        container.appendChild(wrapper);
+
+        /* Animate in — double rAF ensures initial style is painted first */
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            wrapper.style.transform = `translate(-50%,-50%) rotate(${rot}deg) scale(1)`;
+          });
+        });
+
+        /* Schedule fade-out */
+        const fadeTimer = setTimeout(() => killImage(wrapper, rot), LINGER_MS);
+        wrapper._fadeTimer = fadeTimer;
+      }
+
+      function killImage(el, rot) {
+        if (!el || !el.parentNode) return;
+        clearTimeout(el._fadeTimer);
+        const curRot = rot !== undefined ? rot : 0;
+        el.style.transition = `transform ${FADE_MS}ms ease, opacity ${FADE_MS}ms ease`;
+        el.style.opacity    = '0';
+        el.style.transform  = `translate(-50%,-50%) rotate(${curRot * 1.4}deg) scale(0.75)`;
+        setTimeout(() => el.remove(), FADE_MS + 50);
+      }
+
+      /* ── Touch: no trail, but restore cursor default ── */
+      if ('ontouchstart' in window) {
+        hero.style.cursor = 'auto';
+        cursor.style.display = 'none';
+        if (hint) hint.style.display = 'none';
+      }
+    })();
+  </script>
+
+  <!-- ===================== WHO WE SERVE — BENTO GRID ===================== -->
+  <section class="py-24 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8">
+      <!-- Header -->
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div class="max-w-xl">
+          <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">Who We Serve</span>
+          <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface">Packaging for every kind of business.</h2>
+        </div>
+        <a href="/shop" class="text-primary font-headline font-bold border-b-2 border-primary-container hover:border-primary transition-all pb-1 whitespace-nowrap">Full Catalogue →</a>
+      </div>
+
+      <!-- Bento grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
         {audiences.map((a, i) => (
-          <div class="aud-card" style={`--delay: ${i * 0.1}s`}>
-            <div class="aud-card__img-wrap">
-              <img src={a.img} alt={a.label} class="aud-card__img" loading="lazy" width="400" height="300" />
+          <div class={`${a.span} bg-surface rounded-3xl overflow-hidden group relative min-h-[340px]`}>
+            <div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 via-on-surface/20 to-transparent z-10"></div>
+            <img
+              src={a.img}
+              alt={a.label}
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+            <div class="absolute bottom-0 left-0 p-8 z-20">
+              <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-container mb-3 block">{a.label}</span>
+              <h3 class="font-headline text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">{a.headline}</h3>
+              <p class="text-white/75 text-sm leading-relaxed mb-5 max-w-sm">{a.body}</p>
+              <a
+                href={a.href}
+                target={a.href.startsWith('http') ? '_blank' : undefined}
+                rel={a.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                class="inline-flex bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-headline font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-all"
+              >
+                {a.cta}
+              </a>
             </div>
-            <div class="aud-card__icon" set:html={a.icon} />
-            <div class="aud-card__tag">{a.label}</div>
-            <h3 class="aud-card__title">{a.headline}</h3>
-            <p class="aud-card__body">{a.body}</p>
-            <a href={a.href} class="aud-card__link">
-              {a.cta}
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- ===================== PRODUCTS ===================== -->
-  <section class="products" id="products">
-    <div class="container">
-      <div class="section-eyebrow">What We Sell</div>
-      <h2 class="section-title products__heading">Two great options.<br />One trusted supplier.</h2>
-    </div>
-
-    <div class="products__split">
-      <!-- NEW BOXES -->
-      <div class="prod-panel prod-panel--new">
-        <div class="prod-panel__content">
-          <div class="tag tag--dark">New Boxes</div>
-          <h3 class="prod-panel__title">Brand New<br />Carton Boxes</h3>
-          <ul class="prod-panel__list">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Consistent quality &amp; dimensions
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Single and double wall options
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Professional finish for e-commerce
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Available in S / M / L / XL sizes
-            </li>
-          </ul>
-          <div class="prod-panel__price">From <strong>RM 1.90</strong> / box</div>
-          <a href="/shop?filter=new" class="btn btn-dark">Shop New Boxes</a>
-        </div>
-        <div class="prod-panel__visual prod-panel__visual--new">
-          <img
-            src="/images/product-new.jpg"
-            alt="Brand new corrugated carton boxes"
-            class="prod-panel__img"
-            loading="lazy"
-            width="480"
-            height="640"
-          />
-          <div class="prod-badge prod-badge--new">NEW</div>
-        </div>
+  <!-- ===================== FEATURES ===================== -->
+  <section class="py-24 bg-surface">
+    <div class="max-w-7xl mx-auto px-6 md:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">Why Quinocycle</span>
+        <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface">
+          The foundation of <span class="text-primary italic">reliability.</span>
+        </h2>
       </div>
 
-      <!-- USED BOXES -->
-      <div class="prod-panel prod-panel--used">
-        <div class="prod-panel__visual prod-panel__visual--used">
-          <img
-            src="/images/product-used.jpg"
-            alt="Recycled used carton boxes — eco-friendly"
-            class="prod-panel__img"
-            loading="lazy"
-            width="480"
-            height="640"
-          />
-          <div class="prod-badge prod-badge--used">USED</div>
-        </div>
-        <div class="prod-panel__content">
-          <div class="tag tag--yellow">Used Boxes</div>
-          <h3 class="prod-panel__title prod-panel__title--light">Used &amp; Recycled<br />Carton Boxes</h3>
-          <ul class="prod-panel__list prod-panel__list--light">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Save up to 50% vs new boxes
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Still sturdy — quality checked
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Eco-friendly packaging choice
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Ideal for movers &amp; storage
-            </li>
-          </ul>
-          <div class="prod-panel__price prod-panel__price--light">From <strong>RM 0.90</strong> / box</div>
-          <a href="/shop?filter=used" class="btn btn-primary">Shop Used Boxes</a>
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        {features.map((f, i) => (
+          <div class={`rounded-3xl p-8 flex flex-col gap-4 ${
+            i === 3 ? 'bg-inverse-surface text-white' :
+            i === 1 ? 'bg-primary-container' :
+            'bg-surface-container-low'
+          }`}>
+            <span class={`material-symbols-outlined text-4xl ${
+              i === 3 ? 'text-primary-container' :
+              'text-primary'
+            }`}>{f.icon}</span>
+            <h4 class={`font-headline font-bold text-xl ${i === 3 ? 'text-white' : 'text-on-surface'}`}>{f.title}</h4>
+            <p class={`text-sm leading-relaxed ${
+              i === 3 ? 'text-white/70' :
+              i === 1 ? 'text-on-primary-container/80' :
+              'text-secondary'
+            }`}>{f.body}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- ===================== HOW IT WORKS ===================== -->
-  <section class="how-it-works">
-    <div class="container">
-      <div class="section-eyebrow">How It Works</div>
-      <h2 class="section-title hiw__heading">Order in 3 simple steps.</h2>
-      <div class="hiw__steps">
-        {steps.map((s, i) => (
-          <div class="hiw-step" style={`--delay: ${i * 0.12}s`}>
-            <div class="hiw-step__num">{s.num}</div>
-            <div class="hiw-step__content">
-              <h3 class="hiw-step__title">{s.title}</h3>
-              <p class="hiw-step__body">{s.body}</p>
+  <section class="py-24 bg-surface-container-low">
+    <div class="max-w-5xl mx-auto px-6 md:px-8">
+      <div class="text-center mb-16">
+        <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">Simple Process</span>
+        <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface">How it works.</h2>
+      </div>
+      <div class="flex flex-col gap-16">
+        {steps.map(s => (
+          <div class="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
+            <div class="md:w-1/4 flex-shrink-0">
+              <span class="font-headline text-6xl font-extrabold text-outline-variant/40">{s.num}</span>
             </div>
-          </div>
-        ))}
-      </div>
-      <div class="hiw__cta">
-        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Start Your Order
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== WHY CHOOSE ===================== -->
-  <section class="why">
-    <div class="container">
-      <div class="section-eyebrow">Why Quinocycle</div>
-      <h2 class="section-title why__heading">We make bulk buying<br />straightforward.</h2>
-      <div class="why__grid">
-        {features.map((f, i) => (
-          <div class="why-card" style={`--delay: ${i * 0.08}s`}>
-            <div class="why-card__icon" set:html={f.icon} />
-            <h3 class="why-card__title">{f.title}</h3>
-            <p class="why-card__body">{f.body}</p>
+            <div class="md:w-3/4">
+              <h4 class="font-headline text-2xl font-bold text-on-surface mb-3">{s.title}</h4>
+              <p class="font-body text-secondary leading-relaxed text-lg">{s.body}</p>
+            </div>
           </div>
         ))}
       </div>
@@ -351,21 +450,22 @@ const blogPosts = [
   </section>
 
   <!-- ===================== TESTIMONIALS ===================== -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="section-eyebrow">What Customers Say</div>
-      <h2 class="section-title testi__heading">Trusted by<br />businesses across Malaysia.</h2>
-      <div class="testi__grid">
+  <section class="py-24 bg-surface">
+    <div class="max-w-7xl mx-auto px-6 md:px-8">
+      <div class="text-center mb-16">
+        <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">What Clients Say</span>
+        <h2 class="font-headline text-4xl font-extrabold tracking-tighter text-on-surface">Trusted across Malaysia.</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((t, i) => (
-          <div class="testi-card" style={`--delay: ${i * 0.1}s`}>
-            <div class="testi-card__quote-mark">"</div>
-            <p class="testi-card__quote">{t.quote}</p>
-            <div class="testi-card__author">
-              <div class="testi-card__avatar" aria-hidden="true">{t.name[0]}</div>
-              <div>
-                <div class="testi-card__name">{t.name}</div>
-                <div class="testi-card__role">{t.role}</div>
-              </div>
+          <div class={`rounded-3xl p-10 flex flex-col justify-between ${i === 1 ? 'bg-primary-container' : 'bg-surface-container-low'}`}>
+            <p class={`font-body text-lg leading-relaxed italic mb-8 ${i === 1 ? 'text-on-primary-container' : 'text-on-surface-variant'}`}>
+              "{t.quote}"
+            </p>
+            <div>
+              <div class={`h-px mb-4 ${i === 1 ? 'bg-on-primary-container/20' : 'bg-outline-variant/30'}`}></div>
+              <p class={`font-headline font-bold ${i === 1 ? 'text-on-primary-container' : 'text-on-surface'}`}>{t.name}</p>
+              <p class={`font-body text-sm ${i === 1 ? 'text-on-primary-container/70' : 'text-secondary'}`}>{t.role}</p>
             </div>
           </div>
         ))}
@@ -373,813 +473,85 @@ const blogPosts = [
     </div>
   </section>
 
-  <!-- ===================== BLOG PREVIEW ===================== -->
-  <section class="blog-preview">
-    <div class="container">
-      <div class="blog-preview__header">
+  <!-- ===================== BLOG FEED ===================== -->
+  <section class="py-24 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
         <div>
-          <div class="section-eyebrow">From the Blog</div>
-          <h2 class="section-title blog-preview__heading">Packaging tips &amp;<br />business insights.</h2>
+          <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">From the Blog</span>
+          <h2 class="font-headline text-4xl font-extrabold tracking-tighter text-on-surface">Packaging insights.</h2>
         </div>
-        <a href="/blog" class="btn btn-outline hide-mobile">View All Articles</a>
+        <a href="/blog" class="text-primary font-headline font-bold border-b-2 border-primary-container hover:border-primary transition-all pb-1 whitespace-nowrap">All Articles →</a>
       </div>
 
-      <div class="blog-preview__grid">
-        {blogPosts.map((p, i) => (
-          <a href={`/blog/${p.slug}`} class="blog-card" style={`--delay: ${i * 0.1}s`}>
-            <div class="blog-card__img-wrap">
-              <img src={p.img} alt={p.title} class="blog-card__img" loading="lazy" width="640" height="360" />
-            </div>
-            <div class="blog-card__body">
-              <div class="tag tag--yellow" style="font-size:0.62rem">{p.category}</div>
-              <h3 class="blog-card__title">{p.title}</h3>
-              <p class="blog-card__excerpt">{p.excerpt}</p>
-              <div class="blog-card__meta">
-                <time datetime={p.date}>{new Date(p.date).toLocaleDateString('en-MY', { day:'numeric', month:'short', year:'numeric' })}</time>
-                <span>{p.readTime} read</span>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <!-- Featured post -->
+        <article class="md:col-span-8 bg-surface rounded-3xl overflow-hidden group">
+          <div class="aspect-[16/9] overflow-hidden">
+            <img
+              src={blogPosts[0].img}
+              alt={blogPosts[0].title}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8">
+            <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-2 block">{blogPosts[0].category}</span>
+            <h3 class="font-headline text-2xl font-bold tracking-tight text-on-surface mb-3 leading-tight">{blogPosts[0].title}</h3>
+            <p class="font-body text-secondary text-sm leading-relaxed mb-5">{blogPosts[0].excerpt}</p>
+            <a href={`/blog/${blogPosts[0].slug}`} class="inline-flex items-center gap-1 text-primary font-headline font-bold text-sm hover:gap-3 transition-all">
+              Read Article <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Side posts -->
+        <div class="md:col-span-4 flex flex-col gap-5">
+          {blogPosts.slice(1, 3).map(post => (
+            <article class="bg-surface rounded-3xl overflow-hidden group flex flex-col flex-1">
+              <div class="aspect-[16/9] overflow-hidden">
+                <img
+                  src={post.img}
+                  alt={post.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
               </div>
-            </div>
-          </a>
-        ))}
-      </div>
-
-      <div class="blog-preview__mobile-cta hide-desktop">
-        <a href="/blog" class="btn btn-outline">View All Articles</a>
+              <div class="p-6 flex flex-col flex-1">
+                <span class="font-label text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-1 block">{post.category}</span>
+                <h3 class="font-headline text-lg font-bold tracking-tight text-on-surface mb-2 leading-snug flex-1">{post.title}</h3>
+                <a href={`/blog/${post.slug}`} class="inline-flex items-center gap-1 text-primary font-headline font-bold text-xs hover:gap-2 transition-all mt-2">
+                  Read <span class="material-symbols-outlined" style="font-size:14px;">arrow_forward</span>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FINAL CTA ===================== -->
-  <section class="final-cta">
-    <div class="container final-cta__inner">
-      <div class="final-cta__content">
-        <div class="tag tag--yellow">Ready to Order?</div>
-        <h2 class="final-cta__heading">
-          Great prices.<br />Simple ordering.<br />
-          <span class="final-cta__heading-accent">Let's talk boxes.</span>
-        </h2>
-        <p class="final-cta__sub">
-          Minimum order RM 1,000 · Fixed pricing · Delivery across Peninsular Malaysia
-        </p>
-      </div>
-      <div class="final-cta__actions">
-        <a href="/shop" class="btn btn-primary btn-lg">Browse the Shop</a>
-        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <!-- ===================== CTA ===================== -->
+  <section class="py-32 bg-primary-container text-on-primary-container relative overflow-hidden">
+    <div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+      <span class="material-symbols-outlined" style="font-size:200px;">inventory_2</span>
+    </div>
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center relative z-10">
+      <h2 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter mb-6">
+        Ready to place your first order?
+      </h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        Min. order RM 1,000. Fixed wholesale pricing. Delivery across Peninsular Malaysia. No surprises.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/shop" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-primary transition-colors duration-200">
+          Browse the Shop
+        </a>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors duration-200">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           WhatsApp Us
         </a>
       </div>
     </div>
   </section>
 </Layout>
-
-<style>
-/* ====== HERO ====== */
-.hero {
-  min-height: calc(100vh - var(--nav-h));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-block: clamp(3rem, 6vw, 5rem);
-  position: relative;
-  overflow: hidden;
-  background: var(--bg-base);
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 80% 50% at 60% 50%, rgba(245,196,0,0.07) 0%, transparent 70%);
-  pointer-events: none;
-}
-.hero__inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-@media (max-width: 900px) {
-  .hero__inner { grid-template-columns: 1fr; }
-  .hero__visual { display: none; }
-}
-.hero__content { max-width: 600px; }
-.hero__heading {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: clamp(3.5rem, 7vw, 7.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.02em;
-  margin-block: 1rem 1.25rem;
-  color: var(--text-1);
-}
-.hero__heading-accent {
-  color: var(--yellow);
-  text-shadow: var(--glow-text);
-}
-.hero__sub {
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
-  line-height: 1.6;
-  color: var(--text-2);
-  max-width: 480px;
-  margin-bottom: 1.5rem;
-}
-.hero__meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-}
-.meta-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  color: var(--text-2);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  padding: 5px 10px;
-  border-radius: 100px;
-  backdrop-filter: blur(8px);
-}
-.meta-chip svg { color: var(--yellow); stroke: var(--yellow); flex-shrink: 0; }
-.hero__ctas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-/* Hero Visual */
-.hero__visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-.hero__img {
-  width: 100%;
-  height: 100%;
-  max-height: 520px;
-  object-fit: cover;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: 0 0 60px rgba(245,196,0,0.12), 0 30px 80px rgba(0,0,0,0.6);
-  display: block;
-}
-
-/* Scroll hint */
-.hero__scroll {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-3);
-  z-index: 1;
-}
-.scroll-line {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--border-yellow), transparent);
-  animation: scrollPulse 2s ease-in-out infinite;
-}
-@keyframes scrollPulse {
-  0%, 100% { opacity: 0.4; transform: scaleY(1); }
-  50% { opacity: 1; transform: scaleY(1.2); }
-}
-@media (max-width: 768px) { .hero__scroll { display: none; } }
-
-/* ====== TRUST BAR ====== */
-.trust-bar {
-  background: var(--bg-2);
-  overflow: hidden;
-  padding-block: 14px;
-  border-top: 1px solid var(--border-yellow);
-  border-bottom: 1px solid var(--border-yellow);
-}
-.trust-bar__inner { overflow: hidden; }
-.trust-item {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-2);
-  padding-inline: 2.5rem;
-  white-space: nowrap;
-}
-.trust-dot {
-  color: var(--yellow);
-  font-size: 0.5rem;
-  padding-inline: 0.25rem;
-  white-space: nowrap;
-}
-
-/* ====== AUDIENCES ====== */
-.audiences {
-  padding-block: var(--section-py);
-  background: var(--bg-base);
-  position: relative;
-}
-.audiences::before {
-  content: '';
-  position: absolute;
-  top: -100px;
-  left: -200px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(245,196,0,0.05) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-  filter: blur(60px);
-}
-.audiences__heading {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  margin-bottom: 3rem;
-  max-width: 560px;
-}
-.audiences__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-}
-@media (max-width: 1024px) { .audiences__grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px)  { .audiences__grid { grid-template-columns: 1fr; } }
-
-.aud-card__img-wrap {
-  overflow: hidden;
-  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-  margin: -1.5rem -1.5rem 1rem;
-  width: calc(100% + 3rem);
-  height: 160px;
-}
-.aud-card__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s var(--ease-out-expo);
-}
-.aud-card:hover .aud-card__img { transform: scale(1.06); }
-
-.aud-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  backdrop-filter: blur(12px);
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.25s var(--ease-out-expo), background 0.2s;
-}
-.aud-card:hover {
-  border-color: var(--border-yellow-h);
-  box-shadow: var(--glow-sm), 0 20px 60px rgba(0,0,0,0.4);
-  transform: translateY(-5px);
-  background: var(--bg-card-hov);
-}
-.aud-card__icon {
-  width: 40px;
-  height: 40px;
-  color: var(--yellow);
-}
-.aud-card__icon svg { width: 100%; height: 100%; }
-.aud-card__tag {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-3);
-}
-.aud-card__title {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.3rem;
-  line-height: 1.15;
-  color: var(--text-1);
-}
-.aud-card__body {
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: var(--text-2);
-  flex: 1;
-}
-.aud-card__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--yellow);
-  margin-top: 0.5rem;
-  transition: gap 0.15s ease, text-shadow 0.15s;
-}
-.aud-card__link:hover { gap: 10px; text-shadow: var(--glow-text); }
-.aud-card__link svg { flex-shrink: 0; }
-
-/* ====== PRODUCTS ====== */
-.products {
-  padding-block: var(--section-py);
-  background: var(--bg-2);
-}
-.products__heading {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  margin-bottom: 3rem;
-}
-.products__split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 3rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-@media (max-width: 900px) {
-  .products__split { grid-template-columns: 1fr; }
-  .prod-panel--used .prod-panel__visual { order: -1; }
-}
-
-.prod-panel {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: stretch;
-}
-@media (max-width: 640px) {
-  .prod-panel { grid-template-columns: 1fr; }
-}
-
-.prod-panel--new { background: var(--bg-3); border-right: 1px solid var(--border); }
-.prod-panel--used { background: var(--bg-base); }
-
-.prod-panel__content {
-  padding: clamp(2rem, 5vw, 3.5rem);
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  justify-content: center;
-}
-.prod-panel__title {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  line-height: 1.1;
-  color: var(--text-1);
-}
-.prod-panel__title--light { color: var(--text-1); }
-.prod-panel__list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-.prod-panel__list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: var(--text-2);
-}
-.prod-panel__list li svg { color: var(--yellow); stroke: var(--yellow); flex-shrink: 0; margin-top: 2px; }
-.prod-panel__list--light li { color: var(--text-2); }
-.prod-panel__list--light li svg { color: var(--yellow); stroke: var(--yellow); }
-.prod-panel__price {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  color: var(--text-2);
-  letter-spacing: 0.02em;
-}
-.prod-panel__price strong { font-size: 1.6rem; color: var(--text-1); }
-.prod-panel__price--light { color: var(--text-2); }
-.prod-panel__price--light strong { color: var(--yellow); text-shadow: var(--glow-sm); }
-
-.prod-panel__visual {
-  position: relative;
-  overflow: hidden;
-  min-height: 320px;
-}
-.prod-panel__visual--new { border-left: 1px solid var(--border-yellow); }
-.prod-panel__visual--used { border-left: 1px solid var(--border); }
-.prod-panel__img {
-  width: 100%;
-  height: 100%;
-  min-height: 320px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s var(--ease-out-expo);
-}
-.prod-panel:hover .prod-panel__img { transform: scale(1.04); }
-
-.prod-badge {
-  position: absolute;
-  top: 1.5rem; right: 1.5rem;
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  padding: 4px 10px;
-  border-radius: 2px;
-}
-.prod-badge--new {
-  background: rgba(245,196,0,0.15);
-  color: var(--yellow);
-  border: 1px solid var(--border-yellow-h);
-}
-.prod-badge--used {
-  background: var(--bg-card);
-  color: var(--text-2);
-  border: 1px solid var(--border);
-}
-
-/* ====== HOW IT WORKS ====== */
-.how-it-works {
-  background: var(--bg-base);
-  padding-block: var(--section-py);
-  position: relative;
-  overflow: hidden;
-}
-.how-it-works::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 800px;
-  height: 400px;
-  background: radial-gradient(ellipse, rgba(245,196,0,0.06) 0%, transparent 70%);
-  pointer-events: none;
-  filter: blur(40px);
-}
-.hiw__heading {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  color: var(--text-1);
-  margin-bottom: 3rem;
-  position: relative;
-  z-index: 1;
-}
-.hiw__steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  position: relative;
-  z-index: 1;
-}
-@media (max-width: 768px) { .hiw__steps { grid-template-columns: 1fr; } }
-
-.hiw-step {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 2rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  backdrop-filter: blur(12px);
-  transition: border-color 0.2s, box-shadow 0.25s, transform 0.25s var(--ease-out-expo);
-}
-.hiw-step:hover {
-  border-color: var(--border-yellow-h);
-  box-shadow: var(--glow-sm), 0 20px 60px rgba(0,0,0,0.4);
-  transform: translateY(-4px);
-}
-.hiw-step__num {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 3rem;
-  line-height: 1;
-  color: var(--yellow);
-  text-shadow: var(--glow-text);
-  opacity: 0.8;
-}
-.hiw-step__title {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.4rem;
-  color: var(--text-1);
-}
-.hiw-step__body {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: var(--text-2);
-}
-.hiw__cta { margin-top: 3rem; display: flex; justify-content: center; position: relative; z-index: 1; }
-
-/* ====== WHY ====== */
-.why {
-  padding-block: var(--section-py);
-  background: var(--bg-2);
-}
-.why__heading {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  margin-bottom: 3rem;
-}
-.why__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-@media (max-width: 1024px) { .why__grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px)  { .why__grid { grid-template-columns: 1fr; } }
-
-.why-card {
-  padding: 2rem 1.75rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  backdrop-filter: blur(12px);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.25s var(--ease-out-expo), background 0.2s;
-}
-.why-card:hover {
-  border-color: var(--border-yellow);
-  box-shadow: var(--glow-sm);
-  transform: translateY(-3px);
-  background: var(--bg-card-hov);
-}
-.why-card__icon {
-  width: 36px; height: 36px;
-  color: var(--yellow);
-}
-.why-card__icon svg { width: 100%; height: 100%; }
-.why-card__title {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.15rem;
-  color: var(--text-1);
-  line-height: 1.2;
-}
-.why-card__body { font-size: 0.875rem; line-height: 1.65; color: var(--text-2); }
-
-/* ====== TESTIMONIALS ====== */
-.testimonials {
-  padding-block: var(--section-py);
-  background: var(--bg-base);
-  position: relative;
-}
-.testimonials::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: -150px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(245,196,0,0.05) 0%, transparent 70%);
-  pointer-events: none;
-  filter: blur(60px);
-}
-.testi__heading {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  color: var(--text-1);
-  margin-bottom: 3rem;
-  position: relative;
-  z-index: 1;
-}
-.testi__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  position: relative;
-  z-index: 1;
-}
-@media (max-width: 900px) { .testi__grid { grid-template-columns: 1fr; } }
-
-.testi-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  backdrop-filter: blur(12px);
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  position: relative;
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.25s var(--ease-out-expo);
-}
-.testi-card:hover {
-  border-color: var(--border-yellow);
-  box-shadow: var(--glow-sm);
-  transform: translateY(-4px);
-}
-.testi-card__quote-mark {
-  font-family: var(--font-display);
-  font-size: 5rem;
-  font-weight: 900;
-  line-height: 0.6;
-  color: var(--yellow);
-  opacity: 0.3;
-}
-.testi-card__quote {
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: var(--text-2);
-  flex: 1;
-}
-.testi-card__author {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  border-top: 1px solid var(--border);
-  padding-top: 1rem;
-}
-.testi-card__avatar {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  background: rgba(245,196,0,0.15);
-  color: var(--yellow);
-  border: 1px solid var(--border-yellow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-.testi-card__name {
-  font-weight: 600;
-  font-size: 0.875rem;
-  color: var(--text-1);
-}
-.testi-card__role {
-  font-size: 0.75rem;
-  color: var(--text-3);
-  font-family: var(--font-mono);
-}
-
-/* ====== BLOG PREVIEW ====== */
-.blog-preview {
-  padding-block: var(--section-py);
-  background: var(--bg-2);
-}
-.blog-preview__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 3rem;
-  gap: 1rem;
-}
-.blog-preview__heading {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  margin-top: 0.5rem;
-}
-.blog-preview__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-@media (max-width: 900px) { .blog-preview__grid { grid-template-columns: 1fr; } }
-.blog-preview__mobile-cta { margin-top: 2rem; display: flex; justify-content: center; }
-
-.blog-card {
-  display: flex;
-  flex-direction: column;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  backdrop-filter: blur(12px);
-  transition: border-color 0.2s, transform 0.25s var(--ease-out-expo), box-shadow 0.2s, background 0.2s;
-}
-.blog-card:hover {
-  border-color: var(--border-yellow);
-  transform: translateY(-5px);
-  box-shadow: var(--glow-sm), 0 20px 60px rgba(0,0,0,0.4);
-  background: var(--bg-card-hov);
-}
-.blog-card__img-wrap { overflow: hidden; }
-.blog-card__img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-  border-bottom: 1px solid var(--border);
-  transition: transform 0.5s var(--ease-out-expo);
-}
-.blog-card:hover .blog-card__img { transform: scale(1.05); }
-.blog-card__body {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  flex: 1;
-}
-.blog-card__title {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.15rem;
-  line-height: 1.2;
-  color: var(--text-1);
-  transition: color 0.15s;
-}
-.blog-card:hover .blog-card__title { color: var(--yellow); }
-.blog-card__excerpt {
-  font-size: 0.85rem;
-  line-height: 1.65;
-  color: var(--text-2);
-  flex: 1;
-}
-.blog-card__meta {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: var(--text-3);
-  margin-top: auto;
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--border);
-}
-
-/* ====== FINAL CTA ====== */
-.final-cta {
-  background: var(--bg-base);
-  padding-block: var(--section-py);
-  position: relative;
-  overflow: hidden;
-}
-.final-cta::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 900px;
-  height: 500px;
-  background: radial-gradient(ellipse, rgba(245,196,0,0.1) 0%, transparent 70%);
-  pointer-events: none;
-  filter: blur(60px);
-}
-.final-cta::after {
-  content: 'QUINOCYCLE';
-  position: absolute;
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: clamp(5rem, 15vw, 15rem);
-  letter-spacing: -0.04em;
-  color: var(--yellow);
-  opacity: 0.03;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-  pointer-events: none;
-  user-select: none;
-}
-.final-cta__inner {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 3rem;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-@media (max-width: 900px) {
-  .final-cta__inner { grid-template-columns: 1fr; }
-  .final-cta__actions { flex-direction: row; flex-wrap: wrap; }
-}
-.final-cta__content { display: flex; flex-direction: column; gap: 1rem; }
-.final-cta__heading {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: clamp(2.5rem, 5vw, 5rem);
-  line-height: 0.95;
-  letter-spacing: -0.02em;
-  color: var(--text-1);
-}
-.final-cta__heading-accent { color: var(--yellow); text-shadow: var(--glow-text); }
-.final-cta__sub {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-3);
-}
-.final-cta__actions {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  flex-shrink: 0;
-}
-</style>

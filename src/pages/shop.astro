@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const WA_NUMBER = '60168916381'; // TODO: Replace with your WhatsApp number
+const WA_NUMBER = '60168916381';
 
 const products = [
   // NEW BOXES
@@ -21,163 +21,189 @@ const products = [
   title="Shop Carton Boxes — Quinocycle Wholesale"
   description="Buy new and used carton boxes in bulk at fixed wholesale prices. Small, medium, large and XL sizes. Peninsular Malaysia delivery. Min order RM1,000."
 >
-  <!-- Page Header -->
-  <section class="shop-hero">
-    <div class="container">
-      <div class="section-eyebrow">Wholesale Catalogue</div>
-      <h1 class="shop-hero__title">Carton Boxes<br /><span>at wholesale prices.</span></h1>
-      <p class="shop-hero__sub">Fixed pricing · Min. order RM 1,000 · Peninsular Malaysia delivery</p>
-    </div>
+  <!-- Page Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Wholesale Catalogue</span>
+    <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface leading-[0.9] mb-6">
+      Carton Boxes<br /><span class="text-primary italic">at wholesale prices.</span>
+    </h1>
+    <p class="font-body text-xl text-secondary max-w-xl leading-relaxed">
+      Fixed pricing · Min. order RM 1,000 · Peninsular Malaysia delivery
+    </p>
   </section>
 
   <!-- Filter Bar -->
-  <div class="filter-bar" id="filterBar">
-    <div class="container filter-bar__inner">
-      <div class="filter-group" id="filterGroup">
-        <button class="filter-btn filter-btn--active" data-filter="all">All Boxes</button>
-        <button class="filter-btn" data-filter="new">New Only</button>
-        <button class="filter-btn" data-filter="used">Used Only</button>
-        <button class="filter-btn" data-filter="S">Size S</button>
-        <button class="filter-btn" data-filter="M">Size M</button>
-        <button class="filter-btn" data-filter="L">Size L</button>
-        <button class="filter-btn" data-filter="XL">Size XL</button>
+  <div class="sticky top-[72px] z-40 bg-[#fdf9f0]/90 backdrop-blur-xl border-b border-outline-variant/20" id="filterBar">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex gap-2 overflow-x-auto no-scrollbar" id="filterGroup">
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full bg-on-surface text-surface whitespace-nowrap transition-all" data-filter="all">All Boxes</button>
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="new">New Only</button>
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="used">Used Only</button>
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="S">Size S</button>
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="M">Size M</button>
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="L">Size L</button>
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="XL">Size XL</button>
       </div>
-      <button class="cart-toggle" id="cartToggle" aria-label="Open cart">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+      <button
+        class="flex items-center gap-2 font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-on-surface hover:border-primary hover:text-primary transition-all"
+        id="cartToggle"
+        aria-label="Open cart"
+      >
+        <span class="material-symbols-outlined" style="font-size:18px;">shopping_cart</span>
         Cart
-        <span class="cart-badge" id="cartBadge">0</span>
+        <span class="bg-primary-container text-on-primary-container text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center" id="cartBadge">0</span>
       </button>
     </div>
   </div>
 
   <!-- MOQ Notice -->
-  <div class="container">
-    <div class="moq-notice">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      Minimum order value is <strong>RM 1,000</strong>. Prices shown are per box. Add to cart and we'll send your order via WhatsApp for confirmation.
+  <div class="max-w-7xl mx-auto px-6 md:px-8 mt-8">
+    <div class="flex items-start gap-3 bg-primary-fixed/40 border border-primary/20 rounded-2xl px-6 py-4">
+      <span class="material-symbols-outlined text-primary flex-shrink-0" style="font-size:20px;">info</span>
+      <p class="font-body text-sm text-on-surface-variant leading-relaxed">
+        Minimum order value is <strong class="text-on-surface font-semibold">RM 1,000</strong>. Prices shown are per box.
+        Add items to cart and we'll send your order via WhatsApp for confirmation.
+      </p>
     </div>
   </div>
 
   <!-- Product Grid -->
-  <section class="shop-grid-section">
-    <div class="container">
-      <div class="shop-grid" id="shopGrid">
-        {products.map(p => (
-          <div
-            class="prod-card"
-            data-condition={p.condition}
-            data-size={p.size}
-            data-id={p.id}
-            data-name={p.name}
-            data-price={p.price}
-          >
-            <!-- Visual -->
-            <div class={`prod-card__img prod-card__img--${p.condition}`}>
-              <img
-                src={p.img}
-                alt={p.name}
-                class="prod-card__photo"
-                loading="lazy"
-                width="400"
-                height="300"
-              />
-              <div class={`prod-card__badge ${p.condition === 'new' ? 'prod-card__badge--new' : 'prod-card__badge--used'}`}>
-                {p.condition === 'new' ? 'NEW' : 'USED'}
-              </div>
-              <div class="prod-card__size-tag">Size {p.size}</div>
+  <section class="max-w-7xl mx-auto px-6 md:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12" id="shopGrid">
+      {products.map(p => (
+        <article
+          class="prod-card group"
+          data-condition={p.condition}
+          data-size={p.size}
+          data-id={p.id}
+          data-name={p.name}
+          data-price={p.price}
+        >
+          <!-- Image -->
+          <div class="relative aspect-[4/3] bg-surface-container rounded-3xl mb-5 overflow-hidden">
+            <img
+              src={p.img}
+              alt={p.name}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+            <!-- Condition badge -->
+            <div class={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-headline font-bold uppercase tracking-widest ${
+              p.condition === 'new'
+                ? 'bg-primary-container text-on-primary-container'
+                : 'bg-secondary-container text-secondary'
+            }`}>
+              {p.condition === 'new' ? 'New' : 'Used'}
             </div>
-
-            <!-- Info -->
-            <div class="prod-card__body">
-              <h3 class="prod-card__name">{p.name}</h3>
-              <div class="prod-card__specs">
-                <span>{p.dims}</span>
-                <span>·</span>
-                <span>{p.wall}</span>
-              </div>
-              <p class="prod-card__use">{p.use}</p>
-
-              <div class="prod-card__pricing">
-                <div class="prod-card__price">
-                  <span class="prod-card__price-rm">RM</span>
-                  <span class="prod-card__price-val">{p.price.toFixed(2)}</span>
-                  <span class="prod-card__price-unit">/ box</span>
-                </div>
-                <div class="prod-card__min">Min. {p.minQty} boxes</div>
-              </div>
-
-              <!-- Qty + Add -->
-              <div class="prod-card__order">
-                <div class="qty-control">
-                  <button class="qty-btn qty-minus" aria-label="Decrease quantity">−</button>
-                  <input
-                    type="number"
-                    class="qty-input"
-                    value={p.minQty}
-                    min={p.minQty}
-                    step={p.condition === 'new' ? 50 : 100}
-                    aria-label="Quantity"
-                  />
-                  <button class="qty-btn qty-plus" aria-label="Increase quantity">+</button>
-                </div>
-                <button class="btn btn-dark btn-sm add-to-cart" data-id={p.id}>
-                  Add to Cart
-                </button>
-              </div>
+            <!-- Size badge -->
+            <div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-headline font-bold text-on-surface">
+              Size {p.size}
+            </div>
+            <!-- Price badge -->
+            <div class="absolute bottom-4 right-4 bg-surface/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+              <span class="font-headline font-bold text-on-surface">RM {p.price.toFixed(2)}</span>
+              <span class="text-xs text-secondary"> / box</span>
             </div>
           </div>
-        ))}
-      </div>
 
-      <!-- Empty state -->
-      <div class="shop-empty" id="shopEmpty" style="display:none">
-        <p>No products match this filter.</p>
-      </div>
+          <!-- Info -->
+          <div class="px-1">
+            <span class="font-label text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-1 block">{p.wall}</span>
+            <h3 class="font-headline text-xl font-bold tracking-tight text-on-surface mb-1">{p.name}</h3>
+            <p class="font-body text-sm text-secondary mb-1">{p.dims}</p>
+            <p class="font-body text-sm text-on-surface-variant mb-4">{p.use}</p>
+
+            <!-- Min qty note -->
+            <p class="font-label text-xs text-outline mb-4">Min. order: <strong class="text-on-surface-variant">{p.minQty} boxes</strong></p>
+
+            <!-- Qty + Add to cart -->
+            <div class="flex items-center gap-3">
+              <div class="flex items-center bg-surface-container rounded-full border border-outline-variant/30 overflow-hidden">
+                <button class="qty-btn qty-minus w-9 h-9 flex items-center justify-center text-lg text-on-surface-variant hover:text-primary transition-colors font-headline" aria-label="Decrease">−</button>
+                <input
+                  type="number"
+                  class="qty-input w-16 text-center bg-transparent border-none text-sm font-body font-semibold text-on-surface focus:outline-none focus:ring-0"
+                  value={p.minQty}
+                  min={p.minQty}
+                  step={p.condition === 'new' ? 50 : 100}
+                  aria-label="Quantity"
+                />
+                <button class="qty-btn qty-plus w-9 h-9 flex items-center justify-center text-lg text-on-surface-variant hover:text-primary transition-colors font-headline" aria-label="Increase">+</button>
+              </div>
+              <button
+                class="add-to-cart flex-1 bg-on-surface text-surface py-2.5 rounded-full font-headline font-bold text-xs uppercase tracking-widest hover:bg-primary transition-colors duration-200"
+                data-id={p.id}
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Empty state -->
+    <div class="hidden text-center py-24" id="shopEmpty">
+      <span class="material-symbols-outlined text-outline-variant text-6xl block mb-4">search_off</span>
+      <p class="font-headline text-xl text-secondary">No products match this filter.</p>
     </div>
   </section>
 
+  <!-- CART OVERLAY -->
+  <div class="hidden fixed inset-0 bg-on-surface/20 backdrop-blur-sm z-50" id="cartOverlay"></div>
+
   <!-- CART SIDEBAR -->
-  <div class="cart-overlay" id="cartOverlay"></div>
-  <aside class="cart-sidebar" id="cartSidebar" aria-label="Shopping cart" aria-hidden="true">
-    <div class="cart-sidebar__header">
-      <h2 class="cart-sidebar__title">Your Cart</h2>
-      <button class="cart-close" id="cartClose" aria-label="Close cart">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  <aside
+    class="fixed top-0 right-0 h-full w-full max-w-md bg-surface z-50 flex flex-col shadow-2xl translate-x-full transition-transform duration-300"
+    id="cartSidebar"
+    aria-label="Shopping cart"
+    aria-hidden="true"
+  >
+    <!-- Header -->
+    <div class="flex items-center justify-between px-8 py-6 border-b border-outline-variant/20">
+      <h2 class="font-headline text-2xl font-bold text-on-surface">Your Cart</h2>
+      <button class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-surface-container transition-colors" id="cartClose" aria-label="Close cart">
+        <span class="material-symbols-outlined text-secondary" style="font-size:20px;">close</span>
       </button>
     </div>
 
-    <div class="cart-items" id="cartItems">
-      <div class="cart-empty" id="cartEmpty">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
-        <p>Your cart is empty.</p>
-        <p>Add some boxes to get started.</p>
+    <!-- Items -->
+    <div class="flex-1 overflow-y-auto px-8 py-6" id="cartItems">
+      <div class="flex flex-col items-center justify-center h-full text-center py-16" id="cartEmpty">
+        <span class="material-symbols-outlined text-outline-variant text-6xl block mb-4">shopping_cart</span>
+        <p class="font-headline text-lg text-secondary">Your cart is empty.</p>
+        <p class="font-body text-sm text-outline mt-1">Add some boxes to get started.</p>
       </div>
     </div>
 
-    <div class="cart-footer" id="cartFooter" style="display:none">
-      <div class="cart-summary">
-        <div class="cart-summary__row">
+    <!-- Footer -->
+    <div class="hidden px-8 py-6 border-t border-outline-variant/20 bg-surface-container-low" id="cartFooter">
+      <div class="space-y-3 mb-6">
+        <div class="flex justify-between items-center text-sm font-body text-secondary">
           <span>Total Boxes</span>
-          <span id="cartTotalBoxes">0</span>
+          <span class="font-semibold text-on-surface" id="cartTotalBoxes">0</span>
         </div>
-        <div class="cart-summary__row cart-summary__row--total">
+        <div class="flex justify-between items-center font-headline font-bold text-lg text-on-surface">
           <span>Est. Total</span>
           <span id="cartTotalPrice">RM 0.00</span>
         </div>
-        <div class="cart-moq" id="cartMoq"></div>
+        <div class="text-xs font-body text-secondary" id="cartMoq"></div>
       </div>
-      <button class="btn btn-wa" id="cartWhatsApp" style="width:100%; justify-content:center; font-size:1rem; padding:16px;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <button
+        class="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors"
+        id="cartWhatsApp"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Send Order via WhatsApp
       </button>
-      <p class="cart-note">We'll confirm availability and payment details via WhatsApp.</p>
+      <p class="text-center font-body text-xs text-secondary mt-3">We'll confirm availability and payment details via WhatsApp.</p>
     </div>
   </aside>
 </Layout>
 
 <script define:vars={{ WA_NUMBER }}>
   // ---- STATE ----
-  let cart = {}; // { id: { name, price, qty } }
+  let cart = {};
 
   // ---- FILTER ----
   const filterBtns = document.querySelectorAll('.filter-btn');
@@ -186,97 +212,137 @@ const products = [
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('filter-btn--active'));
-      btn.classList.add('filter-btn--active');
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-on-surface', 'text-surface');
+        b.classList.add('border', 'border-outline-variant/40', 'text-secondary');
+      });
+      btn.classList.add('bg-on-surface', 'text-surface');
+      btn.classList.remove('border', 'border-outline-variant/40', 'text-secondary');
 
       const f = btn.dataset.filter;
       let visible = 0;
       cards.forEach(card => {
-        const show = f === 'all'
-          || card.dataset.condition === f
-          || card.dataset.size === f;
+        const show = f === 'all' || card.dataset.condition === f || card.dataset.size === f;
         card.style.display = show ? '' : 'none';
         if (show) visible++;
       });
-      emptyState.style.display = visible === 0 ? 'flex' : 'none';
+      emptyState?.classList.toggle('hidden', visible > 0);
+      if (visible === 0) emptyState?.classList.remove('hidden');
     });
   });
 
   // ---- QTY CONTROLS ----
   document.querySelectorAll('.prod-card').forEach(card => {
-    const minus = card.querySelector('.qty-minus');
-    const plus  = card.querySelector('.qty-plus');
-    const input = card.querySelector('.qty-input');
-    const min   = parseInt(input.min);
-    const step  = parseInt(input.step);
+    const minusBtn = card.querySelector('.qty-minus');
+    const plusBtn  = card.querySelector('.qty-plus');
+    const input    = card.querySelector('.qty-input');
+    const min      = parseInt(input.min);
+    const step     = parseInt(input.step);
 
-    minus.addEventListener('click', () => {
-      const v = parseInt(input.value) - step;
-      input.value = Math.max(min, v);
+    minusBtn?.addEventListener('click', () => {
+      const v = parseInt(input.value);
+      if (v - step >= min) input.value = v - step;
     });
-    plus.addEventListener('click', () => {
+    plusBtn?.addEventListener('click', () => {
       input.value = parseInt(input.value) + step;
+    });
+    input?.addEventListener('change', () => {
+      if (parseInt(input.value) < min) input.value = min;
     });
   });
 
   // ---- CART ----
-  function updateCart() {
-    const items = Object.values(cart);
-    const totalBoxes = items.reduce((s, i) => s + i.qty, 0);
-    const totalPrice = items.reduce((s, i) => s + i.qty * i.price, 0);
+  const cartToggle  = document.getElementById('cartToggle');
+  const cartClose   = document.getElementById('cartClose');
+  const cartOverlay = document.getElementById('cartOverlay');
+  const cartSidebar = document.getElementById('cartSidebar');
+  const cartBadge   = document.getElementById('cartBadge');
+  const cartItems   = document.getElementById('cartItems');
+  const cartEmpty   = document.getElementById('cartEmpty');
+  const cartFooter  = document.getElementById('cartFooter');
+  const cartTotalBoxes = document.getElementById('cartTotalBoxes');
+  const cartTotalPrice = document.getElementById('cartTotalPrice');
+  const cartMoq     = document.getElementById('cartMoq');
 
-    document.getElementById('cartBadge').textContent = items.length;
-    document.getElementById('cartTotalBoxes').textContent = totalBoxes.toLocaleString();
-    document.getElementById('cartTotalPrice').textContent = `RM ${totalPrice.toFixed(2)}`;
+  function openCart() {
+    cartSidebar?.classList.remove('translate-x-full');
+    cartOverlay?.classList.remove('hidden');
+    cartSidebar?.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeCart() {
+    cartSidebar?.classList.add('translate-x-full');
+    cartOverlay?.classList.add('hidden');
+    cartSidebar?.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
 
-    const moqEl = document.getElementById('cartMoq');
-    if (totalPrice < 1000) {
-      const needed = (1000 - totalPrice).toFixed(2);
-      moqEl.textContent = `Add RM ${needed} more to meet min. order of RM 1,000`;
-      moqEl.style.color = '#D4A900';
-    } else {
-      moqEl.textContent = '✓ Minimum order met!';
-      moqEl.style.color = '#25D366';
+  cartToggle?.addEventListener('click', openCart);
+  cartClose?.addEventListener('click', closeCart);
+  cartOverlay?.addEventListener('click', closeCart);
+
+  function renderCart() {
+    const ids = Object.keys(cart);
+    cartBadge.textContent = ids.length;
+
+    if (ids.length === 0) {
+      cartEmpty?.classList.remove('hidden');
+      cartFooter?.classList.add('hidden');
+      // Clear items except empty state
+      Array.from(cartItems.children).forEach(c => {
+        if (c.id !== 'cartEmpty') c.remove();
+      });
+      return;
     }
 
-    const cartItemsEl = document.getElementById('cartItems');
-    const emptyEl     = document.getElementById('cartEmpty');
-    const footerEl    = document.getElementById('cartFooter');
+    cartEmpty?.classList.add('hidden');
+    cartFooter?.classList.remove('hidden');
 
-    if (items.length === 0) {
-      emptyEl.style.display = 'flex';
-      footerEl.style.display = 'none';
-      cartItemsEl.innerHTML = '';
-      cartItemsEl.appendChild(emptyEl);
-    } else {
-      emptyEl.style.display = 'none';
-      footerEl.style.display = 'block';
+    // Clear & re-render
+    Array.from(cartItems.children).forEach(c => {
+      if (c.id !== 'cartEmpty') c.remove();
+    });
 
-      cartItemsEl.innerHTML = '';
-      items.forEach(item => {
-        const el = document.createElement('div');
-        el.className = 'cart-item';
-        el.innerHTML = `
-          <div class="cart-item__info">
-            <div class="cart-item__name">${item.name}</div>
-            <div class="cart-item__qty">${item.qty.toLocaleString()} boxes × RM ${item.price.toFixed(2)}</div>
-          </div>
-          <div class="cart-item__right">
-            <div class="cart-item__subtotal">RM ${(item.qty * item.price).toFixed(2)}</div>
-            <button class="cart-item__remove" data-id="${item.id}" aria-label="Remove ${item.name}">×</button>
-          </div>
-        `;
-        cartItemsEl.appendChild(el);
+    let totalBoxes = 0, totalPrice = 0;
+
+    ids.forEach(id => {
+      const item = cart[id];
+      totalBoxes += item.qty;
+      totalPrice += item.qty * item.price;
+
+      const el = document.createElement('div');
+      el.className = 'flex items-start justify-between gap-4 py-4 border-b border-outline-variant/20';
+      el.innerHTML = `
+        <div class="flex-1">
+          <p class="font-headline font-bold text-sm text-on-surface">${item.name}</p>
+          <p class="font-body text-xs text-secondary mt-0.5">${item.qty} boxes × RM ${item.price.toFixed(2)}</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="font-headline font-bold text-sm text-on-surface">RM ${(item.qty * item.price).toFixed(2)}</span>
+          <button class="remove-item w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-error-container hover:text-error transition-colors" data-id="${id}" aria-label="Remove">
+            <span class="material-symbols-outlined" style="font-size:16px;">close</span>
+          </button>
+        </div>
+      `;
+      cartItems.appendChild(el);
+    });
+
+    cartTotalBoxes.textContent = totalBoxes;
+    cartTotalPrice.textContent = `RM ${totalPrice.toFixed(2)}`;
+
+    const moqMet = totalPrice >= 1000;
+    cartMoq.textContent = moqMet
+      ? `✓ Min. order of RM 1,000 met`
+      : `Min. order: RM 1,000 (${(1000 - totalPrice).toFixed(2)} more needed)`;
+    cartMoq.style.color = moqMet ? '#546159' : '#ba1a1a';
+
+    // Remove handlers
+    cartItems.querySelectorAll('.remove-item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        delete cart[btn.dataset.id];
+        renderCart();
       });
-
-      // Remove buttons
-      cartItemsEl.querySelectorAll('.cart-item__remove').forEach(btn => {
-        btn.addEventListener('click', () => {
-          delete cart[btn.dataset.id];
-          updateCart();
-        });
-      });
-    }
+    });
   }
 
   document.querySelectorAll('.add-to-cart').forEach(btn => {
@@ -287,562 +353,32 @@ const products = [
       const price = parseFloat(card.dataset.price);
       const qty   = parseInt(card.querySelector('.qty-input').value);
 
-      cart[id] = { id, name, price, qty };
-      updateCart();
+      if (cart[id]) {
+        cart[id].qty += qty;
+      } else {
+        cart[id] = { name, price, qty };
+      }
+      renderCart();
       openCart();
-
-      // Flash feedback
-      btn.textContent = 'Added ✓';
-      btn.style.background = '#25D366';
-      setTimeout(() => {
-        btn.textContent = 'Add to Cart';
-        btn.style.background = '';
-      }, 1500);
     });
   });
 
-  // WhatsApp order
+  // WhatsApp checkout
   document.getElementById('cartWhatsApp')?.addEventListener('click', () => {
-    const items = Object.values(cart);
-    if (items.length === 0) return;
+    const ids = Object.keys(cart);
+    if (ids.length === 0) return;
 
-    const total = items.reduce((s, i) => s + i.qty * i.price, 0);
-    let msg = `Hi Quinocycle! I would like to place a wholesale order:\n\n`;
-    items.forEach(i => {
-      msg += `• ${i.name} — ${i.qty.toLocaleString()} boxes @ RM ${i.price.toFixed(2)} = RM ${(i.qty * i.price).toFixed(2)}\n`;
+    let msg = 'Hi Quinocycle! I would like to place a wholesale order:\n\n';
+    let total = 0;
+    ids.forEach(id => {
+      const item = cart[id];
+      const sub = item.qty * item.price;
+      total += sub;
+      msg += `• ${item.name} × ${item.qty} boxes = RM ${sub.toFixed(2)}\n`;
     });
-    msg += `\n*Total: RM ${total.toFixed(2)}*\n\nPlease confirm availability and payment details. Thank you!`;
+    msg += `\nEstimated Total: RM ${total.toFixed(2)}`;
+    msg += '\n\nPlease confirm availability and payment details. Thank you!';
 
-    const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
-    window.open(url, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
   });
-
-  // ---- CART SIDEBAR OPEN/CLOSE ----
-  function openCart() {
-    document.getElementById('cartSidebar').classList.add('cart-sidebar--open');
-    document.getElementById('cartOverlay').classList.add('cart-overlay--active');
-    document.getElementById('cartSidebar').setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeCart() {
-    document.getElementById('cartSidebar').classList.remove('cart-sidebar--open');
-    document.getElementById('cartOverlay').classList.remove('cart-overlay--active');
-    document.getElementById('cartSidebar').setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-  document.getElementById('cartToggle')?.addEventListener('click', openCart);
-  document.getElementById('cartClose')?.addEventListener('click', closeCart);
-  document.getElementById('cartOverlay')?.addEventListener('click', closeCart);
-
-  // Init
-  updateCart();
 </script>
-
-<style>
-/* --- Shop Hero --- */
-.shop-hero {
-  background: var(--bg-base);
-  padding-block: clamp(3rem, 6vw, 5rem);
-  position: relative;
-  overflow: hidden;
-}
-.shop-hero::before {
-  content: '';
-  position: absolute;
-  top: -30%; left: -10%;
-  width: 600px; height: 500px;
-  background: radial-gradient(circle, rgba(245,196,0,0.07) 0%, transparent 70%);
-  pointer-events: none;
-  filter: blur(60px);
-}
-.shop-hero__title {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  line-height: 1.0;
-  letter-spacing: -0.02em;
-  color: var(--text-1);
-  margin-block: 1rem;
-  position: relative;
-  z-index: 1;
-}
-.shop-hero__title span { color: var(--yellow); text-shadow: var(--glow-text); }
-.shop-hero__sub {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-3);
-  position: relative;
-  z-index: 1;
-}
-
-/* --- Filter Bar --- */
-.filter-bar {
-  position: sticky;
-  top: var(--nav-h);
-  z-index: 50;
-  background: rgba(6,6,8,0.85);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-  padding-block: 0.75rem;
-}
-.filter-bar__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.filter-group {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-.filter-btn {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 6px 14px;
-  border: 1px solid var(--border);
-  border-radius: 100px;
-  background: var(--bg-card);
-  color: var(--text-2);
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-.filter-btn:hover { border-color: var(--border-yellow); color: var(--text-1); }
-.filter-btn--active {
-  background: rgba(245,196,0,0.15);
-  border-color: var(--border-yellow-h);
-  color: var(--yellow);
-}
-.cart-toggle {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 8px 16px;
-  background: rgba(245,196,0,0.15);
-  border: 1px solid var(--border-yellow-h);
-  border-radius: var(--radius-sm);
-  color: var(--yellow);
-  cursor: pointer;
-  transition: all 0.15s;
-  position: relative;
-}
-.cart-toggle:hover {
-  background: rgba(245,196,0,0.25);
-  box-shadow: var(--glow-sm);
-  transform: translateY(-1px);
-}
-.cart-badge {
-  background: var(--yellow);
-  color: var(--bg-base);
-  font-size: 0.65rem;
-  font-family: var(--font-mono);
-  font-weight: 700;
-  min-width: 18px;
-  height: 18px;
-  border-radius: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-inline: 4px;
-}
-
-/* --- MOQ Notice --- */
-.moq-notice {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(245,196,0,0.08);
-  border: 1px solid var(--border-yellow);
-  border-radius: var(--radius-md);
-  padding: 12px 16px;
-  font-size: 0.85rem;
-  color: var(--text-2);
-  margin-block: 1.5rem 0;
-}
-.moq-notice svg { flex-shrink: 0; color: var(--yellow); }
-
-/* --- Shop Grid --- */
-.shop-grid-section {
-  padding-block: 2rem var(--section-py);
-  background: var(--bg-base);
-}
-.shop-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-}
-@media (max-width: 1100px) { .shop-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 800px)  { .shop-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px)  { .shop-grid { grid-template-columns: 1fr; } }
-
-.shop-empty {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 4rem;
-  color: var(--text-3);
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-}
-
-/* --- Product Card --- */
-.prod-card {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.25s var(--ease-out-expo), background 0.2s;
-  display: flex;
-  flex-direction: column;
-}
-.prod-card:hover {
-  border-color: var(--border-yellow);
-  box-shadow: var(--glow-sm), 0 20px 60px rgba(0,0,0,0.4);
-  transform: translateY(-5px);
-  background: var(--bg-card-hov);
-}
-
-.prod-card__img {
-  position: relative;
-  height: 180px;
-  overflow: hidden;
-}
-.prod-card__img--new { border-bottom: 1px solid var(--border-yellow); }
-.prod-card__img--used { border-bottom: 1px solid var(--border); }
-.prod-card__photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s var(--ease-out-expo);
-}
-.prod-card:hover .prod-card__photo { transform: scale(1.06); }
-
-.prod-card__badge {
-  position: absolute;
-  top: 10px; left: 10px;
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 3px 8px;
-  border-radius: 2px;
-}
-.prod-card__badge--new {
-  background: rgba(245,196,0,0.15);
-  color: var(--yellow);
-  border: 1px solid var(--border-yellow-h);
-}
-.prod-card__badge--used {
-  background: var(--bg-card);
-  color: var(--text-2);
-  border: 1px solid var(--border);
-}
-
-.prod-card__size-tag {
-  position: absolute;
-  top: 10px; right: 10px;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
-  color: var(--text-3);
-}
-
-.prod-card__body {
-  padding: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  flex: 1;
-}
-.prod-card__name {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.05rem;
-  line-height: 1.2;
-  color: var(--text-1);
-}
-.prod-card__specs {
-  display: flex;
-  gap: 6px;
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  color: var(--text-3);
-}
-.prod-card__use {
-  font-size: 0.78rem;
-  line-height: 1.5;
-  color: var(--text-2);
-  flex: 1;
-}
-.prod-card__pricing {
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--border);
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-.prod-card__price {
-  display: flex;
-  align-items: baseline;
-  gap: 2px;
-}
-.prod-card__price-rm {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 500;
-  color: var(--text-3);
-  margin-right: 2px;
-}
-.prod-card__price-val {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 1.6rem;
-  line-height: 1;
-  color: var(--yellow);
-}
-.prod-card__price-unit {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  color: var(--text-3);
-  margin-left: 2px;
-}
-.prod-card__min {
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  color: var(--text-3);
-}
-
-.prod-card__order {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  margin-top: 0.25rem;
-}
-.qty-control {
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-}
-.qty-btn {
-  width: 30px; height: 34px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1rem;
-  font-weight: 600;
-  background: var(--bg-3);
-  color: var(--text-1);
-  border: none;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-.qty-btn:hover { background: rgba(245,196,0,0.15); color: var(--yellow); }
-.qty-input {
-  width: 60px; height: 34px;
-  text-align: center;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 500;
-  border: none;
-  border-inline: 1px solid var(--border);
-  background: var(--bg-card);
-  color: var(--text-1);
-  outline: none;
-  -moz-appearance: textfield;
-}
-.qty-input::-webkit-inner-spin-button,
-.qty-input::-webkit-outer-spin-button { -webkit-appearance: none; }
-
-/* --- Cart Sidebar --- */
-.cart-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  z-index: 200;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  backdrop-filter: blur(4px);
-}
-.cart-overlay--active { opacity: 1; pointer-events: all; }
-
-.cart-sidebar {
-  position: fixed;
-  top: 0; right: 0;
-  width: min(420px, 100vw);
-  height: 100dvh;
-  background: var(--bg-2);
-  border-left: 1px solid var(--border);
-  z-index: 201;
-  display: flex;
-  flex-direction: column;
-  transform: translateX(100%);
-  transition: transform 0.35s var(--ease-out-expo);
-  box-shadow: -20px 0 60px rgba(0,0,0,0.5);
-}
-.cart-sidebar--open { transform: translateX(0); }
-
-.cart-sidebar__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 1.5rem 1.25rem;
-  border-bottom: 1px solid var(--border-yellow);
-}
-.cart-sidebar__title {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 1.5rem;
-  letter-spacing: -0.01em;
-  color: var(--text-1);
-}
-.cart-close {
-  width: 36px; height: 36px;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: var(--radius-sm);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  color: var(--text-2);
-  cursor: pointer;
-  transition: all 0.15s;
-}
-.cart-close:hover { background: var(--bg-card-hov); border-color: var(--border-yellow); color: var(--text-1); }
-
-.cart-items {
-  flex: 1;
-  overflow-y: auto;
-  padding: 1.25rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.cart-empty {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  color: var(--text-3);
-  text-align: center;
-  padding: 3rem;
-}
-.cart-empty svg { margin-bottom: 0.5rem; color: var(--text-3); }
-.cart-empty p:first-of-type { font-weight: 600; color: var(--text-2); }
-.cart-empty p { font-size: 0.85rem; }
-
-.cart-item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  transition: border-color 0.15s;
-}
-.cart-item:hover { border-color: var(--border-yellow); }
-.cart-item__info { flex: 1; }
-.cart-item__name {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--text-1);
-  margin-bottom: 4px;
-}
-.cart-item__qty {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  color: var(--text-3);
-}
-.cart-item__right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
-}
-.cart-item__subtotal {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1rem;
-  color: var(--yellow);
-}
-.cart-item__remove {
-  width: 24px; height: 24px;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: 50%;
-  font-size: 1.1rem;
-  color: var(--text-3);
-  background: none;
-  cursor: pointer;
-  border: none;
-  transition: background 0.15s, color 0.15s;
-}
-.cart-item__remove:hover { background: rgba(255,50,50,0.15); color: #ff6b6b; }
-
-.cart-footer {
-  padding: 1.25rem 1.5rem;
-  border-top: 1px solid var(--border);
-  background: var(--bg-3);
-}
-.cart-summary {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-.cart-summary__row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.875rem;
-  color: var(--text-2);
-}
-.cart-summary__row--total {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.2rem;
-  color: var(--text-1);
-  padding-top: 0.5rem;
-  border-top: 1px solid var(--border);
-  margin-top: 0.25rem;
-}
-.cart-moq {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  margin-top: 0.25rem;
-  color: var(--text-3);
-}
-.cart-note {
-  font-size: 0.75rem;
-  color: var(--text-3);
-  text-align: center;
-  margin-top: 0.75rem;
-  line-height: 1.5;
-}
-</style>
