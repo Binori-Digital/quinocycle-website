@@ -5,21 +5,22 @@ const WA_NUMBER = '60168916381';
 
 const products = [
   // NEW BOXES
-  { id: 'n-s',  condition: 'new',  size: 'S',  img: '/images/box-new-s.jpg',  name: 'Small New Box',       dims: '30 × 20 × 20 cm', wall: 'Single Wall', price: 1.90, minQty: 100, use: 'Accessories, small items, gifts' },
-  { id: 'n-m',  condition: 'new',  size: 'M',  img: '/images/box-new-m.jpg',  name: 'Medium New Box',      dims: '40 × 30 × 25 cm', wall: 'Single Wall', price: 2.80, minQty: 100, use: 'Apparel, electronics, books' },
-  { id: 'n-l',  condition: 'new',  size: 'L',  img: '/images/box-new-l.jpg',  name: 'Large New Box',       dims: '60 × 40 × 40 cm', wall: 'Double Wall', price: 4.50, minQty: 50,  use: 'Home goods, bulk orders, moving' },
-  { id: 'n-xl', condition: 'new',  size: 'XL', img: '/images/box-new-xl.jpg', name: 'Extra Large New Box', dims: '70 × 50 × 50 cm', wall: 'Double Wall', price: 6.50, minQty: 50,  use: 'Furniture parts, appliances, heavy goods' },
+  { id: 'n-xs',  condition: 'new',  size: 'XS',  img: '/images/box-new-xs.jpg',  name: 'Mini Size New Carton Box XS',    nameMS: 'Kotak Baru Saiz Kecil / Mini', dims: '170 × 115 × 150 mm', wall: 'Single Wall', price: 0.90, minQty: 200, use: 'Jewellery, cosmetics, small gifts, accessories' },
+  { id: 'n-s',   condition: 'new',  size: 'S',   img: '/images/box-new-s.jpg',   name: 'Small Size New Carton Box A4',   nameMS: 'Kotak Baru Saiz Kecil / A4',   dims: '310 × 220 × 220 mm', wall: 'Single Wall', price: 1.60, minQty: 100, use: 'Apparel, books, electronics, online orders' },
+  { id: 'n-m',   condition: 'new',  size: 'M',   img: '/images/box-new-m.jpg',   name: 'Medium Size New Carton Box A3N', nameMS: 'Kotak Baru Saiz Sederhana / A3N', dims: '440 × 310 × 230 mm', wall: 'Double Wall', price: 2.80, minQty: 100, use: 'Home goods, kitchenware, bulk retail orders' },
+  { id: 'n-l',   condition: 'new',  size: 'L',   img: '/images/box-new-l.jpg',   name: 'Large Size New Carton Box NLN',  nameMS: 'Kotak Baru Saiz Besar / NLN',  dims: '590 × 390 × 390 mm', wall: 'Double Wall', price: 4.50, minQty: 50,  use: 'Moving house, appliances, heavy goods' },
+  { id: 'n-xxl', condition: 'new',  size: 'XXL', img: '/images/box-new-xxl.jpg', name: 'Jumbo Size New Carton Box XXL',  nameMS: 'Kotak Baru Saiz Besar XXL / Jumbo', dims: '860 × 460 × 560 mm', wall: 'Double Wall', price: 8.50, minQty: 20,  use: 'Furniture, large appliances, oversized cargo' },
   // USED BOXES
-  { id: 'u-s',  condition: 'used', size: 'S',  img: '/images/box-used-s.jpg',  name: 'Small Used Box',       dims: '~30 × 20 × 20 cm', wall: 'Single Wall', price: 0.90, minQty: 200, use: 'Storage, moving, seasonal packing' },
-  { id: 'u-m',  condition: 'used', size: 'M',  img: '/images/box-used-m.jpg',  name: 'Medium Used Box',      dims: '~40 × 30 × 25 cm', wall: 'Single Wall', price: 1.50, minQty: 150, use: 'Moving, general storage' },
-  { id: 'u-l',  condition: 'used', size: 'L',  img: '/images/box-used-l.jpg',  name: 'Large Used Box',       dims: '~60 × 40 × 40 cm', wall: 'Double Wall', price: 2.50, minQty: 100, use: 'Movers, warehouse, heavy storage' },
-  { id: 'u-xl', condition: 'used', size: 'XL', img: '/images/box-used-xl.jpg', name: 'Extra Large Used Box', dims: '~70 × 50 × 50 cm', wall: 'Double Wall', price: 3.80, minQty: 50,  use: 'Large moving jobs, bulk storage' },
+  { id: 'u-s',   condition: 'used', size: 'S',   img: '/images/box-used-s.jpg',  name: 'Small Used Carton Box',    dims: '~310 × 220 × 220 mm', wall: 'Single Wall', price: 0.90, minQty: 200, use: 'Storage, moving, seasonal packing' },
+  { id: 'u-m',   condition: 'used', size: 'M',   img: '/images/box-used-m.jpg',  name: 'Medium Used Carton Box',   dims: '~440 × 310 × 230 mm', wall: 'Single Wall', price: 1.50, minQty: 150, use: 'Moving, general storage, retail overflow' },
+  { id: 'u-l',   condition: 'used', size: 'L',   img: '/images/box-used-l.jpg',  name: 'Large Used Carton Box',    dims: '~590 × 390 × 390 mm', wall: 'Double Wall', price: 2.50, minQty: 100, use: 'Movers, warehouse, heavy storage' },
+  { id: 'u-xxl', condition: 'used', size: 'XXL', img: '/images/box-used-xxl.jpg',name: 'Jumbo Used Carton Box',    dims: '~860 × 460 × 560 mm', wall: 'Double Wall', price: 4.20, minQty: 30,  use: 'Large moving jobs, bulk storage, logistics' },
 ];
 ---
 
 <Layout
   title="Shop Carton Boxes — Quinocycle Wholesale"
-  description="Buy new and used carton boxes in bulk at fixed wholesale prices. Small, medium, large and XL sizes. Peninsular Malaysia delivery. Min order RM1,000."
+  description="Buy new and used carton boxes in bulk at fixed wholesale prices. XS Mini, S A4, M A3N, L NLN, and XXL Jumbo sizes available. Peninsular Malaysia delivery. Min order RM1,000."
 >
   <!-- Page Hero -->
   <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
@@ -39,10 +40,11 @@ const products = [
         <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full bg-on-surface text-surface whitespace-nowrap transition-all" data-filter="all">All Boxes</button>
         <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="new">New Only</button>
         <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="used">Used Only</button>
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="XS">Size XS</button>
         <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="S">Size S</button>
         <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="M">Size M</button>
         <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="L">Size L</button>
-        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="XL">Size XL</button>
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="XXL">Size XXL</button>
       </div>
       <button
         class="flex items-center gap-2 font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-on-surface hover:border-primary hover:text-primary transition-all"
@@ -109,7 +111,8 @@ const products = [
           <!-- Info -->
           <div class="px-1">
             <span class="font-label text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-1 block">{p.wall}</span>
-            <h3 class="font-headline text-xl font-bold tracking-tight text-on-surface mb-1">{p.name}</h3>
+            <h3 class="font-headline text-xl font-bold tracking-tight text-on-surface mb-0.5">{p.name}</h3>
+            {p.nameMS && <p class="font-body text-xs text-outline mb-1">{p.nameMS}</p>}
             <p class="font-body text-sm text-secondary mb-1">{p.dims}</p>
             <p class="font-body text-sm text-on-surface-variant mb-4">{p.use}</p>
 
