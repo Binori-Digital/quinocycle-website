@@ -1,0 +1,297 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Panduan Saiz Kotak Kardus untuk E-Commerce Malaysia — Pilih Saiz Yang Sesuai',
+  description: 'Panduan lengkap memilih saiz kotak kardus yang tepat untuk e-commerce. Pelajari dimensi kotak kecil, sederhana, dan besar, kos penghantaran, dan tips penjimatan untuk peniaga online Malaysia.',
+  date: '2026-04-11',
+  readTime: '8 min',
+  category: 'Kotak Kardus Baru',
+  author: 'Pasukan Quinocycle',
+  slug: 'panduan-saiz-kotak-kardus-ecommerce',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20ingin%20tahu%20lebih%20tentang%20kotak%20kardus%20saiz%20berbeza%20untuk%20e-commerce%20saya.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "image": "https://www.quinocycle.com.my/blog-featured.jpg",
+  "datePublished": "2026-04-11",
+  "author": {
+    "@type": "Organization",
+    "name": "Pasukan Quinocycle",
+    "url": "https://www.quinocycle.com.my"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.quinocycle.com.my/logo.png"
+    }
+  },
+  "keywords": "panduan saiz kotak kardus malaysia, kotak pembungkusan e-commerce, dimensi kotak penghantaran, saiz kotak kecil sederhana besar, pembungkusan ecommerce malaysia",
+  "articleBody": post.description
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apakah saiz kotak kardus yang paling sesuai untuk item kecil seperti perhiasan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Untuk item kecil seperti perhiasan, jam tangan, atau aksesori, gunakan kotak berukuran 15×10×8 cm atau lebih kecil. Saiz ini cukup untuk melindungi produk sambil menjimatkan kos penghantaran."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa saiz kotak standard untuk pakaian dan tekstil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kotak berukuran 30×20×15 cm adalah standard untuk pakaian. Ia cukup untuk 3-5 item pakaian dan memenuhi hadiah penghantaran express Malaysia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana saya tahu kotak mana yang perlu saya gunakan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ukur panjang, lebar, dan tinggi item anda, kemudian tambah 2-3 cm padding di setiap sisi. Pastikan kotak tidak terlalu besar untuk mengelakkan kos penghantaran berlebihan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah perbezaan kos penghantaran antara kotak berbeza saiz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kos penghantaran bergantung pada berat dan dimensi (formula volumetrik). Kotak yang terlalu besar akan dikenakan caj dimension weight, jadi pilih saiz yang sesuai untuk menjimatkan hingga 30%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bolehkah saya guna kotak terpakai untuk e-commerce?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, kotak terpakai berkualiti bagus adalah pilihan ekonomi yang baik. Pastikan ia bersih, tidak rosak, dan mempunyai grip yang kuat untuk perlindungan produk semasa penghantaran."
+      }
+    }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Pembekal kotak kardus, bubble wrap, dan bahan pembungkusan berkualiti untuk e-commerce dan perniagaan di Malaysia. Menawarkan kotak baru, terpakai, dan kadbod gelombang dengan harga kompetitif.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "email": "quinocycle@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "14:00"
+    }
+  ],
+  "priceRange": "RM 1.90 – RM 6.50 setiap kotak",
+  "areaServed": "Semenanjung Malaysia",
+  "foundingDate": "2010"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Mengapa Saiz Kotak Penting untuk E-Commerce?</h2>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Sebagai peniaga e-commerce di Malaysia, pemilihan saiz kotak kardus yang betul adalah keputusan strategis yang mempengaruhi profit margin anda. Kotak yang terlalu besar akan meningkatkan kos penghantaran melalui formula dimension weight. Kotak yang terlalu kecil pula akan merosakkan produk semasa transit, mengakibatkan return rate yang tinggi dan kehilangan kepercayaan pelanggan.
+      </p>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Di Malaysia, kebanyakan kurir penghantar seperti JnT, DHL, dan Lazada Logistics menggunakan formula berat volumetrik untuk mengenakan bayaran. Ini bermakna jika kotak anda 40×30×20 cm, beratnya boleh dikira sebagai 24 kg walaupun item sebenarnya hanya 2 kg. Dengan memilih saiz yang tepat, anda boleh jimat hingga 30% dalam kos penghantaran.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Saiz-Saiz Kotak Standard untuk E-Commerce</h2>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">1. Kotak Kecil (15×10×8 cm)</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Saiz terkecil ini sesuai untuk perhiasan, jam tangan, aksesori rambut, dan item kecil lainnya. Ia memerlukan padding minimal dan menghasilkan kos penghantaran paling rendah, ideal untuk margin tinggi.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">2. Kotak Sederhana Kecil (20×15×10 cm)</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Untuk makeup, kosmetik, buku kecil, dan elektronik kecil. Ini adalah saiz paling popular di kalangan peniaga fashion dan beauty di Malaysia kerana keseimbangan antara keselamatan produk dan kos penghantaran.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">3. Kotak Sederhana (30×20×15 cm)</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Saiz versatile untuk pakaian, kasut, elektronik medium, dan perkakasan kecil. Ia dapat menampung 3-5 item pakaian dengan padding yang layak dan memenuhi had penghantaran express kebanyakan kurir.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">4. Kotak Besar (40×30×20 cm)</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Untuk item yang lebih besar seperti set peralatan rumah, mainan, atau pelbagai item kecil dalam satu pesanan. Ia menghasilkan kos penghantaran yang lebih tinggi jadi pertimbangkan dengan matang sebelum menggunakannya.
+      </p>
+    </section>
+
+    <section class="mb-8 bg-surface-variant/50 border border-outline-variant/20 p-6 rounded-lg">
+      <h2 class="font-headline text-xl font-bold text-on-surface mb-4">Jadual Perbandingan Cepat</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full font-body text-sm">
+          <thead>
+            <tr class="border-b border-outline-variant/20">
+              <th class="text-left py-2 px-2">Saiz Kotak</th>
+              <th class="text-left py-2 px-2">Dimensi</th>
+              <th class="text-left py-2 px-2">Kos Pukal</th>
+              <th class="text-left py-2 px-2">Kegunaan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-2">Kecil</td>
+              <td class="py-2 px-2">15×10×8 cm</td>
+              <td class="py-2 px-2">RM 1.90-2.20</td>
+              <td class="py-2 px-2">Perhiasan, aksesori</td>
+            </tr>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-2">Sederhana Kecil</td>
+              <td class="py-2 px-2">20×15×10 cm</td>
+              <td class="py-2 px-2">RM 2.50-3.00</td>
+              <td class="py-2 px-2">Kosmetik, buku</td>
+            </tr>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-2">Sederhana</td>
+              <td class="py-2 px-2">30×20×15 cm</td>
+              <td class="py-2 px-2">RM 4.00-4.50</td>
+              <td class="py-2 px-2">Pakaian, kasut</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-2">Besar</td>
+              <td class="py-2 px-2">40×30×20 cm</td>
+              <td class="py-2 px-2">RM 5.50-6.50</td>
+              <td class="py-2 px-2">Item besar, pelbagai</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Cara Mengukur Item Anda dengan Betul</h2>
+      <ol class="font-body text-base text-secondary leading-relaxed space-y-3 list-decimal list-inside">
+        <li>Ukur panjang, lebar, dan tinggi item anda menggunakan pembaris atau ukuran pita</li>
+        <li>Identifikasi dimensi terbesar dan tentukan padding yang diperlukan (biasanya 2-3 cm di setiap sisi)</li>
+        <li>Tandakan kotak yang cukup besar untuk menerima item dengan padding tanpa membuang ruang berlebihan</li>
+        <li>Pertimbangkan berat item — jika item berat, satu kotak besar mungkin lebih ekonomi daripada dua kotak kecil</li>
+      </ol>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Tips Jimat Kos Penghantaran</h2>
+      <div class="space-y-4">
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">Pilih Saiz Tepat, Bukan Saiz Besar</h3>
+          <p class="font-body text-sm text-secondary">Jangan gunakan kotak 40×30×20 cm untuk item kecil. Ia akan dikenakan berat volumetrik yang jauh lebih tinggi.</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">Gunakan Material Padding yang Cekap</h3>
+          <p class="font-body text-sm text-secondary">Bubble wrap berkualiti dan crinkle paper adalah padding yang ideal — menawarkan perlindungan maksimal dengan berat minimal.</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">Pertimbangkan Kotak Terpakai</h3>
+          <p class="font-body text-sm text-secondary">Kotak terpakai berkualiti bagus boleh jimat 40-50% daripada kotak baru, dan pelanggan Malaysia semakin menerima pilihan ramah alam ini.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">FAQ — Soalan Sering Ditanya</h2>
+      <div class="space-y-4">
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Apakah saiz kotak standard untuk item berberat 500g?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Untuk item 500g tanpa fragile nature, kotak 20×15×10 cm sudah cukup. Tambah bubble wrap atau kertas cushion untuk keselamatan. Ini akan menjimat 20-30% dalam kos penghantaran berbanding kotak yang lebih besar.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Bolehkah saya mencampurkan item berbeza saiz dalam satu kotak?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Ya, ini adalah strategi yang baik! Jika pelanggan memesan 2 item kecil dan 1 item sederhana, gunakan satu kotak sederhana (30×20×15 cm) dengan padding yang mencukupi. Ia lebih ekonomi daripada dua kotak.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Apakah formula dimension weight yang digunakan di Malaysia?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Formula standard adalah (Panjang × Lebar × Tinggi) ÷ 6000 = Berat Volumetrik. Jika hasil lebih tinggi daripada berat sebenar, berat volumetrik akan digunakan untuk kira kos penghantaran. Ia penting untuk e-commerce menggunakan kotak yang sesuai.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Adakah perbezaan kos antara kotak baru dan terpakai untuk penghantaran?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Tidak — kurir hanya mengira dimensi dan berat, bukan kondisi kotak. Kotak terpakai yang berkualiti akan dikenakan caj yang sama seperti kotak baru, tetapi anda jimat 40-50% dalam kos pembelian kotak.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Di mana saya boleh beli kotak kardus berkualiti di Balakong/Selangor?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Quinocycle Sdn. Bhd. menyediakan kotak kardus baru dan terpakai berkualiti di Balakong. Hubungi kami di +60168916381 atau WhatsApp untuk harga pukal dan konsultasi gratis tentang saiz yang tepat untuk perniagaan anda.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Kesimpulan</h2>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Memilih saiz kotak kardus yang betul adalah kunci untuk menjimatkan kos penghantaran dan melindungi produk anda. Untuk kebanyakan e-commerce di Malaysia, kotak berukuran 20×15×10 cm dan 30×20×15 cm adalah pilihan paling versatile dan ekonomi. Jangan ragu untuk mencampurkan pesanan kecil dalam satu kotak dan pertimbangkan kotak terpakai untuk penjimatan lebih lanjut.
+      </p>
+      <p class="font-body text-base text-secondary leading-relaxed">
+        Kami di Quinocycle menawarkan pelbagai saiz kotak dengan harga kompetitif untuk memenuhi keperluan e-commerce anda. Hubungi kami hari ini untuk nasihat gratis tentang strategi pembungkusan yang paling ekonomi untuk perniagaan anda!
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-outline-variant/20">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Butuh Konsultasi Pembungkusan?</h2>
+      <p class="font-body text-base text-secondary mb-6">
+        Tim ahli Quinocycle siap membantu anda memilih saiz dan bahan pembungkusan yang paling sesuai untuk perniagaan anda. Dapatkan harga pukal terbaik dan layanan pelanggan terpercaya.
+      </p>
+      <a href={WA_LINK} class="inline-block bg-primary text-white font-label font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity">
+        Hubungi Kami Sekarang
+      </a>
+    </section>
+  </article>
+</Layout>

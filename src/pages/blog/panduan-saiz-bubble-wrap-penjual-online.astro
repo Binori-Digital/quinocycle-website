@@ -1,0 +1,317 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Bubble Wrap Kecil vs Besar — Panduan Lengkap Saiz untuk Penjual Online Malaysia',
+  description: 'Pelajari perbezaan antara bubble wrap kecil, sederhana, dan besar. Panduan memilih saiz bubble yang tepat untuk elektronik, perhiasan, pakaian, dan barang fragile lainnya untuk e-commerce Malaysia.',
+  date: '2026-04-11',
+  readTime: '7 min',
+  category: 'Bubble Wrap',
+  author: 'Pasukan Quinocycle',
+  slug: 'panduan-saiz-bubble-wrap-penjual-online',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20ingin%20tahu%20saiz%20bubble%20wrap%20yang%20sesuai%20untuk%20produk%20e-commerce%20saya.%20Boleh%20bantu%20saya%20memilih?';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "image": "https://www.quinocycle.com.my/blog-featured.jpg",
+  "datePublished": "2026-04-11",
+  "author": {
+    "@type": "Organization",
+    "name": "Pasukan Quinocycle"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd."
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apakah saiz bubble wrap yang paling sesuai untuk elektronik?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Untuk elektronik seperti telefon atau tablet, gunakan bubble wrap dengan gelembung sederhana (10-12mm). Ia memberikan perlindungan yang cukup tanpa terlalu banyak ruang yang terbuang dalam kotak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Saiz bubble wrap apa untuk perhiasan dan aksesori kecil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Untuk perhiasan, gunakan bubble wrap micro atau kecil (5-6mm). Gelembung yang kecil memberikan perlindungan presisi untuk item kecil dan tidak membuang banyak ruang dalam kotak kecil."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bolehkah bubble wrap besar digunakan untuk item kecil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Secara teknikal boleh, tetapi tidak disarankan. Bubble wrap besar akan membuang banyak ruang dalam kotak kecil, meningkatkan dimensi kotak dan kos penghantaran. Gunakan saiz yang sesuai dengan ukuran item anda."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Adakah perbezaan harga antara saiz bubble wrap yang berbeza?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, bubble wrap yang lebih besar biasanya lebih murah per meter persegi kerana menggunakan lebih sedikit plastik per gelembung. Tetapi untuk item kecil, anda mungkin membuang lebih banyak, jadi tidak semestinya lebih murah dalam praktiknya."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana saya tahu saiz bubble wrap yang paling hemat kos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pilih saiz yang paling tepat untuk item anda — ini akan meminimumkan pembaziran dan memaksimalkan penjimatan. Untuk saran khusus tentang produk anda, hubungi Quinocycle di +60168916381 untuk konsultasi gratis."
+      }
+    }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Pembekal bubble wrap dalam berbagai saiz untuk e-commerce Malaysia. Menawarkan bubble kecil, sederhana, dan besar dengan harga pukal kompetitif.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "email": "quinocycle@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "priceRange": "RM 0.80 – RM 2.50 per meter",
+  "areaServed": "Semenanjung Malaysia"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Pentingnya Memilih Saiz Bubble Wrap yang Tepat</h2>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Bubble wrap adalah bahan pembungkusan yang populer untuk item yang fragile dan sensitif. Tetapi tidak semua saiz bubble wrap cocok untuk semua produk. Memilih saiz yang tepat bukan hanya tentang melindungi produk — ia juga tentang mengurangkan kos pembungkusan dan memastikan kotak tidak terlalu besar.
+      </p>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Jika anda menggunakan bubble wrap yang terlalu besar untuk item kecil, anda akan membuang banyak bahan sambil membuat kotak anda lebih besar dan lebih mahal untuk dihantar. Sebaliknya, bubble wrap yang terlalu kecil mungkin tidak memberikan perlindungan yang cukup untuk item yang lebih besar.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Jenis-Jenis Saiz Bubble Wrap</h2>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">Bubble Wrap Micro (1-3mm)</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Gelembung paling kecil, ideal untuk item sangat kecil seperti perhiasan, cincin, anting-anting, dan aksesori kecil. Ia memberikan perlindungan yang presisi tanpa membuang banyak ruang. Anda dapat membungkus lebih banyak item dalam kotak kecil sambil tetap terlindungi.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">Bubble Wrap Kecil (5-8mm)</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Saiz paling popular untuk e-commerce Malaysia. Cocok untuk makeup, kosmetik, buku kecil, USB, kabel, dan elektronik kecil. Ini adalah "one-size-fits-most" untuk penjual online yang ingin keseimbangan antara perlindungan dan efisiensi ruang.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">Bubble Wrap Sederhana (10-12mm)</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Gelembung yang lebih besar memberikan perlindungan yang lebih baik untuk item medium seperti elektronik, peralatan dapur, atau dekorasi rumah. Ia cocok juga untuk item yang agak fragile seperti gelas atau piring kecil.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">Bubble Wrap Besar (15-20mm)</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Untuk item besar dan sangat fragile seperti peralatan elektronik besar, peralatan dapur profesional, atau item yang mudah patah. Gelembung yang besar memberikan penyerapan hentakan yang luar biasa, tetapi juga membuang lebih banyak ruang.
+      </p>
+    </section>
+
+    <section class="mb-8 bg-surface-variant/50 border border-outline-variant/20 p-6 rounded-lg">
+      <h2 class="font-headline text-xl font-bold text-on-surface mb-4">Jadual Panduan Cepat: Item vs Saiz Bubble Wrap</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full font-body text-sm">
+          <thead>
+            <tr class="border-b border-outline-variant/20">
+              <th class="text-left py-2 px-2">Kategori Item</th>
+              <th class="text-left py-2 px-2">Contoh Produk</th>
+              <th class="text-left py-2 px-2">Saiz Bubble</th>
+              <th class="text-left py-2 px-2">Alasan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-2">Perhiasan</td>
+              <td class="py-2 px-2">Cincin, Anting</td>
+              <td class="py-2 px-2">Micro (1-3mm)</td>
+              <td class="py-2 px-2">Item sangat kecil, presisi</td>
+            </tr>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-2">Elektronik Kecil</td>
+              <td class="py-2 px-2">USB, Kabel, Powerbank</td>
+              <td class="py-2 px-2">Kecil (5-8mm)</td>
+              <td class="py-2 px-2">Perlindungan standar</td>
+            </tr>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-2">Kosmetik & Beauty</td>
+              <td class="py-2 px-2">Makeup, Skincare</td>
+              <td class="py-2 px-2">Kecil (5-8mm)</td>
+              <td class="py-2 px-2">Fragile botol kaca</td>
+            </tr>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-2">Elektronik Medium</td>
+              <td class="py-2 px-2">Telefon, Tablet</td>
+              <td class="py-2 px-2">Sederhana (10-12mm)</td>
+              <td class="py-2 px-2">Perlindungan lebih baik</td>
+            </tr>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-2">Peralatan Dapur</td>
+              <td class="py-2 px-2">Gelas, Piring</td>
+              <td class="py-2 px-2">Sederhana (10-12mm)</td>
+              <td class="py-2 px-2">Sangat fragile</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-2">Item Besar Fragile</td>
+              <td class="py-2 px-2">Peralatan Elektronik Besar</td>
+              <td class="py-2 px-2">Besar (15-20mm)</td>
+              <td class="py-2 px-2">Penyerapan hentakan maksimal</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Tips Menggunakan Bubble Wrap dengan Efisien</h2>
+
+      <div class="space-y-4">
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">1. Pilih Saiz yang Sesuai dengan Item</h3>
+          <p class="font-body text-sm text-secondary">Jangan membeli satu saiz bubble wrap untuk semua produk. Jika anda menjual pelbagai kategori item, pertimbangkan membeli 2-3 saiz yang berbeza untuk mengoptimalkan perlindungan dan menghemat kos.</p>
+        </div>
+
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">2. Gunakan Bubble Wrap dalam Lapisan</h3>
+          <p class="font-body text-sm text-secondary">Untuk item yang sangat fragile, bungkus dengan 2-3 lapisan bubble wrap kecil daripada 1 lapisan bubble wrap besar. Ini lebih hemat dan memberikan perlindungan yang lebih konsisten.</p>
+        </div>
+
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">3. Padukan dengan Bahan Lain</h3>
+          <p class="font-body text-sm text-secondary">Tidak perlu menggunakan bubble wrap untuk setiap item. Untuk produk yang kurang fragile, boleh gunakan kadbod gelombang atau kertas crinkle sebagai ganti, kemudian gunakan bubble wrap hanya untuk item yang benar-benar fragile.</p>
+        </div>
+
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">4. Belanja dalam Kuantiti Besar</h3>
+          <p class="font-body text-sm text-secondary">Bubble wrap menjadi lebih murah apabila dibeli dalam roll yang lebih besar atau pembelian pukal. Jika anda penjual online serius, beli dalam jumlah besar untuk mendapat diskon hingga 30-40%.</p>
+        </div>
+
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">5. Simpan dengan Benar</h3>
+          <p class="font-body text-sm text-secondary">Bubble wrap harus disimpan di tempat yang kering dan sejuk, jauh dari cahaya matahari langsung. Jika terdedah kepada haba tinggi, gelembung mungkin mulai mengempis.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Perbandingan Kos Bubble Wrap Saiz Berbeza</h2>
+
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">Berdasarkan pembelian roll 100 meter:</p>
+
+      <div class="space-y-3 mt-4">
+        <div class="flex items-center justify-between font-body text-sm">
+          <span><strong>Bubble Micro (1-3mm)</strong></span>
+          <span>RM 80 - RM 100 per roll</span>
+        </div>
+        <div class="flex items-center justify-between font-body text-sm">
+          <span><strong>Bubble Kecil (5-8mm)</strong></span>
+          <span>RM 120 - RM 150 per roll</span>
+        </div>
+        <div class="flex items-center justify-between font-body text-sm">
+          <span><strong>Bubble Sederhana (10-12mm)</strong></span>
+          <span>RM 100 - RM 140 per roll</span>
+        </div>
+        <div class="flex items-center justify-between font-body text-sm">
+          <span><strong>Bubble Besar (15-20mm)</strong></span>
+          <span>RM 90 - RM 120 per roll</span>
+        </div>
+      </div>
+
+      <p class="font-body text-sm text-secondary mt-4">*Harga berubah-ubah bergantung pada pembekal dan ketebalan. Pembelian pukal lebih besar mendapat diskon lebih besar.</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">FAQ: Memilih Saiz Bubble Wrap</h2>
+      <div class="space-y-4">
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Bolehkah saya menggunakan bubble wrap besar untuk item kecil untuk menjimat?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Secara teknikal boleh, tetapi tidak disarankan. Anda akan membuang banyak ruang dan plastik, membuat kotak anda lebih besar dan lebih mahal untuk dihantar. Dalam jangka panjang, menggunakan saiz yang tepat adalah lebih jimat walaupun harga per roll mungkin lebih tinggi untuk bubble kecil.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Adakah bubble wrap micro (1-3mm) cukup kuat untuk melindungi item?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Ya, untuk item kecil seperti perhiasan, bubble wrap micro memberikan perlindungan yang cukup. Gelembung yang kecil mampu menyerap hentakan dengan baik untuk item ringan. Untuk item yang lebih berat atau lebih fragile, gunakan saiz yang lebih besar.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Bagaimana jika saya menjual pelbagai jenis produk?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Untuk peniaga yang menjual pelbagai kategori produk, disarankan membeli 2-3 saiz bubble wrap yang berbeza: Bubble kecil (5-8mm) sebagai saiz standard, Bubble micro (1-3mm) untuk perhiasan dan item sangat kecil, Bubble sederhana (10-12mm) untuk elektronik medium dan item fragile. Ini memberikan perlindungan optimal dan penjimatan maksimal.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Adakah perbezaan kualiti bubble wrap murah vs mahal?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Ya, ada perbezaan. Bubble wrap murah mungkin mempunyai gelembung yang kurang konsisten atau plastik yang lebih nipis. Bubble wrap berkualiti tinggi mempunyai gelembung yang lebih rata dan plastik yang lebih tebal, memberikan perlindungan yang lebih lama. Untuk peniaga serius, investasi sedikit lebih tinggi untuk kualiti bagus adalah berbaloi.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Di mana saya boleh beli bubble wrap dalam jumlah besar dengan harga terbaik?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Quinocycle Sdn. Bhd. di Balakong menyediakan bubble wrap berkualiti dalam berbagai saiz dengan harga pukal kompetitif. Hubungi +60168916381 untuk mendapatkan penawaran khusus dan sampel percuma sebelum membeli dalam jumlah besar.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Kesimpulan</h2>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Memilih saiz bubble wrap yang tepat adalah keputusan penting untuk menjimatkan kos pembungkusan sambil melindungi produk anda. Untuk mayoritas penjual online Malaysia, bubble wrap kecil (5-8mm) adalah saiz yang paling versatile dan hemat kos. Tetapi jika anda menjual pelbagai kategori produk, pertimbangkan membeli 2-3 saiz yang berbeza untuk optimasi penuh.
+      </p>
+      <p class="font-body text-base text-secondary leading-relaxed">
+        Ingat — bubble wrap yang terlalu besar untuk item kecil akan membuang kos penghantaran anda, sementara bubble wrap yang terlalu kecil mungkin tidak memberikan perlindungan yang cukup. Pilih dengan bijak, belanja dalam jumlah besar, dan anda akan melihat penjimatan yang signifikan dalam kos pembungkusan anda.
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-outline-variant/20">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Butuh Bubble Wrap Berkualiti?</h2>
+      <p class="font-body text-base text-secondary mb-6">
+        Quinocycle menyediakan bubble wrap dalam berbagai saiz dengan harga pukal terbaik. Hubungi kami untuk konsultasi gratis tentang saiz yang paling sesuai untuk produk anda.
+      </p>
+      <a href={WA_LINK} class="inline-block bg-primary text-white font-label font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity">
+        Minta Harga Pukal Sekarang
+      </a>
+    </section>
+  </article>
+</Layout>

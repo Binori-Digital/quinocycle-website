@@ -1,0 +1,464 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Panduan Lengkap Bahan Pembungkusan Malaysia — Kos, Kegunaan & Masa Guna Setiap Satu',
+  description: 'Perbandingan lengkap semua jenis bahan pembungkusan di Malaysia: kotak kardus, bubble wrap, kadbod honeycomb, foam, plastik wrap. Ketahui harga, kegunaan, dan berapa lama ia bertahan.',
+  date: '2026-04-11',
+  readTime: '9 min',
+  category: 'Ilmu Pembungkusan',
+  author: 'Pasukan Quinocycle',
+  slug: 'panduan-bahan-pembungkusan-malaysia-kos',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20ingin%20tahu%20perbandingan%20harga%20dan%20kualiti%20bahan%20pembungkusan%20yang%20berbeza.%20Boleh%20bantu%20saya%20memilih%20yang%20paling%20sesuai?';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "image": "https://www.quinocycle.com.my/blog-featured.jpg",
+  "datePublished": "2026-04-11",
+  "author": {
+    "@type": "Organization",
+    "name": "Pasukan Quinocycle"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd."
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apakah bahan pembungkusan yang paling murah di Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kadbod gelombang dan kadbod honeycomb adalah bahan paling murah, diikuti oleh foam dan bubble wrap. Harga bergantung pada kualiti dan jumlah yang dibeli. Pembelian pukal mendapat harga yang jauh lebih murah."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mana bahan pembungkusan yang paling ramah alam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kadbod gelombang, kadbod honeycomb, dan kraft paper adalah 100% boleh didaur semula dan ramah alam. Bubble wrap adalah plastik dan mengambil ratusan tahun untuk terurai. Foam juga sukar untuk didaur semula."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa lama bahan pembungkusan boleh bertahan dalam penyimpanan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kadbod dan kraft paper boleh bertahan 2-3 tahun jika disimpan dengan tepat. Bubble wrap boleh bertahan lebih lama tetapi gelembung boleh mengempis seiring waktu. Foam mungkin melemah seiring waktu jika terdedah kepada cahaya UV."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bahan apa yang terbaik untuk barang yang sangat fragile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bubble wrap adalah pilihan terbaik untuk item sangat fragile seperti gelas. Untuk kombinasi yang lebih hemat, gunakan bubble wrap sebagai lapisan pertama dan kadbod honeycomb sebagai lapisan perlindungan struktural."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bolehkah saya mencampurkan bahan pembungkusan yang berbeza?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, mencampurkan bahan pembungkusan adalah strategi yang sangat bijak. Gunakan bahan yang tepat untuk setiap tahap pembungkusan — bahan fragile protection untuk item sensitif dan bahan struktural untuk perlindungan keseluruhan."
+      }
+    }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Pembekal lengkap bahan pembungkusan Malaysia dengan harga kompetitif. Menawarkan kotak kardus, bubble wrap, kadbod, foam, dan semua jenis bahan pembungkusan lainnya.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "email": "quinocycle@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "priceRange": "RM 0.50 – RM 6.50 per unit (bergantung jenis)",
+  "areaServed": "Semenanjung Malaysia"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Pengenalan: Memilih Bahan Pembungkusan yang Betul</h2>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Bahan pembungkusan yang betul bukan hanya tentang melindungi produk — ia juga tentang mengurangkan kos, melindungi alam sekitar, dan menciptakan pengalaman unboxing yang berkesan bagi pelanggan. Di Malaysia, terdapat pelbagai pilihan bahan pembungkusan dengan harga dan ciri yang berbeza-beza.
+      </p>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Panduan ini membandingkan semua jenis bahan pembungkusan utama di Malaysia, memberikan informasi tentang harga, kegunaan, dan berapa lama ia boleh bertahan. Dengan maklumat ini, anda boleh membuat keputusan yang paling bijak untuk perniagaan anda.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">1. Kotak Kardus (Corrugated Cardboard)</h2>
+
+      <h3 class="font-headline text-lg font-bold text-on-surface mb-2">Deskripsi</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Kotak kardus dengan lapisan bergelombang adalah bahan paling umum untuk pembungkusan e-commerce. Ia menyediakan perlindungan struktural yang kuat untuk kotak pengiriman.
+      </p>
+
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Harga (per kotak)</p>
+          <p class="font-body text-sm text-secondary">RM 1.90 - RM 6.50</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Daya Tahan</p>
+          <p class="font-body text-sm text-secondary">2-3 tahun penyimpanan</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Ramah Alam</p>
+          <p class="font-body text-sm text-secondary">100% Boleh Daur Semula</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Kegunaan Terbaik</p>
+          <p class="font-body text-sm text-secondary">Kotak pengiriman utama</p>
+        </div>
+      </div>
+
+      <p class="font-body text-base text-secondary leading-relaxed mt-4">
+        <strong>Keuntungan:</strong> Kuat, hemat ruang, boleh didaur semula. <strong>Kekurangan:</strong> Memerlukan padding tambahan untuk item fragile, sensitif kepada kelembapan.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">2. Bubble Wrap</h2>
+
+      <h3 class="font-headline text-lg font-bold text-on-surface mb-2">Deskripsi</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Plastik bergelembung yang diisi dengan udara, memberikan perlindungan hentakan yang luar biasa untuk item fragile.
+      </p>
+
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Harga (per meter)</p>
+          <p class="font-body text-sm text-secondary">RM 0.80 - RM 2.50</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Daya Tahan</p>
+          <p class="font-body text-sm text-secondary">3-5 tahun (gelembung boleh mengempis)</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Ramah Alam</p>
+          <p class="font-body text-sm text-secondary">Plastik (sukar didaur)</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Kegunaan Terbaik</p>
+          <p class="font-body text-sm text-secondary">Perlindungan fragile</p>
+        </div>
+      </div>
+
+      <p class="font-body text-base text-secondary leading-relaxed mt-4">
+        <strong>Keuntungan:</strong> Perlindungan bagus untuk fragile, tahan kelembapan. <strong>Kekurangan:</strong> Mahal, boros plastik, tidak ramah alam.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">3. Kadbod Gelombang (Corrugated Cardboard Sheets)</h2>
+
+      <h3 class="font-headline text-lg font-bold text-on-surface mb-2">Deskripsi</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Kepingan kadbod dengan lapisan bergelombang di tengah, cocok untuk pengganjal, pemisah, dan perlindungan struktural dalam kotak.
+      </p>
+
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Harga (per lembar)</p>
+          <p class="font-body text-sm text-secondary">RM 0.50 - RM 1.50</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Daya Tahan</p>
+          <p class="font-body text-sm text-secondary">2-3 tahun penyimpanan</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Ramah Alam</p>
+          <p class="font-body text-sm text-secondary">100% Boleh Daur Semula</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Kegunaan Terbaik</p>
+          <p class="font-body text-sm text-secondary">Pengganjal, pemisah</p>
+        </div>
+      </div>
+
+      <p class="font-body text-base text-secondary leading-relaxed mt-4">
+        <strong>Keuntungan:</strong> Sangat murah, kuat, boleh didaur semula. <strong>Kekurangan:</strong> Sensitif kepada kelembapan, tidak sebaik bubble wrap untuk fragile.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">4. Kadbod Honeycomb</h2>
+
+      <h3 class="font-headline text-lg font-bold text-on-surface mb-2">Deskripsi</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Struktur kertas berbukal seperti sarang lebah, memberikan kekuatan luar biasa sambil sangat ringan.
+      </p>
+
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Harga (per m²)</p>
+          <p class="font-body text-sm text-secondary">RM 1.20 - RM 3.50</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Daya Tahan</p>
+          <p class="font-body text-sm text-secondary">2-3 tahun penyimpanan</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Ramah Alam</p>
+          <p class="font-body text-sm text-secondary">100% Boleh Daur Semula</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Kegunaan Terbaik</p>
+          <p class="font-body text-sm text-secondary">Perlindungan berat</p>
+        </div>
+      </div>
+
+      <p class="font-body text-base text-secondary leading-relaxed mt-4">
+        <strong>Keuntungan:</strong> Sangat kuat, ringan, ramah alam, hemat ruang. <strong>Kekurangan:</strong> Agak sensitif kelembapan, perlindungan fragile kurang maksimal.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">5. Foam / Styrofoam</h2>
+
+      <h3 class="font-headline text-lg font-bold text-on-surface mb-2">Deskripsi</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Busa plastik putih yang ringan dan memberikan perlindungan hentakan yang baik.
+      </p>
+
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Harga (per lembar)</p>
+          <p class="font-body text-sm text-secondary">RM 1.00 - RM 3.00</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Daya Tahan</p>
+          <p class="font-body text-sm text-secondary">5-10 tahun</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Ramah Alam</p>
+          <p class="font-body text-sm text-secondary">Sukar didaur (plastik)</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Kegunaan Terbaik</p>
+          <p class="font-body text-sm text-secondary">Perlindungan elektronik</p>
+        </div>
+      </div>
+
+      <p class="font-body text-base text-secondary leading-relaxed mt-4">
+        <strong>Keuntungan:</strong> Perlindungan bagus, tahan lama. <strong>Kekurangan:</strong> Tidak ramah alam, mahal, boros ruang penyimpanan.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">6. Kraft Paper & Crinkle Paper</h2>
+
+      <h3 class="font-headline text-lg font-bold text-on-surface mb-2">Deskripsi</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Kertas kraft coklat atau crinkle paper berwarna-warni, cocok untuk padding ringan dan kesan unboxing.
+      </p>
+
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Harga (per kg)</p>
+          <p class="font-body text-sm text-secondary">RM 0.50 - RM 1.50</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Daya Tahan</p>
+          <p class="font-body text-sm text-secondary">Tidak untuk simpanan lama</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Ramah Alam</p>
+          <p class="font-body text-sm text-secondary">100% Boleh Daur Semula</p>
+        </div>
+        <div class="border-l-4 border-primary/20 pl-4">
+          <p class="font-body text-sm font-bold text-on-surface">Kegunaan Terbaik</p>
+          <p class="font-body text-sm text-secondary">Padding, unboxing</p>
+        </div>
+      </div>
+
+      <p class="font-body text-base text-secondary leading-relaxed mt-4">
+        <strong>Keuntungan:</strong> Sangat murah, ramah alam, kesan bagus, mudah digunakan. <strong>Kekurangan:</strong> Perlindungan minimal, tidak cocok untuk item berat.
+      </p>
+    </section>
+
+    <section class="mb-8 bg-surface-variant/50 border border-outline-variant/20 p-6 rounded-lg">
+      <h2 class="font-headline text-xl font-bold text-on-surface mb-4">Jadual Perbandingan Lengkap</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full font-body text-xs md:text-sm">
+          <thead>
+            <tr class="border-b border-outline-variant/20">
+              <th class="text-left py-2 px-1">Bahan</th>
+              <th class="text-left py-2 px-1">Harga</th>
+              <th class="text-left py-2 px-1">Kekuatan</th>
+              <th class="text-left py-2 px-1">Ramah Alam</th>
+              <th class="text-left py-2 px-1">Terbaik Untuk</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-1">Kotak Kardus</td>
+              <td class="py-2 px-1">Murah</td>
+              <td class="py-2 px-1">Sangat Kuat</td>
+              <td class="py-2 px-1">Ya</td>
+              <td class="py-2 px-1">Kotak utama</td>
+            </tr>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-1">Bubble Wrap</td>
+              <td class="py-2 px-1">Mahal</td>
+              <td class="py-2 px-1">Baik Hentakan</td>
+              <td class="py-2 px-1">Tidak</td>
+              <td class="py-2 px-1">Fragile</td>
+            </tr>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-1">Kadbod Gelombang</td>
+              <td class="py-2 px-1">Sangat Murah</td>
+              <td class="py-2 px-1">Kuat</td>
+              <td class="py-2 px-1">Ya</td>
+              <td class="py-2 px-1">Pengganjal</td>
+            </tr>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-1">Honeycomb</td>
+              <td class="py-2 px-1">Murah</td>
+              <td class="py-2 px-1">Sangat Kuat</td>
+              <td class="py-2 px-1">Ya</td>
+              <td class="py-2 px-1">Barang Berat</td>
+            </tr>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-1">Foam</td>
+              <td class="py-2 px-1">Mahal</td>
+              <td class="py-2 px-1">Baik</td>
+              <td class="py-2 px-1">Tidak</td>
+              <td class="py-2 px-1">Elektronik</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-1">Kraft Paper</td>
+              <td class="py-2 px-1">Sangat Murah</td>
+              <td class="py-2 px-1">Lemah</td>
+              <td class="py-2 px-1">Ya</td>
+              <td class="py-2 px-1">Padding ringan</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Strategi Pembungkusan yang Optimal</h2>
+
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Daripada hanya menggunakan satu jenis bahan pembungkusan, strategi terbaik adalah menggabungkan bahan yang berbeza untuk aplikasi yang berbeza:
+      </p>
+
+      <div class="space-y-4 mt-4">
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">Untuk Item Sangat Fragile (Gelas, Piring)</h3>
+          <p class="font-body text-sm text-secondary">Bubble wrap (lapisan pertama) → Kadbod honeycomb (lapisan tengah) → Kotak kardus (kotak utama)</p>
+        </div>
+
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">Untuk Barang Berat (Buku, Elektronik)</h3>
+          <p class="font-body text-sm text-secondary">Kadbod honeycomb (pelindung) → Kotak kardus berkualiti (kotak utama)</p>
+        </div>
+
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">Untuk Item Ringan (Pakaian, Aksesori)</h3>
+          <p class="font-body text-sm text-secondary">Kraft paper atau crinkle paper (padding) → Kotak kardus (kotak utama)</p>
+        </div>
+
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">Untuk E-Commerce Premium</h3>
+          <p class="font-body text-sm text-secondary">Bubble wrap micro (perlindungan) → Kraft paper berwarna (kesan unboxing) → Kotak kardus custom (branding)</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">FAQ: Memilih Bahan Pembungkusan</h2>
+      <div class="space-y-4">
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Apakah bahan pembungkusan yang paling hemat kos untuk e-commerce?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Untuk mayoritas e-commerce Malaysia, kombinasi kotak kardus berkualiti + kadbod honeycomb + kraft paper adalah pilihan paling hemat kos. Hanya gunakan bubble wrap untuk item yang benar-benar fragile. Kombinasi ini dapat mengurangkan kos pembungkusan hingga 50% berbanding menggunakan bubble wrap untuk semua item.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Bolehkah saya guna bahan pembungkusan terpakai?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Ya, untuk bahan seperti kotak kardus, menggunakan yang terpakai tetapi berkualiti baik adalah pilihan ekonomi yang sangat baik. Tetapi untuk bahan seperti bubble wrap atau foam yang digunakan untuk perlindungan langsung ke produk, lebih baik menggunakan yang baru untuk kebersihan dan kualiti.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Bagaimana saya simpan bahan pembungkusan agar tetap berkualiti?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Simpan di tempat yang kering, sejuk, dan jauh dari cahaya matahari langsung. Kelembapan adalah musuh utama — ia dapat melemahkan kadbod dan membuat foam menjadi lembab. Stack items dengan hati-hati untuk mengelak kerosakan. Untuk bubble wrap dan foam, hindari haba tinggi yang dapat mengubah plastik.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Adakah bahan pembungkusan yang sekaligus murah dan ramah alam?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Ya — kadbod gelombang, kadbod honeycomb, dan kraft paper adalah semuanya sangat murah dan 100% boleh didaur semula. Ini adalah pilihan terbaik untuk perniagaan yang ingin menjadi ramah alam tanpa mengorbankan margin keuntungan.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Di mana saya boleh beli semua jenis bahan pembungkusan dalam satu tempat?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Quinocycle Sdn. Bhd. menyediakan lengkap semua jenis bahan pembungkusan dengan harga pukal kompetitif. Hubungi +60168916381 untuk mendapatkan harga terbaik dan konsultasi gratis tentang kombinasi bahan yang paling sesuai untuk perniagaan anda.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Kesimpulan</h2>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Tidak ada bahan pembungkusan yang sempurna untuk setiap situasi. Kunci untuk mengoptimalkan kos dan kualiti adalah memilih bahan yang tepat untuk setiap aplikasi. Untuk mayoritas peniaga e-commerce di Malaysia, kombinasi kotak kardus + kadbod honeycomb + kraft paper + bubble wrap (untuk fragile sahaja) memberikan keseimbangan terbaik antara kos, perlindungan, dan keberlanjutan alam sekitar.
+      </p>
+      <p class="font-body text-base text-secondary leading-relaxed">
+        Mulai dengan memahami kebutuhan produk anda, kemudian pilih bahan yang paling sesuai. Belanja dalam jumlah besar untuk mendapat diskon terbaik, dan jangan takut untuk berunding dengan pembekal tentang kombinasi yang paling hemat kos untuk bisnis anda.
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-outline-variant/20">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Butuh Konsultasi Bahan Pembungkusan?</h2>
+      <p class="font-body text-base text-secondary mb-6">
+        Quinocycle menyediakan lengkap semua jenis bahan pembungkusan dengan harga kompetitif. Hubungi kami untuk konsultasi gratis dan penawaran khusus untuk perniagaan anda.
+      </p>
+      <a href={WA_LINK} class="inline-block bg-primary text-white font-label font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity">
+        Minta Konsultasi Sekarang
+      </a>
+    </section>
+  </article>
+</Layout>

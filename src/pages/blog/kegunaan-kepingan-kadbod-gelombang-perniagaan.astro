@@ -1,0 +1,294 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: '10 Cara Perniagaan Malaysia Guna Kepingan Kadbod Gelombang untuk Pembungkusan',
+  description: 'Temukan 10 kegunaan kreatif kepingan kadbod gelombang untuk pembungkusan perniagaan. Dari perlindungan fragile hingga pengganjal produk, tingkatkan kualiti pembungkusan dengan harga terjangkau.',
+  date: '2026-04-11',
+  readTime: '8 min',
+  category: 'Kadbod Gelombang',
+  author: 'Pasukan Quinocycle',
+  slug: 'kegunaan-kepingan-kadbod-gelombang-perniagaan',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20berminat%20dengan%20kepingan%20kadbod%20gelombang%20untuk%20pembungkusan%20produk%20saya.%20Boleh%20tahu%20harga%20dan%20saiz%20yang%20ada?';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "image": "https://www.quinocycle.com.my/blog-featured.jpg",
+  "datePublished": "2026-04-11",
+  "author": {
+    "@type": "Organization",
+    "name": "Pasukan Quinocycle"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd."
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apakah perbezaan antara kadbod gelombang dan kadbod biasa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kadbod gelombang mempunyai struktur bergelombang di tengah yang memberikan daya kusut dan perlindungan lebih baik daripada kadbod rata biasa. Ia lebih ringan tetapi lebih kuat untuk perlindungan produk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bolehkah kadbod gelombang digunakan sebagai pengganti bubble wrap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, kadbod gelombang adalah alternatif yang ramah alam kepada bubble wrap. Ia memberikan perlindungan yang baik untuk item yang tidak terlalu fragile dan ia boleh didaur semula."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa lama kadbod gelombang boleh bertahan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kadbod gelombang berkualiti baik boleh bertahan 2-3 tahun penyimpanan yang tepat dalam persekitaran yang kering. Jika terdedah kepada kelembapan, ia akan melemah dalam beberapa bulan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah kos kepingan kadbod gelombang di Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Harga berkisar antara RM 0.50 hingga RM 1.50 per keping bergantung pada saiz dan tebal. Pembelian pukal 1,000 keping atau lebih boleh mendapat diskon sehingga 30%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Di mana saya boleh beli kepingan kadbod gelombang berkualiti?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quinocycle Sdn. Bhd. di Balakong menawarkan kepingan kadbod gelombang dengan pelbagai saiz dan tebal. Hubungi +60168916381 untuk harga pukal dan konsultasi gratis."
+      }
+    }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Pembekal kepingan kadbod gelombang untuk pembungkusan perniagaan di Malaysia. Menawarkan berbagai saiz dan tebal untuk perlindungan produk yang optimal.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "email": "quinocycle@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "priceRange": "RM 0.50 – RM 1.50 per keping",
+  "areaServed": "Semenanjung Malaysia"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Apa itu Kadbod Gelombang?</h2>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Kadbod gelombang (corrugated cardboard) adalah bahan pembungkusan yang mempunyai struktur berlapis — dua lapisan kadbod rata dengan lapisan bergelombang di tengahnya. Struktur ini memberikan kekuatan yang luar biasa sambil tetap ringan. Ia adalah pilihan paling popular untuk pembungkusan produk di Malaysia kerana harga yang terjangkau dan perlindungan yang efektif.
+      </p>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Kepingan kadbod gelombang boleh dipotong dan diubah menjadi berbagai ukuran dan bentuk, menjadikannya sangat versatile untuk kegunaan pembungkusan yang berbeza-beza. Dari pelindung sudut kotak hingga pengganjal produk, kadbod gelombang adalah bahan yang wajib ada di gudang setiap peniaga.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">10 Kegunaan Kepingan Kadbod Gelombang untuk Pembungkusan</h2>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">1. Pengganjal Produk dalam Kotak</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Potong kepingan kadbod gelombang menjadi jalur dan letakkan di bawah dan di atas produk untuk mengelak pergerakan semasa penghantaran. Ia memberikan perlindungan yang sama seperti bubble wrap tetapi lebih ramah alam dan lebih murah.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">2. Pelindung Sudut Kotak</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Potong kepingan kadbod gelombang menjadi segi tiga atau bentuk sudut dan lekatkan di sudut kotak untuk melindungi produk dari benturan pada sudut-sudut yang tajam. Ini sangat penting untuk item yang fragile seperti gelas atau elektronik.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">3. Pemisah Produk Berlapis</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Untuk pelbagai item dalam satu kotak, gunakan kepingan kadbod gelombang sebagai pemisah antara lapisan. Ini menghalang produk daripada berpindah dan saling menggores semasa penghantaran.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">4. Pemegang Produk Vertikal</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Lipat kepingan kadbod gelombang menjadi struktur berbentuk U atau piramid untuk memegang produk dalam posisi tegak di dalam kotak. Ia mencegah produk terjatuh dan bergerak horizontal.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">5. Papan Alas untuk Item Berat</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Untuk item yang sangat berat seperti buku atau elektronik, letakkan kepingan kadbod gelombang di bawah sebagai papan alas untuk menyebarkan berat dan mengelak kerosakan pada bahagian bawah kotak.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">6. Pelapis Dinding Kotak Dalaman</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Lekatkan kepingan kadbod gelombang pada dinding dalam kotak untuk menambah lapisan perlindungan dan mengurankan pergerakan produk. Ia juga membantu menyerap hentakan dari luar.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">7. Pembungkus Individual untuk Produk</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Potong kepingan kadbod gelombang menjadi lembaran kecil dan balut sekeliling produk yang fragile sebelum masuk ke dalam kotak. Ini memberikan lapisan perlindungan pertama sebelum bubble wrap.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">8. Penguat Sisi untuk Kotak Lemah</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Jika kotak anda agak lemah atau sudah pernah digunakan, lekatkan kepingan kadbod gelombang di sepanjang sisi dalam untuk menguatkan struktur kotak dan mencegah kemerosotan.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">9. Spacer untuk Produk yang Berlainan Saiz</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Ketika menghantar produk yang berbeza saiz dalam satu kotak, gunakan kepingan kadbod gelombang sebagai spacer untuk mengisi ruang kosong dan mengelak produk besar menekan yang kecil.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">10. Alas Palet untuk Penyimpanan Gudang</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Susun kepingan kadbod gelombang dalam lembaran untuk membentuk alas palet yang kuat untuk penyimpanan kotak atau barang di gudang. Ia lebih murah daripada palet kayu dan lebih ringan.
+      </p>
+    </section>
+
+    <section class="mb-8 bg-surface-variant/50 border border-outline-variant/20 p-6 rounded-lg">
+      <h2 class="font-headline text-xl font-bold text-on-surface mb-4">Petua Menggunakan Kadbod Gelombang dengan Efisien</h2>
+      <ul class="font-body text-base text-secondary space-y-3">
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold mt-1">•</span>
+          <span><strong>Ukur dan potong dengan tepat</strong> — Gunakan pembaris dan pisau yang tajam untuk memotong kepingan yang tepat saiz. Pemotongan yang tepat akan mengurangkan pembaziran bahan.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold mt-1">•</span>
+          <span><strong>Guna perekat yang kuat</strong> — Gunakan perekat kadbod (box tape) yang berkualiti baik untuk melekatkan kepingan kadbod gelombang pada kotak atau produk. Perekat yang lemah akan menyebabkan kepingan terlepas.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold mt-1">•</span>
+          <span><strong>Pertimbangkan berat produk</strong> — Untuk produk yang sangat berat, gunakan kadbod gelombang yang lebih tebal (double wall daripada single wall) untuk perlindungan yang lebih baik.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold mt-1">•</span>
+          <span><strong>Simpan di tempat kering</strong> — Kadbod gelombang akan lemah jika terdedah kepada kelembapan. Simpan di tempat yang kering dan sejuk untuk memaksimalkan hayat gunaannya.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Saiz dan Tebal Kadbod Gelombang</h2>
+
+      <div class="overflow-x-auto">
+        <table class="w-full font-body text-sm mt-4">
+          <thead>
+            <tr class="border-b border-outline-variant/20">
+              <th class="text-left py-2 px-2">Jenis</th>
+              <th class="text-left py-2 px-2">Tebal</th>
+              <th class="text-left py-2 px-2">Kekuatan</th>
+              <th class="text-left py-2 px-2">Kegunaan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-2">Single Wall</td>
+              <td class="py-2 px-2">3-4mm</td>
+              <td class="py-2 px-2">Ringan</td>
+              <td class="py-2 px-2">Item ringan, pengganjal</td>
+            </tr>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-2">Double Wall</td>
+              <td class="py-2 px-2">6-8mm</td>
+              <td class="py-2 px-2">Sederhana</td>
+              <td class="py-2 px-2">Item medium, perlindungan</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-2">Triple Wall</td>
+              <td class="py-2 px-2">10-12mm</td>
+              <td class="py-2 px-2">Sangat Kuat</td>
+              <td class="py-2 px-2">Item berat, penguat struktur</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">FAQ Tentang Kadbod Gelombang</h2>
+      <div class="space-y-4">
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Apakah perbezaan antara single wall, double wall, dan triple wall?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Single wall mempunyai satu lapisan gelombang (3-4mm), cocok untuk item ringan. Double wall mempunyai dua lapisan gelombang (6-8mm), cocok untuk item medium. Triple wall mempunyai tiga lapisan gelombang (10-12mm), sangat kuat untuk item berat dan penguat struktur. Semakin banyak lapisan, semakin kuat dan tebal kadbod.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Bolehkah kadbod gelombang didaur semula?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Ya, kadbod gelombang 100% dapat didaur semula. Ini adalah salah satu sebab mengapa ia sangat popular — ia ramah alam dan boleh dikumpulkan untuk didaur semula menjadi kadbod baru atau produk kertas yang lain.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Berapa kos kepingan kadbod gelombang untuk pembungkusan?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Kos bervariasi dari RM 0.50 hingga RM 1.50 per keping bergantung pada saiz, tebal, dan jumlah pesan. Pembelian pukal 1,000 keping atau lebih boleh mendapat diskon sehingga 30%. Hubungi Quinocycle untuk penawaran khusus anda.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Adakah kadbod gelombang sebaik bubble wrap untuk perlindungan?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Untuk item yang sangat fragile seperti gelas atau piring, bubble wrap mungkin memberikan perlindungan lebih baik. Tetapi untuk kebanyakan produk e-commerce, kadbod gelombang memberikan perlindungan yang cukup dan ia lebih ramah alam serta lebih murah.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Di mana saya boleh beli kepingan kadbod gelombang dalam jumlah besar?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Quinocycle Sdn. Bhd. di Balakong menyediakan kepingan kadbod gelombang dalam pelbagai saiz dan tebal untuk pembungkusan perniagaan. Hubungi +60168916381 untuk harga pukal, sampel, dan konsultasi gratis tentang kegunaan yang paling sesuai untuk perniagaan anda.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Kesimpulan</h2>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Kepingan kadbod gelombang adalah bahan pembungkusan yang paling versatile dan ekonomi untuk perniagaan di Malaysia. Dengan 10 kegunaan yang berbeza ini, anda boleh mengurangkan keputusan kepada satu pilihan bahan — kadbod gelombang berkualiti tinggi dapat menangani hampir semua keperluan pembungkusan.
+      </p>
+      <p class="font-body text-base text-secondary leading-relaxed">
+        Mulai hari ini dengan mengintegrasikan kadbod gelombang ke dalam strategi pembungkusan anda. Anda akan melihat pengurangan kos pembungkusan sementara meningkatkan perlindungan produk dan kepuasan pelanggan. Hubungi Quinocycle untuk mendapatkan stok kadbod gelombang berkualiti dengan harga terbaik!
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-outline-variant/20">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Butuh Kepingan Kadbod Gelombang Berkualiti?</h2>
+      <p class="font-body text-base text-secondary mb-6">
+        Quinocycle menyediakan kepingan kadbod gelombang dalam berbagai saiz dan tebal untuk memenuhi keperluan pembungkusan perniagaan anda. Dapatkan harga pukal terbaik dan konsultasi gratis.
+      </p>
+      <a href={WA_LINK} class="inline-block bg-primary text-white font-label font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity">
+        Pesan Sekarang Via WhatsApp
+      </a>
+    </section>
+  </article>
+</Layout>

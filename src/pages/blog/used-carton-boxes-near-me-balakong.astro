@@ -1,0 +1,416 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Where to Buy Used Carton Boxes Near Me — Balakong, Cheras, Kajang & Klang Valley',
+  description: 'Find used carton boxes near you in Balakong, Cheras, Kajang, and Klang Valley. Buy secondhand boxes wholesale from Quinocycle — Grade A and B quality at 40-60% savings.',
+  date: '2026-04-11',
+  readTime: '8 min',
+  category: 'Used Carton Boxes',
+  author: 'Quinocycle Team',
+  slug: 'used-carton-boxes-near-me-balakong',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20need%20used%20carton%20boxes%20for%20my%20business%20in%20the%20Klang%20Valley%20area.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "en-MY",
+  "author": { "@type": "Organization", "name": "Quinocycle Sdn. Bhd.", "url": "https://www.quinocycle.com.my" },
+  "publisher": { "@type": "Organization", "name": "Quinocycle", "logo": { "@type": "ImageObject", "url": "https://www.quinocycle.com.my/logo.png" } },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.quinocycle.com.my/blog/${post.slug}` },
+  "keywords": "used carton boxes near me malaysia, buy secondhand boxes balakong, cheap used boxes cheras kajang, recycled carton boxes selangor, used boxes supplier klang valley, wholesale used boxes malaysia"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Why should I buy used carton boxes instead of new ones?", "acceptedAnswer": { "@type": "Answer", "text": "Used carton boxes cost 40-60% less than new boxes while maintaining adequate protection for most products. For e-commerce, moving, and logistics operations, Grade A used boxes from Quinocycle are indistinguishable from new boxes. This dramatically reduces packaging costs while supporting circular economy principles." } },
+    { "@type": "Question", "name": "What is the difference between Grade A and Grade B used boxes?", "acceptedAnswer": { "@type": "Answer", "text": "Grade A used boxes show minimal cosmetic wear and perform identically to new boxes. Grade B boxes have visible creases, light stains, or minor damage but remain structurally sound. Grade B is suitable for internal logistics, storage, and non-customer-facing applications. Grade A works perfectly for direct customer shipping." } },
+    { "@type": "Question", "name": "Does Quinocycle deliver to Balakong, Cheras, Kajang, and surrounding areas?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Quinocycle is located in Balakong, Selangor and serves the entire Klang Valley including Cheras, Kajang, Seri Kembangan, Klang, and beyond. We offer same-day collection for orders placed before 2 PM and deliver to all of Peninsular Malaysia within 2-3 business days." } },
+    { "@type": "Question", "name": "How are used boxes quality-checked at Quinocycle?", "acceptedAnswer": { "@type": "Answer", "text": "Every box undergoes visual inspection for structural integrity, seal strength, and cleanliness. Boxes with damage that compromises protection are rejected. We test random samples monthly for burst strength and stacking capacity. Our quality control ensures you receive boxes that perform reliably." } },
+    { "@type": "Question", "name": "What is the minimum order quantity for used boxes at Quinocycle?", "acceptedAnswer": { "@type": "Answer", "text": "Our minimum order is RM 1,000 (typically 500-1,500 boxes depending on size). This keeps wholesale pricing accessible to small and medium businesses. For special requests or urgent needs, contact us directly—we sometimes have smaller quantities available." } }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Local wholesale supplier of used and new carton boxes in Balakong, Selangor. Serving Cheras, Kajang, and Klang Valley with same-day collection and next-day delivery.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": { "@type": "PostalAddress", "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya", "addressLocality": "Balakong", "addressRegion": "Selangor", "postalCode": "43300", "addressCountry": "MY" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "priceRange": "RM 0.50 – RM 3.50 per box",
+  "areaServed": "Balakong, Cheras, Kajang, Seri Kembangan, Klang Valley, Peninsular Malaysia"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <div class="mb-8">
+      <span class="inline-block bg-primary/5 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-label font-bold uppercase tracking-widest mb-4">
+        {post.category}
+      </span>
+      <p class="text-secondary font-body text-sm mb-4">{post.date}</p>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">
+        {post.title}
+      </h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">
+        Finding affordable, quality carton boxes locally saves time and money. Quinocycle, based in Balakong, supplies Grade A and Grade B used boxes to businesses across the Klang Valley with same-day collection and competitive wholesale pricing.
+      </p>
+    </div>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Why Local Sourcing of Carton Boxes Matters
+      </h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Buying carton boxes from local suppliers in the Klang Valley—rather than ordering from distant importers—offers tangible advantages that most businesses overlook until they implement the change.
+      </p>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Local sourcing reduces lead times dramatically. Instead of waiting 5-7 business days for shipment and logistics, you can collect boxes same-day or receive them next-day. This means no emergency rush orders, no expensive express shipping fees, and no production delays waiting for packaging materials.
+      </p>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        You also build relationships with your local supplier. When you have urgent requests, quality concerns, or need customized box sizes, a local supplier like Quinocycle responds within hours, not days. For businesses in Balakong, Cheras, Kajang, and Seri Kembangan, this proximity advantage is substantial.
+      </p>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Finally, local sourcing supports the Malaysian circular economy. Used boxes from Quinocycle are sourced locally, inspected carefully, and kept in productive use longer, reducing waste and environmental impact compared to shipping from overseas.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Quinocycle: Your Local Supplier in Balakong, Selangor
+      </h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Quinocycle Sdn. Bhd. has operated from Balakong since 2010, specializing in wholesale carton boxes for local businesses. We supply both new and used boxes at competitive prices, with a focus on quality and service that bigger, more distant competitors cannot match.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Our Used Box Service Advantage
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-3">
+        Unlike generic second-hand markets, Quinocycle:
+      </p>
+      <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+        <li>Inspects every box individually for structural integrity and cleanliness</li>
+        <li>Sorts boxes into Grade A (minimal cosmetic wear) and Grade B (visible damage but functional) categories</li>
+        <li>Tests random samples monthly to ensure burst strength meets safety standards</li>
+        <li>Stocks common sizes in inventory for immediate pickup or next-day delivery</li>
+        <li>Offers volume discounts that scale with order size</li>
+        <li>Provides quotes within 2 hours of inquiry</li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Geographic Service Areas: Where We Deliver
+      </h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Quinocycle's primary service area covers the Klang Valley and surrounding regions, where our local logistics and same-day pickup option add the most value. However, we serve all of Peninsular Malaysia.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Same-Day Collection (Local Priority Areas)
+      </h3>
+      <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-1 list-disc list-inside">
+        <li>Balakong (where we're located)</li>
+        <li>Cheras and Kuala Lumpur suburbs</li>
+        <li>Kajang and Semenyih</li>
+        <li>Seri Kembangan</li>
+        <li>Klang and Selangor Darul Ehsan</li>
+      </ul>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Orders placed before 2 PM are ready for collection same-day. This is perfect for urgent needs or businesses that prefer to manage their own logistics.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Next-Day and Standard Delivery
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed">
+        All areas of Peninsular Malaysia including Johor, Perak, Penang, Kedah, Kelantan, Terengganu, Pahang, and more. Standard delivery takes 2-3 business days. Free delivery for orders above RM 5,000.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Grade A vs Grade B Used Boxes: Understanding the Difference
+      </h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Not all used boxes are the same. Quinocycle categorizes boxes into two grades to ensure you get the right box for your application and budget.
+      </p>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-xl font-bold text-on-surface mt-0 mb-4">
+          Grade A vs Grade B Comparison
+        </h3>
+        <div class="overflow-x-auto">
+          <table class="w-full font-body text-sm">
+            <thead>
+              <tr class="border-b border-outline-variant/20">
+                <th class="text-left py-3 px-2 font-bold">Characteristic</th>
+                <th class="text-left py-3 px-2 font-bold">Grade A</th>
+                <th class="text-left py-3 px-2 font-bold">Grade B</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-outline-variant/20">
+                <td class="py-3 px-2 font-bold">Cosmetic Condition</td>
+                <td class="py-3 px-2">Minimal wear, indistinguishable from new</td>
+                <td class="py-3 px-2">Visible creases, light stains, minor dents</td>
+              </tr>
+              <tr class="border-b border-outline-variant/20">
+                <td class="py-3 px-2 font-bold">Structural Integrity</td>
+                <td class="py-3 px-2">100% intact, no damage</td>
+                <td class="py-3 px-2">100% intact, no impact on function</td>
+              </tr>
+              <tr class="border-b border-outline-variant/20">
+                <td class="py-3 px-2 font-bold">Cleanliness</td>
+                <td class="py-3 px-2">Clean, ready for customer shipment</td>
+                <td class="py-3 px-2">Clean, suitable for internal use</td>
+              </tr>
+              <tr class="border-b border-outline-variant/20">
+                <td class="py-3 px-2 font-bold">Best Use Case</td>
+                <td class="py-3 px-2">Direct customer shipping, retail, premium brands</td>
+                <td class="py-3 px-2">Warehouse storage, internal logistics, B2B</td>
+              </tr>
+              <tr class="border-b border-outline-variant/20">
+                <td class="py-3 px-2 font-bold">Price per Box</td>
+                <td class="py-3 px-2">RM 0.80 - 2.50 (40-50% savings)</td>
+                <td class="py-3 px-2">RM 0.50 - 1.80 (50-70% savings)</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-2 font-bold">Typical Quantity</td>
+                <td class="py-3 px-2">Limited availability, pre-order recommended</td>
+                <td class="py-3 px-2">Consistent supply, pickup within 24 hours</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        When to Use Grade A
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-3">
+        Grade A boxes are ideal for direct customer shipping on Shopee, Lazada, or your own e-commerce site. Customers won't notice they're used, but you save 40-50% compared to new boxes. Perfect for brands concerned with unboxing experience but wanting cost savings.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        When to Use Grade B
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed">
+        Grade B boxes are perfect for warehousing, internal logistics, storing products, layering on pallets, and other non-customer-facing applications. You'll save 50-70% compared to new boxes with zero functional compromise.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Quality Checks: How Quinocycle Ensures Box Reliability
+      </h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Many businesses hesitate to buy used boxes due to quality concerns. Quinocycle's rigorous quality control process ensures that our used boxes perform as well as new ones.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Our Quality Assurance Process
+      </h3>
+      <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-3 list-disc list-inside">
+        <li><strong>Visual inspection:</strong> Every box is examined for internal contamination, external damage, seal integrity, and structural soundness.</li>
+        <li><strong>Burst strength testing:</strong> Random samples from each batch are subjected to compression testing to ensure they meet safety standards for stacking and handling.</li>
+        <li><strong>Stacking capacity verification:</strong> We test how much weight can be safely stacked on boxes without crushing them.</li>
+        <li><strong>Moisture assessment:</strong> Boxes are checked for moisture absorption or mold, which would indicate storage problems.</li>
+        <li><strong>Cleanliness verification:</strong> All boxes are wiped clean of dust and debris before categorization.</li>
+        <li><strong>Size verification:</strong> Dimensions are confirmed to match specifications.</li>
+        <li><strong>Monthly audits:</strong> We conduct independent audits of our grading standards to catch any drift.</li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Same-Day Collection: How It Works
+      </h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        One of Quinocycle's strongest advantages is our same-day collection option for businesses in the Klang Valley. Here's how it works:
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        The Same-Day Process
+      </h3>
+      <ol class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-3 list-decimal list-inside">
+        <li><strong>Place order:</strong> Contact us via WhatsApp, email, or phone before 2 PM with your box size, quantity, and grade preference.</li>
+        <li><strong>Instant quote:</strong> We confirm availability and pricing within 30 minutes.</li>
+        <li><strong>Confirm order:</strong> You approve the quote and we prepare boxes for collection.</li>
+        <li><strong>Collection:</strong> Pick up boxes same-day from our Balakong warehouse (9 AM - 6 PM weekdays, 9 AM - 1 PM Saturdays).</li>
+        <li><strong>Payment:</strong> We offer flexible terms—cash on collection, bank transfer, or invoicing for regular customers.</li>
+      </ol>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Alternative: Next-Day Delivery
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed">
+        If you prefer not to collect, we deliver to your location within Selangor next-day, or 2-3 business days for other Malaysian states. Delivery is included in orders above RM 5,000.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Cost Savings With Used Boxes From Quinocycle
+      </h2>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-xl font-bold text-on-surface mt-0 mb-4">
+          Real-World Savings Example
+        </h3>
+        <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+          A Kajang-based e-commerce seller shipping 500 Medium boxes monthly:
+        </p>
+        <ul class="font-body text-lg text-secondary leading-relaxed mb-0 space-y-2 list-none">
+          <li><strong>New boxes (Grade 2-ply):</strong> RM 2.00 × 500 = RM 1,000/month</li>
+          <li><strong>Grade A used boxes:</strong> RM 0.90 × 500 = RM 450/month</li>
+          <li><strong>Monthly savings:</strong> RM 550</li>
+          <li className="border-t border-outline-variant/20 pt-2 mt-2"><strong>Annual savings:</strong> RM 6,600</li>
+        </ul>
+        <hr class="border-outline-variant/20 my-4" />
+        <p class="font-body text-lg text-secondary leading-relaxed mb-0">
+          Add same-day pickup (avoiding RM 50+ delivery fees per order) and the annual savings exceed RM 8,000 for this single business.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        How to Order From Quinocycle
+      </h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Getting started with Quinocycle is straightforward. We make the ordering process simple and transparent.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Quick Start Checklist
+      </h3>
+      <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+        <li>Decide on box size (Small/Medium/Large/XL) and grade (A or B)</li>
+        <li>Estimate monthly volume needed</li>
+        <li>Contact us via WhatsApp, email, or phone</li>
+        <li>Receive quote with delivery/collection options within 2 hours</li>
+        <li>Approve quote and make payment</li>
+        <li>Collect same-day or receive delivery within specified timeframe</li>
+      </ul>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Minimum Order and Pricing
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-3">
+        Our minimum order is RM 1,000, which typically translates to 500-1,500 boxes depending on size and grade. This keeps pricing accessible to small and medium businesses while covering our operational costs.
+      </p>
+      <p class="font-body text-lg text-secondary leading-relaxed">
+        Volume discounts apply for orders above RM 5,000, and long-term contracts with guaranteed monthly purchases receive additional price reductions.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6">
+        <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+          <strong>Ready to reduce packaging costs by 40-70% while supporting sustainable practices?</strong> Quinocycle offers Grade A and Grade B used carton boxes with same-day local pickup in Balakong, Cheras, and Kajang.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 mt-6">
+          <a href={WA_LINK} target="_blank" class="inline-flex items-center justify-center bg-primary text-on-primary font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-primary/90 transition-colors">
+            Chat on WhatsApp
+          </a>
+          <a href="mailto:quinocycle@gmail.com" class="inline-flex items-center justify-center bg-surface-variant text-on-surface border border-outline-variant/20 font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-surface-variant/80 transition-colors">
+            Email Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-4 mt-6">
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer group">
+          <summary class="font-headline font-bold text-on-surface text-lg flex justify-between items-center">
+            Why should I buy used carton boxes instead of new ones?
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="font-body text-lg text-secondary leading-relaxed mt-4">
+            Used carton boxes cost 40-60% less than new boxes while maintaining adequate protection for most products. For e-commerce, moving, and logistics operations, Grade A used boxes from Quinocycle are indistinguishable from new boxes. This dramatically reduces packaging costs while supporting circular economy principles.
+          </p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer group">
+          <summary class="font-headline font-bold text-on-surface text-lg flex justify-between items-center">
+            What is the difference between Grade A and Grade B used boxes?
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="font-body text-lg text-secondary leading-relaxed mt-4">
+            Grade A used boxes show minimal cosmetic wear and perform identically to new boxes. Grade B boxes have visible creases, light stains, or minor damage but remain structurally sound. Grade B is suitable for internal logistics, storage, and non-customer-facing applications. Grade A works perfectly for direct customer shipping.
+          </p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer group">
+          <summary class="font-headline font-bold text-on-surface text-lg flex justify-between items-center">
+            Does Quinocycle deliver to Balakong, Cheras, Kajang, and surrounding areas?
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="font-body text-lg text-secondary leading-relaxed mt-4">
+            Yes, Quinocycle is located in Balakong, Selangor and serves the entire Klang Valley including Cheras, Kajang, Seri Kembangan, Klang, and beyond. We offer same-day collection for orders placed before 2 PM and deliver to all of Peninsular Malaysia within 2-3 business days.
+          </p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer group">
+          <summary class="font-headline font-bold text-on-surface text-lg flex justify-between items-center">
+            How are used boxes quality-checked at Quinocycle?
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="font-body text-lg text-secondary leading-relaxed mt-4">
+            Every box undergoes visual inspection for structural integrity, seal strength, and cleanliness. Boxes with damage that compromises protection are rejected. We test random samples monthly for burst strength and stacking capacity. Our quality control ensures you receive boxes that perform reliably.
+          </p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer group">
+          <summary class="font-headline font-bold text-on-surface text-lg flex justify-between items-center">
+            What is the minimum order quantity for used boxes at Quinocycle?
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="font-body text-lg text-secondary leading-relaxed mt-4">
+            Our minimum order is RM 1,000 (typically 500-1,500 boxes depending on size). This keeps wholesale pricing accessible to small and medium businesses. For special requests or urgent needs, contact us directly—we sometimes have smaller quantities available.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Conclusion: Local Sourcing Wins
+      </h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        For businesses in Balakong, Cheras, Kajang, and the wider Klang Valley, buying used carton boxes from Quinocycle combines three powerful advantages: immediate availability through same-day collection, substantial cost savings of 40-70%, and the reliability of a trusted local supplier who's served Malaysian businesses since 2010.
+      </p>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Whether you need Grade A boxes for direct customer shipping or Grade B boxes for internal logistics, Quinocycle has the inventory, quality control, and local presence to support your growth without blowing your packaging budget.
+      </p>
+      <p class="font-body text-lg text-secondary leading-relaxed">
+        Stop overpaying for packaging materials shipped from distant suppliers. Contact Quinocycle today—we're ready to discuss how used carton boxes can transform your operational costs.
+      </p>
+    </section>
+  </article>
+</Layout>

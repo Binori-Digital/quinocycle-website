@@ -1,0 +1,317 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Di Mana Beli Kotak Terpakai Berhampiran Saya — Balakong, Cheras, Kajang & Lembah Klang',
+  description: 'Cari kotak terpakai berkualiti di kawasan Balakong, Cheras, Kajang, Seri Kembangan dan Lembah Klang? Panduan lengkap membeli kotak kardus kitar semula dengan harga murah dan kualiti terjamin.',
+  date: '2026-04-11',
+  readTime: '7 min',
+  category: 'Kotak Kardus Terpakai',
+  author: 'Pasukan Quinocycle',
+  slug: 'kotak-terpakai-berdekatan-balakong',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20ingin%20membeli%20kotak%20terpakai%20berkualiti%20di%20Balakong.%20Boleh%20tahu%20harga%20dan%20stok%20yang%20ada?';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "image": "https://www.quinocycle.com.my/blog-featured.jpg",
+  "datePublished": "2026-04-11",
+  "author": {
+    "@type": "Organization",
+    "name": "Pasukan Quinocycle"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd."
+  },
+  "keywords": "kotak terpakai balakong, beli kotak terpakai cheras, kotak kardus kitar semula selangor, pembekal kotak terpakai kajang, harga kotak murah lembah klang",
+  "articleBody": post.description
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Bagaimana saya tahu kotak terpakai berkualiti baik?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kotak berkualiti baik harus mempunyai sudut yang tepat, tidak lembab, tidak berjamur, dan lapisan kadbod yang masih kukuh. Hindari kotak yang remuk, berlembik, atau berbau tidak sedap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Adakah kotak terpakai sesuai untuk e-commerce?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, asalkan berkualiti baik. Banyak peniaga online Malaysia menggunakan kotak terpakai untuk menjimatkan kos. Pastikan padding dalam kotak cukup untuk melindungi produk semasa penghantaran."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa peratus penjimatan dengan kotak terpakai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kotak terpakai boleh jimatkan 40-50% daripada harga kotak baru. Untuk contoh, kotak baru RM 4.00 mungkin hanya RM 2.00-2.50 kalau terpakai berkualiti baik."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah kelemahan utama kotak terpakai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stok boleh terhad dan tidak konsisten. Saiz dan keadaan mungkin berbeza antara batch. Ia juga tidak sesuai untuk produk premium atau brand yang ingin kesan unboxing sempurna."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bolehkah saya pesan kotak terpakai secara online dari Quinocycle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, anda boleh hubungi Quinocycle di +60168916381 melalui WhatsApp untuk pesan kotak terpakai. Kami menawarkan konsultasi gratis dan pemantauan stok untuk memastikan anda dapat kotak berkualiti."
+      }
+    }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Pembekal kotak kardus terpakai berkualiti tinggi di Balakong, Selangor. Menyediakan kotak kitar semula untuk e-commerce, gudang, dan perniagaan kecil dengan harga paling kompetitif.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "email": "quinocycle@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "14:00"
+    }
+  ],
+  "priceRange": "RM 1.50 – RM 3.50 setiap kotak (terpakai)",
+  "areaServed": "Balakong, Cheras, Kajang, Seri Kembangan, Lembah Klang"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Mengapa Kotak Terpakai adalah Pilihan Bijak?</h2>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Bagi peniaga e-commerce dan perniagaan kecil di Malaysia, membeli kotak kardus baru untuk setiap pengiriman boleh memakan 15-25% daripada margin keuntungan anda. Kotak terpakai yang berkualiti baik menawarkan solusi yang sama sekali munasabah — ia melindungi produk dengan baik, tetapi dengan harga yang jauh lebih murah.
+      </p>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Selain penjimatan kos, menggunakan kotak terpakai juga adalah langkah yang ramah alam. Daripada membiarkan kotak itu di tempat sampah, anda memberikan kehidupan kedua kepada kotak tersebut. Semakin banyak pelanggan Malaysian yang menghargai keputusan perniagaan yang berkelanjutan ini.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Kawasan Penjualan Kotak Terpakai di Selangor</h2>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">Balakong — Hub Pembungkusan Malaysia</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Balakong adalah pusat pembungkusan terbesar di Malaysia dengan lebih daripada 50 pembekal. Ia adalah lokasi terbaik untuk mendapatkan harga paling kompetitif. Banyak pembekal di sini mempunyai stok besar dan boleh menyampaikan ke seluruh Selangor.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">Cheras & Lembah Klang</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Kawasan ini adalah pusat logistik dengan kemudahan akses ke lebih banyak pembekal dan kos penghantaran yang lebih rendah. Jarak ke Balakong hanya 15-20 minit, menjadikan ia lokasi yang strategis.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">Kajang & Seri Kembangan</h3>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Bagi yang berada di kawasan timur Selangor, Kajang dan Seri Kembangan mempunyai beberapa pembekal lokal yang menawarkan harga kompetitif dan layanan pantas. Hubungi pembekal lokal untuk melihat stok sedia ada.
+      </p>
+    </section>
+
+    <section class="mb-8 bg-surface-variant/50 border border-outline-variant/20 p-6 rounded-lg">
+      <h2 class="font-headline text-xl font-bold text-on-surface mb-4">Kriteria Memilih Kotak Terpakai Berkualiti</h2>
+      <ul class="font-body text-base text-secondary space-y-3">
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold mt-1">✓</span>
+          <span><strong>Tiada kerosakan struktur</strong> — Sudut kotak mesti tegak, tiada lekuk atau remuk yang ketara</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold mt-1">✓</span>
+          <span><strong>Kadbod yang kukuh</strong> — Tekan dengan jari, ia sepatutnya kembali ke bentuk asal. Jika kekal lembik, lapisan dalam mungkin rosak</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold mt-1">✓</span>
+          <span><strong>Tiada tanda kelembapan</strong> — Hindari kotak yang berbau lembab atau mempunyai bintik hitam (kulat)</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold mt-1">✓</span>
+          <span><strong>Perekat masih kuat</strong> — Periksa bahagian lipatan dan jahitan. Ia mesti terasa tegak, bukan longgar</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold mt-1">✓</span>
+          <span><strong>Saiz dan dimensi tepat</strong> — Ukur kotak untuk memastikan dimensi sesuai dengan keperluan anda</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Perbandingan Harga Kotak Baru vs Terpakai</h2>
+
+      <div class="overflow-x-auto">
+        <table class="w-full font-body text-sm mt-4">
+          <thead>
+            <tr class="border-b border-outline-variant/20">
+              <th class="text-left py-2 px-2">Saiz Kotak</th>
+              <th class="text-left py-2 px-2">Harga Baru</th>
+              <th class="text-left py-2 px-2">Harga Terpakai</th>
+              <th class="text-left py-2 px-2">Penjimatan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-2">20×15×10 cm</td>
+              <td class="py-2 px-2">RM 2.80</td>
+              <td class="py-2 px-2">RM 1.50</td>
+              <td class="py-2 px-2">46%</td>
+            </tr>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-2">30×20×15 cm</td>
+              <td class="py-2 px-2">RM 4.20</td>
+              <td class="py-2 px-2">RM 2.20</td>
+              <td class="py-2 px-2">48%</td>
+            </tr>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 px-2">40×30×20 cm</td>
+              <td class="py-2 px-2">RM 6.00</td>
+              <td class="py-2 px-2">RM 3.00</td>
+              <td class="py-2 px-2">50%</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-2">Purata</td>
+              <td class="py-2 px-2">RM 4.33</td>
+              <td class="py-2 px-2">RM 2.23</td>
+              <td class="py-2 px-2">48%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="font-body text-sm text-secondary mt-4">*Harga berdasarkan pesan pukal 500 kotak. Harga mungkin berbeza bergantung pada pembekal dan saiz pesanan.</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Langkah-Langkah Membeli Kotak Terpakai Secara Terang</h2>
+
+      <div class="space-y-4">
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">1. Tentukan Keperluan Anda</h3>
+          <p class="font-body text-sm text-secondary">Berapa banyak kotak anda perlukan setiap bulan? Saiz apa yang paling biasa anda gunakan? Jawaban ini akan membantu pembekal memberikan cadangan yang tepat.</p>
+        </div>
+
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">2. Hubungi Pembekal Lokal</h3>
+          <p class="font-body text-sm text-secondary">Hubungi Quinocycle atau pembekal lain di Balakong. Beritahu mereka saiz, kuantiti, dan spesifikasi apa yang anda perlukan. Minta untuk lihat sampel dahulu sebelum membeli dalam jumlah besar.</p>
+        </div>
+
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">3. Periksa Kualiti dengan Teliti</h3>
+          <p class="font-body text-sm text-secondary">Jangan hanya menerima kotak tanpa pemeriksaan. Ambil 10-20% sampel daripada batch untuk diperiksa. Pastikan ia memenuhi kriteria kualiti yang telah ditetapkan sebelumnya.</p>
+        </div>
+
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">4. Negosiasikan Harga Pukal</h3>
+          <p class="font-body text-sm text-secondary">Jika anda membeli lebih daripada 500 kotak sebulan, anda layak mendapat diskon pukal. Jangan takut untuk berunding — kebanyakan pembekal terbuka untuk memberikan harga yang lebih baik untuk pelanggan tetap.</p>
+        </div>
+
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">5. Amanat Pengiriman dan Pembayaran</h3>
+          <p class="font-body text-sm text-secondary">Pastikan syarat pembayaran jelas — adakah anda perlu membayar penuh didepan atau separuh sebagai deposit? Apakah mereka menyampaikan ke lokasi anda atau anda perlu mengambil? Bahas perkara ini sebelum berkomitmen.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Soalan Lazim Mengenai Kotak Terpakai</h2>
+      <div class="space-y-4">
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Bolehkah kotak terpakai digunakan untuk produk premium?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Bergantung pada pelanggan anda. Untuk e-commerce luxury atau brand premium, kotak baru mungkin lebih baik untuk memberi kesan unboxing yang sempurna. Untuk produk harian atau penjualan pukal, kotak terpakai berkualiti baik adalah pilihan yang munasabah.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Adakah kurir menerima kotak terpakai untuk penghantaran?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Ya, kurir seperti JnT, DHL, dan Lazada Logistics menerima kotak terpakai tanpa masalah. Mereka hanya memberi perhatian kepada berat dan dimensi, bukan keadaan luaran kotak. Asalkan kotak itu kukuh dan dapat melindungi isi, ia boleh digunakan.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Bagaimana saya simpan kotak terpakai agar tetap berkualiti?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Simpan kotak di tempat yang kering dan sejuk, jauh dari cahaya matahari langsung. Jangan timpang dengan barang berat di atas kotak, kerana lapisan kadbod boleh menjadi tertekan dan rosak. Gunakan rak atau palet untuk penyimpanan.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Adakah kotak terpakai mempunyai bau atau kebersihan yang bermasalah?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Kotak berkualiti baik dari pembekal terpercaya tidak sepatutnya mempunyai masalah bau. Jika kotak berbau tidak sedap atau terdapat tanda kebersihan yang meragukan, jangan beli dari pembekal itu. Percayakan kepada pembekal yang mempunyai proses pembersihan yang ketat.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Bolehkah saya order kotak terpakai online dari Quinocycle?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Ya, hubungi kami di +60168916381 melalui WhatsApp untuk melihat stok terkini kotak terpakai. Kami boleh menghantar ke seluruh Selangor dan menawarkan harga kompetitif dengan kualiti terjamin. Mintalah sampel dahulu sebelum pesan besar-besaran.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Kesimpulan</h2>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Membeli kotak terpakai adalah keputusan yang bijak untuk peniaga yang ingin menjimatkan kos operasi tanpa mengorbankan kualiti. Dengan memilih pembekal yang tepat dan memeriksa kualiti dengan teliti, anda boleh mengurangkan kos pembungkusan sehingga 50% sambil tetap memberikan pengalaman penghantaran yang memuaskan kepada pelanggan.
+      </p>
+      <p class="font-body text-base text-secondary leading-relaxed">
+        Quinocycle di Balakong adalah pilihan terbaik untuk kotak terpakai berkualiti di kawasan Selangor. Kami mempunyai stok yang besar, harga yang kompetitif, dan layanan pelanggan yang terpercaya. Hubungi kami hari ini untuk mendapatkan penawaran khusus untuk pesanan anda!
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-outline-variant/20">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Perlu Kotak Terpakai Berkualiti?</h2>
+      <p class="font-body text-base text-secondary mb-6">
+        Hubungi Quinocycle hari ini untuk mendapatkan harga terbaik dan konsultasi gratis tentang kotak terpakai yang sesuai dengan perniagaan anda.
+      </p>
+      <a href={WA_LINK} class="inline-block bg-primary text-white font-label font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity">
+        Hubungi Kami Via WhatsApp
+      </a>
+    </section>
+  </article>
+</Layout>

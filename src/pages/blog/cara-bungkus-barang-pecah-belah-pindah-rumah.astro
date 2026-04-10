@@ -1,0 +1,313 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Cara Bungkus Barang Pecah Belah Semasa Pindah Rumah Malaysia — Panduan Bilik demi Bilik',
+  description: 'Panduan lengkap membungkus barang pecah belah semasa pindah rumah. Cegah kerosakan dengan teknik pembungkusan yang tepat untuk pinggan, gelas, piring, dan barang fragile lainnya di Malaysia.',
+  date: '2026-04-11',
+  readTime: '9 min',
+  category: 'Tips Pindah Rumah',
+  author: 'Pasukan Quinocycle',
+  slug: 'cara-bungkus-barang-pecah-belah-pindah-rumah',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20ingin%20tahu%20cara%20bungkus%20barang%20pecah%20belah%20untuk%20pindah%20rumah.%20Boleh%20berikan%20panduan%20lengkap%20dan%20cadangan%20bahan?';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "image": "https://www.quinocycle.com.my/blog-featured.jpg",
+  "datePublished": "2026-04-11",
+  "author": {
+    "@type": "Organization",
+    "name": "Pasukan Quinocycle"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd."
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apakah bahan paling penting untuk bungkus barang pecah belah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bubble wrap dan kertas, kemudian kotak yang kuat. Bubble wrap memberikan perlindungan hentakan yang penting untuk item fragile, sementara kertas melindungi dari goresan. Kotak yang kuat memastikan perlindungan struktural."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa banyak lapisan bubble wrap yang diperlukan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Untuk gelas dan piring, gunakan minimum 2 lapisan bubble wrap. Untuk item sangat fragile, gunakan 3 lapisan. Pastikan setiap lapisan melekat dengan tape untuk mengelak terlepas semasa pergerakan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bolehkah saya guna kertas akhbar untuk bungkus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kertas akhbar boleh digunakan sebagai lapisan pertama untuk melindungi dari goresan, tetapi bukan pengganti bubble wrap untuk perlindungan hentakan. Gunakan kombinasi: kertas akhbar (lapisan pertama) + bubble wrap (lapisan utama)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah saiz kotak yang sesuai untuk barang pecah belah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gunakan kotak berukuran sederhana (30×20×15 cm) untuk pinggan dan gelas. Jangan gunakan kotak terlalu besar yang memerlukan padding berlebihan. Kotak yang tepat saiz lebih efisien dan lebih aman."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana saya menyusun piring dalam kotak supaya tidak pecah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Susun piring secara vertikal (berdiri) dengan setiap piring dibungkus secara individu dengan bubble wrap 2-3 lapisan. Letak padding di antara setiap piring. Jangan susun piring secara mendatar kerana risiko pecah lebih besar."
+      }
+    }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Menyediakan bubble wrap berkualiti, kotak kardus, dan bahan pembungkusan untuk pindah rumah di Malaysia. Membantu melindungi barang berharga anda dengan perlindungan terbaik.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "email": "quinocycle@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "areaServed": "Semenanjung Malaysia"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Mengapa Pembungkusan Barang Pecah Belah Sangat Penting?</h2>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Barang pecah belah seperti pinggan, gelas, dan piring adalah item paling berisiko semasa pindah rumah. Kerosakan ini bukan hanya tentang kehilangan nilai material — item ini sering mempunyai nilai sentimen atau merupakan set yang tidak dapat diganti. Pembungkusan yang betul boleh mencegah 95% kerosakan.
+      </p>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Panduan ini memberikan teknik pembungkusan langkah demi langkah untuk setiap jenis barang pecah belah, dari piring dan gelas hingga dekorasi dan peralatan dapur yang sensitif. Dengan mengikuti panduan ini, anda dapat memastikan barang berharga anda sampai dengan selamat ke rumah baru anda.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Bahan yang Diperlukan untuk Membungkus Barang Pecah Belah</h2>
+
+      <div class="space-y-4">
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">1. Bubble Wrap Berkualiti Baik</h3>
+          <p class="font-body text-sm text-secondary">Gunakan bubble wrap dengan gelembung sederhana (10-12mm). Ini adalah perlindungan utama untuk hentakan. Pastikan anda mempunyai stok yang cukup — untuk rumah rata-rata dengan set pinggan 12 piece, anda memerlukan minimal 20 meter bubble wrap.</p>
+        </div>
+
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">2. Kertas (Akhbar atau Kraft Paper)</h3>
+          <p class="font-body text-sm text-secondary">Kertas melindungi dari goresan dan membantu bubble wrap tetap pada tempatnya. Kertas akhbar lama boleh digunakan, atau belilah kraft paper yang lebih bagus. Anda memerlukan banyak — jangan hemat pada bahan ini.</p>
+        </div>
+
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">3. Kotak Kardus yang Kuat</h3>
+          <p class="font-body text-sm text-secondary">Gunakan kotak berkualiti baik dengan lapisan gelombang (double wall lebih baik). Kotak harus dapat menahan berat (untuk piring, berat boleh menjadi signifikan) dan tidak remuk. Hindari kotak terpakai yang lemah.</p>
+        </div>
+
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">4. Perekat Berkualiti (Box Tape)</h3>
+          <p class="font-body text-sm text-secondary">Gunakan perekat lebar (50mm) berkualiti baik. Perekat yang lemah akan terlepas semasa pengangkutan, mengakibatkan kotak terbuka dan produk jatuh. Pastikan perekat cukup kuat untuk menahan beban.</p>
+        </div>
+
+        <div class="border-l-4 border-primary/20 pl-4">
+          <h3 class="font-headline font-bold text-on-surface mb-2">5. Foam atau Kadbod Gelombang untuk Pemisah</h3>
+          <p class="font-body text-sm text-secondary">Untuk menjaga piring tetap tegak dan terpisah, gunakan foam atau kadbod gelombang sebagai pemisah. Ini adalah item yang sangat penting untuk mencegah piring saling gesekan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8 bg-surface-variant/50 border border-outline-variant/20 p-6 rounded-lg">
+      <h2 class="font-headline text-xl font-bold text-on-surface mb-4">Jumlah Bahan yang Diperlukan (Untuk Rumah 3 Bilik)</h2>
+      <div class="space-y-2 font-body text-sm">
+        <div class="flex justify-between">
+          <span>Bubble Wrap</span>
+          <span class="font-bold">50-75 meter</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Kertas</span>
+          <span class="font-bold">50-75 kg</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Kotak Kardus (Pelbagai Saiz)</span>
+          <span class="font-bold">30-50 kotak</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Box Tape</span>
+          <span class="font-bold">4-6 roll</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Kadbod Pemisah</span>
+          <span class="font-bold">20-30 lembar</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Panduan Membungkus Barang Pecah Belah Bilik demi Bilik</h2>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">Dapur: Piring, Gelas, dan Mangkuk</h3>
+      <ol class="font-body text-base text-secondary space-y-3 list-decimal list-inside">
+        <li>Bungkus setiap piring secara individu dengan kertas (2 lapisan), kemudian bubble wrap (2-3 lapisan). Segel dengan tape yang kecil.</li>
+        <li>Layarkan kotak dengan kertas sebanyak 5 cm tebal di bawah.</li>
+        <li>Susun piring secara vertikal (berdiri, bukan mengambang) dengan kadbod pemisah di antara setiap 2-3 piring.</li>
+        <li>Isi ruang kosong dengan kertas bergulung atau crinkle paper.</li>
+        <li>Tambah padding kertas atau foam 5 cm di atas sebelum menutup kotak.</li>
+        <li>Segel kotak dengan perekat berkualiti — gunakan tape di semua sisi.</li>
+      </ol>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">Ruang Tamu: Dekorasi dan Item Fragile</h3>
+      <ol class="font-body text-base text-secondary space-y-3 list-decimal list-inside">
+        <li>Untuk boneka kristal atau dekorasi berharga, bungkus setiap item dengan bubble wrap 2-3 lapisan.</li>
+        <li>Letak di kotak kecil dengan padding keras (foam atau kadbod honeycomb) di sekeliling.</li>
+        <li>Jangan campurkan item bernilai tinggi dalam satu kotak — gunakan kotak terpisah untuk setiap item penting.</li>
+        <li>Label kotak dengan "FRAGILE" (rapuh) agar pengangkut tahu untuk berhati-hati.</li>
+      </ol>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3 mt-6">Bilik Tidur: Lampu, Cermin, dan Perabotan Kecil</h3>
+      <ol class="font-body text-base text-secondary space-y-3 list-decimal list-inside">
+        <li>Untuk lampu, bungkus dengan bubble wrap dan letak dalam kotak dengan padding di sekeliling.</li>
+        <li>Untuk cermin atau bingkai kaca, gunakan kadbod dua lapis sebagai pelindung utama, kemudian bubble wrap.</li>
+        <li>Pastikan kawat dan bagian yang menonjol dikurungkan dengan tape sehingga tidak merobek bubble wrap.</li>
+      </ol>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">10 Tips Penting untuk Pindah Barang Pecah Belah</h2>
+
+      <div class="space-y-3">
+        <div class="flex items-start gap-3 font-body text-base">
+          <span class="text-primary font-bold mt-1">1.</span>
+          <span><strong>Jangan Hemat pada Padding</strong> — Padding yang berlebihan lebih baik daripada padding yang kurang. Item paling berharga tidak boleh dirugikan demi menjimat bahan.</span>
+        </div>
+        <div class="flex items-start gap-3 font-body text-base">
+          <span class="text-primary font-bold mt-1">2.</span>
+          <span><strong>Labeli Kotak dengan Jelas</strong> — Tuliskan isi kotak dan tandai "RAPUH" supaya pengangkut tahu untuk berhati-hati.</span>
+        </div>
+        <div class="flex items-start gap-3 font-body text-base">
+          <span class="text-primary font-bold mt-1">3.</span>
+          <span><strong>Gunakan Kotak Ukuran Sedia Ada</strong> — Jangan buat kotak sendiri dari kardus besar. Kotak yang terlalu besar membuat padding sukar dan meningkatkan risiko gerak.</span>
+        </div>
+        <div class="flex items-start gap-3 font-body text-base">
+          <span class="text-primary font-bold mt-1">4.</span>
+          <span><strong>Susun Piring Vertikal</strong> — Piring yang susun vertikal lebih tahan daripada yang disusun mendatar seperti tumpukan cakram.</span>
+        </div>
+        <div class="flex items-start gap-3 font-body text-base">
+          <span class="text-primary font-bold mt-1">5.</span>
+          <span><strong>Gunakan Pemisah yang Kuat</strong> — Kadbod atau foam yang kokoh akan menahan piring agar tetap pada tempatnya.</span>
+        </div>
+        <div class="flex items-start gap-3 font-body text-base">
+          <span class="text-primary font-bold mt-1">6.</span>
+          <span><strong>Lindungi Sudut Kotak</strong> — Tambah kadbod atau foam di sudut-sudut kotak untuk mengelak benturan langsung.</span>
+        </div>
+        <div class="flex items-start gap-3 font-body text-base">
+          <span class="text-primary font-bold mt-1">7.</span>
+          <span><strong>Segel Kotak dengan Baik</strong> — Gunakan perekat berkualiti tinggi dan segel di semua sisi, bukan hanya di tengah.</span>
+        </div>
+        <div class="flex items-start gap-3 font-body text-base">
+          <span class="text-primary font-bold mt-1">8.</span>
+          <span><strong>Jangan Tumpang Kotak Berat Di Atas Barang Fragile</strong> — Letakkan kotak barang pecah belah di bahagian bawah atau tengah (bukan paling bawah untuk mengelak kelembapan).</span>
+        </div>
+        <div class="flex items-start gap-3 font-body text-base">
+          <span class="text-primary font-bold mt-1">9.</span>
+          <span><strong>Periksa Bahan Sebelum Membungkus</strong> — Pastikan bubble wrap dan tape berkualiti baik, bukan kualiti yang meragukan.</span>
+        </div>
+        <div class="flex items-start gap-3 font-body text-base">
+          <span class="text-primary font-bold mt-1">10.</span>
+          <span><strong>Simpan Barang Paling Berharga</strong> — Barang bernilai tinggi atau sentimental, bawa sendiri dalam kereta anda, bukan dalam lori pengangkut.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">FAQ: Membungkus Barang Pecah Belah</h2>
+      <div class="space-y-4">
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Apakah perbezaan antara bungkus piring dan gelas?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Piring harus dibungkus lebih teliti kerana permukaan yang luas mudah pecah dari tekanan. Gelas harus dibungkus dengan fokus pada bahagian atas dan bawah. Cara membungkus asasnya sama: kertas (lapisan pertama) + bubble wrap (lapisan utama) + padding tambahan.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Bolehkah saya guna plastik wrap sahaja tanpa bubble wrap?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Plastik wrap tidak memberikan perlindungan hentakan yang memadai. Ia hanya melindungi dari debu dan kelembapan. Untuk barang pecah belah, bubble wrap adalah wajib untuk perlindungan hentakan. Plastik wrap boleh digunakan sebagai lapisan tambahan selepas bubble wrap.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Apakah cara terbaik untuk bungkus mangkuk?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Mangkuk harus dibungkus dari dalam dan luar. Letakkan kertas di dalam mangkuk, kemudian bungkus luaran dengan bubble wrap 2-3 lapisan. Gagang jika ada perlu dilapisi extra bubble wrap kerana bahagian yang paling rapuh. Susun mangkuk dalam kotak seperti piring — vertikal dengan pemisah.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Bagaimana saya tahu jika kotak sudah cukup padded?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Tekan kotak dengan tangan — ia sepatutnya terasa keras dan tidak ada pergerakan dalam kotak. Jika anda menggoncang kotak dan mendengar bunyi item bergerak, padding belum cukup. Tambah padding sehingga setiap item tetap stabil.</p>
+        </details>
+
+        <details class="group bg-primary/5 border border-primary/20 p-4 rounded cursor-pointer">
+          <summary class="font-headline font-bold text-on-surface group-open:text-primary">Di mana saya boleh beli bubble wrap dan bahan pindah rumah berkualiti di Malaysia?</summary>
+          <p class="font-body text-sm text-secondary mt-3">Quinocycle menyediakan bubble wrap, kotak kardus, kadbod, dan semua bahan pembungkusan yang anda perlukan untuk pindah rumah dengan aman. Hubungi +60168916381 untuk mendapatkan stok lengkap dan harga kompetitif untuk pembelian dalam jumlah besar.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Kesimpulan</h2>
+      <p class="font-body text-base text-secondary leading-relaxed mb-4">
+        Membungkus barang pecah belah dengan betul adalah seni yang memerlukan kesabaran dan perhatian terhadap detail. Dengan mengikuti panduan ini dan menggunakan bahan berkualiti baik, anda dapat mengurangkan risiko kerosakan hingga hampir sifar. Ingat — investasi pada bahan pembungkusan berkualiti adalah jauh lebih murah daripada menggantikan barang yang pecah.
+      </p>
+      <p class="font-body text-base text-secondary leading-relaxed">
+        Mulai pembungkusan dengan cukup awal — jangan meninggalkan semuanya hingga malam sebelum pindah. Pembungkusan yang tergesa-gesa akan menghasilkan pekerjaan yang tidak teliti. Ambil masa anda, ikuti langkah demi langkah, dan item berharga anda akan tiba dengan selamat di rumah baru anda.
+      </p>
+    </section>
+
+    <section class="mt-12 pt-8 border-t border-outline-variant/20">
+      <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Perlu Bahan Pembungkusan Berkualiti untuk Pindah?</h2>
+      <p class="font-body text-base text-secondary mb-6">
+        Quinocycle menyediakan semua bahan yang anda perlukan untuk pindah rumah dengan aman. Dari bubble wrap hingga kotak kardus berkualiti tinggi, hubungi kami untuk mendapatkan harga terbaik dan konsultasi gratis.
+      </p>
+      <a href={WA_LINK} class="inline-block bg-primary text-white font-label font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity">
+        Pesan Bahan Pindah Rumah Sekarang
+      </a>
+    </section>
+  </article>
+</Layout>

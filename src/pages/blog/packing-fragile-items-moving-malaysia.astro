@@ -1,0 +1,351 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'How to Pack Fragile Items When Moving House in Malaysia — Room by Room Guide',
+  description: 'Room-by-room guide to packing fragile items: kitchen, living room, bedroom, home office. Supplies checklist, step-by-step instructions, and best practices.',
+  date: '2026-04-11',
+  readTime: '10 min',
+  category: 'Moving Tips',
+  author: 'Quinocycle Team',
+  slug: 'packing-fragile-items-moving-malaysia',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20need%20supplies%20for%20packing%20fragile%20items%20for%20my%20house%20move%20in%20Malaysia.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "en-MY",
+  "author": { "@type": "Organization", "name": "Quinocycle Sdn. Bhd.", "url": "https://www.quinocycle.com.my" },
+  "publisher": { "@type": "Organization", "name": "Quinocycle", "logo": { "@type": "ImageObject", "url": "https://www.quinocycle.com.my/logo.png" } },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.quinocycle.com.my/blog/${post.slug}` },
+  "keywords": "pack fragile items moving malaysia, how to wrap glasses plates, fragile packing tips malaysia, moving house fragile boxes, bubble wrap fragile items selangor, packing supplies malaysia"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is the best way to pack dishes and plates?", "acceptedAnswer": { "@type": "Answer", "text": "Wrap each dish individually in 2-3 layers of bubble wrap. Place them vertically (like records) in boxes, not flat. Pack the heaviest items on the bottom, lighter items on top. Fill gaps with crumpled kraft paper. Use sturdy boxes with proper cushioning on all sides." } },
+    { "@type": "Question", "name": "How do I pack glasses and stemware safely?", "acceptedAnswer": { "@type": "Answer", "text": "Wrap each glass individually in 2 layers of bubble wrap, paying extra attention to the rim and base. Use tall boxes standing upright. Fill the bottom with 5cm of packing material, place wrapped glasses vertically, fill gaps between glasses, add 5cm of material on top. Label 'FRAGILE' on multiple sides." } },
+    { "@type": "Question", "name": "What materials do I need for packing fragile items?", "acceptedAnswer": { "@type": "Answer", "text": "Essential materials: corrugated boxes (double-wall for fragile items), small bubble wrap, kraft paper for crumpling, packing tape (kraft paper), packing peanuts or foam, newsprint for wrapping, markers for labeling. Buy these in bulk from Quinocycle for house moves." } },
+    { "@type": "Question", "name": "How should I pack electronics like TVs and computers?", "acceptedAnswer": { "@type": "Answer", "text": "Use original packaging if available. If not, wrap TV in 2-3 layers of bubble wrap, then place in cardboard box with 5cm foam cushioning on all sides. For computers, remove peripheral components and wrap separately. Use honeycomb cardboard for corner protection." } },
+    { "@type": "Question", "name": "What NOT to do when packing fragile items?", "acceptedAnswer": { "@type": "Answer", "text": "Never: stack flat items on top of each other, mix heavy and fragile items in same box, skimp on protective materials, overpack boxes (they become too heavy to handle), place fragile boxes under other boxes during moving, or forget to label clearly as 'FRAGILE' on multiple sides." } }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Supplier of moving and packing supplies for fragile items across Malaysia.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": { "@type": "PostalAddress", "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya", "addressLocality": "Balakong", "addressRegion": "Selangor", "postalCode": "43300", "addressCountry": "MY" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "priceRange": "RM 0.80 – RM 3.00 per item",
+  "areaServed": "Peninsular Malaysia"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <div class="mb-8">
+      <span class="inline-block bg-primary/5 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-label font-bold uppercase tracking-widest mb-4">
+        {post.category}
+      </span>
+      <p class="text-secondary font-body text-sm mb-4">{post.date}</p>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">
+        {post.title}
+      </h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">
+        Moving house presents a genuine challenge: protecting fragile items during handling and transport. This comprehensive room-by-room guide helps Malaysian homeowners pack everything safely using proven techniques.
+      </p>
+    </div>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Essential Packing Supplies Checklist
+      </h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Before packing a single item, gather all necessary materials. Running out mid-move is frustrating and leads to inadequate protection.
+      </p>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-xl font-bold text-on-surface mt-0 mb-4">
+          Complete Packing Supplies List
+        </h3>
+        <ul class="font-body text-lg text-secondary leading-relaxed mb-0 space-y-2 list-none">
+          <li><strong>Boxes:</strong> Double-wall corrugated boxes (various sizes: small, medium, large)</li>
+          <li><strong>Bubble wrap:</strong> Small bubble (10mm) and large bubble (25mm) in bulk rolls</li>
+          <li><strong>Kraft paper:</strong> Rolled kraft paper for wrapping and crumpling</li>
+          <li><strong>Packing tape:</strong> Kraft paper tape for sealing boxes</li>
+          <li><strong>Foam sheets:</strong> For corner and edge protection on furniture</li>
+          <li><strong>Packing peanuts:</strong> For filling void spaces in boxes</li>
+          <li><strong>Newspaper:</strong> For wrapping and padding (free, available at home)</li>
+          <li><strong>Markers:</strong> For labeling boxes and noting contents</li>
+          <li><strong>Masking tape:</strong> For temporary labeling or securing items</li>
+          <li><strong>Permanent markers:</strong> For clear 'FRAGILE' labeling</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Kitchen: The Most Fragile Room
+      </h2>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Packing Dishes and Plates
+      </h3>
+      <ol class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-decimal list-inside">
+        <li>Wrap each dish individually in 2-3 layers of bubble wrap with dull side facing the dish</li>
+        <li>Stack plates vertically (like records) rather than flat to reduce pressure on individual items</li>
+        <li>Place plates in medium-sized boxes with 5cm of packing material on the bottom</li>
+        <li>Stand plates upright with dividers between groups of 4-5 plates</li>
+        <li>Fill gaps with crumpled kraft paper to prevent shifting</li>
+        <li>Add 5cm of packing material on top before closing</li>
+        <li>Label box 'FRAGILE - DISHES' on top and all sides</li>
+      </ol>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Packing Glasses and Stemware
+      </h3>
+      <ol class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-decimal list-inside">
+        <li>Wrap each glass individually in 2 layers of bubble wrap, paying extra attention to the rim</li>
+        <li>Use tall boxes standing upright (never packing glasses lying down)</li>
+        <li>Add 5cm of packing material on the box bottom</li>
+        <li>Place wrapped glasses vertically, grouping by height when possible</li>
+        <li>Fill gaps between glasses with crumpled kraft paper</li>
+        <li>Add 5cm of material on top, ensuring glasses don't move when box is shaken</li>
+        <li>Label 'FRAGILE - GLASSES' prominently</li>
+      </ol>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Packing Mugs and Small Items
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Wrap each mug in 1-2 layers of bubble wrap. Fill the mug interior with crumpled kraft paper to prevent collapse. Pack mugs upright in small boxes with padding between each one.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Packing Pots, Pans, and Cookware
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed">
+        Wrap each item individually in kraft paper. Stack pans vertically with newspaper between each pan. Use medium boxes and fill gaps with crumpled paper. These items are less fragile but handles can break if not protected.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Living Room: Furniture and Decor
+      </h2>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Packing Artwork and Paintings
+      </h3>
+      <ol class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-decimal list-inside">
+        <li>Wrap artwork in kraft paper first, then 2 layers of bubble wrap</li>
+        <li>Use corner protectors (honeycomb cardboard) on all four corners</li>
+        <li>Transport artwork standing upright in vehicle (never flat or diagonal)</li>
+        <li>If using boxes, use large flat boxes with at least 5cm padding on all sides</li>
+        <li>Stand frames upright in boxes, never stacking them flat</li>
+      </ol>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Packing Mirrors and Glass Items
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Wrap mirrors in multiple layers of bubble wrap (3 layers minimum for large mirrors). Use honeycomb cardboard corner protectors. Use large boxes with substantial padding. These are among the most fragile items—invest in quality protection.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Packing Vases and Decorative Items
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Wrap each vase in 2-3 layers of bubble wrap, with extra padding at the neck (narrowest point). Pack upright in small boxes with protective material surrounding each item. Fill interior of vases with crumpled kraft paper to prevent collapse.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Packing TVs and Electronics
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Use original TV box if available. If not, wrap TV in 2-3 layers of bubble wrap, then place in cardboard box with 5-10cm foam padding on all sides. Never pack a TV flat—always transport upright. Remove all cables and pack separately.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Bedroom: Mirrors, Lamps, and Accessories
+      </h2>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Packing Mirrors
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Follow same steps as living room mirrors. Wrap in multiple layers of bubble wrap with corner protectors. Transport standing upright, never horizontally.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Packing Lamps
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Remove lampshades and pack separately in their own small boxes with tissue paper. Wrap lamp bases in 1-2 layers of bubble wrap. Wrap the lamp post/neck area carefully as it's most fragile. Pack upright in medium boxes with padding.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Packing Bedroom Furniture
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed">
+        Wrap sharp corners with foam sheets or honeycomb cardboard. Use blankets and kraft paper to protect surfaces. Disassemble bed frames and store hardware in labeled plastic bags taped to furniture pieces.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Home Office: Computers and Electronics
+      </h2>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Packing Monitors and Screens
+      </h3>
+      <ol class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-decimal list-inside">
+        <li>Use original box if available (most monitor boxes are designed for safe transport)</li>
+        <li>If no original box, wrap monitor in 2 layers of bubble wrap</li>
+        <li>Place in large box with at least 5cm foam padding on all sides</li>
+        <li>Use corner protectors (honeycomb cardboard) on box corners</li>
+        <li>Transport upright in vehicle, never flat or diagonal</li>
+      </ol>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Packing Printers
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Remove ink cartridges and pack separately. Wrap printer in 1-2 layers of bubble wrap. Secure the paper tray and other moving parts with tape. Pack in medium box with padding to prevent shifting. Label fragile.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+        Packing Cables and Electronics Accessories
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed">
+        Place all cables and accessories in labeled boxes. Use small boxes (small electronics take less box space than you'd expect). Label each box with the equipment it belongs to for easy setup in the new location.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        What NOT to Do When Packing Fragile Items
+      </h2>
+      <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+        <li><strong>Don't stack flat items:</strong> Stack plates flat and pressure will break them. Always use vertical stacking like records.</li>
+        <li><strong>Don't mix heavy and fragile:</strong> Never put heavy items on top of fragile items in the same box.</li>
+        <li><strong>Don't skimp on materials:</strong> Using too little bubble wrap to save money causes expensive breakage.</li>
+        <li><strong>Don't overpack boxes:</strong> Heavy boxes are hard to handle and may break at the seams during moving.</li>
+        <li><strong>Don't place fragile boxes underneath others:</strong> Always place 'FRAGILE' boxes on top during moving vehicle loading.</li>
+        <li><strong>Don't forget labeling:</strong> Write 'FRAGILE' on top and all sides of boxes. Clear labeling helps movers handle items carefully.</li>
+        <li><strong>Don't pack items loosely:</strong> Items that move around in boxes break during transport. Ensure zero movement when box is shaken.</li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6">
+        <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+          <strong>Need packing supplies for your house move in Malaysia?</strong> Quinocycle supplies boxes, bubble wrap, kraft paper, tape, and all protective materials in bulk. Order now for same-day collection or next-day delivery.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 mt-6">
+          <a href={WA_LINK} target="_blank" class="inline-flex items-center justify-center bg-primary text-on-primary font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-primary/90 transition-colors">
+            Chat on WhatsApp
+          </a>
+          <a href="mailto:quinocycle@gmail.com" class="inline-flex items-center justify-center bg-surface-variant text-on-surface border border-outline-variant/20 font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-surface-variant/80 transition-colors">
+            Email Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-4 mt-6">
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer group">
+          <summary class="font-headline font-bold text-on-surface text-lg flex justify-between items-center">
+            What is the best way to pack dishes and plates?
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="font-body text-lg text-secondary leading-relaxed mt-4">
+            Wrap each dish individually in 2-3 layers of bubble wrap. Place them vertically (like records) in boxes, not flat. Pack the heaviest items on the bottom, lighter items on top. Fill gaps with crumpled kraft paper. Use sturdy boxes with proper cushioning on all sides.
+          </p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer group">
+          <summary class="font-headline font-bold text-on-surface text-lg flex justify-between items-center">
+            How do I pack glasses and stemware safely?
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="font-body text-lg text-secondary leading-relaxed mt-4">
+            Wrap each glass individually in 2 layers of bubble wrap, paying extra attention to the rim and base. Use tall boxes standing upright. Fill the bottom with 5cm of packing material, place wrapped glasses vertically, fill gaps between glasses, add 5cm of material on top. Label 'FRAGILE' on multiple sides.
+          </p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer group">
+          <summary class="font-headline font-bold text-on-surface text-lg flex justify-between items-center">
+            What materials do I need for packing fragile items?
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="font-body text-lg text-secondary leading-relaxed mt-4">
+            Essential materials: corrugated boxes (double-wall for fragile items), small bubble wrap, kraft paper for crumpling, packing tape (kraft paper), packing peanuts or foam, newsprint for wrapping, markers for labeling. Buy these in bulk from Quinocycle for house moves.
+          </p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer group">
+          <summary class="font-headline font-bold text-on-surface text-lg flex justify-between items-center">
+            How should I pack electronics like TVs and computers?
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="font-body text-lg text-secondary leading-relaxed mt-4">
+            Use original packaging if available. If not, wrap TV in 2-3 layers of bubble wrap, then place in cardboard box with 5cm foam cushioning on all sides. For computers, remove peripheral components and wrap separately. Use honeycomb cardboard for corner protection.
+          </p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer group">
+          <summary class="font-headline font-bold text-on-surface text-lg flex justify-between items-center">
+            What NOT to do when packing fragile items?
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="font-body text-lg text-secondary leading-relaxed mt-4">
+            Never: stack flat items on top of each other, mix heavy and fragile items in same box, skimp on protective materials, overpack boxes (they become too heavy to handle), place fragile boxes under other boxes during moving, or forget to label clearly as 'FRAGILE' on multiple sides.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+        Conclusion: Protect Your Belongings, Ensure a Smooth Move
+      </h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Moving house in Malaysia is stressful enough without worrying about broken dishes, shattered mirrors, or damaged electronics. Following these room-by-room packing guidelines ensures your fragile items arrive safely in your new home.
+      </p>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        The investment in quality packing materials (boxes, bubble wrap, kraft paper, foam) is far less expensive than replacing broken items. Plan ahead, buy supplies in bulk, and take time to pack properly. Your future self will appreciate arriving in your new home with all your belongings intact.
+      </p>
+      <p class="font-body text-lg text-secondary leading-relaxed">
+        Quinocycle provides all packing supplies for moving in Malaysia at wholesale prices. Order today for your upcoming move.
+      </p>
+    </section>
+  </article>
+</Layout>
