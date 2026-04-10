@@ -4,25 +4,25 @@
   <!-- Core pages -->
   <url>
     <loc>https://www.quinocycle.com.my/</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.quinocycle.com.my/shop/</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.quinocycle.com.my/about/</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.quinocycle.com.my/contact/</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -30,7 +30,7 @@
   <!-- Blog index -->
   <url>
     <loc>https://www.quinocycle.com.my/blog/</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -38,39 +38,257 @@
   <!-- Blog posts -->
   <url>
     <loc>https://www.quinocycle.com.my/blog/kedai-kotak-pindah-malaysia/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.quinocycle.com.my/blog/choose-right-carton-box-size/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.quinocycle.com.my/blog/new-vs-used-carton-boxes/</loc>
-    <lastmod>2026-03-08</lastmod>
+    <loc>https://www.quinocycle.com.my/blog/new-carton-boxes-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.quinocycle.com.my/blog/cut-packaging-costs-online-seller/</loc>
-    <lastmod>2026-02-28</lastmod>
+    <loc>https://www.quinocycle.com.my/blog/used-carton-boxes-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.quinocycle.com.my/blog/how-many-boxes-moving-house/</loc>
-    <lastmod>2026-02-18</lastmod>
+    <loc>https://www.quinocycle.com.my/blog/kotak-kardus-baru-borong-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.quinocycle.com.my/blog/eco-packaging-used-boxes-business/</loc>
-    <lastmod>2026-02-10</lastmod>
+    <loc>https://www.quinocycle.com.my/blog/kotak-kardus-terpakai-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/packaging-knowledge-guide-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/panduan-pembungkusan-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/warehouse-packaging-supplies-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/bekalan-pembungkusan-gudang-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/corrugated-cardboard-sheets-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/kepingan-kadbod-gelombang-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/honeycomb-cardboard-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/kadbod-honeycomb-berat-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/moving-house-packaging-tips-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/tips-pindah-rumah-packing-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/bubble-wrap-wholesale-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/bubble-wrap-borong-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/custom-boxes-grow-business-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/kotak-tersuai-tingkatkan-perniagaan/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/carton-box-wholesale-reseller-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/borong-kotak-kardus-jadi-pembekal/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/packaging-reseller-business-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/cara-mulakan-perniagaan-pembekal-pembungkusan-malaysia/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog posts — 2026-04-10 batch -->
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/carton-box-size-guide-ecommerce-malaysia/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/panduan-saiz-kotak-kardus-ecommerce/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/used-carton-boxes-near-me-balakong/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/kotak-terpakai-berdekatan-balakong/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/corrugated-cardboard-sheets-uses-malaysia/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/kegunaan-kepingan-kadbod-gelombang-perniagaan/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/honeycomb-cardboard-vs-bubble-wrap-malaysia/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/kadbod-honeycomb-vs-bubble-wrap-barang-berat/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/bubble-wrap-sizes-guide-malaysia/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/panduan-saiz-bubble-wrap-penjual-online/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/packaging-materials-guide-malaysia/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/panduan-bahan-pembungkusan-malaysia-kos/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/how-to-reduce-packaging-costs-warehouse-malaysia/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/cara-kurang-kos-pembungkusan-gudang-malaysia/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/packing-fragile-items-moving-malaysia/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/cara-bungkus-barang-pecah-belah-pindah-rumah/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/custom-box-design-tips-malaysia/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.quinocycle.com.my/blog/tips-reka-bentuk-kotak-tersuai-ecommerce-malaysia/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
