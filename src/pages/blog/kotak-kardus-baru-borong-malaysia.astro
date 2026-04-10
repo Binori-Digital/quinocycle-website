@@ -1,0 +1,250 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Kotak Kardus Baru Malaysia — Beli Borong dari Quinocycle Balakong Selangor',
+  description: 'Beli kotak kardus baru di Malaysia dengan harga borong. Kotak gelombang single wall & double wall, saiz S hingga XL, dari RM 1.90/kotak. Penghantaran seluruh Semenanjung Malaysia.',
+  date: '2026-04-10',
+  readTime: '7 min',
+  category: 'Kotak Kardus Baru',
+  author: 'Pasukan Quinocycle',
+  slug: 'kotak-kardus-baru-borong-malaysia',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20ingin%20bertanya%20tentang%20kotak%20kardus%20baru%20borong.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "ms-MY",
+  "author": { "@type": "Organization", "name": "Quinocycle Sdn. Bhd.", "url": "https://www.quinocycle.com.my" },
+  "publisher": { "@type": "Organization", "name": "Quinocycle", "logo": { "@type": "ImageObject", "url": "https://www.quinocycle.com.my/logo.png" } },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.quinocycle.com.my/blog/${post.slug}` },
+  "keywords": "kotak kardus baru malaysia, beli kotak kardus borong, pembekal kotak kardus malaysia, kotak pembungkusan borong, new carton boxes malaysia, kotak gelombang baru, kotak packaging selangor"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Berapa harga kotak kardus baru di Malaysia?", "acceptedAnswer": { "@type": "Answer", "text": "Harga kotak kardus baru dari Quinocycle bermula dari RM 1.90 sekotak untuk pesanan pukal. Harga bergantung kepada saiz, jenis (single wall atau double wall), dan kuantiti pesanan. Hubungi kami untuk perolehan harga terkini." } },
+    { "@type": "Question", "name": "Apakah perbezaan antara single wall dan double wall?", "acceptedAnswer": { "@type": "Answer", "text": "Single wall mempunyai satu lapisan gelombang dan lebih ringan serta ekonomik. Double wall mempunyai dua lapisan gelombang, lebih tebal dan lebih kuat untuk produk berat atau penghantaran jauh." } },
+    { "@type": "Question", "name": "Berapa pesanan minimum kotak kardus baru?", "acceptedAnswer": { "@type": "Answer", "text": "Pesanan minimum untuk kotak kardus baru adalah RM 1,000. Bergantung kepada saiz dan jenis, ini boleh merangkumi beberapa ratus hingga ribuan kotak." } },
+    { "@type": "Question", "name": "Apakah saiz kotak kardus yang tersedia?", "acceptedAnswer": { "@type": "Answer", "text": "Kami menyediakan pelbagai saiz dari S (kecil) hingga XL (sangat besar). Saiz boleh disesuaikan mengikut keperluan anda. Hubungi pasukan kami untuk spesifikasi terperinci." } },
+    { "@type": "Question", "name": "Adakah penghantaran tersedia ke seluruh Malaysia?", "acceptedAnswer": { "@type": "Answer", "text": "Ya, Quinocycle menyediakan penghantaran ke seluruh Semenanjung Malaysia. Kos penghantaran bergantung kepada lokasi dan berat pesanan. Hubungi kami untuk sebutan harga penghantaran." } }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Pembekal kotak kardus borong — baru dan terpakai — untuk perniagaan, pindah rumah, dan logistik di seluruh Semenanjung Malaysia.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": { "@type": "PostalAddress", "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya", "addressLocality": "Balakong", "addressRegion": "Selangor", "postalCode": "43300", "addressCountry": "MY" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "priceRange": "RM 1.90 – RM 6.50 sekotak",
+  "areaServed": "Semenanjung Malaysia"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">
+      Kotak Kardus Baru Malaysia — Beli Borong dari Quinocycle Balakong Selangor
+    </h1>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Memulai atau mengembangkan bisnis anda memerlukan solusi pembungkusan yang berkualiti tinggi dan terjangkau. Kotak kardus baru adalah pilihan terbaik untuk setiap keperluan — daripada e-commerce hingga logistik, pindah rumah, atau penyimpanan. Quinocycle Sdn. Bhd., pembekal kotak kardus terpercaya di Balakong, Selangor, menawarkan pelbagai pilihan kotak kardus baru dengan harga borong yang kompetitif, bermula dari RM 1.90 sekotak.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Mengapa Memilih Kotak Kardus Baru?
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kotak kardus baru menawarkan perlindungan maksimal untuk produk anda. Dibuat daripada bahan berkualiti tinggi, kotak baru memastikan produk anda sampai ke tangan pelanggan dalam keadaan sempurna. Tidak seperti kotak terpakai yang mungkin sudah mengalami kerosakan, kotak baru mempunyai integriti struktural penuh, daya cengkam yang kuat, dan penampilan profesional yang meningkatkan persepsi pelanggan terhadap brand anda.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Jenis-Jenis Kotak Kardus Baru
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kami menyediakan dua kategori utama kotak kardus baru yang sesuai dengan keperluan berbeza:
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      1. Kotak Kardus Single Wall (Dinding Tunggal)
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kotak single wall mempunyai satu lapisan gelombang di tengah dua lapisan papan luar. Jenis ini lebih ringan, lebih murah, dan sesuai untuk produk yang ringan atau sedang. Ia ideal untuk e-commerce lokal, pembungkusan kemasan kecil, dan produk yang tidak memerlukan perlindungan ekstrem. Single wall mengurangkan kos pengiriman kerana lebih ringan, menjadikannya pilihan ekonomik untuk perniagaan yang mencari keseimbangan antara kualiti dan harga.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      2. Kotak Kardus Double Wall (Dinding Berganda)
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kotak double wall mempunyai dua lapisan gelombang, memberikan kekuatan dua kali ganda daripada single wall. Ia lebih tebal, lebih tahan lama, dan dirancang untuk produk berat seperti perabot, jentera, elektronik, atau barang berharga. Double wall juga sesuai untuk penghantaran jarak jauh atau penimbunan produk berkali-kali, kerana ketahanannya terhadap tekanan dan kejutan adalah superior.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Saiz dan Harga Kotak Kardus Baru
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Quinocycle menyediakan pelbagai saiz kotak kardus untuk memenuhi setiap keperluan pembungkusan:
+    </p>
+
+    <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+      <li><strong>Saiz Kecil (S):</strong> Sesuai untuk produk kecil seperti aksesori, buku, atau barang elektronik. Harga bermula dari RM 1.90 sekotak untuk pesanan pukal.</li>
+      <li><strong>Saiz Sederhana (M):</strong> Pilihan paling popular untuk e-commerce dan penyimpanan. Sesuai untuk pakaian, mainan, dan produk sederhana lain. Harga berkisar RM 2.50 hingga RM 3.50 sekotak.</li>
+      <li><strong>Saiz Besar (L):</strong> Ideal untuk produk yang lebih besar seperti perabot kecil, elektronik, atau penghantaran batch. Harga dari RM 4.00 hingga RM 5.50 sekotak.</li>
+      <li><strong>Saiz Sangat Besar (XL):</strong> Untuk produk besar dan berat. Dirancang khas untuk industri perabot dan logistik. Harga bermula dari RM 5.50 sekotak, bergantung kepada spesifikasi.</li>
+    </ul>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Semua harga di atas adalah untuk pesanan pukal (minimum RM 1,000). Diskaun tambahan tersedia untuk pesanan lebih besar. Hubungi Quinocycle untuk mendapatkan sebutan harga khusus bagi keperluan spesifik anda.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Kelebihan Membeli Kotak Kardus Baru dari Quinocycle
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Memilih pembekal kotak kardus yang tepat adalah keputusan penting untuk perniagaan anda. Berikut adalah alasan mengapa Quinocycle adalah pilihan terbaik di Balakong, Selangor, dan seluruh Lembah Klang:
+    </p>
+
+    <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+      <li><strong>Harga Kompetitif:</strong> Sebagai pembekal borong, kami menawarkan harga terbaik tanpa mengorbankan kualiti. Pesanan pukal memberikan nilai maksimal untuk wang anda.</li>
+      <li><strong>Kualiti Terjamin:</strong> Semua kotak kardus baru kami diperbuat daripada bahan berkualiti tinggi dengan keteguhan yang konsisten. Setiap kotak melalui kawalan kualiti ketat sebelum dihantar.</li>
+      <li><strong>Pelbagai Pilihan:</strong> Kami menyediakan berbagai saiz, jenis (single wall dan double wall), dan spesifikasi. Kotak juga boleh disesuaikan dengan cetakan atau logo anda.</li>
+      <li><strong>Penghantaran Pantas:</strong> Lokasi kami di Balakong, Selangor, memastikan penghantaran cepat ke seluruh Lembah Klang, Cheras, Kajang, dan Seri Kembangan. Kami juga menghantarkan ke seluruh Semenanjung Malaysia.</li>
+      <li><strong>Layanan Pelanggan Responsif:</strong> Tim Quinocycle siap membantu anda dengan pertanyaan, pesanan custom, dan sokongan purna jual. Hubungi kami melalui WhatsApp atau panggilan telefon untuk perkhidmatan cepat.</li>
+      <li><strong>Pengalaman Sejak 2010:</strong> Quinocycle telah melayani ribuan pelanggan di Malaysia selama lebih 15 tahun. Kepercayaan mereka adalah bukti komitmen kami terhadap kualiti dan perkhidmatan.</li>
+    </ul>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Siapa Sesuai Membeli Kotak Kardus Baru?
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kotak kardus baru dari Quinocycle sesuai untuk pelbagai pelanggan:
+    </p>
+
+    <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+      <li><strong>E-Commerce Sellers:</strong> Penjual online yang memerlukan pembungkusan profesional dan perlindungan produk yang baik untuk meningkatkan kepuasan pelanggan.</li>
+      <li><strong>Pembekal & Pengedar:</strong> Perniagaan yang menghantarkan produk dalam kuantiti besar dan memerlukan kotak berkualiti untuk melindungi inventori.</li>
+      <li><strong>Pengilang & Kilang:</strong> Industri yang memerlukan pembungkusan berkualiti tinggi untuk produk jadi atau komponen.</li>
+      <li><strong>Perkhidmatan Pindah Rumah:</strong> Perusahaan pindah rumah dan pemindahan barang yang memerlukan kotak tahan lama untuk harta berharga pelanggan.</li>
+      <li><strong>Toko Ritel & Grosir:</strong> Pemilik toko yang memerlukan kotak berkualiti untuk kemasan retail atau penyimpanan stok.</li>
+      <li><strong>Restoran & Katering:</strong> Bisnis makanan yang memerlukan kotak makanan dan pembungkusan makanan yang higienik dan profesional.</li>
+    </ul>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Cara Membuat Pesanan Kotak Kardus Baru
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Proses pemesanan kotak kardus baru dari Quinocycle sangat mudah dan cepat:
+    </p>
+
+    <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+      <li><strong>Hubungi Kami:</strong> Pangil kami di 03-8962 6381 atau WhatsApp 016-891 6381 untuk berbicara dengan tim penjualan kami.</li>
+      <li><strong>Tentukan Spesifikasi:</strong> Beritahu kami saiz, jenis (single atau double wall), kuantiti, dan keperluan khusus anda.</li>
+      <li><strong>Dapatkan Sebutan Harga:</strong> Kami akan memberikan sebutan harga terperinci berdasarkan spesifikasi anda.</li>
+      <li><strong>Sahkan Pesanan:</strong> Selepas bersetuju dengan harga, kami akan mengesahkan pesanan dan jadual penghantaran.</li>
+      <li><strong>Penghantaran:</strong> Kotak kardus anda akan dihantar ke lokasi anda dengan cepat dan selamat.</li>
+    </ul>
+
+    <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3">
+        Dapatkan Sebutan Harga Terbaik Hari Ini
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Jangan tunggu lagi. Hubungi Quinocycle sekarang untuk mendapatkan harga terbaik untuk kotak kardus baru anda. Kami siap membantu dengan pesanan anda, berapapun saiznya.
+      </p>
+      <a href={WA_LINK} class="inline-flex items-center gap-2 bg-primary text-on-primary font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-primary/90 transition-colors">
+        Hubungi via WhatsApp
+      </a>
+    </div>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Soalan Lazim (FAQ)
+    </h2>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Berapa harga kotak kardus baru di Malaysia?
+    </h3>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Harga kotak kardus baru dari Quinocycle bermula dari RM 1.90 sekotak untuk pesanan pukal. Harga bergantung kepada saiz, jenis (single wall atau double wall), dan kuantiti pesanan. Hubungi kami untuk perolehan harga terkini.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Apakah perbezaan antara single wall dan double wall?
+    </h3>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Single wall mempunyai satu lapisan gelombang dan lebih ringan serta ekonomik. Double wall mempunyai dua lapisan gelombang, lebih tebal dan lebih kuat untuk produk berat atau penghantaran jauh.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Berapa pesanan minimum kotak kardus baru?
+    </h3>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Pesanan minimum untuk kotak kardus baru adalah RM 1,000. Bergantung kepada saiz dan jenis, ini boleh merangkumi beberapa ratus hingga ribuan kotak.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Apakah saiz kotak kardus yang tersedia?
+    </h3>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kami menyediakan pelbagai saiz dari S (kecil) hingga XL (sangat besar). Saiz boleh disesuaikan mengikut keperluan anda. Hubungi pasukan kami untuk spesifikasi terperinci.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Adakah penghantaran tersedia ke seluruh Malaysia?
+    </h3>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Ya, Quinocycle menyediakan penghantaran ke seluruh Semenanjung Malaysia. Kos penghantaran bergantung kepada lokasi dan berat pesanan. Hubungi kami untuk sebutan harga penghantaran.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Kesimpulan
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kotak kardus baru adalah investasi penting untuk kesuksesan perniagaan anda. Dengan memilih Quinocycle sebagai pembekal anda, anda mendapatkan kualiti terbaik, harga yang kompetitif, dan perkhidmatan pelanggan yang luar biasa. Lokasi kami di Balakong, Selangor, memastikan penghantaran cepat ke Lembah Klang, Cheras, Kajang, Seri Kembangan, dan seluruh Semenanjung Malaysia. Hubungi kami hari ini untuk membuat pesanan atau mendapatkan sebutan harga khusus untuk keperluan pembungkusan anda.
+    </p>
+
+    <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3">
+        Hubungi Quinocycle Sekarang
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        <strong>Telefon:</strong> 03-8962 6381<br>
+        <strong>WhatsApp:</strong> 016-891 6381<br>
+        <strong>Alamat:</strong> No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor<br>
+        <strong>Jam Operasi:</strong> Isnin-Jumaat 09:00-18:00, Sabtu 09:00-13:00<br>
+        <strong>Pesanan Minimum:</strong> RM 1,000
+      </p>
+      <a href={WA_LINK} class="inline-flex items-center gap-2 bg-primary text-on-primary font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-primary/90 transition-colors">
+        Pesan Sekarang
+      </a>
+    </div>
+  </article>
+</Layout>

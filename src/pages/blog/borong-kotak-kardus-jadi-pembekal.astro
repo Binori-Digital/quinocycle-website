@@ -1,0 +1,378 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Borong Kotak Kardus Malaysia — Jadi Pembekal Semula dengan Quinocycle | Margin Lumayan',
+  description: 'Jadilah pembekal semula kotak kardus di Malaysia bersama Quinocycle. Harga borong kompetitif, manfaat pesanan pukal, dan margin keuntungan yang tinggi dalam industri pembungkusan Malaysia yang berkembang pesat.',
+  date: '2026-04-10',
+  readTime: '7 min',
+  category: 'Borong & Pembekal Semula',
+  author: 'Pasukan Quinocycle',
+  slug: 'borong-kotak-kardus-jadi-pembekal',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20ingin%20menjadi%20pembekal%20semula%20kotak%20kardus%20anda.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "ms-MY",
+  "author": { "@type": "Organization", "name": "Quinocycle Sdn. Bhd.", "url": "https://www.quinocycle.com.my" },
+  "publisher": { "@type": "Organization", "name": "Quinocycle", "logo": { "@type": "ImageObject", "url": "https://www.quinocycle.com.my/logo.png" } },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.quinocycle.com.my/blog/${post.slug}` },
+  "keywords": "borong kotak kardus malaysia, jadi pembekal kotak kardus, reseller kotak kardus malaysia, perniagaan kotak kardus, packaging wholesale malaysia, carton box reseller, pembekal pembungkusan, bisnes kotak kardus"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Berapa margin keuntungan yang boleh saya harapkan sebagai pembekal semula?", "acceptedAnswer": { "@type": "Answer", "text": "Margin keuntungan untuk pembekal semula kotak kardus biasanya berkisar dari 20-40%, bergantung pada harga satuan yang anda terima, volum pesanan, dan berapa harga yang anda jual kepada pelanggan anda. Pembekal semula yang menjual dalam jumlah besar kepada pelanggan korporat boleh mencapai margin yang lebih tinggi." } },
+    { "@type": "Question", "name": "Apakah minimum pesanan untuk jadi pembekal semula Quinocycle?", "acceptedAnswer": { "@type": "Answer", "text": "Minimum pesanan untuk pembekal semula kami adalah RM 1,000 setiap kali pesan. Anda boleh memilih kombinasi saiz dan jenis kotak yang berbeza untuk memenuhi keperluan pelanggan anda. Semakin besar pesanan anda, semakin baik harga yang kami boleh tawarkan." } },
+    { "@type": "Question", "name": "Bagaimana cara saya mencari pelanggan untuk kotak kardus?", "acceptedAnswer": { "@type": "Answer", "text": "Pelanggan untuk kotak kardus biasanya adalah UKM, e-commerce, restoran, pabrik pengepakan, dan syarikat logistik. Anda boleh memasarkan melalui media sosial, laman web sendiri, temu janji dagang, dan jaringan perniagaan lokal. Pentingkan layanan pelanggan yang baik dan kualitas produk yang konsisten untuk membina reputasi." } },
+    { "@type": "Question", "name": "Apakah jenis dukungan yang Quinocycle berikan kepada pembekal semula?", "acceptedAnswer": { "@type": "Answer", "text": "Quinocycle memberikan dukungan penuh kepada pembekal semula termasuk: harga tetap yang kompetitif, maklumat produk untuk pemasaran anda, penghantaran yang andal dan tepat waktu, dan sokongan pelanggan yang responsif. Kami juga dapat membantu anda dengan pertanyaan teknis dari pelanggan anda." } },
+    { "@type": "Question", "name": "Adakah syarat khusus untuk menjadi pembekal semula Quinocycle?", "acceptedAnswer": { "@type": "Answer", "text": "Tidak ada syarat yang ketat untuk menjadi pembekal semula kami. Anda hanya perlu berkomitmen untuk membeli dalam jumlah minimum RM 1,000 setiap kali pesanan dan menjaga hubungan bisnis yang profesional. Kami sambut semua jenis pembekal semula, dari operasi kecil hingga besar." } }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Pembekal kotak kardus borong — baru dan terpakai — untuk perniagaan, pindah rumah, dan logistik di seluruh Semenanjung Malaysia.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": { "@type": "PostalAddress", "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya", "addressLocality": "Balakong", "addressRegion": "Selangor", "postalCode": "43300", "addressCountry": "MY" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "priceRange": "RM 0.90 – RM 6.50 sekotak",
+  "areaServed": "Semenanjung Malaysia"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">
+      Borong Kotak Kardus Malaysia — Jadi Pembekal Semula dengan Quinocycle | Margin Lumayan
+    </h1>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Industri pembungkusan di Malaysia adalah industri yang berkembang pesat dengan permintaan yang terus meningkat. Semakin banyak perniagaan yang memulai operasi e-commerce, lebih banyak UKM yang berkembang, dan lebih banyak syarikat logistik yang beroperasi — semuanya memerlukan kotak kardus berkualiti tinggi. Ini mempersembahkan peluang perniagaan yang luar biasa bagi mereka yang ingin menjadi pembekal semula (reseller) kotak kardus.
+    </p>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Jika anda mencari peluang bisnes yang menguntungkan dengan modal yang relatif kecil dan risiko yang rendah, menjadi pembekal semula kotak kardus dengan Quinocycle adalah pilihan yang sempurna. Panduan lengkap ini membimbing anda melalui segala yang anda perlu tahu tentang berbisnes kotak kardus di Malaysia — dari mengapa industri berkembang pesat, apa yang pembeli borong dapat, bagaimana cara memulai, analisis margin keuntungan, hingga profil pembekal semula yang ideal untuk sukses dalam bisnes ini.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Mengapa Industri Pembungkusan di Malaysia Semakin Berkembang
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Pertumbuhan industri pembungkusan di Malaysia didorong oleh beberapa faktor penting:
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      1. Pertumbuhan E-Commerce yang Eksplosif
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      E-commerce di Malaysia telah berkembang pesat dalam lima tahun terakhir, terutama selepas COVID-19. Lebih banyak konsumen membeli dalam talian, dan lebih banyak perniagaan bermula di platform e-commerce seperti Shopee, Lazada, dan Tokopedia. Setiap penjualan e-commerce memerlukan kotak kardus untuk penghantaran, menjadikan permintaan untuk kotak sangat tinggi.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      2. Pertumbuhan UKM dan Startup
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kerajaan Malaysia telah mendorong pertumbuhan UKM dan startup melalui pelbagai inisiatif. Lebih banyak pelanggan kecil dan menengah bermula setiap hari, dan mereka semua memerlukan kotak kardus untuk operasi mereka. Permintaan ini telah meningkatkan kebutuhan untuk pembekal semula yang dapat melayani pelanggan kecil dengan harga yang bersaing.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      3. Permintaan Logistik yang Tinggi
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Dengan meningkatnya permintaan untuk penghantaran, syarikat logistik memerlukan kotak kardus dalam jumlah yang besar. Mereka mencari pembekal yang dapat memberikan harga yang baik, kualitas yang konsisten, dan penghantaran yang tepat waktu.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      4. Kebutuhan untuk Keberlanjutan
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Semakin banyak syarikat mementingkan keberlanjutan dan menggunakan kemasan yang boleh dikitar semula. Kotak kardus yang boleh dikitar semula dan ramah lingkungan semakin diminati, membuka peluang baru untuk pembekal.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Apa yang Pembeli Borong Dapat Dari Quinocycle
+    </h2>
+
+    <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-0 mb-3">
+        Keuntungan Menjadi Pembekal Semula Kami
+      </h3>
+      <ul class="font-body text-lg text-secondary leading-relaxed mb-0 space-y-2 list-disc list-inside">
+        <li><strong>Harga borong yang kompetitif:</strong> Kotak baru dari RM 1.90/kotak, kotak terpakai dari RM 0.90/kotak. Harga berkurangan dengan peningkatan volum.</li>
+        <li><strong>Minimum pesanan yang rendah:</strong> Hanya RM 1,000 setiap kali pesanan, memudahkan pembekal semula kecil untuk memulai.</li>
+        <li><strong>Pelbagai pilihan produk:</strong> Kami menawarkan kotak baru, kotak terpakai, stretch film, strapping tape, dan bahan pembungkusan lainnya untuk memenuhi semua kebutuhan pelanggan anda.</li>
+        <li><strong>Kualitas konsisten:</strong> Semua produk kami diperiksa untuk memastikan standar kualiti yang tinggi, memberikan anda kepercayaan dalam menjual kepada pelanggan anda.</li>
+        <li><strong>Penghantaran yang andal:</strong> Kami hantar ke seluruh Semenanjung Malaysia dengan jadwal yang konsisten dan dapat diandalkan.</li>
+        <li><strong>Sokongan pelanggan yang responsif:</strong> Tim kami siap membantu anda dengan pertanyaan, masalah teknis, dan dukungan lainnya.</li>
+        <li><strong>Fleksibilitas dalam pemesanan:</strong> Anda boleh mengubah kombinasi saiz dan jenis kotak untuk memenuhi kebutuhan pelanggan yang berubah-ubah.</li>
+        <li><strong>Tanpa komitmen jangka panjang:</strong> Tidak ada kontrak jangka panjang — anda boleh berhenti kapan saja jika bisnes anda berubah arah.</li>
+      </ul>
+    </div>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Cara Jadi Pembekal Semula dengan Quinocycle
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Proses untuk menjadi pembekal semula dengan Quinocycle sangat sederhana dan mudah. Berikut adalah langkah-langkah yang perlu anda ikuti:
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Langkah 1: Hubungi Kami untuk Maklumat Awal
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Hubungi Quinocycle melalui WhatsApp, telepon, atau lawati pejabat kami di Balakong untuk bercerita tentang rancangan bisnes anda. Kami akan memberikan maklumat tentang harga, produk, dan syarat-syarat untuk menjadi pembekal semula kami.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Langkah 2: Pesan Sampel Produk
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Sebelum membuat pesanan pertama yang besar, minta sampel produk yang anda ingin jual. Periksa kualiti, ukuran, dan ketahanan. Ini memastikan anda puas dengan produk sebelum menjualnya kepada pelanggan anda.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Langkah 3: Buat Pesanan Pertama
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Tempatkan pesanan pertama anda dengan minimum RM 1,000. Anda boleh memilih kombinasi saiz, jenis, dan warna kotak sesuai dengan keperluan pelanggan awal anda. Kami akan memproses pesanan dan menghantarnya dengan cepat.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Langkah 4: Mulai Jual kepada Pelanggan Anda
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Dengan kotak sudah tiba, mulai jual kepada pelanggan anda. Anda boleh memasarkan melalui media sosial, laman web sendiri, grup perniagaan lokal, dan jaringan langsung anda.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Langkah 5: Pesanan Berulang dan Pertumbuhan
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Seiring dengan pertumbuhan bisnes anda, anda akan membuat pesanan berulang lebih sering. Untuk pembekal semula yang setia dengan volum pesanan tinggi, kami dapat menawarkan harga yang lebih baik dan syarat pembayaran yang lebih fleksibel.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Analisis Margin Keuntungan untuk Pembekal Semula
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Salah satu pertanyaan paling penting yang ditanya oleh bakal pembekal semula adalah "Berapa margin keuntungan yang boleh saya harapkan?" Berikut adalah analisis terperinci:
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Contoh Analisis Keuntungan untuk Kotak Baru
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      <strong>Harga beli dari Quinocycle (pesanan 1,000 kotak):</strong> RM 1.90/kotak
+      <strong>Harga jual ke pelanggan (UKM, e-commerce kecil):</strong> RM 2.80-3.50/kotak (markup 45-85%)
+      <strong>Keuntungan per kotak:</strong> RM 0.90-1.60
+      <strong>Total keuntungan untuk pesanan 1,000 kotak:</strong> RM 900-1,600
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Contoh Analisis Keuntungan untuk Kotak Terpakai
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      <strong>Harga beli dari Quinocycle (pesanan 2,000 kotak):</strong> RM 0.90/kotak
+      <strong>Harga jual ke pelanggan (logistik, pindah rumah):</strong> RM 1.50-2.00/kotak (markup 65-120%)
+      <strong>Keuntungan per kotak:</strong> RM 0.60-1.10
+      <strong>Total keuntungan untuk pesanan 2,000 kotak:</strong> RM 1,200-2,200
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Faktor yang Mempengaruhi Margin Keuntungan
+    </h3>
+
+    <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+      <li><strong>Volum pesanan:</strong> Pesanan yang lebih besar mendapat harga yang lebih baik, meningkatkan margin anda</li>
+      <li><strong>Lokasi anda:</strong> Pembekal semula di lokasi strategis boleh mencapai pelanggan lebih banyak dan mungkin dapat mengenakan harga lebih tinggi</li>
+      <li><strong>Kemampuan penjualan anda:</strong> Kemampuan anda untuk menjual dan belajar tentang pelanggan mempengaruhi harga yang dapat anda peroleh</li>
+      <li><strong>Jenis pelanggan:</strong> Pelanggan korporat atau pelanggan berulang sering membayar harga yang lebih tinggi daripada pembelian sekali</li>
+      <li><strong>Layanan dan dukungan:</strong> Memberikan layanan yang baik dan dukungan teknis memungkinkan anda mengenakan harga yang lebih tinggi</li>
+    </ul>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Langkah-Langkah Pendaftaran untuk Menjadi Pembekal Semula Resmi
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Untuk menjadi pembekal semula Quinocycle yang resmi, tidak ada proses pendaftaran yang rumit. Berikut adalah langkah-langkah sederhana:
+    </p>
+
+    <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+      <li><strong>Hubungi Quinocycle:</strong> Hubungi kami melalui WhatsApp (016-891 6381), telepon (03-8962 6381), atau lawati kami di Balakong</li>
+      <li><strong>Jelaskan rancangan bisnes anda:</strong> Beritahu kami tentang jenis pelanggan yang ingin anda layani, volum yang anda jangkakan, dan wilayah operasi anda</li>
+      <li><strong>Setujui harga dan syarat:</strong> Kami akan menawarkan harga berdasarkan volum yang anda berharap dan anda boleh bernegosiasi jika diperlukan</li>
+      <li><strong>Buat pesanan pertama:</strong> Tempatkan pesanan pertama anda dengan minimum RM 1,000 untuk memulai</li>
+      <li><strong>Mulai bisnes anda:</strong> Setelah kotak tiba, mulai jual kepada pelanggan anda dan kembangkan bisnes anda</li>
+    </ul>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Profil Pembekal Semula yang Ideal
+    </h2>
+
+    <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-0 mb-3">
+        Siapa yang Paling Cocok Menjadi Pembekal Semula Kotak Kardus?
+      </h3>
+      <ul class="font-body text-lg text-secondary leading-relaxed mb-0 space-y-2 list-disc list-inside">
+        <li><strong>Pemilik bisnes yang mencari diversifikasi:</strong> Jika anda sudah mempunyai bisnes lain (restoran, pabrik, kedai), menjadi pembekal semula kotak adalah cara yang bagus untuk diversifikasi dan meningkatkan pendapatan.</li>
+        <li><strong>Pengusaha muda yang baru memulai:</strong> Bisnes kotak kardus memerlukan modal relatif kecil (RM 1,000 untuk pesanan awal) dan risiko yang rendah, menjadikannya sempurna untuk pemula.</li>
+        <li><strong>Orang yang memiliki jaringan yang kuat:</strong> Jika anda memiliki jaringan yang baik di kalangan UKM, e-commerce, atau logistik, anda sudah memiliki pelanggan potensial.</li>
+        <li><strong>Orang yang memiliki semangat layanan pelanggan:</strong> Kesuksesan dalam bisnes ini bergantung pada membangun hubungan yang baik dengan pelanggan dan memberikan layanan yang luar biasa.</li>
+        <li><strong>Orang yang bersedia untuk belajar dan beradaptasi:</strong> Industri pembungkusan terus berubah dengan kebutuhan pelanggan yang baru, jadi kesediaan untuk belajar adalah penting.</li>
+        <li><strong>Orang yang memiliki akses ke ruang penyimpanan:</strong> Anda akan memerlukan tempat untuk menyimpan stok kotak, jadi akses ke gudang atau ruang penyimpanan adalah penting.</li>
+      </ul>
+    </div>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Tips Sukses untuk Pembekal Semula
+    </h2>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      1. Fokus pada Layanan Pelanggan yang Luar Biasa
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Dalam bisnes kotak kardus, kompetisi adalah berdasarkan harga, kualitas, dan layanan. Memberikan layanan pelanggan yang luar biasa — respons cepat, kualitas konsisten, penghantaran tepat waktu — akan membuat pelanggan tetap loyal dan membedakan anda dari pembekal lainnya.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      2. Bangun Hubungan Jangka Panjang dengan Pelanggan
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Jangan hanya fokus pada penjualan sekali saja. Usahakan untuk membangun hubungan jangka panjang dengan pelanggan sehingga mereka akan kembali membeli lagi dan lagi. Pelanggan yang setia menghasilkan keuntungan yang lebih tinggi dan lebih stabil.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      3. Pahami Kebutuhan Pelanggan Anda
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Setiap jenis pelanggan memiliki kebutuhan yang berbeza. E-commerce memerlukan kotak yang ringan dan murah, logistik memerlukan kotak yang kuat dan dapat ditindis, pindah rumah memerlukan kotak yang besar dan tahan lama. Pahami kebutuhan setiap segment dan rekomendasikan produk yang tepat.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      4. Pertahankan Stok yang Cukup
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Jangan kehabisan stok ketika ada pelanggan yang ingin membeli. Pertahankan stok minimum yang cukup untuk memenuhi permintaan yang tidak terduga. Lakukan pesanan berulang secara teratur untuk memastikan anda tidak pernah kehabisan.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      5. Pasarkan Produk Anda Secara Aktif
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Jangan mengandalkan pelanggan untuk datang kepada anda. Pasarkan produk anda secara aktif melalui media sosial, laman web, grup perniagaan, acara dagang, dan jaringan pribadi anda. Semakin banyak orang yang tahu tentang anda, semakin banyak pelanggan yang akan anda dapatkan.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Mengapa Memilih Quinocycle Sebagai Pembekal Utama Anda
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Quinocycle telah melayani ratusan pembekal semula, UKM, dan perniagaan besar di Malaysia selama lebih 15 tahun. Kami memahami apa yang diperlukan untuk sukses dalam bisnes kotak kardus dan kami berkomitmen untuk mendukung kesuksesan anda.
+    </p>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Dengan harga yang kompetitif, kualitas yang konsisten, dan layanan pelanggan yang luar biasa, kami adalah mitra ideal untuk perjalanan anda sebagai pembekal semula. Kami tidak hanya menjual kotak — kami mendukung pertumbuhan bisnes anda.
+    </p>
+
+    <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        <strong>Siap untuk memulai perjalanan anda sebagai pembekal semula kotak kardus?</strong> Hubungi Quinocycle hari ini untuk bercerita tentang rancangan bisnes anda dan mari kita bekerja sama untuk kesuksesan bersama.
+      </p>
+      <a href={WA_LINK} target="_blank" class="inline-flex items-center gap-2 bg-primary text-on-primary font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-primary/90 transition-colors">
+        Hubungi Quinocycle Sekarang
+      </a>
+    </div>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Soalan Lazim (FAQ) Tentang Menjadi Pembekal Semula
+    </h2>
+
+    <div class="space-y-6 mt-6">
+      <div>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-3">
+          Berapa margin keuntungan yang boleh saya harapkan sebagai pembekal semula?
+        </h3>
+        <p class="font-body text-lg text-secondary leading-relaxed">
+          Margin keuntungan untuk pembekal semula kotak kardus biasanya berkisar dari 20-40%, bergantung pada harga satuan yang anda terima, volum pesanan, dan berapa harga yang anda jual kepada pelanggan anda. Pembekal semula yang menjual dalam jumlah besar kepada pelanggan korporat boleh mencapai margin yang lebih tinggi.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-3">
+          Apakah minimum pesanan untuk jadi pembekal semula Quinocycle?
+        </h3>
+        <p class="font-body text-lg text-secondary leading-relaxed">
+          Minimum pesanan untuk pembekal semula kami adalah RM 1,000 setiap kali pesan. Anda boleh memilih kombinasi saiz dan jenis kotak yang berbeza untuk memenuhi keperluan pelanggan anda. Semakin besar pesanan anda, semakin baik harga yang kami boleh tawarkan.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-3">
+          Bagaimana cara saya mencari pelanggan untuk kotak kardus?
+        </h3>
+        <p class="font-body text-lg text-secondary leading-relaxed">
+          Pelanggan untuk kotak kardus biasanya adalah UKM, e-commerce, restoran, pabrik pengepakan, dan syarikat logistik. Anda boleh memasarkan melalui media sosial, laman web sendiri, temu janji dagang, dan jaringan perniagaan lokal. Pentingkan layanan pelanggan yang baik dan kualitas produk yang konsisten untuk membina reputasi.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-3">
+          Apakah jenis dukungan yang Quinocycle berikan kepada pembekal semula?
+        </h3>
+        <p class="font-body text-lg text-secondary leading-relaxed">
+          Quinocycle memberikan dukungan penuh kepada pembekal semula termasuk: harga tetap yang kompetitif, maklumat produk untuk pemasaran anda, penghantaran yang andal dan tepat waktu, dan sokongan pelanggan yang responsif. Kami juga dapat membantu anda dengan pertanyaan teknis dari pelanggan anda.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-3">
+          Adakah syarat khusus untuk menjadi pembekal semula Quinocycle?
+        </h3>
+        <p class="font-body text-lg text-secondary leading-relaxed">
+          Tidak ada syarat yang ketat untuk menjadi pembekal semula kami. Anda hanya perlu berkomitmen untuk membeli dalam jumlah minimum RM 1,000 setiap kali pesanan dan menjaga hubungan bisnis yang profesional. Kami sambut semua jenis pembekal semula, dari operasi kecil hingga besar.
+        </p>
+      </div>
+    </div>
+  </article>
+</Layout>

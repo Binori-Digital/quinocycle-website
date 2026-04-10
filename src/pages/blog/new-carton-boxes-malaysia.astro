@@ -1,0 +1,336 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'New Carton Boxes Malaysia — Buy Wholesale from Quinocycle | Balakong Selangor',
+  description: 'Buy new carton boxes in Malaysia at wholesale prices. Single & double wall corrugated boxes, sizes S to XL, from RM 1.90/box. Delivery across Peninsular Malaysia. Min. order RM 1,000.',
+  date: '2026-04-10',
+  readTime: '7 min',
+  category: 'New Carton Boxes',
+  author: 'Quinocycle Team',
+  slug: 'new-carton-boxes-malaysia',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20like%20to%20enquire%20about%20your%20new%20carton%20boxes.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "en-MY",
+  "author": { "@type": "Organization", "name": "Quinocycle Sdn. Bhd.", "url": "https://www.quinocycle.com.my" },
+  "publisher": { "@type": "Organization", "name": "Quinocycle", "logo": { "@type": "ImageObject", "url": "https://www.quinocycle.com.my/logo.png" } },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.quinocycle.com.my/blog/${post.slug}` },
+  "keywords": "new carton boxes malaysia, buy new cardboard boxes wholesale, carton box supplier malaysia, corrugated boxes malaysia, packaging boxes wholesale selangor, new boxes balakong, kotak kardus baru malaysia"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What sizes of new carton boxes does Quinocycle offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quinocycle supplies new carton boxes in multiple sizes ranging from Small (S) to Extra Large (XL). Standard sizes include 6x4x4 inches, 8x6x6 inches, 12x9x9 inches, 16x12x12 inches, and custom sizes based on your requirements. All boxes meet Malaysian packaging standards and international quality certifications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do new carton boxes cost in Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "New carton boxes from Quinocycle start from RM 1.90 per box depending on size, material thickness, and order quantity. Prices vary for single-wall and double-wall corrugated boxes. Bulk orders of RM 1,000 minimum qualify for wholesale pricing with additional discounts for larger quantities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum order quantity for new boxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The minimum order amount for new carton boxes at Quinocycle is RM 1,000. This typically translates to several hundred boxes depending on the size and type selected. We offer flexible payment terms and can accommodate rush orders for urgent requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you deliver new carton boxes across Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Quinocycle delivers new carton boxes to all locations across Peninsular Malaysia. We are based in Balakong, Selangor, and service the Klang Valley, Cheras, Kajang, and Seri Kembangan areas with same-week delivery. Delivery rates are competitive and depend on location and order size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between single-wall and double-wall carton boxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Single-wall carton boxes are lighter and more cost-effective, suitable for lightweight items and general packaging. Double-wall carton boxes are thicker and provide superior protection for heavier or fragile products during shipping and storage. Double-wall boxes are ideal for international shipments and long-distance transportation."
+      }
+    }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Leading supplier of new carton boxes and packaging materials in Malaysia since 2010",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": { "@type": "PostalAddress", "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya", "addressLocality": "Balakong", "addressRegion": "Selangor", "postalCode": "43300", "addressCountry": "MY" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "priceRange": "RM 1.90 – RM 6.50 per box",
+  "areaServed": "Peninsular Malaysia"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <!-- Introduction -->
+    <section class="mb-12">
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        When your business needs reliable, high-quality packaging solutions, new carton boxes are the gold standard. Whether you're shipping products across Malaysia, protecting goods in storage, or expanding your logistics operations, choosing the right new carton boxes can make a significant difference in product safety, brand presentation, and overall cost-efficiency. Quinocycle Sdn. Bhd., based in Balakong, Selangor, has been supplying premium new carton boxes to businesses across Peninsular Malaysia since 2010.
+      </p>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        This comprehensive guide explores everything you need to know about new carton boxes in Malaysia—from types and sizes to pricing, benefits, and how to order from Quinocycle. Whether you're a small e-commerce startup, a large manufacturing facility, or a logistics company, you'll find practical insights to help you make the best purchasing decision for your business.
+      </p>
+    </section>
+
+    <!-- Types of New Carton Boxes -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Types of New Carton Boxes Available in Malaysia</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        New carton boxes come in various configurations designed for different industries and shipping requirements. Understanding these options helps you select the most cost-effective and protective solution for your products.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Single-Wall Corrugated Boxes</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Single-wall carton boxes feature one layer of fluted corrugated material between two layers of kraft paper. These boxes are lightweight, economical, and ideal for packaging lightweight to medium-weight items such as cosmetics, electronics, books, and clothing. They offer excellent protection during transport while keeping shipping costs minimal. Perfect for e-commerce businesses and retail packaging, single-wall boxes start from RM 1.90 per unit at Quinocycle.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Double-Wall Corrugated Boxes</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Double-wall carton boxes provide superior strength and protection with two layers of fluted material. These boxes are built to withstand heavy loads, rough handling, and long-distance shipping. Industries such as furniture manufacturing, automotive parts distribution, and food production rely heavily on double-wall boxes. While slightly more expensive than single-wall options, their durability and protective qualities make them invaluable for high-value or fragile items. Quinocycle offers double-wall boxes at competitive wholesale rates.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Custom Printed Carton Boxes</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Many businesses benefit from custom-printed carton boxes that feature brand logos, product information, handling instructions, and barcode printing. While Quinocycle specializes in standard new boxes, custom printing services can be arranged for bulk orders, enhancing brand visibility and professionalism during shipment.
+      </p>
+    </section>
+
+    <!-- Single Wall vs Double Wall -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Single-Wall vs Double-Wall: Which Should You Choose?</h2>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Single-Wall Carton Boxes</h3>
+        <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+          <li>Lower cost per unit (RM 1.90–RM 3.50)</li>
+          <li>Lightweight and easier to handle</li>
+          <li>Ideal for light to medium-weight items</li>
+          <li>Suitable for e-commerce and retail</li>
+          <li>Faster production and delivery</li>
+          <li>Better for cost-sensitive businesses</li>
+        </ul>
+      </div>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Double-Wall Carton Boxes</h3>
+        <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+          <li>Premium protection for heavy or fragile items</li>
+          <li>Higher load-bearing capacity</li>
+          <li>Ideal for long-distance and international shipping</li>
+          <li>Better for valuable or delicate products</li>
+          <li>Enhanced stackability and durability</li>
+          <li>Slightly higher cost but superior value over time</li>
+        </ul>
+      </div>
+
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        The choice between single-wall and double-wall boxes depends on your product weight, shipping distance, customer expectations, and budget. Most businesses use both types for different product lines. Quinocycle's expert team can help you determine the optimal box type for your specific needs.
+      </p>
+    </section>
+
+    <!-- Available Sizes & Prices -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Available Sizes and Wholesale Pricing</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Quinocycle maintains extensive inventory of standard carton box sizes to meet diverse business requirements. Prices are competitive and scale with order volume. Here's an overview of common sizes and typical pricing:
+      </p>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+          <li><strong>Small (4x4x4 inches):</strong> RM 1.90–RM 2.50 per box</li>
+          <li><strong>Medium (8x6x6 inches):</strong> RM 2.50–RM 3.50 per box</li>
+          <li><strong>Large (12x9x9 inches):</strong> RM 3.50–RM 4.50 per box</li>
+          <li><strong>Extra Large (16x12x12 inches):</strong> RM 4.50–RM 6.50 per box</li>
+          <li><strong>Custom Sizes:</strong> Quote upon request</li>
+        </ul>
+      </div>
+
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        All prices are wholesale rates with minimum order of RM 1,000. Bulk orders exceeding RM 5,000 qualify for additional discounts. Quinocycle also offers flexible payment terms and quick delivery across Peninsular Malaysia, including Balakong, Cheras, Kajang, Seri Kembangan, and the greater Klang Valley region.
+      </p>
+    </section>
+
+    <!-- Benefits of Buying New Boxes -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Key Benefits of Buying New Carton Boxes</h2>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Guaranteed Quality and Integrity</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        New carton boxes come with full structural integrity. No dents, damage, or wear—just pristine boxes ready to protect your products. This is critical for businesses that maintain strict quality standards or ship high-value items. You get consistent performance across every box in your order, reducing the risk of product damage claims and returns.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Professional Brand Appearance</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        New boxes enhance your brand image. Customers receiving products in pristine, professional packaging feel confident about their purchase and are more likely to leave positive reviews. This is especially important for e-commerce and retail businesses where unboxing experience influences customer satisfaction.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Compliance and Certification</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        New carton boxes meet Malaysian and international packaging standards. They comply with health and safety regulations for food products, electronics, and pharmaceuticals. If your business exports internationally or operates in regulated industries, new boxes ensure full compliance without additional validation.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Improved Shipping Rates</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Courier companies often provide better rates for shipments in new, undamaged packaging. Boxes in poor condition may incur surcharges or damage fees. Using new boxes can actually reduce your overall shipping costs through better negotiated rates with logistics providers.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Longer Shelf Life</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        New boxes maintain structural integrity throughout their lifespan. Whether stored for months or shipped across the country, they won't weaken or collapse. This is essential for businesses with irregular shipping schedules or those maintaining inventory buffers.
+      </p>
+    </section>
+
+    <!-- Who Should Buy New Boxes -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Who Should Buy New Carton Boxes?</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        While used boxes serve a purpose in certain industries, new carton boxes are essential for:
+      </p>
+
+      <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+        <li><strong>E-commerce businesses</strong> that prioritize customer experience and unboxing quality</li>
+        <li><strong>Food and beverage companies</strong> requiring food-grade, hygienic packaging</li>
+        <li><strong>Pharmaceutical and healthcare</strong> products requiring certified packaging</li>
+        <li><strong>Electronics manufacturers</strong> protecting sensitive components during shipping</li>
+        <li><strong>Premium brands</strong> where packaging reflects product quality</li>
+        <li><strong>Export-oriented businesses</strong> meeting international shipping standards</li>
+        <li><strong>High-value product shipping</strong> requiring maximum protection</li>
+        <li><strong>Newly launched startups</strong> building brand reputation</li>
+      </ul>
+
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        If your business handles valuable items, maintains quality standards, or prioritizes customer satisfaction, investing in new carton boxes from Quinocycle is a smart choice that pays dividends through reduced damage claims and improved customer satisfaction.
+      </p>
+    </section>
+
+    <!-- How to Order -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">How to Order New Carton Boxes from Quinocycle</h2>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Simple Ordering Process</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Quinocycle makes ordering new carton boxes straightforward and hassle-free. Here's how to get started:
+      </p>
+
+      <ol class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-3">
+        <li><strong>1. Contact Us:</strong> Reach out via WhatsApp at 016-891 6381, call 03-8962 6381, or email quinocycle@gmail.com</li>
+        <li><strong>2. Specify Your Requirements:</strong> Tell us your desired box size, quantity, single-wall or double-wall preference, and any special requirements</li>
+        <li><strong>3. Get a Quote:</strong> Our team provides a detailed quote within 24 hours with pricing, delivery timeline, and payment terms</li>
+        <li><strong>4. Place Order:</strong> Confirm the order with a signed quotation or purchase order</li>
+        <li><strong>5. Delivery:</strong> We arrange delivery across Peninsular Malaysia typically within 3-7 business days</li>
+        <li><strong>6. Payment:</strong> Flexible payment terms available including bank transfer, cheque, or cash on delivery</li>
+      </ol>
+
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Minimum order is RM 1,000. Rush orders and urgent deliveries can be accommodated for an additional fee. Our warehouse in Balakong, Selangor, serves all areas including Klang Valley, Cheras, Kajang, and Seri Kembangan.
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Frequently Asked Questions About New Carton Boxes</h2>
+
+      <div class="space-y-6 my-10">
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer hover:bg-surface-variant/50 transition-colors">
+          <summary class="font-headline font-bold text-on-surface">What makes Quinocycle's new boxes different from competitors?</summary>
+          <p class="font-body text-secondary mt-3 leading-relaxed">Quinocycle offers competitive wholesale pricing, fast delivery across Peninsular Malaysia, flexible minimum orders, and personalized service. Operating since 2010, we've built strong relationships with manufacturers ensuring consistent quality and supply. Our team understands local business needs and provides tailored solutions for diverse industries across Malaysia.</p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer hover:bg-surface-variant/50 transition-colors">
+          <summary class="font-headline font-bold text-on-surface">Can I get custom sizes or printed boxes?</summary>
+          <p class="font-body text-secondary mt-3 leading-relaxed">Yes, Quinocycle arranges custom sizes and printing services for bulk orders. Contact our team with your specifications, and we'll coordinate with our manufacturing partners to provide custom solutions. Lead times vary based on complexity, typically 2-3 weeks for custom orders.</p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer hover:bg-surface-variant/50 transition-colors">
+          <summary class="font-headline font-bold text-on-surface">Do you offer discounts for large orders?</summary>
+          <p class="font-body text-secondary mt-3 leading-relaxed">Absolutely. Our wholesale pricing starts at RM 1.90 per box, and we offer volume discounts for orders exceeding RM 5,000. Contact us for a customized quote based on your order size and specific requirements.</p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer hover:bg-surface-variant/50 transition-colors">
+          <summary class="font-headline font-bold text-on-surface">What is your return or exchange policy?</summary>
+          <p class="font-body text-secondary mt-3 leading-relaxed">Quinocycle guarantees quality for all new carton boxes. If boxes arrive damaged or defective, we replace them immediately at no cost. Please report issues within 48 hours of delivery for immediate resolution.</p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer hover:bg-surface-variant/50 transition-colors">
+          <summary class="font-headline font-bold text-on-surface">How long does delivery take to different parts of Malaysia?</summary>
+          <p class="font-body text-secondary mt-3 leading-relaxed">Standard delivery to most Peninsular Malaysia locations takes 3-7 business days from order confirmation. We deliver to Balakong, Klang Valley, Cheras, Kajang, Seri Kembangan, Kuala Lumpur, Selangor, and beyond. Delivery costs vary by location and order size. Express delivery options are available for urgent orders.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-12 text-center">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mb-4">Ready to Order New Carton Boxes?</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-8 max-w-2xl mx-auto">
+        Get premium quality new carton boxes at wholesale prices with fast delivery across Peninsular Malaysia. Contact Quinocycle today for a free quote and expert packaging consultation.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-primary/90 transition-colors">
+          WhatsApp Us Now
+        </a>
+        <a href="mailto:quinocycle@gmail.com" class="inline-flex items-center justify-center gap-2 bg-surface text-on-surface font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-surface/90 transition-colors border border-outline-variant">
+          Email Inquiry
+        </a>
+      </div>
+      <p class="font-body text-sm text-secondary mt-6">
+        📍 Located in Balakong, Selangor | 🚚 Serving all of Peninsular Malaysia | 📞 016-891 6381
+      </p>
+    </section>
+
+    <!-- Closing -->
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Conclusion</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Choosing new carton boxes for your business is an investment in product protection, brand reputation, and customer satisfaction. Quinocycle Sdn. Bhd. provides premium quality new carton boxes at competitive wholesale prices with exceptional service across Peninsular Malaysia. Whether you need single-wall boxes for light items or robust double-wall boxes for heavy products, our extensive inventory and expert team ensure you get exactly what your business needs.
+      </p>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Since 2010, we've partnered with hundreds of businesses across Balakong, Selangor, Klang Valley, Cheras, Kajang, Seri Kembangan, and beyond. Our commitment to quality, competitive pricing, and reliable service makes Quinocycle your trusted packaging partner. Contact us today to discuss your carton box requirements and discover why businesses across Malaysia choose Quinocycle for their packaging solutions.
+      </p>
+    </section>
+  </article>
+</Layout>

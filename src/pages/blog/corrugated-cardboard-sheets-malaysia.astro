@@ -1,0 +1,337 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Corrugated Cardboard Sheets Malaysia — Protective Packaging Supplier | Quinocycle',
+  description: 'Buy corrugated cardboard sheets in Malaysia for product protection, dividers, and custom packaging. Single & double wall options. Wholesale pricing from Quinocycle, Balakong Selangor.',
+  date: '2026-04-10',
+  readTime: '7 min',
+  category: 'Corrugated Cardboard',
+  author: 'Quinocycle Team',
+  slug: 'corrugated-cardboard-sheets-malaysia',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20like%20to%20enquire%20about%20your%20corrugated%20cardboard%20sheets.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "en-MY",
+  "author": { "@type": "Organization", "name": "Quinocycle Sdn. Bhd.", "url": "https://www.quinocycle.com.my" },
+  "publisher": { "@type": "Organization", "name": "Quinocycle", "logo": { "@type": "ImageObject", "url": "https://www.quinocycle.com.my/logo.png" } },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.quinocycle.com.my/blog/${post.slug}` },
+  "keywords": "corrugated cardboard sheets malaysia, corrugated sheet supplier malaysia, lembaran kadbod gelombang, cardboard sheet packaging, protective packaging malaysia, corrugated dividers, bulk cardboard sheets"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are corrugated cardboard sheets used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Corrugated cardboard sheets serve multiple purposes including product protection within boxes, internal dividers separating products, cushioning fragile items, protective backing for shipping, and custom packaging solutions. Industries use them for partitioning electronics, glassware, ceramics, automotive parts, machinery, and food products. Single sheets can also be formed into custom boxes or protective enclosures."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between flute types (A, B, C, E, F)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Flute type refers to the wave pattern size in corrugated sheets. A-flute is largest (4.8mm) with maximum strength. C-flute (3.2mm) balances protection and material. B-flute (2.4mm) offers strength in compact space. E-flute (1.6mm) is lightweight for light items. F-flute (0.8mm) is thinnest for minimal protection. Choice depends on item weight, fragility, and space constraints."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I order custom-sized corrugated sheets from Quinocycle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Quinocycle supplies corrugated sheets in standard sizes and can arrange custom cutting for bulk orders. We work with manufacturers to provide sheets tailored to your exact requirements. Contact us with your dimensions, quantity, and specific needs for a custom quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What industries benefit most from corrugated cardboard sheets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Electronics, furniture manufacturing, automotive parts, food and beverage, ceramics, glassware, cosmetics, pharmaceuticals, machinery, and fragile goods industries all rely heavily on corrugated sheets. Any business shipping delicate or valuable products benefits from proper internal protection corrugated sheets provide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate how many corrugated sheets I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Calculate based on: (1) Number of shipments monthly, (2) Items per shipment, (3) Number of dividers per box. For example, if shipping 100 boxes monthly with 4 dividers each, you need 400 sheets monthly. Add 20% buffer for waste and testing. Contact Quinocycle's team for help calculating your exact requirements."
+      }
+    }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Corrugated cardboard sheets supplier in Malaysia providing protective packaging solutions for diverse industries",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": { "@type": "PostalAddress", "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya", "addressLocality": "Balakong", "addressRegion": "Selangor", "postalCode": "43300", "addressCountry": "MY" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "priceRange": "RM 0.50 – RM 4.00 per sheet",
+  "areaServed": "Peninsular Malaysia"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <!-- Introduction -->
+    <section class="mb-12">
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        When shipping products, especially delicate or valuable items, the internal protection is just as important as the outer box. Corrugated cardboard sheets have become the packaging industry standard for protecting products during transit, providing internal support, and creating custom protective solutions. Whether you're an electronics manufacturer protecting sensitive components, a furniture maker shipping delicate items, or an e-commerce business shipping fragile goods, corrugated cardboard sheets offer reliable, cost-effective protection.
+      </p>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Quinocycle Sdn. Bhd., based in Balakong, Selangor, supplies premium corrugated cardboard sheets to businesses throughout Peninsular Malaysia. This comprehensive guide explains what corrugated sheets are, their applications, different types, and how to choose the right sheets for your business requirements. Whether you need standard off-the-shelf sheets or custom solutions tailored to your products, Quinocycle has the inventory, expertise, and service to meet your packaging needs.
+      </p>
+    </section>
+
+    <!-- What Are Corrugated Sheets -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">What Are Corrugated Cardboard Sheets?</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Corrugated cardboard sheets are panels made of kraft paper and fluted corrugated material. The characteristic wave or flute pattern creates air pockets that provide cushioning, strength, and rigidity while minimizing weight. This design has made corrugated cardboard the world's most widely used packaging material for protective shipping and internal packaging applications.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Basic Structure</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        A corrugated sheet typically consists of an outer kraft paper layer (called liners), a middle fluted layer, and potentially additional reinforcing layers for double-wall construction. The fluted middle layer creates the corrugated structure, while the kraft paper liners provide flat surface protection. This layered construction ensures durability while keeping weight and cost reasonable.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Why Industries Choose Corrugated Sheets</h3>
+      <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+        <li>Excellent cushioning for fragile items during shipping and handling</li>
+        <li>Lightweight design reduces shipping weight and costs</li>
+        <li>Recyclable and environmentally friendly material</li>
+        <li>Cost-effective compared to foam, plastic, or other protective materials</li>
+        <li>Versatile for multiple applications from dividers to protective backing</li>
+        <li>Easy to cut and customize for specific product shapes and sizes</li>
+        <li>Moisture resistance in protective applications</li>
+      </ul>
+    </section>
+
+    <!-- Types and Flute Grades -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Understanding Corrugated Sheet Types: Flute Grades Explained</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        The "flute" refers to the wave pattern in the middle layer of corrugated sheets. Different flute sizes and configurations offer varying levels of protection, weight, and rigidity. Understanding flute grades helps you select the optimal sheets for your specific products.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">A-Flute: Maximum Strength</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        A-flute features the largest wave pattern (approximately 4.8mm) creating maximum crush strength and stiffness. Use A-flute for heavy items, machinery parts, automotive components, and applications requiring maximum structural support. While it uses more material, the superior strength justifies the cost for heavy-duty applications. Ideal for internal bracing and support structures within boxes.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">C-Flute: Balanced Protection</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        C-flute waves measure approximately 3.2mm, balancing protection with material efficiency. This is the most commonly used flute grade for general packaging applications including dividers, protective layers, and cushioning for moderately fragile items. C-flute offers excellent value for most business requirements and works well with standard sized boxes.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">B-Flute: Compact Strength</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        B-flute waves are smaller at approximately 2.4mm, providing significant strength in a more compact profile. When space inside boxes is limited but protection is important, B-flute offers the right balance. This grade works especially well for products with defined shapes where space efficiency matters, such as electronics or glassware.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">E-Flute and F-Flute: Lightweight Options</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        E-flute (1.6mm) and F-flute (0.8mm) are micro-flutes providing minimal cushioning in the thinnest profile. These are used when weight is critical, such as for lightweight items, or when space constraints are extreme. E-flute and F-flute are less common in general packaging but essential for specific high-volume, lightweight applications.
+      </p>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Quick Flute Selection Guide</h3>
+        <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+          <li><strong>Heavy/Sturdy Items:</strong> A-flute or double-wall sheets</li>
+          <li><strong>General Purpose Protection:</strong> C-flute (most common choice)</li>
+          <li><strong>Space-Constrained Applications:</strong> B-flute or E-flute</li>
+          <li><strong>Lightweight Items:</strong> E-flute or F-flute</li>
+          <li><strong>Fragile/Valuable Products:</strong> Double-wall C-flute or A-flute</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Uses in Packaging -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Uses of Corrugated Cardboard Sheets in Packaging</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Corrugated sheets are incredibly versatile. Understanding their various applications helps you optimize your packaging operations and ensure products arrive safely.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Internal Dividers and Separators</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        One of the most common uses is creating dividers within shipping boxes. For example, a box containing 12 glass mugs might use corrugated sheets to create separate compartments, preventing items from touching and breaking during transit. Similarly, electronics businesses use dividers to separate sensitive components and cushion internal elements. Custom-cut dividers maximize space while ensuring product safety.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Protective Cushioning Layers</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Layering corrugated sheets at the bottom, sides, and top of boxes creates protective cushioning for fragile items. The fluted structure absorbs impact energy, reducing shock to products inside. This is critical for ceramics, glassware, furniture, and any items prone to damage from drops or rough handling during shipping.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Custom Protective Packaging</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Corrugated sheets can be cut and formed into custom protective solutions for uniquely shaped products. Furniture makers might create custom supports and bracing. Electronics manufacturers might form protective sleeves or corner guards. The material's workability makes it ideal for creating one-of-a-kind protective solutions without expensive custom manufacturing.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Protective Backing and Stiffening</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Adding corrugated sheets to the back of boxes increases stiffness and prevents box collapse under pressure. This is especially important for heavy items stacked during storage or transportation. The added rigidity ensures boxes maintain integrity throughout the supply chain.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Template and Pattern Creation</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Businesses use corrugated sheets to create custom packaging templates for one-time or limited-run products. Test packaging configurations with corrugated sheets before committing to larger manufacturing orders, saving development costs and time.
+      </p>
+    </section>
+
+    <!-- Industries Using Corrugated Sheets -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Industries That Rely on Corrugated Cardboard Sheets</h2>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Electronics and Technology</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Electronics manufacturers use corrugated sheets extensively to protect sensitive components, circuit boards, and fragile assemblies. Custom dividers prevent component movement, and protective layers cushion impact during the rough handling that occurs throughout shipping networks.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Furniture Manufacturing</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Furniture companies rely on corrugated sheets for corner protection, edge guards, and internal bracing. Protecting finished furniture during shipping preserves aesthetic quality and prevents costly damage claims from customers receiving scratched or broken items.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Ceramics and Glassware</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Ceramics manufacturers, tableware producers, and glassware companies depend on corrugated dividers and protective layers. The fragile nature of these products demands meticulous packaging with individual compartments and cushioning that corrugated sheets provide cost-effectively.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Automotive Parts</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Automotive suppliers use corrugated sheets for heavy parts protection and component organization. The strength of A-flute sheets handles weight while preventing vibration damage during long shipments.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Food and Beverage</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Food producers use corrugated sheets for product separation, moisture protection, and structural support in heavy boxes of canned or bottled goods. The moisture resistance of quality corrugated sheets prevents contamination.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">E-Commerce and Retail</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Online retailers use corrugated sheets to protect diverse products from books to cosmetics, ensuring safe delivery and positive unboxing experiences that encourage repeat purchases and positive reviews.
+      </p>
+    </section>
+
+    <!-- How to Order -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">How to Order Corrugated Cardboard Sheets from Quinocycle</h2>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Simple Ordering Process</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Ordering from Quinocycle is straightforward. Here's the process:
+      </p>
+
+      <ol class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-3">
+        <li><strong>1. Contact Us:</strong> Reach out via WhatsApp (016-891 6381), phone (03-8962 6381), or email (quinocycle@gmail.com)</li>
+        <li><strong>2. Specify Your Requirements:</strong> Tell us your desired sheet size, flute grade, quantity, and any special requirements</li>
+        <li><strong>3. Discuss Options:</strong> Our team provides recommendations on the best flute grade and sheet configuration for your products</li>
+        <li><strong>4. Get a Quote:</strong> We provide a detailed quote within 24 hours with pricing and delivery timeline</li>
+        <li><strong>5. Custom Solutions:</strong> If you need custom-cut sheets or sizes, we arrange manufacturing through our partner suppliers</li>
+        <li><strong>6. Place Order and Delivery:</strong> Confirm your order, arrange payment, and we deliver across Peninsular Malaysia</li>
+      </ol>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Standard Sizes Available</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Quinocycle maintains inventory of standard corrugated sheet sizes including A3, A4, A5, and various custom dimensions. Pricing typically ranges from RM 0.50 to RM 4.00 per sheet depending on size and flute grade. Minimum orders of RM 1,000 apply with additional discounts for larger bulk orders. Custom cutting and sizing is available for orders exceeding RM 2,000.
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Frequently Asked Questions About Corrugated Sheets</h2>
+
+      <div class="space-y-6 my-10">
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer hover:bg-surface-variant/50 transition-colors">
+          <summary class="font-headline font-bold text-on-surface">How do I choose between single-wall and double-wall corrugated sheets?</summary>
+          <p class="font-body text-secondary mt-3 leading-relaxed">Single-wall sheets (one fluted layer) work well for light to moderate protection and cost-sensitive applications. Double-wall sheets (two fluted layers) provide premium protection for heavy items, fragile goods, or items that must survive long-distance shipping. Consider your product weight and value to determine the best choice. Our team can recommend the optimal configuration.</p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer hover:bg-surface-variant/50 transition-colors">
+          <summary class="font-headline font-bold text-on-surface">Can corrugated sheets be printed with my company logo or branding?</summary>
+          <p class="font-body text-secondary mt-3 leading-relaxed">Yes, Quinocycle can arrange printing on corrugated sheets for bulk orders. Custom printing adds branding, handling instructions, or product information. Lead times vary based on design complexity, typically 2-3 weeks for custom printed orders. Contact us with your design specifications for a custom printing quote.</p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer hover:bg-surface-variant/50 transition-colors">
+          <summary class="font-headline font-bold text-on-surface">How are corrugated sheets typically cut or formed?</summary>
+          <p class="font-body text-secondary mt-3 leading-relaxed">Corrugated sheets can be cut using sharp utility knives for simple straight cuts, or custom-cut using industrial cutting equipment for complex shapes and patterns. Most businesses use basic hand tools for on-site customization, while larger operations use precision cutting machinery. Quinocycle can provide pre-cut sheets to your specifications.</p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer hover:bg-surface-variant/50 transition-colors">
+          <summary class="font-headline font-bold text-on-surface">What is the shelf life of corrugated cardboard sheets?</summary>
+          <p class="font-body text-secondary mt-3 leading-relaxed">Corrugated sheets maintain quality indefinitely when stored in dry conditions. Moisture is the primary concern—store sheets in dry environments away from moisture and humidity. Properly stored corrugated sheets can be used for years without degradation. We recommend maintaining inventory in climate-controlled storage areas.</p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer hover:bg-surface-variant/50 transition-colors">
+          <summary class="font-headline font-bold text-on-surface">Do you deliver corrugated sheets across Peninsular Malaysia?</summary>
+          <p class="font-body text-secondary mt-3 leading-relaxed">Yes, Quinocycle delivers corrugated sheets throughout Peninsular Malaysia, including Balakong, Klang Valley, Cheras, Kajang, Seri Kembangan, and all major cities. Standard delivery takes 3-7 business days from order confirmation. Express delivery options are available for urgent orders. Delivery costs vary based on location and order size.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-12 text-center">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mb-4">Need Corrugated Cardboard Sheets?</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-8 max-w-2xl mx-auto">
+        Protect your products with quality corrugated cardboard sheets from Quinocycle. Get expert advice on flute grades, custom cutting, and wholesale pricing tailored to your business needs.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-primary/90 transition-colors">
+          WhatsApp Inquiry
+        </a>
+        <a href="mailto:quinocycle@gmail.com" class="inline-flex items-center justify-center gap-2 bg-surface text-on-surface font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-surface/90 transition-colors border border-outline-variant">
+          Email for Quote
+        </a>
+      </div>
+      <p class="font-body text-sm text-secondary mt-6">
+        📍 Balakong, Selangor | 🚚 Peninsular Malaysia | 📞 03-8962 6381
+      </p>
+    </section>
+
+    <!-- Closing -->
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Conclusion</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Corrugated cardboard sheets are essential components of modern protective packaging across industries. Whether you need internal dividers for delicate glassware, protective cushioning for valuable electronics, or custom bracing for heavy machinery, corrugated sheets offer cost-effective, reliable solutions. Understanding flute grades, sheet types, and application best practices helps you optimize packaging operations and ensure products arrive safely.
+      </p>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Quinocycle has been supplying quality corrugated cardboard sheets to businesses across Malaysia since 2010. Our extensive inventory, expert team, and commitment to service make us your trusted packaging partner. Whether you're based in Balakong, Selangor, Klang Valley, Cheras, Kajang, Seri Kembangan, or anywhere across Peninsular Malaysia, we can provide the corrugated sheets your business needs at competitive prices. Contact us today to discuss your specific packaging requirements and discover how our products can improve your shipping operations.
+      </p>
+    </section>
+  </article>
+</Layout>

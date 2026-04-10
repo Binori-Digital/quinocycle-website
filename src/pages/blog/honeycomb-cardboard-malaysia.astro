@@ -1,0 +1,338 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Honeycomb Cardboard Malaysia — Heavy Duty Packaging | Quinocycle Balakong',
+  description: 'Honeycomb cardboard panels in Malaysia for heavy-duty packaging. Lightweight yet 3x stronger than standard corrugated. Ideal for furniture, machinery & glass. Wholesale supply.',
+  date: '2026-04-10',
+  readTime: '7 min',
+  category: 'Honeycomb Cardboard',
+  author: 'Quinocycle Team',
+  slug: 'honeycomb-cardboard-malaysia',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20like%20to%20enquire%20about%20your%20honeycomb%20cardboard.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "en-MY",
+  "author": { "@type": "Organization", "name": "Quinocycle Sdn. Bhd.", "url": "https://www.quinocycle.com.my" },
+  "publisher": { "@type": "Organization", "name": "Quinocycle", "logo": { "@type": "ImageObject", "url": "https://www.quinocycle.com.my/logo.png" } },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.quinocycle.com.my/blog/${post.slug}` },
+  "keywords": "honeycomb cardboard malaysia, honeycomb packaging malaysia, heavy duty cardboard malaysia, honeycomb panel supplier, kadbod honeycomb malaysia, furniture packaging malaysia, machinery packaging"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much stronger is honeycomb cardboard compared to standard corrugated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Honeycomb cardboard is approximately 3 times stronger than standard corrugated cardboard while remaining lighter. This exceptional strength-to-weight ratio comes from the honeycomb structure's distributed load design. For applications requiring premium protection without excessive weight, honeycomb cardboard delivers superior performance that justifies the higher cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the honeycomb cardboard structure and why is it so strong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Honeycomb cardboard features a hexagonal cell structure similar to bee honeycombs. This geometric design distributes impact forces efficiently across the entire panel, absorbing shock energy without failure. The interconnected cells work together to resist compression, tearing, and bending. The design principles of natural honeycombs have been proven to provide maximum strength with minimum material."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which industries use honeycomb cardboard the most?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Furniture manufacturers, automotive suppliers, machinery exporters, glass and ceramic shippers, and electronics companies are primary users. Any business shipping heavy items, valuable products, or goods over long distances benefits from honeycomb cardboard's superior protection and lighter weight compared to foam or plastic alternatives."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is honeycomb cardboard more expensive than regular corrugated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Honeycomb cardboard costs more per unit than standard corrugated cardboard. However, the superior strength allows use of thinner panels, potentially reducing overall material costs. For high-value items where damage protection justifies premium material cost, honeycomb provides excellent value. The investment prevents costly damage claims and product losses during shipping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can honeycomb cardboard be customized or printed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Quinocycle arranges custom cutting, sizing, and printing on honeycomb cardboard for bulk orders. Custom designs, company logos, and handling instructions can be printed on the kraft paper facing. Lead times vary based on customization complexity, typically 2-3 weeks for custom orders. Contact us with your specifications."
+      }
+    }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Honeycomb cardboard supplier in Malaysia providing heavy-duty packaging solutions for high-value and fragile products",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": { "@type": "PostalAddress", "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya", "addressLocality": "Balakong", "addressRegion": "Selangor", "postalCode": "43300", "addressCountry": "MY" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "priceRange": "RM 2.50 – RM 8.00 per panel",
+  "areaServed": "Peninsular Malaysia"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <!-- Introduction -->
+    <section class="mb-12">
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        When shipping valuable, heavy, or fragile items, protecting them from damage during transport is paramount. Honeycomb cardboard represents the pinnacle of protective packaging technology—combining exceptional strength with remarkable lightness to create packaging that exceeds the protection of standard corrugated cardboard while reducing shipping weight. Developed from the same principles that make honeycomb structures strong in nature, this specialized packaging material has revolutionized industries shipping high-value goods internationally.
+      </p>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Quinocycle Sdn. Bhd., based in Balakong, Selangor, supplies premium honeycomb cardboard panels to businesses throughout Peninsular Malaysia specializing in furniture, machinery, glass, ceramics, and electronics. This comprehensive guide explores honeycomb cardboard's unique properties, applications, advantages, and how to select the right honeycomb solution for your business requirements. Whether you're a manufacturer, exporter, or logistics company, honeycomb cardboard may be the game-changing solution to your packaging challenges.
+      </p>
+    </section>
+
+    <!-- What Is Honeycomb Cardboard -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">What Is Honeycomb Cardboard?</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Honeycomb cardboard is a specialized packaging material featuring a cellular core structured like honeycombs—interconnected hexagonal cells made from thin kraft paper. This core is sandwiched between two kraft paper liners, creating a panel with remarkable strength-to-weight characteristics. The design distributes forces across the entire structure, allowing honeycomb cardboard to bear loads equivalent to foam or plastic packaging at a fraction of the thickness.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Basic Structure and Components</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        A typical honeycomb cardboard panel consists of three main layers: the top kraft paper liner (facing), the honeycomb core made of spiral-wound kraft paper cells, and the bottom kraft paper liner (backing). The honeycomb core typically measures 8mm to 30mm in thickness depending on the intended application. The hexagonal cell structure is key to the material's exceptional properties.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Why Nature's Design Matters</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Honeycomb structures appear throughout nature because they provide optimal strength with minimal material. Bees construct honeycombs using the same geometric principles that honeycomb cardboard manufacturers apply. Each hexagonal cell shares walls with adjacent cells, distributing stress across the entire structure. When force is applied to any point, the load is distributed to surrounding cells, preventing concentration failure. This ancient design principle, refined through engineering, creates packaging stronger than materials that use many times more material.
+      </p>
+    </section>
+
+    <!-- Structure and Science -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">The Science Behind Honeycomb Cardboard's Strength</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Understanding why honeycomb cardboard is so strong helps explain why it's worth the investment for high-value shipments.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Load Distribution Mechanics</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        When force is applied to a honeycomb panel, the structure doesn't fail at a single point. Instead, the hexagonal cells distribute stress across multiple cells. The walls of one cell brace against adjacent cells, which brace against their neighbors. This continuous distribution prevents the localized collapse that can occur in foam or single-layer corrugated materials. The result is a panel that absorbs dramatic impacts without tearing or crushing.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Compression Resistance</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Honeycomb cardboard resists compression from stacking far better than corrugated cardboard. When multiple boxes are stacked during storage or transportation, honeycomb panels maintain structural integrity without collapsing under weight. This is critical for long-distance shipping where pallets may be stacked several boxes high.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Impact Absorption</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        The honeycomb structure absorbs impact energy effectively. When a box is dropped, the cellular structure compresses slightly, absorbing shock rather than transmitting it directly to the contents. This gradual energy absorption is superior to rigid materials that transfer impacts directly to products inside.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Lightweight Advantage</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Despite exceptional strength, honeycomb cardboard weighs significantly less than solid materials providing equivalent protection. The cellular structure is mostly air—up to 90% of the panel's volume is empty space within the cells. This means you get superior protection without proportional weight increase, reducing shipping costs compared to foam or plastic alternatives.
+      </p>
+    </section>
+
+    <!-- Applications -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Applications of Honeycomb Cardboard</h2>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Furniture Manufacturing and Shipping</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Furniture manufacturers extensively use honeycomb cardboard for edge protection, corner guards, and internal bracing during shipment. The superior strength prevents cosmetic damage to finished furniture, protecting investments in construction and finishing. With furniture typically representing higher value per unit, honeycomb protection justifies the material cost.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Glass and Ceramic Shipping</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Glass tableware, artwork, decorative items, and other ceramics are extremely fragile. Honeycomb cardboard's superior shock absorption and compression resistance make it ideal for protecting these items. The lightweight nature also helps manage shipping costs for products with relatively low density but high fragility.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Machinery and Equipment Export</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Heavy machinery requires robust protection during long-distance shipping. Honeycomb cardboard provides the strength needed to support machinery weight, protect surfaces from damage, and absorb vibrations during transportation. Industrial manufacturers rely on honeycomb panels for equipment export where protection is non-negotiable.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Electronics and Precision Instruments</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Electronics and precision instruments require shock protection combined with vibration damping. Honeycomb cardboard provides both, protecting delicate electronic components and ensuring instruments arrive in calibration during export shipments.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">International Export Packaging</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Products shipped internationally endure rough handling, multiple transfers, and extended transit times. Honeycomb cardboard provides the premium protection necessary to ensure products arrive undamaged despite the rigors of international logistics networks.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">Custom Protective Solutions</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Honeycomb cardboard can be custom-cut and formed into specialized protective solutions for uniquely shaped products. Fabricators can create corner guards, protective sleeves, bracing systems, and support structures tailored to specific products.
+      </p>
+    </section>
+
+    <!-- Honeycomb vs Corrugated -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Honeycomb vs Standard Corrugated Cardboard</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Understanding how honeycomb cardboard compares to standard corrugated helps you make the right material choice for your applications.
+      </p>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Comparison Overview</h3>
+        <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-3 list-inside">
+          <li><strong>Strength:</strong> Honeycomb is 3x stronger; ideal for heavy loads</li>
+          <li><strong>Weight:</strong> Honeycomb is lighter; reduces shipping costs</li>
+          <li><strong>Cost:</strong> Honeycomb costs more per unit; justified for high-value items</li>
+          <li><strong>Fragile Item Protection:</strong> Honeycomb superior; better shock absorption</li>
+          <li><strong>Long-Distance Shipping:</strong> Honeycomb better; handles rough handling</li>
+          <li><strong>Compression Resistance:</strong> Honeycomb superior; maintains shape under stacking</li>
+          <li><strong>Customization:</strong> Both can be custom-cut; honeycomb more complex</li>
+        </ul>
+      </div>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">When to Use Standard Corrugated</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Standard corrugated cardboard is appropriate for routine shipments of less fragile items, cost-sensitive applications, and B2B packaging where protection is adequate rather than premium. The cost savings justify use for high-volume, lower-value shipments.
+      </p>
+
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">When to Choose Honeycomb</h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Choose honeycomb for fragile items, valuable products, long-distance international shipping, heavy machinery, and situations where damage costs would exceed honeycomb material costs. The premium protection prevents costly damage claims and customer dissatisfaction.
+      </p>
+    </section>
+
+    <!-- Sizes and Specifications -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Honeycomb Cardboard Sizes and Specifications</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Quinocycle supplies honeycomb cardboard in various thicknesses and custom sizes to accommodate diverse applications.
+      </p>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Standard Thickness Options</h3>
+        <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+          <li><strong>8mm Honeycomb:</strong> Lightweight protection for moderately fragile items</li>
+          <li><strong>10mm Honeycomb:</strong> Balanced strength and weight for general applications</li>
+          <li><strong>15mm Honeycomb:</strong> Heavy-duty protection for fragile and valuable items</li>
+          <li><strong>20mm Honeycomb:</strong> Premium protection for extremely fragile or heavy goods</li>
+          <li><strong>30mm Honeycomb:</strong> Maximum protection for specialized applications</li>
+        </ul>
+      </div>
+
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Standard panel sizes include A1, A2, A3 formats. Quinocycle also provides custom-cut panels and edge treatments for specialized requirements. Kraft paper lining options include white, brown, and printed surfaces with company logos or handling instructions. Pricing typically ranges from RM 2.50 to RM 8.00 per panel depending on size and thickness.
+      </p>
+    </section>
+
+    <!-- Ordering -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">How to Order Honeycomb Cardboard from Quinocycle</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Ordering honeycomb cardboard from Quinocycle is straightforward. Here's the process:
+      </p>
+
+      <ol class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-3">
+        <li><strong>1. Contact Quinocycle:</strong> Reach out via WhatsApp (016-891 6381), phone (03-8962 6381), or email (quinocycle@gmail.com)</li>
+        <li><strong>2. Describe Your Application:</strong> Tell us what products you're protecting, required panel size, and expected volume</li>
+        <li><strong>3. Get Recommendations:</strong> Our team recommends the optimal honeycomb thickness and configuration for your needs</li>
+        <li><strong>4. Receive Quote:</strong> We provide detailed pricing within 24 hours, including custom options if needed</li>
+        <li><strong>5. Order Confirmation:</strong> Confirm your order with detailed specifications and arrange payment</li>
+        <li><strong>6. Delivery:</strong> We deliver across Peninsular Malaysia within 5-10 business days for standard orders</li>
+      </ol>
+
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Minimum orders typically start at RM 1,500 for honeycomb cardboard. Custom cutting, printing, and specialized configurations require minimum orders of RM 3,000 and lead times of 2-3 weeks. For urgent requirements, expedited options are available.
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Frequently Asked Questions About Honeycomb Cardboard</h2>
+
+      <div class="space-y-6 my-10">
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer hover:bg-surface-variant/50 transition-colors">
+          <summary class="font-headline font-bold text-on-surface">How much does honeycomb cardboard cost compared to foam or plastic?</summary>
+          <p class="font-body text-secondary mt-3 leading-relaxed">Honeycomb cardboard typically costs less than high-quality foam or plastic protective materials while providing equivalent or superior protection. The recyclable nature also appeals to environmentally conscious businesses. While more expensive than standard corrugated, honeycomb justifies the cost for high-value items where damage prevention is essential.</p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer hover:bg-surface-variant/50 transition-colors">
+          <summary class="font-headline font-bold text-on-surface">Is honeycomb cardboard recyclable?</summary>
+          <p class="font-body text-secondary mt-3 leading-relaxed">Yes, honeycomb cardboard is fully recyclable. It's made entirely from kraft paper and follows standard recycling processes. Many businesses appreciate honeycomb's environmental benefits—superior protection without the non-recyclable concerns of foam or plastic. This makes honeycomb an excellent choice for companies with sustainability commitments.</p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer hover:bg-surface-variant/50 transition-colors">
+          <summary class="font-headline font-bold text-on-surface">How is honeycomb cardboard manufactured?</summary>
+          <p class="font-body text-secondary mt-3 leading-relaxed">Honeycomb cardboard is manufactured by spiral-winding kraft paper into hexagonal cells, then laminating these cores between kraft paper liners using adhesive. Industrial equipment ensures consistent cell structure and strength. The manufacturing process is mature and well-established, ensuring consistent quality across different producers.</p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer hover:bg-surface-variant/50 transition-colors">
+          <summary class="font-headline font-bold text-on-surface">Can honeycomb panels be cut to custom shapes?</summary>
+          <p class="font-body text-secondary mt-3 leading-relaxed">Yes, Quinocycle arranges custom cutting of honeycomb panels to specialized shapes and sizes. Fabricators use sharp tools or specialized equipment to cut honeycomb without damaging the cell structure. Custom cutting adds to lead time (typically 2-3 weeks) but allows creation of perfectly fitted protective solutions for uniquely shaped products.</p>
+        </details>
+
+        <details class="bg-surface-variant/30 border border-outline-variant/20 rounded-xl p-5 cursor-pointer hover:bg-surface-variant/50 transition-colors">
+          <summary class="font-headline font-bold text-on-surface">Does honeycomb cardboard protect against moisture?</summary>
+          <p class="font-body text-secondary mt-3 leading-relaxed">Standard honeycomb cardboard provides moderate moisture protection. The kraft paper liners resist light moisture, but extended exposure to wet conditions can damage the structure. For moisture-sensitive applications or humid environments, request specialty kraft paper liners with water-resistant coatings. Contact Quinocycle about moisture-resistant honeycomb options.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-12 text-center">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mb-4">Protect Your Valuable Products with Honeycomb Cardboard</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-8 max-w-2xl mx-auto">
+        Experience the superior protection of honeycomb cardboard from Quinocycle. Get expert advice on thickness selection, custom sizing, and wholesale pricing for your specific shipping needs.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-primary/90 transition-colors">
+          WhatsApp for Details
+        </a>
+        <a href="mailto:quinocycle@gmail.com" class="inline-flex items-center justify-center gap-2 bg-surface text-on-surface font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-surface/90 transition-colors border border-outline-variant">
+          Email Inquiry
+        </a>
+      </div>
+      <p class="font-body text-sm text-secondary mt-6">
+        📍 Balakong, Selangor | 🚚 Peninsular Malaysia Delivery | 📞 016-891 6381
+      </p>
+    </section>
+
+    <!-- Closing -->
+    <section class="mb-8">
+      <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">Conclusion: The Right Material for Premium Protection</h2>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Honeycomb cardboard represents a technological advancement in protective packaging that combines the strength of rigid materials with the lightweight efficiency of modern engineering. For businesses shipping valuable, fragile, or heavy products—especially internationally—honeycomb cardboard delivers protection that standard corrugated cardboard simply cannot match. The investment in premium materials prevents damage claims, protects your brand reputation, and ensures customer satisfaction.
+      </p>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Quinocycle has been supplying quality honeycomb cardboard and specialized packaging solutions to industries throughout Malaysia since 2010. Our expertise in application selection, custom solutions, and competitive pricing makes us your ideal honeycomb cardboard partner. Whether you're based in Balakong, Selangor, Klang Valley, Cheras, Kajang, Seri Kembangan, or anywhere across Peninsular Malaysia, we can supply the honeycomb panels your business needs. Contact our team today to discuss your specific packaging challenges and discover how honeycomb cardboard can transform your shipping operations.
+      </p>
+    </section>
+  </article>
+</Layout>

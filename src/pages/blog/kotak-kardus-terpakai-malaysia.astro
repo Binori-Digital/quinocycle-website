@@ -1,0 +1,295 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Kotak Kardus Terpakai Malaysia — Jimat Sehingga 50% | Quinocycle Balakong',
+  description: 'Beli kotak kardus terpakai di Malaysia dari RM 0.90/kotak. Jimat sehingga 50% berbanding kotak baru. Diperolehi daripada kilang & gudang. Bekalan pukal. Balakong, Selangor.',
+  date: '2026-04-10',
+  readTime: '8 min',
+  category: 'Kotak Kardus Terpakai',
+  author: 'Pasukan Quinocycle',
+  slug: 'kotak-kardus-terpakai-malaysia',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20ingin%20bertanya%20tentang%20kotak%20kardus%20terpakai.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "ms-MY",
+  "author": { "@type": "Organization", "name": "Quinocycle Sdn. Bhd.", "url": "https://www.quinocycle.com.my" },
+  "publisher": { "@type": "Organization", "name": "Quinocycle", "logo": { "@type": "ImageObject", "url": "https://www.quinocycle.com.my/logo.png" } },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.quinocycle.com.my/blog/${post.slug}` },
+  "keywords": "kotak kardus terpakai malaysia, kotak terpakai murah, kotak bekas malaysia, beli kotak secondhand, used carton boxes malaysia, kotak pindah rumah murah, jimat kotak packaging"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Berapa harga kotak kardus terpakai di Malaysia?", "acceptedAnswer": { "@type": "Answer", "text": "Harga kotak kardus terpakai dari Quinocycle bermula dari RM 0.90 sekotak untuk pesanan pukal. Ini jauh lebih murah daripada kotak baru (RM 1.90-RM 6.50), memberikan penjimatan sehingga 50%." } },
+    { "@type": "Question", "name": "Apakah perbezaan kualiti antara kotak baru dan terpakai?", "acceptedAnswer": { "@type": "Answer", "text": "Kotak terpakai adalah kotak yang pernah digunakan sekali untuk penghantaran atau penyimpanan. Ia masih dalam keadaan baik dan boleh digunakan berkali-kali. Kotak baru memberikan perlindungan lebih, manakala kotak terpakai lebih ekonomik untuk kegunaan sekali atau penyimpanan jangka pendek." } },
+    { "@type": "Question", "name": "Apakah sumber kotak terpakai Quinocycle?", "acceptedAnswer": { "@type": "Answer", "text": "Kotak terpakai kami diperoleh daripada kilang, pusat pengedaran, dan gudang yang merawat kotak dengan baik. Setiap kotak dipilih dan diperiksa untuk memastikan ia memenuhi piawaian kualiti kami." } },
+    { "@type": "Question", "name": "Bolehkah saya menggunakan kotak terpakai untuk e-commerce?", "acceptedAnswer": { "@type": "Answer", "text": "Ya, kotak terpakai sesuai untuk e-commerce, terutama untuk produk yang tidak memerlukan perlindungan ekstrem. Bagaimanapun, untuk produk berharga atau rapuh, kotak baru adalah pilihan lebih selamat." } },
+    { "@type": "Question", "name": "Apakah manfaat alam sekitar membeli kotak terpakai?", "acceptedAnswer": { "@type": "Answer", "text": "Membeli kotak terpakai adalah pilihan ramah alam kerana ia mengurangkan permintaan untuk kotak baru, memotong pembuatan dan penghantaran yang memerlukan tenaga. Ia juga mengurangkan sisa pembungkusan di tapak pelupusan sampah." } }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Pembekal kotak kardus borong — baru dan terpakai — untuk perniagaan, pindah rumah, dan logistik di seluruh Semenanjung Malaysia.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": { "@type": "PostalAddress", "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya", "addressLocality": "Balakong", "addressRegion": "Selangor", "postalCode": "43300", "addressCountry": "MY" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "priceRange": "RM 0.90 – RM 6.50 sekotak",
+  "areaServed": "Semenanjung Malaysia"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">
+      Kotak Kardus Terpakai Malaysia — Jimat Sehingga 50% | Quinocycle Balakong
+    </h1>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Mencari cara untuk mengurangkan kos pembungkusan tanpa mengorbankan kualiti? Kotak kardus terpakai adalah solusi sempurna untuk perniagaan yang ingin berhemat sambil tetap memastikan produk mereka terlindungi dengan baik. Quinocycle Sdn. Bhd. di Balakong, Selangor, adalah pembekal terpercaya kotak kardus terpakai dengan harga terbaik di Malaysia — bermula dari RM 0.90 sekotak. Dengan membeli kotak terpakai, anda boleh jimat sehingga 50% dibanding kotak baru, menjadikannya pilihan ideal untuk pindah rumah, penyimpanan, dan logistik.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Apa Itu Kotak Kardus Terpakai?
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kotak kardus terpakai adalah kotak pembungkusan yang telah digunakan sekali untuk penghantaran atau penyimpanan, namun masih dalam keadaan baik dan boleh digunakan berkali-kali lagi. Tidak seperti kotak rosak atau yang tidak dapat digunakan, kotak terpakai dari Quinocycle dipilih dengan teliti daripada kilang, pusat pengedaran, dan gudang terpercaya untuk memastikan ia memenuhi piawaian kualiti tinggi. Setiap kotak diperiksa untuk memastikan tiada kerosakan besar, lipatan yang berlebihan, atau cacat yang akan menjejaskan kegunaan.
+    </p>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kotak terpakai secara struktural sama sekali dengan kotak baru — ianya masih mempunyai integriti kardus, daya cengkam yang baik, dan mampu melindungi produk anda dengan berkesan. Perbezaan utama adalah bahawa kotak tersebut telah melalui satu kitaran penggunaan, dan ia mungkin mempunyai tanda minor seperti kotoran, tanda tulis, atau kesan kecil yang tidak menjejaskan fungsinya.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Piawaian Kualiti Kotak Terpakai Quinocycle
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Walaupun kotak terpakai lebih murah, Quinocycle tidak berkompromi dalam hal kualiti. Setiap kotak terpakai yang kami jual telah melalui proses pemeriksaan ketat untuk memastikan ia memenuhi piawaian yang ditetapkan:
+    </p>
+
+    <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+      <li><strong>Integriti Struktural:</strong> Kotak mesti tidak mempunyai kerosakan besar, penyobekan, atau kemusnahan yang akan menjejaskan keupayaannya untuk menahan beban.</li>
+      <li><strong>Lapisan Kardus Utuh:</strong> Lapisan luar dan dalaman kotak mesti utuh tanpa berlubang atau pecahan yang mengakibatkan kelemahan.</li>
+      <li><strong>Lipatan dan Sambungan Kuat:</strong> Lipatan dan sambungan perekat mesti tetap kuat dan tidak terpisah.</li>
+      <li><strong>Tanpa Kelembapan Berlebihan:</strong> Kotak mesti tidak menunjukkan tanda kelembapan, kulat, atau bau yang tidak sedap.</li>
+      <li><strong>Saiz Konsisten:</strong> Kotak mesti mempunyai bentuk dan saiz yang benar tanpa lekukan atau ubah bentuk yang ketara.</li>
+    </ul>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Perbandingan Kos: Kotak Baru vs Terpakai
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Penjimatan kos adalah salah satu keuntungan terbesar membeli kotak terpakai. Mari lihat perbandingan harga antara kotak baru dan terpakai dari Quinocycle:
+    </p>
+
+    <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+      <li><strong>Kotak Saiz Kecil (S):</strong> Kotak baru RM 1.90, kotak terpakai RM 0.90 — penjimatan 52%</li>
+      <li><strong>Kotak Saiz Sederhana (M):</strong> Kotak baru RM 2.50-RM 3.50, kotak terpakai RM 1.20-RM 1.80 — penjimatan 45-50%</li>
+      <li><strong>Kotak Saiz Besar (L):</strong> Kotak baru RM 4.00-RM 5.50, kotak terpakai RM 1.80-RM 2.50 — penjimatan 40-55%</li>
+      <li><strong>Kotak Saiz Sangat Besar (XL):</strong> Kotak baru RM 5.50+, kotak terpakai RM 2.50+ — penjimatan hingga 50%</li>
+    </ul>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Dengan pesanan pukal (minimum RM 1,000), penjimatan ini berkali-kali ganda. Sebagai contoh, jika anda membeli 500 kotak saiz M, anda akan jimat RM 650 hingga RM 1,150 dengan memilih kotak terpakai!
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Kegunaan Terbaik Kotak Kardus Terpakai
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kotak kardus terpakai sesuai untuk banyak kegunaan. Berikut adalah contoh-contoh situasi di mana kotak terpakai adalah pilihan yang sempurna:
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      1. Pindah Rumah dan Perkhidmatan Removal
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kotak terpakai ideal untuk pindah rumah kerana ia cukup kuat untuk menahan barang rumah tangga. Pelanggan pindah rumah tidak memerlukan kotak yang kelihatan baru, mereka hanya memerlukan kotak yang boleh dipercayai untuk melindungi barang mereka. Ini adalah salah satu kegunaan terpopuler untuk kotak terpakai.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      2. Penyimpanan Jangka Pendek dan Menengah
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Untuk penyimpanan di gudang atau di rumah selama beberapa minggu atau bulan, kotak terpakai memberikan nilai terbaik. Kotak masih akan melindungi barang anda dari debu, kerosakan kecil, dan paparan cahaya.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      3. Penghantaran Lokal Produk Tak Rapuh
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Untuk produk yang tidak sangat rapuh atau mahal, seperti pakaian, kerusi plastik, atau peralatan rumah tangga, kotak terpakai memberikan perlindungan yang mencukupi dengan kos yang jauh lebih rendah.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      4. Tujuan Dalaman Kilang dan Logistik
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kilang, pusat pengedaran, dan pembekal logistik menggunakan kotak terpakai untuk pemindahan dalaman inventori, penyortiran, dan penyimpanan sementara. Dalam konteks ini, penampilan bukan prioritas — kekuatan dan kebolehpercayaan adalah.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      5. Program Daur Ulang dan Ekonomi Pekeliling
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Syarikat yang berkomitmen kepada keberlanjutan menggunakan kotak terpakai sebagai bahagian daripada inisiatif ekonomi pekeliling mereka, menunjukkan kepada pelanggan mereka tanggung jawab alam sekitar mereka.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Dari Mana Quinocycle Mendapatkan Kotak Terpakai?
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kotak terpakai Quinocycle diperoleh daripada sumber-sumber terpercaya dan berkualiti tinggi:
+    </p>
+
+    <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+      <li><strong>Kilang Pembuatan:</strong> Kilang yang mengeluarkan produk berkemas mendapatkan banyak kotak terpakai yang boleh digunakan semula dalam operasi mereka sendiri atau dijual kembali.</li>
+      <li><strong>Pusat Pengedaran dan Gudang:</strong> Pusat logistik besar menerima ribuan kotak setiap hari. Kotak yang masih dalam keadaan baik selepas digunakan sering dijual kepada pembekal daur ulang seperti Quinocycle.</li>
+      <li><strong>Pembekal dan Pengecer Borong:</strong> Perniagaan grosir seperti kedai runcit besar menggunakan kotak untuk penghantaran. Kotak terpakai mereka adalah sumber bekalan yang konsisten untuk kotak berkualiti baik.</li>
+      <li><strong>Syarikat E-Commerce dan Logistik:</strong> Dalam era e-commerce, syarikat penghantaran menerima kotak terpakai dari pelanggan dan penjual. Kotak yang masih baik disimpan dan dijual kembali.</li>
+    </ul>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Dengan bekerjasama dengan sumber-sumber ini, Quinocycle memastikan bekalan kotak terpakai yang konsisten dan berkualiti tinggi untuk memenuhi permintaan pelanggan kami di seluruh Malaysia.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Manfaat Alam Sekitar Membeli Kotak Terpakai
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Memilih kotak terpakai bukan hanya keputusan ekonomi yang pintar — ia juga pilihan yang bertanggungjawab terhadap alam sekitar. Berikut adalah bagaimana:
+    </p>
+
+    <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+      <li><strong>Mengurangkan Permintaan Pembuatan Baru:</strong> Setiap kotak terpakai yang dibeli mengurangkan permintaan untuk kotak baru, mengurangkan kebutuhan untuk memotong pokok dan memproses pulpa kertas.</li>
+      <li><strong>Mengurangi Emisi Karbon:</strong> Pembuatan kotak baru memerlukan tenaga dan pengangkutan. Dengan menggunakan kotak terpakai, anda mengurangkan jejak karbon operasi pembungkusan anda.</li>
+      <li><strong>Mengurangi Sampah di Tapak Pelupusan:</strong> Kotak yang digunakan dalam kitaran daur ulang tidak berakhir di tapak pelupusan sampah, mengurangkan tekanan pada infrastruktur pengurusan sisa.</li>
+      <li><strong>Sokongan Ekonomi Pekeliling:</strong> Menggunakan kotak terpakai adalah bahagian daripada model ekonomi pekeliling yang memanjangkan hayat produk dan mengurangkan pembaziran sumber.</li>
+    </ul>
+
+    <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3">
+        Hemat Hingga 50% dengan Kotak Terpakai
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Jangan membayar lebih untuk pembungkusan. Dengan kotak kardus terpakai dari Quinocycle, anda mendapatkan kualiti yang sama dengan harga yang jauh lebih rendah. Ideal untuk pindah rumah, penyimpanan, dan logistik lokal.
+      </p>
+      <a href={WA_LINK} class="inline-flex items-center gap-2 bg-primary text-on-primary font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-primary/90 transition-colors">
+        Hubungi untuk Harga Terpakai
+      </a>
+    </div>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Cara Membuat Pesanan Kotak Kardus Terpakai
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Proses pemesanan kotak terpakai dari Quinocycle sama mudah dengan kotak baru:
+    </p>
+
+    <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+      <li><strong>Hubungi Tim Kami:</strong> Panggil 03-8962 6381 atau WhatsApp 016-891 6381 untuk bercakap dengan tim penjualan.</li>
+      <li><strong>Beritahu Kebutuhan Anda:</strong> Ceritakan kepada kami berapa banyak kotak yang anda perlukan, saiz yang anda inginkan, dan jadual pengiriman yang sesuai.</li>
+      <li><strong>Dapatkan Sebutan Harga:</strong> Kami akan memberikan harga terbaik untuk pesanan anda berdasarkan ketersediaan stok terkini.</li>
+      <li><strong>Sahkan Pesanan:</strong> Setuju dengan harga dan jadual, dan kami akan menyahkan pesanan anda.</li>
+      <li><strong>Penghantaran Cepat:</strong> Kotak terpakai anda akan dihantar dengan cepat ke lokasi anda di Balakong, Lembah Klang, atau di mana sahaja di Semenanjung Malaysia.</li>
+    </ul>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Soalan Lazim (FAQ)
+    </h2>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Berapa harga kotak kardus terpakai di Malaysia?
+    </h3>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Harga kotak kardus terpakai dari Quinocycle bermula dari RM 0.90 sekotak untuk pesanan pukal. Ini jauh lebih murah daripada kotak baru (RM 1.90-RM 6.50), memberikan penjimatan sehingga 50%.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Apakah perbezaan kualiti antara kotak baru dan terpakai?
+    </h3>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kotak terpakai adalah kotak yang pernah digunakan sekali untuk penghantaran atau penyimpanan. Ia masih dalam keadaan baik dan boleh digunakan berkali-kali. Kotak baru memberikan perlindungan lebih, manakala kotak terpakai lebih ekonomik untuk kegunaan sekali atau penyimpanan jangka pendek.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Apakah sumber kotak terpakai Quinocycle?
+    </h3>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kotak terpakai kami diperoleh daripada kilang, pusat pengedaran, dan gudang yang merawat kotak dengan baik. Setiap kotak dipilih dan diperiksa untuk memastikan ia memenuhi piawaian kualiti kami.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Bolehkah saya menggunakan kotak terpakai untuk e-commerce?
+    </h3>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Ya, kotak terpakai sesuai untuk e-commerce, terutama untuk produk yang tidak memerlukan perlindungan ekstrem. Bagaimanapun, untuk produk berharga atau rapuh, kotak baru adalah pilihan lebih selamat.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Apakah manfaat alam sekitar membeli kotak terpakai?
+    </h3>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Membeli kotak terpakai adalah pilihan ramah alam kerana ia mengurangkan permintaan untuk kotak baru, memotong pembuatan dan penghantaran yang memerlukan tenaga. Ia juga mengurangkan sisa pembungkusan di tapak pelupusan sampah.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Kesimpulan
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kotak kardus terpakai dari Quinocycle menawarkan solusi pembungkusan yang cerdas, ekonomik, dan bertanggungjawab. Dengan harga bermula dari RM 0.90 sekotak, anda boleh jimat sehingga 50% berbanding kotak baru sambil tetap mendapatkan kualiti yang baik. Sama ada untuk pindah rumah, penyimpanan, logistik lokal, atau penggunaan kilang, kotak terpakai kami adalah pilihan yang tepat. Hubungi Quinocycle hari ini di Balakong, Selangor, untuk mendapatkan harga terbaik dan penghantaran cepat ke seluruh Lembah Klang dan Semenanjung Malaysia.
+    </p>
+
+    <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3">
+        Hubungi Quinocycle untuk Kotak Terpakai
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        <strong>Telefon:</strong> 03-8962 6381<br>
+        <strong>WhatsApp:</strong> 016-891 6381<br>
+        <strong>Alamat:</strong> No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor<br>
+        <strong>Jam Operasi:</strong> Isnin-Jumaat 09:00-18:00, Sabtu 09:00-13:00<br>
+        <strong>Pesanan Minimum:</strong> RM 1,000<br>
+        <strong>Harga:</strong> Dari RM 0.90 sekotak
+      </p>
+      <a href={WA_LINK} class="inline-flex items-center gap-2 bg-primary text-on-primary font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-primary/90 transition-colors">
+        Pesan Sekarang
+      </a>
+    </div>
+  </article>
+</Layout>

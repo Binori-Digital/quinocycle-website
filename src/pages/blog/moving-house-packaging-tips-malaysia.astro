@@ -1,0 +1,342 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Moving House in Malaysia — Expert Packaging Tips to Protect Everything You Own',
+  description: 'Planning a house move in Malaysia? Our complete guide covers what boxes to use, how to pack fragile items, room-by-room packing strategy, and how to save money on moving boxes.',
+  date: '2026-04-10',
+  readTime: '8 min',
+  category: 'Moving Tips',
+  author: 'Quinocycle Team',
+  slug: 'moving-house-packaging-tips-malaysia',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20am%20moving%20house%20and%20need%20packing%20boxes.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "en-MY",
+  "author": { "@type": "Organization", "name": "Quinocycle Sdn. Bhd.", "url": "https://www.quinocycle.com.my" },
+  "publisher": { "@type": "Organization", "name": "Quinocycle", "logo": { "@type": "ImageObject", "url": "https://www.quinocycle.com.my/logo.png" } },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.quinocycle.com.my/blog/${post.slug}` },
+  "keywords": "moving house malaysia, packing boxes for moving, moving tips malaysia, house moving packaging, pindah rumah packaging, kotak pindah rumah malaysia, bubble wrap for moving, how to pack fragile items malaysia"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How many boxes do I need for moving house in Malaysia?", "acceptedAnswer": { "@type": "Answer", "text": "A typical 3-bedroom Malaysian house requires 50-100 boxes. A studio apartment needs 20-30 boxes, while a 5+ bedroom home may need 150+ boxes. Account for kitchen equipment (heaviest), books, clothes, and decorative items. It's better to have extra boxes than to run short mid-move. Calculate 15-20 boxes per bedroom as a starting estimate." } },
+    { "@type": "Question", "name": "What type of boxes are best for moving house?", "acceptedAnswer": { "@type": "Answer", "text": "Double-walled corrugated boxes are best for moving because they provide superior strength and protection during handling. Standard moving boxes are typically 16x12x12 inches. Smaller boxes (12x12x12) work for heavy items like books and kitchen goods. Larger boxes (18x18x18) suit clothing and bulky items. Avoid very large boxes as they become too heavy to safely handle." } },
+    { "@type": "Question", "name": "How do I protect fragile items when moving?", "acceptedAnswer": { "@type": "Answer", "text": "For fragile items, use double-walled boxes, wrap items individually with bubble wrap (2-3 layers for ceramics/glassware), use honeycomb panels between items, fill void space with crinkle paper, and label boxes FRAGILE and HANDLE WITH CARE. Place heavier items on bottom of boxes, lighter fragile items on top. Never stack fragile boxes more than 2 boxes high." } },
+    { "@type": "Question", "name": "Can I reuse boxes from buying groceries or appliances?", "acceptedAnswer": { "@type": "Answer", "text": "Reusing boxes can save money, but they often aren't strong enough for moving. Grocery boxes deteriorate quickly, especially in Malaysia's humid climate. Appliance boxes work better but may be odd-sized. For critical items and fragile goods, use proper moving boxes. You can supplement your supply with quality recycled boxes, but the foundation should be new, double-walled moving boxes." } },
+    { "@type": "Question", "name": "How much does it cost to buy moving boxes in Malaysia?", "acceptedAnswer": { "@type": "Answer", "text": "New moving boxes in Malaysia cost RM 2-4 per box for standard sizes, depending on supplier and order quantity. For a 60-box move, expect RM 120-240. Quality used boxes cost RM 0.90-1.50 per box. Buying in bulk quantities (RM 1,000+ orders) from suppliers like Quinocycle offers better rates. Bubble wrap, tape, and other materials add RM 50-100. Total moving packaging costs typically range from RM 200-400." } }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Moving box supplier in Balakong, Selangor, Malaysia. Quality packing boxes, bubble wrap, moving supplies for house relocations.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": { "@type": "PostalAddress", "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya", "addressLocality": "Balakong", "addressRegion": "Selangor", "postalCode": "43300", "addressCountry": "MY" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "priceRange": "RM 0.90 – RM 6.50 per box",
+  "areaServed": "Peninsular Malaysia"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">
+      Moving House in Malaysia — Expert Packaging Tips to Protect Everything You Own
+    </h1>
+
+    <div class="flex flex-wrap gap-4 mb-8 text-secondary text-sm">
+      <span>{post.date}</span>
+      <span>•</span>
+      <span>{post.readTime} read</span>
+      <span>•</span>
+      <span>{post.category}</span>
+    </div>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-6">
+      Moving house is one of life's major undertakings, and in Malaysia—whether you're relocating within Kuala Lumpur, moving to Selangor's Klang Valley, or shifting across Peninsular Malaysia—proper packing can make the difference between a smooth transition and a stressful nightmare. This comprehensive guide provides expert tips for packing your entire household, protecting your belongings during transport, and optimizing your moving box budget. From Balakong to Cheras, from Kajang to Seri Kembangan, these strategies work for any Malaysian move.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Why Proper Packing Matters for Your Move
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Moving isn't just about transporting boxes from one location to another—it's about protecting everything you own during a process involving multiple handlings, stacking, vehicle movement, and environmental exposure. Poor packing leads to broken dishes, damaged furniture, stained clothing, and lost items. Malaysia's tropical climate adds complexity: high humidity during the rainy season can damage electronics and papers, intense heat can warp certain materials, and sudden downpours pose moisture risks during outdoor loading/unloading.
+    </p>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Professional-quality packing using appropriate materials protects your belongings and reduces stress. When you invest in proper boxes, protective materials, and smart organization, your move becomes more efficient and your items arrive safely at your new home.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      How Many Boxes Do You Need? Room-by-Room Guide
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Estimating box requirements is crucial for budget planning and moving logistics. Underestimating forces costly last-minute rushes; overestimating wastes money and storage space. Here's a practical guide for typical Malaysian households:
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Bedroom Packing Requirements
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Each bedroom requires approximately 15-20 moving boxes, depending on furniture and belongings. This includes clothes (hanging items go in wardrobe boxes or on rails, while folded items pack into standard boxes), bedding, pillows, shoes, and personal items. A master bedroom with en-suite storage typically needs more—around 20-25 boxes. Guest bedrooms with minimal contents may need only 10-12 boxes. Kid's bedrooms usually require 15-20 boxes accounting for toys, books, and clothes.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Kitchen Packing Requirements
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      The kitchen is the most packing-intensive room. Most Malaysian homes require 20-30 boxes for complete kitchen packing. Small items like utensils, gadgets, and food require multiple small boxes. Glassware, dishes, and cookware need protective packing with bubble wrap. Appliances require careful wrapping. Pantry items add additional volume. Prioritize packing the kitchen early since you'll use fewer kitchen items as moving day approaches.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Living and Dining Room Packing
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Living and dining areas typically require 15-25 boxes combined. Decorative items, books, media, artwork, and smaller furniture pieces go into boxes. Larger furniture is typically wrapped rather than boxed. Many families also have additional items stored in living spaces—extra dishes, serving pieces, decorative collections—that add to packing volume.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Bathroom and Laundry Area Packing
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Bathrooms require 5-10 boxes depending on size and storage. Include toiletries (pack liquids carefully to prevent leaks), towels, bath mats, medicines, and cleaning supplies. Laundry areas contain detergents and laundry supplies that require careful packing, particularly liquids that can damage other items if they spill. Keep some daily-use items separate for access until the last day.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      General Estimation Formula
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      As a rule of thumb: studio apartments require 20-30 boxes, 1-bedroom apartments 30-50 boxes, 2-bedroom homes 50-80 boxes, 3-bedroom homes 80-120 boxes, and 4+ bedroom homes 120-150+ boxes. These figures assume moderate furnishing levels. Highly furnished homes or those with extensive collections (books, hobbies, etc.) may need 20-30% more boxes. Always order extra—having unused boxes is better than running short during the move.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      What Type of Boxes to Use for Moving
+    </h2>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Double-Walled vs. Single-Walled Boxes
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Double-walled corrugated boxes are essential for moving house. They provide superior protection against crushing, tearing, and impacts that inevitably occur during moving. Single-walled boxes are too fragile for moving—they collapse under stacking weight and provide inadequate protection. Even if single-walled boxes cost less initially, the risk of damaged belongings makes double-walled boxes the only practical choice. Most moving boxes sold in Malaysia are double-walled C-flute corrugated, costing RM 2-4 per box from quality suppliers.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Standard Moving Box Sizes
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Most moving operations use three primary box sizes. The 16x12x12 inch box is the standard all-purpose moving box, suitable for most items. The 12x12x12 box is smaller, ideal for heavy items like books, dishes, and kitchen supplies—smaller dimensions prevent boxes from becoming too heavy to safely handle. The 18x18x18 box is larger, perfect for clothing, bedding, and bulky lightweight items. Having a mix of sizes allows optimized packing and prevents wasted space.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Specialty Boxes for Moving
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Wardrobe boxes (tall boxes designed for hanging clothes) preserve clothing condition and save folding time. Mirror boxes protect large flat items like artwork and mirrors. Dish pack boxes (extra-strong with interior dividers) prevent dish damage. These specialty boxes cost more but provide significant protection for specific items. For a typical move, 5-10 wardrobe boxes and 1-3 specialty boxes for fragile items are usually sufficient.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      How to Pack Fragile Items Safely
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Fragile items deserve special attention. Here's the systematic approach professional movers use:
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      The Bubble Wrap Method
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Wrap each fragile item individually in bubble wrap, using 2-3 layers for delicate items like ceramics and glassware. Secure the wrap with tape. Wrap plates individually rather than stacking them unwrapped, then separate with cardboard dividers. For dishes, wrap stacks of 3-5 plates together with bubble wrap, then place in boxes with dividers between wrapped stacks. This method provides maximum protection during transport.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Using Honeycomb Panels
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Honeycomb panels provide lightweight cushioning excellent for protecting fragile items. Place a panel in the box bottom, position wrapped items on it, add another panel, then additional items, finishing with a top panel. This creates a cushioning structure that prevents items from touching box walls and absorbs impacts during transport. Honeycomb panels are increasingly popular in Malaysia because they're recyclable and cost-effective compared to bubble wrap.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Proper Box Construction for Fragile Items
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Start with double-walled boxes. Apply strong packing tape to all seams—bottom seams especially, since they bear weight. Use quality tape designed for packing. Use the H-taping method (three horizontal lines) rather than just one line down the seam. For extremely fragile items, consider triple-taping (multiple passes of tape). Proper sealing prevents boxes from splitting under stacking weight.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Void Space Filling
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Never leave empty space in boxes with fragile items. Fill any voids with crinkle paper, newspaper, or bubble wrap. Empty space allows items to shift and collide during movement, causing breakage. Fill carefully—avoid compacting crinkle paper too tightly, which reduces its cushioning effectiveness. Aim for snug, secure packing where nothing moves when you gently shake the box.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Room-by-Room Packing Strategy and Labeling System
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Systematic packing and clear labeling make unpacking infinitely easier and prevent lost items.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Packing Room by Room
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Pack one room completely before starting another. This maintains organization and prevents items from multiple rooms becoming mixed. Start with rooms you use least frequently (guest bedrooms, storage areas), then progress to daily-use spaces (kitchen, bathrooms) toward moving day. This approach allows you to continue living in key rooms while packing is underway and prevents disruption to daily life.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Labeling System
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Label every box clearly with the destination room and contents. Use a permanent marker or printed labels. Format: "BEDROOM 1 - CLOTHES & SHOES" or "KITCHEN - GLASSWARE (FRAGILE)." Create a simple numbering system—for example, B1-1, B1-2, B1-3 for bedroom 1 boxes. Keep a master list matching numbers to contents. This system allows quick location of specific items after moving and helps identify lost boxes immediately if needed.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Color-Coding Strategy
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Use colored markers or stickers to identify destination rooms at a glance. For example: red for bedroom 1, blue for bedroom 2, green for kitchen, yellow for living room. This visual system allows movers to quickly identify which room each box belongs to without reading detailed labels, speeding up unloading significantly.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Essential Moving Day Checklist
+    </h2>
+
+    <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+      <li><strong>Pack a "First Night" box:</strong> Include toiletries, medications, chargers, pajamas, and basic kitchen items needed before your main shipment is unpacked.</li>
+      <li><strong>Secure valuables:</strong> Keep important documents, jewelry, and electronics with you, not in the moving vehicle.</li>
+      <li><strong>Test box durability:</strong> Before loading the vehicle, test a few packed boxes by gently shaking them—nothing should shift or rattle.</li>
+      <li><strong>Load strategically:</strong> Place heavier boxes on bottom, lighter boxes on top. Fragile items go in the vehicle's interior, not near edges.</li>
+      <li><strong>Protect from weather:</strong> Cover the vehicle load with tarps, especially during Malaysia's rainy season. Items can get soaked during loading/unloading.</li>
+      <li><strong>Drive carefully:</strong> Avoid rough roads and sharp turns that cause box shifting. Drive smoothly to minimize impact on contents.</li>
+      <li><strong>Unload systematically:</strong> Have someone direct boxes to appropriate rooms using your color-coding system. Verify each box arrives at its destination.</li>
+    </ul>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Cost-Saving Moving Tips
+    </h2>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      New vs. Used Boxes
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      New double-walled moving boxes cost RM 2-4 per unit, while quality used boxes cost RM 0.90-1.50 per unit from suppliers like Quinocycle in Balakong. For a 80-box move, buying all new boxes costs RM 160-320. Using used boxes cuts this to RM 72-120. However, use only quality used boxes (not grocery boxes or damaged units) to ensure adequate protection. A practical approach: use new boxes for fragile items and heavier goods, and quality used boxes for clothes, bedding, and non-fragile items.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Reusing Materials from Home
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Gather boxes from recent online purchases, appliance deliveries, and grocery stores. While not ideal for the main packing, these can supplement your supply for non-critical items. Use your own newspaper, towels, and clothing as packing material instead of buying new bubble wrap. Wrap items in clothes, towels, and linens to serve double duty. Use socks and t-shirts inside fragile items instead of crinkle paper.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Bulk Ordering for Price Breaks
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Most Malaysian suppliers require minimum orders of RM 1,000 to access wholesale pricing. A 60-80 box move typically costs RM 1,000-1,500 in materials (boxes plus tape, bubble wrap, and honeycomb). Ordering enough for your complete move in one transaction usually unlocks better per-unit pricing than buying smaller quantities. Contact Quinocycle directly to discuss your specific needs and potential bulk pricing.
+    </p>
+
+    <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+      <h3 class="font-headline text-xl font-bold text-on-surface mb-3">
+        Moving House in Malaysia? Get Quality Packing Boxes
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Quinocycle supplies quality packing boxes and moving materials to families relocating throughout Malaysia. Whether you're moving within Selangor, Klang Valley, Balakong, Kajang, Cheras, Seri Kembangan, or elsewhere across Peninsular Malaysia, we provide:
+      </p>
+      <ul class="font-body text-lg text-secondary leading-relaxed mb-6 space-y-2 list-disc list-inside">
+        <li>Double-walled moving boxes from RM 2-4 per unit</li>
+        <li>Quality used boxes from RM 0.90 per unit</li>
+        <li>Bubble wrap, honeycomb panels, and packing tape</li>
+        <li>RM 1,000 minimum for wholesale pricing</li>
+        <li>Fast delivery across Peninsular Malaysia</li>
+      </ul>
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-primary text-on-primary font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-primary/90 transition-colors">
+        Order Moving Boxes Now
+      </a>
+    </div>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Frequently Asked Questions About Moving House Packing
+    </h2>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      How many boxes do I need for moving house in Malaysia?
+    </h3>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      A typical 3-bedroom Malaysian house requires 80-120 boxes, depending on furnishing and belongings. Studios need 20-30 boxes; 1-bedroom apartments 30-50; 2-bedroom 50-80; 5+ bedrooms 150+ boxes. Calculate approximately 15-20 boxes per bedroom, 20-30 for the kitchen, and 15-25 for living areas. It's better to order extra than to run short during moving.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      What type of boxes are best for moving house?
+    </h3>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Double-walled corrugated boxes are essential for moving. Standard sizes are 16x12x12 inches for general items, 12x12x12 inches for heavy items, and 18x18x18 inches for bulky lightweight items. These boxes provide adequate strength for stacking, handling, and protecting contents. Single-walled boxes collapse under moving stress and shouldn't be used.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      How do I protect fragile items when moving?
+    </h3>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Wrap items individually with 2-3 layers of bubble wrap, use honeycomb panels between items, fill void space with crinkle paper, and label boxes FRAGILE. Pack heavier items on box bottoms, lighter items on top. Use double-walled boxes with reinforced seams. Never stack fragile boxes more than 2 boxes high during transport.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Can I reuse boxes from buying groceries or appliances?
+    </h3>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Grocery boxes aren't suitable for moving—they're too fragile. Appliance boxes work for non-critical items but aren't designed for moving's rigors. Supplement your moving box supply with quality used boxes (RM 0.90-1.50 per unit) rather than relying on recycled grocery boxes. Use recycled boxes only for non-fragile items like clothing and bedding.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      How much does it cost to buy moving boxes in Malaysia?
+    </h3>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      New moving boxes cost RM 2-4 per unit; quality used boxes cost RM 0.90-1.50 per unit. For an 80-box move, new boxes cost RM 160-320 total; used boxes cost RM 72-120. Protective materials (bubble wrap, tape, honeycomb) add RM 50-100. Total packaging for a typical house move costs RM 250-450. Bulk orders of RM 1,000+ often provide better pricing.
+    </p>
+  </article>
+</Layout>

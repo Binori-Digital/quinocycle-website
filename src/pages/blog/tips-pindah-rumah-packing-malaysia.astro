@@ -1,0 +1,365 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Tips Pindah Rumah Malaysia — Panduan Packing Lengkap untuk Pindahan Selamat',
+  description: 'Merancang pindah rumah di Malaysia? Panduan lengkap kami merangkumi jenis kotak yang sesuai, cara membungkus barang rapuh, strategi packing bilik demi bilik, dan cara jimat wang pada kotak pindah.',
+  date: '2026-04-10',
+  readTime: '7 min',
+  category: 'Tips Pindah Rumah',
+  author: 'Pasukan Quinocycle',
+  slug: 'tips-pindah-rumah-packing-malaysia',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20ingin%20bertanya%20tentang%20kotak%20pindah%20rumah%20anda.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "ms-MY",
+  "author": { "@type": "Organization", "name": "Quinocycle Sdn. Bhd.", "url": "https://www.quinocycle.com.my" },
+  "publisher": { "@type": "Organization", "name": "Quinocycle", "logo": { "@type": "ImageObject", "url": "https://www.quinocycle.com.my/logo.png" } },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.quinocycle.com.my/blog/${post.slug}` },
+  "keywords": "tips pindah rumah malaysia, kotak pindah rumah, packing barang pindah, cara pack barang rapuh, pindah rumah selangor, kotak pindah murah malaysia, bubble wrap pindah rumah, checklist pindah rumah"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Berapa kotak yang saya perlukan untuk pindah rumah?", "acceptedAnswer": { "@type": "Answer", "text": "Jumlah kotak bergantung pada saiz rumah dan jumlah barang. Sebagai panduan umum: rumah 2-bilik memerlukan 50-80 kotak, rumah 3-bilik 80-120 kotak, dan rumah 4-bilik 120-150 kotak. Selalu beli 10-20% lebih banyak untuk memastikan anda tidak kehabisan kotak di tengah packing." } },
+    { "@type": "Question", "name": "Apakah cara terbaik membungkus barang rapuh?", "acceptedAnswer": { "@type": "Answer", "text": "Untuk barang rapuh seperti cawan dan gelas, gulung setiap item dengan kertas berkualiti atau bubble wrap. Letakkan lapisan bubble wrap di dasar kotak, kemudian susun barang dengan rapi dan isi sela-sela dengan packing paper atau packing peanuts. Tutup kotak dan label dengan jelas 'FRAGILE' atau 'RAPUH'." } },
+    { "@type": "Question", "name": "Kotak pindah rumah baru atau terpakai — mana lebih baik?", "acceptedAnswer": { "@type": "Answer", "text": "Kotak pindah baru lebih kuat dan lebih sesuai untuk barang berharga atau rapuh. Kotak terpakai adalah pilihan yang cost-effective untuk pakaian, buku, dan barang yang tidak rapuh. Quinocycle menawarkan kotak baru dari RM 1.90/kotak dan terpakai dari RM 0.90/kotak. Gunakan kombinasi kedua-dua untuk mengoptimumkan kos." } },
+    { "@type": "Question", "name": "Bagaimana cara mengorganisir packing agar mudah?", "acceptedAnswer": { "@type": "Answer", "text": "Pack bilik demi bilik dan label setiap kotak dengan nama bilik dan senarai isi kandungan. Gunakan marker dan label sticker untuk penandaan yang jelas. Kemasan kotak dengan warna berbeza untuk bilik berbeza (contohnya, merah untuk bilik tidur, biru untuk dapur) juga memudahkan identifikasi. Siapkan 'kotak harian' dengan item yang anda perlukan pada hari pertama di rumah baru." } },
+    { "@type": "Question", "name": "Bagaimana cara jimat wang pada kotak pindah?", "acceptedAnswer": { "@type": "Answer", "text": "Gunakan kotak terpakai yang masih berkualiti — ia menjimatkan sehingga 60% daripada kotak baru. Kumpul kotak dari kedai, restoran, atau rakan yang baru pindah. Jika anda menggunakan kurier seperti UPS atau DHL, minta kotak bekas mereka yang sering tersedia dengan percuma. Belanja dalam jumlah besar dari pembekal seperti Quinocycle untuk harga pukal yang lebih baik." } }
+  ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Pembekal kotak kardus borong — baru dan terpakai — untuk perniagaan, pindah rumah, dan logistik di seluruh Semenanjung Malaysia.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": { "@type": "PostalAddress", "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya", "addressLocality": "Balakong", "addressRegion": "Selangor", "postalCode": "43300", "addressCountry": "MY" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "priceRange": "RM 0.90 – RM 6.50 sekotak",
+  "areaServed": "Semenanjung Malaysia"
+};
+---
+
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">
+      Tips Pindah Rumah Malaysia — Panduan Packing Lengkap untuk Pindahan Selamat
+    </h1>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Pindah rumah adalah salah satu peristiwa paling menegangkan dalam hidup seseorang. Di Malaysia, dengan iklim yang panas dan kelembapan tinggi, serta perjalanan dari rumah lama ke rumah baru yang sering melibatkan perjalanan melalui kota yang sesak, packing yang baik adalah kunci untuk memastikan semua barang anda tiba dengan selamat dan dalam keadaan sempurna.
+    </p>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Panduan lengkap ini membimbing anda melalui setiap aspek pindah rumah di Malaysia — dari mengira jumlah kotak yang anda perlukan, memilih jenis kotak yang sesuai, membungkus barang rapuh dengan betul, hingga strategi packing yang efisien dan cara menghemat wang pada kotak pindah. Sama ada ini pindahan pertama anda atau anda telah berpindah berkali-kali, tips dan trik di sini akan membuat proses pindah rumah menjadi lebih mudah dan kurang stres.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Berapa Banyak Kotak yang Anda Perlukan? Panduan Bilik Demi Bilik
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Salah satu soalan paling umum yang ditanya oleh orang yang hendak pindah adalah "Berapa kotak yang saya perlukan?" Jawapan bergantung pada saiz rumah anda, jumlah barang, dan seberapa banyak anda ingin menyimpan sesuatu. Berikut adalah panduan berdasarkan saiz rumah dan bilik:
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Bilik Tidur Utama
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Bilik tidur utama biasanya memerlukan 15-20 kotak untuk pakaian, selimut, bantal, dan barang peribadi. Jika anda mempunyai almari yang besar atau banyak pakaian, tambah 5-10 kotak lagi. Gunakan kotak bersaiz sederhana (medium) untuk kemudahan mengangkat, terutama untuk pakaian yang berat.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Bilik Tidur Anak-Anak
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Setiap bilik tidur anak-anak memerlukan 10-15 kotak untuk pakaian, mainan, dan alat sekolah. Jika bilik dipenuhi dengan mainan, buku, dan barang penghiburan, gunakan 20-25 kotak. Libatkan anak-anak dalam packing — ini membantu mereka memahami proses dan membuat mereka lebih bersemangat tentang rumah baru.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Dapur
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Dapur adalah ruangan paling kompleks untuk dikemas. Gunakan 15-25 kotak untuk peralatan dapur, piring, cawan, gelas, dan barang-barang dapur lainnya. Barang-barang dapur sering kali rapuh, jadi gunakan kotak yang lebih kecil dan gunakan bubble wrap atau packing paper untuk melindungi setiap item.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Ruang Tamu dan Ruang Makan
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Gunakan 10-15 kotak untuk hiasan, buku, elektronik kecil, dan barang-barang dekorasi. Barang elektronik memerlukan perhatian khusus — simpan kotak asal jika mungkin atau gulung dengan hati-hati dengan bubble wrap.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Ruang Pejabat/Bilik Kerja
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Ruang pejabat memerlukan 5-10 kotak untuk buku, dokumen, dan peralatan pejabat. Buku sangat berat, jadi gunakan kotak yang lebih kecil dan jangan isi sepenuhnya — sebaliknya, campurkan dengan barang yang lebih ringan.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Kamar Mandi dan Laluan
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Gunakan 5-10 kotak untuk barang-barang toilet, sabun, sampo, ubat-ubatan, dan barang perawatan pribadi. Kemasan ini biasanya murah dan mudah tetapi memerlukan pampasan untuk mencegah kebocoran.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Pengira Kotak Keseluruhan
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      <strong>Rumah 2-bilik (flat atau kondominium):</strong> 50-80 kotak
+      <strong>Rumah 3-bilik (semi-d atau terasa):</strong> 80-120 kotak
+      <strong>Rumah 4-bilik (besar):</strong> 120-150 kotak+
+      <strong>Rumah mewah dengan banyak barang:</strong> 150-200+ kotak
+    </p>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Selalu tambah 10-20% lebih banyak daripada anggaran anda. Lebih baik memiliki kotak kosong di akhir pindahan daripada kehabisan kotak di tengah-tengah!
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Jenis-Jenis Kotak untuk Pindah Rumah
+    </h2>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Kotak Kardus Bergelombang Standard
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Kotak kardus bergelombang adalah jenis paling umum dan ekonomis untuk pindah rumah. Ia tersedia dalam pelbagai saiz — kecil (kira-kira 20x15x15cm), sederhana (30x20x20cm), dan besar (40x30x30cm). Untuk pindahan rumah, gunakan kotak bersaiz sederhana atau besar untuk meminimalkan jumlah kotak sambil tetap mengoptimumkan keseimbangan berat.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Kotak Tahan Cuaca (Weatherproof Boxes)
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Untuk pindah rumah di Malaysia di mana hujan boleh menjadi masalah, kotak dengan lapisan plastik dalam atau kotak yang telah diperlakukan untuk tahan air adalah pilihan yang baik. Ini melindungi barang anda daripada kerosakan oleh air semasa pengangkutan atau penyimpanan sementara.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Kotak Khusus untuk Barang Rapuh
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Untuk barang sangat rapuh seperti cawan, piring, dan gelas, pertimbangkan untuk membeli kotak yang dirancang khusus dengan pemisah dalaman atau diperkuat dengan pelapis busa. Kotak ini lebih mahal tetapi memberikan perlindungan maksimum untuk barang berharga.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Cara Membungkus Barang Rapuh Dengan Betul
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Cara membungkus barang rapuh adalah salah satu aspek paling penting dalam packing untuk pindahan. Barang yang tidak dibungkus dengan betul akan rosak dalam perjalanan, menyebabkan stress dan kerugian kewangan. Berikut adalah langkah-langkah untuk membungkus barang rapuh dengan betul:
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      1. Kumpul Bahan Pelindung yang Diperlukan
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Sebelum anda mula membungkus, pastikan anda mempunyai bahan pelindung yang cukup: bubble wrap, packing paper (kraft paper), packing peanuts, dan pita packing. Untuk pindahan rumah, bubble wrap adalah pilihan paling penting kerana ia menyerap hentaman dan melindungi barang dengan baik.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      2. Bungkus Setiap Item Secara Individu
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Untuk piring, cawan, dan gelas, gulung setiap item secara terpisah dengan bubble wrap 2-3 kali. Pastikan tiada bahagian yang terbuka. Untuk barang yang sangat rapuh seperti vas atau hiasan kristal, berikan lapisan extra atau gunakan foam sheet sebagai tambahan.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      3. Gunakan Lapisan Dalam Kotak
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Letakkan lapisan bubble wrap 5-10cm tebal di dasar kotak. Ini menyerap hentaman jika kotak terjatuh. Kemudian, susun barang rapuh dengan rapi dalam kotak, pastikan tiada ruang kosong yang besar.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      4. Isi Ruang Kosong
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Setelah susun barang, isi semua ruang kosong dengan packing paper, packing peanuts, atau bahkan kain yang lembut. Ini mencegah barang bergerak dalam kotak semasa pengangkutan. Gunakan packing paper untuk pilihan yang lebih murah, atau packing peanuts untuk perlindungan yang lebih baik.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      5. Tutup dan Label
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Tutup kotak dengan pita packing yang kuat dan pastikan ia ditutup dengan rapat. Label kotak dengan jelas "FRAGILE" atau "RAPUH", "THIS SIDE UP" atau "BAHAGIAN ATAS", dan senarai isi kandungan. Gunakan marker berwarna merah untuk penandaan ini supaya pemindah dapat dengan mudah mengenal pasti kotak yang rapuh.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Sistem Label dan Organisasi
+    </h2>
+
+    <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+      <h3 class="font-headline text-xl font-bold text-on-surface mt-0 mb-3">
+        Cara Melabel Kotak Dengan Berkesan
+      </h3>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Label yang jelas adalah kunci untuk organisasi yang sempurna semasa pindah rumah. Berikut adalah sistem yang telah terbukti berkesan:
+      </p>
+      <ul class="font-body text-lg text-secondary leading-relaxed mb-0 space-y-2 list-disc list-inside">
+        <li><strong>Gunakan label berwarna:</strong> Tetapkan warna untuk setiap bilik — merah untuk bilik tidur, biru untuk dapur, hijau untuk ruang tamu, dll. Ini memudahkan pemindah atau ahli keluarga untuk mengetahui di mana setiap kotak harus diletakkan.</li>
+        <li><strong>Tulis nama bilik dan senarai isi kandungan:</strong> Tulis nama bilik tujuan dan senarai ringkas item dalam kotak. Contohnya: "Bilik Tidur Utama — Pakaian Musim Panas". Ini membantu anda mencari barang tertentu tanpa membuka semua kotak.</li>
+        <li><strong>Nombor setiap kotak:</strong> Nomborkan setiap kotak (1, 2, 3, dst) dan simpan senarai master yang menyenaraikan apa yang ada dalam setiap kotak bernombor. Ini sangat berguna jika sesuatu tidak ditemukan nanti.</li>
+        <li><strong>Jelaskan kotak fragile:</strong> Tandai semua kotak rapuh dengan perkataan "FRAGILE" atau "RAPUH" yang jelas dan bunyi pemberitahuan atau amaran tambahan seperti "THIS SIDE UP" atau "JANGAN DITINDIS".</li>
+        <li><strong>Tandakan kotak penting:</strong> Kotak yang mengandungi dokumen penting, objek berharga, atau item yang anda perlukan pada hari pertama di rumah baru patut ditandakan khusus, contohnya dengan label "OPEN FIRST" atau "BUKA DULU".</li>
+      </ul>
+    </div>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Senarai Semak Hari Pindah
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Satu hari sebelum pindah, gunakan senarai semak ini untuk memastikan anda tidak meninggalkan apa-apa:
+    </p>
+
+    <ul class="font-body text-lg text-secondary leading-relaxed mb-4 space-y-2 list-disc list-inside">
+      <li>Periksa semua ruangan dan lemari untuk memastikan tiada barang tertinggal.</li>
+      <li>Kosongkan semua almari, laci, dan tempat penyimpanan tersembunyi.</li>
+      <li>Bersihkan ais dan freezer, dan buang semua makanan yang mudah rosak.</li>
+      <li>Hubungi utiliti (air, elektrik, gas) untuk membatalkan atau memindahkan perkhidmatan.</li>
+      <li>Hubungi syarikat telekomunikasi untuk memindahkan nombor telefon dan internet.</li>
+      <li>Kemaskini alamat anda dengan bank, insurans, dan agensi kerajaan.</li>
+      <li>Siapkan kotak "hari pertama" dengan item penting seperti makanan, ubat-ubatan, dan dokumen.</li>
+      <li>Pastikan semua kotak ditutup, ditandakan, dan disusun dengan rapi untuk pengangkutan.</li>
+      <li>Ambil meter pembaca untuk air, elektrik, dan gas sebagai bukti untuk perpuluhan deposit.</li>
+      <li>Tinggalkan kunci dengan agen harta tanah atau tuan tanah yang tepat.</li>
+    </ul>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Tips Jimat Wang: Kotak Terpakai vs. Kotak Baru
+    </h2>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      Salah satu cara terbaik untuk menghemat wang dalam pindahan rumah adalah dengan memilih jenis kotak yang tepat. Berikut adalah perbandingan kotak terpakai dan kotak baru:
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Kotak Baru
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      <strong>Kelebihan:</strong> Lebih kuat, lebih bersih, lebih tahan terhadap kelembapan, sesuai untuk barang berharga atau rapuh.
+      <strong>Kekurangan:</strong> Lebih mahal (biasanya RM 1.90-6.50 per kotak).
+      <strong>Ideal untuk:</strong> Barang elektronik, perabot halus, dokumen penting, dan barang berharga.
+    </p>
+
+    <h3 class="font-headline text-xl font-bold text-on-surface mt-6 mb-3">
+      Kotak Terpakai
+    </h3>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      <strong>Kelebihan:</strong> Jauh lebih murah (dari RM 0.90 per kotak), ramah alam kerana dikitar semula, sesuai untuk barang yang tidak rapuh.
+      <strong>Kekurangan:</strong> Mungkin kurang kuat, mungkin mengandungi tanda-tanda kegunaan sebelumnya, tidak sesuai untuk barang yang sangat rapuh.
+      <strong>Ideal untuk:</strong> Pakaian, buku, mainan, dan barang lain yang tidak mudah rosak.
+    </p>
+
+    <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+      <strong>Strategi hemat wang terbaik:</strong> Gunakan kombinasi kotak terpakai dan kotak baru. Gunakan kotak terpakai untuk pakaian, buku, dan barang lain yang tidak rapuh, dan gunakan kotak baru untuk barang rapuh atau berharga. Dengan cara ini, anda dapat menghemat sehingga 40-50% daripada kos pindah tanpa mengorbankan keamanan barang.
+    </p>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Cara Mendapatkan Kotak Pindah Rumah Berkualiti dengan Harga Terjangkau
+    </h2>
+
+    <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Quinocycle Sdn. Bhd. adalah pembekal terpercaya untuk kotak pindah rumah di seluruh Malaysia. Dengan pengalaman lebih 15 tahun sejak 2010, kami memahami kebutuhan unik pindahan di Selangor, Lembah Klang, Balakong, Cheras, Kajang, dan Seri Kembangan.
+      </p>
+      <p class="font-body text-lg text-secondary leading-relaxed mb-4">
+        Kami menawarkan kotak baru dari RM 1.90/kotak dan kotak terpakai dari RM 0.90/kotak dengan minimum pesanan hanya RM 1,000. Dengan penghantaran ke seluruh Semenanjung Malaysia dan sokongan pelanggan yang responsif, pindah rumah anda akan menjadi lebih mudah dan lebih hemat.
+      </p>
+      <a href={WA_LINK} target="_blank" class="inline-flex items-center gap-2 bg-primary text-on-primary font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-primary/90 transition-colors">
+        Hubungi Quinocycle Untuk Kotak Pindah
+      </a>
+    </div>
+
+    <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mt-10 mb-4">
+      Soalan Lazim (FAQ) Tentang Pindah Rumah
+    </h2>
+
+    <div class="space-y-6 mt-6">
+      <div>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-3">
+          Berapa kotak yang saya perlukan untuk pindah rumah?
+        </h3>
+        <p class="font-body text-lg text-secondary leading-relaxed">
+          Jumlah kotak bergantung pada saiz rumah dan jumlah barang. Sebagai panduan umum: rumah 2-bilik memerlukan 50-80 kotak, rumah 3-bilik 80-120 kotak, dan rumah 4-bilik 120-150 kotak. Selalu beli 10-20% lebih banyak untuk memastikan anda tidak kehabisan kotak di tengah packing.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-3">
+          Apakah cara terbaik membungkus barang rapuh?
+        </h3>
+        <p class="font-body text-lg text-secondary leading-relaxed">
+          Untuk barang rapuh seperti cawan dan gelas, gulung setiap item dengan kertas berkualiti atau bubble wrap. Letakkan lapisan bubble wrap di dasar kotak, kemudian susun barang dengan rapi dan isi sela-sela dengan packing paper atau packing peanuts. Tutup kotak dan label dengan jelas 'FRAGILE' atau 'RAPUH'.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-3">
+          Kotak pindah rumah baru atau terpakai — mana lebih baik?
+        </h3>
+        <p class="font-body text-lg text-secondary leading-relaxed">
+          Kotak pindah baru lebih kuat dan lebih sesuai untuk barang berharga atau rapuh. Kotak terpakai adalah pilihan yang cost-effective untuk pakaian, buku, dan barang yang tidak rapuh. Quinocycle menawarkan kotak baru dari RM 1.90/kotak dan terpakai dari RM 0.90/kotak. Gunakan kombinasi kedua-dua untuk mengoptimumkan kos.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-3">
+          Bagaimana cara mengorganisir packing agar mudah?
+        </h3>
+        <p class="font-body text-lg text-secondary leading-relaxed">
+          Pack bilik demi bilik dan label setiap kotak dengan nama bilik dan senarai isi kandungan. Gunakan marker dan label sticker untuk penandaan yang jelas. Kemasan kotak dengan warna berbeza untuk bilik berbeza (contohnya, merah untuk bilik tidur, biru untuk dapur) juga memudahkan identifikasi. Siapkan 'kotak harian' dengan item yang anda perlukan pada hari pertama di rumah baru.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-3">
+          Bagaimana cara jimat wang pada kotak pindah?
+        </h3>
+        <p class="font-body text-lg text-secondary leading-relaxed">
+          Gunakan kotak terpakai yang masih berkualiti — ia menjimatkan sehingga 60% daripada kotak baru. Kumpul kotak dari kedai, restoran, atau rakan yang baru pindah. Jika anda menggunakan kurier seperti UPS atau DHL, minta kotak bekas mereka yang sering tersedia dengan percuma. Belanja dalam jumlah besar dari pembekal seperti Quinocycle untuk harga pukal yang lebih baik.
+        </p>
+      </div>
+    </div>
+  </article>
+</Layout>
