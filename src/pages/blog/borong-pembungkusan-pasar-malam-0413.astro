@@ -1,0 +1,146 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = {
+  title: 'Jual Pembungkusan kepada Peniaga Pasar Malam & Penganjur Bazaar di Malaysia — Panduan Pembekal Semula',
+  description: 'Salah satu peluang pembekal semula pembungkusan terbaik di Malaysia ialah membekalkan peniaga pasar malam, penjual bazaar, dan penganjur acara. Inilah cara memanfaatkan pasaran bervolum tinggi ini.',
+  date: '2026-04-13',
+  readTime: '7 min',
+  category: 'Borong & Pembekal Semula',
+  author: 'Quinocycle Team',
+  slug: 'borong-pembungkusan-pasar-malam-0413',
+};
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20mahu%20jadi%20pembekal%20semula%20pembungkusan%20untuk%20peniaga%20pasar%20malam';
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  dateModified: post.date,
+  inLanguage: "ms-MY",
+  author: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my" },
+  publisher: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my", logo: { "@type": "ImageObject", url: "https://www.quinocycle.com.my/images/logo.png" } },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.quinocycle.com.my/blog/borong-pembungkusan-pasar-malam-0413" },
+  keywords: "pembekal semula pembungkusan Malaysia, pembungkusan borong pasar malam, bekalan peniaga bazaar, pembekal semula kotak kardus Selangor, perniagaan pembungkusan Malaysia"
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Apakah pembungkusan yang biasanya diperlukan oleh peniaga pasar malam di Malaysia?", acceptedAnswer: { "@type": "Answer", text: "Peniaga pasar malam dan bazaar biasanya memerlukan: kotak kardus kecil (untuk barangan bungkus), beg plastik, beg kertas, bekas gred makanan (untuk gerai F&B), bubble wrap (untuk barangan kraf dan hobi yang rapuh), dan pita packing. Peniaga F&B memerlukan bekas bawa balik, tetapi kotak kardus diperlukan oleh hampir setiap jenis peniaga." } },
+    { "@type": "Question", name: "Bagaimana saya boleh mencari peniaga pasar malam untuk dibekalkan pembungkusan?", acceptedAnswer: { "@type": "Answer", text: "Mulakan dengan melawati pasar malam yang aktif di kawasan anda (Lembah Klang mempunyai pasar malam utama di Cheras, Subang, Kajang, dan Shah Alam). Berbicara terus dengan peniaga tentang keperluan pembungkusan mereka dan di mana mereka mendapatkan bekalan. Ramai membeli runcit pada harga yang lebih tinggi — itulah peluang anda." } },
+    { "@type": "Question", name: "Berapa margin yang boleh saya perolehi dengan menjual semula kotak kardus kepada peniaga kecil?", acceptedAnswer: { "@type": "Answer", text: "Membeli borong dari Quinocycle pada RM 1.90–6.50 setiap kotak dan menjual kepada peniaga kecil pada RM 3.00–10.00 setiap kotak adalah tipikal. Margin 30–60% boleh dicapai apabila melayani peniaga kecil yang tidak dapat memenuhi minimum borong sendiri." } },
+    { "@type": "Question", name: "Perlukah saya mendaftar perniagaan untuk menjadi pembekal semula pembungkusan?", acceptedAnswer: { "@type": "Answer", text: "Untuk jualan semula tidak formal, sesetengah orang bermula tanpa pendaftaran. Walau bagaimanapun, untuk mengeluarkan invois, membuka akaun bank perniagaan, dan berkembang dengan betul, pendaftaran SSM sebagai enterprise atau Sdn Bhd adalah disyorkan. Kos pendaftaran adalah rendah di Malaysia dan melindungi anda dari segi undang-undang." } },
+    { "@type": "Question", name: "Bolehkah saya membeli pembungkusan borong dari Quinocycle untuk dijual semula?", acceptedAnswer: { "@type": "Answer", text: "Ya. Quinocycle menerima pembekal semula pembungkusan. Harga borong kami bermula dari pesanan minimum RM 1,000. Kami boleh membekalkan stok kotak kardus, bubble wrap, pita, dan bahan pembungkusan lain yang boleh dijual semula oleh pembekal semula kepada pelanggan akhir mereka dengan keuntungan." } },
+  ]
+};
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  name: "Quinocycle Sdn. Bhd.",
+  url: "https://www.quinocycle.com.my",
+  telephone: "+60168916381",
+  address: { "@type": "PostalAddress", streetAddress: "No.13, Jalan Taming P/1, Taming Jaya", addressLocality: "Balakong", addressRegion: "Selangor", postalCode: "43300", addressCountry: "MY" },
+  geo: { "@type": "GeoCoordinates", latitude: 3.0579, longitude: 101.7468 },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "09:00", closes: "18:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "13:00" }
+  ],
+  priceRange: "RM 1.90 – RM 6.50 per box",
+  areaServed: "Peninsular Malaysia"
+};
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="font-body text-on-surface leading-relaxed space-y-6">
+      <p>Budaya pasar malam (pasar malam) dan bazaar Malaysia adalah ekosistem yang berkembang pesat sepanjang tahun. Daripada bazaar Ramadan di Selangor hingga pasar malam mingguan di Cheras, Kajang, dan Shah Alam, terdapat ribuan peniaga kecil yang memerlukan bekalan bahan pembungkusan yang tetap — dan kebanyakan mereka tidak membeli borong. Jurang ini adalah tepat peluang yang boleh diisi oleh pembekal semula pembungkusan yang bijak.</p>
+
+      <p>Quinocycle Sdn. Bhd. di Balakong, Selangor telah membekalkan pembekal semula pembungkusan sejak 2010. Dalam panduan ini, kami meneroka cara membina perniagaan pembekal semula pembungkusan yang menguntungkan yang menyasarkan peniaga pasar malam dan bazaar di Lembah Klang.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Memahami Masalah Pembungkusan Peniaga Pasar Malam</h2>
+      <p>Kebanyakan peniaga pasar malam dan bazaar adalah peniaga tunggal atau perniagaan mikro. Mereka sibuk menjalankan gerai mereka 5–6 malam seminggu dan mempunyai masa atau kecenderungan terhad untuk menyelidik pembekal borong. Tingkah laku lalai mereka adalah membeli pembungkusan dari kedai serbaneka, kedai runcit, atau Carrefour yang paling dekat — membayar harga runcit untuk bahan yang pembeli borong dapatkan 40–60% lebih murah.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Permintaan adalah Nyata dan Konsisten</h3>
+      <p>Peniaga pasar malam mempunyai keperluan pembungkusan yang boleh dijangka dan berulang. Peniaga kraf memerlukan kotak kecil untuk pemberian hadiah. Peniaga makanan memerlukan beg atau bekas pembungkusan. Gerai pakaian memerlukan beg poli. Penjual mainan atau hobi memerlukan bubble wrap untuk barangan rapuh. Kunci pemahamannya ialah apabila peniaga menemui pembekal yang boleh dipercayai dan mampu milik, mereka menjadi pelanggan berulang yang konsisten — selalunya selama bertahun-tahun.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Cara Membina Perniagaan Pembekal Semula Pembungkusan Pasar Malam</h2>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Pelan Pelancaran Pembekal Semula Langkah demi Langkah</h3>
+        <div class="space-y-3 font-body text-sm">
+          <div class="flex gap-4 py-2 border-b border-outline-variant/20">
+            <span class="font-bold text-primary min-w-[24px]">1.</span>
+            <span class="text-on-surface">Tinjauan 2–3 pasar malam tempatan. Kira jenis peniaga dan anggarkan keperluan pembungkusan setiap gerai seminggu</span>
+          </div>
+          <div class="flex gap-4 py-2 border-b border-outline-variant/20">
+            <span class="font-bold text-primary min-w-[24px]">2.</span>
+            <span class="text-on-surface">Kenal pasti 5 SKU teratas anda (contoh: kotak kecil, bubble wrap, pita OPP, beg kertas, beg poli)</span>
+          </div>
+          <div class="flex gap-4 py-2 border-b border-outline-variant/20">
+            <span class="font-bold text-primary min-w-[24px]">3.</span>
+            <span class="text-on-surface">Beli kelompok pertama borong dari Quinocycle (min. RM 1,000) — fokus pada item yang cepat bergerak sahaja</span>
+          </div>
+          <div class="flex gap-4 py-2 border-b border-outline-variant/20">
+            <span class="font-bold text-primary min-w-[24px]">4.</span>
+            <span class="text-on-surface">Dekati peniaga di pasar dengan sampel dan harga — tawarkan penghantaran mingguan atau pengambilan</span>
+          </div>
+          <div class="flex gap-4 py-2 border-b border-outline-variant/20">
+            <span class="font-bold text-primary min-w-[24px]">5.</span>
+            <span class="text-on-surface">Bina kumpulan WhatsApp untuk peniaga anda — ambil pesanan mingguan, hantar sebelum hari pasaran</span>
+          </div>
+          <div class="flex gap-4 py-2">
+            <span class="font-bold text-primary min-w-[24px]">6.</span>
+            <span class="text-on-surface">Laburkan semula margin ke kepelbagaian stok — tambah lebih banyak saiz dan bahan apabila asas pelanggan berkembang</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Menyasarkan Musim Bazaar Ramadan di Selangor</h2>
+      <p>Musim bazaar Ramadan adalah tempoh bervolum paling tinggi untuk pembekal pasar malam Malaysia. Ribuan gerai makanan dan barangan baru muncul di seluruh Selangor setiap tahun dalam bulan ini. Peniaga yang menyediakan diri untuk bazaar Ramadan secara aktif mencari pembekal pembungkusan dalam minggu sebelumnya. Jika anda boleh menjalin hubungan dengan penganjur bazaar dan pengagregat gerai sebelum Ramadan bermula, anda boleh mengunci pesanan pra-musim yang besar.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Menyasarkan Penganjur Bazaar Secara Langsung</h3>
+      <p>Banyak bazaar besar diurus oleh syarikat acara atau organisasi komuniti yang menyelaraskan puluhan atau ratusan gerai. Mendekati penganjur ini — bukan peniaga individu — dengan cadangan untuk menjadi pembekal pembungkusan yang disyorkan untuk semua gerai boleh memperoleh pesanan yang sangat besar dan konsisten. Tawarkan diskaun kecil atau penghantaran percuma melebihi ambang pesanan gabungan minimum untuk menjadikan cadangan nilai ini menarik.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Strategi Margin dan Penetapan Harga</h2>
+      <p>Beli borong dari Quinocycle pada RM 1.90–6.50 setiap kotak bergantung pada saiz. Tambah margin anda dan jual kepada peniaga pada RM 3.00–10.00 setiap kotak — biasanya pada atau sedikit di bawah apa yang peniaga kini bayar secara runcit. Anda kekal di bawah kos semasa peniaga, jadi mereka mempunyai motivasi yang jelas untuk beralih. Margin anda adalah perbezaannya, dan volum bertambah apabila asas pelanggan anda berkembang.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Soalan Lazim</h2>
+      <div class="space-y-4 my-6">
+        {faqSchema.mainEntity.map((faq) => (
+          <details class="bg-primary/5 border border-primary/20 rounded-xl p-4">
+            <summary class="font-label font-semibold text-on-surface cursor-pointer">{faq.name}</summary>
+            <p class="font-body text-secondary mt-3 leading-relaxed">{faq.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-3">Mulakan Perniagaan Pembekal Semula Pembungkusan Anda dengan Quinocycle</h2>
+        <p class="font-body text-secondary mb-6">Quinocycle di Balakong, Selangor adalah pembekal borong di sebalik ramai pembekal semula pembungkusan yang berjaya di Lembah Klang. Pesanan min. RM 1,000. Harga kompetitif, stok boleh dipercayai.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+            WhatsApp untuk Jadi Pembekal Semula
+          </a>
+          <a href="mailto:quinocycle@gmail.com" class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-label font-bold px-6 py-3 rounded-full hover:bg-primary/5 transition-colors">
+            E-mel: quinocycle@gmail.com
+          </a>
+        </div>
+        <p class="font-body text-xs text-secondary mt-4">No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300 · Isnin–Jumaat 9pg–6ptg, Sabtu 9pg–1ptg</p>
+      </div>
+
+      <p>Komuniti peniaga pasar malam dan bazaar mewakili salah satu pasaran pembekal semula yang paling mudah diakses dan memberi ganjaran di Malaysia. Permintaan yang tinggi, pesanan berulang, dan sensitiviti harga yang rendah terhadap nilai menjadikannya sesuai untuk pembekal semula pembungkusan baru atau yang sedang berkembang. Mulakan hubungan bekalan dengan Quinocycle hari ini — dan mulakan membina asas pelanggan anda sendiri dari sana.</p>
+    </section>
+  </article>
+</Layout>

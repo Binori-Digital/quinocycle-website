@@ -1,0 +1,138 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = {
+  title: 'Bubble Wrap untuk Elektronik di Malaysia: Pilihan Standard vs Anti-Statik yang Tepat',
+  description: 'Membungkus elektronik untuk penghantaran di Malaysia? Ketahui perbezaan antara bubble wrap standard dan anti-statik, bila setiap satunya diperlukan, dan cara melindungi peranti dengan betul.',
+  date: '2026-04-13',
+  readTime: '7 min',
+  category: 'Bubble Wrap',
+  author: 'Quinocycle Team',
+  slug: 'bubble-wrap-anti-statik-elektronik-0413',
+};
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20perlukan%20bubble%20wrap%20untuk%20membungkus%20elektronik';
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  dateModified: post.date,
+  inLanguage: "ms-MY",
+  author: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my" },
+  publisher: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my", logo: { "@type": "ImageObject", url: "https://www.quinocycle.com.my/images/logo.png" } },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.quinocycle.com.my/blog/bubble-wrap-anti-statik-elektronik-0413" },
+  keywords: "bubble wrap elektronik Malaysia, bubble wrap anti-statik Selangor, bungkus elektronik selamat, bubble wrap borong Balakong, pembungkusan ESD Malaysia"
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Bolehkah bubble wrap standard merosakkan elektronik?", acceptedAnswer: { "@type": "Answer", text: "Bubble wrap standard boleh menghasilkan elektrik statik melalui cas triboelektrik, yang boleh merosakkan komponen elektronik sensitif (PCB, cip, pemacu keras) dalam peranti yang tidak disertakan dalam sarung konduktif. Untuk elektronik pengguna dalam kotak runcit asal, bubble wrap standard adalah baik. Untuk papan litar atau komponen terdedah, wrap anti-statik diperlukan." } },
+    { "@type": "Question", name: "Apakah perbezaan antara bubble wrap anti-statik dan standard?", acceptedAnswer: { "@type": "Answer", text: "Bubble wrap anti-statik mengandungi bahan tambah karbon atau logam dalam filem plastik yang menyuraikan cas statik dan bukannya membiarkannya terkumpul. Ia biasanya berwarna merah jambu atau hitam. Bubble wrap standard adalah jernih atau sedikit berwarna dan tidak mempunyai sifat ini." } },
+    { "@type": "Question", name: "Berapa banyak lapisan bubble wrap yang perlu saya gunakan untuk laptop?", acceptedAnswer: { "@type": "Answer", text: "Untuk laptop dalam sarungnya, 2–3 balutan bubble wrap besar (saiz buih 30mm) memberikan perlindungan yang baik. Laptop harus diletakkan di tengah kotak dengan tidak lebih daripada 2sm bubble wrap di setiap sisi, kerana padding lembut yang berlebihan boleh membenarkan laptop bergerak." } },
+    { "@type": "Question", name: "Buih besar atau buih kecil lebih baik untuk elektronik?", acceptedAnswer: { "@type": "Answer", text: "Untuk kebanyakan elektronik pengguna — telefon, laptop, monitor — bubble wrap buih besar (diameter 25–30mm) memberikan penampan yang lebih baik terhadap impak jatuh dan kejutan. Bubble wrap buih kecil (10mm) lebih baik untuk membalut kabel, aksesori, dan komponen kaca rapuh di mana anda perlu menepati rapat bentuknya." } },
+    { "@type": "Question", name: "Bolehkah saya membeli bubble wrap untuk elektronik dalam gulungan kecil berhampiran Balakong?", acceptedAnswer: { "@type": "Answer", text: "Ya. Quinocycle di Balakong, Selangor menjual gulungan bubble wrap borong. Pesanan minimum kami adalah RM 1,000 yang biasanya merangkumi jumlah yang baik untuk pelbagai saiz gulungan. WhatsApp kami untuk stok dan harga semasa." } },
+  ]
+};
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  name: "Quinocycle Sdn. Bhd.",
+  url: "https://www.quinocycle.com.my",
+  telephone: "+60168916381",
+  address: { "@type": "PostalAddress", streetAddress: "No.13, Jalan Taming P/1, Taming Jaya", addressLocality: "Balakong", addressRegion: "Selangor", postalCode: "43300", addressCountry: "MY" },
+  geo: { "@type": "GeoCoordinates", latitude: 3.0579, longitude: 101.7468 },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "09:00", closes: "18:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "13:00" }
+  ],
+  priceRange: "RM 1.90 – RM 6.50 per box",
+  areaServed: "Peninsular Malaysia"
+};
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="font-body text-on-surface leading-relaxed space-y-6">
+      <p>Pasaran e-dagang Malaysia mengendalikan berjuta-juta penghantaran elektronik setiap bulan — daripada penjual Lazada dan Shopee yang menghantar telefon dan tablet, hinggalah pengedar B2B yang menghantar papan litar dan komponen. Namun ramai penjual masih melakukan kesilapan yang sama: membungkus setiap item elektronik dalam bubble wrap standard tanpa memahami bila ini sesuai dan bila ia sebenarnya boleh menyebabkan kerosakan.</p>
+
+      <p>Panduan ini dari Quinocycle Sdn. Bhd. di Balakong, Selangor merangkumi semua yang anda perlu tahu tentang menggunakan bubble wrap dengan selamat dan berkesan untuk pembungkusan elektronik di Malaysia.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Bubble Wrap Standard vs Anti-Statik: Perbezaan Utama</h2>
+      <p>Perkara paling penting yang perlu difahami tentang bubble wrap dan elektronik ialah risiko elektrik statik. Bubble wrap jernih standard diperbuat daripada polietilena — penebat elektrik yang baik. Apabila anda menggosok bubble wrap pada permukaan plastik dan elektronik, ia menghasilkan cas statik triboelektrik yang boleh mencapai ribuan volt. Untuk kebanyakan peranti pengguna dalam kotak runcit mereka, ini bukan masalah. Untuk komponen elektronik terdedah — papan litar, pemproses, modul RAM, pemacu keras — walaupun pelepasan elektrostatik kecil boleh merosakkan komponen sensitif secara kekal tanpa kelihatan.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Bila Bubble Wrap Standard Selamat untuk Elektronik</h3>
+      <p>Bubble wrap standard selamat sepenuhnya untuk membungkus elektronik pengguna yang sepenuhnya dirakit dan disertakan dalam sarungnya — telefon, laptop, monitor, TV, kamera. Sarung luar peranti memberikan perlindungan ESD yang mencukupi. Bubble wrap hanya berfungsi sebagai penampan mekanikal terhadap jatuh dan impak.</p>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Panduan Pemilihan Bubble Wrap untuk Elektronik</h3>
+        <div class="space-y-3 font-body text-sm">
+          <div class="grid grid-cols-3 gap-2 font-semibold text-on-surface pb-2 border-b border-outline-variant/20">
+            <span>Jenis Item</span><span>Jenis Wrap</span><span>Saiz Buih</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1 border-b border-outline-variant/20">
+            <span class="text-secondary">Telefon / Tablet (dalam sarung)</span><span class="text-on-surface">Standard</span><span class="text-on-surface">Besar (25mm)</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1 border-b border-outline-variant/20">
+            <span class="text-secondary">Laptop / Monitor</span><span class="text-on-surface">Standard</span><span class="text-on-surface">Besar (30mm)</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1 border-b border-outline-variant/20">
+            <span class="text-secondary">PCB / RAM terdedah</span><span class="text-on-surface">Anti-statik</span><span class="text-on-surface">Kecil (10mm)</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1 border-b border-outline-variant/20">
+            <span class="text-secondary">Pemacu keras / SSD terdedah</span><span class="text-on-surface">Anti-statik</span><span class="text-on-surface">Kecil (10mm)</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1">
+            <span class="text-secondary">Kabel & aksesori</span><span class="text-on-surface">Standard</span><span class="text-on-surface">Kecil (10mm)</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Teknik Bubble Wrap yang Betul untuk Elektronik</h2>
+      <p>Cara anda membungkus sama pentingnya dengan jenis yang anda pilih. Kesilapan biasa termasuk membungkus terlalu longgar, membungkus dengan buih menghadap luar dan bukannya menepati produk, dan menggunakan terlalu sedikit lapisan. Untuk elektronik, buih harus menghadap ke dalam — menepati permukaan peranti — supaya ia memberikan penampan langsung. Buih yang menghadap luar memberikan lebih sedikit penampan.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Kaedah Kotak-dalam-Kotak untuk Elektronik Rapuh</h3>
+      <p>Untuk elektronik bernilai tinggi, kaedah kotak-dalam-kotak menawarkan perlindungan terbaik: letakkan peranti berbungkus bubble wrap dalam kotak dalam yang lebih kecil, kemudian cushion kotak itu dalam kotak luar yang lebih besar dengan sekurang-kurangnya 5sm bahan pengisi di semua sisi. Ini mewujudkan dua lapisan penyerapan impak.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Membeli Bubble Wrap untuk Perniagaan Elektronik di Selangor</h2>
+      <p>Untuk penjual e-dagang elektronik dan pengedar komponen di Lembah Klang, Quinocycle di Balakong adalah sumber bubble wrap borong tempatan anda. Kami menyimpan gulungan bubble wrap standard dalam saiz buih kecil (10mm) dan besar (25–30mm). Pesanan minimum kami adalah RM 1,000. Kami menghantar ke Cheras, Kajang, Seri Kembangan, dan seluruh Semenanjung Malaysia.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Soalan Lazim</h2>
+      <div class="space-y-4 my-6">
+        {faqSchema.mainEntity.map((faq) => (
+          <details class="bg-primary/5 border border-primary/20 rounded-xl p-4">
+            <summary class="font-label font-semibold text-on-surface cursor-pointer">{faq.name}</summary>
+            <p class="font-body text-secondary mt-3 leading-relaxed">{faq.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-3">Beli Bubble Wrap untuk Elektronik Borong di Selangor</h2>
+        <p class="font-body text-secondary mb-6">Quinocycle Sdn. Bhd. di Balakong membekalkan gulungan bubble wrap kepada penjual e-dagang dan perniagaan elektronik di seluruh Lembah Klang. Pesanan min. RM 1,000.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+            WhatsApp untuk Harga
+          </a>
+          <a href="mailto:quinocycle@gmail.com" class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-label font-bold px-6 py-3 rounded-full hover:bg-primary/5 transition-colors">
+            E-mel: quinocycle@gmail.com
+          </a>
+        </div>
+        <p class="font-body text-xs text-secondary mt-4">No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300 · Isnin–Jumaat 9pg–6ptg, Sabtu 9pg–1ptg</p>
+      </div>
+
+      <p>Mendapatkan pembungkusan elektronik yang betul melindungi perniagaan anda daripada tuntutan kerosakan yang mahal, pelanggan yang tidak berpuas hati, dan produk yang terbuang. Memilih jenis bubble wrap yang betul — standard atau anti-statik — dan menggunakannya dengan betul membuat perbezaan yang ketara dalam keselamatan transit. Hubungi Quinocycle untuk harga borong gulungan bubble wrap yang sesuai untuk operasi pembungkusan elektronik anda.</p>
+    </section>
+  </article>
+</Layout>

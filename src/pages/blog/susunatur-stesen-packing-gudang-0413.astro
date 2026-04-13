@@ -1,0 +1,148 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = {
+  title: 'Cara Wujudkan Stesen Packing yang Cekap di Gudang Anda di Selangor',
+  description: 'Stesen packing yang direka dengan baik boleh menggandakan output pasukan anda. Ketahui cara menyediakan aliran kerja stesen packing yang cekap untuk PKS Malaysia — daripada susun atur hingga senarai semak bekalan.',
+  date: '2026-04-13',
+  readTime: '7 min',
+  category: 'Bekalan Gudang',
+  author: 'Quinocycle Team',
+  slug: 'susunatur-stesen-packing-gudang-0413',
+};
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20mahu%20wujudkan%20stesen%20packing%20untuk%20gudang%20saya%20di%20Selangor';
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  dateModified: post.date,
+  inLanguage: "ms-MY",
+  author: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my" },
+  publisher: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my", logo: { "@type": "ImageObject", url: "https://www.quinocycle.com.my/images/logo.png" } },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.quinocycle.com.my/blog/susunatur-stesen-packing-gudang-0413" },
+  keywords: "stesen packing gudang Malaysia, aliran kerja gudang Selangor, persediaan pembungkusan PKS, panduan stesen pemenuhan, bekalan pembungkusan borong Balakong"
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Berapa banyak ruang yang diperlukan untuk stesen packing?", acceptedAnswer: { "@type": "Answer", text: "Stesen packing seorang pengendali memerlukan meja minimum 1.5m × 0.8m ditambah 0.5m ruang di setiap sisi untuk pergerakan. Untuk operasi bervolume tinggi, meja kerja 2m × 1m dengan rak penyimpanan yang bersebelahan adalah ideal." } },
+    { "@type": "Question", name: "Apakah alatan penting untuk stesen packing gudang?", acceptedAnswer: { "@type": "Answer", text: "Alatan teras termasuk: meja kerja packing yang kukuh, pemotong kotak atau pistol pita, penyokong pita packing, pemegang gulungan bubble wrap, pencetak label, penimbang, bahan pengisi (tisu, busa, bantal udara), dan rak yang teratur untuk saiz kotak yang berbeza." } },
+    { "@type": "Question", name: "Bagaimana saya boleh mempercepatkan packing tanpa membuat kesilapan?", acceptedAnswer: { "@type": "Answer", text: "Pra-susun saiz kotak yang paling biasa anda gunakan dan sedia separuh dilipat. Pastikan pita, label, dan pengisi kosong dalam jangkauan tangan. Gunakan senarai semak packing standard untuk jenis produk yang paling biasa. Kumpulkan pesanan yang serupa bersama-sama untuk mengurangkan pertukaran kotak." } },
+    { "@type": "Question", name: "Patutkah saya mempunyai stesen packing berbeza untuk saiz produk yang berbeza?", acceptedAnswer: { "@type": "Answer", text: "Untuk gudang dengan pelbagai saiz produk, ya. Tetapkan stesen barangan kecil (telefon, aksesori) dan stesen barangan besar (bahagian perabot, barangan pukal). Ini mencegah kesesakan di mana pek besar yang sukar menahan barisan barangan kecil." } },
+    { "@type": "Question", name: "Di mana saya boleh membeli semua bekalan stesen packing borong berhampiran Balakong?", acceptedAnswer: { "@type": "Answer", text: "Quinocycle Sdn. Bhd. di Balakong, Selangor adalah pembekal pembungkusan gudang sehenti. Kami menyimpan kotak kardus (semua saiz), bubble wrap, filem regangan, pita packing, dan banyak lagi. Pesanan minimum RM 1,000. Penghantaran ke seluruh Semenanjung Malaysia." } },
+  ]
+};
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  name: "Quinocycle Sdn. Bhd.",
+  url: "https://www.quinocycle.com.my",
+  telephone: "+60168916381",
+  address: { "@type": "PostalAddress", streetAddress: "No.13, Jalan Taming P/1, Taming Jaya", addressLocality: "Balakong", addressRegion: "Selangor", postalCode: "43300", addressCountry: "MY" },
+  geo: { "@type": "GeoCoordinates", latitude: 3.0579, longitude: 101.7468 },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "09:00", closes: "18:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "13:00" }
+  ],
+  priceRange: "RM 1.90 – RM 6.50 per box",
+  areaServed: "Peninsular Malaysia"
+};
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="font-body text-on-surface leading-relaxed space-y-6">
+      <p>Ramai PKS Malaysia menganggap packing sebagai kerja sampingan — tugas yang dilakukan di sudut gudang yang terluang, selalunya oleh sesiapa sahaja yang ada masa lapang. Hasilnya adalah daya pengeluaran yang perlahan, kualiti pembungkusan yang tidak konsisten, dan tuntutan kerosakan yang boleh dielakkan. Stesen packing yang direka dengan betul, diisi dengan bahan yang sesuai dan disusun untuk kecekapan aliran kerja, boleh mengubah situasi ini — selalunya menggandakan output setiap jam-pekerja.</p>
+
+      <p>Quinocycle Sdn. Bhd. telah membekalkan bahan pembungkusan gudang kepada perniagaan di seluruh Balakong, Cheras, Kajang, dan seluruh Selangor selama lebih 15 tahun. Berikut adalah panduan praktikal kami untuk menyediakan stesen packing yang benar-benar berfungsi.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Anatomi Stesen Packing Berprestasi Tinggi</h2>
+      <p>Stesen packing yang cekap mengurangkan bilangan langkah, jangkauan, dan keputusan yang perlu dibuat oleh pembungkus bagi setiap pesanan. Setiap alat dan bahan mempunyai tempat yang ditetapkan dalam jangkauan tangan. Susun atur mengikut aliran logik: pesanan masuk → meja packing → seal & label → kawasan penghantaran.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Meja Packing</h3>
+      <p>Asas setiap stesen adalah permukaan kerja yang kukuh pada ketinggian siku (biasanya 85–95sm untuk pekerja berdiri). Meja kayu atau keluli sekurang-kurangnya 120sm × 80sm memberi anda ruang yang cukup untuk bekerja dengan kotak besar. Pasang rak bawah di bawah meja untuk menyimpan saiz kotak yang kerap digunakan — boleh diakses serta-merta tanpa perlu meninggalkan stesen.</p>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Senarai Semak Bekalan Stesen Packing</h3>
+        <div class="space-y-2 font-body text-sm">
+          <div class="flex items-center gap-3 py-1 border-b border-outline-variant/20">
+            <span class="text-primary font-bold">✓</span>
+            <span class="text-on-surface">Kotak kardus — sekurang-kurangnya 3 saiz (K, S, B) untuk julat produk yang paling biasa</span>
+          </div>
+          <div class="flex items-center gap-3 py-1 border-b border-outline-variant/20">
+            <span class="text-primary font-bold">✓</span>
+            <span class="text-on-surface">Gulungan pita OPP + pistol penyokong (2–3 per stesen untuk elak masa henti semasa tukar gulungan)</span>
+          </div>
+          <div class="flex items-center gap-3 py-1 border-b border-outline-variant/20">
+            <span class="text-primary font-bold">✓</span>
+            <span class="text-on-surface">Gulungan bubble wrap (buih kecil dan besar) pada penyokong yang dipasang</span>
+          </div>
+          <div class="flex items-center gap-3 py-1 border-b border-outline-variant/20">
+            <span class="text-primary font-bold">✓</span>
+            <span class="text-on-surface">Timbunan kepingan bergelombang untuk layer pads dan pengisi</span>
+          </div>
+          <div class="flex items-center gap-3 py-1 border-b border-outline-variant/20">
+            <span class="text-primary font-bold">✓</span>
+            <span class="text-on-surface">Penimbang (untuk mengesahkan berat penghantaran bagi penetapan harga kurier)</span>
+          </div>
+          <div class="flex items-center gap-3 py-1 border-b border-outline-variant/20">
+            <span class="text-primary font-bold">✓</span>
+            <span class="text-on-surface">Pencetak label + label (label terma A6 untuk bil penghantaran kurier)</span>
+          </div>
+          <div class="flex items-center gap-3 py-1">
+            <span class="text-primary font-bold">✓</span>
+            <span class="text-on-surface">Pemotong kotak / pisau Stanley (tukar mata setiap bulan)</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Susun Atur Aliran Kerja: Prinsip Aliran Sehala</h2>
+      <p>Stesen packing yang paling cekap direka supaya barangan mengalir dalam satu arah — tidak pernah ke belakang. Produk tiba dari zon pengambilan di sebelah kiri, dibungkus di meja tengah, kemudian bergerak ke kanan ke kawasan seal-dan-label, kemudian ke hadapan ke zon pementasan penghantaran. Ini mencegah kekeliruan dan pergerakan silang yang melambatkan pasukan dalam persekitaran gudang yang sibuk.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Pengekodan Warna dan Pengurusan Visual</h3>
+      <p>Untuk gudang yang menjalankan berbilang lini produk, pita atau label berkod warna untuk destinasi atau kategori produk yang berbeza mengurangkan kesilapan dengan ketara. Gunakan pelekat berwarna atau pita berwarna untuk menandakan pak "segera," "rapuh," dan "standard" pada pandangan pertama. Sistem visual mudah ini membolehkan penyelia mengenal pasti pesanan keutamaan dengan cepat di seluruh lantai packing yang sibuk.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Membekalkan Stesen Anda: Bekalan Borong dari Quinocycle</h2>
+      <p>Quinocycle membekalkan julat penuh bahan yang boleh digunakan stesen packing — kotak kardus, bubble wrap, pita OPP, kepingan bergelombang, dan filem regangan — borong dari gudang Balakong kami. Perniagaan di Lembah Klang, Cheras, Kajang, dan kawasan Seri Kembangan mendapat manfaat daripada kedekatan kami untuk pengisian stok yang cepat. Pesanan minimum RM 1,000.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Soalan Lazim</h2>
+      <div class="space-y-4 my-6">
+        {faqSchema.mainEntity.map((faq) => (
+          <details class="bg-primary/5 border border-primary/20 rounded-xl p-4">
+            <summary class="font-label font-semibold text-on-surface cursor-pointer">{faq.name}</summary>
+            <p class="font-body text-secondary mt-3 leading-relaxed">{faq.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-3">Dapatkan Semua Bekalan Stesen Packing daripada Quinocycle</h2>
+        <p class="font-body text-secondary mb-6">Pembekal pembungkusan borong sehenti di Balakong, Selangor. Kotak kardus, bubble wrap, pita OPP, kepingan bergelombang, dan banyak lagi. Pesanan min. RM 1,000.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+            WhatsApp Kami Sekarang
+          </a>
+          <a href="mailto:quinocycle@gmail.com" class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-label font-bold px-6 py-3 rounded-full hover:bg-primary/5 transition-colors">
+            E-mel: quinocycle@gmail.com
+          </a>
+        </div>
+        <p class="font-body text-xs text-secondary mt-4">No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300 · Isnin–Jumaat 9pg–6ptg, Sabtu 9pg–1ptg</p>
+      </div>
+
+      <p>Stesen packing yang direka dengan baik adalah salah satu pelaburan paling berkesan yang boleh dibuat oleh operasi gudang. Ia mengurangkan masa packing, memotong pembaziran bahan, dan meningkatkan kualiti penghantaran. Mulakan dengan susun atur dan senarai semak bekalan di atas, dan hubungi Quinocycle untuk memastikan anda mempunyai bahan pembungkusan yang betul sebelum musim puncak seterusnya anda bermula.</p>
+    </section>
+  </article>
+</Layout>

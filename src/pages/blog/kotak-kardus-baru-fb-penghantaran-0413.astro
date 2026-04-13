@@ -1,0 +1,142 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = {
+  title: 'Kotak Kardus Baru untuk Perniagaan F&B dan Penghantaran Makanan di Selangor',
+  description: 'Menjalankan dapur awan, perkhidmatan katering, atau penghantaran makanan? Ketahui jenis kotak kardus terbaik untuk pembungkusan makanan di Selangor dan KL daripada Quinocycle Balakong.',
+  date: '2026-04-13',
+  readTime: '7 min',
+  category: 'Kotak Kardus Baru',
+  author: 'Quinocycle Team',
+  slug: 'kotak-kardus-baru-fb-penghantaran-0413',
+};
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20perlukan%20kotak%20kardus%20untuk%20perniagaan%20F%26B%20saya';
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  dateModified: post.date,
+  inLanguage: "ms-MY",
+  author: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my" },
+  publisher: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my", logo: { "@type": "ImageObject", url: "https://www.quinocycle.com.my/images/logo.png" } },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.quinocycle.com.my/blog/kotak-kardus-baru-fb-penghantaran-0413" },
+  keywords: "kotak kardus F&B Malaysia, pembungkusan penghantaran makanan Selangor, kotak dapur awan KL, kotak katering borong, kotak kardus baru Balakong"
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Apakah kekuatan kotak kardus yang disyorkan untuk penghantaran makanan?", acceptedAnswer: { "@type": "Answer", text: "Untuk penghantaran makanan, kotak dinding berganda (double wall) adalah terbaik untuk hidangan berat atau berbilang bekas. Dinding tunggal (single wall) sesuai untuk produk ringan yang dibungkus. Pilih kotak dengan sekurang-kurangnya pembinaan 3-ply untuk mencegah kelemahan akibat kelembapan." } },
+    { "@type": "Question", name: "Adakah kotak kardus bergelombang selamat untuk makanan?", acceptedAnswer: { "@type": "Answer", text: "Kotak kardus bergelombang standard selamat sebagai bekas penghantaran luar. Untuk sentuhan langsung dengan makanan, lapisi kotak dengan pembungkusan dalaman gred makanan. Kotak baru Quinocycle adalah bersih, tidak pernah digunakan, dan sesuai untuk pembungkusan berkaitan makanan." } },
+    { "@type": "Question", name: "Apakah saiz kotak yang paling sesuai untuk penghantaran katering di KL?", acceptedAnswer: { "@type": "Answer", text: "Untuk katering, kotak Sederhana (lebih kurang 40x30x30cm) dan Besar (50x40x40cm) popular untuk mengelompokkan bekas makanan. Kotak Kecil (30x20x20cm) sesuai untuk kit hidangan individu. Ukur muatan penghantaran paling biasa anda terlebih dahulu." } },
+    { "@type": "Question", name: "Bolehkah saya membeli kotak kardus untuk penghantaran makanan dalam kuantiti kecil?", acceptedAnswer: { "@type": "Answer", text: "Ya. Pesanan minimum Quinocycle adalah RM 1,000, memudahkan perniagaan F&B yang berkembang untuk memesan campuran pelbagai saiz. Hubungi kami melalui WhatsApp untuk berbincang tentang gabungan yang sesuai untuk operasi anda." } },
+    { "@type": "Question", name: "Adakah Quinocycle menghantar kotak kardus ke KL dan Cheras?", acceptedAnswer: { "@type": "Answer", text: "Ya. Kami menghantar ke seluruh Semenanjung Malaysia termasuk KL, Cheras, Kajang, Seri Kembangan, dan seluruh Lembah Klang. Gudang kami di Balakong, Selangor membolehkan penghantaran yang cepat." } },
+  ]
+};
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  name: "Quinocycle Sdn. Bhd.",
+  url: "https://www.quinocycle.com.my",
+  telephone: "+60168916381",
+  address: { "@type": "PostalAddress", streetAddress: "No.13, Jalan Taming P/1, Taming Jaya", addressLocality: "Balakong", addressRegion: "Selangor", postalCode: "43300", addressCountry: "MY" },
+  geo: { "@type": "GeoCoordinates", latitude: 3.0579, longitude: 101.7468 },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "09:00", closes: "18:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "13:00" }
+  ],
+  priceRange: "RM 1.90 – RM 6.50 per box",
+  areaServed: "Peninsular Malaysia"
+};
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="font-body text-on-surface leading-relaxed space-y-6">
+      <p>Industri penghantaran makanan Malaysia telah berkembang pesat — daripada dapur awan di Cheras dan KL hinggalah perniagaan katering yang berkhidmat di seluruh Lembah Klang. Permintaan terhadap pembungkusan yang selamat dan boleh dipercayai semakin tinggi. Namun ramai pengusaha F&B masih melakukan kesilapan pembungkusan yang mahal: kotak yang runtuh akibat haba, saiz yang tidak sesuai membuang ruang, atau kardus nipis yang bocor dalam perjalanan.</p>
+
+      <p>Di Quinocycle Sdn. Bhd. di Balakong, Selangor, kami membekalkan kotak kardus bergelombang borong kepada perniagaan di seluruh Semenanjung Malaysia — termasuk ramai pengusaha F&B, pembekal katering, dan dapur awan. Panduan ini membantu anda memilih kotak kardus yang tepat untuk keperluan penghantaran makanan.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Mengapa Binaan Kotak Penting dalam Pembungkusan F&B</h2>
+      <p>Persekitaran penghantaran makanan membawa tekanan yang unik: perubahan suhu daripada hidangan panas, kelembapan daripada kondensasi, pertindanan dalam beg penghantaran, dan pengendalian oleh pelbagai pihak. Faktor-faktor ini melemahkan kotak berkualiti rendah dengan cepat. Memilih kotak yang sesuai melindungi makanan anda, jenama anda, dan reputasi anda.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Dinding Tunggal vs Dinding Berganda</h3>
+      <p>Kotak bergelombang dinding tunggal (SW) — tiga lapisan papan — adalah ringan dan menjimatkan kos. Ia sesuai untuk barangan kering, produk bakar, kit hidangan individu, atau produk ringan yang dibungkus. Kotak dinding berganda (DW), dengan lima lapisan, menawarkan kekuatan susun dan rintangan kelembapan yang jauh lebih tinggi — sesuai untuk penghantaran hidangan berbilang bahagian yang lebih berat.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Flute B vs Flute C untuk F&B</h3>
+      <p>Papan flute B lebih nipis tetapi mempunyai rintangan cucukan yang lebih baik — sesuai untuk penghantaran yang diisi rapat. Flute C memberikan kekuatan mampatan dan penampan yang lebih tinggi, lebih sesuai untuk pak hidangan besar atau dulang katering. Dinding berganda BC menggabungkan kedua-duanya untuk operasi penghantaran premium.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Saiz Kotak yang Disyorkan untuk Penghantaran F&B di KL & Selangor</h2>
+      <p>Mendapatkan saiz yang betul mengurangkan pembaziran bahan dan mencegah produk bergerak semasa transit. Berikut adalah konfigurasi yang paling kami syorkan untuk perniagaan F&B:</p>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Panduan Saiz Kotak Kardus F&B</h3>
+        <div class="space-y-3 font-body text-sm">
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Kecil (≈ 30×20×20 sm)</span>
+            <span class="text-secondary text-right max-w-xs">Kit hidangan individu, kotak snek, penghantaran bento tunggal</span>
+          </div>
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Sederhana (≈ 40×30×30 sm)</span>
+            <span class="text-secondary text-right max-w-xs">2–4 pak hidangan, kotak luar kek, dulang canapé</span>
+          </div>
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Besar (≈ 50×40×40 sm)</span>
+            <span class="text-secondary text-right max-w-xs">Pesanan katering, bekas bufet, penghantaran penyediaan hidangan besar</span>
+          </div>
+          <div class="flex justify-between items-start py-2">
+            <span class="font-semibold text-on-surface">XL (≈ 60×50×50 sm)</span>
+            <span class="text-secondary text-right max-w-xs">Penghantaran bahan pukal, pak acara katering besar</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Kebersihan untuk Pembungkusan Berkaitan Makanan</h2>
+      <p>Walaupun kotak kardus bergelombang bukan untuk sentuhan langsung dengan makanan, ia masih boleh mempengaruhi keselamatan makanan jika digunakan dengan tidak betul. Apabila anda membeli kotak baru dari Quinocycle, anda menerima kotak yang tidak pernah digunakan dalam keadaan bersih — bukan bahan kitar semula yang dicampurkan dengan bahan asing.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Lapisi Kotak Apabila Diperlukan</h3>
+      <p>Untuk makanan panas atau berkaitan cecair, lapisi kotak kardus anda dengan liner PE gred makanan atau sisipan foil aluminium. Ini melindungi kotak daripada kelemahan lembapan sambil memastikan kandungan selamat. Kulit luar bergelombang kemudiannya berfungsi sebagai lapisan pengangkutan yang teguh dan boleh disusun.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Harga Borong untuk Pengusaha F&B di Selangor</h2>
+      <p>Quinocycle melayani perniagaan F&B di seluruh Balakong, Cheras, Kajang, Seri Kembangan, dan seluruh KL dengan harga borong kompetitif bermula dari RM 1.90 setiap kotak. Pesanan minimum kami adalah RM 1,000, yang biasanya merangkumi kelompok pelbagai saiz yang berguna untuk operasi penghantaran yang sedang berkembang. Hubungi kami melalui WhatsApp untuk sebut harga pantas — kami bertindak balas pada hari yang sama semasa waktu perniagaan.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Soalan Lazim</h2>
+      <div class="space-y-4 my-6">
+        {faqSchema.mainEntity.map((faq) => (
+          <details class="bg-primary/5 border border-primary/20 rounded-xl p-4">
+            <summary class="font-label font-semibold text-on-surface cursor-pointer">{faq.name}</summary>
+            <p class="font-body text-secondary mt-3 leading-relaxed">{faq.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-3">Dapatkan Kotak Kardus Borong untuk Perniagaan F&B Anda</h2>
+        <p class="font-body text-secondary mb-6">Quinocycle Sdn. Bhd. membekalkan kotak kardus bergelombang baru borong kepada pengusaha F&B di seluruh KL dan Selangor. Pesanan min. RM 1,000. Penghantaran pantas dari Balakong.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+            WhatsApp Kami Sekarang
+          </a>
+          <a href="mailto:quinocycle@gmail.com" class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-label font-bold px-6 py-3 rounded-full hover:bg-primary/5 transition-colors">
+            E-mel: quinocycle@gmail.com
+          </a>
+        </div>
+        <p class="font-body text-xs text-secondary mt-4">No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300 · Isnin–Jumaat 9pg–6ptg, Sabtu 9pg–1ptg</p>
+      </div>
+
+      <p>Sama ada anda menjalankan dapur awan, syarikat katering, atau perniagaan penghantaran makanan di KL atau Selangor, memiliki kotak kardus yang betul menjadikan setiap penghantaran lebih boleh dipercayai. Quinocycle telah membekalkan perniagaan berkaitan F&B sejak 2010 dan kami memahami permintaan logistik makanan. Hubungi kami hari ini untuk membincangkan keperluan anda.</p>
+    </section>
+  </article>
+</Layout>

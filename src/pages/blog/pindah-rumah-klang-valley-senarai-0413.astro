@@ -1,0 +1,146 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = {
+  title: 'Pindah Rumah dalam Lembah Klang? Panduan Lengkap Bekalan Packing untuk Subang, PJ & Shah Alam',
+  description: 'Merancang pindahan rumah dalam Lembah Klang — dari Subang, PJ, atau Shah Alam ke Cheras, Kajang, atau Balakong? Inilah semua yang anda perlukan untuk membungkus dengan selamat dan mampu milik.',
+  date: '2026-04-13',
+  readTime: '7 min',
+  category: 'Tips Pindah Rumah',
+  author: 'Quinocycle Team',
+  slug: 'pindah-rumah-klang-valley-senarai-0413',
+};
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20merancang%20pindah%20rumah%20dan%20perlukan%20kotak%20packing%20dan%20bekalan';
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  dateModified: post.date,
+  inLanguage: "ms-MY",
+  author: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my" },
+  publisher: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my", logo: { "@type": "ImageObject", url: "https://www.quinocycle.com.my/images/logo.png" } },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.quinocycle.com.my/blog/pindah-rumah-klang-valley-senarai-0413" },
+  keywords: "pindah rumah Lembah Klang, kotak packing Subang Shah Alam, bekalan pindahan Selangor, senarai semak packing pindah rumah Malaysia, kotak murah Balakong"
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Berapa banyak kotak yang diperlukan untuk pindah rumah 3 bilik tidur di Selangor?", acceptedAnswer: { "@type": "Answer", text: "Rumah atau pangsapuri 3 bilik tidur biasa di Selangor memerlukan 40–60 kotak sederhana ditambah 10–15 kotak besar untuk buku, pakaian, dan item dapur. Tambah 5–10 kotak kecil untuk barangan rapuh dan aksesori elektronik. Sentiasa lebih baik mempunyai 20% lebih kotak daripada yang anda anggap diperlukan." } },
+    { "@type": "Question", name: "Patutkah saya membeli kotak baru atau terpakai untuk pindah rumah?", acceptedAnswer: { "@type": "Answer", text: "Kedua-duanya berfungsi dengan baik. Kotak baru konsisten dalam saiz dan kekuatan, memudahkan penumpukan dan pemuatan trak. Kotak terpakai 30–50% lebih murah dan sesuai untuk satu pindahan. Untuk barangan rapuh dan berat seperti buku, kotak dinding berganda baru menawarkan jaminan tambahan." } },
+    { "@type": "Question", name: "Bolehkah saya mendapatkan kotak yang dihantar dari Balakong ke Subang atau PJ?", acceptedAnswer: { "@type": "Answer", text: "Ya. Quinocycle menghantar ke seluruh Lembah Klang termasuk Subang Jaya, Petaling Jaya, Shah Alam, Cheras, dan Kajang. WhatsApp kami untuk mengesahkan butiran dan penjadualan penghantaran. Pesanan minimum adalah RM 1,000." } },
+    { "@type": "Question", name: "Apakah bekalan packing lain yang saya perlukan selain kotak?", acceptedAnswer: { "@type": "Answer", text: "Bekalan penting termasuk: pita OPP atau packing (beli lebih banyak daripada yang anda fikir anda perlukan), bubble wrap untuk barangan rapuh, pen penanda untuk pelabelan, filem regangan untuk tilam dan sofa, dan kepingan bergelombang untuk melindungi permukaan perabot." } },
+    { "@type": "Question", name: "Berapa lama sebelum pindahan saya patut mula membeli kotak?", acceptedAnswer: { "@type": "Answer", text: "Mulakan membeli dan membungkus item yang tidak penting (buku, pakaian bermusim, hiasan) sekurang-kurangnya 2–3 minggu sebelum tarikh pindahan anda. Ini mencegah packing panik pada saat akhir, yang biasanya mengakibatkan kotak yang tidak dibungkus dengan betul dan lebih banyak kerosakan." } },
+  ]
+};
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  name: "Quinocycle Sdn. Bhd.",
+  url: "https://www.quinocycle.com.my",
+  telephone: "+60168916381",
+  address: { "@type": "PostalAddress", streetAddress: "No.13, Jalan Taming P/1, Taming Jaya", addressLocality: "Balakong", addressRegion: "Selangor", postalCode: "43300", addressCountry: "MY" },
+  geo: { "@type": "GeoCoordinates", latitude: 3.0579, longitude: 101.7468 },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "09:00", closes: "18:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "13:00" }
+  ],
+  priceRange: "RM 1.90 – RM 6.50 per box",
+  areaServed: "Peninsular Malaysia"
+};
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="font-body text-on-surface leading-relaxed space-y-6">
+      <p>Lembah Klang menyaksikan ribuan pindahan rumah setiap tahun — keluarga yang menaik taraf dari pangsapuri ke teres, profesional muda yang berpindah dari PJ ke Cheras untuk perjalanan kerja, dan pesara yang mengecilkan saiz dari Shah Alam ke Kajang. Apa pun laluannya, tekanan pindah rumah sentiasa sama: barang anda lebih banyak daripada yang anda ingat, dan anda tidak pernah cukup bersedia.</p>
+
+      <p>Quinocycle Sdn. Bhd. di Balakong, Selangor telah membantu pemilik rumah di seluruh Lembah Klang dengan bekalan packing yang mampu milik sejak 2010. Panduan ini khusus untuk pindahan dalam Selangor — dari Subang, PJ, atau Shah Alam ke bahagian lain Lembah Klang termasuk Cheras, Kajang, Seri Kembangan, dan sekitarnya.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Cabaran Pindahan dalam Lembah Klang</h2>
+      <p>Berpindah dalam Lembah Klang mungkin terasa kurang menegangkan berbanding pindahan antara negeri, tetapi jarak yang terlibat masih bermakna barangan anda menghabiskan masa dalam trak, dimuat dan dibongkar oleh berbilang orang, selalunya dalam haba dan kelembapan tropika. Cuaca Malaysia menambah cabaran khusus: hujan boleh turun secara tiba-tiba semasa pemuatan, jadi packing tahan lembapan adalah berbaloi untuk dirancang.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Rekatan Pita yang Betul — Jalan Raya Malaysia Berlubang</h3>
+      <p>Jika laluan pindahan anda merangkumi bahagian Lebuhraya Persekutuan, NPE, atau jalan melalui kawasan perindustrian Balakong, kotak anda akan mengalami lebih banyak getaran daripada yang anda jangkakan. Setiap kotak mesti ditepikan berganda dengan pita OPP yang baik — bukan pita gam, bukan pita alat tulis yang lemah. Kaedah pita H (pita merentasi kelim dan dua jalur berserenjang merentasi tengah) mengurangkan risiko kegagalan kotak di bawah berat dengan ketara.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Senarai Semak Bekalan Packing untuk Pindahan Lembah Klang</h2>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Apa yang Perlu Dibeli Sebelum Pindahan Anda</h3>
+        <div class="space-y-2 font-body text-sm">
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Kotak sederhana (40×30×30 sm)</span>
+            <span class="text-secondary">Saiz paling serba guna — dapur, pakaian, buku (maks 15 kg setiap kotak)</span>
+          </div>
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Kotak besar (50×40×40 sm)</span>
+            <span class="text-secondary">Bantal, barangan lembut yang besar, tuala, peralatan tidur — pastikan ringan</span>
+          </div>
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Kotak kecil (30×20×20 sm)</span>
+            <span class="text-secondary">Barangan rapuh, buku berat, koleksi — berat yang boleh diuruskan</span>
+          </div>
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Pita packing OPP (48mm)</span>
+            <span class="text-secondary">Beli 5–6 gulungan minimum — anda sentiasa menggunakan lebih daripada yang dijangkakan</span>
+          </div>
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Gulungan bubble wrap</span>
+            <span class="text-secondary">Untuk barangan kaca, bingkai gambar, elektronik, seramik</span>
+          </div>
+          <div class="flex justify-between items-start py-2">
+            <span class="font-semibold text-on-surface">Gulungan filem regangan</span>
+            <span class="text-secondary">Balut tilam, sofa, dan perabot untuk mencegah calar</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Strategi Packing Bilik demi Bilik untuk Rumah Malaysia</h2>
+      <p>Dapur sentiasa menjadi bilik yang paling memakan masa untuk dibungkus. Mulakan 2–3 minggu sebelum tarikh pindahan anda dengan item yang jarang digunakan: piring besar, peralatan dapur pendua, peralatan memasak bermusim. Item terakhir yang perlu dibungkus ialah keperluan harian anda (cerek, cawan, alat makan) yang anda perlukan hingga hari pindahan dan sebaik sahaja tiba di tempat baru.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Buku, Fail, dan Item Kertas</h3>
+      <p>Buku dan fail amat berat. Sentiasa bungkus dalam kotak kecil dan isi setiap kotak tidak melebihi tiga suku penuh. Berdirikan buku tegak dalam kotak dan bukannya mendatar untuk mencegah kerosakan belakang buku. Untuk dokumen rasmi dan fail, gunakan beg plastik kalis air khusus atau seal bahagian atas kotak dengan pita tambahan dan tandakan "rapuh" dan "muat atas sahaja."</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Mendapatkan Kotak yang Dihantar ke Subang, PJ & Shah Alam</h2>
+      <p>Quinocycle menghantar kotak packing dan bekalan ke seluruh Lembah Klang. Sama ada anda berada di SS15 Subang, Damansara PJ, atau Seksyen 7 Shah Alam, kami boleh menghantar kotak kepada anda sebelum pindahan anda. Pesanan minimum RM 1,000 kami biasanya merangkumi semua kotak dan pita yang diperlukan isi rumah biasa. Pesan awal — permintaan penghantaran meningkat pada hari Jumaat dan akhir bulan.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Soalan Lazim</h2>
+      <div class="space-y-4 my-6">
+        {faqSchema.mainEntity.map((faq) => (
+          <details class="bg-primary/5 border border-primary/20 rounded-xl p-4">
+            <summary class="font-label font-semibold text-on-surface cursor-pointer">{faq.name}</summary>
+            <p class="font-body text-secondary mt-3 leading-relaxed">{faq.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-3">Dapatkan Kotak Pindahan Dihantar ke Seluruh Lembah Klang</h2>
+        <p class="font-body text-secondary mb-6">Quinocycle di Balakong membekalkan kotak pindahan, bubble wrap, pita, dan filem regangan ke seluruh Selangor dan Lembah Klang. Pesanan min. RM 1,000. Respons WhatsApp pada hari yang sama.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+            WhatsApp untuk Kotak Pindahan
+          </a>
+          <a href="mailto:quinocycle@gmail.com" class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-label font-bold px-6 py-3 rounded-full hover:bg-primary/5 transition-colors">
+            E-mel: quinocycle@gmail.com
+          </a>
+        </div>
+        <p class="font-body text-xs text-secondary mt-4">No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300 · Isnin–Jumaat 9pg–6ptg, Sabtu 9pg–1ptg</p>
+      </div>
+
+      <p>Berpindah dalam Lembah Klang tidak perlu menjadi huru-hara. Dengan bekalan packing yang tepat dipesan lebih awal dan pendekatan bilik demi bilik yang sistematik, anda boleh melindungi semua yang anda miliki dan tiba di alamat baru tanpa barangan yang rosak atau hilang. Hubungi Quinocycle hari ini untuk sebut harga cepat tentang semua yang anda perlukan.</p>
+    </section>
+  </article>
+</Layout>

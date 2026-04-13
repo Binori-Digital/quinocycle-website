@@ -1,0 +1,135 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = {
+  title: 'Kadbod Honeycomb untuk Pengangkutan Jubin, Marmar & Granit di Malaysia',
+  description: 'Marmar, granit, dan jubin seramik memerlukan perlindungan impak yang tinggi semasa pengangkutan. Ketahui bagaimana panel honeycomb mengurangkan kadar kerosakan untuk perniagaan batu dan jubin di Malaysia.',
+  date: '2026-04-13',
+  readTime: '7 min',
+  category: 'Kadbod Honeycomb',
+  author: 'Quinocycle Team',
+  slug: 'honeycomb-jubin-marmar-granit-0413',
+};
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20perlukan%20kadbod%20honeycomb%20untuk%20pengangkutan%20marmar%20dan%20jubin';
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  dateModified: post.date,
+  inLanguage: "ms-MY",
+  author: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my" },
+  publisher: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my", logo: { "@type": "ImageObject", url: "https://www.quinocycle.com.my/images/logo.png" } },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.quinocycle.com.my/blog/honeycomb-jubin-marmar-granit-0413" },
+  keywords: "kadbod honeycomb Malaysia, pembungkusan jubin marmar Selangor, perlindungan pengangkutan granit, pembungkusan jubin borong, kadbod berat Balakong"
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Mengapa kadbod honeycomb lebih baik daripada busa untuk pembungkusan jubin?", acceptedAnswer: { "@type": "Answer", text: "Kadbod honeycomb menawarkan kekuatan mampatan yang lebih tinggi setiap kilogram berbanding busa, menjadikannya lebih baik dalam menyerap beban kejutan yang dihasilkan apabila jubin berat bergerak semasa transit. Ia juga boleh dikitar semula, sedangkan banyak produk busa tidak." } },
+    { "@type": "Question", name: "Apakah ketebalan panel honeycomb yang diperlukan untuk kepingan marmar?", acceptedAnswer: { "@type": "Answer", text: "Untuk kepingan marmar (biasanya 15–20mm tebal dan 20–30kg setiap keping), panel honeycomb 20–30mm tebal biasanya disyorkan sebagai perlindungan sudut dan tepi. Untuk penutup muka penuh, panel 15mm mencukupi dalam kebanyakan kes. Hubungi Quinocycle untuk cadangan spesifik mengikut aplikasi." } },
+    { "@type": "Question", name: "Bolehkah kadbod honeycomb menahan berat jubin yang ditindan?", acceptedAnswer: { "@type": "Answer", text: "Ya. Kadbod honeycomb kepadatan tinggi boleh menyokong beban mampatan 5–15 tan per meter persegi bergantung kepada saiz sel dan kepadatan papan. Jubin gred pembinaan standard dalam kuantiti pembungkusan biasa berada dalam julat ini." } },
+    { "@type": "Question", name: "Adakah kadbod honeycomb kos efektif untuk pengeksport jubin seramik?", acceptedAnswer: { "@type": "Answer", text: "Untuk pengeksport yang menghantar ke Singapura, China, atau Timur Tengah, pembungkusan honeycomb biasanya mengurangkan tuntutan kerosakan sebanyak 40–70% berbanding pengepakan kayu yang tidak dilindungi. Pengurangan tuntutan kerosakan biasanya mengimbangi kos pembungkusan dalam beberapa minggu." } },
+    { "@type": "Question", name: "Di mana saya boleh membeli kadbod honeycomb borong di Selangor?", acceptedAnswer: { "@type": "Answer", text: "Quinocycle Sdn. Bhd. di Balakong, Selangor membekalkan panel kadbod honeycomb borong kepada pengeluar jubin, pedagang batu, dan syarikat logistik. Pesanan minimum RM 1,000. Penghantaran ke seluruh Semenanjung Malaysia." } },
+  ]
+};
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  name: "Quinocycle Sdn. Bhd.",
+  url: "https://www.quinocycle.com.my",
+  telephone: "+60168916381",
+  address: { "@type": "PostalAddress", streetAddress: "No.13, Jalan Taming P/1, Taming Jaya", addressLocality: "Balakong", addressRegion: "Selangor", postalCode: "43300", addressCountry: "MY" },
+  geo: { "@type": "GeoCoordinates", latitude: 3.0579, longitude: 101.7468 },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "09:00", closes: "18:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "13:00" }
+  ],
+  priceRange: "RM 1.90 – RM 6.50 per box",
+  areaServed: "Peninsular Malaysia"
+};
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="font-body text-on-surface leading-relaxed space-y-6">
+      <p>Malaysia adalah salah satu pengeluar dan pengedar marmar, granit, dan jubin seramik terkemuka di Asia Tenggara. Daripada kilang Selangor yang membekalkan projek pembinaan domestik hinggalah pengeksport yang menghantar ke Singapura dan seterusnya, cabarannya sentiasa sama: bagaimana anda mengangkut produk batu dan seramik yang rapuh dan berat tanpa kerosakan? Kadbod honeycomb adalah bahan yang semakin banyak menyelesaikan masalah ini.</p>
+
+      <p>Di Quinocycle Sdn. Bhd. di Balakong, Selangor, kami membekalkan panel kadbod honeycomb kepada pengeluar jubin, pedagang batu, dan syarikat logistik di seluruh Lembah Klang dan Semenanjung Malaysia. Panduan ini menerangkan cara kadbod honeycomb berfungsi untuk pengangkutan batu dan jubin.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Mengapa Pengangkutan Batu dan Jubin Memerlukan Pembungkusan Khusus</h2>
+      <p>Kepingan marmar dan granit secara serentak sangat berat dan sangat rapuh. Kepingan marmar 20kg boleh pecah akibat satu impak tajam, dan cip pada tepi yang siap mengurangkan nilai kepingan secara dramatik. Jubin seramik lebih nipis dan lebih seragam, tetapi masih mudah mengalami cip tepi dan retak apabila jubin dalam pak bergerak dan memukul antara satu sama lain akibat getaran transit.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Masalah Getaran dalam Pengangkutan Jalan Raya</h3>
+      <p>Pengangkutan jalan raya Malaysia memperkenalkan getaran frekuensi rendah yang berterusan sepanjang perjalanan. Dalam perjalanan trak 2 jam dari Selangor ke Johor, palet jubin mengalami ribuan kitaran getaran. Tanpa bahan peredam antara jubin, pergerakan kecil terkumpul menjadi sesaran relatif yang signifikan — dan itulah masa tepi cip dan kepingan retak. Kadbod honeycomb yang diletakkan antara kepingan atau di sekeliling bunting jubin menyerap dan menghuraikan tenaga getaran ini dengan berkesan.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Cara Menggunakan Panel Honeycomb untuk Marmar dan Granit</h2>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Panduan Penempatan Panel Honeycomb untuk Pengangkutan Batu</h3>
+        <div class="space-y-3 font-body text-sm">
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Antara kepingan</span>
+            <span class="text-secondary text-right max-w-xs">Panel 15mm antara setiap kepingan mencegah sentuhan permukaan ke permukaan dan pemindahan getaran</span>
+          </div>
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Perlindungan tepi</span>
+            <span class="text-secondary text-right max-w-xs">Panel berlipat 20–30mm di sepanjang keempat-empat tepi menyerap impak lateral</span>
+          </div>
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Lapisan asas palet</span>
+            <span class="text-secondary text-right max-w-xs">Panel asas 25–40mm mengedarkan beban kepingan bawah dan menyerap impak jatuh palet</span>
+          </div>
+          <div class="flex justify-between items-start py-2">
+            <span class="font-semibold text-on-surface">Panel penutup atas</span>
+            <span class="text-secondary text-right max-w-xs">Panel honeycomb atas mencegah kerosakan akibat tekanan tali pengikat dari atas</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Kadbod Honeycomb untuk Pak Jubin Seramik</h2>
+      <p>Jubin seramik dan porselin biasanya dibungkus dalam bunting berbalut kertas atau plastik sebelum dimasukkan ke dalam kotak. Menambah sisipan kadbod honeycomb antara jubin (atau antara pak jubin dalam karton master) mengurangkan cip tepi dengan ketara. Untuk pembungkusan gred eksport, membungkus setiap pak jubin dengan panel honeycomb 5–10mm sebelum diletakkan dalam karton menambah kos yang minimum tetapi mengurangkan tuntutan kerosakan secara dramatik.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Analisis Kos: Honeycomb vs Pembungkusan Tradisional</h2>
+      <p>Pembungkusan batu tradisional menggunakan peti kayu, habuk papan, atau busa polistirena. Kadbod honeycomb bersaing kuat dalam prestasi dan kos. Ia lebih ringan daripada kayu (mengurangkan kos fret), lebih konsisten daripada habuk papan (tiada risiko lembapan atau pencemaran), dan lebih boleh dikitar semula daripada busa. Untuk pengeksport yang menyasarkan pasaran yang peka dengan kelestarian, pembungkusan honeycomb juga menyokong dokumentasi ESG.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Soalan Lazim</h2>
+      <div class="space-y-4 my-6">
+        {faqSchema.mainEntity.map((faq) => (
+          <details class="bg-primary/5 border border-primary/20 rounded-xl p-4">
+            <summary class="font-label font-semibold text-on-surface cursor-pointer">{faq.name}</summary>
+            <p class="font-body text-secondary mt-3 leading-relaxed">{faq.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-3">Kadbod Honeycomb Borong untuk Pengangkutan Jubin & Batu</h2>
+        <p class="font-body text-secondary mb-6">Quinocycle membekalkan panel kadbod honeycomb tugas berat kepada pengeluar jubin dan pedagang batu di Selangor dan seluruh Malaysia. Pesanan min. RM 1,000.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+            WhatsApp untuk Sebut Harga
+          </a>
+          <a href="mailto:quinocycle@gmail.com" class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-label font-bold px-6 py-3 rounded-full hover:bg-primary/5 transition-colors">
+            E-mel: quinocycle@gmail.com
+          </a>
+        </div>
+        <p class="font-body text-xs text-secondary mt-4">No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300 · Isnin–Jumaat 9pg–6ptg, Sabtu 9pg–1ptg</p>
+      </div>
+
+      <p>Untuk perniagaan marmar, granit, dan jubin di Malaysia, kadbod honeycomb bukan kemewahan — ia adalah keperluan yang kos efektif untuk melindungi produk batu bernilai tinggi semasa pengangkutan jalan raya dan laut. Hubungi Quinocycle hari ini untuk membincangkan ketebalan panel, saiz, dan kuantiti untuk penghantaran seterusnya.</p>
+    </section>
+  </article>
+</Layout>

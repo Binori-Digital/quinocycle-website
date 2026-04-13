@@ -1,0 +1,149 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = {
+  title: 'Moving from Subang, PJ or Shah Alam? Complete Packing Supplies Guide for Klang Valley Moves',
+  description: 'Planning a house move within the Klang Valley — from Subang, Petaling Jaya, or Shah Alam to Cheras, Kajang, or Balakong? Here is everything you need to pack safely and affordably.',
+  date: '2026-04-13',
+  readTime: '7 min',
+  category: 'Moving Tips',
+  author: 'Quinocycle Team',
+  slug: 'moving-subang-shah-alam-packing-0413',
+};
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20am%20moving%20house%20and%20need%20packing%20boxes%20and%20supplies';
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  dateModified: post.date,
+  inLanguage: "en-MY",
+  author: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my" },
+  publisher: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my", logo: { "@type": "ImageObject", url: "https://www.quinocycle.com.my/images/logo.png" } },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.quinocycle.com.my/blog/moving-subang-shah-alam-packing-0413" },
+  keywords: "moving house Klang Valley, packing boxes Subang Shah Alam, moving supplies Selangor, house move packing checklist Malaysia, cheap boxes Balakong"
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How many boxes do I need to move a 3-bedroom house in Selangor?", acceptedAnswer: { "@type": "Answer", text: "A typical 3-bedroom terrace or apartment in Selangor requires 40–60 medium boxes plus 10–15 large boxes for books, clothes, and kitchen items. Add 5–10 small boxes for fragile collectibles and electronics accessories. It is always better to have 20% more boxes than you estimate needing." } },
+    { "@type": "Question", name: "Should I buy new or used boxes for a house move?", acceptedAnswer: { "@type": "Answer", text: "Both work well. New boxes are consistent in size and strength, making stacking and truck loading easier. Used boxes cost 30–50% less and are perfectly suitable for a single move. For fragile and heavy items like books, new double wall boxes offer extra assurance." } },
+    { "@type": "Question", name: "Can I get boxes delivered from Balakong to Subang or PJ?", acceptedAnswer: { "@type": "Answer", text: "Yes. Quinocycle delivers throughout the Klang Valley including Subang Jaya, Petaling Jaya, Shah Alam, Cheras, and Kajang. WhatsApp us to confirm delivery details and scheduling. Minimum order is RM 1,000." } },
+    { "@type": "Question", name: "What other packing supplies do I need besides boxes?", acceptedAnswer: { "@type": "Answer", text: "Essential supplies include: OPP or packing tape (buy more than you think you need), bubble wrap for fragile items, marker pens for labelling, stretch wrap for mattresses and sofas, and corrugated sheets for protecting furniture surfaces. Kitchen and bathroom items benefit from newspaper or packing paper." } },
+    { "@type": "Question", name: "How long before my move should I start buying boxes?", acceptedAnswer: { "@type": "Answer", text: "Start buying and packing non-essential items (books, seasonal clothes, decorations) at least 2–3 weeks before your move date. This prevents last-minute panic packing, which typically results in poorly packed boxes and more breakages." } },
+  ]
+};
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  name: "Quinocycle Sdn. Bhd.",
+  url: "https://www.quinocycle.com.my",
+  telephone: "+60168916381",
+  address: { "@type": "PostalAddress", streetAddress: "No.13, Jalan Taming P/1, Taming Jaya", addressLocality: "Balakong", addressRegion: "Selangor", postalCode: "43300", addressCountry: "MY" },
+  geo: { "@type": "GeoCoordinates", latitude: 3.0579, longitude: 101.7468 },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "09:00", closes: "18:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "13:00" }
+  ],
+  priceRange: "RM 1.90 – RM 6.50 per box",
+  areaServed: "Peninsular Malaysia"
+};
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="font-body text-on-surface leading-relaxed space-y-6">
+      <p>The Klang Valley sees thousands of house moves every year — families upgrading from apartments to terraces, young professionals relocating from PJ to Cheras for the commute, and retirees downsizing from Shah Alam to Kajang. Whatever the route, the stress of moving is always the same: there is more stuff than you remember, and you are never quite prepared enough.</p>
+
+      <p>Quinocycle Sdn. Bhd. in Balakong, Selangor has been helping movers across the Klang Valley with affordable packing supplies since 2010. This guide is specifically for moves within Selangor — from Subang, PJ, or Shah Alam to other parts of the Klang Valley including Cheras, Kajang, Seri Kembangan, and beyond.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">The Klang Valley Moving Challenge: Distance vs Comfort</h2>
+      <p>Moving within the Klang Valley might feel less stressful than a cross-state move, but the distances involved still mean your belongings spend time in a truck, being loaded and unloaded by multiple people, often in tropical heat and humidity. Malaysian weather adds a specific challenge: rain can arrive suddenly during loading, so moisture-resistant packing is worth planning for.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Tape Your Boxes Well — Malaysian Roads Are Bumpy</h3>
+      <p>If your move route includes sections of the Federal Highway, NPE, or roads through industrial Balakong, your boxes will experience more vibration than you expect. Every box must have its base double-taped with good OPP tape — not masking tape, not weak stationery tape. The H-tape method (tape across the seam and two perpendicular strips across the middle) significantly reduces the risk of box failure under weight.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Packing Supplies Checklist for Klang Valley Moves</h2>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">What to Buy Before Your Move</h3>
+        <div class="space-y-2 font-body text-sm">
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Medium boxes (40×30×30 cm)</span>
+            <span class="text-secondary">Most versatile size — kitchen, clothes, books (max 15 kg each)</span>
+          </div>
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Large boxes (50×40×40 cm)</span>
+            <span class="text-secondary">Pillows, bulky soft items, towels, bedding — keep light</span>
+          </div>
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Small boxes (30×20×20 cm)</span>
+            <span class="text-secondary">Fragile items, heavy books, collectibles — manageable weight</span>
+          </div>
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">OPP packing tape (48mm)</span>
+            <span class="text-secondary">Buy 5–6 rolls minimum — you will always use more than expected</span>
+          </div>
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Bubble wrap roll</span>
+            <span class="text-secondary">For glassware, picture frames, electronics, ceramics</span>
+          </div>
+          <div class="flex justify-between items-start py-2">
+            <span class="font-semibold text-on-surface">Stretch film roll</span>
+            <span class="text-secondary">Wrap mattresses, sofas, and furniture to prevent scratches</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Room-by-Room Packing Strategy for Malaysian Homes</h2>
+      <p>The kitchen is always the most time-consuming room to pack. Start 2–3 weeks before your move date with items used infrequently: serving platters, duplicate appliances, seasonal cookware. The last items to pack should be your daily essentials (a kettle, mugs, utensils) which you will need right up to moving day and immediately after arrival.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Books, Files, and Paper Items</h3>
+      <p>Books and files are deceptively heavy. Always pack them in small boxes and fill each box no more than three-quarters full. Stand books upright in the box rather than flat to prevent spine damage. For official documents and files, use a dedicated waterproof plastic bin or seal the top of boxes with extra tape and mark them "fragile" and "top load only."</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Electronic Appliances and Devices</h3>
+      <p>If you still have original boxes for TVs, computers, and kitchen appliances, use them — they are purpose-designed for these items. For devices without original boxes, wrap in bubble wrap and place in an appropriately sized carton with void fill on all sides. Never leave more than 1–2 cm of empty space in a box used for electronics — the device will shift and sustain impact damage.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Getting Boxes Delivered to Subang, PJ & Shah Alam</h2>
+      <p>Quinocycle delivers packing boxes and supplies throughout the Klang Valley. Whether you are in SS15 Subang, Damansara PJ, or Section 7 Shah Alam, we can get boxes to you ahead of your move. Our minimum order of RM 1,000 typically covers all the boxes and tape a typical household needs. Order early — delivery demand picks up significantly on Fridays and end-of-month periods.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Frequently Asked Questions</h2>
+      <div class="space-y-4 my-6">
+        {faqSchema.mainEntity.map((faq) => (
+          <details class="bg-primary/5 border border-primary/20 rounded-xl p-4">
+            <summary class="font-label font-semibold text-on-surface cursor-pointer">{faq.name}</summary>
+            <p class="font-body text-secondary mt-3 leading-relaxed">{faq.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-3">Get Your Moving Boxes Delivered Across Klang Valley</h2>
+        <p class="font-body text-secondary mb-6">Quinocycle in Balakong supplies moving boxes, bubble wrap, tape, and stretch film throughout Selangor and the Klang Valley. Min. order RM 1,000. Same-day WhatsApp response.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+            WhatsApp for Moving Boxes
+          </a>
+          <a href="mailto:quinocycle@gmail.com" class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-label font-bold px-6 py-3 rounded-full hover:bg-primary/5 transition-colors">
+            Email: quinocycle@gmail.com
+          </a>
+        </div>
+        <p class="font-body text-xs text-secondary mt-4">No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300 · Mon–Fri 9am–6pm, Sat 9am–1pm</p>
+      </div>
+
+      <p>Moving within the Klang Valley does not need to be chaotic. With the right packing supplies ordered in advance and a systematic room-by-room approach, you can protect everything you own and arrive at your new address without damaged goods or missing items. Contact Quinocycle today for a quick quote on everything you need.</p>
+    </section>
+  </article>
+</Layout>

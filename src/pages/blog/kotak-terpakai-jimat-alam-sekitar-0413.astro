@@ -1,0 +1,138 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = {
+  title: 'Kotak Terpakai Malaysia: Jimat Kos dan Jaga Alam Sekitar Serentak',
+  description: 'PKS Malaysia kini boleh jimat 30–50% kos pembungkusan sambil menyumbang kepada kelestarian alam sekitar dengan menggunakan kotak kardus terpakai. Ketahui bagaimana Quinocycle Balakong boleh membantu.',
+  date: '2026-04-13',
+  readTime: '7 min',
+  category: 'Kotak Kardus Terpakai',
+  author: 'Quinocycle Team',
+  slug: 'kotak-terpakai-jimat-alam-sekitar-0413',
+};
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20berminat%20dengan%20kotak%20terpakai%20untuk%20perniagaan%20saya';
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  dateModified: post.date,
+  inLanguage: "ms-MY",
+  author: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my" },
+  publisher: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my", logo: { "@type": "ImageObject", url: "https://www.quinocycle.com.my/images/logo.png" } },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.quinocycle.com.my/blog/kotak-terpakai-jimat-alam-sekitar-0413" },
+  keywords: "kotak terpakai Malaysia, kotak kardus terpakai Selangor, pembungkusan mesra alam PKS, kotak murah borong, kotak terpakai Balakong"
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Adakah kotak terpakai selamat digunakan untuk penghantaran?", acceptedAnswer: { "@type": "Answer", text: "Ya, apabila dinilai dengan betul. Quinocycle memeriksa semua kotak terpakai dan hanya menyimpan yang mempunyai struktur utuh, tiada kerosakan lembapan, dan kekuatan mampatan yang mencukupi untuk satu kitaran penghantaran lagi." } },
+    { "@type": "Question", name: "Berapa banyak PKS boleh jimat dengan beralih kepada kotak terpakai?", acceptedAnswer: { "@type": "Answer", text: "Biasanya 30–50% berbanding membeli kotak baru saiz dan gred yang sama. Untuk perniagaan yang berbelanja RM 2,000/bulan untuk kotak baru, beralih kepada kotak terpakai boleh menjimatkan RM 600–1,000 sebulan — penjimatan besar sepanjang tahun." } },
+    { "@type": "Question", name: "Apakah kesan alam sekitar menggunakan kotak kardus terpakai?", acceptedAnswer: { "@type": "Answer", text: "Setiap kotak yang digunakan semula mencegah keperluan bahan mentah baru, mengurangkan penggunaan tenaga dalam pembuatan, dan mengelakkan pembungkusan berguna daripada dibuang ke tapak pelupusan atau aliran kitar semula sebelum masanya. Ini adalah salah satu manfaat kelestarian paling langsung dalam logistik." } },
+    { "@type": "Question", name: "Adakah kotak terpakai dari Quinocycle datang dalam saiz standard?", acceptedAnswer: { "@type": "Answer", text: "Stok kotak terpakai kami berbeza-beza kerana ia datang dari kilang dan gudang. Kami boleh memaklumkan tentang saiz yang tersedia semasa anda menghubungi kami. Saiz biasa (Kecil hingga XL) biasanya tersedia, walaupun kuantiti berbeza mengikut saiz." } },
+    { "@type": "Question", name: "Bolehkah saya mencampurkan kotak terpakai dan baru dalam satu pesanan?", acceptedAnswer: { "@type": "Answer", text: "Ya. Ramai perniagaan menggunakan kotak baru untuk penghantaran kepada pelanggan (imej jenama) dan kotak terpakai untuk pemindahan dalaman, penghantaran B2B, atau penyimpanan. Kami boleh membekalkan kedua-dua jenis dengan jumlah pesanan minimum RM 1,000." } },
+  ]
+};
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  name: "Quinocycle Sdn. Bhd.",
+  url: "https://www.quinocycle.com.my",
+  telephone: "+60168916381",
+  address: { "@type": "PostalAddress", streetAddress: "No.13, Jalan Taming P/1, Taming Jaya", addressLocality: "Balakong", addressRegion: "Selangor", postalCode: "43300", addressCountry: "MY" },
+  geo: { "@type": "GeoCoordinates", latitude: 3.0579, longitude: 101.7468 },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "09:00", closes: "18:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "13:00" }
+  ],
+  priceRange: "RM 1.90 – RM 6.50 per box",
+  areaServed: "Peninsular Malaysia"
+};
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="font-body text-on-surface leading-relaxed space-y-6">
+      <p>Perusahaan kecil dan sederhana (PKS) Malaysia sentiasa berada di bawah tekanan untuk mengurangkan kos operasi tanpa menjejaskan kualiti perkhidmatan. Satu strategi bijak yang sering diabaikan ialah beralih daripada kotak baru kepada kotak terpakai untuk penghantaran yang tidak melibatkan pelanggan. Di Quinocycle di Balakong, Selangor, kami telah membekalkan kotak kardus terpakai berkualiti kepada ratusan perniagaan di seluruh Lembah Klang, Cheras, Kajang, dan kawasan sekitarnya — dan penjimatan itu bertambah dengan cepat.</p>
+
+      <p>Panduan ini meneroka faedah kos sebenar, kelayakan kelestarian, dan had praktikal kotak kardus terpakai, supaya anda boleh membuat keputusan yang tepat untuk PKS anda.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Penjimatan Kos Sebenar Kotak Kardus Terpakai</h2>
+      <p>Kotak kardus bergelombang baru di Malaysia berharga kira-kira RM 1.90 hingga RM 6.50 setiap kotak bergantung kepada saiz dan jenis dinding. Kotak terpakai berkualiti dari Quinocycle biasanya datang pada 30–50% lebih rendah. Untuk perniagaan yang menghantar atau menyimpan 200–500 kotak sebulan, penjimatan bulanan boleh mencecah RM 500–1,500.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Penggunaan Dalaman vs Menghadap Pelanggan</h3>
+      <p>PKS yang paling bijak membahagikan strategi pembelian mereka. Mereka menggunakan kotak baru untuk penghantaran kepada pelanggan akhir — di mana keadaan kotak mencerminkan imej jenama — dan menggunakan kotak terpakai untuk penggudangan, pemindahan stok antara cawangan, pengendalian pulangan, atau penghantaran pukal B2B. Pendekatan hibrid ini menangkap penjimatan kos terbaik sambil melindungi pengalaman pelanggan.</p>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Kesan Alam Sekitar: Kotak Baru vs Terpakai</h3>
+        <div class="space-y-3 font-body text-sm">
+          <div class="grid grid-cols-3 gap-2 font-semibold text-on-surface pb-2 border-b border-outline-variant/20">
+            <span>Faktor</span><span>Kotak Baru</span><span>Kotak Terpakai</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1 border-b border-outline-variant/20">
+            <span class="text-secondary">Bahan mentah</span><span class="text-on-surface">Serat + tenaga</span><span class="text-on-surface text-green-700">Tiada tambahan</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1 border-b border-outline-variant/20">
+            <span class="text-secondary">Pembuatan</span><span class="text-on-surface">Kitaran penuh</span><span class="text-on-surface text-green-700">Sifar</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1 border-b border-outline-variant/20">
+            <span class="text-secondary">Jejak karbon</span><span class="text-on-surface">Lebih tinggi</span><span class="text-on-surface text-green-700">Jauh lebih rendah</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1">
+            <span class="text-secondary">Akhir hayat</span><span class="text-on-surface">Kitar semula selepas 1 guna</span><span class="text-on-surface text-green-700">Melanjutkan hayat berguna</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Kelestarian: Kes Alam Sekitar untuk Kotak Terpakai</h2>
+      <p>Kelestarian semakin menjadi keperluan perniagaan di Malaysia, bukan sekadar alat hubungan awam. Garis panduan perolehan kerajaan, rangka kerja pelaporan ESG, dan sentimen pelanggan semuanya mendorong perniagaan ke arah rantaian bekalan yang lebih hijau. Kotak kardus terpakai adalah salah satu pertukaran hijau paling mudah yang boleh anda lakukan.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Piawaian Kualiti: Apa yang Diharapkan dari Kotak Terpakai</h2>
+      <p>Di Quinocycle, stok terpakai kami datang dari kilang, gudang, dan hab logistik di seluruh Selangor — biasanya kotak yang telah menyelesaikan satu atau dua kitaran penghantaran tetapi masih mengekalkan kekuatan mampatan yang baik dan tiada kerosakan lembapan. Kami tidak menjual kotak dengan noda air, kawasan lembut, sudut yang rosak, atau ubah bentuk yang ketara.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Cara Memeriksa Kualiti Kotak Sendiri</h3>
+      <p>Apabila menerima sebarang bekalan kotak terpakai, lakukan pemeriksaan kualiti ringkas: tekan dengan kuat pada setiap panel untuk menguji kekakuan, periksa sudut untuk kerosakan, dan cari sebarang tanda kerosakan lembapan. Kotak terpakai yang baik harus terasa tegar dan kembali ke bentuk asal apabila ditekan ringan.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Kotak Terpakai Berhampiran Balakong, Cheras & Kajang</h2>
+      <p>Jika perniagaan anda terletak di kawasan perindustrian Balakong, Cheras, Kajang, atau Seri Kembangan, Quinocycle adalah pembekal kotak kardus terpakai borong yang paling hampir dengan anda. Gudang kami di Balakong membolehkan pengambilan yang cepat dan jarak penghantaran yang pendek. Kami melayani seluruh Lembah Klang dan boleh menghantar ke seluruh Semenanjung Malaysia untuk pesanan yang lebih besar.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Soalan Lazim</h2>
+      <div class="space-y-4 my-6">
+        {faqSchema.mainEntity.map((faq) => (
+          <details class="bg-primary/5 border border-primary/20 rounded-xl p-4">
+            <summary class="font-label font-semibold text-on-surface cursor-pointer">{faq.name}</summary>
+            <p class="font-body text-secondary mt-3 leading-relaxed">{faq.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-3">Beli Kotak Terpakai Borong di Selangor</h2>
+        <p class="font-body text-secondary mb-6">Quinocycle membekalkan kotak terpakai berkualiti pada harga borong kepada PKS di seluruh Balakong, Cheras, Kajang, dan Lembah Klang. Pesanan min. RM 1,000.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+            WhatsApp untuk Stok Tersedia
+          </a>
+          <a href="mailto:quinocycle@gmail.com" class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-label font-bold px-6 py-3 rounded-full hover:bg-primary/5 transition-colors">
+            E-mel: quinocycle@gmail.com
+          </a>
+        </div>
+        <p class="font-body text-xs text-secondary mt-4">No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300 · Isnin–Jumaat 9pg–6ptg, Sabtu 9pg–1ptg</p>
+      </div>
+
+      <p>Kotak kardus terpakai mewakili salah satu langkah terbaik nilai-untuk-wang yang boleh dilakukan oleh PKS dalam perolehan pembungkusan. Anda menjimatkan wang, mengurangkan kesan alam sekitar, dan — apabila digunakan secara strategik — tidak ada kompromi dalam kualiti operasi. Hubungi Quinocycle hari ini untuk mengetahui saiz yang kini tersedia dan bagaimana kami boleh membantu anda membina rantaian bekalan pembungkusan yang lebih lestari dan cekap kos.</p>
+    </section>
+  </article>
+</Layout>

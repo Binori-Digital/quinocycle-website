@@ -1,0 +1,139 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = {
+  title: 'Kepingan Kadbod Gelombang sebagai Lapisan Pelindung untuk Perabot & Elektronik Malaysia',
+  description: 'Kepingan kadbod gelombang bukan sahaja untuk dinding luar kotak — ia juga berfungsi sebagai pembahagi dalam, lapisan pads, dan pelindung sudut untuk penghantaran perabot dan elektronik di Malaysia.',
+  date: '2026-04-13',
+  readTime: '7 min',
+  category: 'Kadbod Gelombang',
+  author: 'Quinocycle Team',
+  slug: 'kepingan-kadbod-lapisan-pelindung-0413',
+};
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20perlukan%20kepingan%20kadbod%20gelombang%20untuk%20pembahagi%20dalam';
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  dateModified: post.date,
+  inLanguage: "ms-MY",
+  author: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my" },
+  publisher: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my", logo: { "@type": "ImageObject", url: "https://www.quinocycle.com.my/images/logo.png" } },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.quinocycle.com.my/blog/kepingan-kadbod-lapisan-pelindung-0413" },
+  keywords: "kepingan kadbod gelombang Malaysia, pembahagi dalam pembungkusan, perlindungan penghantaran perabot Selangor, layer pads kadbod, pelindung sudut kadbod borong"
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Apakah ketebalan kepingan bergelombang yang sesuai sebagai pembahagi dalam?", acceptedAnswer: { "@type": "Answer", text: "Untuk barangan ringan (aksesori elektronik, seramik), kepingan bergelombang dinding tunggal (3-ply) pada ketebalan 3–4mm sesuai. Untuk barangan lebih berat seperti panel perabot atau kaca, kepingan dinding berganda (5-ply) pada 6–8mm memberikan taburan beban dan penyerapan impak yang lebih baik." } },
+    { "@type": "Question", name: "Bolehkah kepingan kadbod dipotong kepada saiz tersuai untuk pembahagi?", acceptedAnswer: { "@type": "Answer", text: "Ya. Kepingan kadbod bergelombang boleh digores dan dipotong dengan mudah menggunakan pisau kraf atau pemotong kotak. Untuk jumlah besar, Quinocycle boleh memberi nasihat tentang pilihan kepingan potong tersuai atau anda boleh menggores kepingan standard kepada dimensi yang diperlukan di tapak." } },
+    { "@type": "Question", name: "Adakah kepingan bergelombang cukup kuat untuk perlindungan sudut perabot?", acceptedAnswer: { "@type": "Answer", text: "Kepingan bergelombang berbilang ply yang dilipat pada 90° membuat pelindung sudut yang berkesan untuk perabot, terutamanya apabila dilaminat dengan filem regangan atau pita. Untuk sudut perabot yang sangat berat, pengawal sudut busa digabungkan dengan kepingan bergelombang menawarkan perlindungan terbaik." } },
+    { "@type": "Question", name: "Bagaimana layer pads mencegah kerosakan dalam penghantaran tersusun?", acceptedAnswer: { "@type": "Answer", text: "Layer pads bergelombang yang diletakkan antara peringkat produk yang disusun mengedarkan berat item atas secara serata di peringkat bawah, mencegah kerosakan pemuatan titik. Ia adalah amalan standard dalam logistik seramik, barangan kaca, elektronik, dan perabot." } },
+    { "@type": "Question", name: "Di mana saya boleh membeli kepingan kadbod bergelombang borong berhampiran Balakong?", acceptedAnswer: { "@type": "Answer", text: "Quinocycle Sdn. Bhd. di Balakong, Selangor adalah salah satu pembekal kepingan bergelombang terkemuka di Lembah Klang. Kami menjual borong dari minimum RM 1,000 dan menghantar ke Cheras, Kajang, Seri Kembangan, dan seluruh Semenanjung Malaysia." } },
+  ]
+};
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  name: "Quinocycle Sdn. Bhd.",
+  url: "https://www.quinocycle.com.my",
+  telephone: "+60168916381",
+  address: { "@type": "PostalAddress", streetAddress: "No.13, Jalan Taming P/1, Taming Jaya", addressLocality: "Balakong", addressRegion: "Selangor", postalCode: "43300", addressCountry: "MY" },
+  geo: { "@type": "GeoCoordinates", latitude: 3.0579, longitude: 101.7468 },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "09:00", closes: "18:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "13:00" }
+  ],
+  priceRange: "RM 1.90 – RM 6.50 per box",
+  areaServed: "Peninsular Malaysia"
+};
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="font-body text-on-surface leading-relaxed space-y-6">
+      <p>Apabila kebanyakan orang memikirkan kepingan kadbod bergelombang, mereka membayangkan dinding luar kotak penghantaran. Tetapi pembungkus berpengalaman dan profesional logistik di seluruh Malaysia tahu bahawa kepingan bergelombang mempunyai kehidupan kedua sebagai komponen pembungkusan dalam yang serba guna — khususnya sebagai layer pads, pembahagi, dan pelindung sudut. Aplikasi ini amat berharga untuk pengeluar perabot dan pengeksport elektronik di Selangor yang memerlukan perlindungan yang boleh dipercayai dan kos rendah dalam karton mereka.</p>
+
+      <p>Quinocycle Sdn. Bhd. di Balakong membekalkan kepingan kadbod bergelombang kepada pelbagai industri. Panduan ini memberi tumpuan khusus kepada cara menggunakan kepingan untuk perlindungan pembungkusan dalaman.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Apakah Layer Pads Bergelombang?</h2>
+      <p>Layer pad hanyalah kepingan bergelombang rata yang dipotong kepada dimensi dalaman karton atau palet. Apabila diletakkan antara peringkat produk dalam kotak atau palet, ia mengedarkan berat lapisan atas secara serata di seluruh item bawah — mencegah kerosakan pemuatan titik, yang merupakan punca utama kerosakan dalam penghantaran bertindan.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Bilakah Perlu Menggunakan Layer Pads</h3>
+      <p>Layer pads adalah penting apabila menumpuk barangan rapuh seperti jubin seramik, barangan kaca, elektronik yang dibungkus, atau kepingan perabot flat-pack dalam karton master atau palet eksport. Pad bertindak sebagai lapisan perantaraan yang tegar yang mengekalkan tekanan susun yang selamat. Tanpanya, item di bahagian bawah tumpukan menanggung keseluruhan berat tertumpu semua yang ada di atasnya — selalunya melebihi penilaian beban selamat pengeluar.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Kepingan Bergelombang sebagai Pembahagi Dalam Kotak</h2>
+      <p>Pembahagi kotak adalah kepingan bergelombang yang dipotong dan dikunci bersama untuk mencipta grid sel individu dalam karton yang lebih besar. Setiap produk masuk ke dalam selnya sendiri, mencegah sentuhan antara item yang menyebabkan calar, pecah, dan kerosakan. Ini adalah alternatif kos rendah kepada sisipan busa bercetak tersuai.</p>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Aplikasi Pembahagi Dalam mengikut Industri</h3>
+        <div class="space-y-3 font-body text-sm">
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Elektronik</span>
+            <span class="text-secondary text-right max-w-xs">Asingkan unit telefon, skrin tablet, aksesori dalam karton master</span>
+          </div>
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Barangan Kaca / Seramik</span>
+            <span class="text-secondary text-right max-w-xs">Pembahagi grid mencegah sentuhan antara cawan, mangkuk, dan pasu</span>
+          </div>
+          <div class="flex justify-between items-start py-2 border-b border-outline-variant/20">
+            <span class="font-semibold text-on-surface">Perkakasan Perabot</span>
+            <span class="text-secondary text-right max-w-xs">Asingkan komponen panel dalam karton eksport perabot flat-pack</span>
+          </div>
+          <div class="flex justify-between items-start py-2">
+            <span class="font-semibold text-on-surface">Bahagian Automotif</span>
+            <span class="text-secondary text-right max-w-xs">Lindungi komponen logam daripada mencalar antara satu sama lain dalam transit</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Menggunakan Kepingan Bergelombang untuk Perlindungan Sudut dan Tepi</h2>
+      <p>Perabot dan peralatan besar sangat mudah mengalami kerosakan sudut semasa pengendalian. Impak tajam pada sudut dan tepi boleh memecahkan kayu, retak kemasan berlak, atau kemik panel logam. Kepingan bergelombang yang dilipat pada 90° dan dilekatkan di sepanjang sudut perabot mewujudkan pelindung sudut yang murah dan boleh terurai secara biologi.</p>
+
+      <h3 class="font-headline text-xl font-semibold text-on-surface mt-6 mb-3">Menggabungkan dengan Bahan Perlindungan Lain</h3>
+      <p>Untuk perlindungan maksimum, gabungkan pad sudut bergelombang dengan filem regangan (untuk mengekalkan pad di tempatnya dan menambah perlindungan permukaan) dan bubble wrap pada permukaan yang sangat mudah terdedah. Pendekatan berlapis ini adalah standard dalam pembungkusan eksport perabot Malaysia dan mengurangkan tuntutan kerosakan transit dengan ketara berbanding menggunakan satu bahan sahaja.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Memesan Kepingan Bergelombang Borong dari Quinocycle</h2>
+      <p>Quinocycle membekalkan kepingan kadbod bergelombang dalam saiz standard serta gulungan yang lebih besar yang boleh dipotong mengikut spesifikasi di tapak. Sama ada anda memerlukan kepingan dinding tunggal untuk layer pads ringan atau papan dinding berganda untuk pembahagi tugas berat, gudang Balakong kami melayani pelanggan di Cheras, Kajang, Seri Kembangan, dan seluruh Lembah Klang. Pesanan minimum RM 1,000. Penghantaran tersedia ke seluruh negara.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Soalan Lazim</h2>
+      <div class="space-y-4 my-6">
+        {faqSchema.mainEntity.map((faq) => (
+          <details class="bg-primary/5 border border-primary/20 rounded-xl p-4">
+            <summary class="font-label font-semibold text-on-surface cursor-pointer">{faq.name}</summary>
+            <p class="font-body text-secondary mt-3 leading-relaxed">{faq.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-3">Dapatkan Kepingan Kadbod untuk Keperluan Pembungkusan Anda</h2>
+        <p class="font-body text-secondary mb-6">Quinocycle Sdn. Bhd. membekalkan kepingan kadbod bergelombang borong kepada pengeluar dan perniagaan logistik di Selangor. Pesanan min. RM 1,000. Penghantaran pantas dari Balakong.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+            WhatsApp Kami Sekarang
+          </a>
+          <a href="mailto:quinocycle@gmail.com" class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-label font-bold px-6 py-3 rounded-full hover:bg-primary/5 transition-colors">
+            E-mel: quinocycle@gmail.com
+          </a>
+        </div>
+        <p class="font-body text-xs text-secondary mt-4">No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300 · Isnin–Jumaat 9pg–6ptg, Sabtu 9pg–1ptg</p>
+      </div>
+
+      <p>Kepingan kadbod bergelombang adalah salah satu alat paling serba guna dan kurang digunakan dalam arsenal pembungkus. Daripada layer pads pada palet hingga pembahagi kotak yang dikunci dan pelindung sudut, ia menawarkan perlindungan yang boleh dipercayai pada sebahagian kecil kos sisipan busa atau acuan tersuai. Hubungi Quinocycle hari ini untuk membincangkan saiz dan kuantiti untuk aplikasi khusus anda.</p>
+    </section>
+  </article>
+</Layout>

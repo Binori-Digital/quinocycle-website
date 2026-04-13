@@ -1,0 +1,137 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = {
+  title: 'Panduan Jenis Flute Kotak Kardus: A, B, C, E & BC Flute untuk Perniagaan Malaysia',
+  description: 'Memahami jenis flute kotak kardus — A, B, C, E, dan BC — adalah penting untuk memilih kekuatan pembungkusan yang tepat. Panduan berfokus Malaysia ini menerangkan setiap flute dan bila menggunakannya.',
+  date: '2026-04-13',
+  readTime: '7 min',
+  category: 'Ilmu Pembungkusan',
+  author: 'Quinocycle Team',
+  slug: 'jenis-flute-kotak-kardus-panduan-0413',
+};
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20ingin%20tahu%20lebih%20lanjut%20tentang%20jenis%20flute%20kotak%20kardus%20untuk%20perniagaan%20saya';
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  dateModified: post.date,
+  inLanguage: "ms-MY",
+  author: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my" },
+  publisher: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my", logo: { "@type": "ImageObject", url: "https://www.quinocycle.com.my/images/logo.png" } },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.quinocycle.com.my/blog/jenis-flute-kotak-kardus-panduan-0413" },
+  keywords: "jenis flute kotak kardus Malaysia, B flute C flute BC flute, gred kotak bergelombang Selangor, ilmu pembungkusan Malaysia, kotak kardus yang sesuai untuk perniagaan"
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Apakah jenis flute kotak kardus yang paling biasa digunakan di Malaysia?", acceptedAnswer: { "@type": "Answer", text: "Flute B dan flute C adalah yang paling biasa digunakan di Malaysia untuk penghantaran am dan e-dagang. Flute BC dinding berganda digunakan secara meluas untuk barangan berat dan penghantaran industri. Flute A digunakan untuk pembungkusan runcit premium, manakala flute E popular untuk kotak kecil dan pembungkusan dalam." } },
+    { "@type": "Question", name: "Apakah maksud dinding tunggal dan dinding berganda dalam kotak bergelombang?", acceptedAnswer: { "@type": "Answer", text: "Papan bergelombang dinding tunggal mempunyai satu lapisan medium bergelombang antara dua lembaran liner rata (3-ply). Dinding berganda mempunyai dua lapisan medium bergelombang dengan tiga lembaran liner (5-ply). Dinding berganda jauh lebih kuat dan lebih tahan terhadap mampatan dan impak." } },
+    { "@type": "Question", name: "Flute mana yang terbaik untuk pembungkusan bahagian jentera berat?", acceptedAnswer: { "@type": "Answer", text: "Papan bergelombang BC dinding berganda atau bahkan tiga dinding disyorkan untuk bahagian jentera berat. Flute BC menggabungkan kekakuan flute C dengan rintangan cucukan flute B, menjadikannya sesuai untuk aplikasi industri dengan komponen berat dan bersisi tajam." } },
+    { "@type": "Question", name: "Adakah flute E cukup kuat untuk penghantaran e-dagang?", acceptedAnswer: { "@type": "Answer", text: "Flute E (1.5mm) sesuai untuk barangan ringan di bawah 2–3 kg dan penghantaran jarak pendek. Untuk kebanyakan aplikasi e-dagang yang melibatkan produk melebihi 1 kg atau pengendalian kurier berbilang henti, flute B atau C dinding tunggal adalah lebih selamat." } },
+    { "@type": "Question", name: "Bolehkah Quinocycle membantu saya memilih flute yang sesuai untuk produk saya?", acceptedAnswer: { "@type": "Answer", text: "Ya. Pasukan Quinocycle di Balakong, Selangor boleh memberi nasihat tentang pembinaan kotak terbaik untuk jenis produk, berat, dan kaedah penghantaran anda. Hubungi kami melalui WhatsApp dengan butiran produk anda dan kami akan mengesyorkan gred kotak yang sesuai." } },
+  ]
+};
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  name: "Quinocycle Sdn. Bhd.",
+  url: "https://www.quinocycle.com.my",
+  telephone: "+60168916381",
+  address: { "@type": "PostalAddress", streetAddress: "No.13, Jalan Taming P/1, Taming Jaya", addressLocality: "Balakong", addressRegion: "Selangor", postalCode: "43300", addressCountry: "MY" },
+  geo: { "@type": "GeoCoordinates", latitude: 3.0579, longitude: 101.7468 },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "09:00", closes: "18:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "13:00" }
+  ],
+  priceRange: "RM 1.90 – RM 6.50 per box",
+  areaServed: "Peninsular Malaysia"
+};
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="font-body text-on-surface leading-relaxed space-y-6">
+      <p>Jika anda pernah memesan kotak kardus di Malaysia dan berhadapan dengan istilah seperti "flute B dinding tunggal" atau "BC dinding berganda," anda tidak bersendirian. Kebanyakan pemilik perniagaan hanya meminta "kotak standard" dan berharap yang terbaik. Tetapi memahami jenis flute — corak gelombang bergelombang di dalam kadbod — membolehkan anda membuat keputusan pembungkusan yang lebih bijak dan lebih cekap kos. Flute yang betul bermakna perlindungan yang lebih baik tanpa membayar lebih.</p>
+
+      <p>Quinocycle Sdn. Bhd. di Balakong, Selangor telah membekalkan kotak kardus bergelombang kepada perniagaan Malaysia sejak 2010. Berikut adalah panduan kami dalam bahasa mudah tentang jenis flute dan cara memilih yang betul.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Apakah Flute dalam Kadbod Bergelombang?</h2>
+      <p>Kotak kardus bergelombang diperbuat daripada lembaran liner rata dan lapisan tengah bergelombang yang dipanggil fluting atau medium. Struktur bergelombang memberikan kekuatan papan — bentuk lengkok setiap gelombang memindahkan daya dengan cekap, sama seperti jambatan lengkok. Saiz dan kekerapan gelombang ini menentukan jenis flute, yang seterusnya menentukan ketebalan, keupayaan penampan, kekuatan mampatan, dan kos.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Panduan Rujukan Jenis Flute</h2>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-2xl p-6 my-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Perbandingan Flute Bergelombang</h3>
+        <div class="space-y-3 font-body text-sm overflow-x-auto">
+          <div class="grid grid-cols-4 gap-2 font-semibold text-on-surface pb-2 border-b border-outline-variant/20">
+            <span>Flute</span><span>Ketebalan</span><span>Terbaik Untuk</span><span>Kekuatan</span>
+          </div>
+          <div class="grid grid-cols-4 gap-2 py-1 border-b border-outline-variant/20">
+            <span class="text-on-surface font-semibold">Flute A</span><span class="text-secondary">~5mm</span><span class="text-secondary">Runcit premium, hadiah rapuh</span><span class="text-secondary">Penampan tinggi</span>
+          </div>
+          <div class="grid grid-cols-4 gap-2 py-1 border-b border-outline-variant/20">
+            <span class="text-on-surface font-semibold">Flute B</span><span class="text-secondary">~3mm</span><span class="text-secondary">Barangan dalam tin, runcit</span><span class="text-secondary">Rintangan cucukan baik</span>
+          </div>
+          <div class="grid grid-cols-4 gap-2 py-1 border-b border-outline-variant/20">
+            <span class="text-on-surface font-semibold">Flute C</span><span class="text-secondary">~4mm</span><span class="text-secondary">Penghantaran am, e-dagang</span><span class="text-secondary">Seimbang serba guna</span>
+          </div>
+          <div class="grid grid-cols-4 gap-2 py-1 border-b border-outline-variant/20">
+            <span class="text-on-surface font-semibold">Flute E</span><span class="text-secondary">~1.5mm</span><span class="text-secondary">Kotak runcit kecil, pembahagi</span><span class="text-secondary">Ringan, cetakan halus</span>
+          </div>
+          <div class="grid grid-cols-4 gap-2 py-1">
+            <span class="text-on-surface font-semibold">BC Dinding Berganda</span><span class="text-secondary">~7mm</span><span class="text-secondary">Barangan berat, industri, eksport</span><span class="text-secondary">Mampatan sangat tinggi</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Flute C: Standard Malaysia untuk E-Dagang</h2>
+      <p>Flute C (kira-kira 4mm) adalah flute yang paling banyak digunakan dalam sektor e-dagang dan pengedaran am Malaysia. Ia mengimbangi penampan, kekuatan mampatan, dan kos dengan lebih berkesan daripada mana-mana jenis dinding tunggal lain. Untuk kebanyakan produk di bawah 10 kg yang dihantar melalui J&T, Ninja Van, Pos Laju, atau DHL, flute C dinding tunggal adalah pilihan yang sesuai. Apabila ragu-ragu, flute C adalah tempat untuk bermula.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Flute B: Rintangan Cucukan & Serba Guna</h2>
+      <p>Flute B (kira-kira 3mm) mempunyai gelombang yang lebih kecil dan lebih padat, memberikannya rintangan cucukan yang sangat baik dan permukaan yang lebih rata yang mencetak dengan baik. Ia adalah standard untuk barangan dalam tin, kotak runcit perkakasan, dan kotak pembungkusan makanan di Malaysia. Ia juga bermakna lebih banyak kotak per palet untuk kecekapan penyimpanan.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">BC Dinding Berganda: Gred Industri & Eksport</h2>
+      <p>BC dinding berganda menggabungkan lapisan flute B dan flute C, memberikan ketebalan kira-kira 7mm dan kekuatan mampatan yang jauh lebih tinggi. Ia adalah standard untuk bahagian jentera, karton eksport, komponen automotif berat, dan karton master gudang. Flute BC boleh menyokong beban susun yang sangat tinggi dan menahan kekerasan pengangkutan laut. Ia lebih berat dan lebih mahal daripada dinding tunggal tetapi sesuai untuk produk di mana kos kerosakan melebihi premium pembungkusan.</p>
+
+      <h2 class="font-headline text-2xl font-bold text-on-surface mt-10 mb-4">Soalan Lazim</h2>
+      <div class="space-y-4 my-6">
+        {faqSchema.mainEntity.map((faq) => (
+          <details class="bg-primary/5 border border-primary/20 rounded-xl p-4">
+            <summary class="font-label font-semibold text-on-surface cursor-pointer">{faq.name}</summary>
+            <p class="font-body text-secondary mt-3 leading-relaxed">{faq.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-3">Dapatkan Kotak Kardus yang Tepat untuk Perniagaan Anda</h2>
+        <p class="font-body text-secondary mb-6">Quinocycle membekalkan semua jenis flute utama — B, C, BC dinding berganda, dan lain-lain — borong dari Balakong, Selangor. Pesanan min. RM 1,000. Nasihat pakar tentang pemilihan kotak disertakan.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+            WhatsApp untuk Nasihat Kotak
+          </a>
+          <a href="mailto:quinocycle@gmail.com" class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-label font-bold px-6 py-3 rounded-full hover:bg-primary/5 transition-colors">
+            E-mel: quinocycle@gmail.com
+          </a>
+        </div>
+        <p class="font-body text-xs text-secondary mt-4">No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300 · Isnin–Jumaat 9pg–6ptg, Sabtu 9pg–1ptg</p>
+      </div>
+
+      <p>Jenis flute adalah salah satu faktor paling penting — dan paling diabaikan — dalam pemilihan kotak kardus. Memilih flute yang betul bermakna produk anda tiba dengan selamat, kos pembungkusan anda dioptimumkan, dan anda tidak membayar untuk kekuatan yang tidak anda perlukan. Hubungi Quinocycle hari ini dan pasukan kami akan membantu anda memilih spesifikasi kotak bergelombang yang betul untuk produk dan laluan penghantaran anda.</p>
+    </section>
+  </article>
+</Layout>
