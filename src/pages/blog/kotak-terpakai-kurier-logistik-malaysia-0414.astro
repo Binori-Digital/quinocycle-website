@@ -1,0 +1,163 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Kotak Terpakai untuk Perkhidmatan Kurier & Logistik — Jimat 40% Kos di Malaysia', description: 'Perkhidmatan kurier dan logistik boleh jimat 40–50% dengan menggunakan kotak kardus terpakai berkualiti. Panduan penyeluruhan untuk operasi logistik berskala besar.', date: '2026-04-14', readTime: '7 min', category: 'Kotak Kardus Terpakai', author: 'Quinocycle Team', slug: 'kotak-terpakai-kurier-logistik-malaysia-0414' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hai%20Quinocycle!%20Kami%20menjalankan%20perkhidmatan%20kurier%20dan%20perlukan%20kotak%20terpakai.%20Boleh%20berikan%20harga?';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-04-14', dateModified: '2026-04-14', inLanguage: "ms-MY", author: { "@type": "Organization", name: "Quinocycle Team", url: "https://www.quinocycle.com.my" }, publisher: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my", logo: { "@type": "ImageObject", url: "https://www.quinocycle.com.my/logo.png" } }, mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.quinocycle.com.my" }, keywords: "kotak terpakai, kurier, logistik, jimat kos, pembungkusan borong Malaysia" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Adakah kotak terpakai selamat untuk pengiriman?","acceptedAnswer":{"@type":"Answer","text":"Ya, jika bersumber dengan betul. Quinocycle memeriksa setiap kotak untuk integriti struktur, kerosakan kelembapan, dan kebersihan. Kotak yang gagal ujian ditolak."}},{"@type":"Question","name":"Berapa banyak yang boleh jimat dengan kotak terpakai?","acceptedAnswer":{"@type":"Answer","text":"Biasanya 40–50% kurang kos daripada kotak baru. Sebuah perkhidmatan kurier yang menghantarkan 5,000 paket bulanan boleh jimat RM 5,000–10,000 setiap bulan."}},{"@type":"Question","name":"Adakah kotak terpakai menjejaskan imej jenama?","acceptedAnswer":{"@type":"Answer","text":"Untuk operasi kurier B2B, tidak. Kebanyakan kotak terpakai kelihatan hampir seperti baru. Untuk penghantaran pelanggan akhir, gunakan kotak baru; untuk dalam-gudang, gunakan terpakai."}},{"@type":"Question","name":"Boleh Quinocycle membekalkan jumlah konsisten setiap bulan?","acceptedAnswer":{"@type":"Answer","text":"Ya. Kami mengekalkan bekalan tetap daripada rakan kilang dan gudang. Pesanan suku tahunan dengan jadual penghantaran fleksibel tersedia."}},{"@type":"Question","name":"Bagaimana proses jaminan kualiti Quinocycle?","acceptedAnswer":{"@type":"Answer","text":"Setiap batch diperiksa untuk integriti dinding, kerosakan kelembapan, dan pencemaran. Kotak yang gagal ujian struktural ditolak. Kami hanya membekal kotak terpakai berkualiti tinggi."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{"@type":"PostalAddress","streetAddress":"No.13, Jalan Taming P/1, Taming Jaya","addressLocality":"Balakong","addressRegion":"Selangor","postalCode":"43300","addressCountry":"MY"}, geo:{"@type":"GeoCoordinates","latitude":3.0579,"longitude":101.7468}, openingHoursSpecification:[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"13:00"}], priceRange:"RM 0.90 – RM 3.50 setiap kotak", areaServed:"Semenanjung Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="mb-12">
+      <p class="font-body text-on-surface leading-relaxed mb-4">
+        Bagi perkhidmatan kurier dan logistik beroperasi di Malaysia, kos pembungkusan adalah salah satu perbelanjaan operasi terbesar. Peralihan kepada kotak kardus terpakai berkualiti boleh mengurangkan kos sebanyak 40–50% tanpa menjejaskan keselamatan produk.
+      </p>
+      <p class="font-body text-on-surface leading-relaxed">
+        Panduan ini menunjukkan bagaimana syarikat logistik Semenanjung Malaysia boleh beroperasi dengan lebih cekap menggunakan kotak terpakai.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface mb-6">1. Mengapa Perkhidmatan Kurier Pilih Kotak Terpakai</h2>
+
+      <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Analisis Kos Bulanan</h3>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-6 mb-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <p class="font-bold text-on-surface mb-3">5,000 Paket/Bulan</p>
+            <ul class="space-y-2 text-sm text-on-surface">
+              <li><span class="font-bold">Kotak baru:</span> 5,000 × RM 2.50 = RM 12,500</li>
+              <li><span class="font-bold">Kotak terpakai:</span> 5,000 × RM 1.20 = RM 6,000</li>
+              <li><span class="font-bold">Jimat/bulan:</span> RM 6,500</li>
+              <li><span class="font-bold">Jimat/tahun:</span> RM 78,000</li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-bold text-on-surface mb-3">10,000 Paket/Bulan</p>
+            <ul class="space-y-2 text-sm text-on-surface">
+              <li><span class="font-bold">Kotak baru:</span> 10,000 × RM 2.50 = RM 25,000</li>
+              <li><span class="font-bold">Kotak terpakai:</span> 10,000 × RM 1.20 = RM 12,000</li>
+              <li><span class="font-bold">Jimat/bulan:</span> RM 13,000</li>
+              <li><span class="font-bold">Jimat/tahun:</span> RM 156,000</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p class="font-body text-on-surface leading-relaxed">
+        Untuk syarikat berskala sederhana, penghematan ini pergi terus ke garis bawah. Ini membenarkan mereka bersaing pada harga sambil mengekalkan margin atau meningkatkan keuntungan.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface mb-6">2. Jaminan Kualiti: Bagaimana Quinocycle Memeriksa Kotak</h2>
+
+      <ol class="space-y-4 mb-6">
+        <li class="flex gap-4">
+          <span class="font-bold text-primary text-lg">1</span>
+          <div>
+            <h4 class="font-bold text-on-surface mb-2">Ujian Integriti Dinding</h4>
+            <p class="font-body text-on-surface text-sm">Periksa struktur gelombang untuk kerosakan, kelemahan, atau pemisahan lapisan. Kotak dengan dinding kompromis ditolak dengan tegas.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="font-bold text-primary text-lg">2</span>
+          <div>
+            <h4 class="font-bold text-on-surface mb-2">Pemeriksaan Kebersihan</h4>
+            <p class="font-body text-on-surface text-sm">Kotak bersumber daripada persekitaran kilang dan gudang yang bersih. Tidak ada kontaminasi, tanah, atau bahan kimia.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="font-bold text-primary text-lg">3</span>
+          <div>
+            <h4 class="font-bold text-on-surface mb-2">Penilaian Kosmetik</h4>
+            <p class="font-body text-on-surface text-sm">Lekuk, kusut kecil, dan pudar boleh diterima. Kotak dengan robek besar, lubang, atau kerosakan struktural ditolak.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="font-bold text-primary text-lg">4</span>
+          <div>
+            <h4 class="font-bold text-on-surface mb-2">Ujian Batch Rawak</h4>
+            <p class="font-body text-on-surface text-sm">Sampel daripada setiap batch diuji menahan beban untuk memastikan ia dapat melindungi isi semasa transit.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface mb-6">3. Sumber Kotak Terpakai Berkualiti Tinggi</h2>
+
+      <div class="space-y-4 mb-6">
+        <div class="p-6 bg-primary/5 border border-primary/20 rounded-lg">
+          <h3 class="font-bold text-on-surface mb-2">📦 Lebihan Kilang & Inventori</h3>
+          <p class="font-body text-on-surface text-sm">Kemudahan pembuatan sering menghasilkan lebihan kotak. Kotak-kotak ini baru atau hampir baru tetapi dijual sebagai "terpakai" kerana lebihan inventori.</p>
+        </div>
+
+        <div class="p-6 bg-primary/5 border border-primary/20 rounded-lg">
+          <h3 class="font-bold text-on-surface mb-2">🏭 Pulangan & Putaran Gudang</h3>
+          <p class="font-body text-on-surface text-sm">Gudang besar memutarkan stok dan mengembalikan kotak lama (tetapi boleh digunakan). Disimpan dalam keadaan kering dan bersih, mengekalkan integriti struktur.</p>
+        </div>
+
+        <div class="p-6 bg-primary/5 border border-primary/20 rounded-lg">
+          <h3 class="font-bold text-on-surface mb-2">📭 Lebihan Kurier & Logistik</h3>
+          <p class="font-body text-on-surface text-sm">Syarikat kurier kadang-kadang mempunyai lebihan kotak daripada konsolidasi atau pengurangan saiz operasi, menjadikan bekalan konsisten dan boleh diprediksi.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface mb-6">4. Syarat Pembayaran Fleksibel untuk Pesanan Besar</h2>
+
+      <ul class="space-y-3 mb-6">
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold">✓</span>
+          <span class="font-body text-on-surface"><span class="font-bold">Pesanan Bulanan Tetap:</span> Harga istimewa untuk jumlah tetap setiap bulan dengan jadual penghantaran konsisten</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold">✓</span>
+          <span class="font-body text-on-surface"><span class="font-bold">Penghantaran Mengikut Keperluan:</span> Pesan hari ini, terima esok hari dengan kos pengiriman minimal</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold">✓</span>
+          <span class="font-body text-on-surface"><span class="font-bold">Terma Kredit Netto 15/30:</span> Untuk pelanggan berulang yang mapan, kami menawarkan syarat kredit untuk mengurangkan tekanan aliran tunai</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-12 p-8 bg-primary/5 border border-primary/20 rounded-lg">
+      <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Kurangkan Kos Pembungkusan Anda Hari Ini</h3>
+      <p class="font-body text-on-surface leading-relaxed mb-6">
+        Hubungi Quinocycle untuk sebut harga kotak terpakai berkualiti tinggi. Sama ada anda memerlukan 1,000 atau 50,000 kotak bulanan, kami mempunyai penyelesaian bekalan yang disesuaikan untuk syarikat logistik.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary font-bold px-6 py-3 rounded-lg hover:opacity-90 transition text-center">
+          WhatsApp untuk Sebut Harga Borong
+        </a>
+        <a href="tel:+60168916381" class="bg-surface-variant/50 border border-primary/20 text-on-surface font-bold px-6 py-3 rounded-lg hover:bg-surface-variant transition text-center">
+          Hubungi +6016-8916381
+        </a>
+      </div>
+      <p class="font-body text-xs text-secondary mt-4">📧 E-mel: quinocycle@gmail.com | 📍 Balakong, Selangor | 🚚 Penghantaran hari yang sama/berikutnya tersedia</p>
+    </section>
+
+    <section>
+      <h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface mb-6">Kesimpulan</h2>
+      <p class="font-body text-on-surface leading-relaxed">
+        Bagi perkhidmatan kurier dan logistik yang beroperasi dalam skala besar di Malaysia, kotak kardus terpakai berkualiti tinggi bukan hanya penjimatan kos — ia adalah keputusan perniagaan pintar. Jaminan kualiti Quinocycle memastikan setiap kotak memenuhi piawaian keselamatan sementara mengurangkan kos operasi sebanyak 40–50%. Dengan 16+ tahun melayani syarikat logistik di Semenanjung Malaysia, kami memahami keperluan anda.
+      </p>
+    </section>
+  </article>
+</Layout>

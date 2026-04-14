@@ -1,0 +1,157 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Honeycomb untuk Penghantaran Mesin & Peralatan Industri Malaysia — Perlindungan Premium', description: 'Melindungi mesin industri berharga semasa pengangkutan. Panel honeycomb memberikan perlindungan 3–5× lebih baik daripada kadbod standard dengan berat yang lebih ringan.', date: '2026-04-14', readTime: '7 min', category: 'Kadbod Honeycomb', author: 'Quinocycle Team', slug: 'honeycomb-mesin-penghantaran-industri-0414' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hai%20Quinocycle!%20Kami%20perlukan%20honeycomb%20untuk%20penghantaran%20mesin%20industri.%20Boleh%20sediakan%20spesifikasi%20dan%20harga?';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-04-14', dateModified: '2026-04-14', inLanguage: "ms-MY", author: { "@type": "Organization", name: "Quinocycle Team", url: "https://www.quinocycle.com.my" }, publisher: { "@type": "Organization", name: "Quinocycle Sdn. Bhd.", url: "https://www.quinocycle.com.my" }, mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.quinocycle.com.my" }, keywords: "honeycomb, perlindungan mesin, penghantaran industri, kadbod berat Malaysia" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Berapa banyak perlindungan yang diberikan honeycomb berbanding kadbod standard?","acceptedAnswer":{"@type":"Answer","text":"Honeycomb 3–5× lebih kuat daripada kadbod gelombang standard sambil 50–70% lebih ringan. Ia mengedarkan daya hentaman di atas kawasan yang lebih luas tanpa memindahkan daya ke kandungan."}},{"@type":"Question","name":"Ketebalan honeycomb apa yang diperlukan untuk mesin?","acceptedAnswer":{"@type":"Answer","text":"Untuk mesin, panel 15–25mm adalah tipikal. Panel yang lebih tebal (hingga 40mm) boleh digunakan untuk peralatan yang sangat sensitif. Pilihan bergantung pada berat dan kerapuhan peralatan."}},{"@type":"Question","name":"Boleh honeycomb disesuaikan untuk peralatan unik?","acceptedAnswer":{"@type":"Answer","text":"Ya. Panel boleh dipotong untuk memuatkan dimensi mesin apa pun. Banyak syarikat industri bekerja dengan Quinocycle untuk merancang cangkang perlindungan tersuai."}},{"@type":"Question","name":"Adakah honeycomb lebih mahal daripada kadbod biasa?","acceptedAnswer":{"@type":"Answer","text":"Honeycomb lebih mahal setiap unit tetapi memberikan perlindungan lebih baik, mengurangkan tuntutan kerosakan dan kos insurans. ROI ketara untuk mesin mahal."}},{"@type":"Question","name":"Bagaimana saya mengira panel yang saya perlukan?","acceptedAnswer":{"@type":"Answer","text":"Ukurkan panjang, lebar, dan tinggi mesin anda, kemudian tambahkan 10–15cm keluaran di semua sisi untuk padding. Quinocycle boleh mengira keperluan panel berdasarkan dimensi peralatan anda."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{"@type":"PostalAddress","streetAddress":"No.13, Jalan Taming P/1, Taming Jaya","addressLocality":"Balakong","addressRegion":"Selangor","postalCode":"43300","addressCountry":"MY"}, geo:{"@type":"GeoCoordinates","latitude":3.0579,"longitude":101.7468}, openingHoursSpecification:[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"13:00"}], priceRange:"RM 4.00 – RM 12.00 setiap panel", areaServed:"Semenanjung Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="mb-12">
+      <p class="font-body text-on-surface leading-relaxed mb-4">
+        Mesin industri mewakili pelaburan besar. Kerosakan semasa pengangkutan boleh bermakna pembaikan mahal dan perpanjangan masa henti. Panel honeycomb memberikan perlindungan superior sambil kekal ringan dan hemat biaya.
+      </p>
+      <p class="font-body text-on-surface leading-relaxed">
+        Panduan ini menunjukkan bagaimana syarikat pengilangan dan logistik di Malaysia menggunakan honeycomb untuk melindungi mesin berharga.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface mb-6">1. Mengapa Honeycomb Unggul untuk Mesin</h2>
+
+      <ul class="space-y-3 mb-6">
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold">💪</span>
+          <span class="font-body text-on-surface"><span class="font-bold">Kekuatan Hebat:</span> 3–5× lebih kuat daripada kadbod gelombang standard</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold">🪶</span>
+          <span class="font-body text-on-surface"><span class="font-bold">Berat Ringan:</span> Honeycomb adalah 50–70% udara, mengurangkan kos penghantaran</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold">🛡️</span>
+          <span class="font-body text-on-surface"><span class="font-bold">Penyerapan Impak:</span> Struktur honeycomb mengalami lenturan dan menyerap kejutan tanpa memindahkan daya ke kandungan</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold">✓</span>
+          <span class="font-body text-on-surface"><span class="font-bold">Konsisten:</span> Tiada titik lemah; kekuatan seragam di seluruh panel</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface mb-6">2. Panduan Ketebalan & Saiz Panel</h2>
+
+      <table class="w-full text-sm mb-6">
+        <thead>
+          <tr class="bg-surface-variant/50 border-b border-outline-variant/20">
+            <th class="text-left font-bold text-on-surface py-3 px-3">Ketebalan</th>
+            <th class="text-left font-bold text-on-surface py-3 px-3">Untuk Mesin</th>
+            <th class="text-left font-bold text-on-surface py-3 px-3">Berat (kg)</th>
+            <th class="text-left font-bold text-on-surface py-3 px-3">Harga/Panel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-outline-variant/20">
+            <td class="py-3 px-3 text-on-surface">10–15mm</td>
+            <td class="py-3 px-3 text-on-surface">Mesin ringan (500–2,000 kg)</td>
+            <td class="py-3 px-3 text-on-surface">0.8–1.2</td>
+            <td class="py-3 px-3 text-on-surface">RM 4.00–6.00</td>
+          </tr>
+          <tr class="border-b border-outline-variant/20">
+            <td class="py-3 px-3 text-on-surface">20–25mm</td>
+            <td class="py-3 px-3 text-on-surface">Mesin sederhana (2,000–5,000 kg)</td>
+            <td class="py-3 px-3 text-on-surface">1.5–2.0</td>
+            <td class="py-3 px-3 text-on-surface">RM 7.00–10.00</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-3 text-on-surface">30–40mm</td>
+            <td class="py-3 px-3 text-on-surface">Mesin berat/sensitif (5,000+ kg)</td>
+            <td class="py-3 px-3 text-on-surface">2.5–3.5</td>
+            <td class="py-3 px-3 text-on-surface">RM 10.00–15.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface mb-6">3. Analisis ROI: Honeycomb vs. Kadbod Standard</h2>
+
+      <div class="p-6 bg-primary/5 border border-primary/20 rounded-lg mb-6">
+        <h4 class="font-bold text-on-surface mb-4">Contoh: Melindungi Mesin CNC RM 150,000</h4>
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-outline-variant/20">
+              <th class="text-left font-bold text-on-surface py-2">Faktor Kos</th>
+              <th class="text-left font-bold text-on-surface py-2">Kadbod Standard</th>
+              <th class="text-left font-bold text-on-surface py-2">Honeycomb</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 text-on-surface">Bahan pembungkus</td>
+              <td class="py-2 text-on-surface">RM 800</td>
+              <td class="py-2 text-on-surface">RM 1,200</td>
+            </tr>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 text-on-surface">Kos penghantaran</td>
+              <td class="py-2 text-on-surface">RM 600 (berat)</td>
+              <td class="py-2 text-on-surface">RM 250 (ringan)</td>
+            </tr>
+            <tr class="border-b border-outline-variant/20">
+              <td class="py-2 text-on-surface">Kebarangkalian kerosakan</td>
+              <td class="py-2 text-on-surface">8–12%</td>
+              <td class="py-2 text-on-surface">1–2%</td>
+            </tr>
+            <tr>
+              <td class="py-2 text-on-surface">Kos pembaikan dijangkakan</td>
+              <td class="py-2 text-on-surface">RM 12,000–18,000</td>
+              <td class="py-2 text-on-surface">RM 1,500–3,000</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="font-body text-on-surface text-sm mt-4">
+          <span class="font-bold">Jumlah kos honeycomb:</span> RM 1,450 + RM 2,000 = RM 3,450<br>
+          <span class="font-bold">Jumlah kos kadbod standard:</span> RM 1,400 + RM 15,000 = RM 16,400<br>
+          <span class="font-bold">Jimat dengan honeycomb:</span> RM 12,950 setiap penghantaran
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-12 p-8 bg-primary/5 border border-primary/20 rounded-lg">
+      <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Lindungi Mesin Anda dengan Panel Honeycomb</h3>
+      <p class="font-body text-on-surface leading-relaxed mb-6">
+        Hubungi Quinocycle untuk sebut harga honeycomb tersuai. Daripada mesin kecil hingga peralatan besar, kami merancang penyelesaian perlindungan yang mencegah kerosakan dan mengurangkan kos keseluruhan penghantaran anda.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary font-bold px-6 py-3 rounded-lg hover:opacity-90 transition text-center">
+          WhatsApp untuk Sebut Harga Tersuai
+        </a>
+        <a href="tel:+60168916381" class="bg-surface-variant/50 border border-primary/20 text-on-surface font-bold px-6 py-3 rounded-lg hover:bg-surface-variant transition text-center">
+          Hubungi +6016-8916381
+        </a>
+      </div>
+      <p class="font-body text-xs text-secondary mt-4">📧 E-mel: quinocycle@gmail.com | 📍 Balakong, Selangor</p>
+    </section>
+
+    <section>
+      <h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface mb-6">Kesimpulan</h2>
+      <p class="font-body text-on-surface leading-relaxed">
+        Untuk penghantaran mesin dan peralatan industri di Malaysia, panel honeycomb mewakili keseimbangan optimal antara perlindungan, berat, dan kos. Dengan 16+ tahun melayani syarikat industri di Semenanjung Malaysia, Quinocycle memahami keperluan pelindungan khusus anda. Biarkan kami merancang penyelesaian honeycomb tersuai yang mencegah kerosakan dan melindungi pelaburan mesin anda.
+      </p>
+    </section>
+  </article>
+</Layout>
