@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Moving for Students & Temporary Relocation in Malaysia — Affordable Packing Solutions', description: 'Budget-friendly moving tips for students, temp housing, and frequent relocations. Reusable boxes and affordable packaging from Quinocycle.', date: '2026-04-15', readTime: '7 min', category: 'Moving Tips', author: 'Quinocycle Team', slug: 'moving-student-housing-temporary-relocation-0415' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20need%20affordable%20moving%20boxes%20for%20student%20housing%20relocation.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-04-15', dateModified: '2026-04-15', inLanguage:"en-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/moving-student-housing-temporary-relocation-0415"}, keywords:"student moving boxes Malaysia, affordable moving, temporary relocation, student housing, dorm moving, budget packaging" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the cheapest way for students to move?","acceptedAnswer":{"@type":"Answer","text":"Use secondhand/used carton boxes (RM 0.50–1.00 per box vs. RM 1.50–2.00 new). Stack carefully. Rent moving truck only for heavy items. Keep boxes for next move."}},{"@type":"Question","name":"Can I reuse moving boxes?","acceptedAnswer":{"@type":"Answer","text":"Yes! Used boxes remain functional 2–3 moves. Store flat between moves. This is how students minimize costs year-to-year during semester changes."}},{"@type":"Question","name":"What size boxes do students typically need?","acceptedAnswer":{"@type":"Answer","text":"Medium boxes (40×30×25 cm) ideal for books and clothes. Mix with small boxes for fragile items. Avoid large boxes — books are heavy."}},{"@type":"Question","name":"How do I pack a dorm room efficiently?","acceptedAnswer":{"@type":"Answer","text":"Group items by category: books, clothes, electronics, personal. Use boxes efficiently — pack tight to reduce box count. Label clearly (room number, category)."}},{"@type":"Question","name":"Where can students buy cheap moving supplies?","acceptedAnswer":{"@type":"Answer","text":"Quinocycle sells used carton boxes at RM 0.50–1.50/box in bulk. RM 1,000 minimum order, but 50–100 boxes easily accommodates student moves. Cheapest option available."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"RM 0.50 – RM 1.50 per box", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">Students in Malaysia move frequently — dorm to dorm, semester breaks, graduation. Budget constraints are real. Smart students use affordable, reusable carton boxes that survive multiple moves, minimizing annual relocation costs. This guide helps you move affordably without sacrificing quality.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Budget Moving Strategy for Students</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Use Secondhand Carton Boxes</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">New boxes cost RM 1.50–2.50 each. Used boxes: RM 0.50–1.00 each. For a typical student move (50–100 boxes), savings: RM 50–150. Over 4 years of university, massive savings.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Reuse Boxes Each Semester</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Store boxes flat between moves. Used boxes survive 2–3 relocations. Buy once, move multiple times. This compounds savings year after year.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Pack Efficiently</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Minimize box count. Use medium boxes (most versatile). Books go in smaller boxes (heavy). Clothes in medium/large boxes. Efficient packing reduces total boxes needed by 20–30%.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Transport with Friends</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Skip paid movers. Friends + personal vehicles = zero moving cost. Organize within your budget timeline (avoid peak moving season).</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Recycle After Graduation</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">After final move, recycle boxes. They're 100% recyclable. You've gotten 3–4 moves from one purchase. Full lifecycle value achieved.</p>
+      </section>
+
+      <section class="mb-12 bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Student Moving Cost Breakdown</h3>
+        <div class="space-y-4 font-body text-on-surface">
+          <p><strong>Typical student move: 75 boxes</strong></p>
+          <div className="border-b border-outline-variant/20 py-2 flex justify-between">
+            <span><strong>Option 1: New boxes</strong></span>
+            <span></span>
+          </div>
+          <div className="border-b border-outline-variant/20 py-2 flex justify-between">
+            <span>75 boxes × RM 2.00 = RM 150</span>
+            <span></span>
+          </div>
+          <div className="border-b border-outline-variant/20 py-2 flex justify-between">
+            <span>Packing tape, marker</span>
+            <span>RM 20</span>
+          </div>
+          <div className="border-b border-outline-variant/20 py-2 flex justify-between">
+            <span><strong>Total: RM 170</strong></span>
+            <span></span>
+          </div>
+          <div className="border-b border-outline-variant/20 py-2 flex justify-between mt-4">
+            <span><strong>Option 2: Used boxes (Quinocycle)</strong></span>
+            <span></span>
+          </div>
+          <div className="border-b border-outline-variant/20 py-2 flex justify-between">
+            <span>75 boxes × RM 0.80 = RM 60</span>
+            <span></span>
+          </div>
+          <div className="border-b border-outline-variant/20 py-2 flex justify-between">
+            <span>Tape, marker</span>
+            <span>RM 20</span>
+          </div>
+          <div className="border-b border-outline-variant/20 py-2 flex justify-between font-bold text-primary">
+            <span><strong>Total: RM 80</strong></span>
+            <span></span>
+          </div>
+          <div className="mt-4 font-bold text-primary">
+            <span>💡 Save RM 90 per move × 4 moves = RM 360 savings during university</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Packing Tips for Dorm Moves</h2>
+        <ul class="list-disc list-inside font-body text-on-surface leading-relaxed mb-6 space-y-2">
+          <li><strong>Label everything:</strong> Write room number & category clearly. Saves setup time.</li>
+          <li><strong>Group by destination:</strong> Keep same boxes together. Easier to unpack.</li>
+          <li><strong>Heavy items first:</strong> Pack books, utensils first (heavier). Lighter items on top.</li>
+          <li><strong>Fragile items:</strong> Separate from heavy items. Wrap glassware, dishes carefully.</li>
+          <li><strong>Document contents:</strong> Photo of packed boxes. Useful if something goes missing.</li>
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <div class="bg-primary text-on-primary rounded-lg p-8 text-center">
+          <p class="font-body mb-4 font-semibold">Get Budget-Friendly Moving Boxes</p>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-block bg-on-primary text-primary font-label font-bold py-3 px-6 rounded-lg hover:bg-surface transition">📱 Chat on WhatsApp</a>
+          <p class="font-body text-on-primary/80 text-sm mt-4">Phone: +60168916381 | Email: quinocycle@gmail.com</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Conclusion</h2>
+        <p class="font-body text-on-surface leading-relaxed">Student moves don't need to be expensive. Used carton boxes from Quinocycle are affordable, functional, and reusable — perfect for budget-conscious students moving frequently. Smart packing + secondhand boxes = maximum savings for your relocation.</p>
+      </section>
+    </div>
+  </article>
+</Layout>

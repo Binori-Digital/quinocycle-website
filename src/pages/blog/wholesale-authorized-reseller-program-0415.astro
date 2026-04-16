@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Become an Authorized Quinocycle Reseller — Partner with Us Today', description: 'Join Quinocycle reseller network. Become authorized packaging supplier for your region with margin-competitive wholesale pricing and business support.', date: '2026-04-15', readTime: '7 min', category: 'Wholesale & Reseller', author: 'Quinocycle Team', slug: 'wholesale-authorized-reseller-program-0415' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20am%20interested%20in%20becoming%20an%20authorized%20reseller%20partner.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-04-15', dateModified: '2026-04-15', inLanguage:"en-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/wholesale-authorized-reseller-program-0415"}, keywords:"packaging reseller Malaysia, wholesale distributor, authorized partner, reseller program, packaging business opportunity, Balakong" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the requirements to become a reseller?","acceptedAnswer":{"@type":"Answer","text":"Business registration, minimum monthly order RM 3,000–5,000, dedicated account management, local market presence. No stock carrying requirements — drop-ship available."}},{"@type":"Question","name":"What margins are available for resellers?","acceptedAnswer":{"@type":"Answer","text":"Typical: 20–35% margin on resale depending on volume tier. High-volume resellers (RM 20,000+/month) can negotiate up to 35–40% margins. Competitive with market rates."}},{"@type":"Question","name":"Do I need to carry inventory as reseller?","acceptedAnswer":{"@type":"Answer","text":"No. Drop-shipping available — we ship directly to your customers on your invoice. You handle sales/customer relationships; we handle logistics."}},{"@type":"Question","name":"What support does Quinocycle provide resellers?","acceptedAnswer":{"@type":"Answer","text":"Sales materials, technical specs, training, dedicated account manager, priority delivery, co-marketing opportunities, competitive pricing tiers."}},{"@type":"Question","name":"Can I be reseller for specific regions?","acceptedAnswer":{"@type":"Answer","text":"Yes. Territory-based reseller agreements available. You become exclusive authorized seller for your region (city/district). Protects your investment."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"Margin-based wholesale pricing", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">Growing your business? Expand into packaging wholesale. Quinocycle's authorized reseller program offers competitive margins, dedicated support, and market-proven products. Start your packaging distribution business with zero inventory risk through our drop-ship model.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Why Become a Quinocycle Reseller?</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Consistent, Competitive Margins</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">20–35% resale margin depending on volume. High-performing resellers achieve 35–40% margins. Comparable or better than competing packaging suppliers in Malaysia.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">No Inventory Carrying Cost</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Drop-shipping model: We manufacture and ship to your customers on your invoices. Zero inventory burden. Zero working capital tied up in stock. Focus on sales, not warehousing.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Dedicated Account Management</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Each reseller gets a dedicated account manager. Priority order processing, technical support, sales guidance. You're not just a number — you're a partner.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Territory Protection</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Exclusive reseller agreements available for specific regions. You own your territory — Quinocycle doesn't compete with you locally.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Proven Product Portfolio</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Carton boxes, bubble wrap, honeycomb, specialty packaging — all in-demand, market-proven products. No inventory risk from slow-moving SKUs. Quinocycle handles product innovation.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Business Growth Support</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Marketing materials, sales training, technical specifications, co-marketing opportunities. Quinocycle invests in reseller success because your growth = our growth.</p>
+      </section>
+
+      <section class="mb-12 bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Reseller Tiered Pricing Example</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm font-body">
+            <thead>
+              <tr className="border-b border-outline-variant/20">
+                <th className="text-left py-3 px-4 font-bold">Volume Tier</th>
+                <th className="text-left py-3 px-4 font-bold">Monthly Orders</th>
+                <th className="text-left py-3 px-4 font-bold">Margin</th>
+                <th className="text-left py-3 px-4 font-bold">Benefits</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-outline-variant/20">
+                <td className="py-3 px-4">Tier 1</td>
+                <td className="py-3 px-4">RM 3,000–10,000</td>
+                <td className="py-3 px-4">20%</td>
+                <td className="py-3 px-4">Basic account mgmt</td>
+              </tr>
+              <tr className="border-b border-outline-variant/20">
+                <td className="py-3 px-4">Tier 2</td>
+                <td className="py-3 px-4">RM 10,000–20,000</td>
+                <td className="py-3 px-4">25%</td>
+                <td className="py-3 px-4">Dedicated manager, priority delivery</td>
+              </tr>
+              <tr className="border-b border-outline-variant/20">
+                <td className="py-3 px-4">Tier 3</td>
+                <td className="py-3 px-4">RM 20,000+</td>
+                <td className="py-3 px-4">30–35%</td>
+                <td className="py-3 px-4">Territory protection, co-marketing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="font-headline text-2xl font-bold text-on-surface mb-6">How to Become a Reseller</h2>
+        <ol className="list-decimal list-inside font-body text-on-surface leading-relaxed mb-6 space-y-3">
+          <li><strong>Initial Contact:</strong> Reach out via WhatsApp/email expressing interest</li>
+          <li><strong>Qualification:</strong> We evaluate market potential, business stability, sales capability</li>
+          <li><strong>Reseller Agreement:</strong> Sign formal partnership agreement outlining terms, margins, obligations</li>
+          <li><strong>Account Setup:</strong> Assigned dedicated account manager; training on products & systems</li>
+          <li><strong>Begin Operations:</strong> Start taking orders; Quinocycle handles manufacturing & drop-shipping</li>
+          <li><strong>Growth Support:</strong> Ongoing account management, optimization, territory expansion</li>
+        </ol>
+      </section>
+
+      <section className="mb-12">
+        <div className="bg-primary text-on-primary rounded-lg p-8 text-center">
+          <p className="font-body mb-4 font-semibold">Apply to Become an Authorized Reseller</p>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-block bg-on-primary text-primary font-label font-bold py-3 px-6 rounded-lg hover:bg-surface transition">📱 Chat on WhatsApp</a>
+          <p className="font-body text-on-primary/80 text-sm mt-4">Phone: +60168916381 | Email: quinocycle@gmail.com</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="font-headline text-2xl font-bold text-on-surface mb-6">Conclusion</h2>
+        <p className="font-body text-on-surface leading-relaxed">Become an authorized Quinocycle reseller and build a profitable packaging distribution business with zero inventory risk. Competitive margins, dedicated support, and territory protection make this an attractive business opportunity for entrepreneurs across Peninsular Malaysia.</p>
+      </section>
+    </div>
+  </article>
+</Layout>

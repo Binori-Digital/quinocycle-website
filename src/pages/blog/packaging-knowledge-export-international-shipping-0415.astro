@@ -1,0 +1,110 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Export Packaging & International Shipping Requirements for Malaysian Businesses', description: 'Complete guide to packaging for international shipping, export documentation, and compliance. Reduce damage and delays on global shipments from Malaysia.', date: '2026-04-15', readTime: '7 min', category: 'Packaging Knowledge', author: 'Quinocycle Team', slug: 'packaging-knowledge-export-international-shipping-0415' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20We%20need%20export-grade%20packaging%20materials%20for%20international%20shipping.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-04-15', dateModified: '2026-04-15', inLanguage:"en-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/packaging-knowledge-export-international-shipping-0415"}, keywords:"export packaging Malaysia, international shipping, global logistics, packaging compliance, container shipping, palletizing, Balakong" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What makes packaging export-ready?","acceptedAnswer":{"@type":"Answer","text":"Export packaging must withstand long sea voyages, humidity, rough handling, and stacking pressure. Double-wall cartons, moisture-resistant materials, proper labeling, and pallet stability are essential."}},{"@type":"Question","name":"Do I need moisture barriers for container shipping?","acceptedAnswer":{"@type":"Answer","text":"Yes. Containers create condensation (container sweat). Use desiccants, silica gels, or moisture-barrier films inside packaging. Moisture damage is the #1 claim on sea shipments."}},{"@type":"Question","name":"What pallet types are best for exports?","acceptedAnswer":{"@type":"Answer","text":"Wooden pallets standard globally. Plastic pallets for markets requiring them. Ensure pallets are declared fumigation-free (IPPC mark). Some countries restrict wood imports."}},{"@type":"Question","name":"How do I label packages for international shipping?","acceptedAnswer":{"@type":"Answer","text":"Include: shipper & consignee address, HS code, country of origin, product description, weight, dimensions. Use waterproof labels and multiple labels (case labels + pallet labels)."}},{"@type":"Question","name":"What carton grades work for long-distance export?","acceptedAnswer":{"@type":"Answer","text":"Minimum: double-wall corrugated (BC or CD flute). For heavy items or long voyages, triple-wall (ECE flute). Bursting strength important for stacking pressure during container transport."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"RM 2.00 – RM 8.00 per box", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">Malaysian exporters shipping worldwide face unique packaging challenges: long sea voyages, container humidity, rough international handling, and customs documentation requirements. Proper export packaging protects products, reduces damage claims, and ensures smooth customs clearance — directly impacting profitability.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Export Packaging Requirements by Shipping Method</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Sea Container Shipping (FCL/LCL)</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Longest shipping duration (2–4 weeks). Container creates high humidity (container sweat). Use double-wall cartons, desiccant packs, moisture barriers. Stack properly on pallets (max 6 layers). Label in English and destination language.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Air Freight</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Faster (3–7 days), less moisture risk. Lighter packaging acceptable. Weight optimization critical (air freight costs per kg). Use single-wall reinforced cartons with protective interior padding.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Courier/Parcel Services (DHL, FedEx, UPS)</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Door-to-door service. Rough handling common. Double-wall cartons mandatory. Weight/dimension limits apply. Label clearly with courier account numbers and tracking.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Critical Export Packaging Elements</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Moisture Control</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Container sweat is the #1 cause of damage on sea shipments. Use desiccant sachets (silica gel) inside cartons. Wrap sensitive items in moisture-barrier film. Humidity can reach 90%+ inside containers without protection.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Structural Strength</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Export cartons must handle stacking (6+ layers) and rough handling. Minimum double-wall; triple-wall for heavy items or long voyages. Check box edge crush test (ECT) rating and burst strength.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Proper Labeling & Marking</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Every box needs: shipper address, consignee address, country of origin, HS code, product description, weight, dimensions, "FRAGILE" if applicable, and barcode. Use waterproof labels. Add pallet-level labels for mixed shipments.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Palletization Best Practices</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Use standard 100cm×120cm (or metric equivalent) pallets. Stack evenly, don't exceed pallet weight limits. Wrap pallet in stretch wrap or strapping to prevent boxes shifting during transport. Include pallet label with complete shipment details.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">International Compliance</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Pallets must carry IPPC (International Plant Protection Convention) certification if made of wood. Some markets (EU, USA) have specific packaging waste directives. Research destination country requirements before shipping.</p>
+      </section>
+
+      <section class="mb-12 bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Export Packaging Checklist</h3>
+        <div class="space-y-3 font-body text-on-surface">
+          <div class="flex items-start gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Double-wall minimum cartons (ECT 300+)</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Moisture barriers & desiccant packs for sea freight</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Waterproof labels with complete info</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>HS Code & country of origin marked</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Proper palletization & pallet certification</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Stretch wrap or strapping on pallets</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Destination country compliance checked</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Weight & dimension declarations accurate</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <div class="bg-primary text-on-primary rounded-lg p-8 text-center">
+          <p class="font-body mb-4 font-semibold">Get Export-Grade Packaging from Quinocycle</p>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-block bg-on-primary text-primary font-label font-bold py-3 px-6 rounded-lg hover:bg-surface transition">📱 Chat on WhatsApp</a>
+          <p class="font-body text-on-primary/80 text-sm mt-4">Phone: +60168916381 | Email: quinocycle@gmail.com</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Conclusion</h2>
+        <p class="font-body text-on-surface leading-relaxed">Export packaging is an investment in product protection and customs compliance. Proper double-wall cartons, moisture control, labeling, and palletization reduce damage claims and ensure smooth international shipping. Trust Quinocycle for export-grade packaging materials and guidance.</p>
+      </section>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Moving Fragile Items, Artwork & Glassware in Malaysia — Professional Packing Guide', description: 'Complete guide to packing glassware, artwork, and antiques for house moves. Safe relocation tips using proper cartons and protective materials.', date: '2026-04-15', readTime: '7 min', category: 'Moving Tips', author: 'Quinocycle Team', slug: 'moving-fragile-artwork-glassware-0415' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20need%20boxes%20and%20materials%20for%20moving%20fragile%20items%20and%20artwork.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-04-15', dateModified: '2026-04-15', inLanguage:"en-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/moving-fragile-artwork-glassware-0415"}, keywords:"moving fragile items Malaysia, packing glassware, moving artwork, house moving supplies, protective packaging, Balakong" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the safest way to pack glassware for moving?","acceptedAnswer":{"@type":"Answer","text":"Wrap each item in 2–3 layers bubble wrap. Place in small boxes with dividers (not large boxes). Fill gaps with packing paper. Stack no more than 3 boxes high in moving truck."}},{"@type":"Question","name":"How should artwork and paintings be packed?","acceptedAnswer":{"@type":"Answer","text":"For framed artwork: wrap in plastic, then bubble wrap. Place in custom carton with foam padding on all sides. Never stack flat — transport upright against truck wall."}},{"@type":"Question","name":"Are glass mirrors safe to move?","acceptedAnswer":{"@type":"Answer","text":"Yes, with proper packing. Use honeycomb cardboard edge protection + bubble wrap. Place in sturdy double-wall carton. Mark FRAGILE clearly. Mirrors are valuable — protect well."}},{"@type":"Question","name":"What size boxes are best for fragile items?","acceptedAnswer":{"@type":"Answer","text":"Small boxes (20×15×15 cm) for glassware, plates. Medium (40×30×25 cm) for mixed fragile items. Never use large boxes — weight concentrates and crushes items."}},{"@type":"Question","name":"How much packing material do I need?","acceptedAnswer":{"@type":"Answer","text":"Budget 30–40% of box volume for protective materials. Use bubble wrap first, then fill with paper, packing peanuts. No empty space = no movement = no breakage."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"RM 2.00 – RM 6.00 per box", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">Moving is stressful, especially when you have valuable fragile items, artwork, or glassware. Proper packing is essential to protect your belongings and ensure safe relocation across Malaysia. This guide covers everything you need to know about packing delicate items, from glassware to artwork, using the right boxes, padding, and techniques.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Packing Glassware & Dishware for House Moves</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Materials Needed</h3>
+        <ul class="list-disc list-inside font-body text-on-surface leading-relaxed mb-6 space-y-2">
+          <li>Small carton boxes (don't use large ones)</li>
+          <li>Bubble wrap (10mm, multiple rolls)</li>
+          <li>Corrugated dividers or cardboard sheets</li>
+          <li>Packing paper or crinkle fill</li>
+          <li>Fiberglass tape (not regular tape)</li>
+          <li>Markers for labeling</li>
+        </ul>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Step-by-Step Packing</h3>
+        <ol class="list-decimal list-inside font-body text-on-surface leading-relaxed mb-6 space-y-3">
+          <li>Wrap each item in 2–3 layers of bubble wrap</li>
+          <li>Use small boxes (4–5 inches per side for plates)</li>
+          <li>Insert corrugated divider at box bottom</li>
+          <li>Place wrapped items standing upright (like records)</li>
+          <li>Add divider between each item or every 2–3 items</li>
+          <li>Fill top with crinkle paper (not peanuts)</li>
+          <li>Seal box completely with fiberglass tape</li>
+          <li>Label: FRAGILE, DISHES, HANDLE WITH CARE</li>
+        </ol>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Moving Artwork & Framed Pieces</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Artwork requires extra care. Paintings, photographs, and framed prints are often irreplaceable and valuable. Use proper museum-quality packing techniques:</p>
+        <ul class="list-disc list-inside font-body text-on-surface leading-relaxed mb-6 space-y-3">
+          <li><strong>Wrap carefully:</strong> Never wrap directly on glass. Use plastic first, then bubble wrap (3–4 layers).</li>
+          <li><strong>Use custom cartons:</strong> Art boxes are available from specialty movers. Standard boxes can work if properly padded.</li>
+          <li><strong>Foam corners:</strong> Protect corners with foam corners or cardboard protectors.</li>
+          <li><strong>Transport upright:</strong> Never lay artwork flat. Transport standing against truck wall.</li>
+          <li><strong>Seal paintings separately:</strong> Use breathable padding to prevent moisture buildup behind glass.</li>
+        </ul>
+      </section>
+
+      <section class="mb-12 bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Fragile Item Packing Checklist</h3>
+        <div class="space-y-2 font-body text-on-surface">
+          <div class="flex items-start gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Use small boxes, not large ones</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Multiple layers of bubble wrap per item</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Corrugated dividers between items</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Fill all gaps with paper (not peanuts)</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Seal boxes with heavy-duty tape</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Label clearly: FRAGILE, THIS SIDE UP</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-primary font-bold">✓</span>
+            <span>Stack no more than 3 boxes high</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <div class="bg-primary text-on-primary rounded-lg p-8 text-center">
+          <p class="font-body mb-4 font-semibold">Get Moving Supplies from Quinocycle Today</p>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-block bg-on-primary text-primary font-label font-bold py-3 px-6 rounded-lg hover:bg-surface transition">📱 Chat on WhatsApp</a>
+          <p class="font-body text-on-primary/80 text-sm mt-4">Phone: +60168916381 | Email: quinocycle@gmail.com</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Conclusion</h2>
+        <p class="font-body text-on-surface leading-relaxed">Fragile items require proper packing, quality boxes, and protective materials. Take time to pack carefully — your belongings are worth it. Source quality small cartons, bubble wrap, and dividers from Quinocycle Balakong for your next move.</p>
+      </section>
+    </div>
+  </article>
+</Layout>

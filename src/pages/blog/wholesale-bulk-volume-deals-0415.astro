@@ -1,0 +1,119 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Bulk Volume Deals & B2B Pricing for Large Orders in Malaysia', description: 'Get maximum discounts on bulk packaging orders. Volume-based pricing, corporate accounts, and large-scale shipment solutions from Quinocycle.', date: '2026-04-15', readTime: '7 min', category: 'Wholesale & Reseller', author: 'Quinocycle Team', slug: 'wholesale-bulk-volume-deals-0415' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20We%20are%20looking%20for%20bulk%20volume%20discounts%20for%20large%20orders.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-04-15', dateModified: '2026-04-15', inLanguage:"en-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/wholesale-bulk-volume-deals-0415"}, keywords:"bulk pricing, volume discounts, corporate accounts, large orders, wholesale deals, B2B pricing Malaysia, Balakong" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What volume qualifies for bulk discounts?","acceptedAnswer":{"@type":"Answer","text":"500+ boxes/units typically qualifies for volume pricing. RM 5,000+ orders receive tiered discounts. Contact us for custom quotes on specific volumes."}},{"@type":"Question","name":"How much can I save with bulk orders?","acceptedAnswer":{"@type":"Answer","text":"Typical savings: 10–25% off standard pricing depending on volume and product type. High-volume repeat customers (RM 50,000+/year) can negotiate up to 30% discounts."}},{"@type":"Question","name":"What are typical volume tiers?","acceptedAnswer":{"@type":"Answer","text":"Tier 1 (500–1,000 units): 10% discount | Tier 2 (1,000–5,000): 15% discount | Tier 3 (5,000+): 20–25% discount. Tiers customizable based on product mix."}},{"@type":"Question","name":"Can I get bulk pricing on mixed products?","acceptedAnswer":{"@type":"Answer","text":"Yes. Total order value determines discount tier, not individual product volumes. Mix carton boxes, bubble wrap, tape, etc., and qualify for volume savings."}},{"@type":"Question","name":"What payment/delivery terms apply to bulk orders?","acceptedAnswer":{"@type":"Answer","text":"Bulk orders RM 10,000+ receive NET 30 payment terms (no upfront payment). Delivery in 2–3 installments if preferred. Special logistics arrangements for very large orders."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"Volume-based wholesale pricing", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">Large-scale operations require aggressive cost management. Every percentage point saved on packaging amplifies profitability. Quinocycle's volume-based pricing structure rewards bulk buyers with substantial discounts, flexible terms, and dedicated account management. Negotiate custom deals for your specific needs.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Quinocycle Volume Pricing Structure</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Standard Volume Tiers</h3>
+        <ul class="list-disc list-inside font-body text-on-surface leading-relaxed mb-6 space-y-2">
+          <li><strong>500–1,000 units (or RM 5,000–10,000):</strong> 10% discount on standard pricing</li>
+          <li><strong>1,000–5,000 units (or RM 10,000–25,000):</strong> 15% discount</li>
+          <li><strong>5,000+ units (or RM 25,000+):</strong> 20% discount base, negotiable to 25% for committed orders</li>
+          <li><strong>Annual commitments (RM 100,000+):</strong> Custom negotiations, 25–30% discounts possible</li>
+        </ul>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Mixed Product Orders</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Total order value determines discount tier, not individual SKU volumes. Combine carton boxes, bubble wrap, honeycomb, tape, and other products — total value qualifies you for volume savings across the entire order.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Recurring Order Discounts</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Monthly or weekly recurring orders receive loyalty bonuses. Committed RM 50,000 annual volume = locked-in discount rate even if individual orders fall below tier thresholds. Rewards customer loyalty.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Custom Volume Negotiations</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Orders exceeding RM 50,000 warrant custom quotes. Share your specific needs (quantities, products, timeline) for tailored pricing. We may offer better terms than standard tiers for large, strategic orders.</p>
+      </section>
+
+      <section class="mb-12 bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">Volume Savings Example</h3>
+        <div class="space-y-3 font-body text-on-surface">
+          <p><strong>E-commerce logistics warehouse: Annual packaging budget RM 60,000</strong></p>
+          <div class="flex justify-between py-2 border-b border-outline-variant/20">
+            <span>Standard pricing (no volume discount):</span>
+            <span>RM 60,000/year</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-outline-variant/20">
+            <span>With 20% volume discount:</span>
+            <span>RM 48,000/year</span>
+          </div>
+          <div className="flex justify-between py-2 font-bold text-primary">
+            <span>Annual savings:</span>
+            <span>RM 12,000</span>
+          </div>
+          <div className="mt-4 text-sm">
+            <p>💡 <strong>Additional benefits:</strong></p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>NET 30 payment terms (improve cash flow)</li>
+              <li>Dedicated account manager</li>
+              <li>Priority delivery scheduling</li>
+              <li>Flexible monthly order adjustments</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">B2B & Corporate Account Benefits</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Dedicated Account Manager</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Each corporate account (RM 20,000+ annual volume) gets a dedicated manager. Single point of contact for orders, technical questions, and problem-solving. Streamlines communication and builds relationships.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Flexible Delivery Scheduling</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Large orders can be split across multiple deliveries to optimize warehouse space and cash flow. Schedule deliveries weekly, bi-weekly, or monthly based on your production/inventory needs.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Custom Packaging Solutions</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Volume commitments warrant custom solutions. Specialized carton sizes, printed branding, proprietary designs — minimum quantities for custom work negotiable for large buyers.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">NET 30+ Payment Terms</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Large orders (RM 10,000+) receive 30-day net terms. No upfront payment required. Improves working capital management and cash flow for your business.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Priority Logistics</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Large volume customers get priority in delivery queue. Same-day or next-day delivery options available for urgent needs within Klang Valley.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">How to Request Volume Quotes</h2>
+        <ol class="list-decimal list-inside font-body text-on-surface leading-relaxed mb-6 space-y-3">
+          <li><strong>Contact Quinocycle:</strong> WhatsApp, email, or phone with purchase intent</li>
+          <li><strong>Share Your Needs:</strong> Products needed, quantities, delivery timeline, budget</li>
+          <li><strong>Receive Proposal:</strong> Custom quote with volume pricing, terms, and conditions</li>
+          <li><strong>Negotiate:</strong> Discuss further discounts, payment terms, delivery arrangements</li>
+          <li><strong>Execute:</strong> Sign agreement, finalize order, receive product</li>
+        </ol>
+      </section>
+
+      <section class="mb-12">
+        <div class="bg-primary text-on-primary rounded-lg p-8 text-center">
+          <p class="font-body mb-4 font-semibold">Request Your Volume Quote Today</p>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-block bg-on-primary text-primary font-label font-bold py-3 px-6 rounded-lg hover:bg-surface transition">📱 Chat on WhatsApp</a>
+          <p class="font-body text-on-primary/80 text-sm mt-4">Phone: +60168916381 | Email: quinocycle@gmail.com</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Conclusion</h2>
+        <p class="font-body text-on-surface leading-relaxed">Volume pricing is essential for large-scale operations. Quinocycle's tiered discount structure and flexible terms make us the ideal partner for bulk packaging needs. Leverage volume discounts to improve your bottom line and scale your business confidently.</p>
+      </section>
+    </div>
+  </article>
+</Layout>

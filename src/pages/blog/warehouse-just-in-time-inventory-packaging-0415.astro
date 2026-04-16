@@ -1,0 +1,128 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Just-In-Time (JIT) Packaging Inventory Management for Warehouses in Malaysia', description: 'Optimize warehouse inventory with JIT packaging principles. Reduce storage costs and waste while maintaining packaging availability for Malaysian manufacturers.', date: '2026-04-15', readTime: '7 min', category: 'Warehouse Packaging', author: 'Quinocycle Team', slug: 'warehouse-just-in-time-inventory-packaging-0415' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20We%20need%20flexible%20packaging%20supply%20for%20JIT%20warehouse%20operations.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-04-15', dateModified: '2026-04-15', inLanguage:"en-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/warehouse-just-in-time-inventory-packaging-0415"}, keywords:"JIT packaging, warehouse inventory, lean manufacturing, packaging optimization, cost reduction, supply chain Malaysia, Balakong" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does JIT packaging reduce warehouse costs?","acceptedAnswer":{"@type":"Answer","text":"JIT minimizes inventory holding. Instead of buying 1,000 boxes monthly, order 200 weekly as needed. Reduces storage space, obsolescence, and carrying costs by 30–50%."}},{"@type":"Question","name":"What's the minimum order for flexible JIT supply?","acceptedAnswer":{"@type":"Answer","text":"Quinocycle supports recurring weekly orders with RM 1,000 minimum per order. Flexible quantities and delivery scheduling allow true JIT implementation without bulk penalties."}},{"@type":"Question","name":"Can packaging specifications change within JIT system?","acceptedAnswer":{"@type":"Answer","text":"Yes, with notice. Maintain 1–2 core box sizes for stability, but can adjust prints, sizes, or quantities for seasonal variations. Plan changes 2–3 weeks ahead."}},{"@type":"Question","name":"How do I forecast packaging needs for JIT?","acceptedAnswer":{"@type":"Answer","text":"Use production schedules and sales forecasts. Review past 3–6 months usage. Add 15–20% buffer for uncertainties. Adjust weekly based on actual demand. Quinocycle can help analyze patterns."}},{"@type":"Question","name":"What if demand spikes mid-month?","acceptedAnswer":{"@type":"Answer","text":"Quinocycle offers expedited service. 48–72 hour turnaround on rush orders. Maintain small emergency stock of key boxes for unexpected peaks without committing to bulk inventory."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"RM 1.50 – RM 5.50 per box", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">Just-In-Time (JIT) manufacturing principles revolutionized production efficiency. Applied to packaging, JIT reduces warehouse costs, minimizes waste, and ensures optimal inventory levels. Malaysian manufacturers adopting lean principles can now extend JIT to packaging supply with reliable, flexible partners like Quinocycle Balakong.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">JIT Packaging: Principles & Benefits</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Minimize Packaging Inventory</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Traditional: Buy 1,000 boxes monthly, store in warehouse, hope to use them. JIT: Order 200 boxes weekly as production demands. Reduces storage by 70–80%, eliminates obsolescence, frees warehouse space.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Reduce Carrying Costs</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Holding packaging inventory costs RM 0.50–1.00 per box monthly (storage, handling, insurance, obsolescence). JIT reduces total inventory by 30–50%, directly improving cash flow.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Enable Production Flexibility</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">JIT allows product mix changes without massive stock adjustments. Need different box sizes? Adjust orders weekly. Seasonal peaks? Increase frequency temporarily. Zero long-term commitment.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Reduce Waste & Spoilage</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Old boxes damaged, crushed, or wasted. Fresh packaging weekly ensures quality. No waiting months for inventory to turn over. Sustainability improves.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Improve Cash Flow</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Pay weekly for what you use, not monthly for bulk. Better working capital management. For growing businesses, this is critical for cash flow health.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Implementing JIT Packaging in Your Warehouse</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Step 1: Analyze Historical Usage</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Review past 6–12 months packaging consumption. Identify core box sizes/types. Calculate average weekly usage. This baseline informs JIT order frequency and quantities.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Step 2: Establish Reorder Frequency</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Weekly orders ideal for JIT (vs. monthly). Allows quick adjustments. Discuss with supplier lead times. Quinocycle: 2–3 day standard lead time for recurring orders, 24–48 hours for expedited.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Step 3: Create Safety Stock Buffer</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Don't run zero inventory. Maintain 2 weeks emergency stock of core boxes. Protects against production surges or supplier delays. Small buffer, big peace of mind.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Step 4: Automate Ordering</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Set up automatic reorders based on inventory triggers. When stock drops to X level, order automatically. Quinocycle supports automated ordering via phone, email, or WhatsApp API integration.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Step 5: Track & Optimize</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Monitor actual usage vs. forecasts. Adjust order quantities as patterns emerge. Collaborate with Quinocycle on optimization — they'll advise on efficiencies.</p>
+      </section>
+
+      <section class="mb-12 bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8">
+        <h3 class="font-headline text-lg font-bold text-on-surface mb-4">JIT vs. Bulk Ordering: Cost Comparison</h3>
+        <div class="space-y-4 font-body text-on-surface">
+          <p><strong>Scenario: Electronics manufacturer, 1,000 units/month production</strong></p>
+          <div class="flex justify-between py-2 border-b border-outline-variant/20">
+            <span><strong>Bulk Ordering (monthly):</strong></span>
+            <span></span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-outline-variant/20">
+            <span>1,000 boxes @ RM 2.50/box</span>
+            <span>RM 2,500</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-outline-variant/20">
+            <span>Storage/handling cost (1 month average)</span>
+            <span>RM 300</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-outline-variant/20">
+            <span>Obsolescence/waste (5%)</span>
+            <span>RM 125</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-outline-variant/20">
+            <span>Monthly total:</span>
+            <span>RM 2,925</span>
+          </div>
+          <div className="mt-6 flex justify-between py-2 border-b border-outline-variant/20">
+            <span><strong>JIT Ordering (weekly 250 boxes):</strong></span>
+            <span></span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-outline-variant/20">
+            <span>250 boxes × 4 weeks @ RM 2.50/box</span>
+            <span>RM 2,500</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-outline-variant/20">
+            <span>Storage/handling (minimal)</span>
+            <span>RM 50</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-outline-variant/20">
+            <span>Obsolescence/waste (1%)</span>
+            <span>RM 25</span>
+          </div>
+          <div class="flex justify-between py-2 font-bold text-primary">
+            <span>Monthly total:</span>
+            <span>RM 2,575</span>
+          </div>
+          <div className="mt-4 text-lg font-bold text-primary">
+            <span>Monthly Savings: RM 350 | Annual Savings: RM 4,200</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <div class="bg-primary text-on-primary rounded-lg p-8 text-center">
+          <p class="font-body mb-4 font-semibold">Start JIT Packaging with Quinocycle Today</p>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="inline-block bg-on-primary text-primary font-label font-bold py-3 px-6 rounded-lg hover:bg-surface transition">📱 Chat on WhatsApp</a>
+          <p class="font-body text-on-primary/80 text-sm mt-4">Phone: +60168916381 | Email: quinocycle@gmail.com</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Conclusion</h2>
+        <p class="font-body text-on-surface leading-relaxed">JIT packaging transforms warehouse efficiency. By ordering what you need, when you need it, you reduce costs, improve flexibility, and enhance cash flow. Quinocycle's flexible, reliable supply chain makes JIT implementation simple for Malaysian manufacturers across Peninsular Malaysia.</p>
+      </section>
+    </div>
+  </article>
+</Layout>
