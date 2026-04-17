@@ -15,6 +15,7 @@ const WA_NUMBER = '60168916381';
 const WA_LINK   = `https://wa.me/${WA_NUMBER}?text=Hi%20Quinocycle!%20I%20would%20like%20to%20enquire%20about%20your%20carton%20boxes.`;
 
 const navLinks = [
+  { href: '/',        label: 'Home'    },
   { href: '/shop',    label: 'Shop'    },
   { href: '/blog',    label: 'Blog'    },
   { href: '/about',   label: 'About'   },
@@ -81,23 +82,28 @@ import '../styles/global.css';
 
       <!-- Logo -->
       <a href="/" aria-label="Quinocycle Home" class="flex items-center gap-2">
-        <img src="/logo.png" alt="Quinocycle" class="h-10 w-auto" id="navLogo" />
+        <img src="/logo.png" alt="Quinocycle" class="h-14 md:h-16 w-auto" id="navLogo" />
       </a>
 
       <!-- Desktop Links -->
       <div class="hidden md:flex items-center gap-8">
-        {navLinks.map(link => (
-          <a
-            href={link.href}
-            class={`font-headline font-bold uppercase text-sm tracking-tight transition-colors duration-300 pb-1 ${
-              currentPath.startsWith(link.href)
-                ? 'text-primary border-b-2 border-primary'
-                : 'text-secondary hover:text-primary'
-            }`}
-          >
-            {link.label}
-          </a>
-        ))}
+        {navLinks.map(link => {
+          const isActive = link.href === '/'
+            ? currentPath === '/'
+            : currentPath.startsWith(link.href);
+          return (
+            <a
+              href={link.href}
+              class={`font-headline font-bold uppercase text-sm tracking-tight transition-colors duration-300 pb-1 ${
+                isActive
+                  ? 'text-primary border-b-2 border-primary'
+                  : 'text-secondary hover:text-primary'
+              }`}
+            >
+              {link.label}
+            </a>
+          );
+        })}
       </div>
 
       <!-- Actions -->
@@ -161,7 +167,7 @@ import '../styles/global.css';
     </div>
   </nav>
 
-  <main class="pt-[72px]">
+  <main class="pt-[88px] md:pt-[96px]">
     <slot />
   </main>
 
@@ -208,7 +214,7 @@ import '../styles/global.css';
           </div>
           <div class="flex flex-col gap-3">
             <h5 class="font-headline font-bold text-xs uppercase tracking-[0.2em] text-primary mb-1">Info</h5>
-            <p class="font-body text-sm text-secondary">Min. Order: <strong class="text-on-surface font-semibold">RM 1,000</strong></p>
+            <p class="font-body text-sm text-secondary">Free delivery across <strong class="text-on-surface font-semibold">KL &amp; Selangor</strong> (For order above RM300)</p>
             <p class="font-body text-sm text-secondary">Coverage: <strong class="text-on-surface font-semibold">Peninsular MY</strong></p>
             <p class="font-body text-sm text-secondary">Fixed wholesale pricing</p>
           </div>

@@ -20,7 +20,7 @@ const products = [
 
 <Layout
   title="Shop Carton Boxes — Quinocycle Wholesale"
-  description="Buy new and used carton boxes in bulk at fixed wholesale prices. XS Mini, S A4, M A3N, L NLN, and XXL Jumbo sizes available. Peninsular Malaysia delivery. Min order RM1,000."
+  description="Buy new and used carton boxes in bulk at fixed wholesale prices. XS Mini, S A4, M A3N, L NLN, and XXL Jumbo sizes available. Free delivery across KL & Selangor for orders above RM300. Peninsular Malaysia delivery."
 >
   <!-- Page Hero -->
   <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
@@ -29,12 +29,12 @@ const products = [
       Carton Boxes<br /><span class="text-primary italic">at wholesale prices.</span>
     </h1>
     <p class="font-body text-xl text-secondary max-w-xl leading-relaxed">
-      Fixed pricing · Min. order RM 1,000 · Peninsular Malaysia delivery
+      Fixed pricing · Free delivery across KL &amp; Selangor (for orders above RM300) · Peninsular Malaysia delivery
     </p>
   </section>
 
   <!-- Filter Bar -->
-  <div class="sticky top-[72px] z-40 bg-[#fdf9f0]/90 backdrop-blur-xl border-b border-outline-variant/20" id="filterBar">
+  <div class="sticky top-[88px] md:top-[96px] z-40 bg-[#fdf9f0]/90 backdrop-blur-xl border-b border-outline-variant/20" id="filterBar">
     <div class="max-w-7xl mx-auto px-6 md:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
       <div class="flex gap-2 overflow-x-auto no-scrollbar" id="filterGroup">
         <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full bg-on-surface text-surface whitespace-nowrap transition-all" data-filter="all">All Boxes</button>
@@ -63,7 +63,7 @@ const products = [
     <div class="flex items-start gap-3 bg-primary-fixed/40 border border-primary/20 rounded-2xl px-6 py-4">
       <span class="material-symbols-outlined text-primary flex-shrink-0" style="font-size:20px;">info</span>
       <p class="font-body text-sm text-on-surface-variant leading-relaxed">
-        Minimum order value is <strong class="text-on-surface font-semibold">RM 1,000</strong>. Prices shown are per box.
+        <strong class="text-on-surface font-semibold">Free delivery across KL &amp; Selangor</strong> (for orders above RM300). Prices shown are per box.
         Add items to cart and we'll send your order via WhatsApp for confirmation.
       </p>
     </div>
@@ -333,11 +333,11 @@ const products = [
     cartTotalBoxes.textContent = totalBoxes;
     cartTotalPrice.textContent = `RM ${totalPrice.toFixed(2)}`;
 
-    const moqMet = totalPrice >= 1000;
-    cartMoq.textContent = moqMet
-      ? `✓ Min. order of RM 1,000 met`
-      : `Min. order: RM 1,000 (${(1000 - totalPrice).toFixed(2)} more needed)`;
-    cartMoq.style.color = moqMet ? '#546159' : '#ba1a1a';
+    const freeDeliveryMet = totalPrice >= 300;
+    cartMoq.textContent = freeDeliveryMet
+      ? `✓ Free delivery across KL & Selangor`
+      : `Free delivery for KL & Selangor orders above RM 300 (RM ${(300 - totalPrice).toFixed(2)} more to qualify)`;
+    cartMoq.style.color = freeDeliveryMet ? '#546159' : '#765a00';
 
     // Remove handlers
     cartItems.querySelectorAll('.remove-item').forEach(btn => {
