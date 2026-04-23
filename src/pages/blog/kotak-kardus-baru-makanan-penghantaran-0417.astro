@@ -1,0 +1,73 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Kotak Kardus Terbaik untuk Penghantaran Makanan & Perniagaan F&B di Selangor', description: 'Cari kotak kardus berkualiti tinggi untuk bisnes penghantaran makanan dan F&B. Panduan pemilihan saiz dan jenis untuk cloud kitchen dan katering di Malaysia — harga borong Balakong.', date: '2026-04-17', readTime: '7 min', category: 'Kotak Kardus Baru', author: 'Quinocycle Team', slug: 'kotak-kardus-baru-makanan-penghantaran-0417' };
+const WA_LINK = 'https://wa.me/60168916381?text=Salam%20Quinocycle!%20Saya%20perlukan%20kotak%20kardus%20untuk%20penghantaran%20makanan.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-04-17', dateModified: '2026-04-17', inLanguage:"ms-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/kotak-kardus-baru-makanan-penghantaran-0417"}, keywords:"kotak kardus makanan Malaysia, penghantaran makanan Selangor, kotak F&B berkualiti, cloud kitchen packaging, kotak borong Balakong" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Saiz kotak apa yang sesuai untuk penghantaran makanan?","acceptedAnswer":{"@type":"Answer","text":"Kotak saiz kecil (30x20x20cm) sesuai untuk makanan individu. Kotak sederhana (40x30x20cm) untuk pesanan kelompok. Kotak besar (50x40x40cm) untuk katering. Pilih mengikut jenis makanan dan jumlah pesanan anda."}},{"@type":"Question","name":"Adakah kotak kardus selamat untuk makanan?","acceptedAnswer":{"@type":"Answer","text":"Ya, kotak kardus baru selamat untuk makanan. Pastikan kotak bersih dan tanpa tinta berbahaya. Quinocycle menyediakan kotak berkualiti makanan untuk bisnes F&B."}},{"@type":"Question","name":"Bolehkah saya memesan kotak dalam jumlah kecil?","acceptedAnswer":{"@type":"Answer","text":"Ya! Pesanan minimum RM 1,000. Anda boleh mencampur saiz berbeza dalam satu pesanan untuk bisnes penghantaran makanan anda."}},{"@type":"Question","name":"Berapa lama kotak tahan sebelum lembab?","acceptedAnswer":{"@type":"Answer","text":"Kotak kardus tahan 3-4 jam dalam iklim tropika Malaysia. Tambahkan lapisan plastik atau kertas wax untuk perlindungan lebih lama."}},{"@type":"Question","name":"Dimanakah saya boleh memesan kotak borong di Selangor?","acceptedAnswer":{"@type":"Answer","text":"Quinocycle di Balakong menyediakan kotak kardus berkualiti untuk bisnes makanan. Harga borong kompetitif, penghantaran ke seluruh Malaysia."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"RM 1.90 – RM 6.50 per box", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:px-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">Bisnes penghantaran makanan dan F&B berkembang pesat di Malaysia. Cloud kitchen, katering, dan penjual makanan online memerlukan kotak kardus berkualiti tinggi untuk melindungi makanan semasa penghantaran. Kotak yang betul memastikan makanan sampai dengan selamat dan menarik kepada pelanggan di Klang Valley dan seluruh Malaysia.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Memilih Kotak Kardus untuk Makanan</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Jenis Kotak Berdasarkan Berat Makanan</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Makanan berat (nasi bungkus, sup) memerlukan kotak berdinding ganda (double wall). Makanan ringan boleh menggunakan berdinding tunggal (single wall). Quinocycle menyediakan kedua-dua jenis dengan harga borong kompetitif untuk bisnes makanan.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Saiz Standard untuk Berbagai Jenis Makanan</h3>
+        <div class="space-y-2 mt-4 mb-6">
+          <p class="font-body text-on-surface text-sm"><strong>Saiz Kecil (30x20x20cm):</strong> Nasi bungkus, makanan individu</p>
+          <p class="font-body text-on-surface text-sm"><strong>Saiz Sederhana (40x30x20cm):</strong> Pesanan kelompok, catering ringan</p>
+          <p class="font-body text-on-surface text-sm"><strong>Saiz Besar (50x40x40cm):</strong> Catering besar, aneka makanan</p>
+        </div>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Perlindungan Kelembaban & Keselamatan</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Iklim tropika Malaysia menyebabkan kelembaban tinggi. Lapisan plastik atau kertas wax dalam kotak melindungi makanan dari lembab. Kotak berkualiti tinggi mencegah makanan rusak semasa penghantaran jarak jauh.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Tips Penghantaran Makanan dengan Aman</h2>
+        <ul class="space-y-3">
+          <li class="font-body text-on-surface"><strong>Bekalan Es:</strong> Tambahkan ice pack atau gel untuk makanan sejuk.</li>
+          <li class="font-body text-on-surface"><strong>Lapisan Pelindung:</strong> Gunakan kertas wax atau plastik dalam kotak.</li>
+          <li class="font-body text-on-surface"><strong>Ventilasi:</strong> Untuk makanan panas, lubang kecil untuk angin.</li>
+          <li class="font-body text-on-surface"><strong>Label Jelas:</strong> Tandakan "MAKANAN", tarikh, dan isi kandungan.</li>
+        </ul>
+      </section>
+
+      <section class="mb-12 bg-primary/5 border border-primary/20 rounded-lg p-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Pesan Kotak Kardus Makanan Sekarang</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Quinocycle menyediakan kotak kardus berkualiti tinggi untuk bisnes penghantaran makanan di Malaysia. Harga borong kompetitif, penghantaran cepat ke seluruh Selangor dan Peninsular Malaysia.</p>
+        <p class="font-body text-on-surface mb-6"><strong>Pesanan minimum: RM 1,000 | Saiz pelbagai | Harga borong</strong></p>
+        <ul class="font-body text-on-surface text-sm space-y-2 mb-6">
+          <li>📞 <strong>Telefon:</strong> +60 16 8916 381 / 03-8962 6381</li>
+          <li>📧 <strong>Email:</strong> quinocycle@gmail.com</li>
+          <li>📍 <strong>Alamat:</strong> No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300</li>
+        </ul>
+        <a href={WA_LINK} class="inline-block bg-primary text-on-primary font-label font-bold text-sm px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">💬 Hubungi WhatsApp</a>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Kesimpulan: Kualiti Kotak Mencerminkan Kualiti Makanan</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-4">Kotak kardus berkualiti adalah investasi penting untuk bisnes makanan. Melindungi produk, menampilkan profesionalisme, dan memuaskan pelanggan dengan penghantaran yang selamat dan menarik.</p>
+        <p class="font-body text-on-surface leading-relaxed">Hubungi Quinocycle untuk kotak kardus berkualiti tinggi bagi bisnes makanan anda. Berkhidmat di Balakong, Selangor dan seluruh Peninsular Malaysia sejak 2010.</p>
+      </section>
+    </div>
+  </article>
+</Layout>

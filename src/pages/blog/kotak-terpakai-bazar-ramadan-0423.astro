@@ -1,0 +1,128 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Kotak Kardus Terpakai untuk Bazar Ramadan & Peniaga Pasar Malam — Pembungkusan Kos Rendah Malaysia', description: 'Peniaga bazar Ramadan dan pasar malam boleh jimat 50% kos pembungkusan dengan kotak kardus terpakai berkualiti. Bekalan pukal di Balakong untuk peniaga Selangor.', date: '2026-04-23', readTime: '7 min', category: 'Kotak Kardus Terpakai', author: 'Quinocycle Team', slug: 'kotak-terpakai-bazar-ramadan-0423' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20perlukan%20kotak%20terpakai%20untuk%20gerai%20bazar%20Ramadan.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-04-23', dateModified: '2026-04-23', inLanguage:"ms-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/kotak-terpakai-bazar-ramadan-0423"}, keywords:"pembungkusan bazar Ramadan Malaysia, pasar malam kotak terpakai, kotak gerai peniaga Selangor, bazar makanan pembungkusan murah, kotak pasar malam Kajang" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Adakah kotak terpakai selamat untuk pembungkusan makanan di bazar Ramadan?","acceptedAnswer":{"@type":"Answer","text":"Kotak terpakai sesuai untuk pembungkusan sekunder — beg takeaway pelanggan, penyimpanan produk tertutup, dan pengelolaan gerai. Untuk kontak terus dengan makanan, sentiasa guna kotak baru gred makanan."}},{"@type":"Question","name":"Berapa lebih murah kotak terpakai berbanding baru?","acceptedAnswer":{"@type":"Answer","text":"Kotak terpakai berharga 40–60% lebih rendah daripada kotak baru setara. Untuk peniaga bazar musim puncak sahaja, penjimatan signifikan — biasanya RM 300–500 setiap gerai setiap musim."}},{"@type":"Question","name":"Boleh pesan kuantiti kecil untuk satu gerai?","acceptedAnswer":{"@type":"Answer","text":"Pesanan minimum kami RM 1,000. Untuk gerai tunggal, pertimbangkan berkongsi pesanan dengan peniaga jiran — kami sering menggabungkan pesanan kecil dengan peniaga Balakong lain."}},{"@type":"Question","name":"Adakah anda menghantar ke tapak bazar?","acceptedAnswer":{"@type":"Answer","text":"Ya, kami menghantar ke Shah Alam, Kajang, Cheras, Seri Kembangan, dan tapak bazar lain Lembah Klang. Pesan sekurang-kurangnya 3 hari sebelum bazar dibuka untuk penghantaran terjamin."}},{"@type":"Question","name":"Saiz apa paling sesuai untuk gerai bazar?","acceptedAnswer":{"@type":"Answer","text":"Kotak sederhana (35x28x25cm) untuk takeaway pelanggan, kotak besar (50x40x40cm) untuk pengelolaan stok pukal, dan kotak rata untuk papan tanda dan alas paparan."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"RM 1.90 – RM 6.50 per box", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">Bazar Ramadan dan pasar malam adalah perniagaan intensif jangka pendek. Peniaga beroperasi dengan margin nipis selama 30 hari dan mesti mengawal setiap kos input — sewa, bahan, tong gas, dan pembungkusan. Kotak kardus terpakai daripada Quinocycle membolehkan peniaga bazar di seluruh Selangor mendapatkan bekalan untuk pengelolaan gerai, takeaway pelanggan, dan pembungkusan pecahan hujung malam pada kadar yang jauh lebih rendah daripada kotak baru.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Di Mana Kotak Terpakai Membantu Operasi Bazar</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Penyediaan & Pembukaan Gerai</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Gerai bazar perlu dibina dan dibuka semula setiap petang. Kotak terpakai berfungsi sebagai asas paparan, sokongan papan tanda, dan penyimpanan untuk tong gas, peralatan, dan bahan kering. Disusun di bawah meja gerai, ia tidak menghalang tetapi mudah diakses.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Takeaway Pelanggan untuk Pesanan Pukal</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Pembeli keluarga yang memesan 10–20 biji kuih atau nasi bungkus tidak mahu menyukat beg plastik kecil. Kotak terpakai kecil dengan tali pemegang menjadikan pesanan teratur dan kelihatan lebih profesional.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Pembongkaran Hujung Malam</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Stok tidak terjual, peralatan, dan pembungkusan takeaway semuanya perlu dibawa pulang. Susunan kotak terpakai menjadikan pembongkaran huru-hara menjadi 15 minit. Susunkan rata ketika kosong — hampir tiada ruang van digunakan.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Memilih Kotak Terpakai Berkualiti</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Gred A Berbanding Gred Rendah</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Quinocycle menyusun inventori terpakai mengikut gred. Kotak Gred A — dengan kerutan minimum, tiada koyakan, dan interior bersih — paling sesuai untuk takeaway pelanggan. Gred rendah sesuai untuk penyimpanan stok di belakang gerai.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Pembersihan untuk Guna Bersebelahan Makanan</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Walaupun kotak terpakai tidak sepatutnya bersentuhan terus dengan makanan mentah, peniaga boleh melapis Gred A dengan kertas parchment gred makanan atau beg tertutup untuk takeaway yang selamat dan menarik.</p>
+
+        <h3 class="font-headline text-xl font-bold text-n-surface mb-4">Pek Pukal untuk Bekalan Sebulan</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Gerai bazar biasa menggunakan 200–400 kotak sepanjang bulan Ramadan. Pek pukal Quinocycle membolehkan peniaga memesan bekalan 30 hari pada harga borong, dihantar ke alamat Balakong atau Kajang sebelum Hari Pertama.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Melayani Peniaga Bazar di Selangor</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Kami menghantar kotak terpakai ke bazar Ramadan di Stadium Shah Alam, Seksyen 14 PJ, Plaza Kajang, Cheras Leisure Mall, dan lokasi pasar malam di seluruh Seri Kembangan, Balakong, dan Puchong. Minimum pesanan RM 1,000 meliputi kebanyakan keperluan gerai semusim.</p>
+      </section>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8 my-12">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-6">Panduan Saiz Kotak Peniaga Bazar</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">KOTAK TAKEAWAY PELANGGAN</p>
+            <p class="font-body text-on-surface text-sm">30x22x20cm | Gred A | Tali pemegang pilihan</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">PENGELOLA STOK GERAI</p>
+            <p class="font-body text-on-surface text-sm">50x40x40cm | Gred B | Penyimpanan pukal</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">PAPAN TANDA & PAPARAN</p>
+            <p class="font-body text-on-surface text-sm">Rata besar | Gred C | Siap dicat</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">PEMUATAN HUJUNG MALAM</p>
+            <p class="font-body text-on-surface text-sm">Pelbagai saiz | Gred B | Susun rata</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Soalan Lazim Peniaga Bazar & Pasar Malam</h2>
+        <div class="space-y-4">
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Boleh kutip kotak terus dari gudang Balakong?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Ya. Pengambilan sendiri dialu-alukan semasa waktu operasi (Isnin–Jumaat 9pg–6ptg, Sabtu 9pg–1ptg).</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Adakah anda menawarkan penghantaran hari yang sama?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Penghantaran hari sama boleh untuk Balakong, Kajang, dan Seri Kembangan apabila stok tersedia. Kami cadangkan tempah 24 jam lebih awal semasa Ramadan puncak.</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Bagaimana jika saya hanya perlu 50 kotak untuk pasar hujung minggu?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Minimum kami RM 1,000 setiap invois. Untuk pesanan kecil, berkongsi dengan peniaga berdekatan.</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Adakah kotak cukup bersih untuk makanan kering seperti kurma?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Kotak Gred A dengan pelapis gred makanan selamat untuk barangan kering. Untuk makanan terbuka, sentiasa gunakan kotak baru gred makanan.</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Apa yang berlaku kepada kotak selepas Ramadan tamat?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Simpan rata untuk tahun hadapan, jual kepada pembelian semula, atau guna untuk pindah rumah dan penyimpanan.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="mb-12 bg-primary/5 border border-primary/20 rounded-lg p-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Pesan Bekalan Musim Bazar Anda Hari Ini</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Simpan stok sebelum kesibukan. Quinocycle telah melayani peniaga bazar Selangor dengan kotak terpakai berpatutan sejak 2010.</p>
+        <p class="font-body text-on-surface mb-6"><strong>Hubungi Quinocycle hari ini:</strong></p>
+        <ul class="font-body text-on-surface text-sm space-y-2 mb-6">
+          <li>📞 <strong>Telefon:</strong> +60 16 8916 381 / 03-8962 6381</li>
+          <li>📧 <strong>E-mel:</strong> quinocycle@gmail.com</li>
+          <li>📍 <strong>Alamat:</strong> No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300</li>
+        </ul>
+        <a href={WA_LINK} class="inline-block bg-primary text-on-primary font-label font-bold text-sm px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">💬 Sembang WhatsApp</a>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Kesimpulan: Peniaga Bijak Guna Pembungkusan Bijak</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-4">Musim bazar mencabar. Setiap ringgit yang dijimatkan pada pembungkusan adalah tambahan keuntungan. Kotak kardus terpakai daripada Quinocycle memberikan fungsi yang sama dengan kotak baru pada 50% kos.</p>
+        <p class="font-body text-on-surface leading-relaxed">Hubungi melalui WhatsApp untuk sebut harga terpantas.</p>
+      </section>
+    </div>
+  </article>
+</Layout>

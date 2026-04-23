@@ -1,0 +1,128 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Dimensional Weight Optimisation — Cut Courier Bills With Smarter Packaging in Malaysia', description: 'Stop paying for air. Learn how dimensional weight works and choose carton sizes that slash your Pos Laju, J&T, and Ninja Van bills by 20–35%.', date: '2026-04-23', readTime: '7 min', category: 'Packaging Knowledge', author: 'Quinocycle Team', slug: 'packaging-knowledge-dimensional-weight-0423' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20need%20advice%20on%20dimensional%20weight%20optimisation.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-04-23', dateModified: '2026-04-23', inLanguage:"en-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/packaging-knowledge-dimensional-weight-0423"}, keywords:"dimensional weight Malaysia, DIM weight courier pricing, reduce shipping cost e-commerce, right-size carton Shopee Lazada, J&T Ninja Van pricing, volumetric weight Malaysia" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is dimensional weight and why does it matter?","acceptedAnswer":{"@type":"Answer","text":"Dimensional weight (DIM) is a pricing model couriers use when packages take up more truck space than their actual weight. Formula: (L × W × H cm) ÷ 5000 or 6000 depending on carrier. Couriers charge whichever is higher — actual or DIM weight."}},{"@type":"Question","name":"Which Malaysian couriers use dimensional weight?","acceptedAnswer":{"@type":"Answer","text":"Pos Laju uses 6000 divisor. J&T Express uses 6000. Ninja Van uses 5000 (stricter). FlashExpress uses 6000. International couriers like DHL and FedEx use 5000. Check each courier's current rate — they update periodically."}},{"@type":"Question","name":"How do I calculate if I'm paying DIM surcharge?","acceptedAnswer":{"@type":"Answer","text":"Multiply L × W × H in cm, divide by 5000 or 6000. If the result exceeds actual package weight, you're paying DIM. Example: 40x30x20cm box at 2kg has DIM of 4kg on a /6000 basis — you pay the 4kg rate."}},{"@type":"Question","name":"What's the easiest way to reduce DIM weight?","acceptedAnswer":{"@type":"Answer","text":"Right-size cartons. If your product is 25x15x10cm, use a 27x17x12cm box, not a 40x30x20cm box. Each unnecessary cm of padding adds to your DIM weight calculation across thousands of parcels annually."}},{"@type":"Question","name":"How much can right-sizing cartons save e-commerce sellers?","acceptedAnswer":{"@type":"Answer","text":"Malaysian Shopee and Lazada sellers shipping 100+ parcels monthly typically save RM 800–2,500/month by switching from generic cartons to right-sized inventory. Annual savings scale linearly with parcel volume."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"RM 1.90 – RM 6.50 per box", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">If your courier bill feels higher than it should be, there's a good chance you're paying dimensional weight (DIM) surcharges without realising it. Malaysian e-commerce sellers routinely send out oversized cartons stuffed with crumpled paper, paying the freight cost of a 4 kg parcel to ship a 1.5 kg item. Understanding DIM weight and right-sizing your cartons is the fastest, lowest-effort cost saving any online seller can make.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">How Dimensional Weight Actually Works</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">The Pricing Formula</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Couriers calculate DIM weight as (Length × Width × Height in cm) ÷ divisor. Pos Laju and J&T Express use a 6000 divisor. Ninja Van uses 5000, making them the strictest. A 40x30x20cm carton = 24000 cm³ ÷ 6000 = 4kg DIM weight, regardless of what's inside.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Which Weight Do They Actually Charge?</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Whichever is greater — actual weight or DIM weight. If your item is 1.5 kg but in a 4 kg DIM box, you pay the 4 kg rate. For light-bulky products like clothing, homeware, and plush toys, DIM almost always exceeds actual weight.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">The Volumetric Trap in Malaysian E-Commerce</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Shopee and Lazada sellers often buy generic "medium" cartons and dump every product inside with filler. This one-size-fits-all habit can inflate shipping cost by 30–45% versus right-sized cartons tailored to each SKU.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Strategies for Cutting DIM Surcharges</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Build a Carton Size Library</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Stock 4–6 carton sizes matched to your SKU categories. Most Malaysian e-commerce sellers do well with small (20x15x10cm), medium (30x22x15cm), large (40x30x20cm), and an oversized option. Match the box, not the product, to the courier grid.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Use Flat Mailers for Thin Items</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Clothing, phone cases, and accessories under 2cm thick ship best in flat mailers or slim cartons (30x22x3cm). These keep DIM weight minimal and drastically reduce per-parcel cost.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Custom Cartons for High-Volume SKUs</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">For any SKU shipping 500+ units/month, custom-sized cartons pay for themselves in 60 days. Quinocycle can quote bespoke dimensions matched to your exact product. The DIM reduction compounds monthly.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Real Savings for Malaysian E-Commerce Sellers</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">A Shopee seller shipping 400 orders/month across two SKUs was paying RM 6.80 average per parcel in generic cartons. After switching to two right-sized carton SKUs, average dropped to RM 4.90 — RM 760 saved monthly, over RM 9,100 annually. The carton cost difference was under RM 200/month.</p>
+      </section>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8 my-12">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-6">DIM Weight Quick Reference</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">20x15x10cm SMALL</p>
+            <p class="font-body text-on-surface text-sm">DIM = 0.5kg (/6000) | Phone cases, cosmetics</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">30x22x15cm MEDIUM</p>
+            <p class="font-body text-on-surface text-sm">DIM = 1.65kg | Books, small appliances</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">40x30x20cm LARGE</p>
+            <p class="font-body text-on-surface text-sm">DIM = 4kg | Clothing bundles, homeware</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">30x22x3cm FLAT MAILER</p>
+            <p class="font-body text-on-surface text-sm">DIM = 0.33kg | Apparel, documents</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Common Questions About DIM Optimisation</h2>
+        <div class="space-y-4">
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Do ShopeePay and Lazada consignment rates already include DIM?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Yes. Platform-subsidised rates still apply DIM calculations. Right-sizing still saves money — the platform just absorbs a portion.</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">What if my product is awkwardly shaped?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Custom cartons are worth it above 200 units/month for awkward shapes. Alternative: use mailer bags for soft awkward items to avoid DIM penalty entirely.</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">How often do Malaysian courier DIM rules change?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Usually once a year. Check your courier agreement annually — divisors can shift from /6000 to /5000 overnight, effectively raising prices 20%.</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Can Quinocycle help me audit my current carton sizes?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Yes. Share your top 10 SKUs and current carton sizes. We'll suggest right-sized alternatives and calculate projected monthly savings.</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Does right-sizing reduce product protection?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">No — right-sized cartons with snug fit and minimal filler are actually safer than oversized boxes with loose filler. Movement inside a box is a top damage cause.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="mb-12 bg-primary/5 border border-primary/20 rounded-lg p-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Stop Paying For Empty Space</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Quinocycle stocks 30+ carton sizes in Balakong plus custom dimensions for high-volume sellers. Let us help you right-size your e-commerce operation and cut courier costs starting this month.</p>
+        <p class="font-body text-on-surface mb-6"><strong>Contact Quinocycle today:</strong></p>
+        <ul class="font-body text-on-surface text-sm space-y-2 mb-6">
+          <li>📞 <strong>Phone:</strong> +60 16 8916 381 / 03-8962 6381</li>
+          <li>📧 <strong>Email:</strong> quinocycle@gmail.com</li>
+          <li>📍 <strong>Address:</strong> No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300</li>
+        </ul>
+        <a href={WA_LINK} class="inline-block bg-primary text-on-primary font-label font-bold text-sm px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">💬 Chat on WhatsApp</a>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Conclusion: Cartons Are a Lever You Control</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-4">Courier rate cards aren't negotiable for most SMEs. But DIM weight is — through carton selection. Every Malaysian e-commerce seller shipping more than 200 parcels a month should audit their carton sizes this quarter. The savings compound every single parcel.</p>
+        <p class="font-body text-on-surface leading-relaxed">Quinocycle has helped hundreds of Klang Valley e-commerce sellers cut DIM surcharges. Let's do the same for your business.</p>
+      </section>
+    </div>
+  </article>
+</Layout>

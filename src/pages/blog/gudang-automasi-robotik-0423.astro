@@ -1,0 +1,109 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Gudang Automasi & Robotik: Bekalan Pembungkusan untuk Sistem AGV, AS/RS dan Pick-and-Pack', description: 'Bekalan kotak kardus, bubble wrap, dan kadbod gelombang bersaiz seragam untuk gudang automasi di Selangor. Elakkan jam conveyor & kerosakan robot.', date: '2026-04-23', readTime: '7 min', category: 'Bekalan Gudang', author: 'Quinocycle Team', slug: 'gudang-automasi-robotik-0423' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Gudang%20saya%20guna%20sistem%20automasi%20-%20nak%20bekalan%20kotak%20yang%20sesuai.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":post.title,"description":post.description,"datePublished":post.date,"author":{"@type":"Organization","name":"Quinocycle Sdn. Bhd."},"publisher":{"@type":"Organization","name":"Quinocycle Sdn. Bhd.","logo":{"@type":"ImageObject","url":"https://quinocycle.com.my/logo.png"}},"inLanguage":"ms-MY" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Apa beza pembungkusan untuk gudang manual vs automasi?","acceptedAnswer":{"@type":"Answer","text":"Gudang automasi perlukan kotak dengan dimensi dan berat yang sangat konsisten, flute yang tegak dan flap yang tidak terbuka supaya sensor AGV dan arm robotik tidak tersangkut. Toleransi biasa ±2mm sahaja."}},
+  {"@type":"Question","name":"Saiz kotak apa paling sesuai untuk conveyor pick-and-pack?",  "acceptedAnswer":{"@type":"Answer","text":"Konveyor standard di Malaysia terima lebar 300-600mm. Kotak pick-and-pack popular: 300x200x150mm, 400x300x200mm, 500x400x300mm — semua dengan flute C untuk kekuatan dan konsistensi."}},
+  {"@type":"Question","name":"Perlukah kotak dengan spesifikasi khas untuk AS/RS?","acceptedAnswer":{"@type":"Answer","text":"Ya. Sistem AS/RS (Automated Storage & Retrieval) perlukan kotak bentuk segi empat tepat dengan berat tidak melebihi had shuttle (biasanya 30-50kg) dan permukaan rata untuk scanner barcode. Kami stok siri RSC-AUTO yang lulus spek ini."}},
+  {"@type":"Question","name":"Adakah bubble wrap sesuai dalam aliran automasi?","acceptedAnswer":{"@type":"Answer","text":"Bubble wrap pre-cut dan dispenser roll digunakan di stesen packing automasi. Elakkan tiupan bebola (air pillow) yang pecah dalam konveyor. Quinocycle bekalkan bubble wrap potongan tepat untuk aliran high-speed."}},
+  {"@type":"Question","name":"Boleh tak Quinocycle hantar terus ke dock gudang?","acceptedAnswer":{"@type":"Answer","text":"Ya. Kami hantar pallet ke gudang di Shah Alam, Bukit Raja, Nilai, Port Klang, Kota Damansara dan Cyberjaya. Jadual tetap mingguan/dwi-mingguan untuk klien automasi."}}
+] };
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store","name":"Quinocycle Sdn. Bhd.","image":"https://quinocycle.com.my/logo.png","telephone":"+60168916381","email":"sales@quinocycle.com.my","address":{"@type":"PostalAddress","streetAddress":"No.13, Jalan Taming P/1, Taming Jaya","addressLocality":"Balakong","addressRegion":"Selangor","postalCode":"43300","addressCountry":"MY"},"geo":{"@type":"GeoCoordinates","latitude":3.0579,"longitude":101.7468},"url":"https://quinocycle.com.my","priceRange":"$$" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-12">
+      <div class="flex items-center gap-3 text-sm text-on-surface-variant mb-4">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">{post.category}</span>
+        <time>{post.date}</time>
+        <span>• {post.readTime} baca</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold text-on-surface mb-6 leading-tight">{post.title}</h1>
+      <p class="text-lg text-on-surface-variant leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="prose prose-lg max-w-none text-on-surface">
+      <p>Gudang moden di Malaysia semakin banyak beralih ke sistem automasi — AGV (Automated Guided Vehicle), AS/RS (Automated Storage & Retrieval System), robotic pick-and-pack, dan conveyor sortation berkelajuan tinggi. Syarikat e-dagang, 3PL, dan pengilang di Shah Alam, Bukit Raja, Kota Damansara, Nilai dan Port Klang sudah laburkan jutaan ringgit dalam sistem ini. Tapi satu perkara sering diabaikan: <strong>pembungkusan mesti sesuai dengan mesin</strong>.</p>
+
+      <p>Kotak yang tidak konsisten, flap tercabut, atau saiz tidak seragam boleh jam conveyor, merosakkan arm robotik, dan buat seluruh barisan automasi berhenti. Di Quinocycle Balakong, kami khas sediakan bekalan pembungkusan yang lulus spesifikasi gudang automasi.</p>
+
+      <h2>Apa yang Perlu Ada pada Kotak untuk Automasi?</h2>
+      <h3>1. Toleransi Dimensi ±2mm</h3>
+      <p>Scanner conveyor dan arm robotik dikalibrasi mengikut dimensi kotak. Kotak yang saiz berbeza 5mm boleh menyebabkan false-reject atau sangkut di diverter. Semua kotak RSC-AUTO dari Quinocycle dipotong pada toleransi ±2mm.</p>
+      <h3>2. Flute dan Kekuatan yang Konsisten</h3>
+      <p>Flute C (4mm) menjadi pilihan popular untuk gudang automasi kerana seimbang antara kekuatan tegak (untuk stacking) dan kelebaran muat (untuk conveyor). Flute BC (7mm) untuk produk berat.</p>
+      <h3>3. Flap Rata & Tidak Terbuka</h3>
+      <p>Flap yang terbuka atau melengkung boleh tersangkut dalam roller conveyor. Gunakan pita gam (tape) bertepu atau auto-sealing di stesen packing.</p>
+
+      <h2>Pembungkusan Mengikut Jenis Sistem Automasi</h2>
+      <h3>AGV (Automated Guided Vehicle)</h3>
+      <p>AGV mengangkut pallet atau tote dari rak ke stesen packing. Pastikan kotak pada pallet <em>tidak tergantung tepi</em> (overhang) — boleh tersekat pada tiang rak atau pintu lif. Saiz pallet standard MY/SG: 1100x1100mm.</p>
+      <h3>AS/RS (Shuttle & Crane)</h3>
+      <p>AS/RS ada had berat (30-50kg) dan had dimensi (600x400x300mm biasa untuk tote system). Kotak mesti segi empat tepat sempurna — bukan trapezoid — untuk shuttle ambil tanpa slip.</p>
+      <h3>Pick-and-Pack Robotik</h3>
+      <p>Arm robotik dengan vacuum suction perlukan permukaan kotak rata dan tidak berkedut. Kadbod gelombang kraft dari Quinocycle bagi permukaan licin yang sesuai untuk suction cup.</p>
+
+      <h2>Bekalan Tambahan untuk Gudang Automasi</h2>
+      <div class="bg-surface-variant/50 rounded-xl p-6 my-8 border border-outline/20">
+        <h3 class="text-xl font-semibold mb-4">Item Penting untuk Stesen Pack Automasi</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <strong class="text-primary">Kotak RSC-AUTO Siri A</strong>
+            <p class="text-sm mt-1">300x200x150mm, 400x300x200mm, 500x400x300mm • toleransi ±2mm</p>
+          </div>
+          <div>
+            <strong class="text-primary">Kadbod Gelombang Lembaran</strong>
+            <p class="text-sm mt-1">Untuk divider dan pengisi rata dalam tote — potong CNC mengikut kesan anda</p>
+          </div>
+          <div>
+            <strong class="text-primary">Bubble Wrap Pre-cut</strong>
+            <p class="text-sm mt-1">Helaian 30x40cm atau 40x50cm, flat-pack — tidak sangkut conveyor</p>
+          </div>
+          <div>
+            <strong class="text-primary">Kertas Kraft Roll</strong>
+            <p class="text-sm mt-1">Untuk mesin auto void-fill (paper cushion) — gantikan air pillow yang pecah</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Soalan Lazim</h2>
+      <div class="space-y-3 my-8">
+        <details class="bg-surface-variant/50 rounded-lg p-4 border border-outline/20">
+          <summary class="font-semibold cursor-pointer">Apa beza pembungkusan untuk gudang manual vs automasi?</summary>
+          <p class="mt-3 text-on-surface-variant">Gudang automasi perlukan kotak dengan dimensi dan berat yang sangat konsisten, flute tegak dan flap tidak terbuka. Toleransi biasa ±2mm sahaja supaya AGV dan arm robotik tidak tersangkut.</p>
+        </details>
+        <details class="bg-surface-variant/50 rounded-lg p-4 border border-outline/20">
+          <summary class="font-semibold cursor-pointer">Saiz kotak apa paling sesuai untuk conveyor pick-and-pack?</summary>
+          <p class="mt-3 text-on-surface-variant">Konveyor standard terima lebar 300-600mm. Kotak popular: 300x200x150mm, 400x300x200mm, 500x400x300mm dengan flute C.</p>
+        </details>
+        <details class="bg-surface-variant/50 rounded-lg p-4 border border-outline/20">
+          <summary class="font-semibold cursor-pointer">Perlukah kotak dengan spesifikasi khas untuk AS/RS?</summary>
+          <p class="mt-3 text-on-surface-variant">Ya. Sistem AS/RS perlukan kotak bentuk segi empat tepat, berat tidak melebihi had shuttle (30-50kg), permukaan rata untuk scanner. Kami stok siri RSC-AUTO.</p>
+        </details>
+        <details class="bg-surface-variant/50 rounded-lg p-4 border border-outline/20">
+          <summary class="font-semibold cursor-pointer">Adakah bubble wrap sesuai dalam aliran automasi?</summary>
+          <p class="mt-3 text-on-surface-variant">Bubble wrap pre-cut dan dispenser roll sesuai untuk stesen packing automasi. Elakkan bebola udara (air pillow) yang mudah pecah dalam konveyor.</p>
+        </details>
+        <details class="bg-surface-variant/50 rounded-lg p-4 border border-outline/20">
+          <summary class="font-semibold cursor-pointer">Boleh tak Quinocycle hantar terus ke dock gudang?</summary>
+          <p class="mt-3 text-on-surface-variant">Ya. Kami hantar pallet ke gudang di Shah Alam, Bukit Raja, Nilai, Port Klang, Kota Damansara dan Cyberjaya dengan jadual tetap mingguan/dwi-mingguan.</p>
+        </details>
+      </div>
+
+      <div class="bg-primary/5 rounded-2xl p-8 my-12 border border-primary/20">
+        <h3 class="text-2xl font-semibold mb-4">Bekalan pembungkusan untuk gudang automasi anda</h3>
+        <p class="mb-4">Beritahu kami spek mesin dan volume harian — kami cadangkan kotak, bubble wrap, dan kadbod bersesuaian toleransi automasi.</p>
+        <p class="text-sm text-on-surface-variant mb-6">📞 016-891 6381 &nbsp; 📧 sales@quinocycle.com.my &nbsp; 📍 No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor</p>
+        <a href={WA_LINK} class="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-full font-semibold hover:bg-primary/90 transition">WhatsApp untuk Spek Automasi →</a>
+      </div>
+
+      <h2>Kesimpulan</h2>
+      <p>Sistem automasi gudang boleh mempercepat pemprosesan 3-5x ganda, tapi ia hanya sebaik pembungkusan yang masuk ke dalamnya. Kotak yang konsisten, flute yang tepat, dan pengisi yang tidak menjejaskan sensor adalah asas kepada aliran kerja yang lancar. Quinocycle Sdn. Bhd. bekalkan semua item ini dengan pallet deliveri terus ke dock anda di seluruh Selangor dan Lembah Klang.</p>
+    </section>
+  </article>
+</Layout>

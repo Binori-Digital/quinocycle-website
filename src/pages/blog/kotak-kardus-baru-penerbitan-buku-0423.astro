@@ -1,0 +1,128 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Kotak Kardus Baru untuk Penerbit Buku & Pengedar Media — Penghantaran Cetakan Terjamin di Malaysia', description: 'Lindungi buku, majalah, dan media bercetak semasa penghantaran dengan kotak kardus bersaiz tepat. Pembekal borong di Balakong untuk penerbit dan pengedar Malaysia.', date: '2026-04-23', readTime: '7 min', category: 'Kotak Kardus Baru', author: 'Quinocycle Team', slug: 'kotak-kardus-baru-penerbitan-buku-0423' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20perlukan%20kotak%20kardus%20untuk%20penghantaran%20buku.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-04-23', dateModified: '2026-04-23', inLanguage:"ms-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/kotak-kardus-baru-penerbitan-buku-0423"}, keywords:"kotak kardus buku Malaysia, penerbit pembungkusan Selangor, pengedar majalah kotak, kotak cetakan media, pembekal buku Balakong, kedai buku pembungkusan" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kotak gred manakah terbaik untuk penghantaran buku berat?","acceptedAnswer":{"@type":"Answer","text":"Kotak berdinding dua (DW) 5-ply dengan kertas kraft 350 GSM sesuai untuk buku di atas 10 kg. Buku adalah muatan padat — kotak berdinding tunggal akan melembung dan koyak."}},{"@type":"Question","name":"Bagaimana mengelakkan buku beralih semasa transit?","acceptedAnswer":{"@type":"Answer","text":"Gunakan saiz kotak yang ketat (maksimum 5mm kelegaan) dan isi jurang dengan kraft berkerut atau pengisi berlapis. Jangan hantar buku dalam kotak terlalu besar."}},{"@type":"Question","name":"Saiz apa yang biasa diguna penerbit Malaysia?","acceptedAnswer":{"@type":"Answer","text":"Penerbit buku teks menggunakan 32x24x20cm (~20 buku) dan 40x30x25cm (~40 paperback). Pengedar majalah lebih suka kotak rata 30x22x8cm."}},{"@type":"Question","name":"Boleh tambah jenama penerbitan pada kotak?","acceptedAnswer":{"@type":"Answer","text":"Ya. Cetakan flexo khas dengan logo penerbit, barcode ISBN, dan label mudah pecah tersedia untuk pesanan di atas RM 1,500. Masa siap 5–7 hari bekerja dari Balakong."}},{"@type":"Question","name":"Adakah anda menghantar ke kedai buku dan perpustakaan seluruh Malaysia?","acceptedAnswer":{"@type":"Answer","text":"Ya. Kami membekalkan kotak kardus kepada penerbit, kedai buku, vendor bekalan sekolah, dan pejabat pembelian perpustakaan di seluruh Semenanjung Malaysia."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"RM 1.90 – RM 6.50 per box", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">Buku adalah muatan yang lebih berat daripada yang dijangka. Satu kotak buku teks bermuatan 25 kilogram kelihatan kemas di rak, tetapi memberikan tekanan serius pada setiap sudut dan jahitan kotak ketika memulakan perjalanan atas lori. Penerbit Malaysia, pengedar pendidikan, dan kedai buku yang mengabaikan spesifikasi kotak cepat belajar pelajaran mahal — flap koyak, tulang belakang buku hancur, dan kos pemulangan yang tinggi. Memilih gred kotak yang betul adalah peningkatan perlindungan terbesar yang boleh dilakukan oleh mana-mana perniagaan buku.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Mengapa Penghantaran Buku Memerlukan Perlindungan Dua Dinding</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Kepadatan Melebihi Dinding Tunggal Standard</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Satu kotak buku teks keras boleh mencapai 20–30 kg. Kotak dinding tunggal hanya dinilai untuk sekitar 15 kg sebelum melembung. Untuk penghantaran gred-penerbit di seluruh Malaysia — terutamanya laluan jauh dari Balakong ke Pulau Pinang atau Johor Bahru — kotak dinding dua 5-ply pada 350 GSM adalah standard minimum.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Kekuatan Menumpuk Penting</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Palet gudang menumpukkan kotak buku 5 hingga 7 lapisan tinggi. Kotak bahagian bawah menanggung berat ramas semua yang di atasnya. Kraft DW premium dengan Edge Crush Test (ECT) tinggi menentang keruntuhan palet.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Rintangan Kelembapan untuk Penyimpanan Tropika</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Kelembapan Malaysia membengkokkan kulit buku dan melemahkan kardus biasa. Kami membekalkan pilihan kraft bersalut rintangan kelembapan yang sesuai untuk penyimpanan gudang dan transit musim tengkujuh.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Saiz Kotak Tepat untuk Percetakan Anda</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Kapasiti Paperback vs Kulit Keras</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Kotak 40x30x25cm memuatkan kira-kira 40 paperback A5 atau 20 buku kulit keras standard. Saiz kotak yang betul mengurangkan bahan pengisi, berat, dan menghalang buku daripada meluncur semasa penghantaran di Lembah Klang.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Kotak Rata untuk Majalah</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Majalah dan katalog berkualiti tinggi terbaik dihantar dalam kotak rata dengan asas kukuh. Format 30x22x8cm kami memuatkan 25–40 majalah standard.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Dimensi Tersuai untuk Buku Meja Kopi</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Buku seni bersaiz besar perlukan dimensi tersuai. Kami memotong tersuai untuk penerbit premium dengan larian kurang dari 500 unit.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Melayani Penerbit di Seluruh Malaysia</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Quinocycle membekalkan penerbit pendidikan di Petaling Jaya, pengedar buku agama di Kajang, kedai buku akademik di Cheras, dan pejabat perolehan perpustakaan awam di seluruh Semenanjung. Jadual penghantaran konsolidasi kami menjimatkan 15–20% kos logistik.</p>
+      </section>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8 my-12">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-6">Panduan Saiz Kotak Penerbit Buku</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">KES PAPERBACK (A5)</p>
+            <p class="font-body text-on-surface text-sm">32x24x20cm | Dinding Dua | ~20 tajuk</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">BUKU TEKS KULIT KERAS</p>
+            <p class="font-body text-on-surface text-sm">40x30x25cm | Dinding Dua | 25 kg</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">MAJALAH / KATALOG RATA</p>
+            <p class="font-body text-on-surface text-sm">30x22x8cm | Dinding Tunggal Diperkuat</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">BUKU SENI BESAR</p>
+            <p class="font-body text-on-surface text-sm">Saiz tersuai | Dinding Tiga</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Soalan Lazim Daripada Penerbit Malaysia</h2>
+        <div class="space-y-4">
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Berapa pesanan minimum untuk kotak penerbit bercetak tersuai?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Minimum RM 1,500 untuk cetakan flexo satu warna. Larian lebih besar memberi harga per unit yang lebih baik — pasukan jualan kami boleh kira berdasarkan jadual penerbitan anda.</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Adakah anda menyepadukan dengan pencetak tempatan?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Ya. Kami menghantar kotak terus kepada rakan percetakan anda di Shah Alam, Klang, atau Seri Kembangan.</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Boleh dapatkan pelbagai saiz dalam satu pesanan?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Boleh. Penerbit biasanya memerlukan 2–3 saiz setiap kitaran penerbitan.</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Bagaimana mengendalikan pulangan stok tidak terjual?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Kami cadangkan memadankan kotak DW dengan pita boleh tutup semula untuk mudah pembungkusan pulangan.</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Sesuai untuk eksport ke Singapura atau Brunei?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Kotak DW dan TW kami melebihi standard eksport ISTA. Pengeksport pendidikan yang menghantar merentasi ASEAN kerap menggunakan stok kami.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="mb-12 bg-primary/5 border border-primary/20 rounded-lg p-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Bersedia Hantar Percetakan Seterusnya Dengan Selamat?</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Sama ada anda penerbit buku teks sekolah, pengedar majalah bebas, atau akhbar akademik, Quinocycle membekalkan gred kotak yang betul untuk logistik penerbitan Malaysia.</p>
+        <p class="font-body text-on-surface mb-6"><strong>Hubungi Quinocycle hari ini:</strong></p>
+        <ul class="font-body text-on-surface text-sm space-y-2 mb-6">
+          <li>📞 <strong>Telefon:</strong> +60 16 8916 381 / 03-8962 6381</li>
+          <li>📧 <strong>E-mel:</strong> quinocycle@gmail.com</li>
+          <li>📍 <strong>Alamat:</strong> No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300</li>
+        </ul>
+        <a href={WA_LINK} class="inline-block bg-primary text-on-primary font-label font-bold text-sm px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">💬 Sembang WhatsApp</a>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Kesimpulan: Lindungi Pelaburan Cetakan Anda</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-4">Setiap buku yang dipulangkan kerana kerosakan transit adalah hilang hasil ditambah kos logistik pulangan. Melabur dalam kotak dinding dua yang betul daripada pembekal pakar Balakong adalah kos yang kecil berbanding kerosakan satu palet.</p>
+        <p class="font-body text-on-surface leading-relaxed">Minimum pesanan RM 1,000. Penghantaran konsolidasi di seluruh Semenanjung Malaysia. Hubungi kami hari ini.</p>
+      </section>
+    </div>
+  </article>
+</Layout>

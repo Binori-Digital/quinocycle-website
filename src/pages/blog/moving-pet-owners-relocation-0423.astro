@@ -1,0 +1,128 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Moving House with Pets — Packaging Tips for Pet Owners Relocating in Malaysia', description: 'Relocating with dogs, cats, or small pets? Guide to safe packaging for pet supplies, toys, food, and transport boxes from Quinocycle Balakong.', date: '2026-04-23', readTime: '7 min', category: 'Moving Tips', author: 'Quinocycle Team', slug: 'moving-pet-owners-relocation-0423' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20need%20moving%20boxes%20for%20my%20pets%20and%20their%20supplies.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-04-23', dateModified: '2026-04-23', inLanguage:"en-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/moving-pet-owners-relocation-0423"}, keywords:"moving with pets Malaysia, pet supplies packing boxes, cat relocation packaging, dog moving supplies Selangor, pet owner moving Balakong, aquarium moving cartons" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I safely pack pet food during a move?","acceptedAnswer":{"@type":"Answer","text":"Transfer dry food into sealed plastic containers, then pack into sturdy cartons. Wet food cans go in medium boxes with cardboard dividers. Never mix food with cleaning supplies in the same carton."}},{"@type":"Question","name":"What boxes work for aquarium equipment?","acceptedAnswer":{"@type":"Answer","text":"Filters, heaters, and pumps need double-wall cartons with bubble wrap. Empty the tank and drain completely — fish travel separately in species-safe containers. For tank glass, use honeycomb-lined cartons."}},{"@type":"Question","name":"How do I pack my pet's bed and toys?","acceptedAnswer":{"@type":"Answer","text":"Pack pet bedding and toys in a separate 'pet comfort' box that stays accessible on move day. Familiar smells help pets settle into the new home. Don't bury these in deep storage boxes."}},{"@type":"Question","name":"Can I use used boxes for pet supplies?","acceptedAnswer":{"@type":"Answer","text":"Yes — used carton boxes from Quinocycle work perfectly for non-food pet items like beds, toys, grooming supplies, and leashes. Use new food-grade cartons only for food and treats."}},{"@type":"Question","name":"Where can I get a pet transport carrier?","acceptedAnswer":{"@type":"Answer","text":"Quinocycle doesn't sell pet carriers (plastic/mesh) but we supply cardboard short-term transport boxes with ventilation for temporary moves. For long journeys, always use an IATA-compliant carrier."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"RM 1.90 – RM 6.50 per box", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">Moving is stressful for everyone — especially the four-legged and finned family members. Malaysian pet owners relocating between PJ, KL, Kajang, or out to Penang and Johor Bahru face a challenge beyond the usual moving checklist: keeping pets calm while safely transporting tanks, cages, feeders, food stocks, and a lifetime of accumulated toys. Smart packaging makes the difference between a smooth move and a chaotic ordeal.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Organising Pet Supplies for a Move</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">The Essentials Box — Keep It Accessible</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Pack a single medium carton labelled "PET ESSENTIALS" containing 7 days of food, current medications, favourite toys, one blanket or bed, and water bowls. This box stays with you in the car — never on the moving truck. It's what settles a nervous pet in the first hours at the new home.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Food Stock Separation</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Dry food transfers to sealed plastic containers, then into sturdy single-wall cartons. Wet food cans need medium cartons with cardboard dividers to prevent dents. Never mix food with cleaning products — a spilled detergent in the food box ruins the entire haul.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Bedding and Comfort Items</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Beds, blankets, and plush toys carry the smells that comfort your pet. Pack these in a soft-sided carton with flap opening — easy to re-introduce at the new home. Don't wash bedding just before the move — familiar scent helps pets adapt faster.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Moving Aquariums, Terrariums & Cages</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Aquarium Equipment</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Drain and dry the tank 24 hours before moving. Empty tanks transport in double-wall cartons with honeycomb cardboard corner protection. Filters, heaters, and pumps each get individual bubble wrap then pack into a medium shared carton labelled "AQUARIUM TECH".</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Terrariums and Reptile Enclosures</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Glass terrariums move in oversized double-wall cartons with honeycomb on all sides. Heating lamps and UV bulbs should go in a separate padded box — these are fragile and expensive to replace.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Bird Cages and Small Animal Habitats</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Large cages ship best disassembled where possible. Cover in bubble wrap, then a flattened carton sleeve to prevent scratches. Hamster cages and guinea pig hutches move intact — wrap the exterior and secure all doors with tape.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Same-Day Delivery to Klang Valley Homes</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Quinocycle delivers moving box bundles to homes across Balakong, Cheras, Kajang, Seri Kembangan, Puchong, and the greater Klang Valley. Our pet-owner moving packs include 10 small cartons, 10 medium cartons, bubble wrap, and packing tape — everything a pet-owning household needs in one delivery.</p>
+      </section>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8 my-12">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-6">Pet Owner Moving Pack</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">PET ESSENTIALS BOX</p>
+            <p class="font-body text-on-surface text-sm">30x22x20cm | Sturdy | In-car transport</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">FOOD STORAGE</p>
+            <p class="font-body text-on-surface text-sm">35x28x25cm | With dividers | Separate from chemicals</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">AQUARIUM / TERRARIUM</p>
+            <p class="font-body text-on-surface text-sm">Custom large | Double-wall | Honeycomb corners</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">BEDDING & TOYS</p>
+            <p class="font-body text-on-surface text-sm">50x40x40cm | Single-wall | Easy flap opening</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Pet Owner Moving FAQs</h2>
+        <div class="space-y-4">
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">How far in advance should I start packing pet supplies?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Start 2 weeks out for non-essential items like spare toys and cages. Essentials and food stay out until the final 48 hours.</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Can I transport fish in their tank during the move?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">No — never move a full tank. Fish travel in sealed bags of tank water. The tank itself is moved empty and dry, then reassembled at destination before returning fish.</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">What about heavy items like cat scratchers and large toys?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Use double-wall cartons or wrap directly in bubble wrap. Cat trees often disassemble — check for removable parts before packing.</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Do you have specific boxes for litter and cleaning supplies?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Medium double-wall cartons handle litter bag weight well. Pack litter separately from food — scent contamination is real.</p>
+          </details>
+
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Can Quinocycle deliver on the day of my move?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Same-day delivery is available for Klang Valley locations when booked early. For reliability, order 3–5 days before moving day.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="mb-12 bg-primary/5 border border-primary/20 rounded-lg p-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Pack Once, Move Calmly</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Quinocycle has supplied moving boxes to Selangor households for over a decade. Our pet-owner moving packs cover every scenario from a single cat to a full menagerie.</p>
+        <p class="font-body text-on-surface mb-6"><strong>Contact Quinocycle today:</strong></p>
+        <ul class="font-body text-on-surface text-sm space-y-2 mb-6">
+          <li>📞 <strong>Phone:</strong> +60 16 8916 381 / 03-8962 6381</li>
+          <li>📧 <strong>Email:</strong> quinocycle@gmail.com</li>
+          <li>📍 <strong>Address:</strong> No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300</li>
+        </ul>
+        <a href={WA_LINK} class="inline-block bg-primary text-on-primary font-label font-bold text-sm px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">💬 Chat on WhatsApp</a>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Conclusion: Smooth Moves for Humans and Pets</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-4">Pets thrive on routine. A well-organised move, with supplies properly boxed and comfort items immediately accessible, reduces pet stress and speeds their adjustment to the new home. Investing a little thought into packaging saves hours of chaos on moving day.</p>
+        <p class="font-body text-on-surface leading-relaxed">Planning a move with pets in the coming weeks? WhatsApp us for a custom moving pack quote.</p>
+      </section>
+    </div>
+  </article>
+</Layout>

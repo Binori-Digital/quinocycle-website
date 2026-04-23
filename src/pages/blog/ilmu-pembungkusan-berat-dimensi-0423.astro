@@ -1,0 +1,121 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Berat Dimensi (DIM Weight): Cara Kurangkan Kos Penghantaran dengan Saiz Kotak yang Tepat', description: 'Kenali formula berat dimensi yang digunakan kurier Malaysia. Pilih kotak kardus bersaiz tepat untuk jimatkan 15-40% kos penghantaran dari Balakong.', date: '2026-04-23', readTime: '7 min', category: 'Ilmu Pembungkusan', author: 'Quinocycle Team', slug: 'ilmu-pembungkusan-berat-dimensi-0423' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20nak%20optimumkan%20saiz%20kotak%20untuk%20kurangkan%20kos%20DIM%20weight.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":post.title,"description":post.description,"datePublished":post.date,"author":{"@type":"Organization","name":"Quinocycle Sdn. Bhd."},"publisher":{"@type":"Organization","name":"Quinocycle Sdn. Bhd.","logo":{"@type":"ImageObject","url":"https://quinocycle.com.my/logo.png"}},"inLanguage":"ms-MY" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Apa itu berat dimensi (DIM weight)?","acceptedAnswer":{"@type":"Answer","text":"Berat dimensi ialah berat teori yang dikira berdasarkan isipadu bungkusan (P x L x T / faktor kurier). Kurier akan caj mengikut mana-mana lebih tinggi — berat sebenar atau berat dimensi."}},
+  {"@type":"Question","name":"Apakah divisor DIM kurier Malaysia?","acceptedAnswer":{"@type":"Answer","text":"Kebanyakan kurier tempatan guna divisor 5000 (cm) untuk domestik dan 5000-6000 untuk antarabangsa. DHL, FedEx biasa 5000; J&T, Ninja Van 6000."}},
+  {"@type":"Question","name":"Macam mana saiz kotak betul boleh jimatkan kos?","acceptedAnswer":{"@type":"Answer","text":"Kotak yang terlalu besar akan tingkatkan DIM weight. Contoh: buku 500g dalam kotak 40x30x20cm = DIM 4.8kg, tapi dalam kotak 30x22x8cm = DIM 1.3kg. Beza caj: hampir 3x ganda."}},
+  {"@type":"Question","name":"Berapa saiz pilihan kotak yang Quinocycle sediakan?","acceptedAnswer":{"@type":"Answer","text":"Kami stok 40+ saiz standard dari mini mailer hingga kotak besar. Kami juga buat custom size untuk pesanan 500 unit ke atas supaya anda dapat saiz paling optimum."}},
+  {"@type":"Question","name":"Boleh dapatkan nasihat saiz kotak dari Quinocycle?","acceptedAnswer":{"@type":"Answer","text":"Ya. Hantar dimensi produk dan berat purata anda melalui WhatsApp — pasukan kami akan cadangkan saiz kotak yang bagi DIM weight paling rendah berdasarkan kurier yang anda guna."}}
+] };
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store","name":"Quinocycle Sdn. Bhd.","image":"https://quinocycle.com.my/logo.png","telephone":"+60168916381","email":"sales@quinocycle.com.my","address":{"@type":"PostalAddress","streetAddress":"No.13, Jalan Taming P/1, Taming Jaya","addressLocality":"Balakong","addressRegion":"Selangor","postalCode":"43300","addressCountry":"MY"},"geo":{"@type":"GeoCoordinates","latitude":3.0579,"longitude":101.7468},"url":"https://quinocycle.com.my","priceRange":"$$" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-12">
+      <div class="flex items-center gap-3 text-sm text-on-surface-variant mb-4">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">{post.category}</span>
+        <time>{post.date}</time>
+        <span>• {post.readTime} baca</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold text-on-surface mb-6 leading-tight">{post.title}</h1>
+      <p class="text-lg text-on-surface-variant leading-relaxed">{post.description}</p>
+    </header>
+
+    <section class="prose prose-lg max-w-none text-on-surface">
+      <p>Ramai peniaga e-dagang di Malaysia terkejut bila bil kurier naik tiba-tiba walaupun produk ringan. Masalahnya bukan berat fizikal — tetapi <strong>berat dimensi</strong> (DIM weight). Sejak kurier seperti DHL, FedEx, J&T, Ninja Van, Pos Laju dan Flash Express mula terapkan pengiraan ini dengan ketat, memilih saiz kotak yang tepat menjadi faktor utama dalam keuntungan setiap penghantaran.</p>
+
+      <p>Di Quinocycle Balakong, kami bantu ribuan penjual online dan SME di sekitar Cheras, Kajang, dan Lembah Klang dapatkan <em>kotak kardus bersaiz tepat</em> supaya berat dimensi rendah dan kos kurier terkawal.</p>
+
+      <h2>Formula Berat Dimensi untuk Kurier Malaysia</h2>
+      <p>Formula asas DIM weight ialah:</p>
+      <p><code>Berat Dimensi (kg) = (Panjang x Lebar x Tinggi dalam cm) ÷ Divisor</code></p>
+      <p>Divisor yang biasa digunakan kurier Malaysia:</p>
+      <ul>
+        <li><strong>DHL, FedEx, UPS:</strong> 5000 (international) / 5000 (domestik express)</li>
+        <li><strong>J&T Express, J&T Cargo:</strong> 6000</li>
+        <li><strong>Ninja Van:</strong> 6000</li>
+        <li><strong>Pos Laju EziParcel:</strong> 6000 (volumetric)</li>
+        <li><strong>Flash Express:</strong> 6000</li>
+      </ul>
+
+      <h3>Contoh Pengiraan Nyata</h3>
+      <p>Katakan anda hantar 1 buku seberat 500g dalam dua saiz kotak yang berbeza:</p>
+      <ul>
+        <li>Kotak besar 40 x 30 x 20 cm → DIM = 24,000 ÷ 5000 = 4.8 kg → caj ikut 4.8 kg</li>
+        <li>Kotak pas 30 x 22 x 8 cm → DIM = 5,280 ÷ 5000 = 1.056 kg → caj ikut 1 kg</li>
+      </ul>
+      <p>Beza kos boleh sampai RM8-12 untuk satu parcel. Kalau anda hantar 200 parcel sebulan, itu RM1,600-2,400 terbuang hanya sebab saiz kotak.</p>
+
+      <h2>Prinsip Memilih Saiz Kotak yang Optimum</h2>
+      <h3>1. Pilih Kotak yang Pas, Bukan Longgar</h3>
+      <p>Sisa ruang dalam kotak bukan sahaja tingkatkan DIM weight, malah menyebabkan produk terhempas semasa transit. Tinggalkan hanya 2-3 cm kelonggaran untuk pengisi (bubble wrap atau kertas kraft).</p>
+      <h3>2. Guna Bentuk Rata Bila Boleh</h3>
+      <p>Untuk barang nipis seperti baju, buku, atau aksesori, kotak mailer nipis (contoh 25x20x5 cm) bagi DIM weight terendah berbanding kotak kiub.</p>
+      <h3>3. Buka Flap & Lipat Supaya Sempit</h3>
+      <p>Sesetengah kotak korugasi membenarkan anda <em>lipat bawah</em> untuk kurangkan ketinggian bila produk kecik. Teknik ini dipanggil "box height reduction" dan boleh jimatkan 20-30% DIM weight.</p>
+
+      <h2>Saiz Standard Kotak Quinocycle untuk Kurier</h2>
+      <div class="bg-surface-variant/50 rounded-xl p-6 my-8 border border-outline/20">
+        <h3 class="text-xl font-semibold mb-4">Saiz Pilihan Popular (DIM-Friendly)</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <strong class="text-primary">Mailer Kecil</strong>
+            <p class="text-sm mt-1">25 x 20 x 5 cm • DIM 0.5 kg • sesuai baju, buku nipis, aksesori kecil</p>
+          </div>
+          <div>
+            <strong class="text-primary">Mailer Sederhana</strong>
+            <p class="text-sm mt-1">30 x 22 x 8 cm • DIM ~1 kg • elektronik kecil, buku tebal, kasut kanak-kanak</p>
+          </div>
+          <div>
+            <strong class="text-primary">Kotak Kiub Kecil</strong>
+            <p class="text-sm mt-1">20 x 20 x 20 cm • DIM 1.6 kg • tembikar kecil, makanan, hadiah</p>
+          </div>
+          <div>
+            <strong class="text-primary">Kotak Pertengahan</strong>
+            <p class="text-sm mt-1">35 x 30 x 15 cm • DIM 3.15 kg • pakaian berkotak, kit produk, stationery bulk</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Soalan Lazim</h2>
+      <div class="space-y-3 my-8">
+        <details class="bg-surface-variant/50 rounded-lg p-4 border border-outline/20">
+          <summary class="font-semibold cursor-pointer">Apa itu berat dimensi (DIM weight)?</summary>
+          <p class="mt-3 text-on-surface-variant">Berat dimensi ialah berat teori yang dikira berdasarkan isipadu bungkusan (P x L x T / faktor kurier). Kurier caj mengikut mana-mana lebih tinggi — berat sebenar atau berat dimensi.</p>
+        </details>
+        <details class="bg-surface-variant/50 rounded-lg p-4 border border-outline/20">
+          <summary class="font-semibold cursor-pointer">Apakah divisor DIM kurier Malaysia?</summary>
+          <p class="mt-3 text-on-surface-variant">Kebanyakan kurier tempatan guna divisor 5000 (cm) untuk domestik dan 5000-6000 untuk antarabangsa. DHL/FedEx biasa 5000; J&T/Ninja Van 6000.</p>
+        </details>
+        <details class="bg-surface-variant/50 rounded-lg p-4 border border-outline/20">
+          <summary class="font-semibold cursor-pointer">Macam mana saiz kotak betul boleh jimatkan kos?</summary>
+          <p class="mt-3 text-on-surface-variant">Kotak yang terlalu besar akan tingkatkan DIM weight. Contoh: buku 500g dalam kotak 40x30x20cm = DIM 4.8kg, tapi dalam kotak 30x22x8cm = DIM 1.3kg. Beza caj hampir 3x ganda.</p>
+        </details>
+        <details class="bg-surface-variant/50 rounded-lg p-4 border border-outline/20">
+          <summary class="font-semibold cursor-pointer">Berapa saiz pilihan kotak Quinocycle sediakan?</summary>
+          <p class="mt-3 text-on-surface-variant">Kami stok 40+ saiz standard dari mini mailer hingga kotak besar. Custom size juga boleh untuk pesanan 500 unit ke atas.</p>
+        </details>
+        <details class="bg-surface-variant/50 rounded-lg p-4 border border-outline/20">
+          <summary class="font-semibold cursor-pointer">Boleh dapatkan nasihat saiz kotak dari Quinocycle?</summary>
+          <p class="mt-3 text-on-surface-variant">Ya. Hantar dimensi produk dan berat purata anda melalui WhatsApp — pasukan kami cadangkan saiz kotak yang bagi DIM weight paling rendah berdasarkan kurier yang anda guna.</p>
+        </details>
+      </div>
+
+      <div class="bg-primary/5 rounded-2xl p-8 my-12 border border-primary/20">
+        <h3 class="text-2xl font-semibold mb-4">Audit saiz kotak anda — percuma</h3>
+        <p class="mb-4">Hantar senarai produk + kurier pilihan anda. Kami kira DIM weight dan cadangkan saiz optimum untuk jimatkan bil kurier setiap bulan.</p>
+        <p class="text-sm text-on-surface-variant mb-6">📞 016-891 6381 &nbsp; 📧 sales@quinocycle.com.my &nbsp; 📍 No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor</p>
+        <a href={WA_LINK} class="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-full font-semibold hover:bg-primary/90 transition">WhatsApp untuk Audit Saiz Kotak →</a>
+      </div>
+
+      <h2>Kesimpulan</h2>
+      <p>Berat dimensi bukan sekadar istilah kurier — ia faktor langsung kepada margin keuntungan setiap parcel yang anda hantar. Dengan pilih saiz kotak yang pas dan optimum, peniaga Malaysia boleh kurangkan kos penghantaran 15-40% tanpa naikkan harga jualan. Bawa senarai produk anda ke Quinocycle Balakong, dan biarlah kotak yang tepat jadi alat jimat paling senyap dalam bisnes anda.</p>
+    </section>
+  </article>
+</Layout>
