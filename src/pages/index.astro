@@ -6,6 +6,13 @@ const headingLines = ["Increase packaging efficiency", "with vision and action."
 const charDelay = 30;
 const initialDelay = 200;
 
+function getCharDelay(line: string, lineIndex: number, wordIndex: number, charIndex: number): number {
+  const words = line.split(' ');
+  let absIdx = charIndex;
+  for (let i = 0; i < wordIndex; i++) absIdx += words[i].length + 1;
+  return initialDelay + (lineIndex * line.length * charDelay) + (absIdx * charDelay);
+}
+
 const WA_NUMBER = '60168916381';
 const WA_LINK   = `https://wa.me/${WA_NUMBER}?text=Hi%20Quinocycle!%20I%20would%20like%20to%20enquire%20about%20your%20carton%20boxes.`;
 
@@ -147,19 +154,23 @@ const blogPosts = [
           <div>
             <h1
               id="heroHeading"
-              class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal mb-4"
+              class="text-3xl md:text-4xl xl:text-5xl font-normal mb-4"
               style="letter-spacing: -0.04em;"
             >
               {headingLines.map((line, lineIndex) => (
                 <div>
-                  {[...line].map((char, charIndex) => {
-                    const delay = initialDelay + (lineIndex * line.length * charDelay) + (charIndex * charDelay);
-                    return (
-                      <span style={`display:inline-block;opacity:0;transform:translateX(-18px);transition:opacity 500ms ${delay}ms,transform 500ms ${delay}ms`}>
-                        {char === ' ' ? '\u00A0' : char}
-                      </span>
-                    );
-                  })}
+                  {line.split(' ').map((word, wordIndex) => (
+                    <span style="display:inline-block;white-space:nowrap;margin-right:0.28em;">
+                      {[...word].map((char, charIndex) => {
+                        const delay = getCharDelay(line, lineIndex, wordIndex, charIndex);
+                        return (
+                          <span style={`display:inline-block;opacity:0;transform:translateX(-18px);transition:opacity 500ms ${delay}ms,transform 500ms ${delay}ms`}>
+                            {char}
+                          </span>
+                        );
+                      })}
+                    </span>
+                  ))}
                 </div>
               ))}
             </h1>
