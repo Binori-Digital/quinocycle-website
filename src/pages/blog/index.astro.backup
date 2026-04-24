@@ -1,0 +1,599 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const posts = [
+  // ── 2026-04-14 batch ──────────────────────────────────────────────────────
+  { slug: 'new-carton-boxes-ecommerce-sellers-0414', category: 'New Carton Boxes', img: '/images/blog-new-vs-used.jpg', title: 'New Carton Boxes for E-Commerce & Online Sellers in Malaysia — Wholesale Guide', excerpt: 'Selling online in Malaysia? Discover the best carton box grades, sizes, and branding options for e-commerce businesses. Budget-friendly wholesale pricing from Quinocycle Balakong.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'used-carton-boxes-logistics-courier-0414', category: 'Used Carton Boxes', img: '/images/blog-new-vs-used.jpg', title: 'Used Carton Boxes for Logistics & Courier Services in Malaysia — Bulk Supply Solutions', excerpt: 'Logistics and courier companies in Malaysia can save 40–50% on packaging costs using quality used carton boxes. Bulk supplies from Quinocycle with guaranteed durability and quick delivery.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'corrugated-cardboard-diy-crafts-hobby-0414', category: 'Corrugated Cardboard', img: '/images/blog-choose-box-size.jpg', title: 'Corrugated Cardboard Sheets for DIY Crafts & Hobbies — Affordable Bulk Supply Malaysia', excerpt: 'Discover how to use corrugated cardboard sheets for DIY projects, art installations, and hobby crafts. Affordable bulk supply from Quinocycle Balakong.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'honeycomb-machinery-industrial-shipping-0414', category: 'Honeycomb Cardboard', img: '/images/blog-cut-packaging-costs.jpg', title: 'Honeycomb Cardboard for Machinery & Industrial Equipment Shipping in Malaysia', excerpt: 'Protect expensive industrial machinery during transport with honeycomb cardboard panels. Superior impact protection, lightweight design, wholesale supply from Quinocycle Balakong.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'bubble-wrap-antiques-collectibles-0414', category: 'Bubble Wrap', img: '/images/blog-movers-guide.jpg', title: 'Bubble Wrap for Fragile Antiques & Collectibles — Premium Protection in Malaysia', excerpt: 'Protect valuable antiques, collectibles, and heirlooms with premium bubble wrap. Expert guidelines on thickness, technique, and sourcing in Malaysia.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'packaging-knowledge-sustainability-eco-friendly-0414', category: 'Packaging Knowledge', img: '/images/blog-choose-box-size.jpg', title: 'Sustainable Packaging Solutions for Malaysian Businesses — Eco-Friendly Alternatives Guide', excerpt: 'Discover eco-friendly packaging materials and sustainable practices for Malaysian businesses. Reduce waste, cut costs, and meet customer expectations for environmental responsibility.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'warehouse-packaging-cost-optimization-waste-reduction-0414', category: 'Warehouse Packaging', img: '/images/blog-cut-packaging-costs.jpg', title: 'Warehouse Packaging Cost Optimization — Reduce Waste & Maximize Efficiency in Selangor', excerpt: 'Learn proven strategies to optimize warehouse packaging costs while reducing waste. Real examples from Selangor businesses saving RM 20,000–50,000 annually.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'moving-corporate-office-relocation-selangor-0414', category: 'Moving Tips', img: '/images/blog-movers-guide.jpg', title: 'Corporate Office Moving in Selangor — Complete Packing Strategy for Business Relocations', excerpt: 'Guide for corporates moving offices within Selangor. Bulk packing supplies, warehousing coordination, and minimal downtime strategies from Quinocycle Balakong.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'custom-boxes-startup-branding-packaging-0414', category: 'Business Tips', img: '/images/blog-cut-packaging-costs.jpg', title: 'Custom Carton Boxes for Startup Branding — Build Brand Identity Without Breaking the Bank', excerpt: 'Custom branded boxes for startups in Malaysia. Affordable solutions for small runs, design tips, and proven ROI strategies from Quinocycle Balakong.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'wholesale-small-retailers-balakong-reseller-0414', category: 'Wholesale & Reseller', img: '/images/blog-new-vs-used.jpg', title: 'Wholesale Carton Boxes for Small Retailers in Balakong — Partner with Quinocycle', excerpt: 'Small retailers near Balakong can source wholesale carton boxes directly from Quinocycle with zero middlemen. Bulk discounts, same-day delivery, flexible terms.', date: '2026-04-14', readTime: '7 min' },
+  // ── 2026-04-14 Bahasa Malaysia batch ──────────────────────────────────────
+  { slug: 'kotak-kardus-penjual-online-shopee-lazada-0414', category: 'Kotak Kardus Baru', img: '/images/blog-new-vs-used.jpg', title: 'Kotak Kardus untuk Penjual Online Shopee & Lazada — Panduan Pembelian Borong di Malaysia', excerpt: 'Penjual e-commerce dan online di Shopee, Lazada perlu kotak kardus berkualiti dengan harga borong yang murah. Panduan lengkap memilih saiz dan gred dari Quinocycle Balakong.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'kotak-terpakai-kurier-logistik-malaysia-0414', category: 'Kotak Kardus Terpakai', img: '/images/blog-new-vs-used.jpg', title: 'Kotak Terpakai untuk Perkhidmatan Kurier & Logistik — Jimat 40% Kos di Malaysia', excerpt: 'Perkhidmatan kurier dan logistik boleh jimat 40–50% dengan menggunakan kotak kardus terpakai berkualiti. Panduan penyeluruhan untuk operasi logistik berskala besar.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'kadbod-gelombang-kerajinan-hobi-diy-0414', category: 'Kadbod Gelombang', img: '/images/blog-choose-box-size.jpg', title: 'Kadbod Gelombang untuk Kerajinan Tangan & Hobi — Bekalan DIY Borong Malaysia', excerpt: 'Pembuat, artis, dan penggemar kerajinan tangan boleh memperoleh kepingan kadbod gelombang borong untuk projek DIY. Panduan lengkap dan sumber dari Quinocycle Balakong.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'honeycomb-mesin-penghantaran-industri-0414', category: 'Kadbod Honeycomb', img: '/images/blog-cut-packaging-costs.jpg', title: 'Honeycomb untuk Penghantaran Mesin & Peralatan Industri Malaysia — Perlindungan Premium', excerpt: 'Melindungi mesin industri berharga semasa pengangkutan. Panel honeycomb memberikan perlindungan 3–5× lebih baik daripada kadbod standard dengan berat yang lebih ringan.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'bubble-wrap-antik-koleksi-berharga-0414', category: 'Bubble Wrap', img: '/images/blog-movers-guide.jpg', title: 'Bubble Wrap untuk Barang Antik & Koleksi Berharga — Perlindungan Premium Malaysia', excerpt: 'Penjual antik dan pengumpul barang berharga memerlukan bubble wrap berkualiti tinggi. Panduan perlindungan dan sumber dari Quinocycle Balakong.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'keberlanjutan-pembungkusan-mesra-alam-0414', category: 'Ilmu Pembungkusan', img: '/images/blog-choose-box-size.jpg', title: 'Keberlanjutan Pembungkusan: Pilihan Mesra Alam untuk Perniagaan Malaysia', excerpt: 'Perniagaan Malaysia sekarang memerlukan pembungkusan berkelanjutan. Pilihan alternatif mesra alam dan analisis kos daripada Quinocycle.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'pengoptimuman-kos-pembungkusan-gudang-0414', category: 'Bekalan Gudang', img: '/images/blog-cut-packaging-costs.jpg', title: 'Pengoptimuman Kos Pembungkusan Gudang — Kurangkan Sisa & Maksimalkan Kecekapan di Selangor', excerpt: 'Pelajari strategi terbukti untuk mengoptimalkan kos pembungkusan gudang sambil mengurangkan sisa. Contoh sebenar daripada perniagaan Selangor yang menjimatkan RM 20,000–50,000 setiap tahun.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'pindahan-pejabat-selangor-strategi-0414', category: 'Tips Pindah Rumah', img: '/images/blog-movers-guide.jpg', title: 'Pindahan Pejabat Korporat di Selangor — Strategi Pembungkusan Lengkap untuk Pindahan Perniagaan', excerpt: 'Panduan untuk pejabat korporat pindah dalam Selangor. Bekalan pembungkusan borong, koordinasi pergudangan, dan strategi minimumkan masa henti dari Quinocycle Balakong.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'kotak-tersuai-startup-jenama-0414', category: 'Tips Perniagaan', img: '/images/blog-cut-packaging-costs.jpg', title: 'Kotak Tersuai untuk Pemula Startup — Binakan Identiti Jenama Tanpa Memecahkan Bank', excerpt: 'Kotak berjenama tersuai untuk pemula di Malaysia. Penyelesaian terjangkau untuk larian kecil, petua reka bentuk, dan strategi ROI terbukti daripada Quinocycle Balakong.', date: '2026-04-14', readTime: '7 min' },
+  { slug: 'borong-peruncit-balakong-reseller-0414', category: 'Borong & Pembekal Semula', img: '/images/blog-new-vs-used.jpg', title: 'Kotak Kardus Borong untuk Peruncit Kecil di Balakong — Mitra dengan Quinocycle', excerpt: 'Peruncit kecil berdekatan Balakong boleh mendapatkan kotak kardus borong terus dari Quinocycle tanpa perantara. Diskaun borong, penghantaran hari yang sama, syarat fleksibel.', date: '2026-04-14', readTime: '7 min' },
+  // ── 2026-04-13 batch ──────────────────────────────────────────────────────
+  {
+    slug: 'new-carton-boxes-food-delivery-0413',
+    category: 'New Carton Boxes',
+    img: '/images/blog-new-vs-used.jpg',
+    title: 'Best Carton Boxes for Food Delivery & F&B Businesses in Selangor — Wholesale Guide',
+    excerpt: 'Running a cloud kitchen or F&B delivery service? Discover the best carton box grades for food packaging in Selangor and KL, from grease-resistant options to safe corrugated sizes.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'used-carton-boxes-sustainable-sme-0413',
+    category: 'Used Carton Boxes',
+    img: '/images/blog-new-vs-used.jpg',
+    title: 'Used Carton Boxes: The Sustainable & Cost-Smart Choice for Selangor SMEs',
+    excerpt: 'Find out why Selangor SMEs are switching to used carton boxes — save up to 50% on packaging costs while reducing industrial waste. Wholesale from Quinocycle Balakong.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'corrugated-sheets-dividers-furniture-0413',
+    category: 'Corrugated Cardboard',
+    img: '/images/blog-choose-box-size.jpg',
+    title: 'Using Corrugated Cardboard Sheets as Inner Dividers for Furniture & Electronics — Malaysia Guide',
+    excerpt: 'Corrugated cardboard sheets are not just outer packaging — learn how to use them as inner dividers, layer pads, and corner protectors for furniture and electronics shipping in Malaysia.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'honeycomb-cardboard-marble-granite-tiles-0413',
+    category: 'Honeycomb Cardboard',
+    img: '/images/blog-cut-packaging-costs.jpg',
+    title: 'Honeycomb Cardboard for Marble, Granite & Tile Transport in Malaysia — Wholesale Supplier',
+    excerpt: 'Marble, granite, and ceramic tiles demand superior impact protection during transport. Learn how honeycomb cardboard panels reduce breakage rates for stone and tile businesses in Malaysia.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'bubble-wrap-electronics-antistatic-0413',
+    category: 'Bubble Wrap',
+    img: '/images/blog-movers-guide.jpg',
+    title: 'Bubble Wrap for Electronics: Choosing the Right Protection for Devices & Components in Malaysia',
+    excerpt: 'Packing electronics for shipping in Malaysia? Learn the difference between standard and anti-static bubble wrap and how to protect devices properly. Wholesale from Quinocycle, Balakong.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'carton-box-flute-types-guide-0413',
+    category: 'Packaging Knowledge',
+    img: '/images/blog-choose-box-size.jpg',
+    title: 'Carton Box Flute Types Explained: A, B, C, E & BC Flute Guide for Malaysian Businesses',
+    excerpt: 'Understanding carton box flute types — A, B, C, E, and BC — is essential for choosing the right packaging strength. This Malaysia-focused guide explains each flute and when to use it.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'warehouse-packing-station-workflow-0413',
+    category: 'Warehouse Packaging',
+    img: '/images/blog-cut-packaging-costs.jpg',
+    title: 'How to Set Up an Efficient Packing Station Workflow for Your Warehouse in Selangor',
+    excerpt: 'A well-designed warehouse packing station can double your team\'s output. Learn how to set up an efficient packing station workflow for Malaysian SMEs — from layout to supplies checklist.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'moving-subang-shah-alam-packing-0413',
+    category: 'Moving Tips',
+    img: '/images/blog-movers-guide.jpg',
+    title: 'Moving from Subang, PJ or Shah Alam? Complete Packing Supplies Guide for Klang Valley Moves',
+    excerpt: 'Planning a house move within the Klang Valley? Here is everything you need to pack safely and affordably, with a complete supplies checklist and room-by-room strategy.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'custom-boxes-roi-branded-packaging-0413',
+    category: 'Business Tips',
+    img: '/images/blog-cut-packaging-costs.jpg',
+    title: 'The ROI of Custom Branded Boxes: Is Custom Packaging Worth It for Malaysian SMEs?',
+    excerpt: 'Custom packaging costs more upfront — but does it pay off? We break down the real ROI of branded carton boxes for Malaysian e-commerce sellers with actual numbers.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'wholesale-packaging-night-market-reseller-0413',
+    category: 'Wholesale & Reseller',
+    img: '/images/blog-new-vs-used.jpg',
+    title: 'Selling Packaging to Night Markets, Bazaars & Event Vendors in Malaysia — Reseller Guide',
+    excerpt: 'One of the best wholesale packaging reseller opportunities in Malaysia is supplying night market traders and bazaar vendors. Here is how to tap into this high-volume, repeat-order market.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  // ── 2026-04-13 Bahasa Malaysia batch ──────────────────────────────────────
+  {
+    slug: 'kotak-kardus-baru-fb-penghantaran-0413',
+    category: 'Kotak Kardus Baru',
+    img: '/images/blog-new-vs-used.jpg',
+    title: 'Kotak Kardus Baru untuk Perniagaan F&B dan Penghantaran Makanan di Selangor',
+    excerpt: 'Menjalankan dapur awan atau perkhidmatan penghantaran makanan? Ketahui jenis kotak kardus terbaik untuk pembungkusan makanan di Selangor dan KL daripada Quinocycle Balakong.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'kotak-terpakai-jimat-alam-sekitar-0413',
+    category: 'Kotak Kardus Terpakai',
+    img: '/images/blog-new-vs-used.jpg',
+    title: 'Kotak Terpakai Malaysia: Jimat Kos dan Jaga Alam Sekitar Serentak',
+    excerpt: 'PKS Malaysia kini boleh jimat 30–50% kos pembungkusan sambil menyumbang kepada kelestarian alam sekitar dengan menggunakan kotak kardus terpakai dari Quinocycle Balakong.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'kepingan-kadbod-lapisan-pelindung-0413',
+    category: 'Kadbod Gelombang',
+    img: '/images/blog-choose-box-size.jpg',
+    title: 'Kepingan Kadbod Gelombang sebagai Lapisan Pelindung untuk Perabot & Elektronik Malaysia',
+    excerpt: 'Kepingan kadbod gelombang bukan sahaja untuk dinding luar kotak — ia juga berfungsi sebagai pembahagi dalam, lapisan pads, dan pelindung sudut untuk penghantaran perabot dan elektronik.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'honeycomb-jubin-marmar-granit-0413',
+    category: 'Kadbod Honeycomb',
+    img: '/images/blog-cut-packaging-costs.jpg',
+    title: 'Kadbod Honeycomb untuk Pengangkutan Jubin, Marmar & Granit di Malaysia',
+    excerpt: 'Marmar, granit, dan jubin seramik memerlukan perlindungan impak yang tinggi semasa pengangkutan. Ketahui bagaimana panel honeycomb mengurangkan kadar kerosakan untuk perniagaan batu di Malaysia.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'bubble-wrap-anti-statik-elektronik-0413',
+    category: 'Bubble Wrap',
+    img: '/images/blog-movers-guide.jpg',
+    title: 'Bubble Wrap untuk Elektronik di Malaysia: Pilihan Standard vs Anti-Statik yang Tepat',
+    excerpt: 'Membungkus elektronik untuk penghantaran di Malaysia? Ketahui perbezaan antara bubble wrap standard dan anti-statik, bila setiap satunya diperlukan, dan cara melindungi peranti dengan betul.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'jenis-flute-kotak-kardus-panduan-0413',
+    category: 'Ilmu Pembungkusan',
+    img: '/images/blog-choose-box-size.jpg',
+    title: 'Panduan Jenis Flute Kotak Kardus: A, B, C, E & BC Flute untuk Perniagaan Malaysia',
+    excerpt: 'Memahami jenis flute kotak kardus adalah penting untuk memilih kekuatan pembungkusan yang tepat. Panduan berfokus Malaysia ini menerangkan setiap flute dan bila menggunakannya.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'susunatur-stesen-packing-gudang-0413',
+    category: 'Bekalan Gudang',
+    img: '/images/blog-cut-packaging-costs.jpg',
+    title: 'Cara Wujudkan Stesen Packing yang Cekap di Gudang Anda di Selangor',
+    excerpt: 'Stesen packing yang direka dengan baik boleh menggandakan output pasukan anda. Ketahui cara menyediakan aliran kerja stesen packing yang cekap untuk PKS Malaysia.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'pindah-rumah-klang-valley-senarai-0413',
+    category: 'Tips Pindah Rumah',
+    img: '/images/blog-movers-guide.jpg',
+    title: 'Pindah Rumah dalam Lembah Klang? Panduan Lengkap Bekalan Packing untuk Subang, PJ & Shah Alam',
+    excerpt: 'Merancang pindahan rumah dalam Lembah Klang? Inilah semua yang anda perlukan untuk membungkus dengan selamat dan mampu milik, dengan senarai semak bekalan dan strategi bilik demi bilik.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'kotak-tersuai-pulangan-pelaburan-0413',
+    category: 'Tips Perniagaan',
+    img: '/images/blog-cut-packaging-costs.jpg',
+    title: 'Pulangan Pelaburan Kotak Tersuai: Adakah Pembungkusan Berjenama Berbaloi untuk PKS Malaysia?',
+    excerpt: 'Kotak tersuai lebih mahal pada awalnya — tetapi adakah ia berbaloi? Kami menganalisis ROI sebenar pembungkusan berjenama untuk penjual dalam talian Malaysia dengan angka yang tepat.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  {
+    slug: 'borong-pembungkusan-pasar-malam-0413',
+    category: 'Borong & Pembekal Semula',
+    img: '/images/blog-new-vs-used.jpg',
+    title: 'Jual Pembungkusan kepada Peniaga Pasar Malam & Penganjur Bazaar di Malaysia — Panduan Pembekal Semula',
+    excerpt: 'Salah satu peluang pembekal semula pembungkusan terbaik di Malaysia ialah membekalkan peniaga pasar malam dan penjual bazaar. Inilah cara memanfaatkan pasaran bervolum tinggi ini.',
+    date: '2026-04-13',
+    readTime: '7 min',
+  },
+  // ── 2026-04-10 batch ──────────────────────────────────────────────────────
+  {
+    slug: 'new-carton-boxes-malaysia',
+    category: 'New Carton Boxes',
+    img: '/images/blog-new-vs-used.jpg',
+    title: 'New Carton Boxes Malaysia — Buy Wholesale from Quinocycle | Balakong Selangor',
+    excerpt: 'Buy new carton boxes in Malaysia at wholesale prices. Single & double wall corrugated boxes, sizes S to XL, from RM 1.90/box. Full buyer\'s guide inside.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  {
+    slug: 'used-carton-boxes-malaysia',
+    category: 'Used Carton Boxes',
+    img: '/images/blog-new-vs-used.jpg',
+    title: 'Used Carton Boxes Malaysia — Buy Cheap Secondhand Boxes | Quinocycle',
+    excerpt: 'Buy quality used carton boxes in Malaysia from RM 0.90/box. Save up to 50% vs new boxes. Sourced from factories & warehouses in bulk.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  {
+    slug: 'corrugated-cardboard-sheets-malaysia',
+    category: 'Corrugated Cardboard',
+    img: '/images/blog-choose-box-size.jpg',
+    title: 'Corrugated Cardboard Sheets Malaysia — Protective Packaging Supplier | Quinocycle',
+    excerpt: 'Buy corrugated cardboard sheets in Malaysia for product protection, dividers and custom packaging. Single & double wall. Wholesale from Quinocycle.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  {
+    slug: 'honeycomb-cardboard-malaysia',
+    category: 'Honeycomb Cardboard',
+    img: '/images/blog-cut-packaging-costs.jpg',
+    title: 'Honeycomb Cardboard Malaysia — Heavy Duty Packaging | Quinocycle Balakong',
+    excerpt: 'Honeycomb cardboard panels in Malaysia — lightweight yet 3× stronger than standard corrugated. Ideal for furniture, machinery & glass exports.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  {
+    slug: 'bubble-wrap-wholesale-malaysia',
+    category: 'Bubble Wrap',
+    img: '/images/blog-movers-guide.jpg',
+    title: 'Bubble Wrap Malaysia — Buy Wholesale Bubble Wrap Rolls | Quinocycle',
+    excerpt: 'Wholesale bubble wrap rolls in Malaysia for e-commerce, moving & logistics. Small & large bubble options. Best prices per roll with delivery nationwide.',
+    date: '2026-04-10',
+    readTime: '6 min',
+  },
+  {
+    slug: 'packaging-knowledge-guide-malaysia',
+    category: 'Packaging Knowledge',
+    img: '/images/blog-choose-box-size.jpg',
+    title: 'Complete Packaging Guide for Malaysian Businesses — Materials, Tips & Best Practices',
+    excerpt: 'Everything you need to know about packaging in Malaysia — types of materials, how to choose the right box, cost-saving tips, and best practices.',
+    date: '2026-04-10',
+    readTime: '8 min',
+  },
+  {
+    slug: 'warehouse-packaging-supplies-malaysia',
+    category: 'Warehouse Packaging',
+    img: '/images/blog-cut-packaging-costs.jpg',
+    title: 'Warehouse Packaging Supplies Malaysia — Complete Supply Solutions | Quinocycle',
+    excerpt: 'One-stop warehouse packaging supplies in Malaysia. Carton boxes, bubble wrap, stretch film, strapping tape, honeycomb panels. Wholesale pricing available.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  {
+    slug: 'moving-house-packaging-tips-malaysia',
+    category: 'Moving Tips',
+    img: '/images/blog-movers-guide.jpg',
+    title: 'Moving House in Malaysia — Expert Packaging Tips to Protect Everything You Own',
+    excerpt: 'Our complete guide covers what boxes to use, how to pack fragile items, room-by-room packing strategy, and how to save money on moving boxes.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  {
+    slug: 'custom-boxes-grow-business-malaysia',
+    category: 'Business Tips',
+    img: '/images/blog-cut-packaging-costs.jpg',
+    title: 'How Custom Carton Boxes Grow Your Malaysian Business — Branding & Packaging Strategy',
+    excerpt: 'Custom branded carton boxes build brand identity, protect products, and create memorable unboxing experiences. Find out how Malaysian businesses use custom packaging.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  {
+    slug: 'carton-box-wholesale-reseller-malaysia',
+    category: 'Wholesale & Reseller',
+    img: '/images/blog-new-vs-used.jpg',
+    title: 'Carton Box Wholesale Malaysia — Become a Reseller with Quinocycle | High Profit Margins',
+    excerpt: 'Become a carton box reseller in Malaysia with Quinocycle. Competitive wholesale pricing, bulk order benefits, and strong profit margins in packaging.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  // ── 2026-04-10 Bahasa Malaysia batch ──────────────────────────────────────
+  {
+    slug: 'kotak-kardus-baru-borong-malaysia',
+    category: 'Kotak Kardus Baru',
+    img: '/images/blog-new-vs-used.jpg',
+    title: 'Kotak Kardus Baru Malaysia — Beli Borong dari Quinocycle Balakong Selangor',
+    excerpt: 'Beli kotak kardus baru di Malaysia dengan harga borong. Kotak gelombang single wall & double wall, saiz S hingga XL, dari RM 1.90/kotak.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  {
+    slug: 'kotak-kardus-terpakai-malaysia',
+    category: 'Kotak Kardus Terpakai',
+    img: '/images/blog-new-vs-used.jpg',
+    title: 'Kotak Kardus Terpakai Malaysia — Jimat Sehingga 50% | Quinocycle Balakong',
+    excerpt: 'Beli kotak kardus terpakai di Malaysia dari RM 0.90/kotak. Jimat sehingga 50% berbanding kotak baru. Diperolehi daripada kilang & gudang.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  {
+    slug: 'kepingan-kadbod-gelombang-malaysia',
+    category: 'Kadbod Gelombang',
+    img: '/images/blog-choose-box-size.jpg',
+    title: 'Kepingan Kadbod Gelombang Malaysia — Pelindung Produk Terbaik | Quinocycle',
+    excerpt: 'Beli kepingan kadbod gelombang di Malaysia untuk perlindungan produk, pembahagi, dan pembungkusan tersuai. Pilihan single & double wall. Harga borong.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  {
+    slug: 'kadbod-honeycomb-berat-malaysia',
+    category: 'Kadbod Honeycomb',
+    img: '/images/blog-cut-packaging-costs.jpg',
+    title: 'Kadbod Honeycomb Malaysia — Pembungkusan Berat & Tahan Lasak | Quinocycle',
+    excerpt: 'Panel kadbod honeycomb di Malaysia — ringan tetapi 3× lebih kuat daripada kadbod biasa. Sesuai untuk perabot, jentera & kaca. Bekalan borong tersedia.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  {
+    slug: 'bubble-wrap-borong-malaysia',
+    category: 'Bubble Wrap',
+    img: '/images/blog-movers-guide.jpg',
+    title: 'Bubble Wrap Malaysia — Beli Borong Gulungan Bubble Wrap | Quinocycle',
+    excerpt: 'Beli bubble wrap borong di Malaysia untuk e-commerce, pindah rumah & logistik. Pilihan buih kecil & besar. Harga terbaik per gulungan.',
+    date: '2026-04-10',
+    readTime: '6 min',
+  },
+  {
+    slug: 'panduan-pembungkusan-malaysia',
+    category: 'Ilmu Pembungkusan',
+    img: '/images/blog-choose-box-size.jpg',
+    title: 'Panduan Lengkap Pembungkusan untuk Perniagaan Malaysia — Bahan, Tips & Amalan Terbaik',
+    excerpt: 'Semua yang anda perlu tahu tentang pembungkusan di Malaysia — jenis bahan, cara memilih kotak yang sesuai, tips penjimatan kos, dan amalan terbaik.',
+    date: '2026-04-10',
+    readTime: '8 min',
+  },
+  {
+    slug: 'bekalan-pembungkusan-gudang-malaysia',
+    category: 'Bekalan Gudang',
+    img: '/images/blog-cut-packaging-costs.jpg',
+    title: 'Bekalan Pembungkusan Gudang Malaysia — Penyelesaian Lengkap | Quinocycle',
+    excerpt: 'Bekalan pembungkusan gudang sehenti di Malaysia. Kotak kardus, bubble wrap, stretch film, strapping tape, panel honeycomb. Harga borong tersedia.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  {
+    slug: 'tips-pindah-rumah-packing-malaysia',
+    category: 'Tips Pindah Rumah',
+    img: '/images/blog-movers-guide.jpg',
+    title: 'Tips Pindah Rumah Malaysia — Panduan Packing Lengkap untuk Pindahan Selamat',
+    excerpt: 'Panduan lengkap merangkumi jenis kotak yang sesuai, cara membungkus barang rapuh, strategi packing bilik demi bilik, dan cara jimat wang pada kotak pindah.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  {
+    slug: 'kotak-tersuai-tingkatkan-perniagaan',
+    category: 'Tips Perniagaan',
+    img: '/images/blog-cut-packaging-costs.jpg',
+    title: 'Kotak Tersuai Tingkatkan Perniagaan Anda di Malaysia — Strategi Jenama & Pembungkusan',
+    excerpt: 'Kotak tersuai berjenama membina identiti jenama, melindungi produk, dan mencipta pengalaman unboxing yang memukau. Ketahui bagaimana perniagaan Malaysia menonjol.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  {
+    slug: 'borong-kotak-kardus-jadi-pembekal',
+    category: 'Borong & Pembekal Semula',
+    img: '/images/blog-new-vs-used.jpg',
+    title: 'Borong Kotak Kardus Malaysia — Jadi Pembekal Semula dengan Quinocycle | Margin Lumayan',
+    excerpt: 'Jadilah pembekal semula kotak kardus di Malaysia bersama Quinocycle. Harga borong kompetitif, manfaat pesanan pukal, dan margin keuntungan yang tinggi.',
+    date: '2026-04-10',
+    readTime: '7 min',
+  },
+  // ── Earlier posts ─────────────────────────────────────────────────────────
+  {
+    slug: 'kedai-kotak-pindah-malaysia',
+    category: 'Panduan Pindah Rumah',
+    img: '/images/blog-movers-guide.jpg',
+    title: 'Kedai Kotak Pindah Malaysia — Quinocycle, Balakong Selangor',
+    excerpt: 'Cari kotak pindah rumah murah di Malaysia? Quinocycle Balakong jual kotak kardus baru & terpakai dari RM 0.90/kotak. Senarai lengkap barang penting untuk pindah rumah.',
+    date: '2026-04-08',
+    readTime: '7 min',
+  },
+  {
+    slug: 'choose-right-carton-box-size',
+    category: 'Packaging Tips',
+    img: '/images/blog-choose-box-size.jpg',
+    title: 'How to Choose the Right Carton Box Size for Your Business',
+    excerpt: 'Choosing the wrong box size costs money and damages products. This simple guide helps you size your boxes perfectly.',
+    date: '2026-03-15',
+    readTime: '5 min',
+  },
+  {
+    slug: 'new-vs-used-carton-boxes',
+    category: 'Buyer Guide',
+    img: '/images/blog-new-vs-used.jpg',
+    title: 'New vs Used Carton Boxes — Which is Right for You?',
+    excerpt: 'Used boxes can save you up to 50% on packaging costs. We break down the pros, cons, and when each makes sense.',
+    date: '2026-03-08',
+    readTime: '4 min',
+  },
+  {
+    slug: 'cut-packaging-costs-online-seller',
+    category: 'Business Tips',
+    img: '/images/blog-cut-packaging-costs.jpg',
+    title: 'How Online Sellers Can Cut Packaging Costs by 40%',
+    excerpt: 'Every ringgit saved on packaging is profit. These practical steps will dramatically cut your packing spend.',
+    date: '2026-02-28',
+    readTime: '6 min',
+  },
+  {
+    slug: 'how-many-boxes-moving-house',
+    category: 'Moving Guide',
+    img: '/images/blog-movers-guide.jpg',
+    title: "Moving House in Malaysia? Here's How Many Boxes You'll Need",
+    excerpt: "Most people either run out or end up with far too many boxes. This room-by-room guide gives you the exact numbers.",
+    date: '2026-02-18',
+    readTime: '5 min',
+  },
+  {
+    slug: 'eco-packaging-used-boxes-business',
+    category: 'Sustainability',
+    img: '/images/blog-new-vs-used.jpg',
+    title: 'Why Recycled Carton Boxes Are Good for Your Business and the Planet',
+    excerpt: "Sustainability isn't just good PR — it cuts costs and attracts eco-conscious customers.",
+    date: '2026-02-10',
+    readTime: '4 min',
+  },
+];
+
+const categories = [
+  'All',
+  'New Carton Boxes', 'Used Carton Boxes', 'Corrugated Cardboard', 'Honeycomb Cardboard',
+  'Bubble Wrap', 'Packaging Knowledge', 'Warehouse Packaging', 'Moving Tips',
+  'Business Tips', 'Wholesale & Reseller',
+  'Kotak Kardus Baru', 'Kotak Kardus Terpakai', 'Kadbod Gelombang', 'Kadbod Honeycomb',
+  'Ilmu Pembungkusan', 'Bekalan Gudang', 'Tips Pindah Rumah', 'Tips Perniagaan', 'Borong & Pembekal Semula',
+  'Panduan Pindah Rumah', 'Packaging Tips', 'Buyer Guide', 'Moving Guide', 'Sustainability',
+];
+---
+
+<Layout
+  title="Blog — Quinocycle Packaging Tips & Business Insights"
+  description="Practical guides on packaging, carton box selection, moving tips and business cost-cutting. Written for Malaysian retailers, online sellers, movers and logistics companies."
+>
+  <!-- Hero -->
+  <section class="pt-16 pb-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Blog</span>
+    <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface leading-[0.9] mb-6">
+      Packaging tips.<br /><span class="text-primary italic">Business insights.</span>
+    </h1>
+    <p class="font-body text-xl text-secondary max-w-xl leading-relaxed">
+      Practical guides for retailers, online sellers, movers and logistics companies across Malaysia.
+    </p>
+  </section>
+
+  <!-- Category Filter -->
+  <div class="sticky top-[72px] z-40 bg-[#fdf9f0]/90 backdrop-blur-xl border-b border-outline-variant/20">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 py-4 flex gap-2 overflow-x-auto no-scrollbar">
+      {categories.map(cat => (
+        <button
+          class={`blog-filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full whitespace-nowrap transition-all ${
+            cat === 'All'
+              ? 'bg-on-surface text-surface'
+              : 'border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary'
+          }`}
+          data-cat={cat}
+        >
+          {cat}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <!-- Posts -->
+  <section class="max-w-7xl mx-auto px-6 md:px-8 py-16">
+    <!-- Featured post -->
+    <a href={`/blog/${posts[0].slug}`} class="group grid grid-cols-1 md:grid-cols-2 bg-surface-container-low rounded-3xl overflow-hidden mb-8 editorial-shadow hover:-translate-y-1 transition-transform duration-300">
+      <div class="aspect-[4/3] md:aspect-auto overflow-hidden">
+        <img
+          src={posts[0].img}
+          alt={posts[0].title}
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          loading="lazy"
+        />
+      </div>
+      <div class="p-8 md:p-12 flex flex-col justify-center">
+        <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">{posts[0].category}</span>
+        <h2 class="font-headline text-2xl md:text-3xl font-bold tracking-tight text-on-surface mb-4 leading-snug group-hover:text-primary transition-colors">{posts[0].title}</h2>
+        <p class="font-body text-secondary leading-relaxed mb-6">{posts[0].excerpt}</p>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-4 font-label text-xs text-outline">
+            <time datetime={posts[0].date}>{new Date(posts[0].date).toLocaleDateString('en-MY', { day:'numeric', month:'long', year:'numeric' })}</time>
+            <span>· {posts[0].readTime} read</span>
+          </div>
+          <span class="inline-flex items-center gap-1 text-primary font-headline font-bold text-sm group-hover:gap-3 transition-all">
+            Read <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+          </span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Grid of remaining posts -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="blogGrid">
+      {posts.slice(1).map(post => (
+        <a href={`/blog/${post.slug}`} class="blog-card group bg-surface rounded-3xl overflow-hidden flex flex-col editorial-shadow hover:-translate-y-1 transition-transform duration-300" data-cat={post.category}>
+          <div class="aspect-[16/9] overflow-hidden">
+            <img
+              src={post.img}
+              alt={post.title}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <span class="font-label text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-2 block">{post.category}</span>
+            <h3 class="font-headline text-lg font-bold tracking-tight text-on-surface mb-2 leading-snug flex-1 group-hover:text-primary transition-colors">{post.title}</h3>
+            <p class="font-body text-sm text-secondary leading-relaxed mb-4 line-clamp-2">{post.excerpt}</p>
+            <div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+              <span class="font-label text-xs text-outline">
+                <time datetime={post.date}>{new Date(post.date).toLocaleDateString('en-MY', { day:'numeric', month:'short', year:'numeric' })}</time>
+                · {post.readTime}
+              </span>
+              <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform" style="font-size:18px;">arrow_forward</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-surface-container-high">
+    <div class="max-w-7xl mx-auto px-6 md:px-8">
+      <div class="bg-primary-container rounded-3xl p-10 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-10 relative overflow-hidden">
+        <div class="absolute top-0 right-0 opacity-10 pointer-events-none">
+          <span class="material-symbols-outlined" style="font-size:180px;">package_2</span>
+        </div>
+        <div class="lg:w-1/2 relative z-10">
+          <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-on-primary-container/70 mb-3 block">Stay in the Loop</span>
+          <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-primary-container mb-4">
+            Get packaging tips sent to your WhatsApp.
+          </h2>
+          <p class="font-body text-on-primary-container/80 leading-relaxed">Follow us on WhatsApp for pricing updates, stock alerts, and practical packaging guides.</p>
+        </div>
+        <div class="lg:w-auto relative z-10">
+          <a
+            href="https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20like%20to%20receive%20packaging%20tips%20and%20updates."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors whitespace-nowrap"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Follow on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const filterBtns = document.querySelectorAll('.blog-filter-btn');
+  const cards = document.querySelectorAll('.blog-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-on-surface', 'text-surface');
+        b.classList.add('border', 'border-outline-variant/40', 'text-secondary');
+      });
+      btn.classList.add('bg-on-surface', 'text-surface');
+      btn.classList.remove('border', 'border-outline-variant/40', 'text-secondary');
+
+      const cat = (btn as HTMLElement).dataset.cat;
+      cards.forEach(card => {
+        const show = cat === 'All' || (card as HTMLElement).dataset.cat === cat;
+        (card as HTMLElement).style.display = show ? '' : 'none';
+      });
+    });
+  });
+</script>

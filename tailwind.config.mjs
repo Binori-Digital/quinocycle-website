@@ -51,6 +51,7 @@ export default {
         "surface-variant":           "#e6e2d9",
       },
       fontFamily: {
+        sans:     ['Inter', 'sans-serif'],
         headline: ['Epilogue', 'sans-serif'],
         body:     ['Work Sans', 'sans-serif'],
         label:    ['Work Sans', 'sans-serif'],

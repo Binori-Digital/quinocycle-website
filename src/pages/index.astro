@@ -1,6 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+// Hero heading animation config
+const headingLines = ["Increase packaging efficiency", "with vision and action."];
+const charDelay = 30;
+const initialDelay = 200;
+
 const WA_NUMBER = '60168916381';
 const WA_LINK   = `https://wa.me/${WA_NUMBER}?text=Hi%20Quinocycle!%20I%20would%20like%20to%20enquire%20about%20your%20carton%20boxes.`;
 
@@ -102,171 +107,140 @@ const blogPosts = [
 ];
 ---
 
-<Layout>
-  <!-- ===================== NEU HERO ===================== -->
-  <section class="relative min-h-screen flex items-center overflow-hidden">
+<Layout heroMode={true}>
+  <!-- ===================== VIDEO HERO ===================== -->
+  <section class="relative w-full h-screen overflow-hidden bg-black text-white font-sans">
 
-    <!-- Background image + overlay -->
-    <div class="absolute inset-0 z-0">
-      <img
-        src="/images/hero-boxes.jpg"
-        alt="Quinocycle carton boxes warehouse"
-        class="w-full h-full object-cover"
-      />
-      <!-- Dark overlay so card pops -->
-      <div class="absolute inset-0 bg-[#1d1c16]/55"></div>
-    </div>
+    <!-- Full-screen video, no overlay -->
+    <video
+      class="absolute inset-0 w-full h-full object-cover"
+      src="/4477603-hd_1920_1080_30fps.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+    ></video>
 
-    <!-- Content wrapper -->
-    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <!-- Content layer -->
+    <div class="relative z-10 flex flex-col h-full px-6 md:px-12 lg:px-16 pt-6">
 
-        <!-- ── MAIN CARD ── -->
-        <div class="lg:col-span-7 neu-card bg-surface border-2 border-[#1d1c16] p-8 md:p-12 fade-up">
-
-          <!-- Eyebrow tag -->
-          <div class="inline-flex items-center gap-2 bg-primary-container border-2 border-[#1d1c16] px-4 py-2 mb-8 neu-tag">
-            <span class="w-2 h-2 rounded-full bg-[#1d1c16] flex-shrink-0"></span>
-            <span class="font-label text-xs font-black uppercase tracking-[0.2em] text-on-surface">
-              Wholesale Carton Boxes · Malaysia
-            </span>
-          </div>
-
-          <!-- Headline -->
-          <h1 class="font-headline font-black tracking-tighter leading-[0.88] text-on-surface mb-6 fade-up fade-up-1"
-              style="font-size: clamp(3rem, 7vw, 6rem);">
-            Box More.<br />
-            <span class="relative inline-block">
-              <span class="relative z-10">Spend Less.</span>
-              <span class="absolute inset-x-0 bottom-1 h-[40%] bg-primary-container z-0" aria-hidden="true"></span>
-            </span>
-          </h1>
-
-          <!-- Sub -->
-          <p class="font-body text-on-surface-variant text-lg leading-relaxed mb-8 max-w-lg fade-up fade-up-2">
-            New &amp; used carton boxes in bulk — fixed wholesale prices,
-            Peninsular Malaysia delivery. Trusted by retailers, online sellers,
-            movers and logistics companies.
-          </p>
-
-          <!-- CTAs -->
-          <div class="flex flex-wrap gap-4 mb-10 fade-up fade-up-3">
-            <a href="/shop"
-               class="neu-btn-amber inline-flex items-center gap-2 bg-primary-container text-on-surface px-8 py-4 border-2 border-[#1d1c16] font-headline font-black text-sm uppercase tracking-widest">
-              Browse the Shop
-              <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
-            </a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
-               class="neu-btn-wa inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 border-2 border-[#1d1c16] font-headline font-black text-sm uppercase tracking-widest">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp Us
-            </a>
-          </div>
-
-          <!-- Stats grid (neubrutalist bordered cells) -->
-          <div class="grid grid-cols-3 border-2 border-[#1d1c16] fade-up fade-up-4">
-            <div class="p-4 md:p-5 border-r-2 border-[#1d1c16]">
-              <div class="font-headline font-black text-2xl md:text-3xl text-primary leading-none mb-1">500+</div>
-              <div class="font-label text-[10px] uppercase tracking-widest text-secondary leading-snug">Businesses<br/>Served</div>
-            </div>
-            <div class="p-4 md:p-5 border-r-2 border-[#1d1c16]">
-              <div class="font-headline font-black text-2xl md:text-3xl text-primary leading-none mb-1">RM1k</div>
-              <div class="font-label text-[10px] uppercase tracking-widest text-secondary leading-snug">Min.<br/>Order</div>
-            </div>
-            <div class="p-4 md:p-5">
-              <div class="font-headline font-black text-2xl md:text-3xl text-primary leading-none mb-1">100%</div>
-              <div class="font-label text-[10px] uppercase tracking-widest text-secondary leading-snug">Peninsular<br/>Malaysia</div>
-            </div>
-          </div>
+      <!-- Hero Navbar -->
+      <nav class="liquid-glass rounded-xl px-4 py-2 flex items-center justify-between">
+        <span class="text-2xl font-bold">quinocycle</span>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/"        class="text-sm hover:text-gray-300 transition-colors duration-200">Home</a>
+          <a href="/shop"    class="text-sm hover:text-gray-300 transition-colors duration-200">Shop</a>
+          <a href="/blog"    class="text-sm hover:text-gray-300 transition-colors duration-200">Blog</a>
+          <a href="/about"   class="text-sm hover:text-gray-300 transition-colors duration-200">About</a>
+          <a href="/contact" class="text-sm hover:text-gray-300 transition-colors duration-200">Contact</a>
         </div>
+        <a href={WA_LINK} class="bg-white text-black px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors duration-200">
+          Start a Chat
+        </a>
+      </nav>
 
-        <!-- ── FLOATING SIDE CARDS (desktop only) ── -->
-        <div class="hidden lg:flex lg:col-span-5 flex-col gap-5 fade-up fade-up-2">
+      <!-- Hero content pushed to bottom -->
+      <div class="flex-1 flex flex-col justify-end pb-12 lg:pb-16">
+        <div class="lg:grid lg:grid-cols-2 lg:items-end">
 
-          <!-- Product preview card 1 -->
-          <div class="neu-card-sm bg-surface border-2 border-[#1d1c16] overflow-hidden flex">
-            <div class="w-28 flex-shrink-0 bg-surface-container-low">
-              <img src="/images/box-new-l.png" alt="New carton box Large NLN" class="w-full h-full object-cover" />
-            </div>
-            <div class="p-5 flex flex-col justify-between">
-              <div>
-                <span class="inline-block bg-primary-container border border-[#1d1c16] text-[10px] font-black uppercase tracking-widest px-2 py-0.5 mb-2">New Box · Size L</span>
-                <h3 class="font-headline font-black text-base text-on-surface leading-tight">New Carton Box NLN</h3>
-                <p class="font-body text-xs text-secondary mt-1">590 × 390 × 390 mm · Double Wall</p>
-              </div>
-              <div class="flex items-center justify-between mt-3">
-                <span class="font-headline font-black text-lg text-on-surface">RM 8.00<span class="text-xs font-normal text-secondary"> /box</span></span>
-                <a href="/shop" class="text-primary font-headline font-black text-xs uppercase tracking-wider hover:underline">Order →</a>
-              </div>
+          <!-- Left column -->
+          <div>
+            <h1
+              id="heroHeading"
+              class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal mb-4"
+              style="letter-spacing: -0.04em;"
+            >
+              {headingLines.map((line, lineIndex) => (
+                <div>
+                  {[...line].map((char, charIndex) => {
+                    const delay = initialDelay + (lineIndex * line.length * charDelay) + (charIndex * charDelay);
+                    return (
+                      <span style={`display:inline-block;opacity:0;transform:translateX(-18px);transition:opacity 500ms ${delay}ms,transform 500ms ${delay}ms`}>
+                        {char === ' ' ? '\u00A0' : char}
+                      </span>
+                    );
+                  })}
+                </div>
+              ))}
+            </h1>
+            <p
+              id="heroSub"
+              class="text-base md:text-lg text-gray-300 mb-5"
+              style="opacity:0;transition:opacity 1000ms;"
+            >
+              We back visionaries and craft ventures that define what comes next.
+            </p>
+            <div
+              id="heroBtns"
+              class="flex flex-wrap gap-4"
+              style="opacity:0;transition:opacity 1000ms;"
+            >
+              <a href={WA_LINK} class="bg-white text-black px-8 py-3 rounded-lg font-medium">
+                Start a Chat
+              </a>
+              <a
+                href="/shop"
+                class="hero-explore-btn liquid-glass border border-white/20 text-white px-8 py-3 rounded-lg font-medium"
+              >
+                Order Now
+              </a>
             </div>
           </div>
 
-          <!-- Product preview card 2 -->
-          <div class="neu-card-sm bg-primary-container border-2 border-[#1d1c16] overflow-hidden flex">
-            <div class="w-28 flex-shrink-0 bg-primary-fixed">
-              <img src="/images/box-new-m.png" alt="New carton box Medium A3N" class="w-full h-full object-cover" />
-            </div>
-            <div class="p-5 flex flex-col justify-between">
-              <div>
-                <span class="inline-block bg-surface border border-[#1d1c16] text-[10px] font-black uppercase tracking-widest px-2 py-0.5 mb-2">New Box · Size M</span>
-                <h3 class="font-headline font-black text-base text-on-surface leading-tight">New Carton Box A3N</h3>
-                <p class="font-body text-xs text-on-primary-container/70 mt-1">440 × 310 × 230 mm · Double Wall</p>
-              </div>
-              <div class="flex items-center justify-between mt-3">
-                <span class="font-headline font-black text-lg text-on-surface">RM 5.00<span class="text-xs font-normal text-on-primary-container/70"> /box</span></span>
-                <a href="/shop" class="text-on-surface font-headline font-black text-xs uppercase tracking-wider hover:underline">Order →</a>
-              </div>
+          <!-- Right column -->
+          <div
+            id="heroTag"
+            class="flex items-end justify-start lg:justify-end mt-8 lg:mt-0"
+            style="opacity:0;transition:opacity 1000ms;"
+          >
+            <div class="liquid-glass border border-white/20 px-6 py-3 rounded-xl">
+              <span class="text-lg md:text-xl lg:text-2xl font-light">New carton box. Used carton box. Custom Made Box.</span>
             </div>
           </div>
 
-          <!-- Mini info tag -->
-          <div class="flex items-center gap-3 bg-[#1d1c16] border-2 border-[#1d1c16] px-5 py-3 neu-tag-dark">
-            <span class="material-symbols-outlined text-primary-container" style="font-size:20px;">local_shipping</span>
-            <span class="font-label text-xs font-black uppercase tracking-widest text-white">Fast Delivery · Peninsular Malaysia</span>
-          </div>
         </div>
-
       </div>
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
-      <span class="font-label text-[10px] uppercase tracking-widest text-white/50">Scroll</span>
-      <div class="w-px h-8 bg-white/30 neu-scroll-pulse"></div>
     </div>
   </section>
 
-  <style>
-    /* ── Neubrutalist shadow classes ── */
-    .neu-card     { box-shadow: 8px 8px 0 #1d1c16; }
-    .neu-card-sm  { box-shadow: 5px 5px 0 #1d1c16; }
-    .neu-tag      { box-shadow: 3px 3px 0 #1d1c16; }
-    .neu-tag-dark { box-shadow: 4px 4px 0 rgba(255,255,255,0.15); }
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Trigger heading character entrance
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          document.querySelectorAll('#heroHeading span').forEach((s) => {
+            if (s instanceof HTMLElement) {
+              s.style.opacity = '1';
+              s.style.transform = 'translateX(0)';
+            }
+          });
+        });
+      });
 
-    /* ── Button press-in effect ── */
-    .neu-btn-amber,
-    .neu-btn-wa {
-      box-shadow: 4px 4px 0 #1d1c16;
-      transition: transform 0.08s ease, box-shadow 0.08s ease;
-    }
-    .neu-btn-amber:hover,
-    .neu-btn-wa:hover {
-      transform: translate(4px, 4px);
-      box-shadow: 0px 0px 0 #1d1c16;
-    }
-    .neu-btn-amber:active,
-    .neu-btn-wa:active {
-      transform: translate(4px, 4px);
-      box-shadow: 0px 0px 0 #1d1c16;
-    }
+      // Staggered fade-ins
+      const fadeItems: [string, number][] = [
+        ['heroSub',  800],
+        ['heroBtns', 1200],
+        ['heroTag',  1400],
+      ];
+      fadeItems.forEach(([id, delay]) => {
+        setTimeout(() => {
+          const el = document.getElementById(id);
+          if (el) el.style.opacity = '1';
+        }, delay);
+      });
 
-    /* ── Scroll pulse ── */
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 0.3; transform: scaleY(1);   }
-      50%       { opacity: 1;   transform: scaleY(0.5); }
-    }
-    .neu-scroll-pulse { animation: scrollPulse 1.8s ease-in-out infinite; }
-  </style>
+      // Reveal site navbar after scrolling past hero
+      const mainNav = document.getElementById('nav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > window.innerHeight * 0.8) {
+          mainNav?.classList.remove('nav-hidden');
+        } else {
+          mainNav?.classList.add('nav-hidden');
+        }
+      }, { passive: true });
+    });
+  </script>
 
   <!-- ===================== MARQUEE STRIPE ===================== -->
   <div class="w-full border-y-2 border-[#1d1c16] bg-primary-container overflow-hidden py-4">
