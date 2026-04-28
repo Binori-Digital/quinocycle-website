@@ -1,0 +1,381 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const WA_NUMBER = '60168916381';
+
+const products = [
+  // Small
+  { id: 'u-ains',    size: 'S', model: 'AinS',    dims: '320 × 165 × 230 mm', wall: 'Single Wall', price: 0.90, minQty: 200, use: 'Small items, gifts, accessories, e-commerce parcels',          img: '/images/box-used-s.jpg', note: '' },
+  { id: 'u-s1',      size: 'S', model: 'S1',       dims: '~300 × 200 × 200 mm', wall: 'Single Wall', price: 1.00, minQty: 200, use: 'Books, apparel, small retail items, stationery',                img: '/images/box-used-s.jpg', note: '' },
+  { id: 'u-yf',      size: 'S', model: 'YF',       dims: '300 × 150 × 400 mm', wall: 'Double Wall', price: 1.00, minQty: 200, use: 'Tall narrow items, bottles, cylinders, tubes',                  img: '/images/box-used-s.jpg', note: 'Rejected grade' },
+  // Medium
+  { id: 'u-s3white', size: 'M', model: 'S3White',  dims: '330 × 310 × 270 mm', wall: 'Single Wall', price: 1.20, minQty: 150, use: 'Home goods, office supplies, retail overflow',                  img: '/images/box-used-m.jpg', note: '' },
+  { id: 'u-jimat',   size: 'M', model: 'JIMAT',    dims: '400 × 320 × 250 mm', wall: 'Single Wall', price: 1.50, minQty: 150, use: 'Household items, e-commerce fulfilment, lightweight storage',   img: '/images/box-used-m.jpg', note: '' },
+  { id: 'u-bary',    size: 'M', model: 'Bary',     dims: '300 × 200 × 250 mm', wall: 'Double Wall', price: 1.80, minQty: 150, use: 'Kitchen items, electronics, general online orders',             img: '/images/box-used-m.jpg', note: 'Once used · Clean · Odourless' },
+  { id: 'u-bkrs',    size: 'M', model: 'BKRS',     dims: '390 × 280 × 260 mm', wall: 'Double Wall', price: 2.00, minQty: 150, use: 'General shipping, warehouse storage, moving house',             img: '/images/box-used-m.jpg', note: '' },
+  { id: 'u-hjic',    size: 'M', model: 'HJIC',     dims: '440 × 330 × 190 mm', wall: 'Double Wall', price: 2.00, minQty: 150, use: 'Flat items, documents, apparel, shallow-depth goods',           img: '/images/box-used-m.jpg', note: '' },
+  { id: 'u-menara',  size: 'M', model: 'Menara',   dims: '430 × 250 × 220 mm', wall: 'Double Wall', price: 2.00, minQty: 150, use: 'Long narrow goods, tools, hardware, bottles',                   img: '/images/box-used-m.jpg', note: '' },
+  { id: 'u-s4ibu',   size: 'M', model: 'S4Ibu',    dims: '400 × 330 × 270 mm', wall: 'Double Wall', price: 2.00, minQty: 150, use: 'Household goods, moving, office relocation',                    img: '/images/box-used-m.jpg', note: '' },
+  // Large
+  { id: 'u-lgd',     size: 'L', model: 'LGD',      dims: '~560 × 420 × 420 mm', wall: 'Double Wall', price: 3.50, minQty: 100, use: 'Heavy goods, moving house, warehouse bulk storage',            img: '/images/box-used-l.jpg', note: '' },
+];
+---
+
+<Layout
+  title="Used Carton Boxes Malaysia — Once-Used Recycled Boxes Wholesale | Quinocycle"
+  description="Buy once-used and recycled corrugated carton boxes in bulk at wholesale prices. 11 models from RM0.90/box. Clean, odourless, single & double wall. Free delivery across KL & Selangor for orders above RM300."
+>
+  <!-- Page Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Once-Used · Recycled · Eco-Friendly</span>
+    <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface leading-[0.9] mb-6">
+      Used Carton Boxes<br /><span class="text-primary italic">from RM0.90 / box.</span>
+    </h1>
+    <p class="font-body text-xl text-secondary max-w-xl leading-relaxed">
+      Once-used corrugated boxes — clean, dry, and ready to repack. Save cost for moving house, office relocation, e-commerce fulfilment, and storage.
+    </p>
+  </section>
+
+  <!-- Filter Bar -->
+  <div class="sticky top-[88px] md:top-[96px] z-40 bg-[#fdf9f0]/90 backdrop-blur-xl border-b border-outline-variant/20" id="filterBar">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex gap-2 overflow-x-auto no-scrollbar" id="filterGroup">
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full bg-on-surface text-surface whitespace-nowrap transition-all" data-filter="all">All Models</button>
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="S">Size S</button>
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="M">Size M</button>
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="L">Size L</button>
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="single">Single Wall</button>
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="double">Double Wall</button>
+      </div>
+      <button
+        class="flex items-center gap-2 font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-on-surface hover:border-primary hover:text-primary transition-all"
+        id="cartToggle"
+        aria-label="Open cart"
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        Cart
+        <span class="bg-primary-container text-on-primary-container text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center" id="cartBadge">0</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Notice banner -->
+  <div class="max-w-7xl mx-auto px-6 md:px-8 mt-8">
+    <div class="flex items-start gap-3 bg-primary-fixed/40 border border-primary/20 rounded-2xl px-6 py-4">
+      <svg class="flex-shrink-0 text-primary mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <p class="font-body text-sm text-on-surface-variant leading-relaxed">
+        <strong class="text-on-surface font-semibold">Free delivery across KL &amp; Selangor</strong> for orders above RM300. All boxes are once-used, clean, and dry. Prices shown are per box. Min. order applies per model.
+      </p>
+    </div>
+  </div>
+
+  <!-- Product Grid -->
+  <section class="max-w-7xl mx-auto px-6 md:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12" id="shopGrid">
+      {products.map(p => (
+        <article
+          class="prod-card group"
+          data-size={p.size}
+          data-wall={p.wall.toLowerCase().includes('single') ? 'single' : 'double'}
+          data-id={p.id}
+          data-name={`Used Carton Box ${p.model}`}
+          data-price={p.price}
+        >
+          <!-- Image -->
+          <div class="relative aspect-[4/3] bg-surface-container rounded-3xl mb-5 overflow-hidden">
+            <img
+              src={p.img}
+              alt={`Used Carton Box ${p.model} ${p.dims}`}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+            <!-- Size badge -->
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-headline font-bold uppercase tracking-widest bg-secondary-container text-secondary">
+              Size {p.size}
+            </div>
+            <!-- Wall badge -->
+            <div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-headline font-bold text-on-surface">
+              {p.wall.includes('Double') ? '2-Wall' : '1-Wall'}
+            </div>
+            <!-- Price badge -->
+            <div class="absolute bottom-4 right-4 bg-surface/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+              <span class="font-headline font-bold text-on-surface">RM {p.price.toFixed(2)}</span>
+              <span class="text-xs text-secondary"> / box</span>
+            </div>
+          </div>
+
+          <!-- Info -->
+          <div class="px-1">
+            <span class="font-label text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-1 block">{p.wall}</span>
+            <h3 class="font-headline text-xl font-bold tracking-tight text-on-surface mb-0.5">Used Carton Box {p.model}</h3>
+            <p class="font-body text-sm text-secondary mb-1">{p.dims}</p>
+            {p.note && (
+              <p class="font-body text-xs text-primary font-semibold mb-1">{p.note}</p>
+            )}
+            <p class="font-body text-sm text-on-surface-variant mb-4">{p.use}</p>
+            <p class="font-label text-xs text-outline mb-4">Min. order: <strong class="text-on-surface-variant">{p.minQty} boxes</strong></p>
+
+            <!-- Qty + Add to cart -->
+            <div class="flex items-center gap-3">
+              <div class="flex items-center bg-surface-container rounded-full border border-outline-variant/30 overflow-hidden">
+                <button class="qty-btn qty-minus w-9 h-9 flex items-center justify-center text-lg text-on-surface-variant hover:text-primary transition-colors font-headline" aria-label="Decrease">−</button>
+                <input
+                  type="number"
+                  class="qty-input w-16 text-center bg-transparent border-none text-sm font-body font-semibold text-on-surface focus:outline-none focus:ring-0"
+                  value={p.minQty}
+                  min={p.minQty}
+                  step={50}
+                  aria-label="Quantity"
+                />
+                <button class="qty-btn qty-plus w-9 h-9 flex items-center justify-center text-lg text-on-surface-variant hover:text-primary transition-colors font-headline" aria-label="Increase">+</button>
+              </div>
+              <button
+                class="add-to-cart flex-1 bg-on-surface text-surface py-2.5 rounded-full font-headline font-bold text-xs uppercase tracking-widest hover:bg-primary transition-colors duration-200"
+                data-id={p.id}
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Empty state -->
+    <div class="hidden text-center py-24" id="shopEmpty">
+      <p class="font-headline text-xl text-secondary">No products match this filter.</p>
+    </div>
+  </section>
+
+  <!-- Why used boxes section -->
+  <section class="max-w-7xl mx-auto px-6 md:px-8 pb-20">
+    <div class="bg-surface-container rounded-3xl px-8 md:px-12 py-10">
+      <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-8">Why buy once-used carton boxes?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <p class="font-headline font-bold text-lg text-primary mb-2">Up to 60% cheaper</p>
+          <p class="font-body text-sm text-secondary leading-relaxed">Once-used boxes cost a fraction of new stock — ideal for moving house, charity drives, and internal warehouse transfers where branded packaging isn't needed.</p>
+        </div>
+        <div>
+          <p class="font-headline font-bold text-lg text-primary mb-2">Clean &amp; dry</p>
+          <p class="font-body text-sm text-secondary leading-relaxed">All our used boxes come from a single previous use — typically e-commerce inbound or factory shipments. Clean, odourless, and structurally intact.</p>
+        </div>
+        <div>
+          <p class="font-headline font-bold text-lg text-primary mb-2">Better for the planet</p>
+          <p class="font-body text-sm text-secondary leading-relaxed">Reusing corrugated boxes cuts carbon vs recycling. Every box you buy used is one fewer box manufactured from raw fibre.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CART OVERLAY -->
+  <div class="hidden fixed inset-0 bg-on-surface/20 backdrop-blur-sm z-50" id="cartOverlay"></div>
+
+  <!-- CART SIDEBAR -->
+  <aside
+    class="fixed top-0 right-0 h-full w-full max-w-md bg-surface z-50 flex flex-col shadow-2xl translate-x-full transition-transform duration-300"
+    id="cartSidebar"
+    aria-label="Shopping cart"
+    aria-hidden="true"
+  >
+    <div class="flex items-center justify-between px-8 py-6 border-b border-outline-variant/20">
+      <h2 class="font-headline text-2xl font-bold text-on-surface">Your Cart</h2>
+      <button class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-surface-container transition-colors" id="cartClose" aria-label="Close cart">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="flex-1 overflow-y-auto px-8 py-6" id="cartItems">
+      <div class="flex flex-col items-center justify-center h-full text-center py-16" id="cartEmpty">
+        <p class="font-headline text-lg text-secondary">Your cart is empty.</p>
+        <p class="font-body text-sm text-outline mt-1">Add some boxes to get started.</p>
+      </div>
+    </div>
+
+    <div class="hidden px-8 py-6 border-t border-outline-variant/20 bg-surface-container-low" id="cartFooter">
+      <div class="space-y-3 mb-6">
+        <div class="flex justify-between items-center text-sm font-body text-secondary">
+          <span>Total Boxes</span>
+          <span class="font-semibold text-on-surface" id="cartTotalBoxes">0</span>
+        </div>
+        <div class="flex justify-between items-center font-headline font-bold text-lg text-on-surface">
+          <span>Est. Total</span>
+          <span id="cartTotalPrice">RM 0.00</span>
+        </div>
+        <div class="text-xs font-body text-secondary" id="cartMoq"></div>
+      </div>
+      <button
+        class="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors"
+        id="cartWhatsApp"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.815 0 00-3.48-8.413z"/></svg>
+        Send Order via WhatsApp
+      </button>
+      <p class="text-center font-body text-xs text-secondary mt-3">We'll confirm availability and payment details via WhatsApp.</p>
+    </div>
+  </aside>
+</Layout>
+
+<script define:vars={{ WA_NUMBER }}>
+  // ---- FILTER ----
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards      = document.querySelectorAll('.prod-card');
+  const emptyState = document.getElementById('shopEmpty');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-on-surface', 'text-surface');
+        b.classList.add('border', 'border-outline-variant/40', 'text-secondary');
+      });
+      btn.classList.add('bg-on-surface', 'text-surface');
+      btn.classList.remove('border', 'border-outline-variant/40', 'text-secondary');
+
+      const f = btn.dataset.filter;
+      let visible = 0;
+      cards.forEach(card => {
+        const show = f === 'all' || card.dataset.size === f || card.dataset.wall === f;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      emptyState?.classList.toggle('hidden', visible > 0);
+    });
+  });
+
+  // ---- QTY CONTROLS ----
+  document.querySelectorAll('.prod-card').forEach(card => {
+    const minusBtn = card.querySelector('.qty-minus');
+    const plusBtn  = card.querySelector('.qty-plus');
+    const input    = card.querySelector('.qty-input');
+    const min      = parseInt(input.min);
+
+    minusBtn?.addEventListener('click', () => {
+      const v = parseInt(input.value);
+      if (v - 50 >= min) input.value = v - 50;
+    });
+    plusBtn?.addEventListener('click', () => {
+      input.value = parseInt(input.value) + 50;
+    });
+    input?.addEventListener('change', () => {
+      if (parseInt(input.value) < min) input.value = min;
+    });
+  });
+
+  // ---- CART ----
+  let cart = {};
+  const cartToggle     = document.getElementById('cartToggle');
+  const cartClose      = document.getElementById('cartClose');
+  const cartOverlay    = document.getElementById('cartOverlay');
+  const cartSidebar    = document.getElementById('cartSidebar');
+  const cartBadge      = document.getElementById('cartBadge');
+  const cartItems      = document.getElementById('cartItems');
+  const cartEmpty      = document.getElementById('cartEmpty');
+  const cartFooter     = document.getElementById('cartFooter');
+  const cartTotalBoxes = document.getElementById('cartTotalBoxes');
+  const cartTotalPrice = document.getElementById('cartTotalPrice');
+  const cartMoq        = document.getElementById('cartMoq');
+
+  function openCart() {
+    cartSidebar?.classList.remove('translate-x-full');
+    cartOverlay?.classList.remove('hidden');
+    cartSidebar?.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeCart() {
+    cartSidebar?.classList.add('translate-x-full');
+    cartOverlay?.classList.add('hidden');
+    cartSidebar?.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  cartToggle?.addEventListener('click', openCart);
+  cartClose?.addEventListener('click', closeCart);
+  cartOverlay?.addEventListener('click', closeCart);
+
+  function renderCart() {
+    const ids = Object.keys(cart);
+    cartBadge.textContent = ids.length;
+
+    if (ids.length === 0) {
+      cartEmpty?.classList.remove('hidden');
+      cartFooter?.classList.add('hidden');
+      Array.from(cartItems.children).forEach(c => { if (c.id !== 'cartEmpty') c.remove(); });
+      return;
+    }
+
+    cartEmpty?.classList.add('hidden');
+    cartFooter?.classList.remove('hidden');
+    Array.from(cartItems.children).forEach(c => { if (c.id !== 'cartEmpty') c.remove(); });
+
+    let totalBoxes = 0, totalPrice = 0;
+    ids.forEach(id => {
+      const item = cart[id];
+      totalBoxes += item.qty;
+      totalPrice += item.qty * item.price;
+
+      const el = document.createElement('div');
+      el.className = 'flex items-start justify-between gap-4 py-4 border-b border-outline-variant/20';
+      el.innerHTML = `
+        <div class="flex-1">
+          <p class="font-headline font-bold text-sm text-on-surface">${item.name}</p>
+          <p class="font-body text-xs text-secondary mt-0.5">${item.qty} boxes × RM ${item.price.toFixed(2)}</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="font-headline font-bold text-sm text-on-surface">RM ${(item.qty * item.price).toFixed(2)}</span>
+          <button class="remove-item w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-red-100 hover:text-red-600 transition-colors" data-id="${id}" aria-label="Remove">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      `;
+      cartItems.appendChild(el);
+    });
+
+    cartTotalBoxes.textContent = totalBoxes;
+    cartTotalPrice.textContent = `RM ${totalPrice.toFixed(2)}`;
+
+    const freeDeliveryMet = totalPrice >= 300;
+    cartMoq.textContent = freeDeliveryMet
+      ? `✓ Free delivery across KL & Selangor`
+      : `Free delivery for KL & Selangor orders above RM 300 (RM ${(300 - totalPrice).toFixed(2)} more to qualify)`;
+    cartMoq.style.color = freeDeliveryMet ? '#546159' : '#765a00';
+
+    cartItems.querySelectorAll('.remove-item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        delete cart[btn.dataset.id];
+        renderCart();
+      });
+    });
+  }
+
+  document.querySelectorAll('.add-to-cart').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card  = btn.closest('.prod-card');
+      const id    = card.dataset.id;
+      const name  = card.dataset.name;
+      const price = parseFloat(card.dataset.price);
+      const qty   = parseInt(card.querySelector('.qty-input').value);
+
+      if (cart[id]) { cart[id].qty += qty; } else { cart[id] = { name, price, qty }; }
+      renderCart();
+      openCart();
+    });
+  });
+
+  document.getElementById('cartWhatsApp')?.addEventListener('click', () => {
+    const ids = Object.keys(cart);
+    if (ids.length === 0) return;
+
+    let msg = 'Hi Quinocycle! I would like to order used carton boxes:\n\n';
+    let total = 0;
+    ids.forEach(id => {
+      const item = cart[id];
+      const sub = item.qty * item.price;
+      total += sub;
+      msg += `• ${item.name} × ${item.qty} boxes = RM ${sub.toFixed(2)}\n`;
+    });
+    msg += `\nEstimated Total: RM ${total.toFixed(2)}`;
+    msg += '\n\nPlease confirm availability and delivery. Thank you!';
+
+    window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+  });
+</script>
