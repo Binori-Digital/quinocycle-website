@@ -4,6 +4,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://www.quinocycle.com.my',
+  trailingSlash: 'always',
   output: 'static',
 
   build: {
