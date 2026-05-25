@@ -6,7 +6,12 @@
       "Bash(find /c/Users/Gino -maxdepth 3 -type f -name .env*)",
       "mcp__Claude_Preview__preview_start",
       "Bash(npm install:*)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/)",
+      "mcp__740de8df-7cd8-483f-a484-4eb87d525e4c__show_marketing_studio",
+      "mcp__740de8df-7cd8-483f-a484-4eb87d525e4c__media_upload",
+      "mcp__740de8df-7cd8-483f-a484-4eb87d525e4c__models_explore",
+      "mcp__740de8df-7cd8-483f-a484-4eb87d525e4c__generate_video",
+      "mcp__740de8df-7cd8-483f-a484-4eb87d525e4c__job_display"
     ]
   }
 }
