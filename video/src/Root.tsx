@@ -1,6 +1,7 @@
 import React from "react";
 import { Composition } from "remotion";
 import { MovingBoxesVideo, TOTAL_FRAMES } from "./MovingBoxesVideo";
+import { UGCReviewVideo, UGC_TOTAL } from "./UGCReviewVideo";
 
 export function RemotionRoot() {
   return (
@@ -9,6 +10,15 @@ export function RemotionRoot() {
         id="MovingBoxes"
         component={MovingBoxesVideo}
         durationInFrames={TOTAL_FRAMES}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{}}
+      />
+      <Composition
+        id="UGCReview"
+        component={UGCReviewVideo}
+        durationInFrames={UGC_TOTAL}
         fps={30}
         width={1080}
         height={1920}
