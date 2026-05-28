@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Bagaimana Kotak Kardus Dibuat — Proses Pengeluaran dari Kertas ke Kotak', description: 'Pernah terfikir bagaimana kotak kardus yang anda guna setiap hari dibuat? Dari pulpa kayu hingga kotak siap pakai, ini proses pengeluaran kadbod gelombang yang jarang orang tahu.', date: '2026-05-28', readTime: '7 min', category: 'Proses Pengeluaran', author: 'Pasukan Quinocycle', slug: 'proses-pengeluaran-kotak-kardus-0528' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20ingin%20tahu%20cara%20kotak%20kardus%20dibuat.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-05-28', dateModified: '2026-05-28', inLanguage:"ms-MY", author:{name:"Pasukan Quinocycle",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/proses-pengeluaran-kotak-kardus-0528"}, keywords:"cara kotak kardus dibuat Malaysia, pengeluaran kotak gelombang, proses pembuatan kadbod, kilang kotak Selangor, kadbod gelombang proses" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Apakah bahan utama untuk membuat kotak kardus?","acceptedAnswer":{"@type":"Answer","text":"Kotak kardus gelombang dibuat daripada kertas kraft — biasanya campuran pulpa kayu segar dan kertas kitar semula. Lapisan luar (liner) menggunakan kertas lebih tebal, manakala lapisan tengah bergelombang (fluting) dibuat daripada kertas lebih nipis yang dikukus dan dibentuk menjadi gelombang."}},{"@type":"Question","name":"Berapa lama masa yang diperlukan untuk membuat satu kotak kardus?","acceptedAnswer":{"@type":"Answer","text":"Mesin corrugator industri boleh menghasilkan 200–300 meter kadbod gelombang seminit. Selepas pemotongan, pengoresan, dan lipatan, proses keseluruhan dari lembaran kertas hingga kotak siap boleh mengambil masa 15–30 minit bergantung kepada saiz dan kerumitan kotak."}},{"@type":"Question","name":"Apa beza single-wall dan double-wall corrugated?","acceptedAnswer":{"@type":"Answer","text":"Single-wall (3-ply) mempunyai satu lapisan gelombang antara dua liner — sesuai untuk barang ringan hingga 10kg. Double-wall (5-ply) mempunyai dua lapisan gelombang dengan tiga liner — tiga kali lebih kuat, sesuai untuk barang berat atau palet bertindan."}},{"@type":"Question","name":"Adakah kotak kardus boleh dikitar semula sepenuhnya?","acceptedAnswer":{"@type":"Answer","text":"Ya! Kadbod gelombang adalah salah satu bahan yang paling mudah dikitar semula. Di Malaysia, kadar kitar semula kadbod melebihi 80%. Kotak yang dikitar semula dijadikan pulpa semula dan digunakan untuk membuat kotak baru — ini sebab mengapa kotak terpakai dari Quinocycle adalah pilihan mesra alam."}},{"@type":"Question","name":"Mengapa ada kotak yang lebih keras dari yang lain walaupun saiz sama?","acceptedAnswer":{"@type":"Answer","text":"Kekuatan kotak bergantung kepada gramaj kertas (GSM), jenis flute (A, B, C, E, BC), dan kualiti bahan. Kotak 350 GSM kraft dengan flute BC jauh lebih kuat berbanding kotak 200 GSM dengan flute E walaupun saiz luaran sama."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"RM 1.90 – RM 6.50 per kotak", areaServed:"Semenanjung Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">Kotak kardus adalah antara produk yang paling banyak digunakan di dunia — namun ramai yang tidak pernah terfikir bagaimana ia dibuat. Setiap hari di Malaysia, berjuta-juta kotak digunakan untuk menghantar barang e-dagang, menyimpan produk di gudang, dan membantu keluarga pindah rumah. Di sebalik setiap kotak itu ada proses pengeluaran yang menarik yang bermula dari pokok dan berakhir di tangan anda.</p>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Di Quinocycle, kami berurusan dengan kotak kardus setiap hari — baru dan terpakai. Memahami cara kotak dibuat membantu kami dan pelanggan kami memilih gred dan saiz yang betul untuk setiap keperluan. Mari kita selami proses ini bersama-sama.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Langkah 1: Dari Pokok ke Pulpa</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Sumber Bahan Mentah</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Kadbod gelombang dibuat terutamanya daripada kertas kraft — kombinasi pulpa kayu segar dan kertas kitar semula. Di Malaysia, kebanyakan kilang kadbod menggunakan campuran sekitar 60–70% kertas kitar semula dan 30–40% pulpa segar. Ini menjadikan kadbod salah satu bahan pembungkusan paling mesra alam yang ada.</p>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Pulpa kayu diproses melalui pelbagai proses kimia dan mekanikal untuk menghasilkan lembaran kertas dengan kekuatan tegangan yang tinggi. Kualiti pulpa ini menentukan gramaj kertas (diukur dalam GSM — gram per meter persegi) yang akhirnya menentukan kekuatan kotak siap.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Kepentingan Gramaj (GSM)</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Apabila anda memegang dua kotak yang kelihatan sama tetapi satu jauh lebih kuat — perbezaannya selalunya ada pada GSM. Kotak biasa berkualiti sederhana mungkin menggunakan kertas 200–250 GSM. Kotak industri berkualiti tinggi yang Quinocycle stok untuk pelanggan yang memerlukan perlindungan maksimum menggunakan kertas 350 GSM ke atas. Perbezaan ini terasa di tangan dan jelas kelihatan apabila kotak dibebani.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Langkah 2: Mesin Corrugator — Di Sinilah Keajaiban Berlaku</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Proses Pembentukan Gelombang</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Mesin corrugator adalah jantung kilang kadbod. Kertas kraft untuk lapisan tengah (medium) disuap ke dalam mesin, dipanaskan dengan wap, kemudian ditekan antara dua roller bergigi yang membentuk gelombang (flute). Gelombang inilah yang memberikan kekuatan kotak — ia berfungsi seperti lengkung seni bina yang mengagihkan tekanan.</p>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Lapisan luar (liner) kemudian dilekatkan pada kedua-dua sisi medium bergelombang menggunakan gam kanji dalam keadaan panas. Hasilnya adalah papan kadbod gelombang — ringan, kuat, dan boleh dilipat.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Jenis Flute: A, B, C, E dan BC</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Bukan semua gelombang dicipta sama. Flute A adalah yang paling tebal — memberikan penampan maksimum untuk barang rapuh. Flute B nipis dan sesuai untuk kotak pembungkusan produk ringan. Flute C adalah standard industri yang seimbang antara kekuatan dan berat. Flute E sangat nipis, sesuai untuk kotak kecil atau reka bentuk yang memerlukan ketepatan lipatan. BC flute (double wall) menggabungkan B dan C untuk kekuatan tertinggi tanpa berat berlebihan.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Langkah 3: Pemotongan, Pengoresan & Lipatan</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Setelah papan kadbod siap, ia dipotong mengikut corak (die-cut) yang telah direkabentuk. Garis-garis skor ditambah pada permukaan supaya kotak boleh dilipat dengan tepat tanpa retak. Ini penting — skor yang salah bermakna kotak tidak dapat dilipat dengan bersih, menghasilkan sudut yang lemah.</p>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Untuk kotak standard, proses ini diautomasikan sepenuhnya. Untuk kotak tersuai dengan bentuk atau bukaan yang kompleks, mesin die-cutting khusus digunakan. Di sinilah kotak tersuai Quinocycle berbeza — kami pastikan corak pemotongan tepat supaya pemasangan kotak mudah dan konsisten.</p>
+      </section>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8 my-12">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-6">Perbandingan Jenis Kotak Kardus</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">SINGLE WALL (3-PLY)</p>
+            <p class="font-body text-on-surface text-sm">1 lapisan gelombang | Sehingga 10kg | Flute B atau C | Paling biasa untuk e-dagang</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">DOUBLE WALL (5-PLY)</p>
+            <p class="font-body text-on-surface text-sm">2 lapisan gelombang | Sehingga 30kg | Flute BC | Untuk barang berat & eksport</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">TRIPLE WALL (7-PLY)</p>
+            <p class="font-body text-on-surface text-sm">3 lapisan gelombang | Sehingga 60kg+ | Untuk mesin & peralatan industri</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">HONEYCOMB</p>
+            <p class="font-body text-on-surface text-sm">Sel heksagon | Ultra ringan | Nisbah kekuatan-berat tertinggi | Perabot, kaca, panel</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Soalan Lazim tentang Pengeluaran Kotak Kardus</h2>
+        <div class="space-y-4">
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Bolehkah kotak terpakai sekuat kotak baru?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Kotak terpakai gred A yang diuruskan dengan baik boleh mengekalkan 85–90% kekuatan asal. Kunci utama adalah penyimpanan bebas kelembapan dan pengendalian yang betul. Kotak yang disimpan basah atau ditekan berlebihan akan kehilangan kekuatan lebih cepat.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Mengapa ada kotak yang berasa lebih lembab atau ringan?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Kotak yang terasa lembab atau mudah penyok biasanya menggunakan kertas GSM rendah atau telah terdedah kepada kelembapan. Kadbod gelombang menyerap kelembapan dengan cepat — faktor utama mengapa penyimpanan dalam keadaan kering sangat penting.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Adakah kotak Quinocycle dibuat tempatan?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Kotak baru kami diperolehi daripada kilang kadbod tempatan di Selangor dan Johor. Ini memastikan kualiti bahan sesuai dengan iklim Malaysia dan penghantaran lebih pantas berbanding produk import.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="mb-12 bg-primary/5 border border-primary/20 rounded-lg p-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Perlu Kotak untuk Perniagaan atau Pindah Rumah Anda?</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Sekarang anda faham bagaimana kotak dibuat, anda boleh buat pilihan yang lebih bijak. Sama ada anda perlukan kotak single-wall untuk penghantaran harian, double-wall untuk barang berat, atau kotak tersuai bercetak untuk jenama anda — Quinocycle ada semua pilihan di Balakong.</p>
+        <p class="font-body text-on-surface mb-6"><strong>Hubungi Quinocycle hari ini:</strong></p>
+        <ul class="font-body text-on-surface text-sm space-y-2 mb-6">
+          <li>📞 <strong>Telefon:</strong> +60 16 8916 381 / 03-8962 6381</li>
+          <li>📧 <strong>E-mel:</strong> quinocycle@gmail.com</li>
+          <li>📍 <strong>Alamat:</strong> No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300</li>
+        </ul>
+        <a href={WA_LINK} class="inline-block bg-primary text-on-primary font-label font-bold text-sm px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">💬 WhatsApp Kami</a>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Kesimpulan: Kenali Kotak Anda</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-4">Kotak kardus yang bagus bukan sekadar kotak. Ia hasil daripada proses kejuruteraan yang teliti — pilihan pulpa, gramaj kertas, jenis flute, dan ketepatan pemotongan semuanya mempengaruhi prestasi akhir. Apabila anda memahami ini, anda boleh membuat keputusan pembelian yang lebih bijak dan elakkan pembaziran pada kotak yang tidak sesuai.</p>
+        <p class="font-body text-on-surface leading-relaxed">Di Quinocycle, kami suka berkongsi pengetahuan ini dengan pelanggan. Kotak yang betul bermakna produk anda selamat sampai ke destinasi — dan itu adalah matlamat kita bersama.</p>
+      </section>
+    </div>
+  </article>
+</Layout>

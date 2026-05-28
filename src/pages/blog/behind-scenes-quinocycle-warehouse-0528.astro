@@ -1,0 +1,115 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Behind the Scenes: A Day at Quinocycle\'s Balakong Warehouse', description: 'Ever wondered what happens behind the scenes at a carton box supplier? Come behind the shutters at Quinocycle Balakong and see how thousands of boxes are sorted, graded, and dispatched every single day.', date: '2026-05-28', readTime: '6 min', category: 'Behind the Scenes', author: 'Quinocycle Team', slug: 'behind-scenes-quinocycle-warehouse-0528' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20want%20to%20visit%20your%20warehouse%20in%20Balakong.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-05-28', dateModified: '2026-05-28', inLanguage:"en-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/behind-scenes-quinocycle-warehouse-0528"}, keywords:"Quinocycle warehouse Balakong, carton box supplier Malaysia, behind the scenes packaging, wholesale boxes Selangor, cardboard supplier tour" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where is Quinocycle's warehouse located?","acceptedAnswer":{"@type":"Answer","text":"Quinocycle's main warehouse and showroom is at No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300. We're open Monday–Friday 9am–6pm and Saturday 9am–1pm."}},{"@type":"Question","name":"Can I visit the Quinocycle warehouse to choose boxes?","acceptedAnswer":{"@type":"Answer","text":"Yes! Walk-in customers are welcome. You can inspect box grades, sizes, and condition on-site before ordering. WhatsApp us first at +60168916381 so we can prepare stock for your inspection."}},{"@type":"Question","name":"How many boxes does Quinocycle move daily?","acceptedAnswer":{"@type":"Answer","text":"On a typical day, our Balakong facility grades and dispatches between 3,000 to 8,000 boxes depending on order volume. Peak periods — CNY, Raya, and year-end sale seasons — can push that to 15,000 units a day."}},{"@type":"Question","name":"Do you offer same-day collection from the warehouse?","acceptedAnswer":{"@type":"Answer","text":"Yes. Same-day self-collection is available for in-stock items. Call or WhatsApp us by 3pm for same-day pickup. Orders above RM 500 qualify for next-day delivery across Klang Valley."}},{"@type":"Question","name":"What's the grading process for used carton boxes?","acceptedAnswer":{"@type":"Answer","text":"Every used box entering our facility is manually inspected by our team. Boxes are graded A (excellent — like new), B (good — minor marks, full structural integrity), and C (value grade — minor compression but functional). Grade C boxes are sold at steep discounts for light-duty use."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"RM 1.90 – RM 6.50 per box", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">It's 8:30am on a Tuesday and the Quinocycle yard in Balakong is already buzzing. Three lorries are lined up outside. The roller shutter is halfway up. Someone's stacking flattened boxes higher than their head. If you've ever ordered carton boxes from us and wondered what happens between "confirm order" and "boxes at your door" — this is the story behind that journey.</p>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Most people see packaging as a boring background detail. We see it differently. Every box that leaves our warehouse has a job to do — protect someone's livelihood, someone's product, someone's home move. Getting that right is what our team shows up for every single day.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Morning: Inbound Sorting Begins</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Where the Boxes Come From</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Our used carton boxes don't appear from thin air. We source them from factories across Selangor — food manufacturers, electronics exporters, pharmaceutical companies — that generate hundreds of surplus boxes a week. Our drivers collect these in bulk, often pre-sorted by the source factory, but always requiring our own grading before they're fit to sell.</p>
+        <p class="font-body text-on-surface leading-relaxed mb-6">New boxes arrive from corrugated mills in flat-pack form — stacks of pre-cut, pre-scored sheets that our team assembles and quality checks before shelving. Yes, even "new" boxes get inspected. A poorly scored fold line, a misaligned seam, or under-spec kraft paper all get flagged before anything reaches a customer.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">The Grading Line</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">By 9am, the grading line is running. Each used box passes through a quick but systematic check: Is the base intact? Are the flaps splitting? Any pest contamination? Any moisture damage that's compromised the fluting? A Grade A box looks almost new — strong corners, clean walls, no compression set. Grade B has minor cosmetic marks but full structural integrity. Grade C is our value tier — it still does the job for light-duty moves and internal warehouse use, just at a much lower price point.</p>
+        <p class="font-body text-on-surface leading-relaxed mb-6">This manual grading is what separates a reliable used box supplier from someone flogging junk. We've seen competitors sell Grade C boxes as Grade B. Our customers notice the difference because their products arrive undamaged.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Midday: Orders, Packing, Dispatch</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">How Your Order Gets Picked</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">By 11am, the WhatsApp orders are coming in fast. A Shopee seller in Puchong needs 200 medium boxes by Thursday. A factory in Shah Alam needs 500 double-wall for a Friday shipment. A family in Subang Jaya is picking up 30 mixed sizes for a house move this weekend. Every order goes onto the pick list and our team works through it methodically — size, grade, quantity, any special requirements like moisture-resistant coating or double-taping.</p>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Larger orders get loaded directly onto pallets for lorry delivery. Smaller orders are bundled and tagged for self-collection or sent via our partner courier network. We try to get same-day orders confirmed and packed by 3pm so drivers can load before 5pm and hit the road.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Custom Orders: A Different Beast</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Custom printed boxes require a different workflow entirely. Once a design is approved, the job goes to our print partners who handle single-colour flexo printing. These jobs typically run 5–7 working days. Our team coordinates the artwork approval, print run, and delivery back to our facility for final QC before dispatch. A badly printed box with a colour bleed or misaligned logo is not something we'd send out — every custom order gets a visual check before it leaves.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Afternoon: Walk-In Customers & Consultations</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Walk-in customers are a big part of our day — and honestly, one of the best parts. When someone comes in and says "I need boxes to ship ceramic mugs" or "I'm moving a 3-bedroom house next Saturday", we get to actually help them figure out the right solution. It's not just selling boxes — it's working out what grade, what size, how many, and what extras (bubble wrap, stretch film, tape) will make their move or shipment succeed.</p>
+        <p class="font-body text-on-surface leading-relaxed mb-6">We keep a display area in the warehouse where you can actually open, flatten, and feel different box grades side by side. Customers who've only ever seen boxes in photos often leave genuinely surprised by how much variance there is between a single-wall and a double-wall box when you put them next to each other.</p>
+      </section>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8 my-12">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-6">Quinocycle Warehouse At a Glance</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">DAILY THROUGHPUT</p>
+            <p class="font-body text-on-surface text-sm">3,000–8,000 boxes on normal days; up to 15,000 during peak seasons</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">LOCATION</p>
+            <p class="font-body text-on-surface text-sm">No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">OPENING HOURS</p>
+            <p class="font-body text-on-surface text-sm">Mon–Fri 9am–6pm | Saturday 9am–1pm</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">BOX GRADES AVAILABLE</p>
+            <p class="font-body text-on-surface text-sm">Grade A, B, C (used) · Single-wall, Double-wall, Triple-wall (new)</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Common Questions About Our Warehouse</h2>
+        <div class="space-y-4">
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Can I visit without an appointment?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Walk-ins are welcome during opening hours. WhatsApp us first if you want us to pull specific sizes or grades for comparison — it saves time on both ends.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Do you offer bulk delivery across Malaysia?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Yes. Orders above RM 1,000 qualify for next-day delivery within Klang Valley. Outstation delivery to Penang, JB, Ipoh, and East Coast is available with 2–3 day lead time.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">What payment methods do you accept?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Cash, bank transfer (instant), and DuitNow QR are accepted. Corporate accounts with credit terms are available for regular orders above RM 2,000/month.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="mb-12 bg-primary/5 border border-primary/20 rounded-lg p-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Come and See for Yourself</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">The best way to understand what Quinocycle offers is to walk in and see the stock. Whether you're an e-commerce seller, a logistics company, or just someone packing up a house — our team is here to help you find the right box at the right price.</p>
+        <p class="font-body text-on-surface mb-6"><strong>Contact Quinocycle today:</strong></p>
+        <ul class="font-body text-on-surface text-sm space-y-2 mb-6">
+          <li>📞 <strong>Phone:</strong> +60 16 8916 381 / 03-8962 6381</li>
+          <li>📧 <strong>Email:</strong> quinocycle@gmail.com</li>
+          <li>📍 <strong>Address:</strong> No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300</li>
+        </ul>
+        <a href={WA_LINK} class="inline-block bg-primary text-on-primary font-label font-bold text-sm px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">💬 Chat on WhatsApp</a>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">The People Behind the Boxes</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-4">There's nothing glamorous about moving carton boxes in the Balakong heat. But there's something satisfying about a team that takes pride in getting it right — grading properly, packing carefully, delivering on time. Every box we send out is someone's business, someone's move, someone's livelihood. That's worth taking seriously.</p>
+        <p class="font-body text-on-surface leading-relaxed">Come visit. The kettle's usually on.</p>
+      </section>
+    </div>
+  </article>
+</Layout>
