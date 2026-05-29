@@ -95,11 +95,11 @@ const products = [
           data-price={p.price}
         >
           <!-- Image -->
-          <div class="relative aspect-[4/3] bg-surface-container rounded-3xl mb-5 overflow-hidden">
+          <div class="relative aspect-[4/3] bg-white rounded-3xl mb-5 overflow-hidden">
             <img
               src={p.img}
               alt={p.name}
-              class={`w-full h-full group-hover:scale-105 transition-transform duration-700 ${p.condition === 'used' ? 'object-contain p-4' : 'object-cover'}`}
+              class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
             <!-- Condition badge -->
