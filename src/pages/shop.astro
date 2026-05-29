@@ -9,10 +9,8 @@ const products = [
   { id: 'n-s',   condition: 'new',  size: 'S',   img: '/images/box-new-s.png',   name: 'Small Size New Carton Box A4',   nameMS: 'Kotak Baru Saiz Kecil / A4',      dims: '310 × 220 × 220 mm', wall: 'Single Wall', price: 3.00, minQty: 100, use: 'Apparel, books, electronics, online orders' },
   { id: 'n-m',   condition: 'new',  size: 'M',   img: '/images/box-new-m.png',   name: 'Medium Size New Carton Box A3N', nameMS: 'Kotak Baru Saiz Sederhana / A3N', dims: '440 × 310 × 230 mm', wall: 'Double Wall', price: 5.00, minQty: 100, use: 'Home goods, kitchenware, bulk retail orders' },
   { id: 'n-l',   condition: 'new',  size: 'L',   img: '/images/box-new-l.png',   name: 'Large Size New Carton Box NLN',  nameMS: 'Kotak Baru Saiz Besar / NLN',     dims: '590 × 390 × 390 mm', wall: 'Double Wall', price: 8.00, minQty: 50,  use: 'Moving house, appliances, heavy goods' },
-  { id: 'n-xxl', condition: 'new',  size: 'XXL', img: '/images/box-new-xxl.png', name: 'Jumbo Size New Carton Box XXL',  nameMS: 'Kotak Baru Saiz Besar XXL / Jumbo', dims: '860 × 460 × 560 mm', wall: 'Double Wall', price: 18.00, minQty: 20,  use: 'Furniture, large appliances, oversized cargo' },
   // USED BOXES — Small
   { id: 'u-ains',   condition: 'used', size: 'S', img: '/images/box-used-ains.png',   name: 'Used Carton Box AinS',   dims: '320 × 165 × 230 mm', wall: 'Single Wall', price: 0.90, minQty: 200, use: 'Small items, gifts, accessories, e-commerce parcels' },
-  { id: 'u-yf',     condition: 'used', size: 'S', img: '/images/box-used-yf.png',     name: 'Used Carton Box YF',     dims: '300 × 150 × 400 mm', wall: 'Double Wall', price: 0.90, minQty: 200, use: 'Tall narrow items, bottles, cylinders, tubes' },
   { id: 'u-hamee',  condition: 'used', size: 'S', img: '/images/box-used-hamee.png',  name: 'Used Carton Box Hamee',  dims: '330 × 200 × 270 mm', wall: 'Single Wall', price: 1.00, minQty: 200, use: 'Books, apparel, small retail items, stationery' },
   { id: 'u-s3white',condition: 'used', size: 'S', img: '/images/box-used-s3white.png',name: 'Used Carton Box S3White',dims: '330 × 310 × 270 mm', wall: 'Single Wall', price: 1.20, minQty: 200, use: 'Home goods, office supplies, retail overflow' },
   { id: 'u-jimat',  condition: 'used', size: 'S', img: '/images/box-used-jimat.png',  name: 'Used Carton Box Jimat',  dims: '400 × 320 × 250 mm', wall: 'Single Wall', price: 1.50, minQty: 150, use: 'Household items, e-commerce fulfilment, lightweight storage' },
@@ -33,7 +31,7 @@ const products = [
 
 <Layout
   title="Shop Carton Boxes — Quinocycle Wholesale"
-  description="Buy new and used carton boxes in bulk at fixed wholesale prices. XS Mini, S A4, M A3N, L NLN, and XXL Jumbo sizes available. Free delivery across KL & Selangor for orders above RM300. Peninsular Malaysia delivery."
+  description="Buy new and used carton boxes in bulk at fixed wholesale prices. XS Mini, S A4, M A3N, and L NLN sizes available. Free delivery across KL & Selangor for orders above RM300. Peninsular Malaysia delivery."
 >
   <!-- Page Hero -->
   <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
@@ -57,7 +55,6 @@ const products = [
         <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="S">Size S</button>
         <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="M">Size M</button>
         <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="L">Size L</button>
-        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="XXL">Size XXL</button>
       </div>
       <button
         class="flex items-center gap-2 font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-on-surface hover:border-primary hover:text-primary transition-all"
