@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.quinocycle.com.my/sitemap.xml
+Sitemap: https://www.quinocycle.com.my/sitemap-index.xml

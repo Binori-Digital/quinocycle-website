@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 import tailwind from '@astrojs/tailwind';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://www.quinocycle.com.my',
@@ -11,5 +12,5 @@ export default defineConfig({
     assets: '_assets',
   },
 
-  integrations: [tailwind()],
+  integrations: [tailwind(), sitemap()],
 });
