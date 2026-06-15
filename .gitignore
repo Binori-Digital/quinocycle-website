@@ -13,6 +13,9 @@ npm-debug.log*
 .env.local
 .env.production
 
+# Credentials (never commit)
+.git-credentials
+
 # OS
 .DS_Store
 Thumbs.db

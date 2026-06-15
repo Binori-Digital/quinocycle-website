@@ -1,0 +1,124 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'Custom Halal-Certified Packaging for Malaysian Food Brands — Compliance Done Right', description: 'JAKIM-aligned custom carton packaging for halal food brands. Print-ready halal logo placement, food-grade liners, and wholesale supply from Quinocycle Balakong.', date: '2026-04-29', readTime: '7 min', category: 'Custom Boxes', author: 'Quinocycle Team', slug: 'custom-boxes-halal-certified-food-brands-0429' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20need%20custom%20halal-certified%20packaging%20for%20my%20food%20brand.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-04-29', dateModified: '2026-04-29', inLanguage:"en-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/custom-boxes-halal-certified-food-brands-0429"}, keywords:"halal packaging Malaysia, JAKIM custom boxes Selangor, halal food brand packaging Balakong, halal logo print boxes Cheras, food-grade carton Klang Valley, halal certified mailer Kajang" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does packaging itself need halal certification?","acceptedAnswer":{"@type":"Answer","text":"The carton itself doesn't require certification, but it must not contain materials that could compromise the halal status of the food. Our virgin kraft cartons use no animal-derived adhesives or coatings — they're suitable for use with halal-certified food without affecting the certificate."}},{"@type":"Question","name":"Can you print the JAKIM halal logo on the box?","acceptedAnswer":{"@type":"Answer","text":"Yes — but only if your brand holds a valid JAKIM certificate, with your certificate number printed alongside the logo. We follow JAKIM's halal logo usage guidelines for size, colour, and placement. Submit a copy of your current certificate at artwork stage."}},{"@type":"Question","name":"Are your inks and adhesives food-safe?","acceptedAnswer":{"@type":"Answer","text":"Yes. We use food-grade water-based inks for outer print and starch-based adhesives compatible with food contact. For direct food contact applications (like bakery boxes), we recommend an additional inner liner."}},{"@type":"Question","name":"What's the minimum print run for halal-branded boxes?","acceptedAnswer":{"@type":"Answer","text":"1,000 cartons minimum for 1-4 colour flexo print. Many small halal F&B brands hit this with a 2-3 month inventory order. Smaller runs available with digital print at higher per-unit cost."}},{"@type":"Question","name":"How long does it take to produce a custom halal-branded carton order?","acceptedAnswer":{"@type":"Answer","text":"7-10 working days from artwork sign-off including JAKIM logo compliance check, print, die-cut, and dispatch. Rush production possible for established customers — WhatsApp us with your timeline."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"RM 1.90 – RM 6.50 per box", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">For Malaysian food brands, halal certification is not optional — it is the table stakes for shelf placement at Lotus's, Mydin, AEON, and 99 Speedmart, and increasingly for export to Indonesia, Brunei, and the Gulf. The carton your product ships in is part of the certification picture: wrong adhesive, animal-derived coatings, or non-compliant logo usage can all undermine your JAKIM certificate. Quinocycle has supplied halal-aligned custom packaging to Selangor F&B brands for over a decade. Here's what you need to know.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Halal Compliance for the Carton Itself</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Materials That Must Be Avoided</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Animal-derived gelatine adhesives, certain glossy coatings using porcine derivatives, and some specialty inks contain ingredients that compromise halal status. These materials are unusual in our supply chain anyway, but worth confirming for any new packaging vendor. Quinocycle uses virgin kraft, starch-based adhesives, and water-based inks throughout — all compatible with halal certification.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Inner Liners for Direct Food Contact</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">If the carton contacts food directly (bakery boxes, sealed dry goods), we recommend an additional food-grade inner liner — paper or PE film. The carton substrate is fine, but adding a liner is a belt-and-braces approach that protects the certificate during JAKIM audits.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Cross-Contamination at the Vendor Stage</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Our Balakong factory does not handle non-halal materials. For brands undergoing strict JAKIM third-party audits, we can provide a vendor-side declaration confirming this — useful documentation when your auditor asks about the supply chain.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">JAKIM Logo Usage on Printed Boxes</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Logo Format & Placement</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">JAKIM has specific guidelines on the halal logo: minimum size, colour fidelity, and presentation alongside your certificate number. We help customers position the logo correctly during artwork — usually on the front face of the box near the brand mark, sized for visibility but not dominating.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Certificate Number Display</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Your JAKIM certificate number must accompany the halal logo. We include this as part of artwork prep and verify the number matches the certificate you submit. This avoids the embarrassing scenario of having to reprint a thousand boxes because your certificate renewed and the number changed.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Foreign Halal Marks</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">For brands exporting to Indonesia (BPJPH/MUI), Singapore (MUIS), or the Gulf, we can position multiple halal marks on the same carton. Each requires its own certificate documentation — submit them all at the start of artwork.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Box Formats Common in Halal F&B</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Hari Raya hamper boxes (custom die-cut with festive print, lid-and-base format), bakery cake boxes (food-grade, window cut-out, easy-fold), frozen ready-meal outer cartons (insulated cushioning compatible), Ramadan iftar boxes (presentation grade, often with internal divider), umrah/hajj travel ready-meal cartons (compact, portable). Each has its own ergonomic and presentation considerations beyond the halal compliance basics.</p>
+      </section>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8 my-12">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-6">Halal Custom Box Spec Cheat Sheet</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">RAYA HAMPER (LID-BASE)</p>
+            <p class="font-body text-on-surface text-sm">3-ply | 350x250x150mm</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">BAKERY WINDOW BOX</p>
+            <p class="font-body text-on-surface text-sm">food-grade | 250x250x100mm</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">FROZEN MEAL OUTER</p>
+            <p class="font-body text-on-surface text-sm">5-ply double-wall | 300x200x150mm</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">IFTAR PRESENTATION</p>
+            <p class="font-body text-on-surface text-sm">3-ply + divider | 400x300x100mm</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Halal Packaging FAQs</h2>
+        <div class="space-y-4">
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Does packaging itself need halal certification?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">No — but materials must not compromise food halal status. Our virgin kraft and starch adhesives are compatible.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Can you print the JAKIM logo?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Yes — provided your brand holds a valid certificate. Number printed alongside the logo per JAKIM guidelines.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Are inks and adhesives food-safe?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Yes — water-based inks and starch-based adhesives. Add an inner liner for direct food contact.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Minimum print run for halal-branded boxes?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">1,000 cartons for flexo. Smaller via digital print at higher per-unit cost.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">How long for a custom order?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">7-10 working days from artwork sign-off including logo compliance check.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="mb-12 bg-primary/5 border border-primary/20 rounded-lg p-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Halal-Aligned Custom Packaging from Balakong</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">From Raya hampers to frozen ready-meal outers, Quinocycle prints custom halal-aligned cartons for Klang Valley and nationwide F&B brands. Submit your JAKIM certificate at artwork stage and we'll handle the rest.</p>
+        <p class="font-body text-on-surface mb-6"><strong>Contact Quinocycle today:</strong></p>
+        <ul class="font-body text-on-surface text-sm space-y-2 mb-6">
+          <li>📞 <strong>Phone:</strong> +60 16 8916 381 / 03-8962 6381</li>
+          <li>📧 <strong>Email:</strong> quinocycle@gmail.com</li>
+          <li>📍 <strong>Address:</strong> No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300</li>
+        </ul>
+        <a href={WA_LINK} class="inline-block bg-primary text-on-primary font-label font-bold text-sm px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">💬 Chat on WhatsApp</a>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Conclusion: Halal Compliance Is a Supply-Chain Question</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-4">A halal certificate is only as strong as the supply chain behind it. Packaging vendors are part of that chain. Choosing one that understands JAKIM compliance — materials, logo usage, vendor declarations — saves audit headaches later.</p>
+        <p class="font-body text-on-surface leading-relaxed">WhatsApp Quinocycle to discuss your halal F&B packaging programme.</p>
+      </section>
+    </div>
+  </article>
+</Layout>

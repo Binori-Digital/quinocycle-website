@@ -1,0 +1,124 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'ECT vs Mullen Burst Test — How to Read Carton Strength Ratings in Malaysia', description: 'Decode ECT (Edge Crush Test) and Mullen burst test ratings to spec the right carton for your shipment. Plain-English guide from Quinocycle Balakong.', date: '2026-04-29', readTime: '7 min', category: 'Packaging Knowledge', author: 'Quinocycle Team', slug: 'packaging-knowledge-ect-mullen-burst-test-0429' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20need%20help%20choosing%20the%20right%20carton%20strength%20rating.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-04-29', dateModified: '2026-04-29', inLanguage:"en-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/packaging-knowledge-ect-mullen-burst-test-0429"}, keywords:"ECT rating Malaysia, Mullen burst test Selangor, carton strength Balakong, box compression test Cheras, edge crush rating Klang Valley, carton specification Kajang" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does ECT mean on a carton spec sheet?","acceptedAnswer":{"@type":"Answer","text":"ECT stands for Edge Crush Test — the force in pounds per linear inch (lb/in) needed to crush the edge of a corrugated sample. Higher ECT means a carton can stack higher without collapsing. ECT 32 is general retail standard; ECT 44 handles heavier loads; ECT 55+ is industrial-grade."}},{"@type":"Question","name":"What does Mullen burst test measure?","acceptedAnswer":{"@type":"Answer","text":"Mullen burst (sometimes BCT or PSI rating) measures the force in pounds per square inch needed to puncture the carton wall. It's the older test, popular for shipments where rough handling and impact damage are the main risk — like Pos Laju distribution and warehouse forklifts."}},{"@type":"Question","name":"Which test should I look for on my carton spec?","acceptedAnswer":{"@type":"Answer","text":"For pallet stacking, retail shelf, and warehouse storage — use ECT. For e-commerce parcel shipping, courier handling, and one-off bulk freight — use Mullen burst. Many Malaysian suppliers list both; ask if only one is shown."}},{"@type":"Question","name":"What ECT rating do I need for typical e-commerce shipping?","acceptedAnswer":{"@type":"Answer","text":"For Shopee/Lazada parcels under 5kg use ECT 32 single-wall. For 5-15kg parcels use ECT 44. For heavier 15-30kg shipments use ECT 55 double-wall. Above 30kg always specify double-wall and consider ECT 65+."}},{"@type":"Question","name":"Can you certify ECT or Mullen on supplied cartons?","acceptedAnswer":{"@type":"Answer","text":"Yes — every batch leaving our Balakong line carries spec data including grammage, ECT, and burst rating. For audit-grade certification (e.g. for Walmart or Costco vendor compliance) we provide signed test certificates."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"RM 1.90 – RM 6.50 per box", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">If you have ever read a carton specification sheet and seen "ECT 32" or "275 PSI Mullen" and wondered what they actually mean, you are not alone. Most Malaysian buyers default to ordering by ply count — 3-ply, 5-ply, 7-ply — and assume that's enough. It isn't. Two cartons of identical ply count can perform very differently in the warehouse, the courier hub, or stacked on a pallet, depending on the strength rating of the corrugated material itself. Here is the plain-English guide to ECT and Mullen burst, and how to use them when ordering.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">ECT — Edge Crush Test Explained</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">What ECT Actually Tests</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">ECT puts a small upright sample of corrugated board on a press and measures how much vertical force per linear inch (lb/in) it takes to crush the edge. Because cartons stacked on a pallet bear weight on their edges (not their faces), ECT is the most accurate predictor of how high you can stack a carton before the bottom layer collapses.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Common Malaysian ECT Tiers</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">ECT 23 is light-duty retail — small product packaging where stacking is minimal. ECT 32 is the most common single-wall grade for general retail and ecommerce up to 5kg. ECT 44 handles 5-15kg parcel weights. ECT 55-65 are double-wall grades for 15-30kg shipments. Industrial double-wall tops out around ECT 75 for 30kg+ heavy loads.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">When ECT Matters Most</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Pallet stacking, warehouse rack storage, retail shelf display, and long-distance sea freight all expose cartons to compression load. ECT is your number. If your damage profile is "bottom carton in stack collapsed," ECT was probably under-spec.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Mullen Burst Test Explained</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">What Mullen Tests</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Mullen burst pushes a rubber diaphragm against the carton wall and measures pounds per square inch (PSI) needed to rupture it. It simulates impact damage — a courier dropping a box, a forklift tine catching the corner, items inside punching through under sudden movement.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Common Mullen Tiers</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">200 PSI Mullen is general single-wall standard. 275 PSI handles heavier or sharp-cornered contents. 350 PSI is double-wall. 500 PSI+ is heavy-duty industrial. Many courier and freight operators in Malaysia spec their compliance minimums in Mullen because it directly relates to drop and impact survival.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">When Mullen Matters Most</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">E-commerce courier shipping, irregular-shape contents (bottles, tools, hardware), and one-off bulk freight all favour Mullen as the relevant rating. If your damage profile is "the box was punctured" or "the corner tore open," Mullen was probably under-spec.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Practical Carton Selection by Use Case</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">An apparel brand shipping 1,000 Shopee parcels a week needs ECT 32 single-wall — light products, low stacking. A bottled-water distributor needs ECT 55 double-wall — high stack pressure, no impact risk. A glass-bottle craft brewery needs both ECT 44 plus 350 PSI Mullen — moderate stacking, high impact risk. The right answer comes from understanding both ratings and matching to your actual handling profile.</p>
+      </section>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8 my-12">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-6">Quick Strength Rating Reference</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">UNDER 5KG E-COMMERCE</p>
+            <p class="font-body text-on-surface text-sm">ECT 32 / 200 PSI single-wall</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">5-15KG PARCEL</p>
+            <p class="font-body text-on-surface text-sm">ECT 44 / 275 PSI single-wall</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">15-30KG SHIPMENT</p>
+            <p class="font-body text-on-surface text-sm">ECT 55 / 350 PSI double-wall</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">30KG+ INDUSTRIAL</p>
+            <p class="font-body text-on-surface text-sm">ECT 65+ / 500 PSI double-wall</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Strength Rating FAQs</h2>
+        <div class="space-y-4">
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">What does ECT mean on a carton spec?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Edge Crush Test — force in lb/in to crush the upright edge. Predicts how high a carton can stack without collapsing.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">What does Mullen burst test measure?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">PSI required to puncture the carton wall — predicts impact survival in courier and rough-handling environments.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Which test should I look for?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">ECT for stacking and pallet loads; Mullen for parcel courier and impact-prone shipments. Many suppliers list both.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">What ECT for typical e-commerce?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">ECT 32 single-wall under 5kg; ECT 44 for 5-15kg; ECT 55 double-wall above 15kg.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Can you certify ECT or Mullen?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Yes — every batch from our Balakong line includes spec data. Audit-grade certificates available on request.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="mb-12 bg-primary/5 border border-primary/20 rounded-lg p-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Spec the Right Carton, Cut the Damage Bill</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">If your warehouse damage rate is creeping up, the answer might not be a thicker box — it might be the right strength rating for your real handling profile. Quinocycle helps Klang Valley shippers decode their carton specs and dial in the right ECT/Mullen mix.</p>
+        <p class="font-body text-on-surface mb-6"><strong>Contact Quinocycle today:</strong></p>
+        <ul class="font-body text-on-surface text-sm space-y-2 mb-6">
+          <li>📞 <strong>Phone:</strong> +60 16 8916 381 / 03-8962 6381</li>
+          <li>📧 <strong>Email:</strong> quinocycle@gmail.com</li>
+          <li>📍 <strong>Address:</strong> No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300</li>
+        </ul>
+        <a href={WA_LINK} class="inline-block bg-primary text-on-primary font-label font-bold text-sm px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">💬 Chat on WhatsApp</a>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Conclusion: Numbers Beat Guesswork</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-4">Ply count alone is not a strength specification — it's a structural description. The numbers that matter are ECT and Mullen burst. Once you can read them, you stop overspending on too-strong cartons and stop under-spending on the ones that fail in transit.</p>
+        <p class="font-body text-on-surface leading-relaxed">Quinocycle prints both ratings on every spec sheet. WhatsApp us if you want a strength audit on your current cartons.</p>
+      </section>
+    </div>
+  </article>
+</Layout>
