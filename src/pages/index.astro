@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 
 // Hero heading animation config
-const headingLines = ["Increase packaging efficiency", "with vision and action."];
+const headingLines = ["Carton box Malaysia —", "kotak pindah & kotak murah."];
 const charDelay = 30;
 const initialDelay = 200;
 
@@ -114,7 +114,11 @@ const blogPosts = [
 ];
 ---
 
-<Layout heroMode={true}>
+<Layout
+  heroMode={true}
+  title="Carton Box Malaysia | Kotak Pindah & Kotak Murah Borong — Quinocycle"
+  description="Carton box wholesale Malaysia. Kotak pindah rumah & kotak kardus murah — new, used & custom sizes in bulk from RM0.90. Fixed prices, delivery across Peninsular Malaysia."
+>
   <!-- ===================== VIDEO HERO ===================== -->
   <section class="relative w-full h-screen overflow-hidden bg-black text-white font-sans">
 
@@ -157,8 +161,9 @@ const blogPosts = [
               class="text-3xl md:text-4xl xl:text-5xl font-normal mb-4"
               style="letter-spacing: -0.04em;"
             >
+              <span class="sr-only">{headingLines.join(' ')}</span>
               {headingLines.map((line, lineIndex) => (
-                <div>
+                <div aria-hidden="true">
                   {line.split(' ').map((word, wordIndex) => (
                     <span style="display:inline-block;white-space:nowrap;margin-right:0.28em;">
                       {[...word].map((char, charIndex) => {
@@ -179,7 +184,7 @@ const blogPosts = [
               class="text-base md:text-lg text-gray-300 mb-5"
               style="opacity:0;transition:opacity 1000ms;"
             >
-              We back visionaries and craft ventures that define what comes next.
+              New, used &amp; custom carton boxes in bulk — kotak pindah rumah dan kotak kardus murah. Fixed wholesale prices, delivery across Peninsular Malaysia.
             </p>
             <div
               id="heroBtns"
@@ -462,6 +467,59 @@ const blogPosts = [
       </div>
     </div>
   </section>
+
+  <!-- ===================== SEO / FAQ ===================== -->
+  <section class="py-24 bg-surface">
+    <div class="max-w-4xl mx-auto px-6 md:px-8">
+      <div class="mb-14 max-w-2xl">
+        <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">Carton Box Malaysia</span>
+        <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-5">Kotak pindah, kotak murah &amp; carton box — borong terus dari pembekal.</h2>
+        <p class="font-body text-secondary leading-relaxed text-lg">
+          Quinocycle ialah pembekal <strong class="text-on-surface font-semibold">carton box</strong> borong di Malaysia. Kami jual <strong class="text-on-surface font-semibold">kotak pindah rumah</strong>, <strong class="text-on-surface font-semibold">kotak kardus murah</strong>, kotak terpakai dan kotak tersuai (custom) dalam pelbagai saiz — baru mahupun terpakai. Harga borong tetap bermula <strong class="text-on-surface font-semibold">RM0.90 sekotak</strong>, sesuai untuk pindah rumah, penjual online, peruncit dan syarikat logistik. Penghantaran ke seluruh Semenanjung Malaysia, percuma untuk KL &amp; Selangor bagi pesanan melebihi RM300.
+        </p>
+      </div>
+
+      <div class="flex flex-col divide-y divide-outline-variant/20">
+        {[
+          {
+            q: 'Di mana boleh beli kotak pindah rumah yang murah di Malaysia?',
+            a: 'Quinocycle membekalkan kotak pindah rumah baru dan terpakai secara borong di seluruh Semenanjung Malaysia. Harga bermula RM0.90 sekotak. WhatsApp kami untuk sebut harga segera.',
+          },
+          {
+            q: 'Berapa harga carton box borong?',
+            a: 'Harga carton box kami tetap (fixed wholesale) tanpa caj tersembunyi. Kotak terpakai menjimatkan sehingga 50% berbanding kotak baru. Pesanan minimum RM1,000 untuk harga borong penuh.',
+          },
+          {
+            q: 'Adakah anda jual kotak kardus murah untuk penjual online?',
+            a: 'Ya. Kami membekal kotak kardus murah dalam saiz kecil, sederhana dan besar untuk penjual Shopee, TikTok Shop dan Lazada — terus dalam bulk supaya kos pembungkusan lebih rendah.',
+          },
+          {
+            q: 'Kawasan penghantaran carton box?',
+            a: 'Kami hantar ke seluruh Semenanjung Malaysia. Penghantaran percuma untuk KL &amp; Selangor bagi pesanan melebihi RM300.',
+          },
+        ].map(item => (
+          <details class="group py-5">
+            <summary class="flex items-center justify-between cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              <span set:html={item.q}></span>
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-secondary leading-relaxed mt-3" set:html={item.a}></p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Di mana boleh beli kotak pindah rumah yang murah di Malaysia?", "acceptedAnswer": { "@type": "Answer", "text": "Quinocycle membekalkan kotak pindah rumah baru dan terpakai secara borong di seluruh Semenanjung Malaysia. Harga bermula RM0.90 sekotak. WhatsApp kami untuk sebut harga segera." } },
+      { "@type": "Question", "name": "Berapa harga carton box borong?", "acceptedAnswer": { "@type": "Answer", "text": "Harga carton box kami tetap (fixed wholesale) tanpa caj tersembunyi. Kotak terpakai menjimatkan sehingga 50% berbanding kotak baru. Pesanan minimum RM1,000 untuk harga borong penuh." } },
+      { "@type": "Question", "name": "Adakah anda jual kotak kardus murah untuk penjual online?", "acceptedAnswer": { "@type": "Answer", "text": "Ya. Kami membekal kotak kardus murah dalam saiz kecil, sederhana dan besar untuk penjual Shopee, TikTok Shop dan Lazada — terus dalam bulk supaya kos pembungkusan lebih rendah." } },
+      { "@type": "Question", "name": "Kawasan penghantaran carton box?", "acceptedAnswer": { "@type": "Answer", "text": "Kami hantar ke seluruh Semenanjung Malaysia. Penghantaran percuma untuk KL & Selangor bagi pesanan melebihi RM300." } }
+    ]
+  })} />
 
   <!-- ===================== CTA ===================== -->
   <section class="py-32 bg-primary-container text-on-primary-container relative overflow-hidden">
