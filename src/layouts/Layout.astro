@@ -69,14 +69,23 @@ import '../styles/global.css';
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Quinocycle",
-    "description": "Wholesale carton box supplier in Malaysia. New and used boxes in bulk.",
+    "legalName": "Quinocycle Sdn. Bhd.",
+    "description": "Wholesale carton box supplier in Balakong, Selangor, Malaysia. New and used corrugated boxes in bulk for moving, shipping, packing, storage and packaging.",
     "url": "https://www.quinocycle.com.my",
     "telephone": "+60168916381",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+      "addressLocality": "Balakong",
+      "addressRegion": "Selangor",
+      "postalCode": "43300",
       "addressCountry": "MY"
     },
-    "areaServed": "Peninsular Malaysia",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+    ],
+    "areaServed": ["Kuala Lumpur","Selangor","Klang Valley","Johor","Penang","Perak","Pahang","Negeri Sembilan","Kedah","Melaka","Terengganu","Kelantan","Perlis","Peninsular Malaysia"],
     "priceRange": "RM$$"
   }
   </script>
@@ -188,8 +197,7 @@ import '../styles/global.css';
         <div>
           <img src="/logo.png" alt="Quinocycle" class="h-10 w-auto mb-4" id="footerLogo" />
           <p class="font-body text-sm text-secondary leading-relaxed max-w-xs">
-            New &amp; used carton boxes in bulk.<br />
-            Peninsular Malaysia delivery. Fixed wholesale pricing.
+            Carton box supplier in Balakong, Selangor — new &amp; used boxes in bulk for moving, shipping, packing, storage &amp; packaging. Fixed wholesale pricing, delivery across Malaysia.
           </p>
           <a
             href={WA_LINK}
@@ -215,15 +223,15 @@ import '../styles/global.css';
           </div>
           <div class="flex flex-col gap-3">
             <h5 class="font-headline font-bold text-xs uppercase tracking-[0.2em] text-primary mb-1">Products</h5>
-            <a href="/shop"              class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">New Boxes</a>
-            <a href="/used-carton-boxes" class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Used Boxes</a>
-            <a href="/shop"              class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Small Boxes</a>
-            <a href="/shop"              class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">XL Boxes</a>
+            <a href="/moving-boxes-malaysia"   class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Moving Boxes (Kotak Pindah)</a>
+            <a href="/shipping-boxes-malaysia" class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Shipping Boxes</a>
+            <a href="/used-carton-boxes"       class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Used Boxes (Kotak Terpakai)</a>
+            <a href="/shop"                    class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">New Carton Boxes</a>
           </div>
           <div class="flex flex-col gap-3">
             <h5 class="font-headline font-bold text-xs uppercase tracking-[0.2em] text-primary mb-1">Info</h5>
             <p class="font-body text-sm text-secondary">Free delivery across <strong class="text-on-surface font-semibold">KL &amp; Selangor</strong> (For order above RM300)</p>
-            <p class="font-body text-sm text-secondary">Coverage: <strong class="text-on-surface font-semibold">Peninsular MY</strong></p>
+            <p class="font-body text-sm text-secondary">We deliver carton boxes to <strong class="text-on-surface font-semibold">Kuala Lumpur, Selangor, Johor, Penang, Perak, Pahang, Negeri Sembilan, Kedah, Melaka, Terengganu, Kelantan &amp; Perlis</strong> — anywhere in Peninsular Malaysia.</p>
             <p class="font-body text-sm text-secondary">Fixed wholesale pricing</p>
           </div>
         </div>

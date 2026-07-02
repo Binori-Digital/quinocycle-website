@@ -30,8 +30,8 @@ const products = [
 ---
 
 <Layout
-  title="Shop Carton Box Malaysia — Kotak Murah & Kotak Pindah Borong | Quinocycle"
-  description="Beli carton box, kotak pindah rumah & kotak kardus murah secara borong pada harga tetap. New & used boxes, saiz XS Mini, S A4, M A3N, L NLN. Free delivery KL & Selangor (order above RM300). Peninsular Malaysia delivery."
+  title="Buy Carton Boxes Online Malaysia — Kotak Murah & Kotak Pindah Borong | Quinocycle"
+  description="Buy moving, shipping, packing & storage carton boxes online in Malaysia. Kotak pindah rumah & kotak kardus murah borong — new & used, saiz XS Mini, S A4, M A3N, L NLN. Free delivery KL & Selangor (order above RM300)."
 >
   <!-- Page Hero -->
   <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
@@ -41,6 +41,9 @@ const products = [
     </h1>
     <p class="font-body text-xl text-secondary max-w-xl leading-relaxed">
       Fixed pricing · Free delivery across KL &amp; Selangor (for orders above RM300) · Peninsular Malaysia delivery
+    </p>
+    <p class="font-body text-base text-secondary max-w-2xl leading-relaxed mt-4">
+      Buy carton boxes online in Malaysia — new and used corrugated boxes in every size, ready stock, suitable as a moving box, packing box, shipping box, storage box or packaging box. Ships from Balakong, Selangor to the Klang Valley and every state in Peninsular Malaysia.
     </p>
   </section>
 
@@ -95,7 +98,7 @@ const products = [
           <div class="relative aspect-[4/3] bg-white rounded-3xl mb-5 overflow-hidden">
             <img
               src={p.img}
-              alt={p.name}
+              alt={`${p.name} ${p.dims} Malaysia${p.nameMS ? ` — ${p.nameMS}` : ''}`}
               class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
@@ -212,6 +215,29 @@ const products = [
       <p class="text-center font-body text-xs text-secondary mt-3">We'll confirm availability and payment details via WhatsApp.</p>
     </div>
   </aside>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Carton Boxes Malaysia — Wholesale Catalogue",
+    "itemListElement": products.map((p, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "item": {
+        "@type": "Product",
+        "name": p.name,
+        "image": `https://www.quinocycle.com.my${p.img}`,
+        "description": `${p.condition === 'new' ? 'New' : 'Used'} ${p.wall.toLowerCase()} carton box ${p.dims}. ${p.use}. Wholesale carton box Malaysia — delivery across Peninsular Malaysia.`,
+        "offers": {
+          "@type": "Offer",
+          "price": p.price.toFixed(2),
+          "priceCurrency": "MYR",
+          "availability": "https://schema.org/InStock",
+          "eligibleQuantity": { "@type": "QuantitativeValue", "minValue": p.minQty }
+        }
+      }
+    }))
+  })} />
 </Layout>
 
 <script define:vars={{ WA_NUMBER }}>

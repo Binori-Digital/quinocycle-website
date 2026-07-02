@@ -26,8 +26,8 @@ const products = [
 ---
 
 <Layout
-  title="Used Carton Boxes Malaysia — Once-Used Recycled Boxes Wholesale | Quinocycle"
-  description="Buy once-used and recycled corrugated carton boxes in bulk at wholesale prices. 11 models from RM0.90/box. Clean, odourless, single & double wall. Free delivery across KL & Selangor for orders above RM300."
+  title="Used Carton Boxes Malaysia (Kotak Terpakai) — Recycled Boxes Wholesale | Quinocycle"
+  description="Buy used carton boxes (kotak terpakai murah) in bulk at wholesale prices in Malaysia. Once-used recycled boxes from RM0.90 — clean, odourless, single & double wall. Ideal moving box & shipping box. Free delivery KL & Selangor above RM300."
 >
   <!-- Page Hero -->
   <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
@@ -37,6 +37,9 @@ const products = [
     </h1>
     <p class="font-body text-xl text-secondary max-w-xl leading-relaxed">
       Once-used corrugated boxes — clean, dry, and ready to repack. Save cost for moving house, office relocation, e-commerce fulfilment, and storage.
+    </p>
+    <p class="font-body text-base text-secondary max-w-2xl leading-relaxed mt-4">
+      Kotak terpakai murah untuk pindah rumah, penghantaran dan simpanan — jimat sehingga 60% berbanding kotak baru. Used boxes work perfectly as a moving box, packing box, shipping box or storage box. Delivery from Balakong, Selangor to Kuala Lumpur, the Klang Valley and all of Peninsular Malaysia.
     </p>
   </section>
 
@@ -89,7 +92,7 @@ const products = [
           <div class="relative aspect-[4/3] bg-surface-container rounded-3xl mb-5 overflow-hidden">
             <img
               src={p.img}
-              alt={`Used Carton Box ${p.model} ${p.dims}`}
+              alt={`Used Carton Box ${p.model} ${p.dims} Malaysia — Kotak Terpakai`}
               class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
@@ -218,6 +221,29 @@ const products = [
       <p class="text-center font-body text-xs text-secondary mt-3">We'll confirm availability and payment details via WhatsApp.</p>
     </div>
   </aside>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Used Carton Boxes Malaysia (Kotak Terpakai)",
+    "itemListElement": products.map((p, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "item": {
+        "@type": "Product",
+        "name": `Used Carton Box ${p.model}`,
+        "image": `https://www.quinocycle.com.my${p.img}`,
+        "description": `Used ${p.wall.toLowerCase()} carton box ${p.dims} (kotak terpakai). ${p.use}. Once-used recycled box — wholesale Malaysia, delivery across Peninsular Malaysia.`,
+        "offers": {
+          "@type": "Offer",
+          "price": p.price.toFixed(2),
+          "priceCurrency": "MYR",
+          "availability": "https://schema.org/InStock",
+          "eligibleQuantity": { "@type": "QuantitativeValue", "minValue": p.minQty }
+        }
+      }
+    }))
+  })} />
 </Layout>
 
 <script define:vars={{ WA_NUMBER }}>

@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const WA_NUMBER = '60168916381';
+const WA_LINK   = `https://wa.me/${WA_NUMBER}?text=Hi%20Quinocycle!%20I%20would%20like%20to%20order%20shipping%20boxes%20for%20my%20online%20store.`;
+
+const boxes = [
+  { img: '/images/box-used-ains.png',   name: 'Used Carton Box AinS',          nameMS: 'Kotak Penghantaran Terpakai Saiz Kecil', dims: '320 × 165 × 230 mm', wall: 'Single Wall', price: 0.90, href: '/used-carton-boxes' },
+  { img: '/images/box-new-xs.png',      name: 'Mini Size New Carton Box XS',   nameMS: 'Kotak Baru Saiz Mini',                   dims: '170 × 115 × 150 mm', wall: 'Single Wall', price: 1.10, href: '/shop' },
+  { img: '/images/box-used-hamee.png',  name: 'Used Carton Box Hamee',         nameMS: 'Kotak Penghantaran Terpakai Saiz Kecil', dims: '330 × 200 × 270 mm', wall: 'Single Wall', price: 1.00, href: '/used-carton-boxes' },
+  { img: '/images/box-new-s.png',       name: 'Small Size New Carton Box A4',  nameMS: 'Kotak Baru Saiz A4',                     dims: '310 × 220 × 220 mm', wall: 'Single Wall', price: 3.00, href: '/shop' },
+  { img: '/images/box-used-bary.png',   name: 'Used Carton Box Bary',          nameMS: 'Kotak Penghantaran Terpakai Saiz Kecil', dims: '300 × 200 × 250 mm', wall: 'Double Wall', price: 1.80, href: '/used-carton-boxes' },
+  { img: '/images/box-used-jimat.png',  name: 'Used Carton Box Jimat',         nameMS: 'Kotak Penghantaran Terpakai Saiz Kecil', dims: '400 × 320 × 250 mm', wall: 'Single Wall', price: 1.50, href: '/used-carton-boxes' },
+];
+
+const faqs = [
+  {
+    q: 'What shipping box sizes do online sellers use most in Malaysia?',
+    a: 'Most Shopee, TikTok Shop and Lazada sellers use small boxes between 300–400 mm on the longest side — big enough for apparel, books, cosmetics and electronics but small enough to keep courier fees in the lowest weight tier.',
+  },
+  {
+    q: 'Berapa harga kotak penghantaran untuk penjual online?',
+    a: 'Kotak penghantaran terpakai bermula RM0.90 sekotak dan kotak baru bermula RM1.10 sekotak. Beli secara borong (bulk) untuk menjimatkan kos pembungkusan setiap parcel.',
+  },
+  {
+    q: 'Can I use used boxes for e-commerce orders?',
+    a: 'Yes — our used boxes are once-used, clean and odourless, and many online sellers use them to cut packaging cost by up to 60%. For branded unboxing experiences, choose new boxes instead.',
+  },
+  {
+    q: 'Do you supply shipping boxes in bulk for businesses?',
+    a: 'Yes. We are a wholesale supplier — minimum order from 50–200 boxes per model depending on size, with fixed wholesale pricing and B2B invoicing. Delivery across Kuala Lumpur, Selangor and all of Peninsular Malaysia.',
+  },
+];
+---
+
+<Layout
+  title="Shipping Boxes Malaysia — Packing Boxes for Online Sellers | Quinocycle"
+  description="Shipping & packing boxes for Shopee, TikTok Shop & Lazada sellers in Malaysia. Small carton boxes from RM0.90/box wholesale — new & used, ready stock. Free delivery KL & Selangor above RM300, ships across Peninsular Malaysia."
+>
+  <!-- Page Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Shipping Box · Packing Box · E-Commerce Packaging</span>
+    <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface leading-[0.9] mb-6">
+      Shipping Boxes Malaysia<br /><span class="text-primary italic">for online sellers.</span>
+    </h1>
+    <p class="font-body text-xl text-secondary max-w-2xl leading-relaxed">
+      Small carton boxes for shipping and delivery — perfect for Shopee, TikTok Shop and Lazada orders, gift sets, mailing and parcel packing. From RM0.90 per box wholesale.
+    </p>
+    <p class="font-body text-base text-secondary max-w-2xl leading-relaxed mt-4">
+      Kotak penghantaran dan kotak parcel murah untuk penjual online — baru dan terpakai, stok sedia dihantar dari Balakong, Selangor ke Kuala Lumpur, Klang Valley dan seluruh Semenanjung Malaysia.
+    </p>
+    <div class="flex flex-wrap gap-4 mt-8">
+      <a href="/shop" class="bg-on-surface text-surface px-8 py-3.5 rounded-full font-headline font-bold text-xs uppercase tracking-widest hover:bg-primary transition-colors duration-200">
+        Shop All Boxes
+      </a>
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-xs uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors duration-200">
+        WhatsApp for a Quote
+      </a>
+    </div>
+  </section>
+
+  <!-- Recommended boxes -->
+  <section class="max-w-7xl mx-auto px-6 md:px-8 py-12">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-10">Best boxes for shipping &amp; e-commerce.</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+      {boxes.map(p => (
+        <article class="group">
+          <a href={p.href} class="block">
+            <div class="relative aspect-[4/3] bg-white rounded-3xl mb-5 overflow-hidden">
+              <img
+                src={p.img}
+                alt={`${p.name} ${p.dims} Malaysia — ${p.nameMS}`}
+                class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+              <div class="absolute bottom-4 right-4 bg-surface/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+                <span class="font-headline font-bold text-on-surface">RM {p.price.toFixed(2)}</span>
+                <span class="text-xs text-secondary"> / box</span>
+              </div>
+            </div>
+            <span class="font-label text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-1 block">{p.wall}</span>
+            <h3 class="font-headline text-xl font-bold tracking-tight text-on-surface mb-0.5">{p.name}</h3>
+            <p class="font-body text-xs text-outline mb-1">{p.nameMS}</p>
+            <p class="font-body text-sm text-secondary">{p.dims}</p>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Why us -->
+  <section class="max-w-7xl mx-auto px-6 md:px-8 pb-12">
+    <div class="bg-surface-container rounded-3xl px-8 md:px-12 py-10">
+      <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-8">Why online sellers buy from Quinocycle.</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <p class="font-headline font-bold text-lg text-primary mb-2">Lower cost per parcel</p>
+          <p class="font-body text-sm text-secondary leading-relaxed">Buying shipping boxes in bulk at fixed wholesale prices cuts your packaging cost on every single order — used boxes save up to 60% more.</p>
+        </div>
+        <div>
+          <p class="font-headline font-bold text-lg text-primary mb-2">Sizes that fit courier tiers</p>
+          <p class="font-body text-sm text-secondary leading-relaxed">Small and mini boxes sized for J&amp;T, Pos Laju, Ninja Van and DHL weight tiers, so you never pay for air.</p>
+        </div>
+        <div>
+          <p class="font-headline font-bold text-lg text-primary mb-2">Consistent ready stock</p>
+          <p class="font-body text-sm text-secondary leading-relaxed">Never run out mid-campaign. Ready-made boxes in stock at our Balakong warehouse, delivered fast across Peninsular Malaysia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 bg-surface">
+    <div class="max-w-4xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-8">Shipping box FAQ.</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/20">
+        {faqs.map(item => (
+          <details class="group py-5">
+            <summary class="flex items-center justify-between cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              <span>{item.q}</span>
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-secondary leading-relaxed mt-3">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(f => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a }
+    }))
+  })} />
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Stock up before your next campaign.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        Tell us what you sell and your average parcel size — we'll recommend the most cost-efficient box.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/shop" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-primary transition-colors duration-200">
+          Browse the Shop
+        </a>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors duration-200">
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

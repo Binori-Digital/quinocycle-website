@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const WA_NUMBER = '60168916381';
+const WA_LINK   = `https://wa.me/${WA_NUMBER}?text=Hi%20Quinocycle!%20I%20would%20like%20to%20order%20moving%20boxes%20(kotak%20pindah).`;
+
+const boxes = [
+  { img: '/images/box-used-pdc.png',    name: 'Used Carton Box PDC — Large',    nameMS: 'Kotak Pindah Terpakai Saiz Besar',     dims: '590 × 380 × 380 mm', wall: 'Double Wall', price: 5.00, href: '/used-carton-boxes' },
+  { img: '/images/box-new-l.png',       name: 'Large Size New Carton Box NLN',  nameMS: 'Kotak Pindah Baru Saiz Besar',         dims: '590 × 390 × 390 mm', wall: 'Double Wall', price: 8.00, href: '/shop' },
+  { img: '/images/box-used-lgd.png',    name: 'Used Carton Box LGD — Medium',   nameMS: 'Kotak Pindah Terpakai Saiz Sederhana', dims: '490 × 310 × 295 mm', wall: 'Double Wall', price: 3.50, href: '/used-carton-boxes' },
+  { img: '/images/box-used-yellow.png', name: 'Used Carton Box Yellow — Medium',nameMS: 'Kotak Pindah Terpakai Saiz Sederhana', dims: '460 × 330 × 310 mm', wall: 'Double Wall', price: 3.50, href: '/used-carton-boxes' },
+  { img: '/images/box-new-m.png',       name: 'Medium Size New Carton Box A3N', nameMS: 'Kotak Pindah Baru Saiz Sederhana',     dims: '440 × 310 × 230 mm', wall: 'Double Wall', price: 5.00, href: '/shop' },
+  { img: '/images/box-used-ibu.png',    name: 'Used Carton Box IBU — Small',    nameMS: 'Kotak Pindah Terpakai Saiz Kecil',     dims: '400 × 330 × 270 mm', wall: 'Double Wall', price: 2.00, href: '/used-carton-boxes' },
+];
+
+const faqs = [
+  {
+    q: 'Berapa harga kotak pindah rumah di Malaysia?',
+    a: 'Kotak pindah terpakai bermula RM0.90 sekotak dan kotak pindah baru bermula RM1.10 sekotak. Untuk pindah rumah, kotak double wall saiz sederhana dan besar (RM3.00–RM8.00) paling sesuai kerana lebih kukuh.',
+  },
+  {
+    q: 'How many moving boxes do I need to move house?',
+    a: 'A typical 3-bedroom home in Malaysia needs 40–60 boxes: mostly medium boxes for books, kitchenware and clothing, plus 10–15 large boxes for bedding, appliances and bulky items. WhatsApp us your house size and we will recommend a bundle.',
+  },
+  {
+    q: 'Are used boxes strong enough for moving house?',
+    a: 'Yes. Our used moving boxes are once-used, clean, dry and structurally intact — most are heavy duty double wall. They cost up to 60% less than new boxes, which is why mover companies buy them in bulk.',
+  },
+  {
+    q: 'Do you deliver moving boxes to my area?',
+    a: 'We deliver from Balakong, Selangor to Kuala Lumpur, the whole Klang Valley (Cheras, Kajang, Puchong, Petaling Jaya, Shah Alam) and every state in Peninsular Malaysia. Free delivery for KL & Selangor orders above RM300.',
+  },
+];
+---
+
+<Layout
+  title="Moving Boxes Malaysia — Kotak Pindah Rumah Murah Borong | Quinocycle"
+  description="Buy moving boxes in Malaysia — kotak pindah rumah baru & terpakai from RM0.90/box. Heavy duty double wall cartons for moving house & office relocation. Free delivery KL & Selangor above RM300, ships across Peninsular Malaysia."
+>
+  <!-- Page Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Kotak Pindah Rumah · Moving House · Office Relocation</span>
+    <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface leading-[0.9] mb-6">
+      Moving Boxes Malaysia<br /><span class="text-primary italic">kotak pindah dari RM0.90.</span>
+    </h1>
+    <p class="font-body text-xl text-secondary max-w-2xl leading-relaxed">
+      Heavy duty single wall and double wall carton boxes for moving house, office relocation and storage — new and used (terpakai), in ready stock at fixed wholesale prices.
+    </p>
+    <p class="font-body text-base text-secondary max-w-2xl leading-relaxed mt-4">
+      Kami jual kotak pindah rumah murah — kotak kardus baru dan terpakai dalam saiz kecil, sederhana dan besar. Penghantaran dari Balakong, Selangor ke Kuala Lumpur, Klang Valley dan seluruh Semenanjung Malaysia.
+    </p>
+    <div class="flex flex-wrap gap-4 mt-8">
+      <a href="/shop" class="bg-on-surface text-surface px-8 py-3.5 rounded-full font-headline font-bold text-xs uppercase tracking-widest hover:bg-primary transition-colors duration-200">
+        Shop All Boxes
+      </a>
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-xs uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors duration-200">
+        WhatsApp for a Quote
+      </a>
+    </div>
+  </section>
+
+  <!-- Recommended boxes -->
+  <section class="max-w-7xl mx-auto px-6 md:px-8 py-12">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-10">Best boxes for moving house.</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+      {boxes.map(p => (
+        <article class="group">
+          <a href={p.href} class="block">
+            <div class="relative aspect-[4/3] bg-white rounded-3xl mb-5 overflow-hidden">
+              <img
+                src={p.img}
+                alt={`${p.name} ${p.dims} Malaysia — ${p.nameMS}`}
+                class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+              <div class="absolute bottom-4 right-4 bg-surface/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+                <span class="font-headline font-bold text-on-surface">RM {p.price.toFixed(2)}</span>
+                <span class="text-xs text-secondary"> / box</span>
+              </div>
+            </div>
+            <span class="font-label text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-1 block">{p.wall}</span>
+            <h3 class="font-headline text-xl font-bold tracking-tight text-on-surface mb-0.5">{p.name}</h3>
+            <p class="font-body text-xs text-outline mb-1">{p.nameMS}</p>
+            <p class="font-body text-sm text-secondary">{p.dims}</p>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Why us -->
+  <section class="max-w-7xl mx-auto px-6 md:px-8 pb-12">
+    <div class="bg-surface-container rounded-3xl px-8 md:px-12 py-10">
+      <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-8">Why buy moving boxes from Quinocycle?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <p class="font-headline font-bold text-lg text-primary mb-2">Heavy duty double wall</p>
+          <p class="font-body text-sm text-secondary leading-relaxed">Double wall boxes hold books, kitchenware and appliances without collapsing. All dimensions listed so you can plan your move.</p>
+        </div>
+        <div>
+          <p class="font-headline font-bold text-lg text-primary mb-2">Ready stock, fast delivery</p>
+          <p class="font-body text-sm text-secondary leading-relaxed">Ready-made boxes in stock at our Balakong warehouse. Order today, and we deliver fast across KL, Selangor and Peninsular Malaysia.</p>
+        </div>
+        <div>
+          <p class="font-headline font-bold text-lg text-primary mb-2">New or used — you choose</p>
+          <p class="font-body text-sm text-secondary leading-relaxed">Used (terpakai) boxes save up to 60% for one-time moves. New boxes for when presentation matters. Both at fixed wholesale prices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 bg-surface">
+    <div class="max-w-4xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-8">Moving box FAQ.</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/20">
+        {faqs.map(item => (
+          <details class="group py-5">
+            <summary class="flex items-center justify-between cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              <span>{item.q}</span>
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-secondary leading-relaxed mt-3">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(f => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a }
+    }))
+  })} />
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Moving soon? Get your boxes today.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        Tell us your house size on WhatsApp and we'll recommend the right mix of boxes — delivered to your door.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/shop" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-primary transition-colors duration-200">
+          Browse the Shop
+        </a>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors duration-200">
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
