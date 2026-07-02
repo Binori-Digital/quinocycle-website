@@ -1,0 +1,119 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: 'New vs Used Carton Boxes — Which is Right for You?', description: 'Used boxes can save you up to 50% on packaging costs. We break down the pros, cons, and when each makes sense for your business or house move in Malaysia.', date: '2026-03-08', readTime: '4 min', category: 'Buyer Guide', author: 'Quinocycle Team', slug: 'new-vs-used-carton-boxes' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20want%20to%20ask%20about%20new%20vs%20used%20carton%20boxes.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-03-08', dateModified: '2026-07-02', inLanguage:"en-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/new-vs-used-carton-boxes"}, keywords:"new carton box Malaysia, used carton box Malaysia, kotak terpakai Balakong, kotak baru Selangor, carton box price Malaysia, packaging cost savings" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are used carton boxes strong enough for shipping?","acceptedAnswer":{"@type":"Answer","text":"Yes — a graded used box retains most of its original stacking strength. We inspect every used box for crush damage, moisture, and tears before it goes on the shelf. For loads under 20kg with proper void fill, a good-condition used box performs almost identically to a new one."}},{"@type":"Question","name":"How much cheaper are used boxes compared to new?","acceptedAnswer":{"@type":"Answer","text":"Typically 40-60% cheaper. A new medium carton in Malaysia costs around RM 3-6 per piece; an equivalent used carton runs RM 1.90-3. For a business shipping 500 parcels a month, that's easily RM 500-1,500 in monthly savings."}},{"@type":"Question","name":"When should I use new boxes instead of used?","acceptedAnswer":{"@type":"Answer","text":"Choose new boxes when the box is part of your brand presentation (unboxing experience), when you need exact uniform sizes for automated packing, when shipping fragile or heavy goods above 20kg, or when the customer expects a pristine carton — for example gifts and premium products."}},{"@type":"Question","name":"Are used boxes hygienic?","acceptedAnswer":{"@type":"Answer","text":"Reputable suppliers only resell boxes that carried dry, clean goods — not food waste or chemicals. At Quinocycle we source used cartons from factories and warehouses, and reject anything with stains, odours, or moisture damage."}},{"@type":"Question","name":"Can I mix new and used boxes in one operation?","acceptedAnswer":{"@type":"Answer","text":"Absolutely — that's what most cost-smart businesses do. Use new branded boxes for customer-facing shipments and used cartons for internal transfers, storage, marketplace orders, and moving. You save where the box doesn't need to impress anyone."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"RM 1.90 – RM 6.50 per box", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">Walk into any packaging supplier in Klang Valley and you'll face the same choice: crisp new cartons at RM 3-6 each, or graded used cartons at roughly half that. Which one is right depends on what you're packing, who receives it, and how many boxes you go through in a month. Here is the honest breakdown we give customers at our Balakong warehouse every day.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">The Case for Used Carton Boxes</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">The Savings Are Real</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">A used medium carton costs RM 1.90-3 versus RM 3-6 for the equivalent new box — a 40-60% saving on every single parcel. An online seller shipping 500 orders monthly saves RM 500-1,500 a month with no change to their product or process. For house moves, a full 3-bedroom move needs 40-70 boxes; used cartons cut that bill roughly in half.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Strength Is Mostly Retained</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Corrugated board loses meaningful strength only when it's been crushed, soaked, or repeatedly flexed. A single-trip factory carton — the kind we source — has done one gentle journey and retains most of its stacking strength. We grade and inspect every box: anything with crush lines, water marks, or torn flaps doesn't make it to the shelf.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">It's the Greener Choice</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Every reused carton is one less box manufactured and one less box in the recycling stream prematurely. If your customers care about sustainability — and more Malaysian consumers do every year — shipping in a reused carton is a story you can tell honestly.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">The Case for New Carton Boxes</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Presentation and Branding</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">If the box is part of the product experience — premium goods, gifts, corporate deliveries — a pristine carton matters. New boxes also take printing and branded tape cleanly, which used boxes with existing markings cannot.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Uniform Sizes at Volume</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Used stock varies by what factories release each week. New boxes come in exact repeatable dimensions — essential if you've optimised courier tiers around one box size, or if your packing team works to a fixed station layout.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Maximum Strength for Heavy or Fragile Loads</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Above 20kg, or for glassware, ceramics, and electronics without protective inner packaging, spend the extra ringgit on a new double-wall carton. The cost of one damaged shipment usually exceeds a year of box savings.</p>
+      </section>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8 my-12">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-6">New vs Used at a Glance</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">PRICE</p>
+            <p class="font-body text-on-surface text-sm">Used RM 1.90-3 | New RM 3-6 per medium box</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">BEST FOR</p>
+            <p class="font-body text-on-surface text-sm">Used: moving, storage, marketplace orders | New: branding, heavy/fragile goods</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">SIZES</p>
+            <p class="font-body text-on-surface text-sm">Used: varies with stock | New: exact repeatable dimensions</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">SUSTAINABILITY</p>
+            <p class="font-body text-on-surface text-sm">Used: extends box life, less waste | New: recyclable after use</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">New vs Used FAQs</h2>
+        <div class="space-y-4">
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Are used boxes strong enough for shipping?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Yes — graded single-trip cartons retain most of their strength. We reject crushed or moisture-damaged stock.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">How much cheaper are used boxes?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Typically 40-60% below the equivalent new carton.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">When should I insist on new boxes?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Branded unboxing, uniform sizes at volume, and loads above 20kg or fragile goods.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Are used boxes hygienic?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">We source from factories and warehouses carrying dry clean goods, and reject stained or smelly stock.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Can I mix new and used?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Yes — most cost-smart businesses use new for customer-facing shipments and used for everything else.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="mb-12 bg-primary/5 border border-primary/20 rounded-lg p-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">New & Used Cartons — Both Under One Roof in Balakong</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Quinocycle stocks both graded used cartons and brand-new boxes in small, medium, large, and jumbo sizes. Tell us what you're packing and we'll recommend the cheapest option that protects your goods — no upselling.</p>
+        <p class="font-body text-on-surface mb-6"><strong>Contact Quinocycle today:</strong></p>
+        <ul class="font-body text-on-surface text-sm space-y-2 mb-6">
+          <li>📞 <strong>Phone:</strong> +60 16 8916 381 / 03-8962 6381</li>
+          <li>📧 <strong>Email:</strong> quinocycle@gmail.com</li>
+          <li>📍 <strong>Address:</strong> No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300</li>
+        </ul>
+        <a href={WA_LINK} class="inline-block bg-primary text-on-primary font-label font-bold text-sm px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">💬 Chat on WhatsApp</a>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Conclusion: Match the Box to the Job</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-4">There is no single right answer — there's a right box for each job. Used cartons win on price for moving, storage, and everyday e-commerce parcels. New cartons win where presentation, exact sizing, or maximum strength matters. Most of our repeat customers buy both, and their packaging bill is lower for it.</p>
+        <p class="font-body text-on-surface leading-relaxed">Browse our <a href="/shop" class="text-primary underline">shop</a> for current stock and prices, or WhatsApp us for a quick recommendation.</p>
+      </section>
+    </div>
+  </article>
+</Layout>

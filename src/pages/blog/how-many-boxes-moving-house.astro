@@ -1,0 +1,115 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const post = { title: "Moving House in Malaysia? Here's How Many Boxes You'll Need", description: "Most people either run out or end up with far too many boxes. This room-by-room guide gives you the exact numbers for a Malaysian house move.", date: '2026-02-18', readTime: '5 min', category: 'Moving Guide', author: 'Quinocycle Team', slug: 'how-many-boxes-moving-house' };
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20am%20moving%20house%20and%20need%20boxes.';
+const articleSchema = { "@context":"https://schema.org","@type":"Article", headline: post.title, description: post.description, datePublished: '2026-02-18', dateModified: '2026-07-02', inLanguage:"en-MY", author:{name:"Quinocycle Team",url:"https://www.quinocycle.com.my"}, publisher:{name:"Quinocycle Sdn. Bhd.",logo:{url:"https://www.quinocycle.com.my/logo.png"}}, mainEntityOfPage:{url:"https://www.quinocycle.com.my/blog/how-many-boxes-moving-house"}, keywords:"how many boxes moving house Malaysia, kotak pindah rumah, moving boxes Klang Valley, kotak pindah murah Balakong, house moving checklist Malaysia" };
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many boxes do I need to move a 3-bedroom house in Malaysia?","acceptedAnswer":{"@type":"Answer","text":"Plan for 40-70 boxes for a typical 3-bedroom terrace or condo: roughly 15-20 medium boxes for the kitchen, 10-15 for each occupied bedroom, 8-12 for the living areas, and 5-10 large boxes for linens and bulky soft items. Families with many books or kitchenware should add 20%."}},{"@type":"Question","name":"What box sizes are best for moving house?","acceptedAnswer":{"@type":"Answer","text":"Medium boxes (around 430×310×290mm) do 60-70% of the work — heavy items like books, kitchenware, and files must go in medium boxes or they become impossible to lift. Large boxes are for light bulky items only: bedding, pillows, clothes, toys. Small boxes suit dense heavy items like tools and canned goods."}},{"@type":"Question","name":"Should I buy new or used boxes for moving?","acceptedAnswer":{"@type":"Answer","text":"Used boxes — no contest. A house move is a one-trip journey, so paying new-box prices is wasted money. Graded used cartons cost 40-60% less and handle a move perfectly. A full 3-bedroom move on used boxes typically costs RM 120-220 instead of RM 250-450."}},{"@type":"Question","name":"How far in advance should I get moving boxes?","acceptedAnswer":{"@type":"Answer","text":"Two to three weeks before moving day. Start packing off-season items and storage rooms first. Getting boxes early also lets you top up mid-pack when you discover — as everyone does — that you own more things than you thought."}},{"@type":"Question","name":"What else do I need besides boxes?","acceptedAnswer":{"@type":"Answer","text":"Per 50 boxes: about 4-6 rolls of 48mm packing tape, one 10-metre roll of bubble wrap for fragile items, a marker per packer, and old newspaper or paper for void fill. Label every box with its destination room — it halves the unloading time."}}]};
+const localBusinessSchema = { "@context":"https://schema.org","@type":"Store", name:"Quinocycle Sdn. Bhd.", url:"https://www.quinocycle.com.my", telephone:"+60168916381", address:{streetAddress:"No.13, Jalan Taming P/1, Taming Jaya", addressLocality:"Balakong", addressRegion:"Selangor", postalCode:"43300", addressCountry:"MY"}, geo:{latitude:3.0579,longitude:101.7468}, openingHoursSpecification:[{dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"09:00",closes:"18:00"},{dayOfWeek:"Saturday",opens:"09:00",closes:"13:00"}], priceRange:"RM 1.90 – RM 6.50 per box", areaServed:"Peninsular Malaysia" };
+---
+<Layout title={post.title} description={post.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <article class="max-w-4xl mx-auto px-6 md:px-8 pt-16 pb-24">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-primary/20 text-primary font-label font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">{post.category}</span>
+        <time class="font-body text-sm text-secondary">{post.date}</time>
+      </div>
+      <h1 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">{post.title}</h1>
+      <p class="font-body text-lg text-secondary leading-relaxed">{post.description}</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <section class="mb-12">
+        <p class="font-body text-on-surface leading-relaxed mb-6">Every week customers arrive at our Balakong warehouse with the same question: "how many boxes do I actually need?" Buy too few and you're making a second trip mid-pack; buy too many and you've wasted money and boot space. After supplying thousands of Klang Valley house moves, these are the numbers that consistently work.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">The Quick Answer by Home Size</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6"><strong>Studio / 1-bedroom:</strong> 15-25 boxes. <strong>2-bedroom apartment:</strong> 25-40 boxes. <strong>3-bedroom terrace or condo:</strong> 40-70 boxes. <strong>4-5 bedroom double-storey:</strong> 70-100+ boxes. These assume an average amount of belongings; heavy readers, home cooks, and families with young children should add 20% to whichever bracket fits.</p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Room-by-Room Breakdown (3-Bedroom Home)</h2>
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Kitchen: 15-20 Medium Boxes</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">The kitchen always needs more boxes than people expect. Plates, glasses, pots, dry goods, and small appliances are dense and can't be stacked loosely. Use medium boxes only — a large box of crockery is unliftable — and wrap breakables in bubble wrap or paper.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Bedrooms: 10-15 Boxes Each</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Per occupied bedroom: 4-6 large boxes for clothes and bedding, 3-5 medium boxes for books, gadgets, and personal items, and 2-3 small boxes for accessories and documents. Wardrobe-heavy households need a few more large boxes.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Living & Dining: 8-12 Boxes</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Books, decor, electronics, and the TV console contents. Keep original boxes for electronics where you still have them; otherwise medium boxes with generous bubble wrap. Lamps and frames travel best in large boxes padded with linens.</p>
+
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-4">Bathrooms, Store Room & Everything Else: 5-10 Boxes</h3>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Toiletries, cleaning supplies, tools, shoes, and the store room you've been avoiding. Small and medium boxes work best here — store rooms hide dense, heavy items.</p>
+      </section>
+
+      <div class="bg-surface-variant/50 border border-outline-variant/20 rounded-lg p-8 my-12">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-6">3-Bedroom Move at a Glance</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">TOTAL BOXES</p>
+            <p class="font-body text-on-surface text-sm">40-70 boxes (add 20% for full households)</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">SIZE MIX</p>
+            <p class="font-body text-on-surface text-sm">~60% medium, ~25% large, ~15% small</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">SUPPLIES</p>
+            <p class="font-body text-on-surface text-sm">4-6 tape rolls, 10m bubble wrap, markers</p>
+          </div>
+          <div>
+            <p class="font-label text-primary font-bold text-sm mb-2">BUDGET (USED BOXES)</p>
+            <p class="font-body text-on-surface text-sm">RM 120-220 vs RM 250-450 new</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="mb-12">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Moving Box FAQs</h2>
+        <div class="space-y-4">
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">How many boxes for a 3-bedroom house?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">40-70 boxes — kitchen 15-20, each bedroom 10-15, living areas 8-12, everything else 5-10.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">Which box sizes should I buy?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Mostly medium. Heavy items in medium/small boxes; large boxes for light bulky things only.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">New or used boxes for moving?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Used — it's a one-trip journey and used boxes cost 40-60% less.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">When should I get the boxes?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">2-3 weeks before moving day; start with off-season items and the store room.</p>
+          </details>
+          <details class="group border border-outline-variant/20 rounded-lg p-4">
+            <summary class="font-label font-bold text-on-surface cursor-pointer">What else do I need besides boxes?</summary>
+            <p class="font-body text-on-surface text-sm mt-3 leading-relaxed">Packing tape (4-6 rolls per 50 boxes), bubble wrap for fragiles, markers for labelling.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="mb-12 bg-primary/5 border border-primary/20 rounded-lg p-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Moving Boxes from RM 1.90 — Balakong, Selangor</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-6">Quinocycle stocks graded used moving boxes in small, medium, large, and jumbo sizes, plus tape and bubble wrap — everything for your move under one roof. WhatsApp us your home size and we'll put together the right bundle, ready for pickup or delivery across Klang Valley.</p>
+        <p class="font-body text-on-surface mb-6"><strong>Contact Quinocycle today:</strong></p>
+        <ul class="font-body text-on-surface text-sm space-y-2 mb-6">
+          <li>📞 <strong>Phone:</strong> +60 16 8916 381 / 03-8962 6381</li>
+          <li>📧 <strong>Email:</strong> quinocycle@gmail.com</li>
+          <li>📍 <strong>Address:</strong> No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor 43300</li>
+        </ul>
+        <a href={WA_LINK} class="inline-block bg-primary text-on-primary font-label font-bold text-sm px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">💬 Chat on WhatsApp</a>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="font-headline text-2xl font-bold text-on-surface mb-4">Conclusion: Count Rooms, Not Guesses</h2>
+        <p class="font-body text-on-surface leading-relaxed mb-4">Work room by room with the numbers above and you'll land within a handful of boxes of what you actually need. Lean towards medium boxes, buy used, get them two to three weeks early, and label everything by destination room. Your moving day — and your back — will thank you.</p>
+        <p class="font-body text-on-surface leading-relaxed">See current moving box prices in our <a href="/shop" class="text-primary underline">shop</a>, or read our <a href="/blog/moving-house-packaging-tips-malaysia" class="text-primary underline">full moving packing guide</a>.</p>
+      </section>
+    </div>
+  </article>
+</Layout>
