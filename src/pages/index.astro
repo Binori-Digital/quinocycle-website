@@ -132,11 +132,14 @@ const blogPosts = [
       playsinline
     ></video>
 
+    <!-- Readability overlay: dark gradient so white text stays legible over the bright video -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-black/40 pointer-events-none" aria-hidden="true"></div>
+
     <!-- Content layer -->
     <div class="relative z-10 flex flex-col h-full px-6 md:px-12 lg:px-16 pt-6">
 
-      <!-- Hero Navbar -->
-      <nav class="liquid-glass rounded-xl px-4 py-2 flex items-center justify-between">
+      <!-- Hero Navbar (desktop only — mobile uses the main nav with hamburger) -->
+      <nav class="liquid-glass rounded-xl px-4 py-2 hidden md:flex items-center justify-between">
         <span class="text-2xl font-bold">quinocycle</span>
         <div class="hidden md:flex items-center gap-8">
           <a href="/"        class="text-sm hover:text-gray-300 transition-colors duration-200">Home</a>

@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const WA_NUMBER = '60168916381';
+const WA_LINK   = `https://wa.me/${WA_NUMBER}?text=Hi%20Quinocycle!%20I%20would%20like%20to%20enquire%20about%20your%20carton%20boxes.`;
+---
+
+<Layout
+  title="Page Not Found — Quinocycle"
+  description="This page doesn't exist. Browse our carton box catalogue or contact us on WhatsApp."
+>
+  <section class="py-32 px-6 md:px-8 max-w-3xl mx-auto text-center">
+    <span class="font-headline text-8xl md:text-9xl font-extrabold tracking-tighter text-primary-container block mb-6">404</span>
+    <h1 class="font-headline text-3xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-5">
+      This box is empty.
+    </h1>
+    <p class="font-body text-lg text-secondary leading-relaxed mb-10 max-w-md mx-auto">
+      The page you're looking for doesn't exist or has moved. Our carton boxes, however, are very much in stock.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/shop" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Browse the Shop
+      </a>
+      <a href="/" class="bg-surface-container-low text-on-surface px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-primary-container transition-colors">
+        Back to Home
+      </a>
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Us
+      </a>
+    </div>
+  </section>
+</Layout>

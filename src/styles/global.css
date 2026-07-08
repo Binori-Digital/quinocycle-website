@@ -121,11 +121,15 @@
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 }
 
-/* ── Layout nav hidden (hero mode) ── */
-.nav-hidden {
-  opacity: 0;
-  transform: translateY(-100%);
-  pointer-events: none;
+/* ── Layout nav hidden (hero mode) ──
+   Desktop only: the hero has its own navbar with links there. On mobile the
+   hero navbar has no menu, so the main nav (with hamburger) must stay visible. */
+@media (min-width: 768px) {
+  .nav-hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+  }
 }
 
 /* ── Liquid Glass ── */

@@ -13,6 +13,9 @@ const {
   heroMode = false,
 } = Astro.props;
 
+// Social platforms (WhatsApp, Facebook) require absolute URLs for og:image
+const ogImageAbs = new URL(ogImage, Astro.site).href;
+
 const WA_NUMBER = '60168916381';
 const WA_LINK   = `https://wa.me/${WA_NUMBER}?text=Hi%20Quinocycle!%20I%20would%20like%20to%20enquire%20about%20your%20carton%20boxes.`;
 
@@ -41,7 +44,7 @@ import '../styles/global.css';
   <!-- Open Graph -->
   <meta property="og:title"       content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image"       content={ogImage} />
+  <meta property="og:image"       content={ogImageAbs} />
   <meta property="og:url"         content={Astro.url.href} />
   <meta property="og:type"        content="website" />
   <meta property="og:site_name"   content="Quinocycle" />
@@ -50,7 +53,7 @@ import '../styles/global.css';
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image"       content={ogImage} />
+  <meta name="twitter:image"       content={ogImageAbs} />
 
   <!-- SEO -->
   <link rel="canonical" href={Astro.url.href} />
