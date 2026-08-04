@@ -1,0 +1,201 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CITY = 'Seri Kembangan';
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! Saya nak beli kotak pindah rumah di ${CITY}.`)}`;
+
+const faqs = [
+  {
+    q: 'Ada kedai kotak pindah rumah di Seri Kembangan?',
+    a: 'Kami tiada cawangan di dalam Seri Kembangan — tapi gudang Quinocycle terletak di Taming Jaya, Balakong, hanya ±5-10 minit memandu dari Taman Equine, The Mines atau Bukit Serdang. Anda boleh ambil sendiri di gudang (No.13, Jalan Taming P/1, 43300 Balakong) atau minta kami hantar terus ke rumah.',
+  },
+  {
+    q: 'Berapa harga kotak pindah untuk kawasan Seri Kembangan?',
+    a: 'Harga borong terus dari gudang: kotak terpakai saiz S dari RM0.90, saiz M RM3.00-RM3.50, saiz L RM5.00 sekotak. Kotak baru dari RM1.10 hingga RM8.00 ikut saiz. Penghantaran percuma ke Seri Kembangan untuk pesanan melebihi RM300 — atau ambil sendiri, langsung tiada kos hantar.',
+  },
+  {
+    q: 'Saya pelajar UPM / penyewa bilik — boleh beli kuantiti kecil?',
+    a: 'Boleh. Pesanan borong penuh bermula RM1,000, tetapi untuk pindah bilik atau rumah sewa, WhatsApp sahaja senarai saiz dan kuantiti ke 016-891 6381 — kami bagi sebut harga kuantiti kecil. Ramai pelajar UPM dan keluarga di Serdang ambil sendiri sebab gudang cuma beberapa minit dari kampus.',
+  },
+  {
+    q: 'Berapa cepat kotak sampai ke Taman Equine atau Bukit Serdang?',
+    a: 'Seri Kembangan ialah kawasan penghantaran paling dekat dengan gudang kami, jadi pesanan waktu bekerja selalunya boleh dihantar hari yang sama. Kalau tergesa-gesa, cara paling pantas: WhatsApp dulu, kami susun stok, dan anda ambil di Balakong dalam ±10 minit memandu.',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": `Quinocycle — Kotak Pindah Rumah ${CITY}`,
+  "description": `Pembekal kotak pindah rumah untuk ${CITY}, Selangor. Kotak kardus baru dan terpakai harga borong dari RM0.90 sekotak — penghantaran pantas atau ambil sendiri di gudang Balakong, ±10 minit sahaja.`,
+  "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/seri-kembangan/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["Seri Kembangan","Taman Equine","The Mines","Serdang","Bukit Serdang","Serdang Raya","South City Plaza","UPM Serdang"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Utama", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Kotak Pindah Rumah", "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/" },
+    { "@type": "ListItem", "position": 3, "name": CITY, "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/seri-kembangan/" }
+  ]
+};
+---
+
+<Layout
+  lang="ms"
+  title={`Kotak Pindah Rumah ${CITY} — Gudang Borong ±10 Minit Sahaja, dari RM0.90 | Quinocycle`}
+  description={`Kotak pindah rumah ${CITY} dari RM0.90 sekotak. Gudang borong Quinocycle ±10 minit di Balakong — hantar ke Taman Equine, Serdang & UPM. WhatsApp 016-891 6381.`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Utama</a>
+      <span class="mx-2">/</span>
+      <a href="/kotak-pindah-rumah" class="hover:text-primary transition-colors">Kotak Pindah Rumah</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">{CITY}</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">±10 Minit Dari Gudang Kami</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Kotak pindah rumah {CITY} <br /><span class="text-primary italic">— anda jiran gudang borong.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      Daripada semua kawasan di Lembah Klang, Seri Kembangan adalah yang <strong class="text-on-surface font-semibold">paling hampir dengan gudang kotak Quinocycle</strong> — hanya ±5-10 minit memandu ke Taming Jaya, Balakong. Maksudnya: harga borong dari <strong class="text-on-surface font-semibold">RM0.90 sekotak</strong> untuk kotak terpakai, dari <strong class="text-on-surface font-semibold">RM1.10</strong> untuk kotak baru — hantar cepat ke rumah anda, atau singgah ambil dalam satu trip singkat.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Sekarang
+      </a>
+      <a href="/kotak-pindah-rumah#senarai-harga" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Senarai Harga Penuh
+      </a>
+    </div>
+  </section>
+
+  <!-- Local info -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Penghantaran Ke Seri Kembangan</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Taman Equine, Bukit Serdang, Serdang Raya, kawasan The Mines dan sekitar South City Plaza — jarak paling dekat dengan gudang kami, jadi pesanan waktu bekerja selalunya sampai hari yang sama. Percuma untuk pesanan melebihi RM300 (KL &amp; Selangor).
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">storefront</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Ambil Sendiri — ±10 Minit Memandu</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Gudang di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong — ±5-10 minit memandu dari Seri Kembangan. WhatsApp senarai kotak dulu; sampai sahaja, stok dah siap tersusun untuk dimuatkan ke kereta.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">schedule</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Waktu Operasi Gudang</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Isnin–Jumaat: 9:00 pagi – 6:00 petang<br />
+          Sabtu: 9:00 pagi – 1:00 tengah hari<br />
+          Ahad &amp; cuti umum: tutup (mesej WhatsApp tetap dibalas)
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Kenapa penduduk Seri Kembangan tak perlu cari jauh?</h2>
+    <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
+      <p>
+        Ramai penduduk Taman Equine, Bukit Serdang dan Serdang Raya tak sedar yang pembekal kotak kardus borong terletak betul-betul di sebelah kawasan mereka. Gudang Quinocycle di Taming Jaya, Balakong hanya <strong class="text-on-surface font-semibold">±5-10 minit memandu</strong> dari kebanyakan taman di Seri Kembangan — lebih dekat daripada perjalanan anda ke The Mines atau South City Plaza pada waktu puncak. Jadi sebelum bayar RM8-RM12 sekotak di kedai hardware, semak dulu <a href="/blog/harga-kotak-pindah-rumah" class="text-primary font-semibold hover:underline">harga sebenar kotak pindah rumah</a> di gudang.
+      </p>
+      <p>
+        Pilihan paling jimat ialah <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">kotak terpakai gred sekali guna</a> — kotak kilang yang hanya digunakan sekali, disemak satu persatu, kering dan bebas bau, dari RM0.90 sekotak. Untuk pinggan mangkuk dan barang elektronik, tambah sedikit kotak baru dari RM1.10. Tak pasti yang mana satu sesuai? Baca <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan kotak baru vs kotak terpakai</a> — kebanyakan pelanggan akhirnya campur kedua-duanya.
+      </p>
+      <p>
+        Seri Kembangan juga kawasan pelajar: setiap semester, pelajar UPM dan penyewa sekitar Serdang berpindah masuk dan keluar. Untuk pindah bilik atau rumah sewa, anda tak perlu beli ikut kuantiti borong — WhatsApp sahaja berapa kotak yang anda perlukan dan kami bagi sebut harga kuantiti kecil. Sebagai panduan, satu bilik biasanya perlukan 10-15 kotak; rumah 3 bilik pula sekitar 50-70. Kira keperluan anda dengan <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="text-primary font-semibold hover:underline">panduan berapa kotak diperlukan untuk pindah rumah</a>.
+      </p>
+      <p>
+        Untuk keluarga yang pindah rumah penuh, pesanan melebihi RM300 dapat penghantaran percuma ke seluruh Seri Kembangan — dan sebab kami memang jiran anda, kotak sampai cepat. Lihat <a href="/kotak-pindah-rumah" class="text-primary font-semibold hover:underline">senarai harga penuh kotak pindah rumah</a>, tengok semua saiz di <a href="/shop" class="text-primary font-semibold hover:underline">kedai online kami</a>, dan sebelum mula mengemas, rujuk <a href="/blog/tips-pindah-rumah-packing-malaysia" class="text-primary font-semibold hover:underline">tips packing pindah rumah</a> supaya setiap kotak dimuatkan dengan betul.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">Soalan lazim — kotak pindah {CITY}</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/15">
+        {faqs.map(f => (
+          <details class="group py-5">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              {f.q}
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <h2 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface mb-6">Kawasan berdekatan</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/kotak-pindah-rumah/balakong" class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Balakong</a>
+      <a href="/kotak-pindah-rumah/kajang"   class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Kajang</a>
+      <a href="/kotak-pindah-rumah/puchong"  class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Puchong</a>
+      <a href="/kotak-pindah-rumah"          class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Semua Kawasan →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">±10 minit dari rumah anda. Serius.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        WhatsApp senarai kotak anda sekarang — kami hantar ke Seri Kembangan, atau siapkan stok untuk anda ambil sendiri di gudang Taming Jaya, Balakong dalam masa sejam waktu bekerja.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Buka Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

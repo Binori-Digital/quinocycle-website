@@ -1,0 +1,553 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Macam Mana Nak Dapat Kotak Percuma Untuk Pindah Rumah? (5 Cara + Realiti)',
+  description: 'Cara dapat kotak percuma untuk pindah rumah di Malaysia: 5 sumber sebenar (pasaraya, Facebook Marketplace, pejabat & lagi), kelemahan jujur setiap satu, dan bila lebih berbaloi beli kotak terpakai dari RM0.90 sekotak.',
+  date: '2026-08-04',
+  readTime: '8 min',
+  category: 'Panduan Pindah Rumah',
+  author: 'Pasukan Quinocycle',
+  slug: 'kotak-percuma-pindah-rumah',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20nak%20tanya%20harga%20kotak%20untuk%20pindah%20rumah.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "ms-MY",
+  "author": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd.",
+    "url": "https://www.quinocycle.com.my"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.quinocycle.com.my/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.quinocycle.com.my/blog/kotak-percuma-pindah-rumah"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.quinocycle.com.my/images/blog-movers-guide.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  "keywords": "kotak percuma pindah rumah, cara dapat kotak percuma, kotak free malaysia, kotak percuma pasaraya, kotak pindah rumah murah, kotak terpakai pindah rumah, free moving boxes malaysia, kotak kardus percuma"
+};
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Pembekal kotak kardus baru dan terpakai di Balakong, Selangor. Kotak terpakai gred sekali guna dari RM0.90 sekotak, penghantaran ke seluruh Semenanjung Malaysia.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "priceRange": "RM0.90 – RM8.00 sekotak",
+  "areaServed": "Semenanjung Malaysia"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Macam mana nak dapat kotak percuma untuk pindah rumah di Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "5 cara paling berkesan: (1) minta kotak kosong di pasaraya atau kedai runcit selepas waktu isi stok, (2) cari 'kotak percuma' di Facebook Marketplace atau Mudah.my, (3) kumpul kotak kertas A4 dari pejabat sendiri, (4) ambil kotak dari kawan atau jiran yang baru pindah, (5) minta kotak besar di kedai elektrik atau kedai perabot. Percuma, tetapi ambil kira masa mencari, saiz tak seragam, dan kekuatan yang tidak dijamin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kedai mana yang biasanya bagi kotak percuma?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pasaraya dan kedai runcit selalunya ada lebihan kotak selepas waktu isi stok (biasanya waktu pagi). Kedai elektrik dan kedai perabot pula ada kotak besar dari TV, peti sejuk, dan mesin basuh. Tiada jaminan — bergantung pada stok hari itu dan polisi kedai. Tanya staf dengan sopan; sesetengah kedai simpan kotak untuk dijual kepada pengumpul kitar semula."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Adakah kotak percuma cukup kuat untuk pindah rumah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tidak selalu. Kotak yang pernah lembap, berlipat, atau dibuka secara kasar sudah hilang sebahagian besar kekuatan asalnya — berisiko tercabut bahagian bawah bila diisi barang berat. Kotak percuma sesuai untuk barang ringan yang tidak mudah pecah seperti pakaian dan tuala. Untuk buku, pinggan mangkuk, dan elektronik, lebih selamat guna kotak yang telah disemak kualiti."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa harga kotak pindah rumah kalau beli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Di Quinocycle Balakong, kotak terpakai gred sekali guna berharga RM0.90 hingga RM5.00 sekotak (S dari RM0.90, M RM3.00–3.50, L RM5.00). Kotak baru dari RM1.10 hingga RM8.00. Untuk rumah 3 bilik (±60 kotak terpakai campuran saiz), anggaran kos sekitar RM160–RM180 sahaja. Penghantaran percuma untuk KL & Selangor bagi pesanan melebihi RM300. WhatsApp 016-891 6381."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa banyak kotak diperlukan untuk pindah rumah 3 bilik?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rumah 3 bilik tidur biasanya memerlukan 50–70 kotak. Anggaran mengikut ruang: bilik tidur 10–15 kotak setiap satu, dapur 15–20 kotak, ruang tamu 8–12 kotak, dan bilik mandi 3–5 kotak."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title={`${post.title} — Blog Quinocycle`}
+  description={post.description}
+  lang="ms"
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container article-hero__inner">
+      <a href="/blog" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Kembali ke Blog
+      </a>
+      <div class="tag tag--yellow" style="margin-top:1.5rem">{post.category}</div>
+      <h1 class="article-hero__title">{post.title}</h1>
+      <div class="article-meta">
+        <time datetime={post.date}>{new Date(post.date).toLocaleDateString('ms-MY', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        <span>·</span>
+        <span>{post.readTime} bacaan</span>
+        <span>·</span>
+        <span>Oleh {post.author}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <div class="container" style="margin-bottom:2rem;margin-top:-1rem">
+    <img
+      src="/images/blog-movers-guide.jpg"
+      alt="Timbunan kotak kardus untuk pindah rumah — cara dapat kotak percuma di Malaysia"
+      style="width:100%;max-height:460px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);display:block;"
+      loading="eager"
+      width="1280"
+      height="720"
+    />
+  </div>
+
+  <!-- Article Body -->
+  <article class="article-body">
+    <div class="container article-body__inner">
+      <div class="article-content">
+
+        <p class="article-lead">
+          Jom cakap jujur: <strong>memang boleh dapat kotak percuma untuk pindah rumah</strong> di Malaysia — beribu-ribu orang buat setiap bulan. Tapi "percuma" datang dengan harga tersembunyi: masa mencari, saiz yang tak seragam, dan kekuatan kotak yang tidak dijamin. Dalam panduan ini kami kongsikan <strong>5 cara sebenar dapat kotak percuma</strong>, kelemahan jujur setiap satu, dan bila lebih berbaloi keluarkan beberapa ringgit sahaja untuk kotak yang disemak kualiti.
+        </p>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>Jawapan ringkas:</strong> Sumber kotak percuma terbaik ialah pasaraya/kedai runcit, Facebook Marketplace &amp; Mudah.my, pejabat sendiri, kawan yang baru pindah, dan kedai elektrik. Kalau tak mahu ambil risiko, <a href="/kotak-pindah-rumah">kotak terpakai gred sekali guna dari RM0.90 sekotak</a> — rumah 3 bilik penuh sekitar RM160–RM180 sahaja.
+        </div>
+
+        <h2>5 Cara Dapat Kotak Percuma di Malaysia</h2>
+
+        <h3>1. Minta Kotak di Pasaraya &amp; Kedai Runcit</h3>
+
+        <p>
+          Ini cara klasik yang paling ramai guna. Pasaraya besar dan kedai runcit menerima stok hampir setiap hari, dan kebanyakan kotak kosong akan dibuang atau dijual kepada pengumpul kitar semula. Kotak air mineral, kotak snek, dan kotak tisu adalah antara yang paling mudah didapati.
+        </p>
+
+        <p>
+          <strong>Tip supaya berjaya:</strong> Pergi waktu pagi selepas kedai selesai mengisi stok (biasanya antara 8 hingga 11 pagi), dan tanya staf dengan sopan — "Bang, ada kotak kosong tak? Saya nak pindah rumah." Kebanyakan kedai tak kisah beri, asalkan anda datang pada masa yang betul.
+        </p>
+
+        <p>
+          <strong>Kelemahannya:</strong> Saiz kecil dan tidak seragam, kebanyakan kotak dipotong terbuka di bahagian atas (susah nak tutup dan tindan), dan ia <em>first come, first served</em> — hari anda datang, mungkin kotak dah diambil orang lain. Sesetengah kedai juga simpan kotak untuk dijual ikut berat kepada pengumpul, jadi mereka tak beri percuma.
+        </p>
+
+        <h3>2. Facebook Marketplace, Mudah.my &amp; Kumpulan Komuniti</h3>
+
+        <p>
+          Cari "kotak percuma", "free boxes", atau "kotak moving" di Facebook Marketplace, Mudah.my, dan kumpulan Facebook komuniti kawasan anda. Orang yang baru selesai pindah selalunya nak lupuskan 40–60 kotak sekali gus secepat mungkin — ini peluang terbaik untuk dapat kuantiti besar dalam satu perjalanan.
+        </p>
+
+        <p>
+          <strong>Kelemahannya:</strong> Iklan kotak percuma cepat direbut — kadang dalam masa sejam dah ada orang <em>book</em>. Anda kena ambil sendiri (kira kos petrol dan masa), dan kualiti sebenar hanya diketahui bila sampai. Kotak yang dah melalui satu pusingan pindah biasanya ada sisa tape, lembik di bahagian sudut, dan sebahagiannya mungkin tak boleh diguna lagi.
+        </p>
+
+        <h3>3. Pejabat Sendiri — Kotak Kertas A4</h3>
+
+        <p>
+          Ini rahsia yang ramai terlepas pandang: <strong>kotak kertas A4 adalah antara kotak percuma paling berkualiti</strong>. Ia tebal, ada penutup berasingan, saiznya seragam, dan direka untuk menampung berat — sempurna untuk buku, pinggan, dan barang berat yang lain. Tanya jabatan admin atau bilik percetakan di tempat kerja anda; kotak ini biasanya dibuang begitu sahaja.
+        </p>
+
+        <p>
+          <strong>Kelemahannya:</strong> Saiznya kecil sahaja — anda tetap perlukan kotak sederhana dan besar untuk barang lain. Kuantiti pun terhad; pejabat biasa mungkin habiskan beberapa kotak kertas seminggu, jadi anda kena mula kumpul sebulan dua sebelum tarikh pindah.
+        </p>
+
+        <h3>4. Kawan, Keluarga atau Jiran yang Baru Pindah</h3>
+
+        <p>
+          Kalau ada kenalan yang baru sahaja pindah, itu <em>jackpot</em> — mereka ada timbunan kotak yang menyemak ruang tamu dan mereka nak lupuskannya segera. Kotak pindah yang dijaga elok biasanya masih boleh tahan satu dua pusingan lagi. Hantar mesej dalam kumpulan WhatsApp keluarga atau kawasan kejiranan; anda mungkin terkejut berapa ramai yang sedia beri.
+        </p>
+
+        <p>
+          <strong>Kelemahannya:</strong> Anda bergantung sepenuhnya pada <em>timing</em> orang lain — jarang sekali ada kawan yang pindah tepat sebulan sebelum anda. Kotak juga sudah melalui sekurang-kurangnya satu pusingan penuh: diisi, diangkut, ditindih. Kekuatannya sudah berkurangan, terutama di bahagian bawah.
+        </p>
+
+        <h3>5. Kedai Elektrik &amp; Kedai Perabot — Untuk Kotak Besar</h3>
+
+        <p>
+          Perlukan kotak besar untuk bantal, selimut, lampu, atau barang kembung yang lain? Kedai elektrik dan kedai perabot membuang kotak TV, peti sejuk, dan mesin basuh setiap minggu — dan kotak ini biasanya <em>double wall</em> (dua lapisan), jauh lebih kukuh daripada kotak pasaraya biasa.
+        </p>
+
+        <p>
+          <strong>Kelemahannya:</strong> Saiznya <em>terlalu</em> besar untuk kebanyakan barang — kotak peti sejuk yang diisi buku tidak akan mampu diangkat sesiapa. Bentuknya juga tidak standard (leper, tinggi, memanjang), jadi susah disusun kemas dalam lori dan membazir ruang muatan.
+        </p>
+
+        <h2>Realiti Kotak Percuma: 4 Perkara Anda Perlu Tahu</h2>
+
+        <p>
+          Kami bukan nak perlekehkan kotak percuma — ia pilihan yang munasabah untuk sesetengah situasi. Tapi sebelum anda bergantung 100% padanya untuk hari pindah, ambil kira 4 realiti ini:
+        </p>
+
+        <ol>
+          <li>
+            <strong>Masa mencari juga satu kos.</strong> Rumah 3 bilik memerlukan <a href="/blog/berapa-kotak-diperlukan-pindah-rumah">50–70 kotak</a>. Untuk kumpul jumlah itu secara percuma, kebanyakan orang perlu 2–3 hari berulang-alik ke beberapa kedai — dengan kos petrol, tol, dan masa cuti yang sepatutnya digunakan untuk mengemas.
+          </li>
+          <li>
+            <strong>Kekuatan tidak dijamin.</strong> Kotak yang pernah lembap atau berlipat kehilangan sebahagian besar kekuatan strukturnya — walaupun nampak elok dari luar. Bahagian bawah tercabut ketika mengangkat pinggan mangkuk adalah cara paling pantas untuk merosakkan barang yang bernilai jauh melebihi harga semua kotak anda.
+          </li>
+          <li>
+            <strong>Kebersihan dan bau.</strong> Kotak dari kedai makanan mungkin berminyak atau berbau, dan kotak yang lama disimpan di stor belakang kedai berisiko membawa lipas atau telur serangga — benda terakhir yang anda mahu bawa masuk ke rumah baru.
+          </li>
+          <li>
+            <strong>Saiz tak seragam = susah susun.</strong> 60 kotak dengan 20 saiz berbeza tidak boleh ditindan dengan stabil dalam lori. Muatan jadi tidak padat, berisiko runtuh, dan kadangkala memaksa trip tambahan — yang jauh lebih mahal daripada harga kotak.
+          </li>
+        </ol>
+
+        <h2>Perbandingan: Kotak Percuma vs Kotak Terpakai Gred Sekali Guna</h2>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Faktor</th>
+                <th>Kotak Percuma</th>
+                <th>Kotak Terpakai Quinocycle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Kos</strong></td>
+                <td>RM0 (+ petrol &amp; masa mencari)</td>
+                <td>Dari <strong>RM0.90</strong> sekotak</td>
+              </tr>
+              <tr>
+                <td><strong>Masa</strong></td>
+                <td>2–3 hari berulang-alik, tiada jaminan cukup</td>
+                <td>Satu pesanan WhatsApp, hantar ke rumah</td>
+              </tr>
+              <tr>
+                <td><strong>Saiz</strong></td>
+                <td>Rambang, ikut nasib hari itu</td>
+                <td>Saiz S/M/L yang konsisten, mudah ditindan</td>
+              </tr>
+              <tr>
+                <td><strong>Kekuatan</strong></td>
+                <td>Tidak diketahui — dah berapa pusingan?</td>
+                <td>Gred sekali guna dari kilang, disemak satu persatu</td>
+              </tr>
+              <tr>
+                <td><strong>Kebersihan</strong></td>
+                <td>Risiko bau, minyak, serangga</td>
+                <td>Kering dan tanpa bau</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Pilihan Tengah: Kotak Terpakai Dari RM0.90 — Bukan Percuma, Tapi Hampir</h2>
+
+        <p>
+          Inilah sebab <a href="/used-carton-boxes">kotak terpakai gred sekali guna</a> wujud sebagai pilihan tengah. Kotak ini hanya digunakan <strong>sekali</strong> oleh kilang — bukan kotak yang dah melalui berbelas pusingan — kemudian disemak satu persatu di gudang kami di Balakong: kering, tanpa bau, dan struktur masih kukuh. Anda dapat 90% kekuatan kotak baru pada sebahagian kecil harganya.
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Jenis Kotak</th>
+                <th>Harga / Kotak</th>
+                <th>Sesuai Untuk</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Terpakai S</strong></td>
+                <td>Dari <strong>RM0.90</strong></td>
+                <td>Buku, barang dapur kecil, barang berat</td>
+              </tr>
+              <tr>
+                <td><strong>Terpakai M</strong></td>
+                <td><strong>RM3.00 – RM3.50</strong></td>
+                <td>Pakaian, periuk belanga, barang am</td>
+              </tr>
+              <tr>
+                <td><strong>Terpakai L</strong></td>
+                <td><strong>RM5.00</strong></td>
+                <td>Bantal, selimut, barang ringan besar</td>
+              </tr>
+              <tr>
+                <td><strong>Baru (XS – NLN)</strong></td>
+                <td><strong>RM1.10 – RM8.00</strong></td>
+                <td>Barang pecah belah, elektronik, simpanan jangka panjang</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Lihat <a href="/kotak-pindah-rumah">senarai harga penuh kotak pindah rumah</a> atau semak semua saiz di <a href="/shop">kedai dalam talian kami</a>. Untuk pecahan harga yang lebih terperinci, baca <a href="/blog/harga-kotak-pindah-rumah">panduan harga kotak pindah rumah</a> kami.
+        </p>
+
+        <h3>Contoh Kos Sebenar: Rumah 3 Bilik</h3>
+
+        <p>
+          Katakan anda perlukan 60 kotak terpakai untuk rumah 3 bilik:
+        </p>
+
+        <ul>
+          <li>20 kotak S × RM0.90 = <strong>RM18</strong></li>
+          <li>30 kotak M × RM3.00–3.50 = <strong>RM90–RM105</strong></li>
+          <li>10 kotak L × RM5.00 = <strong>RM50</strong></li>
+        </ul>
+
+        <p>
+          Jumlah: <strong>sekitar RM160–RM180</strong> untuk satu rumah penuh — dengan saiz seragam, kekuatan yang disemak, dan tanpa perlu merayau 3 hari mencari kotak. Pesanan melebihi RM300 dapat <strong>penghantaran percuma untuk KL &amp; Selangor</strong>; kawasan lain di Semenanjung Malaysia, penghantaran 2–3 hari bekerja.
+        </p>
+
+        <div class="article-callout">
+          <strong>Nota:</strong> Minimum pesanan borong penuh kami ialah RM1,000 (untuk syarikat mover dan perniagaan). Untuk kuantiti pindah rumah yang lebih kecil, WhatsApp kami di <a href={WA_LINK}>016-891 6381</a> untuk sebut harga — kami sedia bantu.
+        </div>
+
+        <h2>Bila Patut Guna Kotak Percuma, Bila Patut Beli?</h2>
+
+        <p>
+          <strong>Kotak percuma masuk akal jika:</strong> anda pindah bilik sewa dengan barang sikit (bawah 15 kotak), ada masa terluang untuk mencari, dan barang anda kebanyakannya pakaian serta barang lasak yang tak mudah pecah.
+        </p>
+
+        <p>
+          <strong>Lebih baik beli jika:</strong> anda pindah satu rumah penuh, ada barang pecah belah atau elektronik, mover anda mengecaj ikut trip (muatan padat = jimat), atau tarikh pindah dah dekat dan anda tiada masa nak memburu kotak.
+        </p>
+
+        <p>
+          <strong>Strategi campuran paling bijak:</strong> guna kotak percuma untuk pakaian, tuala, dan mainan — beli kotak yang disemak untuk dapur, pinggan mangkuk, dan barang elektronik. Baca perbandingan penuh dalam artikel <a href="/blog/beza-kotak-baru-kotak-terpakai">beza kotak baru dan kotak terpakai</a>, dan sebelum mula mengemas, semak <a href="/blog/tips-pindah-rumah-packing-malaysia">tips packing pindah rumah</a> kami supaya setiap kotak diisi dengan betul.
+        </p>
+
+      </div><!-- /.article-content -->
+
+      <!-- Sidebar CTA -->
+      <aside class="article-sidebar">
+        <div class="sidebar-cta">
+          <div class="tag tag--yellow">Tak Jumpa Kotak Percuma?</div>
+          <h3>Kotak terpakai gred sekali guna — dari RM0.90 sekotak.</h3>
+          <p>Disemak satu persatu. Kering, tanpa bau.<br />Penghantaran percuma KL &amp; Selangor untuk pesanan atas RM300.</p>
+          <a href="/kotak-pindah-rumah" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:0.75rem">Lihat Senarai Harga Penuh</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="width:100%;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp 016-891 6381
+          </a>
+          <p class="sidebar-cta__note">Isnin–Jumaat 9am–6pm · Sabtu 9am–1pm<br />Balakong, Selangor</p>
+        </div>
+
+        <div class="sidebar-links">
+          <div class="sidebar-links__title">Artikel Berkaitan</div>
+          <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Berapa Kotak Diperlukan Untuk Pindah Rumah?
+          </a>
+          <a href="/blog/harga-kotak-pindah-rumah" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Harga Kotak Pindah Rumah di Malaysia
+          </a>
+          <a href="/used-carton-boxes" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Lihat Kotak Terpakai
+          </a>
+        </div>
+      </aside>
+
+    </div><!-- /.article-body__inner -->
+  </article>
+
+  <!-- FAQ Section (AEO) -->
+  <section class="article-faq">
+    <div class="container">
+      <div class="section-eyebrow">Soalan Lazim</div>
+      <h2 class="section-title" style="margin-bottom:2rem">Soalan Kerap Ditanya<br /><span style="font-size:0.6em;opacity:0.6">Kotak Percuma &amp; Kotak Pindah Rumah</span></h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3 class="faq-q">Macam mana nak dapat kotak percuma untuk pindah rumah di Malaysia?</h3>
+          <p class="faq-a">5 cara paling berkesan: (1) minta kotak kosong di pasaraya atau kedai runcit selepas waktu isi stok, (2) cari "kotak percuma" di Facebook Marketplace atau Mudah.my, (3) kumpul kotak kertas A4 dari pejabat sendiri, (4) ambil kotak dari kawan atau jiran yang baru pindah, (5) minta kotak besar di kedai elektrik atau kedai perabot. Percuma, tetapi ambil kira masa mencari, saiz tak seragam, dan kekuatan yang tidak dijamin.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Kedai mana yang biasanya bagi kotak percuma?</h3>
+          <p class="faq-a">Pasaraya dan kedai runcit selalunya ada lebihan kotak selepas waktu isi stok (biasanya waktu pagi). Kedai elektrik dan kedai perabot pula ada kotak besar dari TV, peti sejuk, dan mesin basuh. Tiada jaminan — bergantung pada stok hari itu dan polisi kedai. Tanya staf dengan sopan; sesetengah kedai simpan kotak untuk dijual kepada pengumpul kitar semula.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Adakah kotak percuma cukup kuat untuk pindah rumah?</h3>
+          <p class="faq-a">Tidak selalu. Kotak yang pernah lembap, berlipat, atau dibuka secara kasar sudah hilang sebahagian besar kekuatan asalnya — berisiko tercabut bahagian bawah bila diisi barang berat. Kotak percuma sesuai untuk barang ringan yang tidak mudah pecah seperti pakaian dan tuala. Untuk buku, pinggan mangkuk, dan elektronik, lebih selamat guna kotak yang telah <strong>disemak kualiti</strong>.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Berapa harga kotak pindah rumah kalau beli?</h3>
+          <p class="faq-a">Di Quinocycle Balakong, kotak terpakai gred sekali guna berharga <strong>RM0.90 hingga RM5.00</strong> sekotak (S dari RM0.90, M RM3.00–3.50, L RM5.00). Kotak baru dari RM1.10 hingga RM8.00. Untuk rumah 3 bilik (±60 kotak terpakai campuran saiz), anggaran kos sekitar <strong>RM160–RM180</strong> sahaja. Penghantaran percuma untuk KL &amp; Selangor bagi pesanan melebihi RM300.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Berapa banyak kotak diperlukan untuk pindah rumah 3 bilik?</h3>
+          <p class="faq-a">Rumah 3 bilik tidur biasanya memerlukan <strong>50–70 kotak</strong>. Anggaran mengikut ruang: bilik tidur 10–15 kotak setiap satu, dapur 15–20 kotak, ruang tamu 8–12 kotak, dan bilik mandi 3–5 kotak. Lihat panduan penuh dalam artikel <a href="/blog/berapa-kotak-diperlukan-pindah-rumah">berapa kotak diperlukan untuk pindah rumah</a>.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="article-cta-section">
+    <div class="container">
+      <div class="article-cta-box">
+        <div class="tag tag--yellow">Jimat Masa, Jimat Duit</div>
+        <h2>Skip pemburuan kotak. Satu mesej WhatsApp, kotak sampai ke rumah.</h2>
+        <p>Kotak terpakai dari RM0.90 · Kotak baru dari RM1.10 · Penghantaran percuma KL &amp; Selangor untuk pesanan atas RM300</p>
+        <div class="article-cta-box__btns">
+          <a href="/kotak-pindah-rumah" class="btn btn-primary btn-lg">Lihat Senarai Harga Penuh</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Kami Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.article-faq {
+  padding: 5rem 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.faq-list { display: flex; flex-direction: column; gap: 1.25rem; max-width: 860px; }
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.2s;
+}
+.faq-item:hover { border-color: var(--border-yellow); }
+.faq-q {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-1);
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+.faq-a {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: 0;
+}
+.article-cta-section { padding: 5rem 0; }
+.article-cta-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-yellow);
+  border-radius: var(--radius);
+  padding: 3rem;
+  text-align: center;
+  box-shadow: var(--glow-sm);
+}
+.article-cta-box h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 900;
+  color: var(--text-1);
+  margin: 1rem 0 0.75rem;
+}
+.article-cta-box p { color: var(--text-2); margin-bottom: 2rem; }
+.article-cta-box__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.article-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.article-table th {
+  background: var(--bg-3);
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-yellow);
+  white-space: nowrap;
+}
+.article-table td {
+  padding: 0.75rem 1rem;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.article-table tbody tr:hover td { background: var(--bg-card-hov); }
+.article-table td strong { color: var(--text-1); }
+</style>

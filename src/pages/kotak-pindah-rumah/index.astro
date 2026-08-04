@@ -1,0 +1,416 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=Hi%20Quinocycle!%20Saya%20nak%20beli%20kotak%20pindah%20rumah.`;
+
+// Harga sebenar dari katalog /shop/ — jangan ubah tanpa kemas kini shop.astro
+const boxes = [
+  { name: 'Kotak Terpakai AinS',   size: 'S',  dims: '320 × 165 × 230 mm', wall: 'Single Wall', price: 0.90, minQty: 200, cond: 'Terpakai', use: 'Buku, aksesori, barang kecil' },
+  { name: 'Kotak Terpakai Hamee',  size: 'S',  dims: '330 × 200 × 270 mm', wall: 'Single Wall', price: 1.00, minQty: 200, cond: 'Terpakai', use: 'Buku, pakaian, alat tulis' },
+  { name: 'Kotak Terpakai Jimat',  size: 'S',  dims: '400 × 320 × 250 mm', wall: 'Single Wall', price: 1.50, minQty: 150, cond: 'Terpakai', use: 'Barangan rumah, storan ringan' },
+  { name: 'Kotak Terpakai BKRS',   size: 'S',  dims: '390 × 280 × 260 mm', wall: 'Double Wall', price: 1.90, minQty: 150, cond: 'Terpakai', use: 'Pindah rumah, penghantaran' },
+  { name: 'Kotak Terpakai IBU',    size: 'S',  dims: '400 × 330 × 270 mm', wall: 'Double Wall', price: 2.00, minQty: 150, cond: 'Terpakai', use: 'Pindah rumah & pejabat' },
+  { name: 'Kotak Terpakai AAL',    size: 'M',  dims: '430 × 310 × 290 mm', wall: 'Double Wall', price: 3.00, minQty: 100, cond: 'Terpakai', use: 'Barangan rumah, storan' },
+  { name: 'Kotak Terpakai Yellow', size: 'M',  dims: '460 × 330 × 310 mm', wall: 'Double Wall', price: 3.50, minQty: 100, cond: 'Terpakai', use: 'Pindah rumah, packing runcit' },
+  { name: 'Kotak Terpakai LGD',    size: 'M',  dims: '490 × 310 × 295 mm', wall: 'Double Wall', price: 3.50, minQty: 100, cond: 'Terpakai', use: 'Pindah rumah, barang berat' },
+  { name: 'Kotak Terpakai PDC',    size: 'L',  dims: '590 × 380 × 380 mm', wall: 'Double Wall', price: 5.00, minQty: 50,  cond: 'Terpakai', use: 'Pindah rumah/pejabat, fail' },
+  { name: 'Kotak Baru XS Mini',    size: 'XS', dims: '170 × 115 × 150 mm', wall: 'Single Wall', price: 1.10, minQty: 200, cond: 'Baru',     use: 'Barang kemas, kosmetik, hadiah' },
+  { name: 'Kotak Baru A4',         size: 'S',  dims: '310 × 220 × 220 mm', wall: 'Single Wall', price: 3.00, minQty: 100, cond: 'Baru',     use: 'Pakaian, buku, elektronik' },
+  { name: 'Kotak Baru A3N',        size: 'M',  dims: '440 × 310 × 230 mm', wall: 'Double Wall', price: 5.00, minQty: 100, cond: 'Baru',     use: 'Barangan dapur, pecah belah' },
+  { name: 'Kotak Baru NLN',        size: 'L',  dims: '590 × 390 × 390 mm', wall: 'Double Wall', price: 8.00, minQty: 50,  cond: 'Baru',     use: 'Pindah rumah, barang berat' },
+];
+
+const pakej = [
+  {
+    name: 'Pakej Bilik Sewa / Studio',
+    boxes: '± 15 kotak',
+    isi: '10 × kotak S terpakai + 5 × kotak M terpakai',
+    est: 'dari RM 30',
+    for: 'Pelajar, penyewa bilik, studio & apartment kecil',
+  },
+  {
+    name: 'Pakej Rumah 2–3 Bilik',
+    boxes: '± 40 kotak',
+    isi: '20 × S + 15 × M + 5 × L (terpakai)',
+    est: 'dari RM 100',
+    for: 'Apartment, kondo & rumah teres — pakej paling popular',
+  },
+  {
+    name: 'Pakej Rumah Besar / Landed',
+    boxes: '± 70 kotak',
+    isi: '30 × S + 25 × M + 15 × L (terpakai / campur baru)',
+    est: 'dari RM 195',
+    for: 'Rumah landed, semi-D & pejabat kecil',
+  },
+];
+
+const kawasan = [
+  { slug: 'balakong',       name: 'Balakong'       },
+  { slug: 'kuala-lumpur',   name: 'Kuala Lumpur'   },
+  { slug: 'cheras',         name: 'Cheras'         },
+  { slug: 'kajang',         name: 'Kajang'         },
+  { slug: 'puchong',        name: 'Puchong'        },
+  { slug: 'seri-kembangan', name: 'Seri Kembangan' },
+  { slug: 'putrajaya',      name: 'Putrajaya'      },
+];
+
+const faqs = [
+  {
+    q: 'Berapa harga kotak pindah rumah di Quinocycle?',
+    a: 'Kotak terpakai bermula RM0.90 sekotak (saiz S) hingga RM5.00 (saiz L). Kotak baru dari RM1.10 hingga RM8.00 sekotak. Semua harga adalah harga borong tetap — tiada caj tersembunyi. Untuk pesanan penuh borong, minimum pembelian RM1,000; untuk pakej pindah rumah kecil, WhatsApp kami untuk sebut harga.',
+  },
+  {
+    q: 'Berapa banyak kotak diperlukan untuk pindah rumah 3 bilik?',
+    a: 'Anggaran biasa: rumah 2-3 bilik memerlukan 40-70 kotak — bilik tidur 10-15 kotak, dapur 15-20 kotak, ruang tamu 8-12 kotak, bilik air 3-5 kotak. Gunakan saiz S/M untuk barang berat seperti buku, dan saiz L untuk barang ringan yang besar seperti selimut.',
+  },
+  {
+    q: 'Kotak terpakai kuat tak untuk pindah rumah?',
+    a: 'Kuat. Semua kotak terpakai kami adalah gred sekali guna (once-used) dari kilang — disemak satu per satu, kering, tidak berbau dan tiada kerosakan struktur. Untuk barang berat atau pecah belah, pilih kotak double wall (dua lapisan) seperti BKRS, IBU, AAL atau PDC.',
+  },
+  {
+    q: 'Di mana kedai kotak pindah rumah Quinocycle?',
+    a: 'Gudang kami di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor — berhampiran Cheras, Kajang, Seri Kembangan dan Puchong. Buka Isnin-Jumaat 9 pagi-6 petang, Sabtu 9 pagi-1 tengah hari. Boleh ambil sendiri (self pickup) atau kami hantar.',
+  },
+  {
+    q: 'Ada penghantaran percuma?',
+    a: 'Ya — penghantaran percuma untuk KL & Selangor bagi pesanan melebihi RM300. Kawasan lain di Semenanjung Malaysia dikenakan caj penghantaran mengikut lokasi. WhatsApp kami untuk semak caj ke kawasan anda.',
+  },
+  {
+    q: 'Macam mana nak order kotak pindah rumah?',
+    a: 'Paling mudah: WhatsApp 016-891 6381 dengan senarai saiz dan kuantiti yang anda perlukan. Atau tambah ke troli di halaman Shop kami dan checkout melalui WhatsApp. Kami sahkan pesanan dalam 1 hari bekerja.',
+  },
+  {
+    q: 'Apa beza kotak baru dan kotak terpakai?',
+    a: 'Kotak baru: saiz seragam, kekuatan maksimum — sesuai untuk barang pecah belah dan elektronik. Kotak terpakai: jimat sehingga 50-60%, mesra alam — sesuai untuk pakaian, buku dan barangan biasa. Kebanyakan pelanggan pindah rumah guna campuran kedua-duanya untuk jimat kos.',
+  },
+  {
+    q: 'Selain kotak, ada jual barang packing lain?',
+    a: 'Ya — kami juga membekalkan bubble wrap, tape packing dan bahan pembungkusan lain secara borong. Nyatakan keperluan anda semasa WhatsApp dan kami sediakan sebut harga sekali.',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle — Kotak Pindah Rumah Balakong",
+  "description": "Pembekal kotak pindah rumah murah di Balakong, Selangor. Kotak kardus baru dan terpakai secara borong dari RM0.90 sekotak. Penghantaran KL, Selangor dan seluruh Semenanjung Malaysia.",
+  "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["Balakong","Cheras","Kajang","Seri Kembangan","Puchong","Kuala Lumpur","Putrajaya","Selangor","Semenanjung Malaysia"]
+};
+
+const productListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Senarai Harga Kotak Pindah Rumah",
+  "itemListElement": boxes.map((b, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "Product",
+      "name": `${b.name} (${b.dims})`,
+      "description": `${b.cond === 'Terpakai' ? 'Kotak kardus terpakai gred sekali guna' : 'Kotak kardus baru'}, ${b.wall}. Sesuai untuk: ${b.use}.`,
+      "offers": {
+        "@type": "Offer",
+        "price": b.price.toFixed(2),
+        "priceCurrency": "MYR",
+        "availability": "https://schema.org/InStock",
+        "eligibleQuantity": { "@type": "QuantitativeValue", "minValue": b.minQty }
+      }
+    }
+  }))
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Utama", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Kotak Pindah Rumah", "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/" }
+  ]
+};
+---
+
+<Layout
+  lang="ms"
+  title="Kotak Pindah Rumah Murah dari RM0.90 — Baru & Terpakai | Quinocycle Balakong"
+  description="Kotak pindah rumah murah di Balakong, Selangor. Kotak kardus baru & terpakai borong dari RM0.90 sekotak — jimat sehingga 60%. Senarai harga penuh, pakej pindah rumah, penghantaran percuma KL & Selangor (order RM300+). WhatsApp 016-891 6381."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(productListSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Utama</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">Kotak Pindah Rumah</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Kedai Kotak Pindah — Balakong, Selangor</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Kotak pindah rumah murah <br /><span class="text-primary italic">dari RM0.90 sekotak.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      Beli kotak pindah rumah terus dari pembekal — bukan harga runcit. Kotak kardus <strong class="text-on-surface font-semibold">baru dan terpakai</strong> dalam semua saiz, stok sedia di gudang Balakong. Jimat sehingga <strong class="text-on-surface font-semibold">60%</strong> dengan kotak terpakai gred sekali guna. Penghantaran percuma KL &amp; Selangor untuk pesanan melebihi RM300.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp: Sebut Harga
+      </a>
+      <a href="#senarai-harga" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Lihat Senarai Harga
+      </a>
+    </div>
+  </section>
+
+  <!-- USP strip -->
+  <section class="py-12 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-5">
+      {[
+        { icon: 'paid',           t: 'Harga Borong Tetap',        b: 'Dari RM0.90 sekotak. Tiada tawar-menawar, tiada caj tersembunyi.' },
+        { icon: 'recycling',      t: 'Jimat 60% Kotak Terpakai',  b: 'Gred sekali guna dari kilang — kuat, kering, tidak berbau.' },
+        { icon: 'local_shipping', t: 'Hantar Percuma KL/Selangor', b: 'Untuk pesanan melebihi RM300. Semenanjung Malaysia pun kami hantar.' },
+        { icon: 'inventory_2',    t: 'Stok Sedia Ada',            b: 'Gudang di Balakong — ambil sendiri atau terima esok.' },
+      ].map(u => (
+        <div class="bg-surface rounded-3xl p-7 flex flex-col gap-3">
+          <span class="material-symbols-outlined text-3xl text-primary">{u.icon}</span>
+          <h2 class="font-headline font-bold text-lg text-on-surface">{u.t}</h2>
+          <p class="font-body text-sm text-secondary leading-relaxed">{u.b}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Senarai Harga -->
+  <section id="senarai-harga" class="py-20 px-6 md:px-8 max-w-7xl mx-auto">
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">Senarai Harga 2026</span>
+    <h2 class="font-headline text-3xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-4">Harga kotak pindah rumah.</h2>
+    <p class="font-body text-secondary max-w-2xl leading-relaxed mb-10">
+      Harga borong tetap untuk semua saiz — kotak terpakai dan kotak baru. Bandingkan sendiri: kedai runcit jual kotak pindah pada RM8–RM12 sekotak; harga borong kami bermula <strong class="text-on-surface font-semibold">RM0.90</strong>.
+    </p>
+    <div class="overflow-x-auto rounded-3xl border border-outline-variant/20">
+      <table class="w-full text-left font-body text-sm">
+        <thead>
+          <tr class="bg-primary-container text-on-primary-container">
+            <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs">Kotak</th>
+            <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs">Saiz</th>
+            <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs">Ukuran (mm)</th>
+            <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs">Jenis</th>
+            <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs">Harga / kotak</th>
+            <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs">Sesuai untuk</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-outline-variant/15">
+          {boxes.map(b => (
+            <tr class="bg-surface hover:bg-surface-container-low transition-colors">
+              <td class="px-5 py-4 font-semibold text-on-surface whitespace-nowrap">{b.name}</td>
+              <td class="px-5 py-4">{b.size}</td>
+              <td class="px-5 py-4 whitespace-nowrap">{b.dims}</td>
+              <td class="px-5 py-4 whitespace-nowrap">{b.wall}{b.cond === 'Terpakai' ? ' · Terpakai' : ' · Baru'}</td>
+              <td class="px-5 py-4 font-headline font-bold text-on-surface whitespace-nowrap">RM {b.price.toFixed(2)}</td>
+              <td class="px-5 py-4 text-secondary">{b.use}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="font-body text-xs text-secondary mt-4">
+      * Harga borong tetap. Kuantiti minimum berbeza mengikut jenis kotak ({boxes[boxes.length-1].minQty}–{boxes[0].minQty} unit); pesanan borong penuh minimum RM1,000. Untuk kuantiti kecil / pakej pindah rumah, <a href={WA_LINK} class="text-primary font-semibold hover:underline" target="_blank" rel="noopener noreferrer">WhatsApp kami</a> untuk sebut harga terus.
+    </p>
+  </section>
+
+  <!-- Pakej -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8">
+      <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">Pakej Pindah Rumah</span>
+      <h2 class="font-headline text-3xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-4">Tak pasti nak berapa kotak?</h2>
+      <p class="font-body text-secondary max-w-2xl leading-relaxed mb-12">
+        Ikut pakej anggaran kami — berdasarkan ratusan tempahan pindah rumah yang kami bekalkan setiap bulan. WhatsApp sahaja nama pakej, kami uruskan yang lain.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {pakej.map((p, i) => (
+          <div class={`rounded-3xl p-9 flex flex-col gap-4 ${i === 1 ? 'bg-primary-container' : 'bg-surface'}`}>
+            <h3 class={`font-headline font-bold text-2xl ${i === 1 ? 'text-on-primary-container' : 'text-on-surface'}`}>{p.name}</h3>
+            <p class={`font-headline font-extrabold text-4xl ${i === 1 ? 'text-on-primary-container' : 'text-primary'}`}>{p.est}</p>
+            <p class={`font-body text-sm ${i === 1 ? 'text-on-primary-container/80' : 'text-secondary'}`}><strong>{p.boxes}</strong> — {p.isi}</p>
+            <p class={`font-body text-sm leading-relaxed flex-1 ${i === 1 ? 'text-on-primary-container/80' : 'text-secondary'}`}>{p.for}</p>
+            <a
+              href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! Saya berminat dengan ${p.name} (${p.boxes}).`)}`}
+              target="_blank" rel="noopener noreferrer"
+              class={`inline-flex justify-center px-6 py-3 rounded-full font-headline font-bold text-xs uppercase tracking-widest transition-all ${i === 1 ? 'bg-on-surface text-surface hover:opacity-90' : 'bg-primary-container text-on-primary-container hover:opacity-90'}`}
+            >
+              Tempah Pakej Ini
+            </a>
+          </div>
+        ))}
+      </div>
+      <p class="font-body text-xs text-secondary mt-6">* Harga pakej adalah anggaran berdasarkan harga borong sekotak; harga muktamad disahkan melalui WhatsApp mengikut stok dan saiz pilihan anda.</p>
+    </div>
+  </section>
+
+  <!-- Berapa kotak guide -->
+  <section class="py-20 px-6 md:px-8 max-w-4xl mx-auto">
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">Panduan Ringkas</span>
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-8">Berapa banyak kotak anda perlukan?</h2>
+    <div class="overflow-x-auto rounded-3xl border border-outline-variant/20 mb-6">
+      <table class="w-full text-left font-body text-sm">
+        <thead>
+          <tr class="bg-surface-container-low">
+            <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs text-on-surface">Ruang</th>
+            <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs text-on-surface">Anggaran kotak</th>
+            <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs text-on-surface">Saiz disyorkan</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-outline-variant/15">
+          {[
+            ['Bilik tidur',   '10–15 kotak', 'S untuk buku & barang berat, M untuk pakaian'],
+            ['Dapur',         '15–20 kotak', 'S/M double wall untuk pinggan & periuk'],
+            ['Ruang tamu',    '8–12 kotak',  'M/L untuk hiasan, elektronik & buku'],
+            ['Bilik air',     '3–5 kotak',   'S untuk toiletries & barang kecil'],
+            ['Stor / bilik utiliti', '5–10 kotak', 'L untuk barang ringan bersaiz besar'],
+          ].map(r => (
+            <tr class="bg-surface">
+              <td class="px-5 py-4 font-semibold text-on-surface">{r[0]}</td>
+              <td class="px-5 py-4">{r[1]}</td>
+              <td class="px-5 py-4 text-secondary">{r[2]}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="font-body text-secondary leading-relaxed">
+      Petua: rumah 3 bilik biasanya perlukan <strong class="text-on-surface font-semibold">50–70 kotak</strong>. Lebih baik lebih sedikit dari kurang — kotak yang tak digunakan boleh dijadikan storan. Baca panduan penuh: <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="text-primary font-semibold hover:underline">Berapa Kotak Diperlukan Untuk Pindah Rumah?</a>
+    </p>
+  </section>
+
+  <!-- Baru vs Terpakai -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-4xl mx-auto px-6 md:px-8">
+      <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">Baru atau Terpakai?</span>
+      <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-8">Pilih kotak yang betul, jimat beratus ringgit.</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-surface rounded-3xl p-8">
+          <h3 class="font-headline font-bold text-xl text-on-surface mb-4">Kotak Baru — dari RM1.10</h3>
+          <ul class="font-body text-sm text-secondary leading-relaxed flex flex-col gap-2 list-disc list-inside">
+            <li>Saiz seragam, mudah disusun dalam lori</li>
+            <li>Kekuatan maksimum — sesuai untuk pinggan mangkuk &amp; elektronik</li>
+            <li>Bersih sepenuhnya, sesuai juga untuk barang bayi</li>
+          </ul>
+        </div>
+        <div class="bg-primary-container rounded-3xl p-8">
+          <h3 class="font-headline font-bold text-xl text-on-primary-container mb-4">Kotak Terpakai — dari RM0.90</h3>
+          <ul class="font-body text-sm text-on-primary-container/80 leading-relaxed flex flex-col gap-2 list-disc list-inside">
+            <li>Jimat 50–60% berbanding kotak baru</li>
+            <li>Gred sekali guna — disemak, kering &amp; tidak berbau</li>
+            <li>Pilihan mesra alam — kurangkan sisa kadbod</li>
+          </ul>
+        </div>
+      </div>
+      <p class="font-body text-secondary leading-relaxed">
+        Panduan penuh: <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">Beza Kotak Baru dan Kotak Terpakai</a> · <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">Lihat semua kotak terpakai</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Kawasan -->
+  <section class="py-20 px-6 md:px-8 max-w-7xl mx-auto">
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">Kawasan Penghantaran</span>
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">Kotak pindah rumah di kawasan anda.</h2>
+    <p class="font-body text-secondary max-w-2xl leading-relaxed mb-10">
+      Gudang kami di Balakong — penghantaran pantas (selalunya hari sama atau esok) ke seluruh Lembah Klang, dan 2–3 hari bekerja ke seluruh Semenanjung Malaysia.
+    </p>
+    <div class="flex flex-wrap gap-3">
+      {kawasan.map(k => (
+        <a href={`/kotak-pindah-rumah/${k.slug}`} class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">
+          Kotak Pindah {k.name}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Kedai / Lawat -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <div>
+        <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">Lawat Gudang Kami</span>
+        <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Ambil sendiri di Balakong.</h2>
+        <address class="font-body text-lg text-on-surface not-italic leading-relaxed mb-6">
+          <strong>Quinocycle Sdn. Bhd.</strong><br />
+          No.13, Jalan Taming P/1, Taming Jaya,<br />
+          43300 Balakong, Selangor
+        </address>
+        <p class="font-body text-secondary leading-relaxed mb-6">
+          5 minit dari Seri Kembangan, 10–15 minit dari Cheras dan Kajang. Waktu operasi: Isnin–Jumaat 9:00 pagi–6:00 petang, Sabtu 9:00 pagi–1:00 tengah hari.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-7 py-3 rounded-full font-headline font-bold text-xs uppercase tracking-widest hover:bg-primary transition-colors">
+            Buka di Google Maps
+          </a>
+          <a href="tel:+60168916381" class="bg-surface text-on-surface px-7 py-3 rounded-full font-headline font-bold text-xs uppercase tracking-widest hover:bg-primary-container transition-colors">
+            Telefon 016-891 6381
+          </a>
+        </div>
+      </div>
+      <div class="bg-surface rounded-3xl p-9">
+        <h3 class="font-headline font-bold text-xl text-on-surface mb-5">Soalan Lazim (FAQ)</h3>
+        <div class="flex flex-col divide-y divide-outline-variant/15">
+          {faqs.map(f => (
+            <details class="group py-4">
+              <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-base text-on-surface">
+                {f.q}
+                <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:22px;">add</span>
+              </summary>
+              <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Sedia nak pindah? Kotak sedia menunggu.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        WhatsApp kami senarai saiz &amp; kuantiti — kami balas dengan sebut harga dalam masa sejam waktu bekerja.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="/shop" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Beli Online di Shop
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

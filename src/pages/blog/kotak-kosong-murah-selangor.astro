@@ -1,0 +1,605 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Kotak Kosong Murah di Selangor — Beli Terus Dari Gudang Balakong',
+  description: 'Cari kotak kosong murah di Selangor? Beli terus dari gudang Quinocycle di Balakong — kotak terpakai dari RM0.90, kotak baru dari RM1.10. Penghantaran percuma KL & Selangor untuk pesanan atas RM300.',
+  date: '2026-08-04',
+  readTime: '8 min',
+  category: 'Panduan Beli Kotak',
+  author: 'Pasukan Quinocycle',
+  slug: 'kotak-kosong-murah-selangor',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20nak%20beli%20kotak%20kosong.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "ms-MY",
+  "author": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd.",
+    "url": "https://www.quinocycle.com.my"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.quinocycle.com.my/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.quinocycle.com.my/blog/kotak-kosong-murah-selangor"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.quinocycle.com.my/images/hero-boxes.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  "keywords": "kotak kosong murah, kotak kosong selangor, kotak kosong pindah rumah, beli kotak kosong, kotak kosong balakong, kotak kardus kosong, empty carton box selangor, kotak kosong borong, gudang kotak selangor, Quinocycle Balakong"
+};
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Gudang kotak kardus borong di Balakong, Selangor — kotak kosong baru dan terpakai untuk pindah rumah, simpanan, dan penghantaran.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "priceRange": "RM0.90 – RM8.00 sekotak",
+  "areaServed": ["Selangor", "Kuala Lumpur", "Semenanjung Malaysia"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Di mana boleh beli kotak kosong murah di Selangor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cara paling jimat ialah beli terus dari gudang pemborong. Quinocycle Sdn. Bhd. di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor menjual kotak kosong terpakai dari RM0.90 sekotak dan kotak baru dari RM1.10 sekotak. Penghantaran percuma di KL & Selangor untuk pesanan melebihi RM300. WhatsApp: 016-891 6381."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa harga kotak kosong di Quinocycle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kotak kosong terpakai: saiz S dari RM0.90, saiz M RM3.00–RM3.50, saiz L RM5.00 sekotak. Kotak kosong baru: XS RM1.10, A4 RM3.00, A3N RM5.00, NLN RM8.00 sekotak. Senarai harga penuh boleh dilihat di halaman /kotak-pindah-rumah dan /shop."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Adakah kotak kosong terpakai sesuai untuk pindah rumah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya. Kotak terpakai Quinocycle adalah gred kilang yang digunakan sekali sahaja (once-used factory grade) — setiap kotak disemak, kering, dan bebas bau sebelum dijual. Untuk pindah rumah, simpanan, dan penghantaran biasa, kotak terpakai berfungsi sama baik dengan kotak baru pada harga yang jauh lebih rendah."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa banyak kotak kosong diperlukan untuk pindah rumah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rumah 3 bilik tidur biasanya memerlukan 50–70 kotak. Anggaran mengikut ruang: bilik tidur 10–15 kotak, dapur 15–20 kotak, ruang tamu 8–12 kotak, dan bilik mandi 3–5 kotak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Adakah penghantaran kotak kosong percuma di Selangor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya — penghantaran percuma untuk KL & Selangor bagi pesanan melebihi RM300. Untuk kawasan lain di Semenanjung Malaysia, penghantaran mengambil masa 2–3 hari bekerja. Anda juga boleh ambil sendiri di gudang kami di Balakong."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title={`${post.title} — Blog Quinocycle`}
+  description={post.description}
+  lang="ms"
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container article-hero__inner">
+      <a href="/blog" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Kembali ke Blog
+      </a>
+      <div class="tag tag--yellow" style="margin-top:1.5rem">{post.category}</div>
+      <h1 class="article-hero__title">{post.title}</h1>
+      <div class="article-meta">
+        <time datetime={post.date}>{new Date(post.date).toLocaleDateString('ms-MY', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        <span>·</span>
+        <span>{post.readTime} bacaan</span>
+        <span>·</span>
+        <span>Oleh {post.author}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <div class="container" style="margin-bottom:2rem;margin-top:-1rem">
+    <img
+      src="/images/hero-boxes.jpg"
+      alt="Kotak kosong murah tersusun di gudang Quinocycle Balakong, Selangor"
+      style="width:100%;max-height:460px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);display:block;"
+      loading="eager"
+      width="1280"
+      height="720"
+    />
+  </div>
+
+  <!-- Article Body -->
+  <article class="article-body">
+    <div class="container article-body__inner">
+      <div class="article-content">
+
+        <p class="article-lead">
+          Nak pindah rumah, kemas stor, atau hantar barang jualan online — semuanya bermula dengan benda yang sama: <strong>kotak kosong</strong>. Masalahnya, kotak kosong di kedai runcit selalunya tak cukup, saiznya tak seragam, dan kalau beli satu-satu di marketplace, harganya boleh jadi dua tiga kali ganda. Artikel ini menerangkan di mana anda boleh dapatkan <strong>kotak kosong murah di Selangor</strong> — dan kenapa beli terus dari gudang di Balakong hampir selalu jadi pilihan paling jimat.
+        </p>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>Maklumat Pantas:</strong> Quinocycle Sdn. Bhd. &bull; No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor &bull; WhatsApp: <a href={WA_LINK}>016-891 6381</a> &bull; Kotak terpakai dari RM0.90 &bull; Penghantaran percuma KL &amp; Selangor untuk pesanan atas RM300
+        </div>
+
+        ---
+
+        <h2>Apa Sebenarnya Maksud "Kotak Kosong"?</h2>
+
+        <p>
+          Bila orang Malaysia cari "kotak kosong", biasanya mereka maksudkan <strong>kotak kardus polos tanpa isi</strong> — kotak yang boleh diisi sendiri untuk pelbagai kegunaan. Tiga kegunaan paling biasa:
+        </p>
+
+        <ul>
+          <li><strong>Pindah rumah atau pejabat</strong> — keperluan paling besar. Rumah 3 bilik tidur biasanya memerlukan <strong>50–70 kotak</strong> pelbagai saiz. Lihat panduan penuh kami: <a href="/blog/berapa-kotak-diperlukan-pindah-rumah">berapa kotak diperlukan untuk pindah rumah</a>.</li>
+          <li><strong>Simpanan (storage)</strong> — kemas stor, simpan barang bermusim, arkib dokumen pejabat, atau simpan barang sebelum sewa unit storage.</li>
+          <li><strong>Penghantaran &amp; jualan online</strong> — penjual Shopee, TikTok Shop, dan bisnes e-dagang yang perlukan bekalan kotak secara konsisten pada kos serendah mungkin.</li>
+        </ul>
+
+        <p>
+          Ketiga-tiga kegunaan ini ada satu persamaan: anda tak perlukan kotak bercetak cantik atau <em>custom printing</em>. Anda perlukan kotak yang <strong>kukuh, bersih, dan murah</strong>. Sebab itulah kotak kosong terpakai gred kilang menjadi pilihan paling popular — fungsinya sama, harganya jauh lebih rendah.
+        </p>
+
+        ---
+
+        <h2>Di Mana Nak Beli Kotak Kosong di Selangor? (Perbandingan Jujur)</h2>
+
+        <p>
+          Ada beberapa tempat anda boleh dapatkan kotak kosong di Selangor. Setiap satu ada kelebihan dan kekurangan — ini perbandingan jujur supaya anda boleh pilih ikut keperluan:
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Sumber</th>
+                <th>Kos Seunit</th>
+                <th>Kelebihan</th>
+                <th>Kekurangan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Marketplace online</strong> (Shopee, Lazada)</td>
+                <td>Sederhana – tinggi</td>
+                <td>Senang order, tak perlu keluar rumah</td>
+                <td>Harga seunit naik bila kuantiti kecil, kos pos untuk barang besar, kualiti tak dapat disemak sebelum beli</td>
+              </tr>
+              <tr>
+                <td><strong>Pasaraya / kedai runcit</strong> (kotak percuma)</td>
+                <td>Percuma</td>
+                <td>Tiada kos langsung</td>
+                <td>Saiz rambang, kuantiti tak menentu, keadaan tak terjamin — kadang lembap atau berbau makanan</td>
+              </tr>
+              <tr>
+                <td><strong>Kedai alat tulis / hardware</strong></td>
+                <td>Tinggi</td>
+                <td>Boleh beli sikit-sikit, dapat terus</td>
+                <td>Harga runcit paling mahal seunit, pilihan saiz terhad</td>
+              </tr>
+              <tr>
+                <td><strong>Gudang pemborong</strong> (seperti Quinocycle)</td>
+                <td><strong>Paling rendah</strong></td>
+                <td>Harga borong terus dari sumber, saiz konsisten, stok banyak, kualiti disemak</td>
+                <td>Lokasi fizikal satu sahaja (Balakong) — tapi ada penghantaran ke seluruh Selangor &amp; KL</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Kesimpulannya: kalau anda perlukan <strong>satu dua kotak sahaja</strong>, kotak percuma dari kedai runcit atau beli di kedai alat tulis dah memadai. Tapi kalau anda perlukan <strong>20, 50, atau 100 kotak</strong> — untuk pindah rumah atau bekalan bisnes — beli terus dari gudang pemborong akan jimatkan puluhan hingga ratusan ringgit.
+        </p>
+
+        ---
+
+        <h2>Harga Kotak Kosong di Gudang Quinocycle, Balakong</h2>
+
+        <p>
+          Quinocycle Sdn. Bhd. ialah pembekal kotak kardus borong yang beroperasi dari gudang di <strong>Taming Jaya, Balakong, Selangor</strong>. Kami jual dua kategori kotak kosong — <strong>terpakai</strong> dan <strong>baru</strong> — dengan harga tetap, tanpa tawar-menawar.
+        </p>
+
+        <h3>Kotak Kosong Terpakai (Pilihan Paling Jimat)</h3>
+
+        <p>
+          Kotak terpakai kami adalah <strong>gred kilang guna sekali</strong> (<em>once-used factory grade</em>) — bukan kotak kutipan tepi jalan. Setiap kotak <strong>disemak, kering, dan bebas bau</strong> sebelum masuk stok. Lihat koleksi penuh di halaman <a href="/used-carton-boxes">kotak terpakai</a> kami.
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Saiz</th>
+                <th>Harga / Kotak</th>
+                <th>Sesuai Untuk</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>S (Kecil)</strong></td>
+                <td><strong>Dari RM0.90</strong></td>
+                <td>Buku, barang dapur, barang berat yang kecil</td>
+              </tr>
+              <tr>
+                <td><strong>M (Sederhana)</strong></td>
+                <td><strong>RM3.00 – RM3.50</strong></td>
+                <td>Pakaian, barang am rumah, stok jualan online</td>
+              </tr>
+              <tr>
+                <td><strong>L (Besar)</strong></td>
+                <td><strong>RM5.00</strong></td>
+                <td>Bantal, selimut, barang ringan bersaiz besar</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Kotak Kosong Baru</h3>
+
+        <p>
+          Untuk barang pecah belah, elektronik, atau penghantaran yang perlukan rupa profesional, kami juga ada kotak baru:
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Harga / Kotak</th>
+                <th>Sesuai Untuk</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>XS</strong></td>
+                <td><strong>RM1.10</strong></td>
+                <td>Aksesori, barang kecil, produk e-dagang</td>
+              </tr>
+              <tr>
+                <td><strong>A4</strong></td>
+                <td><strong>RM3.00</strong></td>
+                <td>Dokumen, buku, barang saiz sederhana</td>
+              </tr>
+              <tr>
+                <td><strong>A3N</strong></td>
+                <td><strong>RM5.00</strong></td>
+                <td>Barang rumah, bungkusan lebih besar</td>
+              </tr>
+              <tr>
+                <td><strong>NLN</strong></td>
+                <td><strong>RM8.00</strong></td>
+                <td>Barang besar dan berat</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Senarai harga penuh mengikut saiz dan model boleh dilihat di halaman <a href="/kotak-pindah-rumah">kotak pindah rumah</a> atau terus di <a href="/shop">kedai online kami</a>. Tak pasti nak pilih baru atau terpakai? Baca perbandingan kami: <a href="/blog/beza-kotak-baru-kotak-terpakai">beza kotak baru dan kotak terpakai</a>.
+        </p>
+
+        ---
+
+        <h2>Kotak Kosong untuk Pindah Rumah — Berapa Banyak &amp; Saiz Apa?</h2>
+
+        <p>
+          Ini anggaran standard yang kami guna bila pelanggan tanya berapa kotak diperlukan:
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Ruang</th>
+                <th>Anggaran Kotak</th>
+                <th>Saiz Disyorkan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Bilik tidur (setiap satu)</td><td>10–15 kotak</td><td>S, M</td></tr>
+              <tr><td>Dapur</td><td>15–20 kotak</td><td>S, M (barang berat dalam kotak kecil)</td></tr>
+              <tr><td>Ruang tamu</td><td>8–12 kotak</td><td>M, L</td></tr>
+              <tr><td>Bilik mandi</td><td>3–5 kotak</td><td>S</td></tr>
+              <tr><td><strong>Rumah 3 bilik tidur</strong></td><td><strong>50–70 kotak</strong></td><td>Campuran S, M, L</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>Petua Pro:</strong> Barang berat masuk kotak <em>kecil</em>, barang ringan masuk kotak <em>besar</em>. Kotak M terpakai pada RM3.00–RM3.50 adalah "kuda beban" pindah rumah — beli paling banyak saiz ini.
+        </div>
+
+        <p>
+          Untuk pecahan lebih terperinci, baca <a href="/blog/berapa-kotak-diperlukan-pindah-rumah">panduan kiraan kotak pindah rumah</a> kami, semak <a href="/blog/harga-kotak-pindah-rumah">harga kotak pindah rumah terkini</a>, dan jangan lepaskan <a href="/blog/tips-pindah-rumah-packing-malaysia">tips packing pindah rumah</a> supaya kerja mengemas jadi lebih pantas.
+        </p>
+
+        ---
+
+        <h2>Kawasan Penghantaran Kotak Kosong di Selangor &amp; KL</h2>
+
+        <p>
+          Gudang kami hanya satu — di <strong>Balakong</strong> — tetapi kami menghantar kotak kosong ke seluruh Selangor dan Kuala Lumpur, termasuk:
+        </p>
+
+        <ul>
+          <li><strong>Berhampiran gudang</strong> — Balakong, Taming Jaya, Cheras (±15 minit memandu), Kajang (±15 minit memandu), Seri Kembangan (±15 minit memandu), Bandar Baru Bangi, Semenyih</li>
+          <li><strong>Lembah Klang tengah</strong> — Kuala Lumpur, Ampang, Puchong, Petaling Jaya, Subang Jaya, Putrajaya, Cyberjaya</li>
+          <li><strong>Selangor barat &amp; utara</strong> — Shah Alam, Klang, Rawang, Selayang, Gombak, Sepang</li>
+        </ul>
+
+        <div class="article-callout">
+          <strong>Penghantaran percuma</strong> untuk KL &amp; Selangor bagi pesanan melebihi <strong>RM300</strong>. Kawasan lain di Semenanjung Malaysia: penghantaran <strong>2–3 hari bekerja</strong>.<br /><br />
+          Nak ambil sendiri? Datang terus ke gudang kami:<br />
+          No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor.<br />
+          Isnin–Jumaat 9:00 pagi–6:00 petang &bull; Sabtu 9:00 pagi–1:00 tengah hari &bull; Ahad tutup.<br /><br />
+          <a href="https://maps.google.com/?q=No.13+Jalan+Taming+P/1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer">
+            → Lihat di Google Maps
+          </a>
+        </div>
+
+        ---
+
+        <h2>Borong Kotak Kosong untuk Penjual Online &amp; Perniagaan</h2>
+
+        <p>
+          Kalau anda penjual online, syarikat mover, atau bisnes yang guna kotak setiap hari, kos pembungkusan adalah kos berulang — setiap sen seunit yang dijimatkan akan berganda setiap bulan. Beli borong terus dari gudang adalah cara paling berkesan untuk turunkan kos ini.
+        </p>
+
+        <ul>
+          <li><strong>Pesanan borong penuh</strong> — minimum RM1,000, harga seunit paling rendah, sesuai untuk bisnes yang perlukan bekalan tetap.</li>
+          <li><strong>Kuantiti kecil untuk pindah rumah</strong> — tak sampai RM1,000? Tiada masalah. WhatsApp kami senarai keperluan anda dan kami sediakan sebut harga khas untuk kuantiti pindah rumah.</li>
+          <li><strong>Stok konsisten</strong> — sebagai pemborong, stok kami sentiasa ada dalam kuantiti besar. Anda tak perlu risau kehabisan kotak di saat akhir.</li>
+        </ul>
+
+        <p>
+          Penjual online juga suka kotak terpakai atas satu lagi sebab: ia <strong>mesra alam</strong>. Setiap kotak yang diguna semula mengurangkan permintaan kadbod baru — dan ramai pembeli online hari ini menghargai pembungkusan kitar semula.
+        </p>
+
+        ---
+
+        <h2>Cara Order Kotak Kosong dari Quinocycle</h2>
+
+        <ol>
+          <li><strong>Kira keperluan anda</strong> — guna jadual anggaran di atas, atau rujuk <a href="/kotak-pindah-rumah">senarai harga penuh</a>.</li>
+          <li><strong>WhatsApp kami di <a href={WA_LINK}>016-891 6381</a></strong> — nyatakan saiz, kuantiti, dan kawasan penghantaran. Kami balas dengan sebut harga.</li>
+          <li><strong>Atau layari <a href="/shop">kedai online</a></strong> — lihat semua saiz dan harga, kemudian sahkan pesanan melalui WhatsApp.</li>
+          <li><strong>Terima kotak anda</strong> — penghantaran percuma KL &amp; Selangor (pesanan atas RM300), atau ambil sendiri di gudang Balakong.</li>
+        </ol>
+
+      </div><!-- /.article-content -->
+
+      <!-- Sidebar CTA -->
+      <aside class="article-sidebar">
+        <div class="sidebar-cta">
+          <div class="tag tag--yellow">Dapatkan Kotak Anda</div>
+          <h3>Perlukan kotak kosong? Kami ada stok sedia di Balakong.</h3>
+          <p>Kotak terpakai dari <strong>RM0.90</strong> sekotak.<br />Kotak baru dari <strong>RM1.10</strong> sekotak.</p>
+          <a href="/shop" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:0.75rem">Lihat Semua Produk</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="width:100%;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp 016-891 6381
+          </a>
+          <p class="sidebar-cta__note">Isnin–Jumaat 9am–6pm · Sabtu 9am–1pm<br />Balakong, Selangor</p>
+        </div>
+
+        <div class="sidebar-links">
+          <div class="sidebar-links__title">Artikel Berkaitan</div>
+          <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Berapa Kotak Diperlukan untuk Pindah Rumah?
+          </a>
+          <a href="/blog/beza-kotak-baru-kotak-terpakai" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Beza Kotak Baru &amp; Kotak Terpakai
+          </a>
+          <a href="/blog/harga-kotak-pindah-rumah" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Harga Kotak Pindah Rumah
+          </a>
+          <a href="/used-carton-boxes" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Lihat Kotak Terpakai
+          </a>
+        </div>
+      </aside>
+
+    </div><!-- /.article-body__inner -->
+  </article>
+
+  <!-- FAQ Section (AEO) -->
+  <section class="article-faq">
+    <div class="container">
+      <div class="section-eyebrow">Soalan Lazim</div>
+      <h2 class="section-title" style="margin-bottom:2rem">Soalan Kerap Ditanya<br /><span style="font-size:0.6em;opacity:0.6">Frequently Asked Questions</span></h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3 class="faq-q">Di mana boleh beli kotak kosong murah di Selangor?</h3>
+          <p class="faq-a">Cara paling jimat ialah beli terus dari gudang pemborong. Quinocycle Sdn. Bhd. di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor menjual kotak kosong terpakai dari <strong>RM0.90 sekotak</strong> dan kotak baru dari RM1.10 sekotak. Penghantaran percuma di KL &amp; Selangor untuk pesanan melebihi RM300. WhatsApp: 016-891 6381.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Berapa harga kotak kosong di Quinocycle?</h3>
+          <p class="faq-a">Kotak kosong terpakai: saiz S dari <strong>RM0.90</strong>, saiz M <strong>RM3.00–RM3.50</strong>, saiz L <strong>RM5.00</strong> sekotak. Kotak kosong baru: XS RM1.10, A4 RM3.00, A3N RM5.00, NLN RM8.00 sekotak. Lihat senarai harga penuh di halaman <a href="/kotak-pindah-rumah">kotak pindah rumah</a>.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Adakah kotak kosong terpakai sesuai untuk pindah rumah?</h3>
+          <p class="faq-a">Ya. Kotak terpakai Quinocycle adalah <strong>gred kilang guna sekali</strong> (once-used factory grade) — setiap kotak disemak, kering, dan bebas bau sebelum dijual. Untuk pindah rumah, simpanan, dan penghantaran biasa, ia berfungsi sama baik dengan kotak baru pada harga jauh lebih rendah.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Berapa banyak kotak kosong diperlukan untuk pindah rumah?</h3>
+          <p class="faq-a">Rumah 3 bilik tidur biasanya memerlukan <strong>50–70 kotak</strong>. Anggaran mengikut ruang: bilik tidur 10–15 kotak, dapur 15–20 kotak, ruang tamu 8–12 kotak, bilik mandi 3–5 kotak.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Adakah penghantaran kotak kosong percuma di Selangor?</h3>
+          <p class="faq-a">Ya — <strong>penghantaran percuma untuk KL &amp; Selangor</strong> bagi pesanan melebihi RM300. Kawasan lain di Semenanjung Malaysia: 2–3 hari bekerja. Anda juga boleh ambil sendiri di gudang kami di Balakong (Isnin–Jumaat 9am–6pm, Sabtu 9am–1pm).</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="article-cta-section">
+    <div class="container">
+      <div class="article-cta-box">
+        <div class="tag tag--yellow">Stok Sedia di Balakong</div>
+        <h2>Dapatkan kotak kosong anda hari ini.</h2>
+        <p>Kotak terpakai dari RM0.90 · Kotak baru dari RM1.10 · Penghantaran percuma KL &amp; Selangor untuk pesanan atas RM300</p>
+        <div class="article-cta-box__btns">
+          <a href="/shop" class="btn btn-primary btn-lg">Lihat Semua Produk</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Kami Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.article-faq {
+  padding: 5rem 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.faq-list { display: flex; flex-direction: column; gap: 1.25rem; max-width: 860px; }
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.2s;
+}
+.faq-item:hover { border-color: var(--border-yellow); }
+.faq-q {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-1);
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+.faq-a {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: 0;
+}
+.article-cta-section { padding: 5rem 0; }
+.article-cta-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-yellow);
+  border-radius: var(--radius);
+  padding: 3rem;
+  text-align: center;
+  box-shadow: var(--glow-sm);
+}
+.article-cta-box h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 900;
+  color: var(--text-1);
+  margin: 1rem 0 0.75rem;
+}
+.article-cta-box p { color: var(--text-2); margin-bottom: 2rem; }
+.article-cta-box__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.article-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.article-table th {
+  background: var(--bg-3);
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-yellow);
+  white-space: nowrap;
+}
+.article-table td {
+  padding: 0.75rem 1rem;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.article-table tbody tr:hover td { background: var(--bg-card-hov); }
+.article-table td strong { color: var(--text-1); }
+</style>

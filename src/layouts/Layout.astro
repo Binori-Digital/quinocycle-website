@@ -4,6 +4,7 @@ interface Props {
   description?: string;
   ogImage?: string;
   heroMode?: boolean;
+  lang?: string;
 }
 
 const {
@@ -11,6 +12,7 @@ const {
   description = 'New and used carton boxes in bulk. Fixed wholesale prices. Min. order RM1,000. Delivery across Peninsular Malaysia.',
   ogImage = '/images/og-default.jpg',
   heroMode = false,
+  lang = 'en',
 } = Astro.props;
 
 // Social platforms (WhatsApp, Facebook) require absolute URLs for og:image
@@ -20,12 +22,13 @@ const WA_NUMBER = '60168916381';
 const WA_LINK   = `https://wa.me/${WA_NUMBER}?text=Hi%20Quinocycle!%20I%20would%20like%20to%20enquire%20about%20your%20carton%20boxes.`;
 
 const navLinks = [
-  { href: '/',                  label: 'Home'       },
-  { href: '/shop',              label: 'Shop'       },
-  { href: '/used-carton-boxes', label: 'Used Boxes' },
-  { href: '/blog',              label: 'Blog'       },
-  { href: '/about',             label: 'About'      },
-  { href: '/contact',           label: 'Contact'    },
+  { href: '/',                   label: 'Home'         },
+  { href: '/shop',               label: 'Shop'         },
+  { href: '/kotak-pindah-rumah', label: 'Kotak Pindah' },
+  { href: '/used-carton-boxes',  label: 'Used Boxes'   },
+  { href: '/blog',               label: 'Blog'         },
+  { href: '/about',              label: 'About'        },
+  { href: '/contact',            label: 'Contact'      },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -34,7 +37,7 @@ import '../styles/global.css';
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,6 +86,11 @@ import '../styles/global.css';
       "addressRegion": "Selangor",
       "postalCode": "43300",
       "addressCountry": "MY"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 3.0579,
+      "longitude": 101.7468
     },
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
@@ -216,7 +224,7 @@ import '../styles/global.css';
         </div>
 
         <!-- Links columns -->
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div class="flex flex-col gap-3">
             <h5 class="font-headline font-bold text-xs uppercase tracking-[0.2em] text-primary mb-1">Quick Links</h5>
             <a href="/shop"    class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Shop</a>
@@ -226,16 +234,32 @@ import '../styles/global.css';
           </div>
           <div class="flex flex-col gap-3">
             <h5 class="font-headline font-bold text-xs uppercase tracking-[0.2em] text-primary mb-1">Products</h5>
+            <a href="/kotak-pindah-rumah"      class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Kotak Pindah Rumah</a>
             <a href="/moving-boxes-malaysia"   class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Moving Boxes (Kotak Pindah)</a>
             <a href="/shipping-boxes-malaysia" class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Shipping Boxes</a>
             <a href="/used-carton-boxes"       class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Used Boxes (Kotak Terpakai)</a>
             <a href="/shop"                    class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">New Carton Boxes</a>
           </div>
           <div class="flex flex-col gap-3">
+            <h5 class="font-headline font-bold text-xs uppercase tracking-[0.2em] text-primary mb-1">Kawasan</h5>
+            <a href="/kotak-pindah-rumah/balakong"       class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Kotak Pindah Balakong</a>
+            <a href="/kotak-pindah-rumah/kuala-lumpur"   class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Kotak Pindah KL</a>
+            <a href="/kotak-pindah-rumah/cheras"         class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Kotak Pindah Cheras</a>
+            <a href="/kotak-pindah-rumah/kajang"         class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Kotak Pindah Kajang</a>
+            <a href="/kotak-pindah-rumah/puchong"        class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Kotak Pindah Puchong</a>
+            <a href="/kotak-pindah-rumah/seri-kembangan" class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Kotak Pindah Seri Kembangan</a>
+            <a href="/kotak-pindah-rumah/putrajaya"      class="font-body text-sm text-secondary hover:text-primary hover:underline decoration-primary-container underline-offset-4 transition-colors">Kotak Pindah Putrajaya</a>
+          </div>
+          <div class="flex flex-col gap-3">
             <h5 class="font-headline font-bold text-xs uppercase tracking-[0.2em] text-primary mb-1">Info</h5>
+            <address class="font-body text-sm text-secondary not-italic leading-relaxed">
+              <strong class="text-on-surface font-semibold">Quinocycle Sdn. Bhd.</strong><br />
+              No.13, Jalan Taming P/1, Taming Jaya,<br />
+              43300 Balakong, Selangor
+            </address>
+            <a href="tel:+60168916381" class="font-body text-sm text-secondary hover:text-primary transition-colors">016-891 6381</a>
             <p class="font-body text-sm text-secondary">Free delivery across <strong class="text-on-surface font-semibold">KL &amp; Selangor</strong> (For order above RM300)</p>
             <p class="font-body text-sm text-secondary">We deliver carton boxes to <strong class="text-on-surface font-semibold">Kuala Lumpur, Selangor, Johor, Penang, Perak, Pahang, Negeri Sembilan, Kedah, Melaka, Terengganu, Kelantan &amp; Perlis</strong> — anywhere in Peninsular Malaysia.</p>
-            <p class="font-body text-sm text-secondary">Fixed wholesale pricing</p>
           </div>
         </div>
       </div>

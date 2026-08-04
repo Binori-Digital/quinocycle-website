@@ -1,0 +1,557 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Beza Kotak Baru dan Kotak Terpakai — Mana Lebih Berbaloi?',
+  description: 'Kotak terpakai jimat hingga 49%, tetapi kotak baru lebih sesuai untuk pecah belah. Perbandingan jujur harga, kekuatan, kebersihan & mesra alam — lengkap dengan kiraan kos sebenar untuk pindahan 50 kotak.',
+  date: '2026-08-04',
+  readTime: '8 min',
+  category: 'Panduan Pindah Rumah',
+  author: 'Pasukan Quinocycle',
+  slug: 'beza-kotak-baru-kotak-terpakai',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20nak%20tanya%20pasal%20kotak%20baru%20dan%20terpakai%20untuk%20pindah%20rumah.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "ms-MY",
+  "author": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd.",
+    "url": "https://www.quinocycle.com.my"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.quinocycle.com.my/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.quinocycle.com.my/blog/beza-kotak-baru-kotak-terpakai"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.quinocycle.com.my/images/blog-movers-guide.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  "keywords": "beza kotak baru dan terpakai, kotak terpakai kuat tak, kotak terpakai untuk pindah rumah, kotak kardus terpakai, kotak pindah rumah murah, used carton box malaysia, kotak terpakai murah, gred sekali guna, Quinocycle Balakong"
+};
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Pembekal kotak kardus borong — baru dan terpakai gred sekali guna — untuk pindah rumah, perniagaan, dan logistik. Gudang di Balakong, Selangor dengan penghantaran ke seluruh Semenanjung Malaysia.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "priceRange": "RM0.90 – RM8.00 sekotak",
+  "areaServed": "Semenanjung Malaysia"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Kotak terpakai kuat tak untuk pindah rumah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, selagi ia gred sekali guna. Kotak terpakai Quinocycle hanya digunakan sekali oleh kilang, kemudian disemak satu persatu — mesti kering, bebas bau, dan tiada kerosakan struktur. Kotak terpakai double wall selalunya lebih kukuh daripada kotak baru single wall. Kuncinya: letakkan barang berat dalam kotak kecil dan gunakan kaedah H-tape di bahagian bawah kotak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah maksud kotak terpakai 'gred sekali guna'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gred sekali guna bermaksud kotak itu hanya digunakan sekali oleh kilang untuk menghantar barang, bukan kotak yang dikutip merata-rata. Di gudang Quinocycle di Balakong, setiap kotak disemak: struktur mesti utuh (tiada koyak, penjuru tidak remuk, flap lengkap), kotak mesti kering, dan bebas bau. Kotak yang gagal semakan tidak dijual — ia dihantar untuk kitar semula."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa banyak boleh jimat kalau guna kotak terpakai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sekitar 40–60% berbanding kotak baru. Contoh sebenar untuk pindahan 50 kotak (25 saiz S, 15 saiz M, 10 saiz L): semua kotak baru berjumlah RM230.00, manakala semua kotak terpakai hanya RM117.50 — jimat RM112.50 atau kira-kira 49%. Kotak terpakai bermula RM0.90 sekotak, kotak baru bermula RM1.10 sekotak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bila patut pilih kotak baru berbanding kotak terpakai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pilih kotak baru untuk pinggan mangkuk, gelas, barangan pecah belah, elektronik, barang bernilai atau sentimental, dan simpanan jangka panjang. Kotak terpakai sudah memadai untuk pakaian, buku, kasut, mainan, dan barangan rumah biasa. Kebanyakan pelanggan pindah rumah menggunakan strategi campuran: kira-kira 70% kotak terpakai dan 30% kotak baru."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Boleh beli kuantiti kecil untuk pindah rumah sahaja?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Boleh. Pesanan borong penuh mempunyai minimum RM1,000, tetapi untuk kuantiti pindah rumah yang lebih kecil, hantar sahaja senarai keperluan anda melalui WhatsApp 016-891 6381 untuk sebut harga. Penghantaran percuma di KL & Selangor untuk pesanan RM300 ke atas; kawasan lain di Semenanjung Malaysia 2–3 hari bekerja. Anda juga boleh ambil sendiri di gudang Balakong."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title={`${post.title} — Blog Quinocycle`}
+  description={post.description}
+  lang="ms"
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container article-hero__inner">
+      <a href="/blog" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Kembali ke Blog
+      </a>
+      <div class="tag tag--yellow" style="margin-top:1.5rem">{post.category}</div>
+      <h1 class="article-hero__title">{post.title}</h1>
+      <div class="article-meta">
+        <time datetime={post.date}>{new Date(post.date).toLocaleDateString('ms-MY', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        <span>·</span>
+        <span>{post.readTime} bacaan</span>
+        <span>·</span>
+        <span>Oleh {post.author}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <div class="container" style="margin-bottom:2rem;margin-top:-1rem">
+    <img
+      src="/images/blog-movers-guide.jpg"
+      alt="Perbandingan kotak kardus baru dan kotak terpakai untuk pindah rumah di Malaysia — Quinocycle Balakong"
+      style="width:100%;max-height:460px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);display:block;"
+      loading="eager"
+      width="1280"
+      height="720"
+    />
+  </div>
+
+  <!-- Article Body -->
+  <article class="article-body">
+    <div class="container article-body__inner">
+      <div class="article-content">
+
+        <p class="article-lead">
+          Ini soalan yang paling kerap kami dengar di gudang Balakong: <em>"Kotak terpakai ni okay ke untuk pindah rumah, atau baik saya beli baru je?"</em> Jawapan jujurnya: <strong>kedua-duanya ada tempat masing-masing</strong>. Kotak terpakai boleh menjimatkan hampir separuh kos, tetapi ada barang yang memang lebih selamat dalam kotak baru. Artikel ini membandingkan kedua-duanya secara terbuka — harga sebenar, kekuatan, kebersihan — supaya anda boleh buat keputusan sendiri, bukan sekadar ikut kata jurujual.
+        </p>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>Maklumat Pantas:</strong> Quinocycle Sdn. Bhd. &bull; Gudang: No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor &bull; WhatsApp: <a href={WA_LINK}>016-891 6381</a> &bull; Kotak terpakai dari RM0.90, kotak baru dari RM1.10 &bull; Penghantaran percuma KL &amp; Selangor untuk pesanan RM300 ke atas
+        </div>
+
+        <h2>Perbandingan Ringkas: Kotak Baru vs Kotak Terpakai</h2>
+
+        <p>
+          Sebelum masuk ke butiran, ini rumusan perbandingan dari pengalaman kami membekalkan kedua-dua jenis kotak kepada pelanggan pindah rumah, penjual online, dan syarikat mover:
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Kriteria</th>
+                <th>Kotak Baru</th>
+                <th>Kotak Terpakai (Gred Sekali Guna)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Harga sekotak</strong></td>
+                <td>RM1.10 – RM8.00</td>
+                <td>RM0.90 – RM5.00 — <strong>jimat 40–60%</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Kekuatan</strong></td>
+                <td>100% kekuatan asal, konsisten setiap unit</td>
+                <td>Masih kukuh — setiap kotak disemak, tiada kerosakan struktur</td>
+              </tr>
+              <tr>
+                <td><strong>Saiz seragam</strong></td>
+                <td>Ya — dimensi tepat, mudah disusun bertindan</td>
+                <td>Saiz ikut stok kilang; dimensi berbeza sedikit antara batch</td>
+              </tr>
+              <tr>
+                <td><strong>Kebersihan</strong></td>
+                <td>Permukaan bersih, tiada cetakan pihak lain</td>
+                <td>Bersih, kering &amp; bebas bau; mungkin ada cetakan kilang asal</td>
+              </tr>
+              <tr>
+                <td><strong>Mesra alam</strong></td>
+                <td>Diperbuat daripada bahan baru</td>
+                <td>Guna semula kotak sedia ada — kurangkan sisa kadbod</td>
+              </tr>
+              <tr>
+                <td><strong>Paling sesuai untuk</strong></td>
+                <td>Pecah belah, elektronik, imej profesional</td>
+                <td>Pakaian, buku, barangan am, simpanan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Ringkasnya: kalau bajet adalah keutamaan dan barang anda kebanyakannya pakaian, buku, dan barangan rumah biasa — kotak terpakai adalah pilihan paling berbaloi. Kalau anda membungkus set pinggan mangkuk pusaka nenek, itu cerita lain. Mari kita pecahkan satu persatu.
+        </p>
+
+        <h2>Apa Maksud "Gred Sekali Guna"? (Dan Kenapa Ia Penting)</h2>
+
+        <p>
+          Bila sesetengah orang dengar "kotak terpakai", mereka bayangkan kotak lembap yang dikutip belakang kedai runcit. Itu <strong>bukan</strong> apa yang kami jual. Kotak terpakai gred sekali guna (<em>once-used factory grade</em>) ialah kotak yang <strong>digunakan sekali sahaja oleh kilang</strong> untuk menghantar barangan mereka — kemudian dikosongkan dan dijual semula. Ia baru melalui satu perjalanan sahaja dalam hayatnya.
+        </p>
+
+        <p>
+          Sebelum mana-mana kotak masuk ke rak jualan di gudang Balakong, ia melalui semakan mudah tetapi tegas:
+        </p>
+
+        <ol>
+          <li><strong>Semakan struktur</strong> — tiada koyakan, penjuru tidak remuk, semua flap lengkap dan boleh dilipat dengan kemas. Kotak yang "lembik" ditolak.</li>
+          <li><strong>Mesti kering</strong> — kadbod yang pernah lembap kehilangan sebahagian besar kekuatannya walaupun sudah kering semula. Kotak berkesan air tidak dijual.</li>
+          <li><strong>Bebas bau</strong> — kotak yang berbau makanan, minyak, atau bahan kimia ditolak terus. Tiada siapa mahu baju berbau belacan selepas pindah.</li>
+          <li><strong>Yang gagal, dikitar semula</strong> — kotak yang tidak lepas semakan tidak masuk stok jualan; ia dihantar untuk kitar semula.</li>
+        </ol>
+
+        <p>
+          Anda boleh lihat pilihan penuh kotak terpakai kami di halaman <a href="/used-carton-boxes">kotak terpakai</a> — setiap satu dengan dimensi dan harga sebenar.
+        </p>
+
+        <h2>Kotak Terpakai Kuat Tak? Jawapan Jujur.</h2>
+
+        <p>
+          Kami tidak akan berselindung: <strong>kadbod memang kehilangan sedikit kekuatan selepas penggunaan pertama</strong> — terutama di garisan lipatan. Sebab itulah kami hanya jual gred sekali guna dan menolak kotak yang menunjukkan tanda kelemahan struktur.
+        </p>
+
+        <p>
+          Tetapi dalam praktiknya, ada satu perkara yang ramai tidak sedar: <strong>kotak terpakai double wall selalunya lebih kukuh daripada kotak baru single wall</strong>. Kotak terpakai saiz M dan L kami (seperti AAL 430 × 310 × 290 mm dan PDC 590 × 380 × 380 mm) adalah double wall — dua lapisan gelombang kadbod — kerana ia asalnya dibuat untuk kegunaan kilang yang berat. Jadi soalan yang lebih tepat bukan "baru atau terpakai?", tetapi "single wall atau double wall?"
+        </p>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>Petua supaya mana-mana kotak kekal kuat:</strong> Letakkan barang <em>berat</em> (buku, pinggan, alatan) dalam kotak <em>kecil</em>, dan barang <em>ringan</em> (bantal, selimut, pakaian) dalam kotak <em>besar</em>. Kemudian gunakan kaedah <strong>H-tape</strong> di bahagian bawah — satu jalur pita di tengah, satu di setiap tepi. Kebanyakan kotak "pecah" bukan kerana kotaknya lemah, tetapi kerana diisi terlalu berat atau pita bawahnya tidak cukup.
+        </div>
+
+        <p>
+          Lebih banyak teknik packing seperti ini dalam panduan kami: <a href="/blog/tips-pindah-rumah-packing-malaysia">tips pindah rumah &amp; packing di Malaysia</a>.
+        </p>
+
+        <h2>Bila Patut Pilih Kotak Baru</h2>
+
+        <p>
+          Ada situasi di mana beza harga RM2–RM4 sekotak memang berbaloi dibayar. Pilih <strong>kotak baru</strong> untuk:
+        </p>
+
+        <ul>
+          <li><strong>Pinggan mangkuk, gelas &amp; barangan pecah belah</strong> — anda mahu kekuatan penuh yang konsisten pada setiap kotak, tanpa sebarang tanda tanya. Kotak Baru A3N (double wall) kami memang dibuat untuk kegunaan ini.</li>
+          <li><strong>Elektronik</strong> — TV, monitor, komputer, dan peralatan dapur elektrik. Nilai barang jauh melebihi harga kotak.</li>
+          <li><strong>Barang bernilai atau sentimental</strong> — bingkai gambar keluarga, barangan kaca hiasan, koleksi peribadi.</li>
+          <li><strong>Simpanan jangka panjang</strong> — jika kotak akan disimpan berbulan-bulan di stor, mulakan dengan kadbod yang belum pernah digunakan.</li>
+          <li><strong>Imej profesional</strong> — jika anda penjual online atau perniagaan yang menghantar kepada pelanggan, kotak bersih tanpa cetakan kilang lain nampak lebih kemas.</li>
+        </ul>
+
+        <h2>Bila Kotak Terpakai Sudah Lebih Dari Memadai</h2>
+
+        <p>
+          Untuk kebanyakan barang dalam rumah anda, kotak terpakai gred sekali guna melakukan kerja yang sama dengan kos separuh:
+        </p>
+
+        <ul>
+          <li><strong>Pakaian &amp; kain</strong> — baju, tudung, cadar, langsir. Ringan dan tidak sensitif.</li>
+          <li><strong>Buku &amp; dokumen</strong> — berat tetapi tidak pecah. Gunakan kotak terpakai saiz S (seperti AinS, dari RM0.90) supaya tidak terlalu berat untuk diangkat.</li>
+          <li><strong>Kasut, beg &amp; mainan anak</strong> — barangan lasak yang tidak memerlukan perlindungan khas.</li>
+          <li><strong>Periuk, kuali &amp; barangan dapur bukan pecah belah</strong> — logam tidak kisah kotaknya baru atau tidak.</li>
+          <li><strong>Barang stor</strong> — alat pertukangan, hiasan perayaan, barangan garaj.</li>
+        </ul>
+
+        <p>
+          Kalau anda perhatikan senarai ini, ia merangkumi <strong>70–80% daripada isi rumah biasa</strong>. Itulah asas kepada strategi seterusnya.
+        </p>
+
+        <h2>Strategi Campuran 70/30 — Cara Kebanyakan Pelanggan Kami Beli</h2>
+
+        <p>
+          Selepas melayan ratusan pesanan pindah rumah, corak yang paling kerap kami lihat adalah begini: pelanggan mengambil <strong>lebih kurang 70% kotak terpakai untuk barangan am, dan 30% kotak baru untuk barang sensitif</strong> — biasanya kotak baru double wall untuk bahagian dapur dan elektronik.
+        </p>
+
+        <p>
+          Logiknya mudah: anda bayar harga premium hanya di tempat yang benar-benar memerlukannya. Baju anda tidak tahu pun ia berada dalam kotak terpakai; set gelas kesayangan anda pula mendapat kotak baru yang kekuatannya terjamin 100%.
+        </p>
+
+        <p>
+          Tidak pasti berapa jumlah kotak yang anda perlukan? Panduan penuh ada di sini: <a href="/blog/berapa-kotak-diperlukan-pindah-rumah">berapa kotak diperlukan untuk pindah rumah</a>. Sebagai rujukan pantas, rumah 3 bilik biasanya memerlukan 50–70 kotak (bilik tidur 10–15, dapur 15–20, ruang tamu 8–12, bilik mandi 3–5).
+        </p>
+
+        <h2>Kira Kos Sebenar: Pindahan 50 Kotak</h2>
+
+        <p>
+          Mari kita letakkan nombor sebenar atas meja. Ambil contoh pindahan rumah 3 bilik yang memerlukan 50 kotak — 25 saiz S, 15 saiz M, 10 saiz L. Semua harga di bawah adalah harga sebenar dari <a href="/kotak-pindah-rumah">senarai harga penuh kotak pindah rumah</a> kami:
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Senario</th>
+                <th>Kombinasi (50 kotak)</th>
+                <th>Jumlah Kos</th>
+                <th>Jimat vs Semua Baru</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>100% kotak baru</strong></td>
+                <td>25 × A4 (RM3.00) + 15 × A3N (RM5.00) + 10 × NLN (RM8.00)</td>
+                <td><strong>RM230.00</strong></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><strong>Campuran 70/30</strong></td>
+                <td>25 × S terpakai (RM0.90) + 10 × L terpakai (RM5.00) + 15 × A3N baru (RM5.00) untuk pecah belah</td>
+                <td><strong>RM147.50</strong></td>
+                <td>RM82.50 (≈36%)</td>
+              </tr>
+              <tr>
+                <td><strong>100% kotak terpakai</strong></td>
+                <td>25 × S (RM0.90) + 15 × M (RM3.00) + 10 × L (RM5.00)</td>
+                <td><strong>RM117.50</strong></td>
+                <td>RM112.50 (≈49%)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Perhatikan senario campuran: dengan tambahan RM30.00 sahaja berbanding semua terpakai, kesemua 15 kotak untuk pinggan mangkuk dan barangan pecah belah anda adalah kotak baru double wall. Bagi kebanyakan keluarga, itulah titik keseimbangan terbaik antara jimat dan tenang fikiran.
+        </p>
+
+        <p>
+          Untuk pecahan harga yang lebih terperinci mengikut saiz dan jenis, baca <a href="/blog/harga-kotak-pindah-rumah">panduan harga kotak pindah rumah</a> kami, atau terus lihat semua produk di <a href="/shop">kedai online</a>.
+        </p>
+
+        <div class="article-callout">
+          <strong>Nota penghantaran &amp; pesanan:</strong> Penghantaran <strong>percuma di KL &amp; Selangor</strong> untuk pesanan RM300 ke atas; kawasan lain di Semenanjung Malaysia dalam 2–3 hari bekerja. Pesanan borong penuh mempunyai minimum RM1,000 — tetapi untuk kuantiti pindah rumah yang lebih kecil seperti contoh di atas, hantar sahaja senarai anda melalui <a href={WA_LINK}>WhatsApp 016-891 6381</a> untuk sebut harga. Anda juga boleh ambil sendiri di gudang kami di Taming Jaya, Balakong.
+        </div>
+
+        <h2>Kesimpulan: Mana Lebih Berbaloi?</h2>
+
+        <p>
+          Jika kami terpaksa jawab dalam satu ayat: <strong>kotak terpakai lebih berbaloi untuk 70–80% barang anda, dan kotak baru berbaloi untuk baki yang sensitif</strong>. Beli semua baru bermakna anda membayar premium untuk baju dan kasut yang tidak memerlukannya; beli semua terpakai pula bermakna anda berjimat beberapa ringgit pada barang yang paling anda sayang. Strategi campuran memberi anda yang terbaik dari kedua-duanya — dan itulah yang kami sendiri cadangkan bila pelanggan bertanya di WhatsApp.
+        </p>
+
+      </div><!-- /.article-content -->
+
+      <!-- Sidebar CTA -->
+      <aside class="article-sidebar">
+        <div class="sidebar-cta">
+          <div class="tag tag--yellow">Baru &amp; Terpakai</div>
+          <h3>Nak tengok dulu sebelum beli? Boleh.</h3>
+          <p>Kotak terpakai dari <strong>RM0.90</strong> sekotak.<br />Kotak baru dari <strong>RM1.10</strong> sekotak.</p>
+          <a href="/kotak-pindah-rumah" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:0.75rem">Senarai Harga Penuh</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="width:100%;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp 016-891 6381
+          </a>
+          <p class="sidebar-cta__note">Isnin–Jumaat 9am–6pm · Sabtu 9am–1pm<br />Gudang: Taming Jaya, Balakong, Selangor</p>
+        </div>
+
+        <div class="sidebar-links">
+          <div class="sidebar-links__title">Artikel Berkaitan</div>
+          <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Berapa Kotak Diperlukan Untuk Pindah Rumah?
+          </a>
+          <a href="/blog/harga-kotak-pindah-rumah" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Harga Kotak Pindah Rumah di Malaysia
+          </a>
+          <a href="/blog/tips-pindah-rumah-packing-malaysia" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Tips Pindah Rumah &amp; Packing
+          </a>
+          <a href="/used-carton-boxes" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Lihat Kotak Terpakai
+          </a>
+        </div>
+      </aside>
+
+    </div><!-- /.article-body__inner -->
+  </article>
+
+  <!-- FAQ Section (AEO) -->
+  <section class="article-faq">
+    <div class="container">
+      <div class="section-eyebrow">Soalan Lazim</div>
+      <h2 class="section-title" style="margin-bottom:2rem">Soalan Kerap Ditanya<br /><span style="font-size:0.6em;opacity:0.6">Kotak Baru vs Kotak Terpakai</span></h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3 class="faq-q">Kotak terpakai kuat tak untuk pindah rumah?</h3>
+          <p class="faq-a">Ya, selagi ia <strong>gred sekali guna</strong>. Kotak terpakai Quinocycle hanya digunakan sekali oleh kilang, kemudian disemak satu persatu — mesti kering, bebas bau, dan tiada kerosakan struktur. Kotak terpakai double wall selalunya lebih kukuh daripada kotak baru single wall. Kuncinya: letakkan barang berat dalam kotak kecil dan gunakan kaedah H-tape di bahagian bawah kotak.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Apakah maksud kotak terpakai "gred sekali guna"?</h3>
+          <p class="faq-a">Ia bermaksud kotak itu hanya digunakan <strong>sekali oleh kilang</strong> untuk menghantar barang — bukan kotak yang dikutip merata-rata. Di gudang kami di Balakong, setiap kotak disemak: struktur mesti utuh (tiada koyak, penjuru tidak remuk, flap lengkap), kotak mesti kering, dan bebas bau. Kotak yang gagal semakan tidak dijual — ia dihantar untuk kitar semula.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Berapa banyak boleh jimat kalau guna kotak terpakai?</h3>
+          <p class="faq-a">Sekitar <strong>40–60%</strong> berbanding kotak baru. Contoh sebenar untuk pindahan 50 kotak (25 S, 15 M, 10 L): semua kotak baru berjumlah RM230.00, manakala semua kotak terpakai hanya <strong>RM117.50</strong> — jimat RM112.50 atau kira-kira 49%. Kotak terpakai bermula RM0.90 sekotak, kotak baru bermula RM1.10.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Bila patut pilih kotak baru berbanding kotak terpakai?</h3>
+          <p class="faq-a">Pilih <strong>kotak baru</strong> untuk pinggan mangkuk, gelas, barangan pecah belah, elektronik, barang bernilai atau sentimental, dan simpanan jangka panjang. <strong>Kotak terpakai</strong> sudah memadai untuk pakaian, buku, kasut, mainan, dan barangan rumah biasa. Kebanyakan pelanggan pindah rumah guna strategi campuran: kira-kira 70% terpakai + 30% baru.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Boleh beli kuantiti kecil untuk pindah rumah sahaja?</h3>
+          <p class="faq-a">Boleh. Pesanan borong penuh mempunyai minimum RM1,000, tetapi untuk kuantiti pindah rumah yang lebih kecil, hantar sahaja senarai keperluan anda melalui <strong>WhatsApp 016-891 6381</strong> untuk sebut harga. Penghantaran percuma di KL &amp; Selangor untuk pesanan RM300 ke atas; kawasan lain di Semenanjung Malaysia 2–3 hari bekerja. Anda juga boleh ambil sendiri di gudang Balakong.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="article-cta-section">
+    <div class="container">
+      <div class="article-cta-box">
+        <div class="tag tag--yellow">Dah Tahu Beza, Jom Pilih</div>
+        <h2>Campurkan kotak baru &amp; terpakai — bayar hanya untuk apa yang perlu.</h2>
+        <p>Kotak terpakai dari RM0.90 · Kotak baru dari RM1.10 · Penghantaran percuma KL &amp; Selangor untuk pesanan RM300 ke atas</p>
+        <div class="article-cta-box__btns">
+          <a href="/kotak-pindah-rumah" class="btn btn-primary btn-lg">Lihat Senarai Harga Penuh</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Kami Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.article-faq {
+  padding: 5rem 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.faq-list { display: flex; flex-direction: column; gap: 1.25rem; max-width: 860px; }
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.2s;
+}
+.faq-item:hover { border-color: var(--border-yellow); }
+.faq-q {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-1);
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+.faq-a {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: 0;
+}
+.article-cta-section { padding: 5rem 0; }
+.article-cta-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-yellow);
+  border-radius: var(--radius);
+  padding: 3rem;
+  text-align: center;
+  box-shadow: var(--glow-sm);
+}
+.article-cta-box h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 900;
+  color: var(--text-1);
+  margin: 1rem 0 0.75rem;
+}
+.article-cta-box p { color: var(--text-2); margin-bottom: 2rem; }
+.article-cta-box__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.article-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.article-table th {
+  background: var(--bg-3);
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-yellow);
+  white-space: nowrap;
+}
+.article-table td {
+  padding: 0.75rem 1rem;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.article-table tbody tr:hover td { background: var(--bg-card-hov); }
+.article-table td strong { color: var(--text-1); }
+</style>

@@ -1,0 +1,903 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Harga Kotak Pindah Rumah 2026 — Senarai Penuh & Cara Jimat 60%',
+  description: 'Senarai harga kotak pindah rumah 2026 Malaysia: kotak terpakai dari RM0.90, kotak baru dari RM1.10 sekotak. Banding harga kedai hardware vs borong, anggaran kos ikut saiz rumah & 5 cara jimat sehingga 60%.',
+  date: '2026-08-04',
+  readTime: '9 min',
+  category: 'Panduan Harga',
+  author: 'Pasukan Quinocycle',
+  slug: 'harga-kotak-pindah-rumah',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20nak%20tanya%20harga%20kotak%20pindah%20rumah.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "ms-MY",
+  "author": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd.",
+    "url": "https://www.quinocycle.com.my"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.quinocycle.com.my/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://www.quinocycle.com.my/blog/${post.slug}`
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.quinocycle.com.my/images/blog-cut-packaging-costs.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  "keywords": "harga kotak pindah rumah, senarai harga kotak, harga kotak kardus, kotak pindah rumah murah, harga kotak 2026, kotak terpakai murah, kotak kardus borong malaysia, kotak pindah selangor"
+};
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "openingHours": ["Mo-Fr 09:00-18:00", "Sa 09:00-13:00"],
+  "priceRange": "RM0.90 - RM8.00 sekotak"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Berapa harga kotak pindah rumah di Malaysia pada 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Harga borong dari pembekal seperti Quinocycle di Balakong, Selangor: kotak terpakai RM0.90 hingga RM5.00 sekotak (saiz S dari RM0.90, M RM3.00–3.50, L RM5.00) dan kotak baru RM1.10 hingga RM8.00 sekotak (XS RM1.10, A4 RM3.00, A3N RM5.00, NLN RM8.00). Di kedai hardware, kotak runcit biasanya dijual sekitar RM8 hingga RM12 sekotak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa jumlah kos kotak untuk pindah rumah 3 bilik?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rumah 3 bilik tidur biasanya memerlukan 50–70 kotak. Dengan campuran kotak terpakai (30 saiz S, 25 saiz M, 10 saiz L), jumlah kos sekitar RM150 hingga RM200 sahaja. Jika membeli kotak yang sama di kedai hardware pada harga RM8–RM12 sekotak, kos boleh mencecah RM520 hingga RM780."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Adakah kotak terpakai cukup kuat untuk pindah rumah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya. Kotak terpakai Quinocycle adalah gred kilang yang hanya digunakan sekali. Setiap kotak disemak sebelum dijual — kering, kukuh, dan bebas bau. Kebanyakannya double wall, jadi ia sesuai untuk buku, pakaian, peralatan dapur, dan kebanyakan barang rumah. Untuk barang pecah belah atau elektronik mahal, gunakan kotak baru."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ada penghantaran percuma untuk kotak pindah rumah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ada. Quinocycle menawarkan penghantaran percuma ke seluruh KL & Selangor untuk pesanan melebihi RM300. Bagi kawasan lain di Semenanjung Malaysia, penghantaran mengambil masa 2–3 hari bekerja. Anda juga boleh ambil sendiri di gudang kami di Balakong, Selangor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Boleh beli kotak pindah rumah dalam kuantiti kecil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Boleh. Pesanan borong penuh mempunyai minimum RM1,000, tetapi untuk kegunaan pindah rumah, kuantiti yang lebih kecil boleh diatur melalui sebut harga WhatsApp di 016-891 6381. Beritahu saiz rumah anda dan kami cadangkan campuran kotak yang paling jimat."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title={`${post.title} — Blog Quinocycle`}
+  description={post.description}
+  lang="ms"
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container article-hero__inner">
+      <a href="/blog" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Kembali ke Blog
+      </a>
+      <div class="tag tag--yellow" style="margin-top:1.5rem">{post.category}</div>
+      <h1 class="article-hero__title">{post.title}</h1>
+      <div class="article-meta">
+        <time datetime={post.date}>{new Date(post.date).toLocaleDateString('ms-MY', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        <span>·</span>
+        <span>{post.readTime} bacaan</span>
+        <span>·</span>
+        <span>Oleh {post.author}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <div class="container featured-img-wrap">
+    <img
+      src="/images/blog-cut-packaging-costs.jpg"
+      alt="Senarai harga kotak pindah rumah Malaysia 2026 — kotak kardus baru dan terpakai Quinocycle Balakong Selangor"
+      loading="eager"
+      width="1280"
+      height="720"
+    />
+  </div>
+
+  <!-- Article Body -->
+  <article class="article-body">
+    <div class="container article-body__inner">
+      <div class="article-content">
+
+        <p class="article-lead">
+          Berapa sebenarnya <strong>harga kotak pindah rumah</strong> di Malaysia pada tahun 2026? Jawapan ringkas: antara <strong>RM0.90 hingga RM8.00 sekotak</strong> jika anda beli terus daripada pembekal borong — tetapi sekitar <strong>RM8 hingga RM12 sekotak</strong> jika anda membelinya satu-satu di kedai hardware. Perbezaan inilah yang membuatkan ramai orang terlebih belanja ratusan ringgit setiap kali berpindah.
+        </p>
+
+        <p>
+          Dalam panduan ini, kami kongsikan <strong>senarai harga kotak</strong> yang penuh dan telus — setiap model, dimensi, dan harga sebenar dari gudang Quinocycle di Balakong, Selangor — bersama anggaran kos mengikut saiz kediaman dan 5 cara praktikal untuk jimat sehingga 60% daripada kos pembungkusan anda.
+        </p>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>Maklumat Pantas:</strong> Quinocycle Sdn. Bhd. &bull; No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor &bull; WhatsApp: <a href={WA_LINK}>016-891 6381</a> &bull; Penghantaran percuma KL &amp; Selangor untuk pesanan melebihi RM300
+        </div>
+
+        <h2>Ringkasan Harga Kotak Pindah Rumah 2026</h2>
+
+        <p>
+          Sebelum masuk ke senarai penuh, ini gambaran keseluruhan <strong>harga kotak kardus</strong> di pasaran Malaysia sekarang:
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Kategori</th>
+                <th>Harga Sekotak</th>
+                <th>Catatan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Kotak terpakai saiz S</td><td><strong>RM0.90 – RM2.00</strong></td><td>Gred kilang sekali guna, single &amp; double wall</td></tr>
+              <tr><td>Kotak terpakai saiz M</td><td><strong>RM3.00 – RM3.50</strong></td><td>Double wall, paling popular untuk pindah rumah</td></tr>
+              <tr><td>Kotak terpakai saiz L</td><td><strong>RM5.00</strong></td><td>Double wall, muatan besar</td></tr>
+              <tr><td>Kotak baru XS (Mini)</td><td><strong>RM1.10</strong></td><td>Single wall, barang kecil</td></tr>
+              <tr><td>Kotak baru S (A4)</td><td><strong>RM3.00</strong></td><td>Single wall</td></tr>
+              <tr><td>Kotak baru M (A3N)</td><td><strong>RM5.00</strong></td><td>Double wall</td></tr>
+              <tr><td>Kotak baru L (NLN)</td><td><strong>RM8.00</strong></td><td>Double wall, paling kukuh</td></tr>
+              <tr><td>Kedai hardware (runcit)</td><td>RM8 – RM12</td><td>Harga runcit biasa untuk perbandingan</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Harga di atas ialah harga borong seunit. Pesanan borong penuh mempunyai minimum RM1,000, tetapi untuk pindah rumah, kuantiti yang lebih kecil boleh diatur melalui sebut harga WhatsApp. Untuk senarai harga penuh berserta pakej mengikut saiz rumah, lihat halaman <a href="/kotak-pindah-rumah">kotak pindah rumah</a> kami.
+        </p>
+
+        <h2>Senarai Harga Penuh Mengikut Model Kotak</h2>
+
+        <h3>Kotak Baru (New Carton Boxes)</h3>
+
+        <p>
+          Kotak baru mempunyai dimensi seragam dan kekuatan yang konsisten — pilihan terbaik untuk barang pecah belah, elektronik, dan dokumen penting.
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Dimensi (mm)</th>
+                <th>Dinding</th>
+                <th>Harga / Kotak</th>
+                <th>Sesuai Untuk</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>XS Mini</strong></td><td>170 × 115 × 150</td><td>Single Wall</td><td><strong>RM1.10</strong></td><td>Barang kemas, kosmetik, aksesori</td></tr>
+              <tr><td><strong>S A4</strong></td><td>310 × 220 × 220</td><td>Single Wall</td><td><strong>RM3.00</strong></td><td>Pakaian, buku, elektronik kecil</td></tr>
+              <tr><td><strong>M A3N</strong></td><td>440 × 310 × 230</td><td>Double Wall</td><td><strong>RM5.00</strong></td><td>Barangan rumah, peralatan dapur</td></tr>
+              <tr><td><strong>L NLN</strong></td><td>590 × 390 × 390</td><td>Double Wall</td><td><strong>RM8.00</strong></td><td>Pindah rumah, barangan berat</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Kotak Terpakai (Used Carton Boxes)</h3>
+
+        <p>
+          Kotak terpakai kami ialah <strong>gred kilang sekali guna</strong> — bukan kotak buruk yang dikutip merata-rata. Setiap unit disemak sebelum dijual: kering, kukuh, dan bebas bau. Lihat stok semasa di halaman <a href="/used-carton-boxes">kotak terpakai</a> kami.
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Saiz</th>
+                <th>Dimensi (mm)</th>
+                <th>Dinding</th>
+                <th>Harga / Kotak</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>AinS</strong></td><td>S</td><td>320 × 165 × 230</td><td>Single Wall</td><td><strong>RM0.90</strong></td></tr>
+              <tr><td><strong>Hamee</strong></td><td>S</td><td>330 × 200 × 270</td><td>Single Wall</td><td><strong>RM1.00</strong></td></tr>
+              <tr><td><strong>S3White</strong></td><td>S</td><td>330 × 310 × 270</td><td>Single Wall</td><td><strong>RM1.20</strong></td></tr>
+              <tr><td><strong>Jimat</strong></td><td>S</td><td>400 × 320 × 250</td><td>Single Wall</td><td><strong>RM1.50</strong></td></tr>
+              <tr><td><strong>Bary</strong></td><td>S</td><td>300 × 200 × 250</td><td>Double Wall</td><td><strong>RM1.80</strong></td></tr>
+              <tr><td><strong>HJIC</strong></td><td>S</td><td>440 × 330 × 190</td><td>Double Wall</td><td><strong>RM1.80</strong></td></tr>
+              <tr><td><strong>BKRS</strong></td><td>S</td><td>390 × 280 × 260</td><td>Double Wall</td><td><strong>RM1.90</strong></td></tr>
+              <tr><td><strong>IBU</strong></td><td>S</td><td>400 × 330 × 270</td><td>Double Wall</td><td><strong>RM2.00</strong></td></tr>
+              <tr><td><strong>Menara</strong></td><td>S</td><td>430 × 250 × 220</td><td>Double Wall</td><td><strong>RM2.00</strong></td></tr>
+              <tr><td><strong>AAL</strong></td><td>M</td><td>430 × 310 × 290</td><td>Double Wall</td><td><strong>RM3.00</strong></td></tr>
+              <tr><td><strong>FGC</strong></td><td>M</td><td>430 × 310 × 260</td><td>Double Wall</td><td><strong>RM3.00</strong></td></tr>
+              <tr><td><strong>LGD</strong></td><td>M</td><td>490 × 310 × 295</td><td>Double Wall</td><td><strong>RM3.50</strong></td></tr>
+              <tr><td><strong>Yellow</strong></td><td>M</td><td>460 × 330 × 310</td><td>Double Wall</td><td><strong>RM3.50</strong></td></tr>
+              <tr><td><strong>PDC</strong></td><td>L</td><td>590 × 380 × 380</td><td>Double Wall</td><td><strong>RM5.00</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          <em>Nota: Stok kotak terpakai berubah mengikut bekalan kilang. Semua model dan harga terkini boleh dilihat di <a href="/shop">kedai dalam talian</a> kami atau disahkan melalui WhatsApp.</em>
+        </p>
+
+        <h2>Kedai Hardware vs Borong — Perbezaan Harga Sebenar</h2>
+
+        <p>
+          Di kedai hardware atau kedai runcit, kotak kardus biasanya dijual sekitar <strong>RM8 hingga RM12 sekotak</strong> kerana ia melalui beberapa lapis orang tengah dan dijual dalam kuantiti kecil. Apabila anda beli terus daripada pembekal borong, kotak yang sama fungsinya berharga <strong>RM0.90 hingga RM8.00</strong> sahaja.
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Tempat Beli</th>
+                <th>Harga Sekotak</th>
+                <th>Kos 60 Kotak</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kedai hardware / runcit</td>
+                <td>RM8 – RM12</td>
+                <td>RM480 – RM720</td>
+              </tr>
+              <tr>
+                <td>Quinocycle — kotak baru (borong)</td>
+                <td>RM1.10 – RM8.00</td>
+                <td>&plusmn;RM300 (campuran saiz)</td>
+              </tr>
+              <tr>
+                <td>Quinocycle — kotak terpakai (borong)</td>
+                <td><strong>RM0.90 – RM5.00</strong></td>
+                <td><strong>&plusmn;RM160 (campuran saiz)</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Untuk pindahan yang sama, campuran kotak terpakai menjimatkan <strong>60% hingga 75%</strong> berbanding harga runcit kedai hardware — dan itulah sebab syarikat mover profesional membeli terus daripada gudang, bukan dari kedai.
+        </p>
+
+        <h2>Faktor Yang Mempengaruhi Harga Kotak Kardus</h2>
+
+        <ul>
+          <li><strong>Saiz kotak</strong> — semakin besar kotak, semakin banyak bahan kadbod digunakan. Saiz S bermula RM0.90, manakala saiz L mencecah RM5.00 (terpakai) atau RM8.00 (baru).</li>
+          <li><strong>Single wall vs double wall</strong> — kotak double wall mempunyai dua lapisan gelombang, jadi ia lebih kukuh dan sedikit lebih mahal. Untuk buku dan barang berat, double wall berbaloi.</li>
+          <li><strong>Baru vs terpakai</strong> — kotak terpakai gred kilang menawarkan kekuatan yang hampir sama pada harga jauh lebih rendah. Baca perbandingan penuh dalam artikel <a href="/blog/beza-kotak-baru-kotak-terpakai">beza kotak baru dan kotak terpakai</a>.</li>
+          <li><strong>Kuantiti pesanan</strong> — harga borong seunit adalah tetap dan rendah. Pesanan melebihi RM300 pula layak mendapat penghantaran percuma di KL &amp; Selangor.</li>
+        </ul>
+
+        <h2>Anggaran Kos Sebenar Ikut Saiz Kediaman</h2>
+
+        <p>
+          Berikut ialah tiga senario biasa di Malaysia, dikira menggunakan harga sebenar dalam senarai di atas. Sebagai panduan asas: bilik tidur memerlukan 10–15 kotak, dapur 15–20, ruang tamu 8–12, dan bilik mandi 3–5. Kiraan terperinci ada dalam artikel <a href="/blog/berapa-kotak-diperlukan-pindah-rumah">berapa kotak diperlukan untuk pindah rumah</a>.
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Kediaman</th>
+                <th>Anggaran Kotak</th>
+                <th>Campuran Disyorkan</th>
+                <th>Kos (Terpakai)</th>
+                <th>Kos di Kedai Hardware</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Bilik sewa / studio</strong></td>
+                <td>15 – 25</td>
+                <td>12 S + 6 M + 2 L</td>
+                <td><strong>RM40 – RM60</strong></td>
+                <td>RM160 – RM240</td>
+              </tr>
+              <tr>
+                <td><strong>Rumah 2–3 bilik</strong></td>
+                <td>50 – 70</td>
+                <td>30 S + 25 M + 10 L</td>
+                <td><strong>RM150 – RM200</strong></td>
+                <td>RM520 – RM780</td>
+              </tr>
+              <tr>
+                <td><strong>Rumah besar / 4 bilik+</strong></td>
+                <td>80 – 100+</td>
+                <td>40 S + 35 M + 15 L + 10 baru NLN</td>
+                <td><strong>RM300 – RM420</strong></td>
+                <td>RM800 – RM1,200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="article-callout">
+          <strong>Bonus:</strong> Pesanan rumah besar lazimnya melepasi RM300 — bermakna penghantaran ke alamat anda di KL &amp; Selangor adalah <strong>percuma</strong>. Untuk kawasan lain di Semenanjung Malaysia, penghantaran mengambil masa 2–3 hari bekerja.
+        </div>
+
+        <h2>5 Cara Jimat Sehingga 60% Pada Kotak Pindah Rumah</h2>
+
+        <div class="article-checklist">
+          <div class="checklist-item">
+            <span class="checklist-num">1</span>
+            <div>
+              <strong>Kira dahulu, baru beli</strong>
+              <p>Senaraikan bilik dan anggarkan kotak setiap satu sebelum membuat pesanan. Membeli dua atau tiga kali berasingan bermakna kos penghantaran berganda — satu pesanan tepat adalah paling jimat.</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <span class="checklist-num">2</span>
+            <div>
+              <strong>Padankan saiz kotak dengan barang</strong>
+              <p>Barang berat (buku, pinggan) masuk kotak S; barang ringan yang besar (bantal, selimut) masuk kotak L. Anda elak kotak koyak — dan elak membayar untuk saiz besar yang tidak perlu.</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <span class="checklist-num">3</span>
+            <div>
+              <strong>Langkau orang tengah</strong>
+              <p>Beli terus dari gudang pembekal, bukan kedai runcit. Harga di <a href="/shop">kedai dalam talian Quinocycle</a> ialah harga gudang Balakong — tiada markup runcit RM8–RM12 sekotak.</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <span class="checklist-num">4</span>
+            <div>
+              <strong>Capai RM300 untuk penghantaran percuma</strong>
+              <p>Jika pesanan anda hampir RM300, tambah sedikit kotak rizab atau gabungkan pesanan dengan jiran atau rakan yang turut berpindah — penghantaran percuma KL &amp; Selangor terus menutup kos itu.</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <span class="checklist-num">5</span>
+            <div>
+              <strong>Pilih kotak terpakai gred kilang</strong>
+              <p>Ini penjimatan terbesar. Kotak M terpakai berharga RM3.00–RM3.50 berbanding RM8–RM12 di kedai — jimat 60% hingga 70% untuk fungsi yang sama. Setiap kotak disemak: kering, kukuh, bebas bau. Lihat pilihan di halaman <a href="/used-carton-boxes">kotak terpakai</a> dan tips packing lanjut dalam <a href="/blog/tips-pindah-rumah-packing-malaysia">panduan packing pindah rumah</a> kami.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.article-content -->
+
+      <!-- Sidebar CTA -->
+      <aside class="article-sidebar">
+        <div class="sidebar-cta">
+          <div class="tag tag--yellow">Dapatkan Kotak Anda</div>
+          <h3>Pindah rumah? Dapatkan harga gudang, bukan harga kedai.</h3>
+          <p>Kotak terpakai dari <strong>RM0.90</strong> sekotak.<br />Kotak baru dari <strong>RM1.10</strong> sekotak.</p>
+          <a href="/kotak-pindah-rumah" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:0.75rem">Senarai Harga Penuh</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="width:100%;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp 016-891 6381
+          </a>
+          <p class="sidebar-cta__note">Isnin–Jumaat 9am–6pm · Sabtu 9am–1pm<br />Balakong, Selangor</p>
+        </div>
+
+        <div class="sidebar-links">
+          <div class="sidebar-links__title">Artikel Berkaitan</div>
+          <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Berapa Kotak Diperlukan untuk Pindah Rumah?
+          </a>
+          <a href="/blog/beza-kotak-baru-kotak-terpakai" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Beza Kotak Baru &amp; Kotak Terpakai
+          </a>
+          <a href="/blog/tips-pindah-rumah-packing-malaysia" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Tips Packing Pindah Rumah Malaysia
+          </a>
+        </div>
+      </aside>
+
+    </div><!-- /.article-body__inner -->
+  </article>
+
+  <!-- FAQ Section (AEO) -->
+  <section class="article-faq">
+    <div class="container">
+      <div class="section-eyebrow">Soalan Lazim</div>
+      <h2 class="section-title" style="margin-bottom:2rem">Soalan Kerap Ditanya Tentang Harga Kotak</h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3 class="faq-q">Berapa harga kotak pindah rumah di Malaysia pada 2026?</h3>
+          <p class="faq-a">Harga borong dari Quinocycle di Balakong, Selangor: <strong>kotak terpakai RM0.90 – RM5.00</strong> sekotak (S dari RM0.90, M RM3.00–3.50, L RM5.00) dan <strong>kotak baru RM1.10 – RM8.00</strong> sekotak (XS RM1.10, A4 RM3.00, A3N RM5.00, NLN RM8.00). Di kedai hardware, harga runcit biasanya RM8 – RM12 sekotak.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Berapa jumlah kos kotak untuk pindah rumah 3 bilik?</h3>
+          <p class="faq-a">Rumah 3 bilik tidur biasanya memerlukan <strong>50–70 kotak</strong>. Dengan campuran kotak terpakai (30 S + 25 M + 10 L), jumlah kos sekitar <strong>RM150 – RM200</strong> sahaja — berbanding RM520 – RM780 jika dibeli di kedai hardware.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Adakah kotak terpakai cukup kuat untuk pindah rumah?</h3>
+          <p class="faq-a">Ya. Kotak terpakai kami ialah <strong>gred kilang sekali guna</strong> — setiap unit disemak sebelum dijual: kering, kukuh, dan bebas bau. Kebanyakannya double wall, sesuai untuk buku, pakaian, dan peralatan dapur. Untuk barang pecah belah atau elektronik mahal, gunakan kotak baru.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Ada penghantaran percuma untuk kotak pindah rumah?</h3>
+          <p class="faq-a">Ada. <strong>Penghantaran percuma ke KL &amp; Selangor untuk pesanan melebihi RM300.</strong> Kawasan lain di Semenanjung Malaysia: 2–3 hari bekerja. Anda juga boleh ambil sendiri di gudang kami di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Boleh beli kotak dalam kuantiti kecil?</h3>
+          <p class="faq-a">Boleh. Pesanan borong penuh mempunyai minimum RM1,000, tetapi untuk kegunaan pindah rumah, kuantiti lebih kecil boleh diatur melalui sebut harga WhatsApp di <strong>016-891 6381</strong>. Beritahu saiz rumah anda dan kami cadangkan campuran kotak paling jimat.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="article-cta-section">
+    <div class="container">
+      <div class="article-cta-box">
+        <div class="tag tag--yellow">Bersedia untuk Pindah?</div>
+        <h2>Dapatkan sebut harga kotak pindah rumah anda hari ini.</h2>
+        <p>Kotak terpakai dari RM0.90 · Kotak baru dari RM1.10 · Penghantaran percuma KL &amp; Selangor (pesanan melebihi RM300)</p>
+        <div class="article-cta-box__btns">
+          <a href="/kotak-pindah-rumah" class="btn btn-primary btn-lg">Lihat Senarai Harga Penuh</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Kami Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+/* ---- Palette (warm editorial theme tokens, scoped to this article) ---- */
+.article-hero,
+.featured-img-wrap,
+.article-body,
+.article-faq,
+.article-cta-section {
+  --yellow: #8a6a00;
+  --yellow-bg: #ffc600;
+  --bg-base: #fdf9f0;
+  --bg-2: #f7f0e0;
+  --bg-3: #f1e8d2;
+  --bg-card: #fffdf7;
+  --bg-card-hov: #fbf5e6;
+  --border: #e6dcc4;
+  --border-yellow: rgba(184, 140, 0, 0.4);
+  --border-yellow-h: rgba(184, 140, 0, 0.6);
+  --text-1: #1d1c16;
+  --text-2: #4d4737;
+  --text-3: #8b8268;
+  --font-display: 'Epilogue', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --radius: 18px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --section-py: 5rem;
+  --glow-sm: 0 16px 40px -16px rgba(184, 140, 0, 0.25);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: var(--font-body);
+}
+
+/* ---- Shared ---- */
+.container { max-width: 1120px; margin-inline: auto; padding-inline: 1.5rem; }
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+}
+.tag--yellow { background: var(--yellow-bg); color: #6e5400; }
+.section-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 0.5rem;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  color: var(--text-1);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: #1d1c16; color: #fdf9f0; }
+.btn-primary:hover { background: #35321f; }
+.btn-wa { background: #25d366; color: #fff; }
+.btn-wa:hover { background: #1fb857; }
+.btn-lg { padding: 1rem 2rem; font-size: 0.95rem; }
+
+/* ---- Hero ---- */
+.article-hero {
+  background: var(--bg-base);
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+  position: relative;
+  overflow: hidden;
+}
+.article-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: 0;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(255,198,0,0.18) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(60px);
+}
+.article-hero__inner { max-width: 800px; position: relative; z-index: 1; }
+.article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  transition: color 0.15s;
+}
+.article-back:hover { color: var(--yellow); }
+.article-hero__title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--text-1);
+  margin-block: 1rem 0.75rem;
+}
+.article-meta {
+  display: flex;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--text-3);
+  flex-wrap: wrap;
+}
+
+/* ---- Featured image ---- */
+.featured-img-wrap { margin-bottom: 2rem; margin-top: -1rem; }
+.featured-img-wrap img {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  display: block;
+}
+
+/* ---- Body layout ---- */
+.article-body { padding-block: clamp(2.5rem, 5vw, 4rem) var(--section-py); background: var(--bg-base); }
+.article-body__inner {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 4rem;
+  align-items: start;
+}
+@media (max-width: 1024px) {
+  .article-body__inner { grid-template-columns: 1fr; }
+  .article-sidebar { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+}
+
+/* ---- Article content ---- */
+.article-content {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-2);
+  max-width: 680px;
+}
+.article-lead {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--text-1);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.article-content h2 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  color: var(--text-1);
+  line-height: 1.15;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--yellow-bg);
+}
+.article-content h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--text-1);
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+.article-content p { margin-bottom: 1rem; }
+.article-content a { color: var(--yellow); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.article-content a:hover { color: var(--text-1); }
+.article-content ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+.article-content ul li {
+  padding-left: 1rem;
+  position: relative;
+  font-size: 0.95rem;
+}
+.article-content ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--yellow);
+  font-weight: 700;
+}
+.article-content strong { color: var(--text-1); font-weight: 600; }
+.article-content em { font-style: italic; }
+
+/* ---- Callout ---- */
+.article-callout {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--yellow-bg);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+  margin-block: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--text-2);
+  line-height: 1.65;
+}
+.article-callout--yellow {
+  background: rgba(255, 198, 0, 0.1);
+  border-color: var(--border-yellow-h);
+}
+
+/* ---- Tables ---- */
+.article-table-wrap { overflow-x: auto; margin: 1.5rem 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.article-table th {
+  background: var(--bg-3);
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-yellow);
+  white-space: nowrap;
+}
+.article-table td {
+  padding: 0.75rem 1rem;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.article-table tbody tr:last-child td { border-bottom: none; }
+.article-table tbody tr:hover td { background: var(--bg-card-hov); }
+.article-table td strong { color: var(--text-1); }
+
+/* ---- Checklist ---- */
+.article-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-block: 1.5rem;
+}
+.checklist-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.checklist-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; height: 32px;
+  background: rgba(255, 198, 0, 0.2);
+  color: var(--yellow);
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1rem;
+  border-radius: 50%;
+  border: 1px solid var(--border-yellow-h);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.checklist-item strong { color: var(--text-1); display: block; margin-bottom: 2px; }
+.checklist-item p { font-size: 0.9rem; margin: 0; color: var(--text-2); }
+
+/* ---- Sidebar ---- */
+.article-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+.sidebar-cta {
+  background: var(--bg-card);
+  border: 1px solid var(--border-yellow);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--glow-sm);
+}
+.sidebar-cta h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  color: var(--text-1);
+  margin-block: 0.9rem 0.5rem;
+}
+.sidebar-cta p { font-size: 0.9rem; color: var(--text-2); line-height: 1.6; margin-bottom: 1rem; }
+.sidebar-cta p strong { color: var(--text-1); }
+.sidebar-cta__note {
+  font-family: var(--font-mono);
+  font-size: 0.7rem !important;
+  color: var(--text-3) !important;
+  margin: 0.9rem 0 0 !important;
+  line-height: 1.6 !important;
+}
+.sidebar-links {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+.sidebar-links__title {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 0.75rem;
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-2);
+  padding-block: 0.6rem;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.15s;
+}
+.sidebar-link:last-child { border-bottom: none; }
+.sidebar-link:hover { color: var(--yellow); }
+.sidebar-link svg { flex-shrink: 0; color: var(--yellow); }
+
+/* ---- FAQ ---- */
+.article-faq {
+  padding: 5rem 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.faq-list { display: flex; flex-direction: column; gap: 1.25rem; max-width: 860px; }
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.2s;
+}
+.faq-item:hover { border-color: var(--border-yellow); }
+.faq-q {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-1);
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+.faq-a {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: 0;
+}
+.faq-a strong { color: var(--text-1); }
+
+/* ---- Bottom CTA ---- */
+.article-cta-section { padding: 5rem 0; background: var(--bg-base); }
+.article-cta-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-yellow);
+  border-radius: var(--radius);
+  padding: 3rem;
+  text-align: center;
+  box-shadow: var(--glow-sm);
+}
+.article-cta-box h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 900;
+  color: var(--text-1);
+  margin: 1rem 0 0.75rem;
+}
+.article-cta-box p { color: var(--text-2); margin-bottom: 2rem; }
+.article-cta-box__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+</style>

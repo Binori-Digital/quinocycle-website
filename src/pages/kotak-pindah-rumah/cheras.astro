@@ -1,0 +1,201 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CITY = 'Cheras';
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! Saya nak beli kotak pindah rumah di ${CITY}.`)}`;
+
+const faqs = [
+  {
+    q: 'Di mana nak beli kotak pindah rumah di Cheras?',
+    a: 'Tidak perlu cari kedai — WhatsApp sahaja 016-891 6381 dengan senarai saiz dan kuantiti, dan kami hantar terus ke rumah anda di Cheras dari gudang kami di Taming Jaya, Balakong (bersebelahan Cheras sahaja). Untuk Bandar Tun Hussein Onn, Batu 9-11 Cheras, Alam Damai dan Taman Connaught, penghantaran selalunya hari yang sama.',
+  },
+  {
+    q: 'Berapa harga kotak pindah rumah untuk kawasan Cheras?',
+    a: 'Harga sama seperti harga gudang: kotak terpakai gred sekali guna dari RM0.90 hingga RM5.00 sekotak, kotak baru dari RM1.10 hingga RM8.00 sekotak. Penghantaran ke Cheras percuma untuk pesanan melebihi RM300 — kebanyakan pesanan pindah rumah 3 bilik memang melepasi jumlah ini.',
+  },
+  {
+    q: 'Boleh saya ambil sendiri kotak berdekatan Cheras?',
+    a: 'Boleh, dan ia sangat dekat. Gudang kami di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong hanya ±10-15 minit memandu dari kebanyakan kawasan Cheras melalui Lebuhraya Silk atau Grand Saga. WhatsApp dulu supaya kotak siap dibungkus bila anda tiba. Buka Isnin-Jumaat 9 pagi-6 petang, Sabtu 9 pagi-1 tengah hari.',
+  },
+  {
+    q: 'Berapa banyak kotak saya perlukan untuk pindah rumah di Cheras?',
+    a: 'Anggaran untuk rumah teres atau kondo 3 bilik di Cheras ialah 50-70 kotak: 10-15 untuk setiap bilik tidur, 15-20 untuk dapur, 8-12 untuk ruang tamu dan 3-5 untuk bilik air. Hantar senarai bilik anda ke WhatsApp dan kami cadangkan campuran saiz S, M dan L yang sesuai.',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": `Quinocycle — Kotak Pindah Rumah ${CITY}`,
+  "description": `Pembekal kotak pindah rumah untuk ${CITY}, Selangor. Kotak kardus baru dan terpakai harga borong dari RM0.90 sekotak — penghantaran hari sama dari gudang Balakong bersebelahan, atau ambil sendiri ±10-15 minit memandu.`,
+  "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/cheras/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["Cheras","Bandar Tun Hussein Onn","Batu 9 Cheras","Batu 11 Cheras","Alam Damai","Taman Connaught","Bandar Damai Perdana"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Utama", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Kotak Pindah Rumah", "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/" },
+    { "@type": "ListItem", "position": 3, "name": CITY, "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/cheras/" }
+  ]
+};
+---
+
+<Layout
+  lang="ms"
+  title={`Kotak Pindah Rumah ${CITY} — Penghantaran Hari Sama dari Gudang Sebelah, dari RM0.90 | Quinocycle`}
+  description={`Kotak pindah rumah ${CITY} dari RM0.90 sekotak — hantar hari sama ke Bandar Tun Hussein Onn, Alam Damai, Taman Connaught & Batu 9-11. WhatsApp 016-891 6381.`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Utama</a>
+      <span class="mx-2">/</span>
+      <a href="/kotak-pindah-rumah" class="hover:text-primary transition-colors">Kotak Pindah Rumah</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">{CITY}</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Penghantaran Hari Sama</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Kotak pindah rumah {CITY} <br /><span class="text-primary italic">— gudang kami di sebelah sahaja.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      Gudang pembekal Quinocycle terletak di Taming Jaya, Balakong — <strong class="text-on-surface font-semibold">±10-15 minit memandu</strong> dari kebanyakan taman di Cheras. Sebab itu penduduk Bandar Tun Hussein Onn, Alam Damai dan Taman Connaught selalunya terima kotak <strong class="text-on-surface font-semibold">hari yang sama</strong>, pada harga borong: kotak terpakai dari <strong class="text-on-surface font-semibold">RM0.90</strong>, kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Sekarang
+      </a>
+      <a href="/kotak-pindah-rumah#senarai-harga" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Senarai Harga Penuh
+      </a>
+    </div>
+  </section>
+
+  <!-- Local info -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Hantar Terus ke Rumah Anda</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Bandar Tun Hussein Onn, Batu 9–11 Cheras, Alam Damai, Taman Connaught dan Bandar Damai Perdana — semuanya dalam laluan penghantaran harian kami. Pesan sebelum tengah hari, kotak selalunya sampai petang itu juga. Percuma untuk pesanan melebihi RM300 (KL &amp; Selangor).
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">storefront</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Atau Ambil Sendiri — Dekat Sahaja</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Gudang kami di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong hanya ±10-15 minit memandu dari Cheras melalui Lebuhraya Silk atau Grand Saga. Sesuai kalau anda nak pilih dan semak kotak sendiri sebelum beli.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">schedule</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Bila Kami Beroperasi</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Isnin–Jumaat: 9:00 pagi – 6:00 petang<br />
+          Sabtu: 9:00 pagi – 1:00 tengah hari<br />
+          Ahad &amp; cuti umum: gudang tutup, tetapi WhatsApp tetap dibalas untuk tempahan awal.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Kenapa penduduk Cheras pesan kotak dari Quinocycle?</h2>
+    <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
+      <p>
+        Cheras adalah antara kawasan perumahan paling padat di Lembah Klang — dari rumah teres di Batu 9, Batu 10 dan Batu 11, ke kondo dan townhouse di Bandar Tun Hussein Onn dan Alam Damai, hinggalah apartmen sekitar Taman Connaught. Setiap hujung bulan ada sahaja keluarga yang berpindah masuk atau keluar. Masalahnya, kotak yang dijual di kedai hardware atau pasaraya sekitar Cheras biasanya <strong class="text-on-surface font-semibold">berharga RM8 hingga RM12 sekotak</strong> — dan itu pun stoknya terhad.
+      </p>
+      <p>
+        Apa yang ramai tak sedar: pembekal kotak borong sebenarnya terletak betul-betul di sebelah Cheras. Gudang Quinocycle di Taming Jaya, Balakong membekalkan kotak kepada syarikat mover dan penjual online di seluruh Lembah Klang, dan kami jual pada <strong class="text-on-surface font-semibold">harga borong yang sama kepada individu</strong>. Untuk jimat maksimum, pilih <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">kotak terpakai gred sekali guna</a> dari RM0.90 sekotak — setiap satu disemak, kering dan bebas bau. Untuk pinggan mangkuk dan barang pecah belah, tambah beberapa kotak baru dari RM1.10. Tak pasti yang mana satu? Baca <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan kotak baru vs kotak terpakai</a> kami.
+      </p>
+      <p>
+        Kedudukan yang dekat ini juga bermakna penghantaran ke Cheras jarang mengambil masa lebih sehari. Pesanan yang masuk waktu pagi selalunya sampai ke Bandar Damai Perdana atau Bandar Tun Hussein Onn petang yang sama — dan <strong class="text-on-surface font-semibold">percuma jika jumlah pesanan melebihi RM300</strong>. Rumah 3 bilik biasanya perlukan 50-70 kotak, jadi kebanyakan pesanan pindah rumah memang layak penghantaran percuma. Kalau anda jenis yang suka tengok dulu sebelum beli, ambil sendiri pun mudah: ±10-15 minit memandu ke Balakong melalui Lebuhraya Silk atau Grand Saga, elak waktu puncak dan anda boleh berpatah balik dengan satu trip kereta sahaja.
+      </p>
+      <p>
+        Semak <a href="/kotak-pindah-rumah" class="text-primary font-semibold hover:underline">senarai harga penuh kotak pindah rumah</a> atau lihat semua saiz di <a href="/shop" class="text-primary font-semibold hover:underline">kedai online kami</a>. Nak rancang dengan lebih teliti? Panduan <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="text-primary font-semibold hover:underline">berapa kotak diperlukan untuk pindah rumah</a> dan <a href="/blog/tips-pindah-rumah-packing-malaysia" class="text-primary font-semibold hover:underline">tips packing pindah rumah</a> kami boleh membantu.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">Soalan lazim — kotak pindah {CITY}</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/15">
+        {faqs.map(f => (
+          <details class="group py-5">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              {f.q}
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <h2 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface mb-6">Kawasan berdekatan</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/kotak-pindah-rumah/balakong"     class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Balakong</a>
+      <a href="/kotak-pindah-rumah/kajang"       class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Kajang</a>
+      <a href="/kotak-pindah-rumah/kuala-lumpur" class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Kuala Lumpur</a>
+      <a href="/kotak-pindah-rumah"              class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Semua Kawasan →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Pesan pagi ini, terima petang ini.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        Hantar senarai saiz dan kuantiti kotak anda ke WhatsApp — kami hantar ke mana-mana kawasan Cheras, atau siapkan untuk anda ambil sendiri di gudang Balakong yang hanya ±10-15 minit dari rumah anda.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Buka Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

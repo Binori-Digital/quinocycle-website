@@ -1,0 +1,728 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Berapa Kotak Diperlukan Untuk Pindah Rumah? (Kalkulator + Panduan)',
+  description: 'Berapa banyak kotak pindah rumah anda perlukan? Rumah 3 bilik: 50–70 kotak. Apartment 2 bilik: 30–45. Guna kalkulator percuma kami + panduan bilik demi bilik dengan harga sebenar dari RM0.90/kotak.',
+  date: '2026-08-04',
+  readTime: '9 min',
+  category: 'Panduan Pindah Rumah',
+  author: 'Pasukan Quinocycle',
+  slug: 'berapa-kotak-diperlukan-pindah-rumah',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20nak%20quote%20kotak%20pindah%20rumah.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "ms-MY",
+  "author": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd.",
+    "url": "https://www.quinocycle.com.my"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.quinocycle.com.my/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.quinocycle.com.my/blog/berapa-kotak-diperlukan-pindah-rumah"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.quinocycle.com.my/images/blog-movers-guide.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  "keywords": "berapa kotak diperlukan untuk pindah rumah, berapa banyak kotak pindah, kalkulator kotak pindah rumah, kotak pindah rumah malaysia, anggaran kotak pindah, kotak kardus pindah rumah, moving boxes calculator malaysia, Quinocycle Balakong"
+};
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Pembekal kotak kardus borong — baru dan terpakai — untuk pindah rumah, perniagaan, dan logistik. Gudang di Balakong, Selangor dengan penghantaran ke seluruh Semenanjung Malaysia.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "priceRange": "RM0.90 – RM8.00 sekotak",
+  "areaServed": "Semenanjung Malaysia"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Berapa kotak diperlukan untuk pindah rumah 3 bilik?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rumah 3 bilik tidur di Malaysia biasanya memerlukan 50–70 kotak. Pecahan anggaran: setiap bilik tidur 10–15 kotak, dapur 15–20 kotak, ruang tamu 8–12 kotak, dan bilik mandi 3–5 kotak. Tambah 10–20% sebagai rizab supaya tidak kekurangan pada hari pindah."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa banyak kotak untuk apartment 2 bilik atau bilik sewa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bilik sewa atau studio: 10–15 kotak. Apartment 2 bilik: 30–45 kotak. Rumah 3 bilik: 50–70 kotak. Rumah landed yang besar: 70–100 kotak. Jumlah sebenar bergantung pada berapa banyak barang yang anda kumpul — jika tinggal lebih 5 tahun di kediaman sama, ambil angka yang lebih tinggi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Barang berat patut masuk kotak besar atau kecil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Barang berat masuk kotak kecil, barang ringan masuk kotak besar. Buku, pinggan mangkuk, dan alatan dapur patut dimasukkan dalam kotak saiz S supaya kotak tidak terlalu berat untuk diangkat dan tidak terkoyak. Bantal, selimut, dan pakaian sesuai dalam kotak saiz L."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa harga kotak pindah rumah di Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Di Quinocycle Balakong, kotak terpakai gred kilang berharga RM0.90 hingga RM5.00 sekotak (S dari RM0.90, M RM3.00–3.50, L RM5.00). Kotak baru berharga RM1.10 hingga RM8.00 sekotak. Untuk rumah 3 bilik (50–70 kotak terpakai), bajet anggaran RM150–RM250."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ada penghantaran percuma untuk kotak pindah rumah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya. Quinocycle menawarkan penghantaran percuma ke seluruh KL dan Selangor untuk pesanan melebihi RM300. Untuk kawasan lain di Semenanjung Malaysia, penghantaran mengambil masa 2–3 hari bekerja. Anda juga boleh ambil sendiri di gudang kami di Balakong, Selangor. WhatsApp 016-891 6381 untuk sebut harga."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title={`${post.title} — Blog Quinocycle`}
+  description={post.description}
+  lang="ms"
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container article-hero__inner">
+      <a href="/blog" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Kembali ke Blog
+      </a>
+      <div class="tag tag--yellow" style="margin-top:1.5rem">{post.category}</div>
+      <h1 class="article-hero__title">{post.title}</h1>
+      <div class="article-meta">
+        <time datetime={post.date}>{new Date(post.date).toLocaleDateString('ms-MY', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        <span>·</span>
+        <span>{post.readTime} bacaan</span>
+        <span>·</span>
+        <span>Oleh {post.author}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <div class="container" style="margin-bottom:2rem;margin-top:-1rem">
+    <img
+      src="/images/blog-movers-guide.jpg"
+      alt="Susunan kotak kardus pindah rumah pelbagai saiz — panduan berapa kotak diperlukan untuk pindah rumah di Malaysia"
+      style="width:100%;max-height:460px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);display:block;"
+      loading="eager"
+      width="1280"
+      height="720"
+    />
+  </div>
+
+  <!-- Article Body -->
+  <article class="article-body">
+    <div class="container article-body__inner">
+      <div class="article-content">
+
+        <p class="article-lead">
+          Jawapan ringkas: <strong>rumah 3 bilik tidur di Malaysia biasanya memerlukan 50–70 kotak</strong>. Apartment 2 bilik: 30–45 kotak. Bilik sewa: cukup dengan 10–15 kotak. Tetapi jumlah sebenar bergantung pada berapa lama anda tinggal di situ, saiz keluarga, dan berapa banyak barang yang anda "sayang nak buang". Panduan ini — lengkap dengan <strong>kalkulator kotak pindah rumah</strong> — akan bantu anda dapatkan angka yang tepat supaya tidak kekurangan kotak pada hari pindah, dan tidak juga terlebih beli.
+        </p>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>Maklumat Pantas:</strong> Quinocycle Sdn. Bhd. &bull; Gudang: No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor &bull; WhatsApp: <a href={WA_LINK}>016-891 6381</a> &bull; Kotak terpakai dari RM0.90 &bull; Penghantaran percuma KL &amp; Selangor untuk pesanan RM300 ke atas
+        </div>
+
+        <h2>Jawapan Pantas: Anggaran Kotak Mengikut Jenis Kediaman</h2>
+
+        <p>
+          Jika anda hanya perlukan satu angka untuk mula merancang, gunakan jadual ini. Anggaran ini berdasarkan isi rumah biasa di Malaysia — bukan rumah minimalis yang kosong, dan bukan juga rumah pengumpul barang tegar.
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Jenis Kediaman</th>
+                <th>Anggaran Kotak</th>
+                <th>Cadangan Campuran Saiz</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Bilik sewa / studio</td><td><strong>10–15 kotak</strong></td><td>Kebanyakan S &amp; M, 2–3 L</td></tr>
+              <tr><td>Apartment / kondo 2 bilik</td><td><strong>30–45 kotak</strong></td><td>40% S, 40% M, 20% L</td></tr>
+              <tr><td>Rumah 3 bilik (teres / apartment)</td><td><strong>50–70 kotak</strong></td><td>40% S, 40% M, 20% L</td></tr>
+              <tr><td>Rumah landed besar (semi-D, banglo)</td><td><strong>70–100 kotak</strong></td><td>35% S, 40% M, 25% L</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Dua faktor yang paling kerap membuatkan orang tersilap anggaran: <strong>tempoh tinggal</strong> (lebih 5 tahun di kediaman sama = barang terkumpul jauh lebih banyak daripada yang anda sedar) dan <strong>bilangan penghuni</strong> (setiap orang dewasa tambahan menambah kira-kira 10–15 kotak). Jika kedua-dua faktor ini terkena pada anda, ambil angka atas dalam julat.
+        </p>
+
+        <h2>Kalkulator Kotak Pindah Rumah</h2>
+
+        <p>
+          Pilih jenis kediaman anda, tambah bilik ekstra jika ada (bilik stor, bilik bacaan, ruang hobi), dan kalkulator ini akan beri anggaran jumlah kotak mengikut saiz S/M/L serta anggaran kos berdasarkan harga sebenar kotak terpakai kami.
+        </p>
+
+        <div class="calc-box">
+          <div class="calc-field">
+            <label class="calc-label" for="calc-house">Jenis kediaman</label>
+            <select id="calc-house" class="calc-input">
+              <option value="bilik">Bilik sewa / studio</option>
+              <option value="apt2">Apartment / kondo 2 bilik</option>
+              <option value="rumah3" selected>Rumah 3 bilik</option>
+              <option value="landed">Rumah landed besar (semi-D / banglo)</option>
+            </select>
+          </div>
+          <div class="calc-field">
+            <label class="calc-label" for="calc-extra">Bilik tambahan (stor, bilik bacaan, dll.)</label>
+            <input type="number" id="calc-extra" class="calc-input" min="0" max="10" value="0" />
+          </div>
+          <button type="button" id="calc-btn" class="btn btn-primary" style="width:100%;justify-content:center">Kira Anggaran Saya</button>
+
+          <div id="calc-result" class="calc-result" hidden>
+            <div class="calc-result__total">
+              Anggaran jumlah: <strong id="calc-total">—</strong>
+            </div>
+            <div class="calc-result__grid">
+              <div class="calc-stat">
+                <div class="calc-stat__num" id="calc-s">—</div>
+                <div class="calc-stat__label">Saiz S (barang berat)</div>
+              </div>
+              <div class="calc-stat">
+                <div class="calc-stat__num" id="calc-m">—</div>
+                <div class="calc-stat__label">Saiz M (barang sederhana)</div>
+              </div>
+              <div class="calc-stat">
+                <div class="calc-stat__num" id="calc-l">—</div>
+                <div class="calc-stat__label">Saiz L (barang ringan)</div>
+              </div>
+            </div>
+            <div class="calc-result__cost">
+              Anggaran kos (kotak terpakai): <strong id="calc-cost">—</strong>
+            </div>
+            <p class="calc-result__note">
+              Berdasarkan harga kotak terpakai Quinocycle: S dari RM0.90, M RM3.00–3.50, L RM5.00 sekotak. Kotak baru berharga RM1.10–RM8.00. Lihat <a href="/kotak-pindah-rumah">senarai harga penuh kotak pindah rumah</a> atau WhatsApp <a href={WA_LINK}>016-891 6381</a> untuk sebut harga tepat.
+            </p>
+          </div>
+        </div>
+
+        <script is:inline>
+          (function () {
+            var HOUSES = {
+              bilik:  { min: 10,  max: 15 },
+              apt2:   { min: 30,  max: 45 },
+              rumah3: { min: 50,  max: 70 },
+              landed: { min: 70,  max: 100 }
+            };
+            var PRICE = { s: 0.90, mLow: 3.00, mHigh: 3.50, l: 5.00 };
+
+            function split(total) {
+              var s = Math.round(total * 0.4);
+              var m = Math.round(total * 0.4);
+              var l = total - s - m;
+              return { s: s, m: m, l: l };
+            }
+
+            function calc() {
+              var house = HOUSES[document.getElementById('calc-house').value];
+              var extra = parseInt(document.getElementById('calc-extra').value, 10);
+              if (isNaN(extra) || extra < 0) extra = 0;
+              if (extra > 10) extra = 10;
+
+              var totalMin = house.min + extra * 10;
+              var totalMax = house.max + extra * 15;
+              var lo = split(totalMin);
+              var hi = split(totalMax);
+
+              var costMin = lo.s * PRICE.s + lo.m * PRICE.mLow + lo.l * PRICE.l;
+              var costMax = hi.s * PRICE.s + hi.m * PRICE.mHigh + hi.l * PRICE.l;
+
+              document.getElementById('calc-total').textContent = totalMin + '–' + totalMax + ' kotak';
+              document.getElementById('calc-s').textContent = lo.s + '–' + hi.s;
+              document.getElementById('calc-m').textContent = lo.m + '–' + hi.m;
+              document.getElementById('calc-l').textContent = lo.l + '–' + hi.l;
+              document.getElementById('calc-cost').textContent =
+                'RM' + Math.round(costMin) + ' – RM' + Math.round(costMax);
+              document.getElementById('calc-result').hidden = false;
+            }
+
+            document.getElementById('calc-btn').addEventListener('click', calc);
+          })();
+        </script>
+
+        <h2>Anggaran Kotak Bilik Demi Bilik</h2>
+
+        <p>
+          Cara paling tepat untuk menganggar keperluan kotak adalah mengira bilik demi bilik. Berjalan di sekeliling rumah dengan jadual ini — anda akan cepat nampak bilik mana yang "makan" paling banyak kotak (petunjuk: hampir selalu dapur).
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Bilik / Kawasan</th>
+                <th>Anggaran Kotak</th>
+                <th>Saiz Disyorkan</th>
+                <th>Nota</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bilik tidur (setiap satu)</td>
+                <td><strong>10–15 kotak</strong></td>
+                <td>S, M, L</td>
+                <td>Pakaian dalam L, buku &amp; aksesori dalam S</td>
+              </tr>
+              <tr>
+                <td>Dapur</td>
+                <td><strong>15–20 kotak</strong></td>
+                <td>S, M</td>
+                <td>Pinggan &amp; periuk berat — kekal dengan saiz kecil</td>
+              </tr>
+              <tr>
+                <td>Ruang tamu</td>
+                <td><strong>8–12 kotak</strong></td>
+                <td>M, L</td>
+                <td>Hiasan, buku, elektronik kecil, kusyen</td>
+              </tr>
+              <tr>
+                <td>Bilik mandi (setiap satu)</td>
+                <td><strong>3–5 kotak</strong></td>
+                <td>S, M</td>
+                <td>Toiletries, tuala, barang pembersihan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Campurkan jumlah semua bilik anda, kemudian <strong>tambah 10–20% rizab</strong>. Contoh: rumah 3 bilik dengan 2 bilik mandi = (3 × 12) + 18 + 10 + (2 × 4) = 72 kotak asas — bulatkan ke 60–70 kotak selepas ambil kira bilik tidur kedua dan ketiga yang biasanya kurang barang berbanding bilik utama. Inilah asal julat <strong>50–70 kotak untuk rumah 3 bilik</strong> yang kami gunakan.
+        </p>
+
+        <h2>Peraturan Emas: Barang Berat Dalam Kotak Kecil, Barang Ringan Dalam Kotak Besar</h2>
+
+        <p>
+          Ini kesilapan nombor satu orang yang pertama kali pindah rumah — memenuhkan kotak besar dengan buku sehingga tiada siapa boleh angkat, dan kotak itu terkoyak di tangga. Ikut tiga peraturan mudah ini:
+        </p>
+
+        <ul>
+          <li><strong>Berat = kecil.</strong> Buku, pinggan mangkuk, periuk, alatan, dan fail masuk kotak saiz S. Sasarkan berat setiap kotak yang masih selesa diangkat seorang diri.</li>
+          <li><strong>Ringan = besar.</strong> Bantal, selimut, cadar, pakaian, dan tuala masuk kotak saiz L. Besar tetapi ringan — mudah diangkat, cepat dipunggah.</li>
+          <li><strong>Sederhana = M.</strong> Peralatan elektronik kecil, kasut, mainan, dan barangan dapur ringan sesuai dalam saiz M — saiz paling versatil, sebab itulah ia 40% daripada campuran yang kami cadangkan.</li>
+        </ul>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>Petua Pro:</strong> Isi ruang kosong dalam setiap kotak dengan kain atau tuala supaya kandungan tidak bergerak. Kotak yang padat (tetapi tidak berat berlebihan) lebih kuat apabila disusun bertindan dalam lori.
+        </div>
+
+        <p>
+          Untuk lebih banyak teknik packing — susunan lori, sistem label, dan senarai semak minggu demi minggu — baca <a href="/blog/tips-pindah-rumah-packing-malaysia">panduan tips packing pindah rumah Malaysia</a> kami.
+        </p>
+
+        <h2>Contoh Kiraan: Keluarga 4 Orang, Rumah Teres 3 Bilik</h2>
+
+        <p>
+          Mari lihat bagaimana angka ini berfungsi dalam senario tipikal. Bayangkan sebuah keluarga — dua dewasa, dua anak sekolah — yang pindah dari rumah teres 3 bilik selepas 7 tahun menetap:
+        </p>
+
+        <ul>
+          <li><strong>Bilik tidur utama:</strong> 14 kotak — pakaian dua orang dewasa (4 kotak L), buku dan dokumen (5 kotak S), aksesori dan barang peribadi (5 kotak M)</li>
+          <li><strong>Dua bilik anak:</strong> 22 kotak — pakaian, buku sekolah, mainan, dan barang hobi (11 kotak setiap bilik, campuran S/M/L)</li>
+          <li><strong>Dapur:</strong> 18 kotak — pinggan mangkuk dan periuk dalam S, peralatan elektrik kecil dalam M</li>
+          <li><strong>Ruang tamu:</strong> 10 kotak — hiasan, buku, kusyen, elektronik kecil</li>
+          <li><strong>Dua bilik mandi:</strong> 7 kotak — toiletries, tuala, barang pembersihan</li>
+        </ul>
+
+        <p>
+          Jumlah: <strong>71 kotak</strong> — betul-betul di hujung atas julat 50–70 yang dijangka, sebab tempoh tinggal 7 tahun dan dua orang anak. Inilah sebabnya kami sentiasa syorkan ambil angka atas julat jika anda sudah lama menetap. Anggaran kos dengan kotak terpakai: sekitar RM230 — dan pesanan yang melebihi RM300 melayakkan penghantaran percuma ke seluruh KL &amp; Selangor.
+        </p>
+
+        <h2>Barang Yang TIDAK Perlu Kotak (Jangan Terlebih Beli)</h2>
+
+        <p>
+          Sebelum anda tekan butang beli, tolak barang-barang ini daripada kiraan — semuanya lebih selamat atau lebih praktikal diangkut tanpa kotak:
+        </p>
+
+        <ul>
+          <li><strong>Perabot besar</strong> — katil, almari, sofa, dan meja dibalut terus dengan plastik regangan atau selimut pelindung</li>
+          <li><strong>Baju bergantung</strong> — boleh dipindahkan terus di penyangkut, diikat dalam kumpulan dengan beg plastik besar</li>
+          <li><strong>Barangan dalam bekas sendiri</strong> — bakul pakaian, kotak simpanan plastik, dan beg pakaian sedia ada boleh terus digunakan sebagai "kotak"</li>
+          <li><strong>Dokumen penting &amp; barang kemas</strong> — bawa sendiri dalam beg tangan, jangan masukkan dalam lori</li>
+          <li><strong>Elektronik besar dalam kotak asal</strong> — jika anda masih simpan kotak asal TV atau komputer, itu bekas terbaiknya</li>
+        </ul>
+
+        <h2>Berapa Kos Kotak Untuk Pindah Rumah?</h2>
+
+        <p>
+          Ini harga sebenar di Quinocycle (gudang Balakong, Selangor) — bukan anggaran rawak:
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Jenis Kotak</th>
+                <th>Julat Harga / Kotak</th>
+                <th>Sesuai Untuk</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Kotak terpakai</strong> (gred kilang, sekali guna)</td>
+                <td>RM0.90 – RM5.00<br /><span style="opacity:0.7">(S dari RM0.90 · M RM3.00–3.50 · L RM5.00)</span></td>
+                <td>Pindah rumah, simpanan — jimat paling banyak</td>
+              </tr>
+              <tr>
+                <td><strong>Kotak baru</strong></td>
+                <td>RM1.10 – RM8.00<br /><span style="opacity:0.7">(XS RM1.10 · A4 RM3.00 · A3N RM5.00 · NLN RM8.00)</span></td>
+                <td>Barang pecah belah, e-dagang, penampilan seragam</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Maknanya, untuk rumah 3 bilik (50–70 kotak terpakai campuran saiz), bajet anda dalam lingkungan <strong>RM150–RM250</strong> — jauh lebih murah daripada membeli satu persatu di kedai runcit. Kotak terpakai kami adalah <strong>gred kilang sekali guna</strong>: setiap satu disemak, kering, dan bebas bau sebelum dijual. Lihat perbandingan penuh dalam artikel <a href="/blog/beza-kotak-baru-kotak-terpakai">beza kotak baru dan kotak terpakai</a>, atau semak <a href="/blog/harga-kotak-pindah-rumah">pecahan harga kotak pindah rumah</a> yang lebih terperinci.
+        </p>
+
+        <p>
+          Senarai harga penuh mengikut saiz dan kod kotak ada di halaman <a href="/kotak-pindah-rumah">kotak pindah rumah</a> kami, dan anda boleh lihat stok semasa <a href="/used-carton-boxes">kotak terpakai</a> serta semua produk di <a href="/shop">kedai dalam talian</a>.
+        </p>
+
+        <h2>5 Tips Supaya Tidak Kekurangan (Atau Terlebih) Kotak</h2>
+
+        <ol>
+          <li>
+            <strong>Kira dulu, beli kemudian.</strong> Gunakan kalkulator di atas atau jadual bilik demi bilik. Anggaran 15 minit ini menjimatkan anda daripada dua kali perjalanan beli kotak.
+          </li>
+          <li>
+            <strong>Tambah 10–20% rizab.</strong> Barang "tersembunyi" — atas almari, bawah katil, dalam stor — hampir selalu menambah 5–10 kotak yang tidak dirancang.
+          </li>
+          <li>
+            <strong>Jangan lupa barang yang tidak masuk kotak.</strong> Periuk nasi, kipas, cermin, dan pasu tidak semestinya perlukan kotak — tetapi barang dalam laci dan rak semuanya perlu. Kebanyakan orang terkurang anggar sebab hanya melihat perabot.
+          </li>
+          <li>
+            <strong>Mula packing 2–3 minggu awal.</strong> Mulakan dengan barang bermusim dan jarang guna. Jika kotak habis separuh jalan, anda masih ada masa untuk tambah pesanan.
+          </li>
+          <li>
+            <strong>Pilih pembekal yang boleh top-up cepat.</strong> Dari gudang kami di Balakong, penghantaran ke seluruh KL &amp; Selangor adalah <strong>percuma untuk pesanan RM300 ke atas</strong>, dan 2–3 hari bekerja ke seluruh Semenanjung Malaysia.
+          </li>
+        </ol>
+
+        <h2>Cara Pesan Kotak Dari Quinocycle</h2>
+
+        <ol>
+          <li><strong>Kira keperluan anda</strong> dengan kalkulator di atas — catat jumlah S/M/L.</li>
+          <li><strong>WhatsApp <a href={WA_LINK}>016-891 6381</a></strong> dengan senarai kuantiti. Untuk kuantiti pindah rumah yang lebih kecil daripada minimum borong RM1,000, kami sediakan sebut harga khas melalui WhatsApp.</li>
+          <li><strong>Pilih ambil sendiri atau hantar.</strong> Ambil di gudang kami di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor (Isnin–Jumaat 9 pagi–6 petang, Sabtu 9 pagi–1 tengah hari) — atau kami hantar: percuma di KL &amp; Selangor untuk pesanan RM300 ke atas, 2–3 hari bekerja ke seluruh Semenanjung.</li>
+        </ol>
+
+      </div><!-- /.article-content -->
+
+      <!-- Sidebar CTA -->
+      <aside class="article-sidebar">
+        <div class="sidebar-cta">
+          <div class="tag tag--yellow">Dapatkan Kotak Anda</div>
+          <h3>Dah tahu berapa kotak? Kami ada stok sedia hantar.</h3>
+          <p>Kotak terpakai dari <strong>RM0.90</strong> sekotak.<br />Kotak baru dari <strong>RM1.10</strong> sekotak.</p>
+          <a href="/kotak-pindah-rumah" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:0.75rem">Lihat Senarai Harga Penuh</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="width:100%;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp 016-891 6381
+          </a>
+          <p class="sidebar-cta__note">Isnin–Jumaat 9am–6pm · Sabtu 9am–1pm<br />Gudang: Balakong, Selangor</p>
+        </div>
+
+        <div class="sidebar-links">
+          <div class="sidebar-links__title">Artikel Berkaitan</div>
+          <a href="/blog/harga-kotak-pindah-rumah" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Harga Kotak Pindah Rumah
+          </a>
+          <a href="/blog/beza-kotak-baru-kotak-terpakai" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Beza Kotak Baru &amp; Terpakai
+          </a>
+          <a href="/blog/tips-pindah-rumah-packing-malaysia" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Tips Packing Pindah Rumah
+          </a>
+        </div>
+      </aside>
+
+    </div><!-- /.article-body__inner -->
+  </article>
+
+  <!-- FAQ Section (AEO) -->
+  <section class="article-faq">
+    <div class="container">
+      <div class="section-eyebrow">Soalan Lazim</div>
+      <h2 class="section-title" style="margin-bottom:2rem">Soalan Kerap Ditanya<br /><span style="font-size:0.6em;opacity:0.6">Frequently Asked Questions</span></h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3 class="faq-q">Berapa kotak diperlukan untuk pindah rumah 3 bilik?</h3>
+          <p class="faq-a">Rumah 3 bilik tidur di Malaysia biasanya memerlukan <strong>50–70 kotak</strong>. Pecahan anggaran: setiap bilik tidur 10–15 kotak, dapur 15–20 kotak, ruang tamu 8–12 kotak, dan bilik mandi 3–5 kotak. Tambah 10–20% sebagai rizab supaya tidak kekurangan pada hari pindah.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Berapa banyak kotak untuk apartment 2 bilik atau bilik sewa?</h3>
+          <p class="faq-a">Bilik sewa atau studio: <strong>10–15 kotak</strong>. Apartment 2 bilik: <strong>30–45 kotak</strong>. Rumah 3 bilik: <strong>50–70 kotak</strong>. Rumah landed yang besar: <strong>70–100 kotak</strong>. Jika anda tinggal lebih 5 tahun di kediaman sama, ambil angka yang lebih tinggi dalam julat.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Barang berat patut masuk kotak besar atau kecil?</h3>
+          <p class="faq-a"><strong>Barang berat masuk kotak kecil, barang ringan masuk kotak besar.</strong> Buku, pinggan mangkuk, dan alatan dapur dimasukkan dalam kotak saiz S supaya kotak tidak terlalu berat dan tidak terkoyak. Bantal, selimut, dan pakaian sesuai dalam kotak saiz L.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Berapa harga kotak pindah rumah di Malaysia?</h3>
+          <p class="faq-a">Di Quinocycle Balakong: <strong>kotak terpakai</strong> gred kilang RM0.90–RM5.00 sekotak (S dari RM0.90, M RM3.00–3.50, L RM5.00). <strong>Kotak baru</strong> RM1.10–RM8.00 sekotak. Untuk rumah 3 bilik (50–70 kotak terpakai), bajet anggaran RM150–RM250.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Ada penghantaran percuma untuk kotak pindah rumah?</h3>
+          <p class="faq-a">Ya — <strong>penghantaran percuma ke KL &amp; Selangor untuk pesanan RM300 ke atas</strong>. Kawasan lain di Semenanjung Malaysia: 2–3 hari bekerja. Boleh juga ambil sendiri di gudang kami di Balakong, Selangor. WhatsApp <strong>016-891 6381</strong> untuk sebut harga.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="article-cta-section">
+    <div class="container">
+      <div class="article-cta-box">
+        <div class="tag tag--yellow">Bersedia untuk Pindah?</div>
+        <h2>Dah kira? Jom dapatkan kotak anda hari ini.</h2>
+        <p>Kotak terpakai dari RM0.90 · Kotak baru dari RM1.10 · Penghantaran percuma KL &amp; Selangor (pesanan RM300+)</p>
+        <div class="article-cta-box__btns">
+          <a href="/kotak-pindah-rumah" class="btn btn-primary btn-lg">Lihat Senarai Harga</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Kami Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.article-faq {
+  padding: 5rem 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.faq-list { display: flex; flex-direction: column; gap: 1.25rem; max-width: 860px; }
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.2s;
+}
+.faq-item:hover { border-color: var(--border-yellow); }
+.faq-q {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-1);
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+.faq-a {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: 0;
+}
+.article-cta-section { padding: 5rem 0; }
+.article-cta-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-yellow);
+  border-radius: var(--radius);
+  padding: 3rem;
+  text-align: center;
+  box-shadow: var(--glow-sm);
+}
+.article-cta-box h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 900;
+  color: var(--text-1);
+  margin: 1rem 0 0.75rem;
+}
+.article-cta-box p { color: var(--text-2); margin-bottom: 2rem; }
+.article-cta-box__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.article-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.article-table th {
+  background: var(--bg-3);
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-yellow);
+  white-space: nowrap;
+}
+.article-table td {
+  padding: 0.75rem 1rem;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.article-table tbody tr:hover td { background: var(--bg-card-hov); }
+.article-table td strong { color: var(--text-1); }
+
+/* Kalkulator */
+.calc-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-yellow);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  margin: 1.5rem 0 2rem;
+  box-shadow: var(--glow-sm);
+}
+.calc-field { margin-bottom: 1.1rem; }
+.calc-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 0.4rem;
+}
+.calc-input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-1);
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+.calc-input:focus { outline: none; border-color: var(--border-yellow); }
+.calc-result {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.calc-result__total {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--text-1);
+  margin-bottom: 1rem;
+}
+.calc-result__total strong { color: var(--yellow); }
+.calc-result__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.calc-stat {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.9rem 0.5rem;
+  text-align: center;
+}
+.calc-stat__num {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--text-1);
+}
+.calc-stat__label {
+  font-size: 0.72rem;
+  color: var(--text-2);
+  margin-top: 0.25rem;
+  line-height: 1.35;
+}
+.calc-result__cost {
+  font-size: 1rem;
+  color: var(--text-1);
+  margin-bottom: 0.75rem;
+}
+.calc-result__cost strong { color: var(--yellow); }
+.calc-result__note {
+  font-size: 0.8rem;
+  color: var(--text-2);
+  line-height: 1.6;
+  margin: 0;
+}
+@media (max-width: 560px) {
+  .calc-result__grid { grid-template-columns: 1fr; }
+}
+</style>

@@ -471,6 +471,50 @@ const blogPosts = [
     </div>
   </section>
 
+  <!-- ===================== SENARAI HARGA ===================== -->
+  <section class="py-24 bg-surface-container-low">
+    <div class="max-w-5xl mx-auto px-6 md:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <div class="max-w-xl">
+          <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">Senarai Harga</span>
+          <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface">Harga kotak — telus, tetap, borong.</h2>
+        </div>
+        <a href="/kotak-pindah-rumah" class="text-primary font-headline font-bold border-b-2 border-primary-container hover:border-primary transition-all pb-1 whitespace-nowrap">Senarai Penuh →</a>
+      </div>
+      <div class="overflow-x-auto rounded-3xl border border-outline-variant/20">
+        <table class="w-full text-left font-body text-sm">
+          <thead>
+            <tr class="bg-primary-container text-on-primary-container">
+              <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs">Jenis Kotak</th>
+              <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs">Saiz</th>
+              <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs">Harga / kotak</th>
+              <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs">Sesuai untuk</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-outline-variant/15">
+            {[
+              ['Kotak terpakai (used)', 'S',        'dari RM 0.90', 'Pindah rumah, buku, pakaian, parcel online'],
+              ['Kotak terpakai (used)', 'M',        'dari RM 3.00', 'Barangan rumah, storan, penghantaran'],
+              ['Kotak terpakai (used)', 'L',        'dari RM 5.00', 'Pindah rumah & pejabat, barang besar'],
+              ['Kotak baru (new)',      'XS – A4',  'dari RM 1.10', 'Kosmetik, hadiah, e-commerce'],
+              ['Kotak baru (new)',      'A3N – NLN','dari RM 5.00', 'Pecah belah, elektronik, pindah rumah'],
+            ].map(r => (
+              <tr class="bg-surface hover:bg-surface-container-low transition-colors">
+                <td class="px-5 py-4 font-semibold text-on-surface whitespace-nowrap">{r[0]}</td>
+                <td class="px-5 py-4 whitespace-nowrap">{r[1]}</td>
+                <td class="px-5 py-4 font-headline font-bold text-on-surface whitespace-nowrap">{r[2]}</td>
+                <td class="px-5 py-4 text-secondary">{r[3]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="font-body text-sm text-secondary mt-5">
+        Harga borong tetap — tiada caj tersembunyi. Untuk pindah rumah, lihat <a href="/kotak-pindah-rumah" class="text-primary font-semibold hover:underline">harga kotak pindah rumah &amp; pakej penuh</a> atau terus ke <a href="/shop" class="text-primary font-semibold hover:underline">Shop</a>.
+      </p>
+    </div>
+  </section>
+
   <!-- ===================== SEO / FAQ ===================== -->
   <section class="py-24 bg-surface">
     <div class="max-w-4xl mx-auto px-6 md:px-8">

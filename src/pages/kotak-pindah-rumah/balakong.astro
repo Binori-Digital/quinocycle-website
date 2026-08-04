@@ -1,0 +1,198 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CITY = 'Balakong';
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! Saya nak beli kotak pindah rumah di ${CITY}.`)}`;
+
+const faqs = [
+  {
+    q: 'Di mana boleh beli kotak pindah rumah di Balakong?',
+    a: 'Terus di gudang Quinocycle: No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor — dalam kawasan perindustrian Taming Jaya, 5 minit dari Seri Kembangan. Buka Isnin-Jumaat 9 pagi-6 petang, Sabtu 9 pagi-1 tengah hari. Boleh ambil sendiri hari yang sama.',
+  },
+  {
+    q: 'Berapa harga kotak pindah di Balakong?',
+    a: 'Kerana anda beli terus dari gudang, harganya harga borong: kotak terpakai dari RM0.90 sekotak, kotak baru dari RM1.10 sekotak. Tiada kos penghantaran jika ambil sendiri di Balakong.',
+  },
+  {
+    q: 'Boleh dapat kotak hari yang sama di Balakong?',
+    a: 'Boleh. Stok sentiasa sedia di gudang — WhatsApp dulu senarai saiz dan kuantiti, kami sediakan untuk pickup dalam masa sejam waktu bekerja. Penghantaran sekitar Balakong juga selalunya hari yang sama.',
+  },
+  {
+    q: 'Kawasan mana sekitar Balakong yang anda hantar?',
+    a: 'Semua kawasan sekitar: Taming Jaya, Balakong Jaya, Bandar Damai Perdana, Batu 9-11 Cheras, Seri Kembangan, Serdang, Kajang dan seluruh Lembah Klang. Penghantaran percuma untuk pesanan melebihi RM300 (KL & Selangor).',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": `Quinocycle — Kotak Pindah Rumah ${CITY}`,
+  "description": `Kedai kotak pindah rumah di ${CITY}, Selangor. Kotak kardus baru dan terpakai harga borong dari RM0.90 sekotak — ambil sendiri di gudang atau penghantaran hari sama.`,
+  "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/balakong/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["Balakong","Taming Jaya","Balakong Jaya","Bandar Damai Perdana","Seri Kembangan","Serdang","Cheras","Kajang"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Utama", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Kotak Pindah Rumah", "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/" },
+    { "@type": "ListItem", "position": 3, "name": CITY, "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/balakong/" }
+  ]
+};
+---
+
+<Layout
+  lang="ms"
+  title={`Kotak Pindah Rumah ${CITY} — Ambil Sendiri di Gudang, dari RM0.90 | Quinocycle`}
+  description={`Cari kotak pindah rumah di ${CITY}? Gudang Quinocycle di Taming Jaya, Balakong jual kotak kardus baru & terpakai harga borong dari RM0.90 sekotak. Ambil sendiri hari sama atau penghantaran percuma (order RM300+). WhatsApp 016-891 6381.`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Utama</a>
+      <span class="mx-2">/</span>
+      <a href="/kotak-pindah-rumah" class="hover:text-primary transition-colors">Kotak Pindah Rumah</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">{CITY}</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Gudang Kami Di Sini</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Kotak pindah rumah {CITY} <br /><span class="text-primary italic">— terus dari gudang.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      Ini bukan kedai runcit — ini gudang pembekal. Quinocycle beroperasi di <strong class="text-on-surface font-semibold">Taming Jaya, Balakong</strong>, jadi penduduk Balakong dapat harga borong terus tanpa orang tengah: kotak terpakai dari <strong class="text-on-surface font-semibold">RM0.90</strong>, kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak. Ambil sendiri hari yang sama, atau kami hantar.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Sekarang
+      </a>
+      <a href="/kotak-pindah-rumah#senarai-harga" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Senarai Harga Penuh
+      </a>
+    </div>
+  </section>
+
+  <!-- Local info -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">storefront</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Ambil Sendiri (Self Pickup)</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong. Dalam kawasan perindustrian Taming Jaya — mudah akses dari Lebuhraya Silk dan Besraya. WhatsApp dulu, kotak siap menunggu bila anda sampai.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Penghantaran Hari Sama</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Sekitar Balakong, Bandar Damai Perdana, Batu 9–11 Cheras, Seri Kembangan dan Serdang — selalunya hari yang sama. Percuma untuk pesanan melebihi RM300 di KL &amp; Selangor.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">schedule</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Waktu Operasi</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Isnin–Jumaat: 9:00 pagi – 6:00 petang<br />
+          Sabtu: 9:00 pagi – 1:00 tengah hari<br />
+          Ahad &amp; cuti umum: tutup (WhatsApp tetap dibalas)
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Kenapa penduduk Balakong beli kotak dari kami?</h2>
+    <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
+      <p>
+        Kalau anda tinggal di Balakong, Taming Jaya, Balakong Jaya atau Bandar Damai Perdana dan sedang merancang pindah rumah, anda sebenarnya tinggal <strong class="text-on-surface font-semibold">beberapa minit dari pembekal kotak borong</strong>. Kebanyakan orang pergi ke kedai hardware atau beli online — dan bayar RM8 hingga RM12 untuk satu kotak yang sama yang kami jual dari RM0.90.
+      </p>
+      <p>
+        Gudang kami membekalkan kotak kardus kepada syarikat mover, penjual online dan kilang di seluruh Lembah Klang — dan kami jual pada <strong class="text-on-surface font-semibold">harga borong yang sama kepada individu</strong> yang datang terus. Pilih kotak terpakai gred sekali guna untuk jimat maksimum, atau kotak baru untuk barang pecah belah. Semua stok boleh dilihat dan disemak sendiri sebelum beli.
+      </p>
+      <p>
+        Untuk kuantiti pindah rumah biasa (40–70 kotak untuk rumah 3 bilik), penduduk Balakong boleh ambil sendiri dalam satu trip kereta atau kami hantar percuma jika pesanan melebihi RM300. Lihat <a href="/kotak-pindah-rumah" class="text-primary font-semibold hover:underline">senarai harga penuh kotak pindah rumah</a>, atau baca <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="text-primary font-semibold hover:underline">panduan berapa kotak yang anda perlukan</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">Soalan lazim — kotak pindah {CITY}</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/15">
+        {faqs.map(f => (
+          <details class="group py-5">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              {f.q}
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <h2 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface mb-6">Kawasan berdekatan</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/kotak-pindah-rumah/seri-kembangan" class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Seri Kembangan</a>
+      <a href="/kotak-pindah-rumah/cheras"         class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Cheras</a>
+      <a href="/kotak-pindah-rumah/kajang"         class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Kajang</a>
+      <a href="/kotak-pindah-rumah"                class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Semua Kawasan →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Datang terus, atau WhatsApp dulu.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong — atau hantar senarai kotak anda ke WhatsApp dan kami siapkan sebelum anda sampai.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Buka Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

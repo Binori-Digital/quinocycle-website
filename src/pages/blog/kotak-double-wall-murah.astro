@@ -1,0 +1,572 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Kotak Double Wall Murah — Bila Perlu Guna Kotak 2 Lapis?',
+  description: 'Apa beza kotak single wall dan double wall? Panduan lengkap kotak 2 lapis untuk pinggan mangkuk, buku berat & elektronik. Kotak double wall terpakai dari RM1.90 di Quinocycle Balakong.',
+  date: '2026-08-04',
+  readTime: '7 min',
+  category: 'Panduan Pembungkusan',
+  author: 'Pasukan Quinocycle',
+  slug: 'kotak-double-wall-murah',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20nak%20tanya%20tentang%20kotak%20double%20wall.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "ms-MY",
+  "author": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd.",
+    "url": "https://www.quinocycle.com.my"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.quinocycle.com.my/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.quinocycle.com.my/blog/kotak-double-wall-murah"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.quinocycle.com.my/images/product-used.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  "keywords": "kotak double wall, kotak 2 lapis, kotak tebal murah, kotak kuat untuk pindah, double wall carton box malaysia, kotak kardus tebal, kotak double wall murah, beza single wall double wall, kotak pindah rumah kuat, Quinocycle Balakong"
+};
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Pembekal kotak kardus borong — single wall dan double wall, baru dan terpakai — di Balakong, Selangor. Penghantaran ke seluruh Semenanjung Malaysia.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "priceRange": "RM0.90 – RM8.00 sekotak"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apa beza kotak single wall dan double wall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kotak single wall mempunyai satu lapisan flute (kertas beralun) diapit dua lapisan liner — jumlah 3 lapis kertas. Kotak double wall mempunyai dua lapisan flute dan tiga liner — jumlah 5 lapis kertas. Sebab itu ia dipanggil kotak 2 lapis: lebih tebal, lebih tegar, dan lebih tahan himpitan berbanding single wall."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa harga kotak double wall di Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Di Quinocycle Balakong, kotak double wall terpakai bermula dari RM1.90 sekotak (BKRS, saiz kecil) hingga RM5.00 sekotak (PDC, saiz besar). Kotak double wall baru: A3N RM5.00 dan NLN RM8.00 sekotak. Semua kotak terpakai adalah gred kilang sekali guna yang telah disemak — kering dan tiada bau. WhatsApp 016-891 6381 untuk sebut harga."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bila perlu guna kotak double wall untuk pindah rumah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gunakan kotak double wall untuk pinggan mangkuk dan barang pecah belah, buku dan dokumen berat, peralatan elektronik, penghantaran jarak jauh (2–3 hari perjalanan), dan kotak yang akan disusun tinggi bertindan. Untuk pakaian, tuala, dan barang ringan, kotak single wall sudah memadai dan lebih menjimatkan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa berat maksimum yang boleh dimuatkan dalam kotak double wall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sebagai anggaran am (bukan jaminan): kotak single wall sesuai untuk muatan sehingga ±10 kg, manakala kotak double wall mampu menampung ±15–25 kg bergantung pada saiz kotak, keadaan kotak, dan cara pembungkusan. Petua mudah: barang berat masuk kotak kecil double wall, barang ringan yang besar masuk kotak besar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kotak double wall terpakai masih kuat dan selamat digunakan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya. Kotak terpakai Quinocycle adalah gred kilang yang hanya digunakan sekali (once-used factory grade). Setiap kotak disemak sebelum dijual — kukuh, kering, dan tiada bau. Struktur dua lapis flute pada kotak double wall kekal utuh selepas satu kali penggunaan, jadi ia masih jauh lebih kuat daripada kotak single wall baru."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title={`${post.title} — Blog Quinocycle`}
+  description={post.description}
+  lang="ms"
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container article-hero__inner">
+      <a href="/blog" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Kembali ke Blog
+      </a>
+      <div class="tag tag--yellow" style="margin-top:1.5rem">{post.category}</div>
+      <h1 class="article-hero__title">{post.title}</h1>
+      <div class="article-meta">
+        <time datetime={post.date}>{new Date(post.date).toLocaleDateString('ms-MY', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        <span>·</span>
+        <span>{post.readTime} bacaan</span>
+        <span>·</span>
+        <span>Oleh {post.author}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <div class="container" style="margin-bottom:2rem;margin-top:-1rem">
+    <img
+      src="/images/product-used.jpg"
+      alt="Kotak double wall (kotak 2 lapis) terpakai gred kilang di gudang Quinocycle Balakong Selangor"
+      style="width:100%;max-height:460px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);display:block;"
+      loading="eager"
+      width="1280"
+      height="720"
+    />
+  </div>
+
+  <!-- Article Body -->
+  <article class="article-body">
+    <div class="container article-body__inner">
+      <div class="article-content">
+
+        <p class="article-lead">
+          Pernah angkat kotak penuh buku, dan rasa bahagian bawahnya nak tercabut? Itu tanda klasik kotak <em>single wall</em> dipaksa buat kerja kotak <strong>double wall</strong>. Memilih ketebalan kotak yang betul bukan soal teknikal semata-mata — ia beza antara pinggan mangkuk sampai elok, atau berderai di dalam lori. Panduan ini menerangkan dengan mudah apa itu <strong>kotak 2 lapis</strong>, bila anda betul-betul memerlukannya, dan mana nak dapatkan <strong>kotak double wall murah</strong> di Malaysia.
+        </p>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>Ringkasan Pantas:</strong> Kotak double wall = 2 lapisan flute (5 lapis kertas). Guna untuk barang berat, pecah belah, elektronik, penghantaran jauh, dan susunan tinggi. Di Quinocycle Balakong, kotak double wall terpakai bermula dari <strong>RM1.90 sekotak</strong>. WhatsApp: <a href={WA_LINK}>016-891 6381</a>.
+        </div>
+
+        ---
+
+        <h2>Apa Beza Kotak Single Wall dan Double Wall?</h2>
+
+        <p>
+          Semua kotak kardus (<em>corrugated carton box</em>) dibina daripada dua komponen kertas: <strong>liner</strong> (lapisan rata di luar dan dalam) dan <strong>flute</strong> (lapisan beralun di tengah yang memberi kekuatan). Bezanya terletak pada berapa lapisan flute yang ada:
+        </p>
+
+        <ul>
+          <li><strong>Single wall (1 lapis flute)</strong> — satu lapisan flute diapit dua liner. Jumlah: 3 lapis kertas. Ringan, murah, dan cukup untuk kebanyakan barang harian.</li>
+          <li><strong>Double wall (2 lapis flute)</strong> — dua lapisan flute dengan tiga liner. Jumlah: 5 lapis kertas. Inilah yang orang panggil <strong>kotak 2 lapis</strong> atau <strong>kotak tebal</strong> — lebih tegar, lebih tahan himpitan, dan tidak mudah kemek di penjuru.</li>
+        </ul>
+
+        <p>
+          Cara paling mudah untuk kenal: tengok keratan rentas di tepi kotak. Kalau nampak <strong>satu baris "gelombang"</strong>, itu single wall. Kalau nampak <strong>dua baris gelombang bertindan</strong>, itu double wall. Ketebalan dinding double wall biasanya hampir dua kali ganda single wall — dan anda boleh rasa bezanya sebaik sahaja memegangnya.
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Ciri</th>
+                <th>Single Wall (1 Lapis)</th>
+                <th>Double Wall (2 Lapis)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Struktur</td><td>3 lapis kertas (1 flute)</td><td>5 lapis kertas (2 flute)</td></tr>
+              <tr><td>Kekuatan himpitan</td><td>Sederhana</td><td>Tinggi — sesuai susun bertindan</td></tr>
+              <tr><td>Muatan (anggaran am)</td><td>Sehingga ±10 kg</td><td>±15–25 kg ikut saiz</td></tr>
+              <tr><td>Perlindungan hentakan</td><td>Asas</td><td>Baik — penjuru tidak mudah kemek</td></tr>
+              <tr><td>Harga</td><td>Lebih murah</td><td>Sedikit lebih mahal, tapi berbaloi untuk barang berat</td></tr>
+              <tr><td>Sesuai untuk</td><td>Pakaian, tuala, barang ringan</td><td>Pinggan mangkuk, buku, elektronik, penghantaran jauh</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Sedikit Tentang Flute</h3>
+
+        <p>
+          Flute ialah lapisan kertas beralun di tengah kotak — fungsinya sama seperti spring: menyerap hentakan dan menahan himpitan. Flute datang dalam beberapa gred ketebalan (A, B, C, E, dan sebagainya): flute yang lebih tebal memberi kusyen yang lebih baik, manakala flute halus memberi permukaan cetakan yang licin. Kotak double wall biasanya menggabungkan dua gred flute berbeza dalam satu dinding — itulah rahsia kekuatannya. Nak faham lebih lanjut jenis-jenis flute dan kegunaannya? Baca <a href="/blog/jenis-flute-kotak-kardus-panduan-0413">panduan penuh jenis flute kotak kardus</a> kami.
+        </p>
+
+        ---
+
+        <h2>Bila Perlu Guna Kotak Double Wall?</h2>
+
+        <p>
+          Bukan semua barang perlukan kotak 2 lapis — kalau semua guna double wall, kos pembungkusan anda naik tanpa sebab. Gunakan double wall untuk lima situasi ini:
+        </p>
+
+        <h3>1. Pinggan Mangkuk &amp; Barang Pecah Belah</h3>
+        <p>
+          Pinggan, gelas, cawan, dan pasu memerlukan dinding kotak yang tidak melentur bila ditekan. Kotak single wall yang kemek di penjuru akan memindahkan tekanan terus ke barang di dalamnya. Double wall mengekalkan bentuk kotak walaupun ada kotak lain disusun di atasnya — lapisan pertahanan pertama sebelum <em>bubble wrap</em> pun berfungsi.
+        </p>
+
+        <h3>2. Buku &amp; Dokumen Berat</h3>
+        <p>
+          Buku adalah antara barang paling padat dalam rumah — satu kotak kecil penuh buku boleh mencecah 15–20 kg. Bahagian bawah kotak single wall mudah "melendut" dan tercabut bila diangkat. Guna kotak double wall <strong>saiz kecil</strong> untuk buku: berat terkawal, dinding kuat.
+        </p>
+
+        <h3>3. Peralatan Elektronik</h3>
+        <p>
+          TV, komputer, printer, periuk nasi elektrik — barang elektronik sensitif kepada hentakan dan himpitan. Jika kotak asal sudah tiada, kotak double wall dengan padding yang cukup adalah pengganti paling selamat.
+        </p>
+
+        <h3>4. Penghantaran Jarak Jauh</h3>
+        <p>
+          Semakin jauh perjalanan, semakin banyak kali kotak anda diangkat, dilonggok, dan disusun semula. Untuk penghantaran antara negeri (biasanya 2–3 hari bekerja di Semenanjung Malaysia), kotak double wall memberi margin keselamatan yang jauh lebih baik daripada single wall.
+        </p>
+
+        <h3>5. Susunan Tinggi (Stacking)</h3>
+        <p>
+          Menyimpan barang di stor? Menyusun stok di gudang? Kotak paling bawah menanggung berat semua kotak di atasnya. Kekuatan himpitan (<em>stacking strength</em>) double wall yang tinggi mengelakkan susunan runtuh — sebab itu syarikat mover dan gudang hampir selalu memilih kotak 2 lapis untuk baris bawah.
+        </p>
+
+        <div class="article-callout">
+          <strong>Bila single wall sudah cukup:</strong> pakaian, tuala, selimut, mainan, barang plastik, dan barang ringan yang besar. Untuk barang-barang ini, kotak single wall terpakai dari <strong>RM0.90 sekotak</strong> di <a href="/used-carton-boxes">koleksi kotak terpakai kami</a> adalah pilihan paling jimat.
+        </div>
+
+        ---
+
+        <h2>Senarai Kotak Double Wall Murah di Quinocycle</h2>
+
+        <p>
+          Di gudang kami di Balakong, Selangor, kami sediakan kotak double wall dalam dua kategori — <strong>terpakai</strong> (gred kilang sekali guna, disemak satu persatu, kering dan tiada bau) dan <strong>baru</strong>. Berikut harga sebenar dari <a href="/shop">kedai kami</a>:
+        </p>
+
+        <h3>Kotak Double Wall Terpakai</h3>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Kod Kotak</th>
+                <th>Saiz</th>
+                <th>Harga / Kotak</th>
+                <th>Sesuai Untuk</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>BKRS</strong></td>
+                <td>Kecil</td>
+                <td><strong>RM1.90</strong></td>
+                <td>Buku, pinggan mangkuk kecil, barang berat padat</td>
+              </tr>
+              <tr>
+                <td><strong>IBU</strong></td>
+                <td>Kecil</td>
+                <td><strong>RM2.00</strong></td>
+                <td>Buku, alatan dapur berat, barang kaca kecil</td>
+              </tr>
+              <tr>
+                <td><strong>AAL</strong></td>
+                <td>Sederhana</td>
+                <td><strong>RM3.00</strong></td>
+                <td>Periuk, elektronik sederhana, barang campuran</td>
+              </tr>
+              <tr>
+                <td><strong>Yellow / LGD</strong></td>
+                <td>Sederhana</td>
+                <td><strong>RM3.50</strong></td>
+                <td>Pinggan mangkuk, peralatan elektrik, simpanan stor</td>
+              </tr>
+              <tr>
+                <td><strong>PDC</strong></td>
+                <td>Besar</td>
+                <td><strong>RM5.00</strong></td>
+                <td>Elektronik besar, susunan gudang, kerja mover</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Kotak Double Wall Baru</h3>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Kod Kotak</th>
+                <th>Saiz</th>
+                <th>Harga / Kotak</th>
+                <th>Sesuai Untuk</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>A3N</strong></td>
+                <td>Sederhana</td>
+                <td><strong>RM5.00</strong></td>
+                <td>E-dagang, barang pecah belah, penampilan profesional</td>
+              </tr>
+              <tr>
+                <td><strong>NLN</strong></td>
+                <td>Besar</td>
+                <td><strong>RM8.00</strong></td>
+                <td>Elektronik besar, penghantaran komersial, eksport</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Perhatikan corak harganya: kotak double wall terpakai saiz sederhana (RM3.00–RM3.50) berharga lebih kurang <strong>separuh</strong> daripada kotak double wall baru yang setara. Untuk pindah rumah dan simpanan, kotak terpakai memberi kekuatan yang hampir sama pada kos yang jauh lebih rendah — kami huraikan perbandingan penuh dalam artikel <a href="/blog/beza-kotak-baru-kotak-terpakai">beza kotak baru dan kotak terpakai</a>. Senarai harga penuh semua saiz (termasuk single wall dari RM0.90) ada di halaman <a href="/kotak-pindah-rumah">kotak pindah rumah</a> kami.
+        </p>
+
+        ---
+
+        <h2>Panduan Muatan: Berapa Berat Satu Kotak Boleh Tampung?</h2>
+
+        <p>
+          Sebagai <strong>anggaran am</strong> (bukan jaminan — keadaan kotak dan cara pembungkusan turut mempengaruhi):
+        </p>
+
+        <ul>
+          <li><strong>Single wall:</strong> muatan selesa sehingga <strong>±10 kg</strong>. Melebihi itu, bahagian bawah mula melendut.</li>
+          <li><strong>Double wall:</strong> muatan <strong>±15–25 kg</strong> bergantung pada saiz kotak dan taburan berat di dalamnya.</li>
+        </ul>
+
+        <p>
+          Petua praktikal yang digunakan oleh mover profesional: <strong>barang berat → kotak kecil double wall; barang ringan yang besar → kotak besar</strong>. Kotak besar yang diisi penuh dengan barang berat bukan sahaja berisiko pecah — ia juga terlalu berat untuk diangkat dengan selamat. Sentiasa tutup bahagian bawah kotak dengan pita secara "H" (tengah + dua tepi) sebelum mengisi. Lebih banyak teknik pembungkusan dalam <a href="/blog/tips-pindah-rumah-packing-malaysia">tips packing pindah rumah Malaysia</a> kami.
+        </p>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>Merancang pindah rumah?</strong> Rumah 3 bilik biasanya perlukan 50–70 kotak: bilik tidur 10–15, dapur 15–20, ruang tamu 8–12, bilik mandi 3–5. Untuk dapur dan rak buku, peruntukkan sebahagian daripadanya sebagai kotak double wall. Kiraan penuh dalam artikel <a href="/blog/berapa-kotak-diperlukan-pindah-rumah">berapa kotak diperlukan untuk pindah rumah</a>.
+        </div>
+
+        ---
+
+        <h2>Cara Order Kotak Double Wall dari Quinocycle</h2>
+
+        <ol>
+          <li>
+            <strong>Kira keperluan anda</strong> — berapa kotak double wall (untuk barang berat/pecah belah) dan berapa single wall (untuk barang ringan). Rujuk <a href="/blog/harga-kotak-pindah-rumah">panduan harga kotak pindah rumah</a> untuk anggaran bajet keseluruhan.
+          </li>
+          <li>
+            <strong>WhatsApp kami di <a href={WA_LINK}>016-891 6381</a></strong> — nyatakan kuantiti dan jenis kotak. Untuk kuantiti pindah rumah yang lebih kecil, kami sediakan sebut harga khas melalui WhatsApp.
+          </li>
+          <li>
+            <strong>Atau layari <a href="/shop">kedai dalam talian kami</a></strong> — lihat semua kotak double wall dan single wall dengan harga sebenar.
+          </li>
+          <li>
+            <strong>Penghantaran</strong> — <strong>percuma untuk KL &amp; Selangor</strong> bagi pesanan melebihi RM300. Kawasan lain di Semenanjung Malaysia: 2–3 hari bekerja. Pesanan borong penuh bermula dari RM1,000.
+          </li>
+        </ol>
+
+        <p>
+          Gudang kami terletak di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor — anda juga dialu-alukan untuk ambil sendiri pada waktu operasi (Isnin–Jumaat 9 pagi–6 petang, Sabtu 9 pagi–1 tengah hari).
+        </p>
+
+      </div><!-- /.article-content -->
+
+      <!-- Sidebar CTA -->
+      <aside class="article-sidebar">
+        <div class="sidebar-cta">
+          <div class="tag tag--yellow">Kotak Double Wall</div>
+          <h3>Barang berat? Guna kotak yang betul.</h3>
+          <p>Double wall terpakai dari <strong>RM1.90</strong> sekotak.<br />Double wall baru dari <strong>RM5.00</strong> sekotak.</p>
+          <a href="/shop" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:0.75rem">Lihat Semua Produk</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="width:100%;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp 016-891 6381
+          </a>
+          <p class="sidebar-cta__note">Isnin–Jumaat 9am–6pm · Sabtu 9am–1pm<br />Balakong, Selangor</p>
+        </div>
+
+        <div class="sidebar-links">
+          <div class="sidebar-links__title">Artikel Berkaitan</div>
+          <a href="/blog/jenis-flute-kotak-kardus-panduan-0413" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Panduan Jenis Flute Kotak Kardus
+          </a>
+          <a href="/blog/beza-kotak-baru-kotak-terpakai" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Beza Kotak Baru &amp; Kotak Terpakai
+          </a>
+          <a href="/blog/harga-kotak-pindah-rumah" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Harga Kotak Pindah Rumah
+          </a>
+          <a href="/kotak-pindah-rumah" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Senarai Harga Kotak Pindah Rumah
+          </a>
+        </div>
+      </aside>
+
+    </div><!-- /.article-body__inner -->
+  </article>
+
+  <!-- FAQ Section (AEO) -->
+  <section class="article-faq">
+    <div class="container">
+      <div class="section-eyebrow">Soalan Lazim</div>
+      <h2 class="section-title" style="margin-bottom:2rem">Soalan Kerap Ditanya<br /><span style="font-size:0.6em;opacity:0.6">Kotak Double Wall / Kotak 2 Lapis</span></h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3 class="faq-q">Apa beza kotak single wall dan double wall?</h3>
+          <p class="faq-a">Kotak single wall mempunyai <strong>satu lapisan flute</strong> (kertas beralun) diapit dua lapisan liner — jumlah 3 lapis kertas. Kotak double wall mempunyai <strong>dua lapisan flute</strong> dan tiga liner — jumlah 5 lapis kertas. Sebab itu ia dipanggil kotak 2 lapis: lebih tebal, lebih tegar, dan lebih tahan himpitan berbanding single wall.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Berapa harga kotak double wall di Malaysia?</h3>
+          <p class="faq-a">Di Quinocycle Balakong, kotak double wall terpakai bermula dari <strong>RM1.90 sekotak</strong> (BKRS, saiz kecil) hingga RM5.00 sekotak (PDC, saiz besar). Kotak double wall baru: A3N RM5.00 dan NLN RM8.00 sekotak. Semua kotak terpakai adalah gred kilang sekali guna yang telah disemak — kering dan tiada bau. WhatsApp 016-891 6381 untuk sebut harga.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Bila perlu guna kotak double wall untuk pindah rumah?</h3>
+          <p class="faq-a">Gunakan kotak double wall untuk <strong>pinggan mangkuk dan barang pecah belah, buku dan dokumen berat, peralatan elektronik, penghantaran jarak jauh</strong> (2–3 hari perjalanan), dan kotak yang akan <strong>disusun tinggi bertindan</strong>. Untuk pakaian, tuala, dan barang ringan, kotak single wall sudah memadai dan lebih menjimatkan.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Berapa berat maksimum yang boleh dimuatkan dalam kotak double wall?</h3>
+          <p class="faq-a">Sebagai anggaran am (bukan jaminan): kotak single wall sesuai untuk muatan sehingga <strong>±10 kg</strong>, manakala kotak double wall mampu menampung <strong>±15–25 kg</strong> bergantung pada saiz kotak, keadaan kotak, dan cara pembungkusan. Petua mudah: barang berat masuk kotak kecil double wall, barang ringan yang besar masuk kotak besar.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Kotak double wall terpakai masih kuat dan selamat digunakan?</h3>
+          <p class="faq-a">Ya. Kotak terpakai Quinocycle adalah <strong>gred kilang yang hanya digunakan sekali</strong> (once-used factory grade). Setiap kotak disemak sebelum dijual — kukuh, kering, dan tiada bau. Struktur dua lapis flute pada kotak double wall kekal utuh selepas satu kali penggunaan, jadi ia masih jauh lebih kuat daripada kotak single wall baru.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="article-cta-section">
+    <div class="container">
+      <div class="article-cta-box">
+        <div class="tag tag--yellow">Perlukan Kotak Kuat?</div>
+        <h2>Dapatkan kotak double wall anda hari ini.</h2>
+        <p>Double wall terpakai dari RM1.90 · Double wall baru dari RM5.00 · Penghantaran percuma KL &amp; Selangor untuk pesanan melebihi RM300</p>
+        <div class="article-cta-box__btns">
+          <a href="/shop" class="btn btn-primary btn-lg">Lihat Semua Produk</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Kami Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.article-faq {
+  padding: 5rem 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.faq-list { display: flex; flex-direction: column; gap: 1.25rem; max-width: 860px; }
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.2s;
+}
+.faq-item:hover { border-color: var(--border-yellow); }
+.faq-q {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-1);
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+.faq-a {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: 0;
+}
+.article-cta-section { padding: 5rem 0; }
+.article-cta-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-yellow);
+  border-radius: var(--radius);
+  padding: 3rem;
+  text-align: center;
+  box-shadow: var(--glow-sm);
+}
+.article-cta-box h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 900;
+  color: var(--text-1);
+  margin: 1rem 0 0.75rem;
+}
+.article-cta-box p { color: var(--text-2); margin-bottom: 2rem; }
+.article-cta-box__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.article-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.article-table th {
+  background: var(--bg-3);
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-yellow);
+  white-space: nowrap;
+}
+.article-table td {
+  padding: 0.75rem 1rem;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.article-table tbody tr:hover td { background: var(--bg-card-hov); }
+.article-table td strong { color: var(--text-1); }
+</style>

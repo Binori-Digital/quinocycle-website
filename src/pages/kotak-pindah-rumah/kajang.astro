@@ -1,0 +1,201 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CITY = 'Kajang';
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! Saya nak beli kotak pindah rumah di ${CITY}.`)}`;
+
+const faqs = [
+  {
+    q: 'Ada kedai kotak pindah rumah di Kajang?',
+    a: 'Kami tiada cawangan di Kajang — dan itu sebabnya harga kami lebih murah. Gudang Quinocycle terletak di Taming Jaya, Balakong, hanya ±15 minit memandu dari Bandar Kajang melalui Lebuhraya SILK. Kebanyakan pelanggan Kajang pilih penghantaran terus ke rumah; yang nak jimat kos penghantaran boleh ambil sendiri di gudang.',
+  },
+  {
+    q: 'Berapa cepat kotak sampai ke Kajang?',
+    a: 'Kerana Kajang sangat dekat dengan gudang kami, penghantaran selalunya hari yang sama atau keesokan hari bekerja — termasuk Sungai Chua, Saujana Impian, Bandar Teknologi Kajang dan kawasan arah Semenyih. WhatsApp senarai saiz dan kuantiti anda, kami sahkan slot penghantaran terus.',
+  },
+  {
+    q: 'Berapa harga kotak pindah rumah untuk kawasan Kajang?',
+    a: 'Harga sama dengan harga gudang: kotak terpakai RM0.90 hingga RM5.00 sekotak (S dari RM0.90, M RM3.00–3.50, L RM5.00), kotak baru RM1.10 hingga RM8.00. Penghantaran percuma ke Kajang untuk pesanan melebihi RM300. Kuantiti kecil untuk pindah rumah boleh terus WhatsApp untuk sebut harga.',
+  },
+  {
+    q: 'Kawasan mana di Kajang yang anda hantar?',
+    a: 'Seluruh Kajang: Bandar Kajang, Sungai Chua, Saujana Impian, Bandar Teknologi Kajang, dan kawasan sepanjang arah Semenyih. Kami juga hantar ke Balakong, Seri Kembangan, Putrajaya dan seluruh Lembah Klang — pesanan RM300 ke atas, penghantaran percuma di KL & Selangor.',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": `Quinocycle — Kotak Pindah Rumah ${CITY}`,
+  "description": `Pembekal kotak pindah rumah untuk kawasan ${CITY}, Selangor. Kotak kardus baru dan terpakai harga borong dari RM0.90 sekotak — penghantaran cepat ke Kajang dari gudang Balakong (±15 minit), atau ambil sendiri.`,
+  "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/kajang/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["Kajang","Bandar Kajang","Sungai Chua","Bandar Teknologi Kajang","Saujana Impian","Semenyih","Balakong","Seri Kembangan"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Utama", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Kotak Pindah Rumah", "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/" },
+    { "@type": "ListItem", "position": 3, "name": CITY, "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/kajang/" }
+  ]
+};
+---
+
+<Layout
+  lang="ms"
+  title={`Kotak Pindah Rumah ${CITY} — Hantar Cepat dari Gudang Sebelah, dari RM0.90 | Quinocycle`}
+  description={`Kotak pindah rumah Kajang dari RM0.90 sekotak — hantar cepat ke Bandar Kajang, Sungai Chua & Saujana Impian dari gudang Balakong, ±15 minit sahaja. WhatsApp 016-891 6381.`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Utama</a>
+      <span class="mx-2">/</span>
+      <a href="/kotak-pindah-rumah" class="hover:text-primary transition-colors">Kotak Pindah Rumah</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">{CITY}</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Gudang Hanya 15 Minit Dari Kajang</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Kotak pindah rumah {CITY} <br /><span class="text-primary italic">— harga gudang, hantar cepat.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      Tak perlu redah kedai hardware di Bandar Kajang dan bayar RM8 sekotak. Gudang pembekal Quinocycle di Balakong hanya <strong class="text-on-surface font-semibold">±15 minit memandu</strong> melalui Lebuhraya SILK — jadi anda dapat harga borong: kotak terpakai dari <strong class="text-on-surface font-semibold">RM0.90</strong>, kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak, dihantar cepat ke seluruh Kajang.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Sekarang
+      </a>
+      <a href="/kotak-pindah-rumah#senarai-harga" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Senarai Harga Penuh
+      </a>
+    </div>
+  </section>
+
+  <!-- Local info -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Penghantaran Ke Seluruh Kajang</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Bandar Kajang, Sungai Chua, Saujana Impian, Bandar Teknologi Kajang hingga arah Semenyih — jarak dekat dengan gudang bermakna kotak selalunya sampai hari yang sama atau esoknya. Percuma untuk pesanan melebihi RM300 di KL &amp; Selangor.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">storefront</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Atau Ambil Sendiri</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Gudang kami di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong — <strong class="text-on-surface font-semibold">±15 minit memandu</strong> dari Bandar Kajang melalui Lebuhraya SILK. WhatsApp senarai kotak anda dulu; kami susun siap untuk pickup.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">schedule</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Waktu Operasi</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Isnin–Jumaat: 9:00 pagi – 6:00 petang<br />
+          Sabtu: 9:00 pagi – 1:00 tengah hari<br />
+          Ahad &amp; cuti umum: tutup (WhatsApp tetap dibalas)
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Kenapa penduduk Kajang beli kotak dari kami?</h2>
+    <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
+      <p>
+        Kajang kawasan yang sentiasa bergerak — keluarga muda masuk ke Saujana Impian dan Bandar Teknologi Kajang, penyewa bertukar rumah sekitar Sungai Chua dan Bandar Kajang, dan pembangunan baru terus tumbuh arah Semenyih. Bila tiba masa nak pindah, kebanyakan orang buat perkara yang sama: singgah kedai hardware atau tekan order di marketplace, dan bayar RM8 hingga RM12 untuk kotak yang <strong class="text-on-surface font-semibold">sama spesifikasinya dengan yang kami jual dari RM0.90</strong>.
+      </p>
+      <p>
+        Bezanya cuma satu: kami pembekal, bukan pengedar. Gudang Quinocycle di Taming Jaya, Balakong membekalkan kotak kardus kepada syarikat mover dan penjual online di seluruh Lembah Klang — dan jaraknya dari Bandar Kajang hanya <strong class="text-on-surface font-semibold">±15 minit memandu melalui Lebuhraya SILK</strong>. Untuk pakaian, buku dan barangan dapur, <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">kotak terpakai gred sekali guna</a> kami (disemak, kering, tiada bau) adalah pilihan paling jimat; untuk barang pecah belah, ambil kotak baru dari RM1.10. Tak pasti mana satu? Baca <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan kotak baru vs kotak terpakai</a>.
+      </p>
+      <p>
+        Berapa banyak yang anda perlukan? Rumah teres 3 bilik di Kajang biasanya guna <strong class="text-on-surface font-semibold">50–70 kotak</strong> — sekitar 10–15 untuk setiap bilik tidur, 15–20 untuk dapur, dan 8–12 untuk ruang tamu. Kiraan penuh ada dalam <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="text-primary font-semibold hover:underline">panduan berapa kotak diperlukan untuk pindah rumah</a>. Pada harga gudang, kuantiti sebegini selalunya melepasi RM300 dengan mudah — bermakna <strong class="text-on-surface font-semibold">penghantaran ke Kajang jadi percuma</strong>.
+      </p>
+      <p>
+        Anda boleh semak semua saiz dan harga di <a href="/shop" class="text-primary font-semibold hover:underline">kedai online kami</a> atau lihat <a href="/kotak-pindah-rumah" class="text-primary font-semibold hover:underline">senarai harga penuh kotak pindah rumah</a>. Nak survey dulu sebelum beli banyak? Kajang antara kawasan paling senang untuk pickup — masuk SILK, keluar Taming Jaya, dan anda boleh pilih serta periksa setiap kotak sendiri di gudang. Sebelum mula mengemas, sempat baca juga <a href="/blog/tips-pindah-rumah-packing-malaysia" class="text-primary font-semibold hover:underline">tips packing pindah rumah di Malaysia</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">Soalan lazim — kotak pindah {CITY}</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/15">
+        {faqs.map(f => (
+          <details class="group py-5">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              {f.q}
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <h2 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface mb-6">Kawasan berdekatan</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/kotak-pindah-rumah/balakong"       class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Balakong</a>
+      <a href="/kotak-pindah-rumah/seri-kembangan" class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Seri Kembangan</a>
+      <a href="/kotak-pindah-rumah/putrajaya"      class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Putrajaya</a>
+      <a href="/kotak-pindah-rumah"                class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Semua Kawasan →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Pindah di Kajang? Kotak dah dekat.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        Hantar senarai saiz dan kuantiti ke WhatsApp — kami sahkan harga dan slot penghantaran ke Kajang, atau siapkan pesanan anda untuk pickup di gudang Balakong (±15 minit dari Bandar Kajang).
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Buka Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
