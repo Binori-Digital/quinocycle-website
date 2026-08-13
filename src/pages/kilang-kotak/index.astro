@@ -1,0 +1,233 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=Hi%20Quinocycle!%20Saya%20cari%20kotak%20pada%20harga%20kilang.`;
+
+const kawasanKilang = [
+  { name: 'Cheras',        note: '±10–15 minit dari gudang', href: '/kotak-pindah-rumah/cheras' },
+  { name: 'Kuala Lumpur',  note: 'penghantaran hari sama/esok', href: '/kotak-pindah-rumah/kuala-lumpur' },
+  { name: 'Puchong',       note: 'order pagi, sampai hari sama', href: '/kotak-pindah-rumah/puchong' },
+  { name: 'Shah Alam',     note: 'penghantaran 1 hari bekerja', href: '/kotak-pindah-rumah/shah-alam' },
+  { name: 'Klang',         note: 'penghantaran 1 hari bekerja', href: '/kotak-pindah-rumah/klang' },
+  { name: 'Batu Caves',    note: 'penghantaran hari sama/esok', href: '/kotak-pindah-rumah/batu-caves' },
+  { name: 'Rawang',        note: 'penghantaran 1–2 hari bekerja', href: '/kotak-pindah-rumah/rawang' },
+  { name: 'Seluruh Selangor', note: 'percuma untuk order RM300+', href: '/kotak-pindah-rumah' },
+];
+
+const faqs = [
+  {
+    q: 'Adakah Quinocycle sebuah kilang kotak?',
+    a: 'Kami gudang pembekal borong, bukan kilang pengeluar — dan itu sebenarnya berita baik untuk anda. Kilang kotak sebenar hanya melayan pesanan beribu-ribu unit dengan tempahan awal berminggu-minggu. Kami beli terus dari kilang secara pukal, dan jual kepada anda pada harga hampir sama — dari 50 unit sahaja, stok sedia ada, ambil hari ini pun boleh.',
+  },
+  {
+    q: 'Berapa harga kotak dari kilang berbanding harga Quinocycle?',
+    a: 'Kilang kotak biasanya jual pada MOQ 1,000–5,000 unit satu saiz. Harga borong kami bermula RM0.90 sekotak (terpakai) dan RM1.10 (baru) — jauh lebih murah daripada kedai runcit (RM8–12 sekotak) dan hampir setara harga kilang, tanpa MOQ besar.',
+  },
+  {
+    q: 'Saya cari kilang kotak berdekatan saya — kawasan mana anda serve?',
+    a: 'Gudang kami di Taming Jaya, Balakong, Selangor. Kami hantar ke Cheras, KL, Puchong, Shah Alam, Klang, Batu Caves, Rawang dan seluruh Selangor — percuma untuk pesanan melebihi RM300 (KL & Selangor). Boleh juga ambil sendiri di gudang.',
+  },
+  {
+    q: 'Boleh buat kotak custom / tempahan khas macam kilang?',
+    a: 'Boleh. Untuk kotak tersuai (custom size atau cetakan), kami uruskan tempahan terus dengan kilang rakan kami — anda dapat harga kilang tanpa perlu berurusan sendiri. WhatsApp kami spesifikasi dan kuantiti untuk sebut harga.',
+  },
+  {
+    q: 'Apa beza beli dari kilang kotak dan dari pembekal borong?',
+    a: 'Kilang: harga paling rendah SETIAP UNIT tetapi MOQ beribu unit, masa tunggu pengeluaran, dan selalunya tiada stok sedia. Pembekal borong seperti kami: harga hampir setara, stok sedia ada di gudang, minimum kuantiti rendah (50–200 unit ikut jenis), dan boleh campur pelbagai saiz dalam satu pesanan.',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle — Kotak Harga Kilang, Balakong Selangor",
+  "description": "Gudang pembekal kotak kardus borong di Balakong, Selangor. Harga kilang tanpa MOQ kilang — kotak baru & terpakai dari RM0.90 sekotak, stok sedia ada.",
+  "url": "https://www.quinocycle.com.my/kilang-kotak/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["Balakong","Cheras","Kuala Lumpur","Puchong","Shah Alam","Klang","Batu Caves","Rawang","Selangor"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Utama", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Kilang Kotak — Harga Kilang", "item": "https://www.quinocycle.com.my/kilang-kotak/" }
+  ]
+};
+---
+
+<Layout
+  lang="ms"
+  title="Kilang Kotak? Dapatkan Harga Kilang Tanpa MOQ Kilang — dari RM0.90 | Quinocycle Selangor"
+  description="Cari kilang kotak murah di Selangor, KL, Cheras, Shah Alam atau Klang? Quinocycle jual kotak kardus pada harga kilang tanpa MOQ beribu unit — baru & terpakai dari RM0.90 sekotak, stok sedia di gudang Balakong. WhatsApp 016-891 6381."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Utama</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">Kilang Kotak</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Harga Kilang · Tanpa MOQ Kilang</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Cari kilang kotak murah? <br /><span class="text-primary italic">Dapatkan harga kilang di sini.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      Kilang kotak sebenar hanya layan pesanan beribu-ribu unit. Quinocycle beli terus dari kilang secara pukal dan jual kepada anda pada <strong class="text-on-surface font-semibold">harga hampir setara kilang</strong> — dari 50 unit sahaja, stok sedia ada di gudang Balakong, Selangor. Kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong>, kotak terpakai dari <strong class="text-on-surface font-semibold">RM0.90</strong> sekotak.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp: Sebut Harga
+      </a>
+      <a href="/kotak-pindah-rumah#senarai-harga" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Senarai Harga
+      </a>
+    </div>
+  </section>
+
+  <!-- Kilang vs Gudang comparison -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-5xl mx-auto px-6 md:px-8">
+      <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">Sebelum Anda Ke Kilang</span>
+      <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">Kilang kotak vs gudang pembekal — apa bezanya?</h2>
+      <p class="font-body text-secondary max-w-2xl leading-relaxed mb-10">
+        Kami jujur: kami bukan kilang pengeluar. Tetapi jika anda mencari "kilang kotak" untuk dapat harga murah, inilah perbandingan sebenar yang anda perlu tahu:
+      </p>
+      <div class="overflow-x-auto rounded-3xl border border-outline-variant/20">
+        <table class="w-full text-left font-body text-sm">
+          <thead>
+            <tr class="bg-primary-container text-on-primary-container">
+              <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs"></th>
+              <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs">Kilang Kotak Sebenar</th>
+              <th class="px-5 py-4 font-headline font-bold uppercase tracking-wider text-xs">Quinocycle (Gudang Borong)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-outline-variant/15">
+            {[
+              ['Kuantiti minimum', '1,000–5,000 unit satu saiz', '50–200 unit ikut jenis kotak'],
+              ['Harga seunit', 'Paling rendah', 'Hampir setara — dari RM0.90'],
+              ['Stok sedia', 'Tiada — ikut jadual pengeluaran', 'Sedia di gudang, ambil hari ini'],
+              ['Masa tunggu', '1–4 minggu pengeluaran', 'Hari sama / esok (Lembah Klang)'],
+              ['Campur saiz', 'Tidak — satu saiz satu pesanan', 'Boleh campur semua saiz'],
+              ['Kotak terpakai murah', 'Tiada', 'Ada — jimat sehingga 60%'],
+            ].map(r => (
+              <tr class="bg-surface">
+                <td class="px-5 py-4 font-semibold text-on-surface whitespace-nowrap">{r[0]}</td>
+                <td class="px-5 py-4 text-secondary">{r[1]}</td>
+                <td class="px-5 py-4 font-semibold text-on-surface">{r[2]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="font-body text-secondary leading-relaxed mt-6">
+        Kesimpulannya: jika anda perlukan 10,000 kotak cetakan khas setiap bulan, pergi terus ke kilang — dan jika anda perlukan kotak tersuai, <a href={WA_LINK} class="text-primary font-semibold hover:underline" target="_blank" rel="noopener noreferrer">kami boleh uruskan tempahan kilang untuk anda</a>. Tetapi untuk pindah rumah, penjual online, kedai dan gudang kecil — gudang borong memberi anda harga kilang tanpa karenah kilang.
+      </p>
+    </div>
+  </section>
+
+  <!-- Kawasan -->
+  <section class="py-20 px-6 md:px-8 max-w-7xl mx-auto">
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 block">Kawasan Penghantaran</span>
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-4">Kotak harga kilang, dihantar ke kawasan anda.</h2>
+    <p class="font-body text-secondary max-w-2xl leading-relaxed mb-10">
+      Ramai pelanggan jumpa kami selepas mencari "kilang kotak Cheras", "kilang kotak Shah Alam" atau "kilang kotak berdekatan saya". Realitinya: anda tidak perlu kilang berdekatan — anda perlukan harga kilang dengan penghantaran pantas. Gudang kami di Balakong menghantar ke:
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {kawasanKilang.map(k => (
+        <a href={k.href} class="bg-surface-container-low hover:bg-primary-container rounded-3xl p-6 transition-colors group">
+          <h3 class="font-headline font-bold text-lg text-on-surface mb-1">Kotak {k.name}</h3>
+          <p class="font-body text-sm text-secondary group-hover:text-on-primary-container/80">{k.note}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Produk ringkas -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-5xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-10">Apa yang kami bekalkan pada harga borong.</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="/shop" class="bg-surface rounded-3xl p-8 hover:shadow-lg transition-shadow">
+          <span class="material-symbols-outlined text-3xl text-primary mb-3 block">inventory_2</span>
+          <h3 class="font-headline font-bold text-xl text-on-surface mb-2">Kotak Baru</h3>
+          <p class="font-body text-sm text-secondary leading-relaxed">4 saiz standard (XS hingga L), single &amp; double wall, dari RM1.10 sekotak. Untuk packaging produk, pos barang dan pindah.</p>
+        </a>
+        <a href="/used-carton-boxes" class="bg-surface rounded-3xl p-8 hover:shadow-lg transition-shadow">
+          <span class="material-symbols-outlined text-3xl text-primary mb-3 block">recycling</span>
+          <h3 class="font-headline font-bold text-xl text-on-surface mb-2">Kotak Terpakai</h3>
+          <p class="font-body text-sm text-secondary leading-relaxed">15 model gred sekali guna dari RM0.90 sekotak — disemak, kering, tidak berbau. Pilihan paling jimat.</p>
+        </a>
+        <a href="/kotak-pindah-rumah" class="bg-surface rounded-3xl p-8 hover:shadow-lg transition-shadow">
+          <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+          <h3 class="font-headline font-bold text-xl text-on-surface mb-2">Kotak Pindah Rumah</h3>
+          <p class="font-body text-sm text-secondary leading-relaxed">Pakej lengkap ikut saiz rumah — dari pakej bilik sewa RM30 hingga rumah landed. Senarai harga penuh.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">Soalan lazim — kilang kotak &amp; harga borong</h2>
+    <div class="flex flex-col divide-y divide-outline-variant/15">
+      {faqs.map(f => (
+        <details class="group py-5">
+          <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+            {f.q}
+            <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+          </summary>
+          <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Harga kilang. Tanpa karenah kilang.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        WhatsApp kuantiti dan saiz yang anda perlukan — kami balas dengan sebut harga borong dalam masa sejam waktu bekerja.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="/shop" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Lihat Katalog
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

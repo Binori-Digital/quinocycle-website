@@ -1,0 +1,201 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CITY = 'Rawang';
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! Saya nak beli kotak pindah rumah di ${CITY}.`)}`;
+
+const faqs = [
+  {
+    q: 'Ada kilang kotak di Rawang?',
+    a: 'Setahu kami tiada kilang kotak di Rawang yang menjual terus kepada orang awam. Quinocycle sendiri pun bukan kilang — kami gudang pembekal borong di Taming Jaya, Balakong — tetapi kerana anda beli secara pukal terus dari gudang, harganya setara harga kilang: kotak terpakai dari RM0.90 dan kotak baru dari RM1.10 sekotak, dihantar ke Rawang dalam 1–2 hari bekerja tanpa anda perlu ke mana-mana kilang.',
+  },
+  {
+    q: 'Berapa lama penghantaran kotak ke Rawang?',
+    a: '1–2 hari bekerja untuk semua kawasan Rawang — termasuk Bandar Country Homes, Bandar Tasik Puteri, M Residence dan kawasan Templer. Rawang termasuk dalam liputan penghantaran percuma KL & Selangor kami, jadi pesanan melebihi RM300 dihantar tanpa caj. WhatsApp 016-891 6381 untuk sahkan slot penghantaran anda.',
+  },
+  {
+    q: 'Berapa harga kotak pindah rumah untuk kawasan Rawang?',
+    a: 'Sama seperti harga gudang di Balakong — jarak tidak mengubah harga kotak. Kotak terpakai: saiz S dari RM0.90, double-wall BKRS RM1.90, saiz M RM3.00–RM3.50, saiz L PDC RM5.00. Kotak baru: dari RM1.10 (XS) hingga RM8.00 (double-wall NLN). Penghantaran percuma untuk pesanan melebihi RM300.',
+  },
+  {
+    q: 'Saya cuma nak kotak untuk satu rumah — boleh order kuantiti kecil?',
+    a: 'Boleh. Kuantiti minimum kami ialah 50–200 unit sesaiz dan pesanan borong penuh bermula RM1,000, tetapi untuk keperluan pindah rumah biasa (sekitar 50–70 kotak campuran saiz), hantar sahaja senarai anda melalui WhatsApp dan kami balas dengan sebut harga terus. Kebanyakan pesanan pindah rumah dari Rawang melepasi RM300, jadi penghantarannya percuma.',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": `Quinocycle — Kotak Pindah Rumah ${CITY}`,
+  "description": `Pembekal kotak pindah rumah untuk kawasan ${CITY} — Bandar Country Homes, Bandar Tasik Puteri, M Residence & Templer. Kotak kardus baru dan terpakai harga borong dari RM0.90 sekotak, penghantaran 1–2 hari bekerja terus dari gudang Balakong.`,
+  "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/rawang/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["Rawang","Bandar Country Homes","Bandar Tasik Puteri","M Residence","Templer Park"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Utama", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Kotak Pindah Rumah", "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/" },
+    { "@type": "ListItem", "position": 3, "name": CITY, "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/rawang/" }
+  ]
+};
+---
+
+<Layout
+  lang="ms"
+  title={`Kotak Pindah Rumah ${CITY} — Hantar Terus ke Pintu Anda, dari RM0.90 | Quinocycle`}
+  description={`Tiada pembekal kotak borong di ${CITY}? Kami hantar ke Bandar Country Homes, Bandar Tasik Puteri, M Residence & Templer dalam 1–2 hari bekerja — kotak dari RM0.90, percuma untuk order RM300+. WhatsApp 016-891 6381.`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Utama</a>
+      <span class="mx-2">/</span>
+      <a href="/kotak-pindah-rumah" class="hover:text-primary transition-colors">Kotak Pindah Rumah</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">{CITY}</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Kami Hantar Ke Rawang</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Kotak pindah rumah {CITY} <br /><span class="text-primary italic">— tak payah pandu jauh ke selatan.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      Di Rawang memang tiada pembekal kotak borong — tapi itu bukan alasan untuk bayar harga runcit. WhatsApp pesanan anda, dan kami hantar terus dari gudang pembekal kami di Balakong ke <strong class="text-on-surface font-semibold">Bandar Country Homes, Bandar Tasik Puteri, M Residence dan kawasan Templer</strong> dalam masa 1–2 hari bekerja. Kotak terpakai dari <strong class="text-on-surface font-semibold">RM0.90</strong>, kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak — percuma untuk pesanan melebihi RM300.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Sekarang
+      </a>
+      <a href="/kotak-pindah-rumah#senarai-harga" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Senarai Harga Penuh
+      </a>
+    </div>
+  </section>
+
+  <!-- Local info -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Penghantaran 1–2 Hari Bekerja</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Seluruh Rawang dalam liputan kami: Bandar Country Homes, Bandar Tasik Puteri, M Residence, kawasan Templer dan pekan Rawang. Pesanan melebihi RM300 dihantar percuma — Rawang termasuk dalam zon penghantaran percuma KL &amp; Selangor.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">chat</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Order Semudah Satu Mesej</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Gudang kami di Balakong ±45 minit ke selatan — jauh untuk berulang-alik, dekat melalui WhatsApp. Hantar senarai saiz dan kuantiti ke 016-891 6381, kami balas dengan sebut harga dan tarikh penghantaran. Selesai tanpa keluar rumah.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">schedule</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Waktu Urusan</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Isnin–Jumaat: 9:00 pagi – 6:00 petang<br />
+          Sabtu: 9:00 pagi – 1:00 tengah hari<br />
+          Ahad &amp; cuti umum: tutup, tetapi WhatsApp yang masuk tetap dibalas
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Kenapa penduduk Rawang order kotak dari kami?</h2>
+    <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
+      <p>
+        Rawang antara kawasan paling pesat membangun di utara Selangor — projek baru di M Residence, rumah teres di Bandar Country Homes, keluarga muda berpindah masuk ke Bandar Tasik Puteri. Maknanya setiap bulan ada sahaja yang pindah rumah. Masalahnya, <strong class="text-on-surface font-semibold">di Rawang sendiri tiada pembekal kotak borong</strong>. Pilihan yang tinggal: beli sekeping-sekeping di kedai hardware tempatan pada harga RM8 hingga RM12 sekotak, atau memandu hampir 45 minit ke selatan mencari gudang — perjalanan yang membazir masa dan minyak, apatah lagi bila 60 kotak memang tak muat dalam satu kereta.
+      </p>
+      <p>
+        Quinocycle selesaikan masalah itu tanpa anda perlu meninggalkan Rawang. Kami gudang pembekal kotak kardus di Taming Jaya, Balakong, yang membekalkan syarikat mover, penjual online dan perniagaan di seluruh Lembah Klang — dan pesanan dari Rawang kami hantar terus ke depan pintu dalam masa <strong class="text-on-surface font-semibold">1–2 hari bekerja</strong>. Penghantaran percuma untuk pesanan melebihi RM300, dan yang anda bayar ialah <a href="/kilang-kotak" class="text-primary font-semibold hover:underline">harga kilang dari gudang pembekal</a> — bukan harga runcit yang sudah bertimbun margin orang tengah.
+      </p>
+      <p>
+        Untuk jimat maksimum, pilih <a href="/kotak-terpakai" class="text-primary font-semibold hover:underline">kotak terpakai</a> dari RM0.90 sekotak — gred sekali guna dari kilang, setiap unit disemak, kering dan bebas bau (butiran penuh juga ada di halaman <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">used carton boxes</a> kami). Kotak baru pula bermula RM1.10 dan boleh ditempah melalui <a href="/shop" class="text-primary font-semibold hover:underline">kedai online kami</a>. Masih menimbang antara dua? Baca <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan kotak baru vs kotak terpakai</a> — ramai keluarga di Rawang akhirnya campurkan kedua-duanya: kotak terpakai untuk pakaian, buku dan mainan, kotak baru untuk pinggan mangkuk dan barang elektronik.
+      </p>
+      <p>
+        Berapa banyak perlu ditempah? Rumah teres 3 bilik biasanya perlukan 50–70 kotak — kira angka anda dengan <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="text-primary font-semibold hover:underline">panduan berapa kotak diperlukan</a>, kemudian semak <a href="/kotak-pindah-rumah" class="text-primary font-semibold hover:underline">senarai harga penuh kotak pindah rumah</a> dan <a href="/blog/harga-kotak-pindah-rumah" class="text-primary font-semibold hover:underline">pecahan harga mengikut saiz</a> sebelum membuat pesanan. Satu tip khas untuk penduduk Rawang: oleh sebab penghantaran mengambil 1–2 hari bekerja, tempah kotak sekurang-kurangnya seminggu sebelum tarikh pindah — cukup masa untuk packing bilik demi bilik tanpa tergesa-gesa.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">Soalan lazim — kotak pindah {CITY}</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/15">
+        {faqs.map(f => (
+          <details class="group py-5">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              {f.q}
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <h2 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface mb-6">Kawasan berdekatan</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/kotak-pindah-rumah/batu-caves"   class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Batu Caves</a>
+      <a href="/kotak-pindah-rumah/shah-alam"    class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Shah Alam</a>
+      <a href="/kotak-pindah-rumah/kuala-lumpur" class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Kuala Lumpur</a>
+      <a href="/kotak-pindah-rumah"              class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Semua Kawasan →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Kotak sampai ke Rawang — anda tak perlu ke mana-mana.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        Hantar senarai saiz dan kuantiti kotak anda ke WhatsApp hari ini — kami balas dengan sebut harga borong dan aturkan penghantaran ke mana-mana kawasan Rawang dalam 1–2 hari bekerja.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Lokasi Gudang (Balakong)
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

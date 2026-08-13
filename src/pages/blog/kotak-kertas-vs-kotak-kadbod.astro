@@ -1,0 +1,818 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Kotak Kertas vs Kotak Kadbod — Apa Beza & Mana Sesuai Untuk Anda?',
+  description: 'Kotak kertas dan kotak kadbod bukan benda yang sama. Ketahui beza struktur, bila setiap jenis sesuai digunakan, maksud "kotak kosong", dan harga kotak kadbod borong dari RM0.90 sekotak di Selangor.',
+  date: '2026-08-13',
+  readTime: '8 min',
+  category: 'Ilmu Pembungkusan',
+  author: 'Pasukan Quinocycle',
+  slug: 'kotak-kertas-vs-kotak-kadbod',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20nak%20tanya%20tentang%20kotak%20kadbod.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "ms-MY",
+  "author": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd.",
+    "url": "https://www.quinocycle.com.my"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.quinocycle.com.my/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://www.quinocycle.com.my/blog/${post.slug}`
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.quinocycle.com.my/images/blog-new-vs-used.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  "keywords": "kotak kertas, kotak kadbod, beza kotak kertas kadbod, kotak kosong, kotak kadbod bergelombang, corrugated box malaysia, kotak paperboard, kotak kadbod murah selangor, pembekal kotak kadbod"
+};
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "openingHours": ["Mo-Fr 09:00-18:00", "Sa 09:00-13:00"],
+  "priceRange": "RM0.90 - RM8.00 sekotak"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apa beza kotak kertas dan kotak kadbod?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kotak kertas (paperboard/folding carton) diperbuat daripada sekeping kadbod nipis satu lapisan — ringan, mudah dilipat, sesuai untuk kuih, hadiah, dan produk ringan. Kotak kadbod (corrugated box) pula mempunyai lapisan gelombang (fluting) yang diapit antara dua lapisan liner, menjadikannya jauh lebih kukuh — inilah kotak yang digunakan untuk pos barang, pindah rumah, dan simpanan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kotak kertas atau kotak kadbod untuk pos barang e-dagang?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kotak kadbod. Perjalanan kurier melibatkan himpitan, hentakan, dan susunan bertindan — hanya struktur bergelombang kotak kadbod mampu menyerap tekanan tersebut. Untuk barang biasa, single wall mencukupi; untuk barang berat atau mudah pecah, pilih double wall seperti model A3N atau NLN."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apa maksud kotak kosong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kotak kosong hanyalah istilah harian untuk kotak kadbod yang belum diisi — bukan jenis kotak yang berbeza. Apabila orang mencari 'kotak kosong murah', mereka biasanya mencari kotak kadbod terpakai atau baru untuk pindah rumah, simpanan, atau pos barang. Quinocycle di Balakong, Selangor membekalkan kotak kosong borong dari RM0.90 sekotak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Adakah Quinocycle menjual kotak kertas untuk kuih dan hadiah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tidak. Quinocycle ialah gudang pembekal yang khusus dalam kotak kadbod bergelombang (corrugated boxes) — baru dan terpakai — untuk pos barang, pindah rumah, simpanan, dan logistik. Untuk kotak kertas jenis folding carton (kotak kuih, gift box), anda perlu dapatkannya daripada pencetak kotak kertas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa harga kotak kadbod di Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Harga borong dari gudang Quinocycle di Balakong, Selangor: kotak kadbod terpakai RM0.90 hingga RM5.00 sekotak (S dari RM0.90, M RM3.00–3.50, L RM5.00) dan kotak kadbod baru RM1.10 hingga RM8.00 sekotak (XS RM1.10, A4 RM3.00, A3N RM5.00, NLN RM8.00). Penghantaran percuma KL & Selangor untuk pesanan melebihi RM300."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title={`${post.title} — Blog Quinocycle`}
+  description={post.description}
+  lang="ms"
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container article-hero__inner">
+      <a href="/blog" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Kembali ke Blog
+      </a>
+      <div class="tag tag--yellow" style="margin-top:1.5rem">{post.category}</div>
+      <h1 class="article-hero__title">{post.title}</h1>
+      <div class="article-meta">
+        <time datetime={post.date}>{new Date(post.date).toLocaleDateString('ms-MY', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        <span>·</span>
+        <span>{post.readTime} bacaan</span>
+        <span>·</span>
+        <span>Oleh {post.author}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <div class="container featured-img-wrap">
+    <img
+      src="/images/blog-new-vs-used.jpg"
+      alt="Perbandingan kotak kertas dan kotak kadbod bergelombang — panduan Quinocycle Balakong Selangor"
+      loading="eager"
+      width="1280"
+      height="720"
+    />
+  </div>
+
+  <!-- Article Body -->
+  <article class="article-body">
+    <div class="container article-body__inner">
+      <div class="article-content">
+
+        <p class="article-lead">
+          "Nak beli <strong>kotak kertas</strong> untuk pos barang" — ayat yang kami dengar hampir setiap hari di WhatsApp. Tetapi dalam dunia pembungkusan, <strong>kotak kertas</strong> dan <strong>kotak kadbod</strong> sebenarnya dua benda yang berbeza. Salah pilih, dan barang anda mungkin sampai dalam keadaan penyek — atau anda terlebih bayar untuk kekuatan yang tidak diperlukan.
+        </p>
+
+        <p>
+          Dalam panduan ini, kami jelaskan <strong>beza kotak kertas dan kotak kadbod</strong> dari segi struktur dan kegunaan, apa sebenarnya maksud "kotak kosong" yang ramai orang cari, dan jenis mana yang paling sesuai untuk keperluan anda — lengkap dengan jadual keputusan pantas dan harga sebenar dari gudang kami di Balakong, Selangor.
+        </p>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>Maklumat Pantas:</strong> Quinocycle Sdn. Bhd. &bull; No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor &bull; WhatsApp: <a href={WA_LINK}>016-891 6381</a> &bull; Kotak kadbod borong dari RM0.90 sekotak &bull; Penghantaran percuma KL &amp; Selangor untuk pesanan melebihi RM300
+        </div>
+
+        <h2>Apa Maksud "Kotak Kertas" Sebenarnya?</h2>
+
+        <p>
+          Apabila orang Malaysia sebut "kotak kertas", ia biasanya merujuk kepada salah satu daripada dua benda:
+        </p>
+
+        <ul>
+          <li><strong>Kotak paperboard (folding carton)</strong> — kotak nipis satu lapisan yang mudah dilipat, seperti kotak kuih, kotak ubat gigi, kotak kosmetik, dan gift box. Inilah maksud teknikal "kotak kertas".</li>
+          <li><strong>Kotak kadbod bergelombang (corrugated box)</strong> — kotak coklat tebal yang digunakan untuk pos barang dan pindah rumah. Ramai yang memanggilnya "kotak kertas" juga, sebab pada asasnya ia memang diperbuat daripada kertas!</li>
+        </ul>
+
+        <p>
+          Kekeliruan ini normal — kedua-duanya memang berasaskan gentian kertas. Perbezaan sebenar terletak pada <strong>struktur</strong>, dan struktur itulah yang menentukan berapa banyak berat dan hentakan yang mampu ditanggung oleh setiap jenis kotak.
+        </p>
+
+        <h2>Beza Struktur: Satu Lapisan vs Lapisan Bergelombang</h2>
+
+        <h3>Kotak Kertas (Paperboard / Folding Carton)</h3>
+
+        <p>
+          Kotak kertas diperbuat daripada <strong>sekeping bod kertas tebal satu lapisan</strong> — bayangkan kad jemputan yang sangat tebal, kemudian dilipat menjadi kotak. Ia ringan, murah untuk dicetak dengan reka bentuk penuh warna, dan kelihatan kemas di atas rak. Tetapi ia tidak mempunyai sebarang struktur penyerap hentakan — himpit sedikit sahaja, terus kemek.
+        </p>
+
+        <h3>Kotak Kadbod (Corrugated Box)</h3>
+
+        <p>
+          Kotak kadbod pula mempunyai sekurang-kurangnya <strong>tiga lapisan</strong>: satu lapisan bergelombang (dipanggil <em>fluting</em>) yang diapit antara dua lapisan rata (<em>liner</em>). Gelombang inilah rahsia kekuatannya — ia berfungsi seperti deretan gerbang kecil yang menyerap tekanan dan hentakan.
+        </p>
+
+        <ul>
+          <li><strong>Single wall</strong> — satu lapisan gelombang (3 lapisan kertas). Sesuai untuk barang ringan hingga sederhana.</li>
+          <li><strong>Double wall</strong> — dua lapisan gelombang (5 lapisan kertas). Jauh lebih kukuh, boleh disusun bertindan, dan sesuai untuk barang berat, pindah rumah, dan simpanan jangka panjang.</li>
+        </ul>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Ciri</th>
+                <th>Kotak Kertas (Paperboard)</th>
+                <th>Kotak Kadbod (Corrugated)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Struktur</strong></td><td>Satu lapisan bod kertas nipis</td><td>Lapisan gelombang diapit liner (3–5 lapisan)</td></tr>
+              <tr><td><strong>Ketahanan hentakan</strong></td><td>Rendah — mudah kemek</td><td>Tinggi — gelombang menyerap tekanan</td></tr>
+              <tr><td><strong>Muatan berat</strong></td><td>Barang ringan sahaja</td><td>Sehingga puluhan kilogram (double wall)</td></tr>
+              <tr><td><strong>Susun bertindan</strong></td><td>Tidak sesuai</td><td>Sesuai — direka untuk stacking</td></tr>
+              <tr><td><strong>Kegunaan biasa</strong></td><td>Kotak kuih, gift box, kosmetik, display runcit</td><td>Pos barang, pindah rumah, simpanan, logistik</td></tr>
+              <tr><td><strong>Contoh mudah</strong></td><td>Kotak ubat gigi, kotak donut</td><td>Kotak Shopee/Lazada, kotak pindah rumah</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Bila Kotak Kertas Adalah Pilihan Yang Betul</h2>
+
+        <p>
+          Kotak kertas bersinar apabila <strong>penampilan lebih penting daripada perlindungan</strong>. Gunakan kotak kertas untuk:
+        </p>
+
+        <ul>
+          <li><strong>Bakeri dan makanan</strong> — kotak kuih, pastri, donut, dan kek yang dibawa tangan, bukan dipos.</li>
+          <li><strong>Gift box dan hadiah</strong> — permukaan licin dan mudah dicetak menjadikannya cantik untuk hamper dan door gift.</li>
+          <li><strong>Kosmetik dan produk runcit ringan</strong> — kotak display yang diletakkan di rak kedai.</li>
+          <li><strong>Pembungkusan dalaman</strong> — kotak kertas produk dimasukkan pula ke dalam kotak kadbod untuk penghantaran.</li>
+        </ul>
+
+        <p>
+          Perhatikan corak di sini: kotak kertas sesuai untuk <strong>produk ringan yang tidak melalui perjalanan kurier bersendirian</strong>. Sebaik sahaja kotak itu perlu dipos, disusun bertindan, atau menanggung berat — anda memerlukan kotak kadbod.
+        </p>
+
+        <h2>Bila Anda Perlukan Kotak Kadbod</h2>
+
+        <p>
+          Untuk hampir semua kegunaan praktikal di rumah dan perniagaan, kotak kadbod ialah jawapannya:
+        </p>
+
+        <ul>
+          <li><strong>Pos barang e-dagang</strong> — perjalanan kurier penuh dengan himpitan dan hentakan. Single wall untuk barang biasa, double wall untuk barang berat atau mudah pecah.</li>
+          <li><strong>Pindah rumah</strong> — buku, pinggan, periuk, dan pakaian memerlukan kotak yang boleh diangkat dan disusun dalam lori tanpa pecah. Lihat senarai harga penuh di halaman <a href="/kotak-pindah-rumah">kotak pindah rumah</a> kami, dan kira keperluan anda dengan panduan <a href="/blog/berapa-kotak-diperlukan-pindah-rumah">berapa kotak diperlukan untuk pindah rumah</a>.</li>
+          <li><strong>Simpanan stor dan gudang</strong> — kotak double wall mampu disusun bertindan berbulan-bulan tanpa mendap.</li>
+          <li><strong>Barang berat</strong> — peralatan, alat ganti, dan stok pukal memerlukan double wall seperti model BKRS atau NLN.</li>
+        </ul>
+
+        <h2>"Kotak Kosong" Pula Apa Maksudnya?</h2>
+
+        <p>
+          Satu lagi istilah yang kerap dicari: <strong>kotak kosong</strong>. Ia bukan jenis kotak yang berbeza — ia hanya bahasa harian untuk <strong>kotak kadbod yang belum diisi</strong>, biasanya dicari oleh orang yang hendak pindah rumah, mengemas stor, atau mula menjual online.
+        </p>
+
+        <p>
+          Sumber kotak kosong yang paling jimat ialah <strong>kotak kadbod terpakai gred kilang</strong> — kotak yang hanya digunakan sekali oleh kilang, kemudian disemak satu persatu: kering, kukuh, dan bebas bau. Fungsinya hampir sama dengan kotak baru, tetapi harganya bermula serendah RM0.90 sekotak. Baca panduan penuh kami tentang <a href="/blog/kotak-kosong-murah-selangor">kotak kosong murah di Selangor</a>, atau terus lihat stok di hab <a href="/kotak-terpakai">kotak terpakai</a> kami.
+        </p>
+
+        <div class="article-callout">
+          <strong>Masih ragu-ragu antara baru dan terpakai?</strong> Kami sudah tuliskan perbandingan lengkap — kekuatan, rupa, dan harga — dalam artikel <a href="/blog/beza-kotak-baru-kotak-terpakai">beza kotak baru dan kotak terpakai</a>.
+        </div>
+
+        <h2>Rangkaian Kotak Kadbod Quinocycle — Harga Sebenar</h2>
+
+        <p>
+          Quinocycle ialah gudang pembekal kotak kadbod borong di Balakong, Selangor — kami bukan pencetak kotak kertas, jadi fokus kami 100% pada kotak kadbod bergelombang, baru dan terpakai, pada <a href="/kilang-kotak">harga kilang dari gudang pembekal</a>.
+        </p>
+
+        <h3>Kotak Kadbod Baru</h3>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Dimensi (mm)</th>
+                <th>Dinding</th>
+                <th>Harga / Kotak</th>
+                <th>Sesuai Untuk</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>XS Mini</strong></td><td>170 × 115 × 150</td><td>Single Wall</td><td><strong>RM1.10</strong></td><td>Aksesori, kosmetik, barang kecil</td></tr>
+              <tr><td><strong>S A4</strong></td><td>310 × 220 × 220</td><td>Single Wall</td><td><strong>RM3.00</strong></td><td>Pos barang e-dagang harian</td></tr>
+              <tr><td><strong>M A3N</strong></td><td>440 × 310 × 230</td><td>Double Wall</td><td><strong>RM5.00</strong></td><td>Barang sederhana berat, elektronik</td></tr>
+              <tr><td><strong>L NLN</strong></td><td>590 × 390 × 390</td><td>Double Wall</td><td><strong>RM8.00</strong></td><td>Pindah rumah, barang berat</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Kotak Kadbod Terpakai (Gred Kilang)</h3>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Saiz</th>
+                <th>Dinding</th>
+                <th>Harga / Kotak</th>
+                <th>Sesuai Untuk</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>S</strong></td><td>Single &amp; Double Wall</td><td><strong>dari RM0.90</strong> (BKRS double wall RM1.90)</td><td>Simpanan, pos barang, packing am</td></tr>
+              <tr><td><strong>M</strong></td><td>Double Wall</td><td><strong>RM3.00 – RM3.50</strong></td><td>Pindah rumah — saiz paling popular</td></tr>
+              <tr><td><strong>L (PDC)</strong></td><td>Double Wall</td><td><strong>RM5.00</strong></td><td>Muatan besar, simpanan stor</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Setiap kotak terpakai kami ialah gred kilang sekali guna yang disemak sebelum dijual — kering, kukuh, dan bebas bau. Senarai model penuh ada di halaman <a href="/used-carton-boxes">used carton boxes</a>, dan semua harga terkini boleh dilihat di <a href="/shop">kedai dalam talian</a> kami. Untuk perbandingan harga pasaran yang lebih terperinci, rujuk artikel <a href="/blog/harga-kotak-pindah-rumah">harga kotak pindah rumah</a>.
+        </p>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>Nota pesanan:</strong> Harga di atas ialah harga borong seunit dengan minimum kuantiti 50–200 unit setiap model. Pesanan borong penuh mempunyai minimum RM1,000 — tetapi kuantiti yang lebih kecil boleh diatur melalui sebut harga WhatsApp di <a href={WA_LINK}>016-891 6381</a>. Pesanan melebihi RM300 layak penghantaran percuma di KL &amp; Selangor.
+        </div>
+
+        <h2>Jadual Keputusan Pantas: Kertas atau Kadbod?</h2>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Keperluan Anda</th>
+                <th>Pilihan Tepat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Kotak kuih, pastri, hadiah yang dibawa tangan</td><td>Kotak kertas (folding carton)</td></tr>
+              <tr><td>Kotak display produk di rak kedai</td><td>Kotak kertas</td></tr>
+              <tr><td>Pos barang Shopee / Lazada / TikTok Shop</td><td><strong>Kotak kadbod</strong> single wall (XS, A4)</td></tr>
+              <tr><td>Barang berat atau mudah pecah untuk dipos</td><td><strong>Kotak kadbod</strong> double wall (A3N, NLN)</td></tr>
+              <tr><td>Pindah rumah</td><td><strong>Kotak kadbod</strong> double wall — terpakai paling jimat</td></tr>
+              <tr><td>Simpanan stor / gudang jangka panjang</td><td><strong>Kotak kadbod terpakai</strong> double wall</td></tr>
+              <tr><td>"Kotak kosong" untuk apa-apa kegunaan am</td><td><strong>Kotak kadbod terpakai</strong> dari RM0.90</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Kesimpulannya mudah: <strong>kotak kertas untuk penampilan, kotak kadbod untuk perlindungan</strong>. Jika kotak itu perlu melalui kurier, diangkat masuk lori, atau disusun bertindan — pilih kotak kadbod, dan pilih double wall jika beratnya lebih daripada beberapa kilogram.
+        </p>
+
+      </div><!-- /.article-content -->
+
+      <!-- Sidebar CTA -->
+      <aside class="article-sidebar">
+        <div class="sidebar-cta">
+          <div class="tag tag--yellow">Dapatkan Kotak Anda</div>
+          <h3>Perlukan kotak kadbod? Dapatkan harga gudang, bukan harga kedai.</h3>
+          <p>Kotak terpakai dari <strong>RM0.90</strong> sekotak.<br />Kotak baru dari <strong>RM1.10</strong> sekotak.</p>
+          <a href="/shop" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:0.75rem">Lihat Semua Produk</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="width:100%;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp 016-891 6381
+          </a>
+          <p class="sidebar-cta__note">Isnin–Jumaat 9am–6pm · Sabtu 9am–1pm<br />Balakong, Selangor</p>
+        </div>
+
+        <div class="sidebar-links">
+          <div class="sidebar-links__title">Artikel Berkaitan</div>
+          <a href="/blog/beza-kotak-baru-kotak-terpakai" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Beza Kotak Baru &amp; Kotak Terpakai
+          </a>
+          <a href="/blog/kotak-kosong-murah-selangor" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Kotak Kosong Murah di Selangor
+          </a>
+          <a href="/blog/harga-kotak-pindah-rumah" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Harga Kotak Pindah Rumah 2026
+          </a>
+        </div>
+      </aside>
+
+    </div><!-- /.article-body__inner -->
+  </article>
+
+  <!-- FAQ Section (AEO) -->
+  <section class="article-faq">
+    <div class="container">
+      <div class="section-eyebrow">Soalan Lazim</div>
+      <h2 class="section-title" style="margin-bottom:2rem">Soalan Kerap Ditanya Tentang Kotak Kertas &amp; Kadbod</h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3 class="faq-q">Apa beza kotak kertas dan kotak kadbod?</h3>
+          <p class="faq-a">Kotak kertas (paperboard/folding carton) diperbuat daripada <strong>sekeping bod kertas nipis satu lapisan</strong> — ringan, mudah dilipat, sesuai untuk kuih, hadiah, dan produk ringan. Kotak kadbod (corrugated box) pula mempunyai <strong>lapisan gelombang (fluting)</strong> yang diapit antara dua lapisan liner, menjadikannya jauh lebih kukuh — inilah kotak untuk pos barang, pindah rumah, dan simpanan.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Kotak kertas atau kotak kadbod untuk pos barang e-dagang?</h3>
+          <p class="faq-a">Kotak kadbod. Perjalanan kurier melibatkan himpitan, hentakan, dan susunan bertindan — hanya struktur bergelombang mampu menyerap tekanan itu. Untuk barang biasa, <strong>single wall</strong> mencukupi; untuk barang berat atau mudah pecah, pilih <strong>double wall</strong> seperti model A3N (RM5.00) atau NLN (RM8.00).</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Apa maksud kotak kosong?</h3>
+          <p class="faq-a">Istilah harian untuk <strong>kotak kadbod yang belum diisi</strong> — bukan jenis kotak yang berbeza. Pencari "kotak kosong murah" biasanya mahukan kotak terpakai atau baru untuk pindah rumah, simpanan, atau pos barang. Quinocycle di Balakong, Selangor membekalkannya secara borong dari <strong>RM0.90 sekotak</strong>.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Adakah Quinocycle menjual kotak kertas untuk kuih dan hadiah?</h3>
+          <p class="faq-a">Tidak. Quinocycle ialah <strong>gudang pembekal kotak kadbod bergelombang</strong> — baru dan terpakai — untuk pos barang, pindah rumah, simpanan, dan logistik. Untuk kotak kertas jenis folding carton (kotak kuih, gift box), dapatkannya daripada pencetak kotak kertas.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Berapa harga kotak kadbod di Malaysia?</h3>
+          <p class="faq-a">Harga borong dari gudang Quinocycle di Balakong, Selangor: <strong>kotak terpakai RM0.90 – RM5.00</strong> sekotak (S dari RM0.90, M RM3.00–3.50, L RM5.00) dan <strong>kotak baru RM1.10 – RM8.00</strong> sekotak (XS RM1.10, A4 RM3.00, A3N RM5.00, NLN RM8.00). Penghantaran percuma KL &amp; Selangor untuk pesanan melebihi RM300.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="article-cta-section">
+    <div class="container">
+      <div class="article-cta-box">
+        <div class="tag tag--yellow">Sudah Tahu Beza? Jom Pilih Kotak</div>
+        <h2>Dapatkan kotak kadbod anda terus dari gudang Balakong.</h2>
+        <p>Kotak terpakai dari RM0.90 · Kotak baru dari RM1.10 · Penghantaran percuma KL &amp; Selangor (pesanan melebihi RM300)</p>
+        <div class="article-cta-box__btns">
+          <a href="/shop" class="btn btn-primary btn-lg">Lihat Semua Produk</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Kami Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+/* ---- Palette (warm editorial theme tokens, scoped to this article) ---- */
+.article-hero,
+.featured-img-wrap,
+.article-body,
+.article-faq,
+.article-cta-section {
+  --yellow: #8a6a00;
+  --yellow-bg: #ffc600;
+  --bg-base: #fdf9f0;
+  --bg-2: #f7f0e0;
+  --bg-3: #f1e8d2;
+  --bg-card: #fffdf7;
+  --bg-card-hov: #fbf5e6;
+  --border: #e6dcc4;
+  --border-yellow: rgba(184, 140, 0, 0.4);
+  --border-yellow-h: rgba(184, 140, 0, 0.6);
+  --text-1: #1d1c16;
+  --text-2: #4d4737;
+  --text-3: #8b8268;
+  --font-display: 'Epilogue', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --radius: 18px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --section-py: 5rem;
+  --glow-sm: 0 16px 40px -16px rgba(184, 140, 0, 0.25);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: var(--font-body);
+}
+
+/* ---- Shared ---- */
+.container { max-width: 1120px; margin-inline: auto; padding-inline: 1.5rem; }
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+}
+.tag--yellow { background: var(--yellow-bg); color: #6e5400; }
+.section-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 0.5rem;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  color: var(--text-1);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: #1d1c16; color: #fdf9f0; }
+.btn-primary:hover { background: #35321f; }
+.btn-wa { background: #25d366; color: #fff; }
+.btn-wa:hover { background: #1fb857; }
+.btn-lg { padding: 1rem 2rem; font-size: 0.95rem; }
+
+/* ---- Hero ---- */
+.article-hero {
+  background: var(--bg-base);
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+  position: relative;
+  overflow: hidden;
+}
+.article-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: 0;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(255,198,0,0.18) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(60px);
+}
+.article-hero__inner { max-width: 800px; position: relative; z-index: 1; }
+.article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  transition: color 0.15s;
+}
+.article-back:hover { color: var(--yellow); }
+.article-hero__title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--text-1);
+  margin-block: 1rem 0.75rem;
+}
+.article-meta {
+  display: flex;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--text-3);
+  flex-wrap: wrap;
+}
+
+/* ---- Featured image ---- */
+.featured-img-wrap { margin-bottom: 2rem; margin-top: -1rem; }
+.featured-img-wrap img {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  display: block;
+}
+
+/* ---- Body layout ---- */
+.article-body { padding-block: clamp(2.5rem, 5vw, 4rem) var(--section-py); background: var(--bg-base); }
+.article-body__inner {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 4rem;
+  align-items: start;
+}
+@media (max-width: 1024px) {
+  .article-body__inner { grid-template-columns: 1fr; }
+  .article-sidebar { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+}
+
+/* ---- Article content ---- */
+.article-content {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-2);
+  max-width: 680px;
+}
+.article-lead {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--text-1);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.article-content h2 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  color: var(--text-1);
+  line-height: 1.15;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--yellow-bg);
+}
+.article-content h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--text-1);
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+.article-content p { margin-bottom: 1rem; }
+.article-content a { color: var(--yellow); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.article-content a:hover { color: var(--text-1); }
+.article-content ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+.article-content ul li {
+  padding-left: 1rem;
+  position: relative;
+  font-size: 0.95rem;
+}
+.article-content ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--yellow);
+  font-weight: 700;
+}
+.article-content strong { color: var(--text-1); font-weight: 600; }
+.article-content em { font-style: italic; }
+
+/* ---- Callout ---- */
+.article-callout {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--yellow-bg);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+  margin-block: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--text-2);
+  line-height: 1.65;
+}
+.article-callout--yellow {
+  background: rgba(255, 198, 0, 0.1);
+  border-color: var(--border-yellow-h);
+}
+
+/* ---- Tables ---- */
+.article-table-wrap { overflow-x: auto; margin: 1.5rem 0; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.article-table th {
+  background: var(--bg-3);
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-yellow);
+  white-space: nowrap;
+}
+.article-table td {
+  padding: 0.75rem 1rem;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.article-table tbody tr:last-child td { border-bottom: none; }
+.article-table tbody tr:hover td { background: var(--bg-card-hov); }
+.article-table td strong { color: var(--text-1); }
+
+/* ---- Sidebar ---- */
+.article-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+.sidebar-cta {
+  background: var(--bg-card);
+  border: 1px solid var(--border-yellow);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--glow-sm);
+}
+.sidebar-cta h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  color: var(--text-1);
+  margin-block: 0.9rem 0.5rem;
+}
+.sidebar-cta p { font-size: 0.9rem; color: var(--text-2); line-height: 1.6; margin-bottom: 1rem; }
+.sidebar-cta p strong { color: var(--text-1); }
+.sidebar-cta__note {
+  font-family: var(--font-mono);
+  font-size: 0.7rem !important;
+  color: var(--text-3) !important;
+  margin: 0.9rem 0 0 !important;
+  line-height: 1.6 !important;
+}
+.sidebar-links {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+.sidebar-links__title {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 0.75rem;
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-2);
+  padding-block: 0.6rem;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.15s;
+}
+.sidebar-link:last-child { border-bottom: none; }
+.sidebar-link:hover { color: var(--yellow); }
+.sidebar-link svg { flex-shrink: 0; color: var(--yellow); }
+
+/* ---- FAQ ---- */
+.article-faq {
+  padding: 5rem 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.faq-list { display: flex; flex-direction: column; gap: 1.25rem; max-width: 860px; }
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.2s;
+}
+.faq-item:hover { border-color: var(--border-yellow); }
+.faq-q {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-1);
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+.faq-a {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: 0;
+}
+.faq-a strong { color: var(--text-1); }
+
+/* ---- Bottom CTA ---- */
+.article-cta-section { padding: 5rem 0; background: var(--bg-base); }
+.article-cta-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-yellow);
+  border-radius: var(--radius);
+  padding: 3rem;
+  text-align: center;
+  box-shadow: var(--glow-sm);
+}
+.article-cta-box h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 900;
+  color: var(--text-1);
+  margin: 1rem 0 0.75rem;
+}
+.article-cta-box p { color: var(--text-2); margin-bottom: 2rem; }
+.article-cta-box__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+</style>

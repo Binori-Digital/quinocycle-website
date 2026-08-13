@@ -1,0 +1,209 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CITY = 'Bangi';
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! Saya nak beli kotak pindah rumah di ${CITY}.`)}`;
+
+const faqs = [
+  {
+    q: 'Ada kilang kotak di Bangi?',
+    a: 'Tiada kilang kotak yang jual terus kepada orang awam di Bangi, dan Quinocycle sendiri bukan kilang — kami gudang pembekal borong di Taming Jaya, Balakong, hanya ±15–20 minit dari Bandar Baru Bangi melalui SILK/PLUS. Kelebihannya sama: anda dapat <a href="/kilang-kotak" class="text-primary font-semibold hover:underline">harga kilang dari gudang pembekal</a> — kotak terpakai dari RM0.90, kotak baru dari RM1.10 — dihantar terus ke pintu rumah anda di Bangi.',
+  },
+  {
+    q: 'Berapa cepat kotak sampai ke Bandar Baru Bangi?',
+    a: 'Sangat cepat, sebab gudang kami dekat sahaja. WhatsApp pesanan anda waktu pagi dan kebiasaannya kotak sampai ke Bandar Baru Bangi, kawasan Bangi Gateway atau arah Semenyih pada hari yang sama — selewat-lewatnya keesokan hari. Penghantaran percuma untuk pesanan melebihi RM300 (KL &amp; Selangor).',
+  },
+  {
+    q: 'Saya pelajar UKM nak kosongkan bilik hostel — boleh order kuantiti kecil?',
+    a: 'Boleh, dengan syarat mudah. Kuantiti minimum borong penuh ialah RM1,000 (50–200 unit setiap saiz), tapi untuk kuantiti kecil seperti 10–20 kotak, hantar sahaja senarai anda melalui WhatsApp 016-891 6381 dan kami beri sebut harga terus. Tip pelajar: kumpulkan pesanan satu rumah atau satu blok hostel supaya cecah RM300 dan penghantaran jadi percuma.',
+  },
+  {
+    q: 'Boleh saya ambil sendiri kotak kalau tinggal di Bangi?',
+    a: 'Boleh, dan ini pilihan paling jimat. Gudang kami di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor — ±15–20 minit dari Bandar Baru Bangi melalui SILK atau PLUS. Buka Isnin–Jumaat 9:00 pagi–6:00 petang, Sabtu 9:00 pagi–1:00 tengah hari (Ahad tutup). WhatsApp dulu supaya kotak anda siap disusun sebelum sampai.',
+  },
+];
+
+// Plain-text versions for the FAQPage schema (no HTML classes)
+const faqsSchemaText = [
+  'Tiada kilang kotak yang jual terus kepada orang awam di Bangi, dan Quinocycle sendiri bukan kilang — kami gudang pembekal borong di Taming Jaya, Balakong, hanya ±15–20 minit dari Bandar Baru Bangi melalui SILK/PLUS. Kelebihannya sama: anda dapat harga kilang dari gudang pembekal — kotak terpakai dari RM0.90, kotak baru dari RM1.10 — dihantar terus ke pintu rumah anda di Bangi.',
+  'Sangat cepat, sebab gudang kami dekat sahaja. WhatsApp pesanan anda waktu pagi dan kebiasaannya kotak sampai ke Bandar Baru Bangi, kawasan Bangi Gateway atau arah Semenyih pada hari yang sama — selewat-lewatnya keesokan hari. Penghantaran percuma untuk pesanan melebihi RM300 (KL & Selangor).',
+  'Boleh, dengan syarat mudah. Kuantiti minimum borong penuh ialah RM1,000 (50–200 unit setiap saiz), tapi untuk kuantiti kecil seperti 10–20 kotak, hantar sahaja senarai anda melalui WhatsApp 016-891 6381 dan kami beri sebut harga terus. Tip pelajar: kumpulkan pesanan satu rumah atau satu blok hostel supaya cecah RM300 dan penghantaran jadi percuma.',
+  'Boleh, dan ini pilihan paling jimat. Gudang kami di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor — ±15–20 minit dari Bandar Baru Bangi melalui SILK atau PLUS. Buka Isnin–Jumaat 9:00 pagi–6:00 petang, Sabtu 9:00 pagi–1:00 tengah hari (Ahad tutup). WhatsApp dulu supaya kotak anda siap disusun sebelum sampai.',
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": `Quinocycle — Kotak Pindah Rumah ${CITY}`,
+  "description": `Pembekal kotak pindah rumah untuk kawasan ${CITY} — Bandar Baru Bangi, sekitar UKM, Bangi Gateway hingga arah Semenyih. Kotak kardus baru dan terpakai harga borong dari RM0.90 sekotak, dihantar dari gudang Balakong yang hanya 15–20 minit jauhnya.`,
+  "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/bangi/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["Bangi","Bandar Baru Bangi","UKM Bangi","Kajang","Semenyih","Putrajaya"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((f, i) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": faqsSchemaText[i] }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Utama", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Kotak Pindah Rumah", "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/" },
+    { "@type": "ListItem", "position": 3, "name": CITY, "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/bangi/" }
+  ]
+};
+---
+
+<Layout
+  lang="ms"
+  title={`Kotak Pindah Rumah ${CITY} — Gudang Borong 15 Minit Sahaja, dari RM0.90 | Quinocycle`}
+  description={`Nak kotak pindah rumah di ${CITY}? Gudang borong kami di Balakong cuma 15–20 minit via SILK/PLUS — kotak dari RM0.90, hantar hari sama ke Bandar Baru Bangi, percuma untuk order RM300+. WhatsApp 016-891 6381.`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Utama</a>
+      <span class="mx-2">/</span>
+      <a href="/kotak-pindah-rumah" class="hover:text-primary transition-colors">Kotak Pindah Rumah</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">{CITY}</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Kawasan Penghantaran Kami</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Kotak pindah rumah {CITY} <br /><span class="text-primary italic">— gudang borong paling dekat dengan anda.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      Dari Bandar Baru Bangi, gudang pembekal Quinocycle di Balakong hanya <strong class="text-on-surface font-semibold">±15–20 minit melalui SILK atau PLUS</strong> — lebih dekat daripada mana-mana pembekal borong lain. Sebab itu kami mampu hantar <a href="/kotak-terpakai" class="text-primary font-semibold hover:underline">kotak terpakai</a> dari <strong class="text-on-surface font-semibold">RM0.90</strong> dan kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak ke Bangi pada hari yang sama, dengan penghantaran percuma untuk pesanan melebihi RM300.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Sekarang
+      </a>
+      <a href="/kotak-pindah-rumah#senarai-harga" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Senarai Harga Penuh
+      </a>
+    </div>
+  </section>
+
+  <!-- Local info -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Hantar Hari Sama ke Bangi</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Bandar Baru Bangi, sekitar Bangi Gateway, kolej kediaman UKM hinggalah ke arah Semenyih — jarak yang dekat bermakna pesanan pagi biasanya tiba petang itu juga, atau keesokan hari. Percuma untuk pesanan melebihi RM300 (KL &amp; Selangor).
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">storefront</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Pickup 15–20 Minit Dari Bangi</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Gudang kami di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong — masuk SILK atau PLUS dari Bangi dan anda sampai dalam ±15–20 minit, lalu Kajang sahaja. WhatsApp senarai anda dulu; kotak siap diangkat masuk kereta bila tiba.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">schedule</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Masa Operasi Gudang</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Isnin–Jumaat: 9:00 pagi – 6:00 petang<br />
+          Sabtu: 9:00 pagi – 1:00 tengah hari<br />
+          Ahad &amp; cuti umum: tutup — mesej WhatsApp tetap dibalas
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Kenapa penduduk Bangi tak perlu beli kotak di kedai lagi?</h2>
+    <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
+      <p>
+        Ramai penduduk Bandar Baru Bangi tak sedar yang <strong class="text-on-surface font-semibold">gudang pembekal kotak borong paling hampir dengan mereka cuma 15–20 minit jauhnya</strong>. Selama ini, bila tiba masa pindah rumah, pilihan yang ada ialah kedai hardware atau kedai serbaneka sekitar seksyen-seksyen Bangi — di mana sekeping kotak bersaiz sederhana boleh mencecah RM8 hingga RM12. Padahal kotak yang serupa keluar dari gudang kami di Taming Jaya, Balakong pada harga borong: dari RM0.90 untuk kotak terpakai dan RM1.10 untuk kotak baru. Lihat <a href="/blog/harga-kotak-pindah-rumah" class="text-primary font-semibold hover:underline">pecahan penuh harga kotak pindah rumah</a> untuk bandingkan sendiri.
+      </p>
+      <p>
+        Quinocycle membekalkan kotak kepada syarikat mover, peniaga online dan premis perindustrian di seluruh Lembah Klang, dan harga yang sama kami buka kepada individu. Pilihan paling popular di kalangan pelanggan Bangi ialah <a href="/kotak-terpakai" class="text-primary font-semibold hover:underline">kotak terpakai</a> gred sekali guna — setiap unit disemak, kering dan bebas bau, dengan pilihan seperti BKRS dinding berganda pada RM1.90 yang cukup kuat untuk buku dan peralatan dapur. Nak tahu bila patut pilih baru dan bila cukup dengan terpakai? Baca <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan kotak baru vs kotak terpakai</a> kami.
+      </p>
+      <p>
+        Bangi juga bandar pelajar. Setiap kali sesi UKM berakhir, kolej kediaman dan rumah sewa sekitar kampus jadi sibuk dengan <strong class="text-on-surface font-semibold">move-out hostel</strong> — dan inilah masa paling rugi kalau beli kotak harga runcit. Untuk 10–20 kotak, WhatsApp sahaja senarai anda dan kami beri sebut harga; kalau satu rumah sewa atau satu tingkat hostel gabungkan pesanan sehingga melebihi RM300, penghantaran ke Bangi jadi percuma terus. Keluarga yang berpindah rumah penuh pula biasanya perlukan 40–70 kotak — kira dengan tepat guna <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="text-primary font-semibold hover:underline">panduan kiraan kotak</a> kami.
+      </p>
+      <p>
+        Satu lagi kelebihan penduduk Bangi berbanding kawasan lain: jarak. Kalau anda nak tengok dan pilih sendiri stok, pandu ±15–20 minit melalui SILK atau PLUS — melepasi Kajang di sebelah — dan anda sudah berada di gudang kami. Semak <a href="/kotak-pindah-rumah" class="text-primary font-semibold hover:underline">senarai harga penuh kotak pindah rumah</a> sebelum bertolak, atau layari stok <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">used carton box</a> dan <a href="/shop" class="text-primary font-semibold hover:underline">kedai online</a> kami untuk tempah tanpa keluar rumah.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">Soalan lazim — kotak pindah {CITY}</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/15">
+        {faqs.map(f => (
+          <details class="group py-5">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              {f.q}
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-sm text-secondary leading-relaxed mt-3" set:html={f.a} />
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <h2 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface mb-6">Kawasan berdekatan</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/kotak-pindah-rumah/kajang"         class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Kajang</a>
+      <a href="/kotak-pindah-rumah/putrajaya"      class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Putrajaya</a>
+      <a href="/kotak-pindah-rumah/seri-kembangan" class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Seri Kembangan</a>
+      <a href="/kotak-pindah-rumah"                class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Semua Kawasan →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Kotak untuk Bangi, siap dalam sehari.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        WhatsApp senarai saiz dan kuantiti kotak anda — kami balas dengan sebut harga borong, kemudian hantar ke Bandar Baru Bangi dan sekitarnya atau siapkan pesanan untuk pickup di gudang Balakong, 15–20 minit dari rumah anda.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Lokasi Gudang (Balakong)
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

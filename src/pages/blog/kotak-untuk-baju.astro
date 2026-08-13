@@ -1,0 +1,517 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'Kotak Untuk Baju — Saiz Terbaik untuk Simpan, Susun & Pindah Pakaian',
+  description: 'Saiz kotak terbaik untuk baju ialah M double wall (dari RM3.00 sekotak). Panduan lengkap: elak lembap & gegat, trik vacuum bag, teknik lipatan jimat ruang, dan harga sebenar dari gudang Balakong.',
+  date: '2026-08-13',
+  readTime: '9 min',
+  category: 'Panduan Simpanan & Packing',
+  author: 'Pasukan Quinocycle',
+  slug: 'kotak-untuk-baju',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20nak%20tanya%20pasal%20kotak%20untuk%20simpan%20baju.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "ms-MY",
+  "author": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd.",
+    "url": "https://www.quinocycle.com.my"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.quinocycle.com.my/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.quinocycle.com.my/blog/kotak-untuk-baju"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.quinocycle.com.my/images/blog-movers-guide.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  "keywords": "kotak untuk baju, kotak untuk simpan baju, kotak untuk letak baju, kotak simpan pakaian, kotak baju murah, kotak kardus untuk pakaian, kotak simpan baju lama, kotak pakaian pindah rumah, Quinocycle Balakong"
+};
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "Pembekal kotak kardus borong — baru dan terpakai gred sekali guna — untuk simpanan pakaian, pindah rumah, perniagaan, dan logistik. Gudang di Balakong, Selangor dengan penghantaran ke seluruh Semenanjung Malaysia.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "priceRange": "RM0.90 – RM8.00 sekotak",
+  "areaServed": "Semenanjung Malaysia"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apakah saiz kotak terbaik untuk simpan baju?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Saiz M double wall — sekitar 430 × 310 × 290 mm — adalah saiz terbaik untuk baju berlipat. Kotak penuh baju pada saiz ini beratnya sekitar 8–12 kg, masih selesa diangkat seorang, dan dinding dua lapisan tidak melendut bila disusun bertindan. Di Quinocycle, kotak terpakai saiz M double wall (AAL, Yellow, LGD) berharga RM3.00–RM3.50 sekotak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kotak terpakai sesuai tak untuk simpan pakaian?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sesuai, selagi ia gred sekali guna. Kotak terpakai Quinocycle hanya digunakan sekali oleh kilang, kemudian disemak satu persatu — mesti kering, bebas bau, dan tiada kerosakan struktur. Untuk simpanan jangka panjang berbulan-bulan, kotak baru double wall seperti A3N (RM5.00) adalah pilihan lebih selamat kerana kadbodnya belum pernah digunakan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Macam mana nak elak baju berbau hapak atau berkulat dalam kotak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lima langkah: (1) pastikan setiap helai baju dibasuh dan kering sepenuhnya sebelum dimasukkan, (2) gunakan kotak yang kering dan bebas bau, (3) letakkan silica gel dalam kotak dan ubat gegat (naphthalene) yang dibalut kertas — jangan biar bersentuh terus dengan fabrik, (4) jangan letak kotak terus atas lantai stor — alaskan pallet atau rak dan jauhkan dari dinding, (5) semak semula setiap 3–6 bulan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa banyak kotak diperlukan untuk baju satu almari?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almari 2 pintu biasa memerlukan sekitar 4–6 kotak saiz M untuk baju berlipat, tambah 1–2 kotak saiz L untuk jaket tebal atau selimut. Untuk keluarga 4 orang, anggarkan 12–18 kotak saiz M untuk pakaian sahaja. Teknik lipatan menegak (file folding) boleh menjimatkan 20–30% ruang kotak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Boleh beli kotak untuk baju dalam kuantiti kecil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Boleh. Pesanan borong penuh mempunyai minimum RM1,000, tetapi untuk kuantiti kecil seperti kegunaan pindah rumah atau simpanan peribadi, hantar senarai keperluan anda melalui WhatsApp 016-891 6381 untuk sebut harga. Penghantaran percuma di KL & Selangor untuk pesanan RM300 ke atas. Anda juga boleh ambil sendiri di gudang Balakong."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title={`${post.title} — Blog Quinocycle`}
+  description={post.description}
+  lang="ms"
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container article-hero__inner">
+      <a href="/blog" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Kembali ke Blog
+      </a>
+      <div class="tag tag--yellow" style="margin-top:1.5rem">{post.category}</div>
+      <h1 class="article-hero__title">{post.title}</h1>
+      <div class="article-meta">
+        <time datetime={post.date}>{new Date(post.date).toLocaleDateString('ms-MY', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        <span>·</span>
+        <span>{post.readTime} bacaan</span>
+        <span>·</span>
+        <span>Oleh {post.author}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <div class="container" style="margin-bottom:2rem;margin-top:-1rem">
+    <img
+      src="/images/blog-movers-guide.jpg"
+      alt="Kotak kardus untuk simpan dan susun baju — kotak saiz M double wall dari Quinocycle Balakong Selangor"
+      style="width:100%;max-height:460px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);display:block;"
+      loading="eager"
+      width="1280"
+      height="720"
+    />
+  </div>
+
+  <!-- Article Body -->
+  <article class="article-body">
+    <div class="container article-body__inner">
+      <div class="article-content">
+
+        <p class="article-lead">
+          Almari dah penuh, nak pindah rumah, atau nak simpan baju raya sampai tahun depan — apa pun sebabnya, memilih <strong>kotak untuk baju</strong> nampak macam perkara kecil sehinggalah anda buka kotak enam bulan kemudian dan dapati baju berbau hapak, renyuk teruk, atau lebih malang lagi, dimakan gegat. Panduan ini memberi jawapan terus: saiz mana yang betul, kenapa kotak besar selalunya satu kesilapan, dan macam mana nak simpan pakaian dengan selamat dalam cuaca lembap Malaysia.
+        </p>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>Jawapan pantas:</strong> Saiz terbaik untuk baju berlipat ialah kotak <strong>M double wall</strong> (sekitar 430 × 310 × 290 mm) — dari <strong>RM3.00</strong> sekotak di Quinocycle. Gudang: No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor &bull; WhatsApp: <a href={WA_LINK}>016-891 6381</a> &bull; Penghantaran percuma KL &amp; Selangor untuk pesanan RM300 ke atas.
+        </div>
+
+        <h2>Saiz Kotak Terbaik untuk Baju: M Double Wall</h2>
+
+        <p>
+          Selepas membekalkan beribu kotak kepada pelanggan pindah rumah, penjual baju online, dan keluarga yang mengemas stor, corak yang kami nampak sangat konsisten: <strong>kotak saiz M dengan dinding dua lapisan (double wall) adalah saiz paling praktikal untuk pakaian berlipat</strong>. Sebabnya mudah — kotak M yang penuh dengan baju beratnya sekitar 8–12 kg. Cukup padat untuk jimat ruang, tetapi masih boleh diangkat seorang tanpa mencederakan belakang.
+        </p>
+
+        <p>
+          Ini pilihan sebenar dari stok gudang kami di Balakong — semua harga adalah harga borong seunit, sama seperti dalam <a href="/kotak-pindah-rumah">senarai harga kotak pindah rumah</a>:
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>Kotak</th>
+                <th>Dimensi (mm)</th>
+                <th>Dinding</th>
+                <th>Harga / Kotak</th>
+                <th>Sesuai Untuk</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Terpakai BKRS (S)</strong></td>
+                <td>390 × 280 × 260</td>
+                <td>Double Wall</td>
+                <td><strong>RM1.90</strong></td>
+                <td>Baju budak, tudung, aksesori — pilihan bajet</td>
+              </tr>
+              <tr>
+                <td><strong>Terpakai AAL (M)</strong></td>
+                <td>430 × 310 × 290</td>
+                <td>Double Wall</td>
+                <td><strong>RM3.00</strong></td>
+                <td>Pilihan utama untuk baju berlipat</td>
+              </tr>
+              <tr>
+                <td><strong>Terpakai Yellow (M)</strong></td>
+                <td>460 × 330 × 310</td>
+                <td>Double Wall</td>
+                <td><strong>RM3.50</strong></td>
+                <td>Baju berlipat, kemeja, seluar</td>
+              </tr>
+              <tr>
+                <td><strong>Terpakai LGD (M)</strong></td>
+                <td>490 × 310 × 295</td>
+                <td>Double Wall</td>
+                <td><strong>RM3.50</strong></td>
+                <td>Seluar jeans, kain yang lebih berat</td>
+              </tr>
+              <tr>
+                <td><strong>Baru A3N (M)</strong></td>
+                <td>440 × 310 × 230</td>
+                <td>Double Wall</td>
+                <td><strong>RM5.00</strong></td>
+                <td>Simpanan jangka panjang, baju penting</td>
+              </tr>
+              <tr>
+                <td><strong>Terpakai PDC (L)</strong></td>
+                <td>590 × 380 × 380</td>
+                <td>Double Wall</td>
+                <td><strong>RM5.00</strong></td>
+                <td>Jaket tebal, selimut, kain besar yang ringan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Kenapa mesti double wall? Kain sebenarnya lebih berat daripada rupanya. Kotak single wall yang diisi penuh baju akan melendut di bahagian bawah selepas beberapa kali angkat, dan penjuru kotak remuk bila disusun bertindan dalam stor. Dua lapisan gelombang kadbod menyelesaikan kedua-dua masalah dengan tambahan kos sekitar satu ringgit sahaja.
+        </p>
+
+        <h2>Kenapa Kotak Besar Gagal untuk Baju</h2>
+
+        <p>
+          Ini kesilapan nombor satu yang kami lihat: pelanggan fikir "baju banyak, ambil kotak paling besar." Logik tu masuk akal — sehinggalah kotak itu diisi penuh:
+        </p>
+
+        <ul>
+          <li><strong>Terlalu berat untuk diangkat.</strong> Kotak saiz L atau XL yang penuh baju boleh mencecah 18–25 kg. Itu bukan lagi "angkat kotak" — itu sesi angkat berat tanpa jurulatih.</li>
+          <li><strong>Bahagian bawah pecah.</strong> Semakin berat isi, semakin tinggi tekanan pada flap bawah. Kotak yang pecah di tangga adalah cerita seram klasik hari pindah.</li>
+          <li><strong>Baju di lapisan bawah hancur.</strong> Timbunan kain setinggi 40–50 cm menekan lapisan bawah sehingga kedut mati — kemeja dan baju kurung yang digosok elok jadi renyuk teruk.</li>
+          <li><strong>Susah disusun dan dicari.</strong> Satu kotak gergasi bercampur semua jenis pakaian bermakna anda terpaksa membongkar segalanya untuk mencari satu helai.</li>
+        </ul>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>Peraturan mudah:</strong> Baju berlipat masuk kotak <strong>M</strong>. Barang kain yang <em>besar tapi ringan</em> — jaket musim sejuk, selimut, cadar, bantal — barulah masuk kotak <strong>L</strong> seperti PDC. Berat setiap kotak patut kekal bawah 15 kg.
+        </div>
+
+        <h2>Simpan Baju Jangka Panjang dalam Cuaca Lembap Malaysia</h2>
+
+        <p>
+          Kelembapan udara di Malaysia kerap melebihi 80%. Bagi pakaian yang disimpan berbulan-bulan dalam stor, itu bermakna tiga musuh utama: <strong>kulat dan bau hapak</strong>, <strong>gegat</strong>, dan <strong>ikan perak (silverfish)</strong> yang memakan kanji pada fabrik dan kadbod. Ikut senarai semak ini sebelum menutup kotak:
+        </p>
+
+        <ol>
+          <li><strong>Basuh dan keringkan baju sepenuhnya.</strong> Peluh dan kotoran yang tertinggal adalah makanan serangga dan punca kulat. Baju yang "hampir kering" hari ini adalah baju berkulat tiga bulan lagi.</li>
+          <li><strong>Gunakan kotak yang kering dan bebas bau.</strong> Kadbod yang pernah lembap kehilangan kekuatannya dan membawa spora kulat. Semua <a href="/kotak-terpakai">kotak terpakai</a> kami disemak satu persatu di gudang — mesti kering, bebas bau, dan tiada kerosakan struktur sebelum dijual.</li>
+          <li><strong>Letakkan silica gel dan ubat gegat.</strong> Beberapa paket silica gel menyerap lembapan dalam kotak; naphthalene (ubat gegat) menghalau serangga. Penting: balut ubat gegat dalam kertas atau kain nipis — jangan biar ia bersentuh terus dengan fabrik kerana boleh meninggalkan kesan.</li>
+          <li><strong>Jangan letak kotak terus atas lantai stor.</strong> Lantai simen menyerap dan melepaskan lembapan — kotak yang duduk terus di atasnya akan lembap dari bawah tanpa anda sedar. Alaskan pallet kayu, rak, atau sekurang-kurangnya beberapa keping kadbod lebihan, dan jarakkan kotak sedikit dari dinding.</li>
+          <li><strong>Jangan bungkus baju dalam plastik biasa.</strong> Beg plastik yang diikat rapat memerangkap wap air — resipi bau hapak. Untuk baju penting seperti baju pengantin, lapikkan kertas tisu bersih dan biarkan fabrik "bernafas" dalam kotak.</li>
+          <li><strong>Semak setiap 3–6 bulan.</strong> Buka, hidu, dan pastikan tiada tanda serangga atau lembapan. Sepuluh minit pemeriksaan menyelamatkan satu kotak pakaian.</li>
+        </ol>
+
+        <h2>Trik Vacuum Bag + Kotak: Kombinasi Paling Jimat Ruang</h2>
+
+        <p>
+          Vacuum bag (beg vakum) memampatkan pakaian sehingga 50–70% lebih kecil — tetapi beg yang tersadai atas rak stor mudah bocor, tercalar, dan hodoh disusun. Penyelesaiannya: <strong>vakumkan dahulu, kemudian masukkan beg vakum ke dalam kotak M double wall</strong>. Anda dapat penjimatan ruang beg vakum <em>dan</em> perlindungan struktur kotak — boleh disusun bertindan dengan kemas, berlabel, dan beg tidak terdedah kepada benda tajam.
+        </p>
+
+        <p>
+          Satu amaran: elakkan simpanan vakum jangka panjang untuk jaket bulu (down jacket), baju sejuk gebu, dan fabrik halus — mampatan berbulan-bulan boleh merosakkan kegebuannya. Untuk item begini, gunakan kotak L seperti PDC tanpa vakum dan jangan padatkan.
+        </p>
+
+        <h2>Pindah Rumah vs Simpanan Lama: Keperluan Berbeza</h2>
+
+        <p>
+          Kotak untuk <strong>pindah rumah</strong> hanya perlu bertahan beberapa hari — di sini kotak terpakai gred sekali guna adalah pilihan paling berbaloi, dengan harga bermula RM1.90 untuk double wall. Kotak untuk <strong>simpanan berbulan-bulan</strong> pula perlu menahan lembapan dan beban tindanan lebih lama — di sinilah kotak baru seperti A3N (RM5.00) berbaloi dibayar, kerana kadbodnya belum pernah melalui sebarang perjalanan. Perbandingan penuh kedua-dua jenis ada dalam artikel kami: <a href="/blog/beza-kotak-baru-kotak-terpakai">beza kotak baru dan kotak terpakai</a>.
+        </p>
+
+        <h2>Teknik Lipatan: Muat Lebih Banyak Baju Setiap Kotak</h2>
+
+        <ul>
+          <li><strong>Lipat menegak (file folding).</strong> Lipat baju menjadi segi empat padat dan susun <em>berdiri</em> dalam kotak seperti fail dalam kabinet — bukan bertindih. Anda nampak setiap helai sekali pandang dan jimat 20–30% ruang.</li>
+          <li><strong>Gulung untuk t-shirt dan baju sukan.</strong> Fabrik kasual tidak kisah digulung, dan gulungan mengisi ruang tepi kotak dengan cekap.</li>
+          <li><strong>Lipat rata untuk kemeja dan baju formal.</strong> Letakkan di lapisan paling atas kotak supaya tidak ditindih benda berat.</li>
+          <li><strong>Berat di bawah, ringan di atas.</strong> Seluar jeans dan kain tebal di dasar; blaus dan baju nipis di atas.</li>
+          <li><strong>Jangan padatkan melampau.</strong> Kotak yang dipaksa tutup akan kembung dan tidak stabil bila ditindan. Kalau flap tak rapat, itu isyarat untuk kotak kedua.</li>
+        </ul>
+
+        <p>
+          Sebagai anggaran: almari 2 pintu biasa memerlukan <strong>4–6 kotak M</strong> untuk baju berlipat, tambah 1–2 kotak L untuk item tebal. Keluarga 4 orang biasanya menggunakan 12–18 kotak M untuk pakaian sahaja. Untuk anggaran seisi rumah, gunakan panduan kami: <a href="/blog/berapa-kotak-diperlukan-pindah-rumah">berapa kotak diperlukan untuk pindah rumah</a>.
+        </p>
+
+        <h2>Harga &amp; Cara Pesan dari Gudang Balakong</h2>
+
+        <p>
+          Quinocycle ialah pembekal borong — anda beli pada <a href="/kilang-kotak">harga kilang terus dari gudang pembekal</a> di Taming Jaya, Balakong, bukan harga runcit kedai. Kotak terpakai bermula RM0.90 dan kotak baru bermula RM1.10 sekotak; pecahan penuh mengikut saiz ada dalam <a href="/blog/harga-kotak-pindah-rumah">panduan harga kotak pindah rumah</a>, atau lihat semua produk di <a href="/shop">kedai online</a> (halaman English: <a href="/used-carton-boxes">used carton boxes</a>).
+        </p>
+
+        <ol>
+          <li><strong>Senaraikan keperluan anda</strong> — berapa kotak M untuk baju berlipat, berapa L untuk item tebal.</li>
+          <li><strong>WhatsApp kami di <a href={WA_LINK}>016-891 6381</a></strong> — hantar senarai, kami balas dengan sebut harga dan ketersediaan stok.</li>
+          <li><strong>Terima atau ambil sendiri</strong> — penghantaran percuma di KL &amp; Selangor untuk pesanan RM300 ke atas, atau ambil terus di gudang Balakong.</li>
+        </ol>
+
+        <div class="article-callout">
+          <strong>Nota pesanan:</strong> Pesanan borong penuh mempunyai minimum RM1,000, dan setiap jenis kotak mempunyai kuantiti minimum 50–200 unit. Untuk kuantiti kecil — contohnya simpanan peribadi atau satu pindahan rumah — hantar sahaja senarai anda melalui WhatsApp untuk sebut harga. Waktu operasi: Isnin–Jumaat 9 pagi–6 petang, Sabtu 9 pagi–1 tengah hari.
+        </div>
+
+        <h2>Kesimpulan</h2>
+
+        <p>
+          Kotak yang betul untuk baju bukan kotak paling besar — ia kotak <strong>M double wall</strong> yang boleh diangkat dengan selamat, disusun bertindan tanpa melendut, dan menyimpan pakaian anda kering serta bebas gegat. Tambah silica gel, jangan letak terus atas lantai, dan gunakan lipatan menegak — baju anda akan keluar dari kotak dalam keadaan sama seperti ia masuk. Kalau masih tak pasti saiz mana untuk almari anda, hantar sahaja gambar timbunan baju anda ke WhatsApp kami — kami bantu kira.
+        </p>
+
+      </div><!-- /.article-content -->
+
+      <!-- Sidebar CTA -->
+      <aside class="article-sidebar">
+        <div class="sidebar-cta">
+          <div class="tag tag--yellow">Kotak Untuk Baju</div>
+          <h3>Saiz M double wall — sedia di gudang Balakong.</h3>
+          <p>Kotak terpakai dari <strong>RM0.90</strong> sekotak.<br />Kotak baru dari <strong>RM1.10</strong> sekotak.</p>
+          <a href="/kotak-terpakai" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:0.75rem">Lihat Kotak Terpakai</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="width:100%;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp 016-891 6381
+          </a>
+          <p class="sidebar-cta__note">Isnin–Jumaat 9am–6pm · Sabtu 9am–1pm<br />Gudang: Taming Jaya, Balakong, Selangor</p>
+        </div>
+
+        <div class="sidebar-links">
+          <div class="sidebar-links__title">Artikel Berkaitan</div>
+          <a href="/blog/beza-kotak-baru-kotak-terpakai" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Beza Kotak Baru &amp; Kotak Terpakai
+          </a>
+          <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Berapa Kotak Diperlukan Untuk Pindah Rumah?
+          </a>
+          <a href="/blog/harga-kotak-pindah-rumah" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Harga Kotak Pindah Rumah di Malaysia
+          </a>
+          <a href="/kotak-pindah-rumah" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Senarai Harga Kotak Pindah Rumah
+          </a>
+        </div>
+      </aside>
+
+    </div><!-- /.article-body__inner -->
+  </article>
+
+  <!-- FAQ Section (AEO) -->
+  <section class="article-faq">
+    <div class="container">
+      <div class="section-eyebrow">Soalan Lazim</div>
+      <h2 class="section-title" style="margin-bottom:2rem">Soalan Kerap Ditanya<br /><span style="font-size:0.6em;opacity:0.6">Kotak Untuk Baju &amp; Simpanan Pakaian</span></h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3 class="faq-q">Apakah saiz kotak terbaik untuk simpan baju?</h3>
+          <p class="faq-a">Saiz <strong>M double wall</strong> — sekitar 430 × 310 × 290 mm — adalah saiz terbaik untuk baju berlipat. Kotak penuh baju pada saiz ini beratnya sekitar 8–12 kg, masih selesa diangkat seorang, dan dinding dua lapisan tidak melendut bila disusun bertindan. Di Quinocycle, kotak terpakai saiz M double wall (AAL, Yellow, LGD) berharga <strong>RM3.00–RM3.50</strong> sekotak.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Kotak terpakai sesuai tak untuk simpan pakaian?</h3>
+          <p class="faq-a">Sesuai, selagi ia <strong>gred sekali guna</strong>. Kotak terpakai Quinocycle hanya digunakan sekali oleh kilang, kemudian disemak satu persatu — mesti kering, bebas bau, dan tiada kerosakan struktur. Untuk simpanan jangka panjang berbulan-bulan, kotak baru double wall seperti A3N (RM5.00) adalah pilihan lebih selamat kerana kadbodnya belum pernah digunakan.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Macam mana nak elak baju berbau hapak atau berkulat dalam kotak?</h3>
+          <p class="faq-a">Lima langkah: pastikan setiap helai baju <strong>dibasuh dan kering sepenuhnya</strong> sebelum dimasukkan; gunakan kotak yang kering dan bebas bau; letakkan <strong>silica gel</strong> dalam kotak dan ubat gegat (naphthalene) yang dibalut kertas — jangan biar bersentuh terus dengan fabrik; <strong>jangan letak kotak terus atas lantai stor</strong> — alaskan pallet atau rak dan jauhkan dari dinding; dan semak semula setiap 3–6 bulan.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Berapa banyak kotak diperlukan untuk baju satu almari?</h3>
+          <p class="faq-a">Almari 2 pintu biasa memerlukan sekitar <strong>4–6 kotak saiz M</strong> untuk baju berlipat, tambah 1–2 kotak saiz L untuk jaket tebal atau selimut. Untuk keluarga 4 orang, anggarkan 12–18 kotak saiz M untuk pakaian sahaja. Teknik lipatan menegak (file folding) boleh menjimatkan 20–30% ruang kotak.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">Boleh beli kotak untuk baju dalam kuantiti kecil?</h3>
+          <p class="faq-a">Boleh. Pesanan borong penuh mempunyai minimum RM1,000, tetapi untuk kuantiti kecil seperti kegunaan pindah rumah atau simpanan peribadi, hantar senarai keperluan anda melalui <strong>WhatsApp 016-891 6381</strong> untuk sebut harga. Penghantaran percuma di KL &amp; Selangor untuk pesanan RM300 ke atas. Anda juga boleh ambil sendiri di gudang Balakong.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="article-cta-section">
+    <div class="container">
+      <div class="article-cta-box">
+        <div class="tag tag--yellow">Baju Selamat, Ruang Jimat</div>
+        <h2>Dapatkan kotak untuk baju anda hari ini.</h2>
+        <p>Kotak terpakai dari RM0.90 · Kotak baru dari RM1.10 · Penghantaran percuma KL &amp; Selangor untuk pesanan RM300 ke atas</p>
+        <div class="article-cta-box__btns">
+          <a href="/kotak-terpakai" class="btn btn-primary btn-lg">Lihat Kotak Terpakai</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Kami Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.article-faq {
+  padding: 5rem 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.faq-list { display: flex; flex-direction: column; gap: 1.25rem; max-width: 860px; }
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.2s;
+}
+.faq-item:hover { border-color: var(--border-yellow); }
+.faq-q {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-1);
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+.faq-a {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: 0;
+}
+.article-cta-section { padding: 5rem 0; }
+.article-cta-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-yellow);
+  border-radius: var(--radius);
+  padding: 3rem;
+  text-align: center;
+  box-shadow: var(--glow-sm);
+}
+.article-cta-box h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 900;
+  color: var(--text-1);
+  margin: 1rem 0 0.75rem;
+}
+.article-cta-box p { color: var(--text-2); margin-bottom: 2rem; }
+.article-cta-box__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.article-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.article-table th {
+  background: var(--bg-3);
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-yellow);
+  white-space: nowrap;
+}
+.article-table td {
+  padding: 0.75rem 1rem;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.article-table tbody tr:hover td { background: var(--bg-card-hov); }
+.article-table td strong { color: var(--text-1); }
+</style>

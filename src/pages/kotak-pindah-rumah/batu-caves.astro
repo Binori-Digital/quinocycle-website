@@ -1,0 +1,201 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CITY = 'Batu Caves';
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! Saya nak beli kotak pindah rumah di ${CITY}.`)}`;
+
+const faqs = [
+  {
+    q: 'Ada kilang kotak di Batu Caves?',
+    a: 'Tiada kilang kotak yang jual terus kepada orang awam di Batu Caves — dan Quinocycle sendiri pun bukan kilang. Kami gudang pembekal borong di Taming Jaya, Balakong yang mengambil stok terus dari kilang, jadi apa yang sampai kepada anda ialah harga kilang dari gudang pembekal: kotak terpakai dari RM0.90, kotak baru dari RM1.10 sekotak, dihantar terus ke Batu Caves, Gombak dan Selayang tanpa anda perlu jejak kaki ke mana-mana kilang.',
+  },
+  {
+    q: 'Kedai kotak memang ada di sekitar Batu Caves — kenapa perlu order dari Quinocycle?',
+    a: 'Betul, kawasan Batu Caves dan Selayang ada beberapa kedai yang jual kotak. Bezanya pada harga dan pilihan: kedai kebiasaannya jual kotak baru sahaja, manakala kami tawarkan kotak terpakai gred kilang dari RM0.90 sekotak — sehingga 60% lebih jimat — di samping kotak baru dari RM1.10, dalam pelbagai saiz dari XS hingga double-wall. Dan dengan penghantaran percuma untuk pesanan melebihi RM300, anda mungkin langsung tak perlu memandu ke mana-mana.',
+  },
+  {
+    q: 'Berapa lama penghantaran kotak ke Batu Caves, Gombak dan Selayang?',
+    a: 'Gudang kami di Balakong hanya ±30–35 minit memandu dari Batu Caves, jadi pesanan yang masuk waktu pagi biasanya sampai hari yang sama; selewat-lewatnya keesokan hari bekerja. Kami hantar ke seluruh kawasan sekitar — Gombak, Sri Gombak, Selayang dan Taman Templer — percuma untuk pesanan melebihi RM300 (KL & Selangor).',
+  },
+  {
+    q: 'Kotak terpakai tu keadaannya macam mana? Sesuai ke untuk pindah rumah?',
+    a: 'Semua kotak terpakai kami adalah gred sekali guna dari kilang — bukan kotak kutipan tepi jalan. Setiap satu disemak, kering dan bebas bau sebelum dijual. Untuk pindah rumah, ia pilihan paling menjimatkan: dari RM0.90 sekotak untuk saiz S, dan RM1.90 untuk BKRS double-wall yang tahan barang berat. Ramai pelanggan campurkan kotak terpakai untuk pakaian dan buku dengan beberapa kotak baru untuk barangan pecah belah.',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": `Quinocycle — Kotak Pindah Rumah ${CITY}`,
+  "description": `Pembekal kotak pindah rumah untuk ${CITY}, Gombak, Selayang, Sri Gombak & Taman Templer. Kotak terpakai gred kilang dari RM0.90 dan kotak baru dari RM1.10 sekotak — penghantaran hari sama atau esok dari gudang Balakong, percuma untuk pesanan RM300+.`,
+  "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/batu-caves/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["Batu Caves","Gombak","Sri Gombak","Selayang","Taman Templer"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Utama", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Kotak Pindah Rumah", "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/" },
+    { "@type": "ListItem", "position": 3, "name": CITY, "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/batu-caves/" }
+  ]
+};
+---
+
+<Layout
+  lang="ms"
+  title={`Kotak Pindah Rumah ${CITY} — Jimat Sehingga 60%, dari RM0.90 | Quinocycle`}
+  description={`Kotak pindah rumah di ${CITY}, Gombak & Selayang — kotak terpakai gred kilang dari RM0.90, sehingga 60% lebih jimat dari kedai. Hantar hari sama, percuma untuk order RM300+. WhatsApp 016-891 6381.`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Utama</a>
+      <span class="mx-2">/</span>
+      <a href="/kotak-pindah-rumah" class="hover:text-primary transition-colors">Kotak Pindah Rumah</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">{CITY}</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Kawasan Penghantaran Kami</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Kotak pindah rumah {CITY} <br /><span class="text-primary italic">— harga gudang, hantar ke pintu.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      Kedai kotak di sekitar Batu Caves memang ada — tapi kenapa bayar harga runcit? Quinocycle menghantar terus dari gudang pembekal borong di Balakong ke <strong class="text-on-surface font-semibold">Batu Caves, Gombak, Selayang, Sri Gombak dan Taman Templer</strong>: <a href="/kotak-terpakai" class="text-primary font-semibold hover:underline">kotak terpakai</a> gred kilang dari <strong class="text-on-surface font-semibold">RM0.90</strong> sekotak — sehingga 60% lebih jimat — dan kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong>. Percuma penghantaran untuk pesanan melebihi RM300.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Sekarang
+      </a>
+      <a href="/kotak-pindah-rumah#senarai-harga" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Senarai Harga Penuh
+      </a>
+    </div>
+  </section>
+
+  <!-- Local info -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Sampai Hari Sama atau Esok</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Batu Caves, Gombak, Sri Gombak, Selayang dan Taman Templer semuanya dalam laluan penghantaran harian kami — hanya ±30–35 minit dari gudang Balakong. Order sebelum tengah hari untuk peluang terbaik terima kotak pada hari yang sama.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">savings</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Percuma Untuk Order RM300+</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Pesanan melebihi RM300 dihantar percuma ke seluruh KL &amp; Selangor — termasuk semua kawasan Batu Caves. Pada harga borong kami, RM300 sudah cukup untuk stok kotak satu rumah penuh, jadi kebanyakan pelanggan pindah rumah terus layak.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">schedule</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Bila Kami Beroperasi</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Isnin–Jumaat: 9:00 pagi – 6:00 petang<br />
+          Sabtu: 9:00 pagi – 1:00 tengah hari<br />
+          Ahad &amp; cuti umum: tutup, tetapi WhatsApp yang masuk tetap dibalas
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Kenapa penduduk Batu Caves pilih Quinocycle?</h2>
+    <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
+      <p>
+        Kami jujur: Batu Caves bukan kawasan yang ketandusan kotak. Dari Selayang hingga ke Gombak, memang ada kedai yang jual kotak packing. Persoalan sebenar bagi sesiapa yang nak pindah rumah bukan <em>di mana</em> nak beli — tetapi <strong class="text-on-surface font-semibold">berapa banyak anda sanggup terlebih bayar</strong>. Kedai biasanya hanya menyimpan kotak baru pada harga runcit; kami pula pembekal borong yang menawarkan <a href="/kotak-terpakai" class="text-primary font-semibold hover:underline">kotak terpakai</a> gred kilang dari RM0.90 sekotak — sehingga 60% lebih jimat berbanding harga kotak baru di kedai.
+      </p>
+      <p>
+        Quinocycle bukan kilang dan kami tak pernah mengaku begitu — kami gudang pembekal di Taming Jaya, Balakong yang membekalkan kotak kardus kepada syarikat mover dan penjual online di seluruh Lembah Klang. Kelebihannya untuk anda: <a href="/kilang-kotak" class="text-primary font-semibold hover:underline">harga kilang terus dari gudang pembekal</a>, tanpa markup orang tengah. Penduduk Taman Templer, Sri Gombak dan sekitar pekan Batu Caves hanya perlu WhatsApp senarai saiz dan kuantiti — kami uruskan penghantaran, biasanya hari yang sama untuk pesanan pagi, atau keesokan harinya.
+      </p>
+      <p>
+        Risau tentang kualiti kotak terpakai? Stok <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">used carton boxes</a> kami adalah gred sekali guna dari kilang: setiap kotak disemak, kering dan bebas bau. Saiz S bermula RM0.90, BKRS double-wall RM1.90, dan saiz M sekitar RM3.00–RM3.50. Kalau anda lebih selesa dengan kotak baru untuk pinggan mangkuk atau barangan elektronik, ia bermula dari RM1.10 di <a href="/shop" class="text-primary font-semibold hover:underline">kedai online kami</a> — dan <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan kotak baru vs terpakai</a> ini boleh bantu anda tentukan campuran yang paling berbaloi.
+      </p>
+      <p>
+        Rumah teres atau apartment 3 bilik di kawasan Batu Caves lazimnya memerlukan 50–70 kotak — kira angka anda dengan <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="text-primary font-semibold hover:underline">panduan kiraan kotak</a> kami, semak <a href="/blog/harga-kotak-pindah-rumah" class="text-primary font-semibold hover:underline">pecahan harga kotak pindah rumah</a>, kemudian rujuk <a href="/kotak-pindah-rumah" class="text-primary font-semibold hover:underline">senarai harga penuh</a> sebelum membuat pesanan. Dengan penghantaran percuma untuk order melebihi RM300, keseluruhan urusan kotak anda boleh selesai tanpa menghidupkan enjin kereta pun.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">Soalan lazim — kotak pindah {CITY}</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/15">
+        {faqs.map(f => (
+          <details class="group py-5">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              {f.q}
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <h2 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface mb-6">Kawasan berdekatan</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/kotak-pindah-rumah/kuala-lumpur" class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Kuala Lumpur</a>
+      <a href="/kotak-pindah-rumah/rawang"       class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Rawang</a>
+      <a href="/kotak-pindah-rumah/shah-alam"    class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Shah Alam</a>
+      <a href="/kotak-pindah-rumah"              class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Semua Kawasan →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Kotak sampai Batu Caves sebelum anda sempat balut satu pinggan.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        WhatsApp senarai saiz dan kuantiti kotak yang anda perlukan — kami balas dengan sebut harga borong dan susun penghantaran ke Batu Caves, Gombak, Selayang atau Taman Templer. Nak ambil sendiri di gudang Balakong pun dialu-alukan.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Lokasi Gudang (Balakong)
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
