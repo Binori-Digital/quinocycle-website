@@ -247,7 +247,6 @@ const faqSchema = {
           <br /><br /><em style="font-size:0.85em;opacity:0.75">Dikemaskini: 18 Ogos 2026 — harga &amp; stok disemak terus dari kedai online kami.</em>
         </div>
 
-        ---
 
         <h2>Tentang Quinocycle — Kedai Kotak Pindah Rumah Malaysia</h2>
 
@@ -280,7 +279,6 @@ const faqSchema = {
           </table>
         </div>
 
-        ---
 
         <h2>Produk Yang Kami Jual — Kotak Kardus Baru &amp; Terpakai</h2>
 
@@ -292,31 +290,16 @@ const faqSchema = {
 
         <p>Kotak baru mempunyai dimensi seragam, permukaan yang bersih, dan kekuatan yang konsisten — sesuai untuk e-dagang, barangan pecah belah, dan pindah rumah yang memerlukan pembungkusan profesional.</p>
 
-        <div class="article-table-wrap">
-          <table class="article-table">
-            <thead>
-              <tr>
-                <th>Gambar</th>
-                <th>Model</th>
-                <th>Dimensi (mm)</th>
-                <th>Jenis Dinding</th>
-                <th>Harga / Kotak</th>
-                <th>Sesuai Untuk</th>
-              </tr>
-            </thead>
-            <tbody>
-              {newBoxes.map(b => (
-                <tr>
-                  <td><img src={b.img} alt={`${b.name} ${b.dims} — kotak kardus baru Quinocycle Balakong`} width="72" height="72" loading="lazy" style="width:72px;height:72px;object-fit:contain;border-radius:8px;background:#fff;" /></td>
-                  <td><strong>{b.name}</strong></td>
-                  <td>{b.dims}</td>
-                  <td>{b.wall}</td>
-                  <td><strong>RM {b.price.toFixed(2)}</strong></td>
-                  <td>{b.use}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div class="kotak-grid">
+          {newBoxes.map(b => (
+            <div class="kotak-card">
+              <img src={b.img} alt={`${b.name} ${b.dims} — kotak kardus baru Quinocycle Balakong`} width="220" height="165" loading="lazy" />
+              <div class="kotak-card__name">{b.name}</div>
+              <div class="kotak-card__dims">{b.dims}{b.wall !== '—' ? ` · ${b.wall}` : ''}</div>
+              <div class="kotak-card__meta">{b.use}</div>
+              <div class="kotak-card__price">RM {b.price.toFixed(2)} <span style="font-size:0.7rem;font-weight:600;color:var(--text-3)">/ kotak</span></div>
+            </div>
+          ))}
         </div>
 
         <h3>Kotak Kardus Terpakai (Used / Recycled Carton Boxes)</h3>
@@ -325,40 +308,25 @@ const faqSchema = {
           Kotak terpakai kami adalah gred sekali guna yang telah melalui pemeriksaan kualiti — kukuh dan sesuai untuk pindah rumah, penyimpanan, dan logistik. Harga lebih rendah sehingga <strong>50% berbanding kotak baru</strong>, dan ia juga pilihan yang lebih mesra alam (<em>eco-friendly packaging</em>). Stok kotak terpakai berubah mengikut kemasukan — status di bawah adalah pada tarikh kemas kini artikel ini.
         </p>
 
-        <div class="article-table-wrap">
-          <table class="article-table">
-            <thead>
-              <tr>
-                <th>Gambar</th>
-                <th>Model</th>
-                <th>Dimensi (mm)</th>
-                <th>Jenis Dinding</th>
-                <th>Harga / Kotak</th>
-                <th>Status Stok</th>
-                <th>Sesuai Untuk</th>
-              </tr>
-            </thead>
-            <tbody>
-              {usedBoxes.map(b => (
-                <tr>
-                  <td><img src={b.img} alt={`${b.name} ${b.dims} — kotak terpakai murah Quinocycle Balakong`} width="72" height="72" loading="lazy" style={`width:72px;height:72px;object-fit:contain;border-radius:8px;background:#fff;${b.inStock ? '' : 'filter:grayscale(1);opacity:0.55;'}`} /></td>
-                  <td><strong>{b.name}</strong></td>
-                  <td>{b.dims}</td>
-                  <td>{b.wall}</td>
-                  <td><strong>RM {b.price.toFixed(2)}</strong></td>
-                  <td>{b.inStock ? '✅ Ada stok' : '⏳ Kehabisan (akan masuk semula)'}</td>
-                  <td>{b.use}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div class="kotak-grid">
+          {usedBoxes.map(b => (
+            <div class={`kotak-card ${b.inStock ? '' : 'kotak-card--oos'}`}>
+              <img src={b.img} alt={`${b.name} ${b.dims} — kotak terpakai murah Quinocycle Balakong`} width="220" height="165" loading="lazy" />
+              <div class="kotak-card__name">{b.name}</div>
+              <div class="kotak-card__dims">{b.dims} · {b.wall}</div>
+              <div class="kotak-card__meta">{b.use}</div>
+              <div class="kotak-card__price">RM {b.price.toFixed(2)} <span style="font-size:0.7rem;font-weight:600;color:var(--text-3)">/ kotak</span></div>
+              <div class={`kotak-card__stock ${b.inStock ? 'kotak-card__stock--in' : 'kotak-card__stock--out'}`}>
+                {b.inStock ? '✅ Ada stok' : '⏳ Kehabisan — akan masuk semula'}
+              </div>
+            </div>
+          ))}
         </div>
 
         <p>
           <em>Nota: Harga adalah harga borong per unit. Stok kotak terpakai berpusing — model yang kehabisan biasanya masuk semula dalam beberapa minggu. Semak stok masa nyata di <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a> atau WhatsApp kami untuk pengesahan segera.</em>
         </p>
 
-        ---
 
         <h2>Lokasi Kami &amp; Kawasan Penghantaran</h2>
 
@@ -379,7 +347,6 @@ const faqSchema = {
           Kami menawarkan <strong>penghantaran ke seluruh Semenanjung Malaysia</strong> (<em>delivery across Peninsular Malaysia</em>) dengan kadar penghantaran yang kompetitif. Untuk sebut harga penghantaran atau pesanan pukal, hubungi kami melalui WhatsApp.
         </p>
 
-        ---
 
         <h2>Barang-Barang Penting untuk Pindah Rumah — Senarai Lengkap</h2>
 
@@ -451,7 +418,6 @@ const faqSchema = {
           <li><strong>Dokumen penting</strong> — simpan dalam fail kalis air dan bawa bersama anda, jangan masuk dalam trak</li>
         </ul>
 
-        ---
 
         <h2>Panduan Saiz Kotak Mengikut Bilik</h2>
 
@@ -484,7 +450,6 @@ const faqSchema = {
           Untuk rumah yang lebih besar atau jika anda mempunyai banyak barang, tambah 20–30% kepada anggaran ini. Lebih baik ada lebihan kotak daripada kekurangan pada hari pindah.
         </p>
 
-        ---
 
         <h2>Cara Membuat Pesanan di Quinocycle</h2>
 
@@ -511,7 +476,6 @@ const faqSchema = {
           <strong>Nota Penting:</strong> Minimum pembelian adalah <strong>RM 1,000</strong>. Harga borong yang ditunjukkan adalah per unit. Untuk pindah rumah individu yang kecil, pertimbangkan untuk berkongsi pesanan dengan jiran atau rakan yang juga merancang untuk pindah.
         </div>
 
-        ---
 
         <h2>Mengapa Pilih Quinocycle untuk Kotak Pindah Rumah Anda?</h2>
 
