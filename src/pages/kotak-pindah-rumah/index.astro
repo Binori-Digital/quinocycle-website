@@ -4,21 +4,11 @@ import Layout from '../../layouts/Layout.astro';
 const WA_NUMBER = '60168916381';
 const WA_LINK = `https://wa.me/${WA_NUMBER}?text=Hi%20Quinocycle!%20Saya%20nak%20beli%20kotak%20pindah%20rumah.`;
 
-// Harga sebenar dari katalog /shop/ — jangan ubah tanpa kemas kini shop.astro
+// Stok sebenar dari shop.quinocycle.com — edit src/data/catalog.ts sahaja
+import { newBoxes, usedBoxes } from '../../data/catalog';
 const boxes = [
-  { name: 'Kotak Terpakai AinS',   size: 'S',  dims: '320 × 165 × 230 mm', wall: 'Single Wall', price: 0.90, minQty: 200, cond: 'Terpakai', use: 'Buku, aksesori, barang kecil' },
-  { name: 'Kotak Terpakai Hamee',  size: 'S',  dims: '330 × 200 × 270 mm', wall: 'Single Wall', price: 1.00, minQty: 200, cond: 'Terpakai', use: 'Buku, pakaian, alat tulis' },
-  { name: 'Kotak Terpakai Jimat',  size: 'S',  dims: '400 × 320 × 250 mm', wall: 'Single Wall', price: 1.50, minQty: 150, cond: 'Terpakai', use: 'Barangan rumah, storan ringan' },
-  { name: 'Kotak Terpakai BKRS',   size: 'S',  dims: '390 × 280 × 260 mm', wall: 'Double Wall', price: 1.90, minQty: 150, cond: 'Terpakai', use: 'Pindah rumah, penghantaran' },
-  { name: 'Kotak Terpakai IBU',    size: 'S',  dims: '400 × 330 × 270 mm', wall: 'Double Wall', price: 2.00, minQty: 150, cond: 'Terpakai', use: 'Pindah rumah & pejabat' },
-  { name: 'Kotak Terpakai AAL',    size: 'M',  dims: '430 × 310 × 290 mm', wall: 'Double Wall', price: 3.00, minQty: 100, cond: 'Terpakai', use: 'Barangan rumah, storan' },
-  { name: 'Kotak Terpakai Yellow', size: 'M',  dims: '460 × 330 × 310 mm', wall: 'Double Wall', price: 3.50, minQty: 100, cond: 'Terpakai', use: 'Pindah rumah, packing runcit' },
-  { name: 'Kotak Terpakai LGD',    size: 'M',  dims: '490 × 310 × 295 mm', wall: 'Double Wall', price: 3.50, minQty: 100, cond: 'Terpakai', use: 'Pindah rumah, barang berat' },
-  { name: 'Kotak Terpakai PDC',    size: 'L',  dims: '590 × 380 × 380 mm', wall: 'Double Wall', price: 5.00, minQty: 50,  cond: 'Terpakai', use: 'Pindah rumah/pejabat, fail' },
-  { name: 'Kotak Baru XS Mini',    size: 'XS', dims: '170 × 115 × 150 mm', wall: 'Single Wall', price: 1.10, minQty: 200, cond: 'Baru',     use: 'Barang kemas, kosmetik, hadiah' },
-  { name: 'Kotak Baru A4',         size: 'S',  dims: '310 × 220 × 220 mm', wall: 'Single Wall', price: 3.00, minQty: 100, cond: 'Baru',     use: 'Pakaian, buku, elektronik' },
-  { name: 'Kotak Baru A3N',        size: 'M',  dims: '440 × 310 × 230 mm', wall: 'Double Wall', price: 5.00, minQty: 100, cond: 'Baru',     use: 'Barangan dapur, pecah belah' },
-  { name: 'Kotak Baru NLN',        size: 'L',  dims: '590 × 390 × 390 mm', wall: 'Double Wall', price: 8.00, minQty: 50,  cond: 'Baru',     use: 'Pindah rumah, barang berat' },
+  ...usedBoxes.map(b => ({ name: b.nameMS, size: b.size, dims: b.dims, wall: b.wall || '—', price: b.price, cond: 'Terpakai', inStock: b.inStock, use: b.useMS })),
+  ...newBoxes.map(b =>  ({ name: b.nameMS, size: b.size, dims: b.dims, wall: b.wall || '—', price: b.price, cond: 'Baru',     inStock: b.inStock, use: b.useMS })),
 ];
 
 const pakej = [
@@ -26,21 +16,21 @@ const pakej = [
     name: 'Pakej Bilik Sewa / Studio',
     boxes: '± 15 kotak',
     isi: '10 × kotak S terpakai + 5 × kotak M terpakai',
-    est: 'dari RM 30',
+    est: 'dari RM 35',
     for: 'Pelajar, penyewa bilik, studio & apartment kecil',
   },
   {
     name: 'Pakej Rumah 2–3 Bilik',
     boxes: '± 40 kotak',
     isi: '20 × S + 15 × M + 5 × L (terpakai)',
-    est: 'dari RM 100',
+    est: 'dari RM 110',
     for: 'Apartment, kondo & rumah teres — pakej paling popular',
   },
   {
     name: 'Pakej Rumah Besar / Landed',
     boxes: '± 70 kotak',
     isi: '30 × S + 25 × M + 15 × L (terpakai / campur baru)',
-    est: 'dari RM 195',
+    est: 'dari RM 215',
     for: 'Rumah landed, semi-D & pejabat kecil',
   },
 ];
@@ -63,7 +53,7 @@ const kawasan = [
 const faqs = [
   {
     q: 'Berapa harga kotak pindah rumah di Quinocycle?',
-    a: 'Kotak terpakai bermula RM0.90 sekotak (saiz S) hingga RM5.00 (saiz L). Kotak baru dari RM1.10 hingga RM8.00 sekotak. Semua harga adalah harga borong tetap — tiada caj tersembunyi. Untuk pesanan penuh borong, minimum pembelian RM1,000; untuk pakej pindah rumah kecil, WhatsApp kami untuk sebut harga.',
+    a: 'Kotak terpakai dari RM0.90 hingga RM6.00 sekotak (model termurah ikut stok semasa — semak di shop.quinocycle.com). Kotak baru dari RM1.10 hingga RM9.00, dan kotak kargo XXL RM28-RM38. Semua harga adalah harga borong tetap — tiada caj tersembunyi. Untuk pesanan penuh borong, minimum pembelian RM1,000; untuk pakej pindah rumah kecil, WhatsApp kami untuk sebut harga.',
   },
   {
     q: 'Berapa banyak kotak diperlukan untuk pindah rumah 3 bilik?',
@@ -71,7 +61,7 @@ const faqs = [
   },
   {
     q: 'Kotak terpakai kuat tak untuk pindah rumah?',
-    a: 'Kuat. Semua kotak terpakai kami adalah gred sekali guna (once-used) dari kilang — disemak satu per satu, kering, tidak berbau dan tiada kerosakan struktur. Untuk barang berat atau pecah belah, pilih kotak double wall (dua lapisan) seperti BKRS, IBU, AAL atau PDC.',
+    a: 'Kuat. Semua kotak terpakai kami adalah gred sekali guna (once-used) dari kilang — disemak satu per satu, kering, tidak berbau dan tiada kerosakan struktur. Untuk barang berat atau pecah belah, pilih kotak double wall (dua lapisan) seperti MG, Bary, BT, Yellow atau PDC.',
   },
   {
     q: 'Di mana kedai kotak pindah rumah Quinocycle?',
@@ -102,7 +92,7 @@ const storeSchema = {
   "description": "Pembekal kotak pindah rumah murah di Balakong, Selangor. Kotak kardus baru dan terpakai secara borong dari RM0.90 sekotak. Penghantaran KL, Selangor dan seluruh Semenanjung Malaysia.",
   "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/",
   "telephone": "+60168916381",
-  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "priceRange": "RM0.90 - RM38.00 sekotak",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
@@ -134,8 +124,7 @@ const productListSchema = {
         "@type": "Offer",
         "price": b.price.toFixed(2),
         "priceCurrency": "MYR",
-        "availability": "https://schema.org/InStock",
-        "eligibleQuantity": { "@type": "QuantitativeValue", "minValue": b.minQty }
+        "availability": b.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
       }
     }
   }))
@@ -239,7 +228,7 @@ const breadcrumbSchema = {
               <td class="px-5 py-4 font-semibold text-on-surface whitespace-nowrap">{b.name}</td>
               <td class="px-5 py-4">{b.size}</td>
               <td class="px-5 py-4 whitespace-nowrap">{b.dims}</td>
-              <td class="px-5 py-4 whitespace-nowrap">{b.wall}{b.cond === 'Terpakai' ? ' · Terpakai' : ' · Baru'}</td>
+              <td class="px-5 py-4 whitespace-nowrap">{b.wall}{b.cond === 'Terpakai' ? ' · Terpakai' : ' · Baru'}{b.inStock ? '' : ' · Kehabisan stok'}</td>
               <td class="px-5 py-4 font-headline font-bold text-on-surface whitespace-nowrap">RM {b.price.toFixed(2)}</td>
               <td class="px-5 py-4 text-secondary">{b.use}</td>
             </tr>
@@ -248,7 +237,7 @@ const breadcrumbSchema = {
       </table>
     </div>
     <p class="font-body text-xs text-secondary mt-4">
-      * Harga borong tetap. Kuantiti minimum berbeza mengikut jenis kotak ({boxes[boxes.length-1].minQty}–{boxes[0].minQty} unit); pesanan borong penuh minimum RM1,000. Untuk kuantiti kecil / pakej pindah rumah, <a href={WA_LINK} class="text-primary font-semibold hover:underline" target="_blank" rel="noopener noreferrer">WhatsApp kami</a> untuk sebut harga terus.
+      * Harga borong tetap — stok diselaraskan dengan kedai online kami, <a href="https://shop.quinocycle.com" class="text-primary font-semibold hover:underline" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a>. Pesanan borong penuh minimum RM1,000. Untuk kuantiti kecil / pakej pindah rumah, <a href={WA_LINK} class="text-primary font-semibold hover:underline" target="_blank" rel="noopener noreferrer">WhatsApp kami</a> untuk sebut harga terus.
     </p>
   </section>
 

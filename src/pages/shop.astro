@@ -3,30 +3,23 @@ import Layout from '../layouts/Layout.astro';
 
 const WA_NUMBER = '60168916381';
 
-const products = [
-  // NEW BOXES
-  { id: 'n-xs',  condition: 'new',  size: 'XS',  img: '/images/box-new-xs.png',  name: 'Mini Size New Carton Box XS',    nameMS: 'Kotak Baru Saiz Kecil / Mini',    dims: '170 × 115 × 150 mm', wall: 'Single Wall', price: 1.10, minQty: 200, use: 'Jewellery, cosmetics, small gifts, accessories' },
-  { id: 'n-s',   condition: 'new',  size: 'S',   img: '/images/box-new-s.png',   name: 'Small Size New Carton Box A4',   nameMS: 'Kotak Baru Saiz Kecil / A4',      dims: '310 × 220 × 220 mm', wall: 'Single Wall', price: 3.00, minQty: 100, use: 'Apparel, books, electronics, online orders' },
-  { id: 'n-m',   condition: 'new',  size: 'M',   img: '/images/box-new-m.png',   name: 'Medium Size New Carton Box A3N', nameMS: 'Kotak Baru Saiz Sederhana / A3N', dims: '440 × 310 × 230 mm', wall: 'Double Wall', price: 5.00, minQty: 100, use: 'Home goods, kitchenware, bulk retail orders' },
-  { id: 'n-l',   condition: 'new',  size: 'L',   img: '/images/box-new-l.png',   name: 'Large Size New Carton Box NLN',  nameMS: 'Kotak Baru Saiz Besar / NLN',     dims: '590 × 390 × 390 mm', wall: 'Double Wall', price: 8.00, minQty: 50,  use: 'Moving house, appliances, heavy goods' },
-  // USED BOXES — Small
-  { id: 'u-ains',   condition: 'used', size: 'S', img: '/images/box-used-ains.png',   name: 'Used Carton Box AinS',   dims: '320 × 165 × 230 mm', wall: 'Single Wall', price: 0.90, minQty: 200, use: 'Small items, gifts, accessories, e-commerce parcels' },
-  { id: 'u-hamee',  condition: 'used', size: 'S', img: '/images/box-used-hamee.png',  name: 'Used Carton Box Hamee',  dims: '330 × 200 × 270 mm', wall: 'Single Wall', price: 1.00, minQty: 200, use: 'Books, apparel, small retail items, stationery' },
-  { id: 'u-s3white',condition: 'used', size: 'S', img: '/images/box-used-s3white.png',name: 'Used Carton Box S3White',dims: '330 × 310 × 270 mm', wall: 'Single Wall', price: 1.20, minQty: 200, use: 'Home goods, office supplies, retail overflow' },
-  { id: 'u-jimat',  condition: 'used', size: 'S', img: '/images/box-used-jimat.png',  name: 'Used Carton Box Jimat',  dims: '400 × 320 × 250 mm', wall: 'Single Wall', price: 1.50, minQty: 150, use: 'Household items, e-commerce fulfilment, lightweight storage' },
-  { id: 'u-bary',   condition: 'used', size: 'S', img: '/images/box-used-bary.png',   name: 'Used Carton Box Bary',   dims: '300 × 200 × 250 mm', wall: 'Double Wall', price: 1.80, minQty: 150, use: 'Kitchen items, electronics, general online orders' },
-  { id: 'u-hjic',   condition: 'used', size: 'S', img: '/images/box-used-hjic.png',   name: 'Used Carton Box HJIC',   dims: '440 × 330 × 190 mm', wall: 'Double Wall', price: 1.80, minQty: 150, use: 'Flat items, documents, apparel, shallow-depth goods' },
-  { id: 'u-bkrs',   condition: 'used', size: 'S', img: '/images/box-used-bkrs.png',   name: 'Used Carton Box BKRS',   dims: '390 × 280 × 260 mm', wall: 'Double Wall', price: 1.90, minQty: 150, use: 'General shipping, warehouse storage, moving house' },
-  { id: 'u-ibu',    condition: 'used', size: 'S', img: '/images/box-used-ibu.png',    name: 'Used Carton Box IBU',    dims: '400 × 330 × 270 mm', wall: 'Double Wall', price: 2.00, minQty: 150, use: 'Household goods, moving, office relocation' },
-  { id: 'u-menara', condition: 'used', size: 'S', img: '/images/box-used-menara.png', name: 'Used Carton Box Menara', dims: '430 × 250 × 220 mm', wall: 'Double Wall', price: 2.00, minQty: 150, use: 'Long narrow goods, tools, hardware, bottles' },
-  // USED BOXES — Medium
-  { id: 'u-aal',    condition: 'used', size: 'M', img: '/images/box-used-aal.png',    name: 'Used Carton Box AAL',    dims: '430 × 310 × 290 mm', wall: 'Double Wall', price: 3.00, minQty: 100, use: 'Home goods, standard packaging, general storage' },
-  { id: 'u-fgc',    condition: 'used', size: 'M', img: '/images/box-used-fgc.png',    name: 'Used Carton Box FGC',    dims: '430 × 310 × 260 mm', wall: 'Double Wall', price: 3.00, minQty: 100, use: 'Office supplies, retail overflow, general shipping' },
-  { id: 'u-lgd',    condition: 'used', size: 'M', img: '/images/box-used-lgd.png',    name: 'Used Carton Box LGD',    dims: '490 × 310 × 295 mm', wall: 'Double Wall', price: 3.50, minQty: 100, use: 'Moving house, warehouse bulk storage, heavy goods' },
-  { id: 'u-yellow', condition: 'used', size: 'M', img: '/images/box-used-yellow.png', name: 'Used Carton Box Yellow', dims: '460 × 330 × 310 mm', wall: 'Double Wall', price: 3.50, minQty: 100, use: 'Moving house, retail packing, e-commerce fulfilment' },
-  // USED BOXES — Large
-  { id: 'u-pdc',    condition: 'used', size: 'L', img: '/images/box-used-pdc.png',    name: 'Used Carton Box PDC',    dims: '590 × 380 × 380 mm', wall: 'Double Wall', price: 5.00, minQty: 50,  use: 'File storage, house/office relocation, logistics' },
-];
+// Live catalog synced from shop.quinocycle.com — edit src/data/catalog.ts, not this file
+import { allBoxes } from '../data/catalog';
+
+const products = allBoxes.map(b => ({
+  id: b.id,
+  condition: b.cond,
+  size: b.size,
+  img: b.img,
+  name: b.name,
+  nameMS: b.nameMS,
+  dims: b.dims,
+  wall: b.wall,
+  price: b.price,
+  minQty: 1,
+  inStock: b.inStock,
+  use: b.use,
+}));
 ---
 
 <Layout
@@ -61,6 +54,8 @@ const products = [
         <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="S">Size S</button>
         <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="M">Size M</button>
         <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="L">Size L</button>
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="XL">Jumbo XL</button>
+        <button class="filter-btn font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-secondary hover:text-primary hover:border-primary whitespace-nowrap transition-all" data-filter="XXL">XXL Cargo</button>
       </div>
       <button
         class="flex items-center gap-2 font-headline font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full border border-outline-variant/40 text-on-surface hover:border-primary hover:text-primary transition-all"
@@ -102,7 +97,7 @@ const products = [
             <img
               src={p.img}
               alt={`${p.name} ${p.dims} Malaysia${p.nameMS ? ` — ${p.nameMS}` : ''}`}
-              class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700"
+              class={`w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700 ${p.inStock ? '' : 'grayscale opacity-60'}`}
               loading="lazy"
             />
             <!-- Condition badge -->
@@ -132,29 +127,44 @@ const products = [
             <p class="font-body text-sm text-secondary mb-1">{p.dims}</p>
             <p class="font-body text-sm text-on-surface-variant mb-4">{p.use}</p>
 
-            <!-- Min qty note -->
-            <p class="font-label text-xs text-outline mb-4">Min. order: <strong class="text-on-surface-variant">{p.minQty} boxes</strong></p>
+            <!-- Stock status (live from shop.quinocycle.com) -->
+            <p class="font-label text-xs mb-4">
+              {p.inStock
+                ? <span class="text-on-surface-variant">✅ In stock <span class="text-outline">(kotak terpakai stok berpusing)</span></span>
+                : <span class="text-outline">⏳ Out of stock — restocking soon</span>}
+            </p>
 
             <!-- Qty + Add to cart -->
             <div class="flex items-center gap-3">
               <div class="flex items-center bg-surface-container rounded-full border border-outline-variant/30 overflow-hidden">
-                <button class="qty-btn qty-minus w-9 h-9 flex items-center justify-center text-lg text-on-surface-variant hover:text-primary transition-colors font-headline" aria-label="Decrease">−</button>
+                <button class="qty-btn qty-minus w-9 h-9 flex items-center justify-center text-lg text-on-surface-variant hover:text-primary transition-colors font-headline" aria-label="Decrease" disabled={!p.inStock}>−</button>
                 <input
                   type="number"
                   class="qty-input w-16 text-center bg-transparent border-none text-sm font-body font-semibold text-on-surface focus:outline-none focus:ring-0"
-                  value={p.minQty}
-                  min={p.minQty}
-                  step={p.condition === 'new' ? 50 : 100}
+                  value={50}
+                  min={1}
+                  step={10}
                   aria-label="Quantity"
+                  disabled={!p.inStock}
                 />
-                <button class="qty-btn qty-plus w-9 h-9 flex items-center justify-center text-lg text-on-surface-variant hover:text-primary transition-colors font-headline" aria-label="Increase">+</button>
+                <button class="qty-btn qty-plus w-9 h-9 flex items-center justify-center text-lg text-on-surface-variant hover:text-primary transition-colors font-headline" aria-label="Increase" disabled={!p.inStock}>+</button>
               </div>
-              <button
-                class="add-to-cart flex-1 bg-on-surface text-surface py-2.5 rounded-full font-headline font-bold text-xs uppercase tracking-widest hover:bg-primary transition-colors duration-200"
-                data-id={p.id}
-              >
-                Add to Cart
-              </button>
+              {p.inStock ? (
+                <button
+                  class="add-to-cart flex-1 bg-on-surface text-surface py-2.5 rounded-full font-headline font-bold text-xs uppercase tracking-widest hover:bg-primary transition-colors duration-200"
+                  data-id={p.id}
+                >
+                  Add to Cart
+                </button>
+              ) : (
+                <a
+                  href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! Bila ${p.name} masuk stok semula?`)}`}
+                  target="_blank" rel="noopener noreferrer"
+                  class="flex-1 text-center border border-outline-variant/50 text-secondary py-2.5 rounded-full font-headline font-bold text-xs uppercase tracking-widest hover:border-primary hover:text-primary transition-colors duration-200"
+                >
+                  Notify Me
+                </a>
+              )}
             </div>
           </div>
         </article>
@@ -230,13 +240,12 @@ const products = [
         "@type": "Product",
         "name": p.name,
         "image": `https://www.quinocycle.com.my${p.img}`,
-        "description": `${p.condition === 'new' ? 'New' : 'Used'} ${p.wall.toLowerCase()} carton box ${p.dims}. ${p.use}. Wholesale carton box Malaysia — delivery across Peninsular Malaysia.`,
+        "description": `${p.condition === 'new' ? 'New' : 'Used'}${p.wall ? ' ' + p.wall.toLowerCase() : ''} carton box ${p.dims}. ${p.use}. Wholesale carton box Malaysia — delivery across Peninsular Malaysia.`,
         "offers": {
           "@type": "Offer",
           "price": p.price.toFixed(2),
           "priceCurrency": "MYR",
-          "availability": "https://schema.org/InStock",
-          "eligibleQuantity": { "@type": "QuantitativeValue", "minValue": p.minQty }
+          "availability": p.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
         }
       }
     }))

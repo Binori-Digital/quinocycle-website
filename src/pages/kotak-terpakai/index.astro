@@ -4,16 +4,9 @@ import Layout from '../../layouts/Layout.astro';
 const WA_NUMBER = '60168916381';
 const WA_LINK = `https://wa.me/${WA_NUMBER}?text=Hi%20Quinocycle!%20Saya%20nak%20beli%20kotak%20terpakai.`;
 
-// Harga sebenar dari /used-carton-boxes/ — kemas kini bersama
-const highlights = [
-  { name: 'AinS',   size: 'S', dims: '320 × 165 × 230 mm', wall: 'Single Wall', price: 0.90 },
-  { name: 'Jimat',  size: 'S', dims: '400 × 320 × 250 mm', wall: 'Single Wall', price: 1.50 },
-  { name: 'BKRS',   size: 'S', dims: '390 × 280 × 260 mm', wall: 'Double Wall', price: 1.90 },
-  { name: 'IBU',    size: 'S', dims: '400 × 330 × 270 mm', wall: 'Double Wall', price: 2.00 },
-  { name: 'AAL',    size: 'M', dims: '430 × 310 × 290 mm', wall: 'Double Wall', price: 3.00 },
-  { name: 'LGD',    size: 'M', dims: '490 × 310 × 295 mm', wall: 'Double Wall', price: 3.50 },
-  { name: 'PDC',    size: 'L', dims: '590 × 380 × 380 mm', wall: 'Double Wall', price: 5.00 },
-];
+// Stok sebenar dari shop.quinocycle.com — edit src/data/catalog.ts sahaja
+import { usedBoxes, usedInStock } from '../../data/catalog';
+const highlights = usedInStock.map(b => ({ name: b.name.replace(/^Used Carton (Box )?/, ''), size: b.size, dims: b.dims, wall: b.wall, price: b.price }));
 
 const kawasan = [
   { name: 'Balakong (gudang kami)', href: '/kotak-pindah-rumah/balakong' },
@@ -29,7 +22,7 @@ const kawasan = [
 const faqs = [
   {
     q: 'Di mana boleh beli kotak terpakai berdekatan saya?',
-    a: 'Gudang Quinocycle di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor — stok 15 model kotak terpakai sedia ada. Kalau anda di Cheras, Seri Kembangan, Kajang, Puchong, Bangi, Shah Alam atau KL, kami hantar terus (percuma untuk pesanan RM300+ di KL & Selangor). Boleh juga ambil sendiri di gudang.',
+    a: 'Gudang Quinocycle di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor — 13 model kotak terpakai (stok berpusing). Kalau anda di Cheras, Seri Kembangan, Kajang, Puchong, Bangi, Shah Alam atau KL, kami hantar terus (percuma untuk pesanan RM300+ di KL & Selangor). Boleh juga ambil sendiri di gudang.',
   },
   {
     q: 'Kotak terpakai untuk dijual ini — keadaan macam mana?',
@@ -53,7 +46,7 @@ const storeSchema = {
   "@context": "https://schema.org",
   "@type": "Store",
   "name": "Quinocycle — Kotak Terpakai Murah Balakong, Selangor",
-  "description": "Pembekal kotak terpakai murah untuk dijual secara borong — 15 model gred sekali guna dari RM0.90 sekotak. Gudang di Balakong, penghantaran KL & Selangor.",
+  "description": "Pembekal kotak terpakai murah untuk dijual secara borong — 13 model gred sekali guna dari RM0.90 sekotak (ikut stok). Gudang di Balakong, penghantaran KL & Selangor.",
   "url": "https://www.quinocycle.com.my/kotak-terpakai/",
   "telephone": "+60168916381",
   "priceRange": "RM0.90 - RM5.00 sekotak",
@@ -95,8 +88,8 @@ const breadcrumbSchema = {
 
 <Layout
   lang="ms"
-  title="Kotak Terpakai Murah Untuk Dijual — 15 Model dari RM0.90 | Quinocycle Balakong"
-  description="Kotak terpakai murah untuk dijual di Selangor & KL. 15 model gred sekali guna dari RM0.90 sekotak — disemak, kering, tidak berbau. Gudang di Balakong berdekatan Cheras, Kajang, Puchong. Hantar atau ambil sendiri. WhatsApp 016-891 6381."
+  title="Kotak Terpakai Murah Untuk Dijual — 13 Model dari RM0.90 | Quinocycle Balakong"
+  description="Kotak terpakai murah untuk dijual di Selangor & KL. 13 model gred sekali guna dari RM0.90 sekotak (ikut stok) — disemak, kering, tidak berbau. Gudang di Balakong berdekatan Cheras, Kajang, Puchong. Hantar atau ambil sendiri. WhatsApp 016-891 6381."
 >
   <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
@@ -114,14 +107,14 @@ const breadcrumbSchema = {
       Kotak terpakai murah <br /><span class="text-primary italic">untuk dijual — dari RM0.90.</span>
     </h1>
     <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
-      15 model kotak terpakai gred sekali guna di gudang Balakong — <strong class="text-on-surface font-semibold">kering, tidak berbau, disemak satu per satu</strong>. Jimat 50–60% berbanding kotak baru untuk pindah rumah, pos barang dan simpanan. Hantar ke seluruh KL &amp; Selangor atau ambil sendiri.
+      13 model kotak terpakai gred sekali guna di gudang Balakong (8 ada stok hari ini) — <strong class="text-on-surface font-semibold">kering, tidak berbau, disemak satu per satu</strong>. Jimat 50–60% berbanding kotak baru untuk pindah rumah, pos barang dan simpanan. Hantar ke seluruh KL &amp; Selangor atau ambil sendiri.
     </p>
     <div class="flex flex-wrap gap-4">
       <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
         WhatsApp Sekarang
       </a>
       <a href="/used-carton-boxes" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
-        Lihat Semua 15 Model
+        Lihat Semua Model
       </a>
     </div>
   </section>
@@ -156,7 +149,7 @@ const breadcrumbSchema = {
         </table>
       </div>
       <p class="font-body text-sm text-secondary mt-5">
-        8 lagi model di <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">katalog penuh kotak terpakai</a>. Kuantiti minimum 50–200 unit ikut model; untuk kuantiti kecil pindah rumah, <a href={WA_LINK} class="text-primary font-semibold hover:underline" target="_blank" rel="noopener noreferrer">WhatsApp kami</a>.
+        Model kehabisan stok akan masuk semula — lihat semua di <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">katalog penuh kotak terpakai</a>. Kuantiti minimum 50–200 unit ikut model; untuk kuantiti kecil pindah rumah, <a href={WA_LINK} class="text-primary font-semibold hover:underline" target="_blank" rel="noopener noreferrer">WhatsApp kami</a>.
       </p>
     </div>
   </section>
@@ -169,7 +162,7 @@ const breadcrumbSchema = {
         Kotak terpakai kami adalah <strong class="text-on-surface font-semibold">gred sekali guna dari kilang</strong> — kotak yang digunakan sekali sahaja untuk penghantaran pukal, kemudian dikumpul, disemak dan disusun semula di gudang kami. Bukan kotak kutipan yang lembik, berbau atau koyak.
       </p>
       <p>
-        Setiap kotak melalui semakan sama: kering sepenuhnya, tiada bau, tiada kerosakan pada dinding atau flap. Model double wall (dua lapisan) seperti BKRS, IBU, AAL dan PDC cukup kuat untuk buku berat, peralatan dapur dan kegunaan pindah rumah penuh — pada harga 50–60% lebih murah daripada kotak baru.
+        Setiap kotak melalui semakan sama: kering sepenuhnya, tiada bau, tiada kerosakan pada dinding atau flap. Model double wall (dua lapisan) seperti MG, Bary, BT, Yellow, Vital dan PDC cukup kuat untuk buku berat, peralatan dapur dan kegunaan pindah rumah penuh — pada harga 50–60% lebih murah daripada kotak baru.
       </p>
       <p>
         Sebab itu pelanggan terbesar kami ialah syarikat mover dan penjual online yang menggunakan ratusan kotak sebulan — mereka kira setiap sen. Baca <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan penuh kotak baru vs terpakai</a>, atau <a href="/blog/kotak-percuma-pindah-rumah" class="text-primary font-semibold hover:underline">kenapa kotak terpakai lebih berbaloi daripada kotak percuma</a>.

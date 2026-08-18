@@ -14,35 +14,10 @@ const post = {
 
 const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20ingin%20membeli%20kotak%20pindah%20rumah.';
 
-// Stok sebenar dari shop.quinocycle.com (disemak 2026-08-18) — kemas kini bersama kedai online
-const newBoxes = [
-  { name: 'Mini Size New Carton Box XS',   dims: '170 × 115 × 150 mm', wall: 'Single Wall', price: 1.10,  use: 'Aksesori, kosmetik, barang kecil' },
-  { name: 'Small Size Carton Box A4',      dims: '310 × 220 × 220 mm', wall: 'Single Wall', price: 3.00,  use: 'Buku, pakaian, pesanan online' },
-  { name: 'Small Size Document Box JPM',   dims: '380 × 185 × 250 mm', wall: '—',           price: 3.50,  use: 'Dokumen, fail, barang pejabat' },
-  { name: 'Medium Size Box Q440',          dims: '440 × 310 × 310 mm', wall: '—',           price: 3.50,  use: 'Barangan rumah, packing am' },
-  { name: 'Medium Size Box A3',            dims: '440 × 310 × 230 mm', wall: 'Double Wall', price: 5.00,  use: 'Barangan dapur, pecah belah' },
-  { name: 'Medium Size Box MR',            dims: '540 × 400 × 310 mm', wall: '—',           price: 7.00,  use: 'Barangan rumah besar' },
-  { name: 'Large Size New Carton Box NLN', dims: '590 × 390 × 390 mm', wall: 'Double Wall', price: 8.00,  use: 'Pindah rumah, barang berat' },
-  { name: 'Jumbo Size Box XL',             dims: '485 × 485 × 500 mm', wall: 'Double Wall', price: 9.00,  use: 'Bantal, selimut, barang besar ringan' },
-  { name: 'Jumbo XXL Cargo Box BW800',     dims: '800 × 400 × 800 mm', wall: '—',           price: 28.00, use: 'Kargo, penghantaran pukal' },
-  { name: 'Jumbo XXL Cargo Box T760',      dims: '760 × 760 × 760 mm', wall: '—',           price: 38.00, use: 'Kargo besar, peralatan, eksport' },
-];
-
-const usedBoxes = [
-  { name: 'Used Carton Box Ain',        dims: '320 × 165 × 230 mm', wall: 'Single Wall', price: 0.90, inStock: false, use: 'Buku, aksesori, barang kecil' },
-  { name: 'Used Carton Hamee 12',       dims: '340 × 280 × 260 mm', wall: 'Single Wall', price: 1.20, inStock: false, use: 'Buku, pakaian, alat tulis' },
-  { name: 'Used Carton DUA',            dims: '360 × 240 × 390 mm', wall: 'Double Wall', price: 1.50, inStock: false, use: 'Botol, barang tinggi' },
-  { name: 'Used Carton MG',             dims: '380 × 230 × 270 mm', wall: 'Double Wall', price: 1.70, inStock: true,  use: 'Pindah rumah, pos barang' },
-  { name: 'Used Carton Box Bary',       dims: '300 × 200 × 250 mm', wall: 'Double Wall', price: 1.80, inStock: true,  use: 'Barangan dapur, elektronik kecil' },
-  { name: 'Used Carton Box BT',         dims: '390 × 250 × 230 mm', wall: 'Double Wall', price: 2.20, inStock: true,  use: 'Pindah rumah, simpanan' },
-  { name: 'Used Carton Box Yellow',     dims: '460 × 330 × 310 mm', wall: 'Double Wall', price: 3.50, inStock: true,  use: 'Pindah rumah, packing runcit' },
-  { name: 'Used Carton Box Vital',      dims: '530 × 380 × 260 mm', wall: 'Double Wall', price: 3.50, inStock: true,  use: 'Barangan rumah, simpanan stor' },
-  { name: 'Used Carton Box ALP 5',      dims: '580 × 480 × 400 mm', wall: 'Single Wall', price: 3.50, inStock: true,  use: 'Barang besar ringan, pakaian' },
-  { name: 'Used Carton Box ALP 6',      dims: '580 × 480 × 460 mm', wall: 'Single Wall', price: 3.50, inStock: false, use: 'Barang besar ringan' },
-  { name: 'Used Carton EVER',           dims: '490 × 310 × 290 mm', wall: 'Double Wall', price: 4.00, inStock: false, use: 'Barang berat (super solid)' },
-  { name: 'Used Carton Box PDC',        dims: '590 × 380 × 380 mm', wall: 'Double Wall', price: 5.00, inStock: true,  use: 'Pindah rumah/pejabat, fail' },
-  { name: 'Used Carton Box Golden',     dims: '510 × 510 × 510 mm', wall: 'Double Wall', price: 6.00, inStock: true,  use: 'Jumbo — bantal, selimut, kargo' },
-];
+// Stok sebenar dari shop.quinocycle.com — satu sumber data untuk seluruh laman
+import { newBoxes as catalogNew, usedBoxes as catalogUsed } from '../../data/catalog';
+const newBoxes  = catalogNew.map(b  => ({ ...b, wall: b.wall || '—', use: b.useMS }));
+const usedBoxes = catalogUsed.map(b => ({ ...b, wall: b.wall || '—', use: b.useMS }));
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -127,6 +102,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Product",
           "name": `${b.name} (${b.dims})`,
+          "image": `https://www.quinocycle.com.my${b.img}`,
           "description": `Kotak kardus baru${b.wall !== '—' ? ' ' + b.wall.toLowerCase() : ''}. Sesuai untuk: ${b.use}.`
         },
         "price": b.price.toFixed(2),
@@ -138,6 +114,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Product",
           "name": `${b.name} (${b.dims})`,
+          "image": `https://www.quinocycle.com.my${b.img}`,
           "description": `Kotak kardus terpakai gred sekali guna, ${b.wall.toLowerCase()}. Sesuai untuk: ${b.use}.`
         },
         "price": b.price.toFixed(2),
@@ -319,6 +296,7 @@ const faqSchema = {
           <table class="article-table">
             <thead>
               <tr>
+                <th>Gambar</th>
                 <th>Model</th>
                 <th>Dimensi (mm)</th>
                 <th>Jenis Dinding</th>
@@ -329,6 +307,7 @@ const faqSchema = {
             <tbody>
               {newBoxes.map(b => (
                 <tr>
+                  <td><img src={b.img} alt={`${b.name} ${b.dims} — kotak kardus baru Quinocycle Balakong`} width="72" height="72" loading="lazy" style="width:72px;height:72px;object-fit:contain;border-radius:8px;background:#fff;" /></td>
                   <td><strong>{b.name}</strong></td>
                   <td>{b.dims}</td>
                   <td>{b.wall}</td>
@@ -350,6 +329,7 @@ const faqSchema = {
           <table class="article-table">
             <thead>
               <tr>
+                <th>Gambar</th>
                 <th>Model</th>
                 <th>Dimensi (mm)</th>
                 <th>Jenis Dinding</th>
@@ -361,6 +341,7 @@ const faqSchema = {
             <tbody>
               {usedBoxes.map(b => (
                 <tr>
+                  <td><img src={b.img} alt={`${b.name} ${b.dims} — kotak terpakai murah Quinocycle Balakong`} width="72" height="72" loading="lazy" style={`width:72px;height:72px;object-fit:contain;border-radius:8px;background:#fff;${b.inStock ? '' : 'filter:grayscale(1);opacity:0.55;'}`} /></td>
                   <td><strong>{b.name}</strong></td>
                   <td>{b.dims}</td>
                   <td>{b.wall}</td>

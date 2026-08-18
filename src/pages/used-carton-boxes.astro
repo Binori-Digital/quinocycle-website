@@ -3,31 +3,27 @@ import Layout from '../layouts/Layout.astro';
 
 const WA_NUMBER = '60168916381';
 
-const products = [
-  // Small
-  { id: 'u-ains',   size: 'S', model: 'AinS',   dims: '320 × 165 × 230 mm', wall: 'Single Wall', price: 0.90, minQty: 200, use: 'Small items, gifts, accessories, e-commerce parcels',        img: '/images/box-used-ains.png',   note: '' },
-  { id: 'u-yf',     size: 'S', model: 'YF',      dims: '300 × 150 × 400 mm', wall: 'Double Wall', price: 0.90, minQty: 200, use: 'Tall narrow items, bottles, cylinders, tubes',               img: '/images/box-used-yf.png',     note: 'Rejected grade' },
-  { id: 'u-hamee',  size: 'S', model: 'Hamee',   dims: '330 × 200 × 270 mm', wall: 'Single Wall', price: 1.00, minQty: 200, use: 'Books, apparel, small retail items, stationery',             img: '/images/box-used-hamee.png',  note: '' },
-  { id: 'u-s3white',size: 'S', model: 'S3White', dims: '330 × 310 × 270 mm', wall: 'Single Wall', price: 1.20, minQty: 200, use: 'Home goods, office supplies, retail overflow',               img: '/images/box-used-s3white.png',note: '' },
-  { id: 'u-jimat',  size: 'S', model: 'Jimat',   dims: '400 × 320 × 250 mm', wall: 'Single Wall', price: 1.50, minQty: 150, use: 'Household items, e-commerce fulfilment, lightweight storage',img: '/images/box-used-jimat.png',  note: '' },
-  { id: 'u-bary',   size: 'S', model: 'Bary',    dims: '300 × 200 × 250 mm', wall: 'Double Wall', price: 1.80, minQty: 150, use: 'Kitchen items, electronics, general online orders',          img: '/images/box-used-bary.png',   note: 'Once used · Clean · Odourless' },
-  { id: 'u-hjic',   size: 'S', model: 'HJIC',    dims: '440 × 330 × 190 mm', wall: 'Double Wall', price: 1.80, minQty: 150, use: 'Flat items, documents, apparel, shallow-depth goods',        img: '/images/box-used-hjic.png',   note: '' },
-  { id: 'u-bkrs',   size: 'S', model: 'BKRS',    dims: '390 × 280 × 260 mm', wall: 'Double Wall', price: 1.90, minQty: 150, use: 'General shipping, warehouse storage, moving house',          img: '/images/box-used-bkrs.png',   note: '' },
-  { id: 'u-ibu',    size: 'S', model: 'IBU',     dims: '400 × 330 × 270 mm', wall: 'Double Wall', price: 2.00, minQty: 150, use: 'Household goods, moving, office relocation',                 img: '/images/box-used-ibu.png',    note: '' },
-  { id: 'u-menara', size: 'S', model: 'Menara',  dims: '430 × 250 × 220 mm', wall: 'Double Wall', price: 2.00, minQty: 150, use: 'Long narrow goods, tools, hardware, bottles',                img: '/images/box-used-menara.png', note: '' },
-  // Medium
-  { id: 'u-aal',    size: 'M', model: 'AAL',     dims: '430 × 310 × 290 mm', wall: 'Double Wall', price: 3.00, minQty: 100, use: 'Home goods, standard packaging, general storage',           img: '/images/box-used-aal.png',    note: '' },
-  { id: 'u-fgc',    size: 'M', model: 'FGC',     dims: '430 × 310 × 260 mm', wall: 'Double Wall', price: 3.00, minQty: 100, use: 'Office supplies, retail overflow, general shipping',        img: '/images/box-used-fgc.png',    note: '' },
-  { id: 'u-lgd',    size: 'M', model: 'LGD',     dims: '490 × 310 × 295 mm', wall: 'Double Wall', price: 3.50, minQty: 100, use: 'Moving house, warehouse bulk storage, heavy goods',         img: '/images/box-used-lgd.png',    note: '' },
-  { id: 'u-yellow', size: 'M', model: 'Yellow',  dims: '460 × 330 × 310 mm', wall: 'Double Wall', price: 3.50, minQty: 100, use: 'Moving house, retail packing, e-commerce fulfilment',       img: '/images/box-used-yellow.png', note: '' },
-  // Large
-  { id: 'u-pdc',    size: 'L', model: 'PDC',     dims: '590 × 380 × 380 mm', wall: 'Double Wall', price: 5.00, minQty: 50,  use: 'File storage, house/office relocation, logistics',          img: '/images/box-used-pdc.png',    note: 'Used · Clean · Very good condition' },
-];
+// Live catalog synced from shop.quinocycle.com — edit src/data/catalog.ts, not this file
+import { usedBoxes } from '../data/catalog';
+
+const products = usedBoxes.map(b => ({
+  id: b.id,
+  size: b.size,
+  model: b.name.replace(/^Used Carton (Box )?/, ''),
+  dims: b.dims,
+  wall: b.wall,
+  price: b.price,
+  minQty: 1,
+  inStock: b.inStock,
+  use: b.use,
+  img: b.img,
+  note: b.inStock ? 'Once used · Checked · Dry & odourless' : '⏳ Out of stock — restocking soon',
+}));
 ---
 
 <Layout
   title="Used Carton Boxes Malaysia (Kotak Terpakai) — Recycled Boxes Wholesale | Quinocycle"
-  description="Buy used carton boxes (kotak terpakai murah) in bulk at wholesale prices in Malaysia. Once-used recycled boxes from RM0.90 — clean, odourless, single & double wall. Ideal moving box & shipping box. Free delivery KL & Selangor above RM300."
+  description="Buy used carton boxes (kotak terpakai murah) in bulk at wholesale prices in Malaysia. 13 models — once-used recycled boxes from RM0.90 (subject to stock) — clean, odourless, single & double wall. Ideal moving box & shipping box. Free delivery KL & Selangor above RM300."
 >
   <!-- Page Hero -->
   <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
@@ -74,7 +70,7 @@ const products = [
     <div class="flex items-start gap-3 bg-primary-fixed/40 border border-primary/20 rounded-2xl px-6 py-4">
       <svg class="flex-shrink-0 text-primary mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
       <p class="font-body text-sm text-on-surface-variant leading-relaxed">
-        <strong class="text-on-surface font-semibold">Free delivery across KL &amp; Selangor</strong> for orders above RM300. All boxes are once-used, clean, and dry. Prices shown are per box. Min. order applies per model.
+        <strong class="text-on-surface font-semibold">Free delivery across KL &amp; Selangor</strong> for orders above RM300. All boxes are once-used, clean, and dry. Prices shown are per box — stock is synced with our online store, shop.quinocycle.com.
       </p>
     </div>
   </div>
@@ -96,7 +92,7 @@ const products = [
             <img
               src={p.img}
               alt={`Used Carton Box ${p.model} ${p.dims} Malaysia — Kotak Terpakai`}
-              class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700"
+              class={`w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700 ${p.inStock ? "" : "grayscale opacity-60"}`}
               loading="lazy"
             />
             <!-- Size badge -->
@@ -123,28 +119,39 @@ const products = [
               <p class="font-body text-xs text-primary font-semibold mb-1">{p.note}</p>
             )}
             <p class="font-body text-sm text-on-surface-variant mb-4">{p.use}</p>
-            <p class="font-label text-xs text-outline mb-4">Min. order: <strong class="text-on-surface-variant">{p.minQty} boxes</strong></p>
+            <p class="font-label text-xs text-outline mb-4">Stock synced with <strong class="text-on-surface-variant">shop.quinocycle.com</strong></p>
 
             <!-- Qty + Add to cart -->
             <div class="flex items-center gap-3">
               <div class="flex items-center bg-surface-container rounded-full border border-outline-variant/30 overflow-hidden">
-                <button class="qty-btn qty-minus w-9 h-9 flex items-center justify-center text-lg text-on-surface-variant hover:text-primary transition-colors font-headline" aria-label="Decrease">−</button>
+                <button class="qty-btn qty-minus w-9 h-9 flex items-center justify-center text-lg text-on-surface-variant hover:text-primary transition-colors font-headline" aria-label="Decrease" disabled={!p.inStock}>−</button>
                 <input
                   type="number"
                   class="qty-input w-16 text-center bg-transparent border-none text-sm font-body font-semibold text-on-surface focus:outline-none focus:ring-0"
-                  value={p.minQty}
-                  min={p.minQty}
-                  step={50}
+                  value={50}
+                  min={1}
+                  step={10}
                   aria-label="Quantity"
+                  disabled={!p.inStock}
                 />
-                <button class="qty-btn qty-plus w-9 h-9 flex items-center justify-center text-lg text-on-surface-variant hover:text-primary transition-colors font-headline" aria-label="Increase">+</button>
+                <button class="qty-btn qty-plus w-9 h-9 flex items-center justify-center text-lg text-on-surface-variant hover:text-primary transition-colors font-headline" aria-label="Increase" disabled={!p.inStock}>+</button>
               </div>
-              <button
-                class="add-to-cart flex-1 bg-on-surface text-surface py-2.5 rounded-full font-headline font-bold text-xs uppercase tracking-widest hover:bg-primary transition-colors duration-200"
-                data-id={p.id}
-              >
-                Add to Cart
-              </button>
+              {p.inStock ? (
+                <button
+                  class="add-to-cart flex-1 bg-on-surface text-surface py-2.5 rounded-full font-headline font-bold text-xs uppercase tracking-widest hover:bg-primary transition-colors duration-200"
+                  data-id={p.id}
+                >
+                  Add to Cart
+                </button>
+              ) : (
+                <a
+                  href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! Bila Used Carton Box ${p.model} masuk stok semula?`)}`}
+                  target="_blank" rel="noopener noreferrer"
+                  class="flex-1 text-center border border-outline-variant/50 text-secondary py-2.5 rounded-full font-headline font-bold text-xs uppercase tracking-widest hover:border-primary hover:text-primary transition-colors duration-200"
+                >
+                  Notify Me
+                </a>
+              )}
             </div>
           </div>
         </article>
@@ -241,7 +248,7 @@ const products = [
           "@type": "Offer",
           "price": p.price.toFixed(2),
           "priceCurrency": "MYR",
-          "availability": "https://schema.org/InStock",
+          "availability": p.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
           "eligibleQuantity": { "@type": "QuantitativeValue", "minValue": p.minQty }
         }
       }
