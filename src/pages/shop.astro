@@ -240,12 +240,17 @@ const products = allBoxes.map(b => ({
         "@type": "Product",
         "name": p.name,
         "image": `https://www.quinocycle.com.my${p.img}`,
+        "brand": { "@type": "Brand", "name": "Quinocycle" },
         "description": `${p.condition === 'new' ? 'New' : 'Used'}${p.wall ? ' ' + p.wall.toLowerCase() : ''} carton box ${p.dims}. ${p.use}. Wholesale carton box Malaysia — delivery across Peninsular Malaysia.`,
         "offers": {
           "@type": "Offer",
+          "url": "https://www.quinocycle.com.my/shop/",
           "price": p.price.toFixed(2),
           "priceCurrency": "MYR",
-          "availability": p.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+          "priceValidUntil": "2026-12-31",
+          "itemCondition": p.condition === 'new' ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition",
+          "availability": p.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+          "seller": { "@type": "Organization", "name": "Quinocycle Sdn. Bhd." }
         }
       }
     }))

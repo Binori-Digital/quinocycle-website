@@ -243,13 +243,17 @@ const products = usedBoxes.map(b => ({
         "@type": "Product",
         "name": `Used Carton Box ${p.model}`,
         "image": `https://www.quinocycle.com.my${p.img}`,
+        "brand": { "@type": "Brand", "name": "Quinocycle" },
         "description": `Used ${p.wall.toLowerCase()} carton box ${p.dims} (kotak terpakai). ${p.use}. Once-used recycled box — wholesale Malaysia, delivery across Peninsular Malaysia.`,
         "offers": {
           "@type": "Offer",
+          "url": "https://www.quinocycle.com.my/used-carton-boxes/",
           "price": p.price.toFixed(2),
           "priceCurrency": "MYR",
+          "priceValidUntil": "2026-12-31",
+          "itemCondition": "https://schema.org/UsedCondition",
           "availability": p.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-          "eligibleQuantity": { "@type": "QuantitativeValue", "minValue": p.minQty }
+          "seller": { "@type": "Organization", "name": "Quinocycle Sdn. Bhd." }
         }
       }
     }))

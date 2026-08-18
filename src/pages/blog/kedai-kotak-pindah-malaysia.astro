@@ -103,11 +103,16 @@ const localBusinessSchema = {
           "@type": "Product",
           "name": `${b.name} (${b.dims})`,
           "image": `https://www.quinocycle.com.my${b.img}`,
+          "brand": { "@type": "Brand", "name": "Quinocycle" },
           "description": `Kotak kardus baru${b.wall !== '—' ? ' ' + b.wall.toLowerCase() : ''}. Sesuai untuk: ${b.use}.`
         },
+        "url": "https://www.quinocycle.com.my/shop/",
         "price": b.price.toFixed(2),
         "priceCurrency": "MYR",
-        "availability": "https://schema.org/InStock"
+        "priceValidUntil": "2026-12-31",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@type": "Organization", "name": "Quinocycle Sdn. Bhd." }
       })),
       ...usedBoxes.map(b => ({
         "@type": "Offer",
@@ -115,11 +120,16 @@ const localBusinessSchema = {
           "@type": "Product",
           "name": `${b.name} (${b.dims})`,
           "image": `https://www.quinocycle.com.my${b.img}`,
+          "brand": { "@type": "Brand", "name": "Quinocycle" },
           "description": `Kotak kardus terpakai gred sekali guna, ${b.wall.toLowerCase()}. Sesuai untuk: ${b.use}.`
         },
+        "url": "https://www.quinocycle.com.my/used-carton-boxes/",
         "price": b.price.toFixed(2),
         "priceCurrency": "MYR",
-        "availability": b.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+        "priceValidUntil": "2026-12-31",
+        "itemCondition": "https://schema.org/UsedCondition",
+        "availability": b.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+        "seller": { "@type": "Organization", "name": "Quinocycle Sdn. Bhd." }
       }))
     ]
   }

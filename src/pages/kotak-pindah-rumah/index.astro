@@ -119,12 +119,17 @@ const productListSchema = {
     "item": {
       "@type": "Product",
       "name": `${b.name} (${b.dims})`,
+      "brand": { "@type": "Brand", "name": "Quinocycle" },
       "description": `${b.cond === 'Terpakai' ? 'Kotak kardus terpakai gred sekali guna' : 'Kotak kardus baru'}, ${b.wall}. Sesuai untuk: ${b.use}.`,
       "offers": {
         "@type": "Offer",
+        "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/",
         "price": b.price.toFixed(2),
         "priceCurrency": "MYR",
-        "availability": b.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+        "priceValidUntil": "2026-12-31",
+        "itemCondition": b.cond === 'Terpakai' ? "https://schema.org/UsedCondition" : "https://schema.org/NewCondition",
+        "availability": b.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+        "seller": { "@type": "Organization", "name": "Quinocycle Sdn. Bhd." }
       }
     }
   }))
