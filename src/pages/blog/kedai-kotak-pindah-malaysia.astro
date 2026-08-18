@@ -3,9 +3,10 @@ import Layout from '../../layouts/Layout.astro';
 
 const post = {
   title: 'Kedai Kotak Pindah Malaysia — Quinocycle, Balakong Selangor',
-  description: 'Cari kedai kotak pindah rumah di Malaysia? Quinocycle Balakong Selangor menjual kotak kardus baru & terpakai borong dari RM 0.90/kotak. Penghantaran seluruh Semenanjung Malaysia.',
+  description: 'Kedai kotak pindah rumah Malaysia: Quinocycle Balakong jual 10 model kotak baru (RM1.10–RM38) & 13 model kotak terpakai (dari RM0.90, ikut stok) — saiz mini hingga jumbo cargo 760mm. Senarai harga penuh, stok semasa & penghantaran seluruh Semenanjung. WhatsApp 016-891 6381.',
   date: '2026-04-08',
-  readTime: '7 min',
+  dateModified: '2026-08-18',
+  readTime: '8 min',
   category: 'Panduan Pindah Rumah',
   author: 'Pasukan Quinocycle',
   slug: 'kedai-kotak-pindah-malaysia',
@@ -13,14 +14,48 @@ const post = {
 
 const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20Saya%20ingin%20membeli%20kotak%20pindah%20rumah.';
 
+// Stok sebenar dari shop.quinocycle.com (disemak 2026-08-18) — kemas kini bersama kedai online
+const newBoxes = [
+  { name: 'Mini Size New Carton Box XS',   dims: '170 × 115 × 150 mm', wall: 'Single Wall', price: 1.10,  use: 'Aksesori, kosmetik, barang kecil' },
+  { name: 'Small Size Carton Box A4',      dims: '310 × 220 × 220 mm', wall: 'Single Wall', price: 3.00,  use: 'Buku, pakaian, pesanan online' },
+  { name: 'Small Size Document Box JPM',   dims: '380 × 185 × 250 mm', wall: '—',           price: 3.50,  use: 'Dokumen, fail, barang pejabat' },
+  { name: 'Medium Size Box Q440',          dims: '440 × 310 × 310 mm', wall: '—',           price: 3.50,  use: 'Barangan rumah, packing am' },
+  { name: 'Medium Size Box A3',            dims: '440 × 310 × 230 mm', wall: 'Double Wall', price: 5.00,  use: 'Barangan dapur, pecah belah' },
+  { name: 'Medium Size Box MR',            dims: '540 × 400 × 310 mm', wall: '—',           price: 7.00,  use: 'Barangan rumah besar' },
+  { name: 'Large Size New Carton Box NLN', dims: '590 × 390 × 390 mm', wall: 'Double Wall', price: 8.00,  use: 'Pindah rumah, barang berat' },
+  { name: 'Jumbo Size Box XL',             dims: '485 × 485 × 500 mm', wall: 'Double Wall', price: 9.00,  use: 'Bantal, selimut, barang besar ringan' },
+  { name: 'Jumbo XXL Cargo Box BW800',     dims: '800 × 400 × 800 mm', wall: '—',           price: 28.00, use: 'Kargo, penghantaran pukal' },
+  { name: 'Jumbo XXL Cargo Box T760',      dims: '760 × 760 × 760 mm', wall: '—',           price: 38.00, use: 'Kargo besar, peralatan, eksport' },
+];
+
+const usedBoxes = [
+  { name: 'Used Carton Box Ain',        dims: '320 × 165 × 230 mm', wall: 'Single Wall', price: 0.90, inStock: false, use: 'Buku, aksesori, barang kecil' },
+  { name: 'Used Carton Hamee 12',       dims: '340 × 280 × 260 mm', wall: 'Single Wall', price: 1.20, inStock: false, use: 'Buku, pakaian, alat tulis' },
+  { name: 'Used Carton DUA',            dims: '360 × 240 × 390 mm', wall: 'Double Wall', price: 1.50, inStock: false, use: 'Botol, barang tinggi' },
+  { name: 'Used Carton MG',             dims: '380 × 230 × 270 mm', wall: 'Double Wall', price: 1.70, inStock: true,  use: 'Pindah rumah, pos barang' },
+  { name: 'Used Carton Box Bary',       dims: '300 × 200 × 250 mm', wall: 'Double Wall', price: 1.80, inStock: true,  use: 'Barangan dapur, elektronik kecil' },
+  { name: 'Used Carton Box BT',         dims: '390 × 250 × 230 mm', wall: 'Double Wall', price: 2.20, inStock: true,  use: 'Pindah rumah, simpanan' },
+  { name: 'Used Carton Box Yellow',     dims: '460 × 330 × 310 mm', wall: 'Double Wall', price: 3.50, inStock: true,  use: 'Pindah rumah, packing runcit' },
+  { name: 'Used Carton Box Vital',      dims: '530 × 380 × 260 mm', wall: 'Double Wall', price: 3.50, inStock: true,  use: 'Barangan rumah, simpanan stor' },
+  { name: 'Used Carton Box ALP 5',      dims: '580 × 480 × 400 mm', wall: 'Single Wall', price: 3.50, inStock: true,  use: 'Barang besar ringan, pakaian' },
+  { name: 'Used Carton Box ALP 6',      dims: '580 × 480 × 460 mm', wall: 'Single Wall', price: 3.50, inStock: false, use: 'Barang besar ringan' },
+  { name: 'Used Carton EVER',           dims: '490 × 310 × 290 mm', wall: 'Double Wall', price: 4.00, inStock: false, use: 'Barang berat (super solid)' },
+  { name: 'Used Carton Box PDC',        dims: '590 × 380 × 380 mm', wall: 'Double Wall', price: 5.00, inStock: true,  use: 'Pindah rumah/pejabat, fail' },
+  { name: 'Used Carton Box Golden',     dims: '510 × 510 × 510 mm', wall: 'Double Wall', price: 6.00, inStock: true,  use: 'Jumbo — bantal, selimut, kargo' },
+];
+
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": post.title,
   "description": post.description,
   "datePublished": post.date,
-  "dateModified": post.date,
+  "dateModified": post.dateModified,
   "inLanguage": "ms-MY",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["#jawapan-ringkas", ".article-hero__title"]
+  },
   "author": {
     "@type": "Organization",
     "name": "Quinocycle Sdn. Bhd.",
@@ -44,7 +79,7 @@ const articleSchema = {
     "width": 1280,
     "height": 720
   },
-  "keywords": "kedai kotak pindah malaysia, kotak pindah rumah, kotak kardus murah malaysia, carton box malaysia, moving boxes malaysia, kotak pembungkusan selangor, borong kotak kardus, Quinocycle Balakong, kotak packing, packaging boxes Malaysia"
+  "keywords": "kedai kotak pindah malaysia, kotak pindah rumah, kotak kardus murah malaysia, carton box malaysia, moving boxes malaysia, kotak pembungkusan selangor, borong kotak kardus, Quinocycle Balakong, kotak packing, packaging boxes Malaysia, harga kotak pindah rumah, kotak terpakai murah, kotak kosong pindah rumah, saiz kotak pindah rumah, kotak jumbo cargo, kedai kotak berdekatan, kotak murah balakong cheras kajang, senarai harga kotak kardus 2026"
 };
 
 const localBusinessSchema = {
@@ -81,92 +116,34 @@ const localBusinessSchema = {
       "closes": "13:00"
     }
   ],
-  "priceRange": "RM 0.90 – RM 6.50 sekotak",
+  "priceRange": "RM 0.90 – RM 38.00 sekotak",
   "areaServed": "Semenanjung Malaysia",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Kotak Kardus Borong",
+    "name": "Kotak Kardus Borong — Stok Sebenar",
     "itemListElement": [
-      {
+      ...newBoxes.map(b => ({
         "@type": "Offer",
         "itemOffered": {
           "@type": "Product",
-          "name": "Kotak Baru Saiz S (30×20×20 cm)",
-          "description": "Kotak kardus baru single wall, sesuai untuk aksesori dan hadiah."
+          "name": `${b.name} (${b.dims})`,
+          "description": `Kotak kardus baru${b.wall !== '—' ? ' ' + b.wall.toLowerCase() : ''}. Sesuai untuk: ${b.use}.`
         },
-        "price": "1.90",
-        "priceCurrency": "MYR"
-      },
-      {
+        "price": b.price.toFixed(2),
+        "priceCurrency": "MYR",
+        "availability": "https://schema.org/InStock"
+      })),
+      ...usedBoxes.map(b => ({
         "@type": "Offer",
         "itemOffered": {
           "@type": "Product",
-          "name": "Kotak Baru Saiz M (40×30×25 cm)",
-          "description": "Kotak kardus baru single wall, sesuai untuk pakaian dan elektronik."
+          "name": `${b.name} (${b.dims})`,
+          "description": `Kotak kardus terpakai gred sekali guna, ${b.wall.toLowerCase()}. Sesuai untuk: ${b.use}.`
         },
-        "price": "2.80",
-        "priceCurrency": "MYR"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Product",
-          "name": "Kotak Baru Saiz L (60×40×40 cm)",
-          "description": "Kotak kardus baru double wall, sesuai untuk barangan rumah dan pindah."
-        },
-        "price": "4.50",
-        "priceCurrency": "MYR"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Product",
-          "name": "Kotak Baru Saiz XL (70×50×50 cm)",
-          "description": "Kotak kardus baru double wall, sesuai untuk perabot dan peralatan berat."
-        },
-        "price": "6.50",
-        "priceCurrency": "MYR"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Product",
-          "name": "Kotak Terpakai Saiz S (~30×20×20 cm)",
-          "description": "Kotak kardus terpakai single wall, sesuai untuk simpanan dan pindah."
-        },
-        "price": "0.90",
-        "priceCurrency": "MYR"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Product",
-          "name": "Kotak Terpakai Saiz M (~40×30×25 cm)",
-          "description": "Kotak kardus terpakai single wall, sesuai untuk pindah rumah am."
-        },
-        "price": "1.50",
-        "priceCurrency": "MYR"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Product",
-          "name": "Kotak Terpakai Saiz L (~60×40×40 cm)",
-          "description": "Kotak kardus terpakai double wall, sesuai untuk syarikat mover dan gudang."
-        },
-        "price": "2.50",
-        "priceCurrency": "MYR"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Product",
-          "name": "Kotak Terpakai Saiz XL (~70×50×50 cm)",
-          "description": "Kotak kardus terpakai double wall, sesuai untuk kerja pindah besar."
-        },
-        "price": "3.80",
-        "priceCurrency": "MYR"
-      }
+        "price": b.price.toFixed(2),
+        "priceCurrency": "MYR",
+        "availability": b.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+      }))
     ]
   }
 };
@@ -180,7 +157,7 @@ const faqSchema = {
       "name": "Di mana boleh beli kotak pindah rumah murah di Malaysia?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Quinocycle Sdn. Bhd. di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor menjual kotak kardus pindah rumah borong dari RM 0.90 sekotak (terpakai) hingga RM 6.50 sekotak (baru XL). Penghantaran ke seluruh Semenanjung Malaysia. WhatsApp: 016-891 6381."
+        "text": "Quinocycle Sdn. Bhd. di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor menjual kotak kardus pindah rumah borong: 13 model kotak terpakai dari RM0.90 sekotak (ikut stok semasa) dan 10 model kotak baru dari RM1.10 hingga RM38.00 (jumbo cargo 760mm). Semak stok terkini di shop.quinocycle.com. Penghantaran ke seluruh Semenanjung Malaysia. WhatsApp: 016-891 6381."
       }
     },
     {
@@ -204,7 +181,7 @@ const faqSchema = {
       "name": "Apakah saiz kotak pindah rumah yang paling sesuai?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Saiz S (30×20×20 cm) untuk buku, barangan dapur kecil, dan aksesori. Saiz M (40×30×25 cm) untuk pakaian, elektronik, dan barang sederhana. Saiz L (60×40×40 cm) untuk barangan rumah besar. Saiz XL (70×50×50 cm) untuk bantal, selimut, dan peralatan ringan yang besar."
+        "text": "Saiz kecil seperti Carton Box A4 (310×220×220mm) untuk buku dan barang berat kecil. Saiz sederhana seperti Box A3 (440×310×230mm) atau Used Carton Yellow (460×330×310mm) untuk pakaian dan barangan dapur. Saiz besar seperti NLN Double Wall (590×390×390mm) atau Used PDC (590×380×380mm) untuk barangan rumah. Saiz jumbo seperti Jumbo XL (485×485×500mm) atau Used Golden (510×510×510mm) untuk bantal, selimut dan barang ringan yang besar."
       }
     },
     {
@@ -228,7 +205,7 @@ const faqSchema = {
       "name": "How much do moving boxes cost in Malaysia?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "At Quinocycle Malaysia, new carton boxes cost RM 1.90 (S), RM 2.80 (M), RM 4.50 (L), and RM 6.50 (XL) per box. Used/recycled boxes are cheaper: RM 0.90 (S), RM 1.50 (M), RM 2.50 (L), and RM 3.80 (XL). Wholesale pricing with minimum order RM 1,000."
+        "text": "At Quinocycle Malaysia, new carton boxes range from RM1.10 (Mini XS 170×115×150mm) to RM9.00 (Jumbo XL 485×485×500mm), with XXL cargo boxes at RM28.00–RM38.00. Used/recycled boxes are cheaper: from RM0.90 (subject to stock) up to RM6.00 (Jumbo Golden 510×510×510mm) — currently in-stock models start at RM1.70. Check live stock at shop.quinocycle.com. Wholesale pricing with minimum order RM 1,000; smaller quantities via WhatsApp 016-891 6381."
       }
     }
   ]
@@ -254,7 +231,7 @@ const faqSchema = {
       <div class="tag tag--yellow" style="margin-top:1.5rem">{post.category}</div>
       <h1 class="article-hero__title">{post.title}</h1>
       <div class="article-meta">
-        <time datetime={post.date}>{new Date(post.date).toLocaleDateString('ms-MY', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        <time datetime={post.dateModified}>Dikemaskini {new Date(post.dateModified).toLocaleDateString('ms-MY', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
         <span>·</span>
         <span>{post.readTime} bacaan</span>
         <span>·</span>
@@ -288,8 +265,9 @@ const faqSchema = {
           <strong>Quinocycle Sdn. Bhd.</strong> adalah <strong>kedai kotak pindah Malaysia</strong> yang berpusat di Balakong, Selangor — membekalkan <em>kotak kardus</em> (<em>carton boxes</em>) baru dan terpakai secara borong (<em>wholesale</em>) dengan harga tetap dan penghantaran ke seluruh Semenanjung Malaysia.
         </p>
 
-        <div class="article-callout article-callout--yellow">
-          <strong>Maklumat Pantas:</strong> Quinocycle Sdn. Bhd. &bull; No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor &bull; WhatsApp: <a href={WA_LINK}>016-891 6381</a> &bull; Penghantaran seluruh Semenanjung Malaysia
+        <div class="article-callout article-callout--yellow" id="jawapan-ringkas">
+          <strong>Jawapan Ringkas:</strong> Kedai kotak pindah rumah paling menjimatkan di Malaysia ialah beli terus dari gudang pembekal. <strong>Quinocycle Sdn. Bhd.</strong> di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor menjual <strong>10 model kotak baru (RM1.10–RM38.00)</strong> dan <strong>13 model kotak terpakai (dari RM0.90, ikut stok)</strong> — dari saiz mini 170mm hingga jumbo cargo 760mm. Beli online di <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a> atau WhatsApp <a href={WA_LINK}>016-891 6381</a>. Penghantaran seluruh Semenanjung Malaysia.
+          <br /><br /><em style="font-size:0.85em;opacity:0.75">Dikemaskini: 18 Ogos 2026 — harga &amp; stok disemak terus dari kedai online kami.</em>
         </div>
 
         ---
@@ -330,7 +308,7 @@ const faqSchema = {
         <h2>Produk Yang Kami Jual — Kotak Kardus Baru &amp; Terpakai</h2>
 
         <p>
-          Kami menyediakan dua kategori utama <strong>kotak pindah rumah</strong> (<em>moving boxes</em> / <em>cardboard boxes</em>): <strong>kotak baru</strong> dan <strong>kotak terpakai</strong> (<em>used carton boxes</em> / <em>recycled boxes</em>) — dalam empat saiz standard yang sesuai untuk pelbagai keperluan.
+          Kami menyediakan dua kategori utama <strong>kotak pindah rumah</strong> (<em>moving boxes</em> / <em>cardboard boxes</em>): <strong>10 model kotak baru</strong> dan <strong>13 model kotak terpakai</strong> (<em>used carton boxes</em> / <em>recycled boxes</em>) — dari saiz mini 170mm hinggalah jumbo cargo 760mm. Jadual di bawah ialah <strong>stok dan harga sebenar</strong> dari kedai online kami, <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a>.
         </p>
 
         <h3>Kotak Kardus Baru (New Carton Boxes)</h3>
@@ -341,47 +319,23 @@ const faqSchema = {
           <table class="article-table">
             <thead>
               <tr>
-                <th>Saiz</th>
-                <th>Dimensi (cm)</th>
+                <th>Model</th>
+                <th>Dimensi (mm)</th>
                 <th>Jenis Dinding</th>
                 <th>Harga / Kotak</th>
-                <th>Min. Kuantiti</th>
                 <th>Sesuai Untuk</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><strong>S</strong></td>
-                <td>30 × 20 × 20</td>
-                <td>Single Wall</td>
-                <td><strong>RM 1.90</strong></td>
-                <td>100 kotak</td>
-                <td>Aksesori, barangan kecil, hadiah</td>
-              </tr>
-              <tr>
-                <td><strong>M</strong></td>
-                <td>40 × 30 × 25</td>
-                <td>Single Wall</td>
-                <td><strong>RM 2.80</strong></td>
-                <td>100 kotak</td>
-                <td>Pakaian, elektronik, buku</td>
-              </tr>
-              <tr>
-                <td><strong>L</strong></td>
-                <td>60 × 40 × 40</td>
-                <td>Double Wall</td>
-                <td><strong>RM 4.50</strong></td>
-                <td>50 kotak</td>
-                <td>Barangan rumah, pindah umum</td>
-              </tr>
-              <tr>
-                <td><strong>XL</strong></td>
-                <td>70 × 50 × 50</td>
-                <td>Double Wall</td>
-                <td><strong>RM 6.50</strong></td>
-                <td>50 kotak</td>
-                <td>Perabot ringan, peralatan besar</td>
-              </tr>
+              {newBoxes.map(b => (
+                <tr>
+                  <td><strong>{b.name}</strong></td>
+                  <td>{b.dims}</td>
+                  <td>{b.wall}</td>
+                  <td><strong>RM {b.price.toFixed(2)}</strong></td>
+                  <td>{b.use}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
@@ -389,60 +343,38 @@ const faqSchema = {
         <h3>Kotak Kardus Terpakai (Used / Recycled Carton Boxes)</h3>
 
         <p>
-          Kotak terpakai kami telah melalui pemeriksaan kualiti — kukuh dan sesuai untuk pindah rumah, penyimpanan, dan logistik. Harga lebih rendah sehingga <strong>50% berbanding kotak baru</strong>, dan ia juga pilihan yang lebih mesra alam (<em>eco-friendly packaging</em>).
+          Kotak terpakai kami adalah gred sekali guna yang telah melalui pemeriksaan kualiti — kukuh dan sesuai untuk pindah rumah, penyimpanan, dan logistik. Harga lebih rendah sehingga <strong>50% berbanding kotak baru</strong>, dan ia juga pilihan yang lebih mesra alam (<em>eco-friendly packaging</em>). Stok kotak terpakai berubah mengikut kemasukan — status di bawah adalah pada tarikh kemas kini artikel ini.
         </p>
 
         <div class="article-table-wrap">
           <table class="article-table">
             <thead>
               <tr>
-                <th>Saiz</th>
-                <th>Dimensi (Anggaran)</th>
+                <th>Model</th>
+                <th>Dimensi (mm)</th>
                 <th>Jenis Dinding</th>
                 <th>Harga / Kotak</th>
-                <th>Min. Kuantiti</th>
+                <th>Status Stok</th>
                 <th>Sesuai Untuk</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><strong>S</strong></td>
-                <td>~30 × 20 × 20</td>
-                <td>Single Wall</td>
-                <td><strong>RM 0.90</strong></td>
-                <td>200 kotak</td>
-                <td>Simpanan, pindah, pembungkusan musiman</td>
-              </tr>
-              <tr>
-                <td><strong>M</strong></td>
-                <td>~40 × 30 × 25</td>
-                <td>Single Wall</td>
-                <td><strong>RM 1.50</strong></td>
-                <td>150 kotak</td>
-                <td>Pindah rumah am, simpanan</td>
-              </tr>
-              <tr>
-                <td><strong>L</strong></td>
-                <td>~60 × 40 × 40</td>
-                <td>Double Wall</td>
-                <td><strong>RM 2.50</strong></td>
-                <td>100 kotak</td>
-                <td>Syarikat mover, gudang, simpanan berat</td>
-              </tr>
-              <tr>
-                <td><strong>XL</strong></td>
-                <td>~70 × 50 × 50</td>
-                <td>Double Wall</td>
-                <td><strong>RM 3.80</strong></td>
-                <td>50 kotak</td>
-                <td>Kerja pindah besar, simpanan pukal</td>
-              </tr>
+              {usedBoxes.map(b => (
+                <tr>
+                  <td><strong>{b.name}</strong></td>
+                  <td>{b.dims}</td>
+                  <td>{b.wall}</td>
+                  <td><strong>RM {b.price.toFixed(2)}</strong></td>
+                  <td>{b.inStock ? '✅ Ada stok' : '⏳ Kehabisan (akan masuk semula)'}</td>
+                  <td>{b.use}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
 
         <p>
-          <em>Nota: Dimensi kotak terpakai adalah anggaran kerana saiz mungkin berbeza sedikit. Harga adalah harga borong per unit berdasarkan minimum pembelian RM 1,000.</em>
+          <em>Nota: Harga adalah harga borong per unit. Stok kotak terpakai berpusing — model yang kehabisan biasanya masuk semula dalam beberapa minggu. Semak stok masa nyata di <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a> atau WhatsApp kami untuk pengesahan segera.</em>
         </p>
 
         ---
@@ -480,9 +412,10 @@ const faqSchema = {
           Ini adalah keperluan utama. Gunakan <strong>pelbagai saiz</strong> untuk memaksimumkan ruang dan melindungi barang anda:
         </p>
         <ul>
-          <li><strong>Saiz S &amp; M</strong> — untuk buku, pinggan mangkuk, alat memasak, pakaian berlipat, dan aksesori</li>
-          <li><strong>Saiz L</strong> — untuk barangan bilik tidur, barang elektrik sederhana, dan barangan dapur besar</li>
-          <li><strong>Saiz XL</strong> — untuk bantal, selimut, lampu lantai, cermin, dan barang ringan tetapi besar</li>
+          <li><strong>Saiz kecil</strong> (cth. Carton Box A4 310×220×220mm, Used MG 380×230×270mm) — untuk buku, pinggan mangkuk, alat memasak, dan aksesori</li>
+          <li><strong>Saiz sederhana</strong> (cth. Box A3 440×310×230mm, Used Yellow 460×330×310mm) — untuk pakaian berlipat, barang elektrik sederhana, dan barangan dapur</li>
+          <li><strong>Saiz besar</strong> (cth. NLN Double Wall 590×390×390mm, Used PDC 590×380×380mm) — untuk barangan bilik tidur dan barangan rumah besar</li>
+          <li><strong>Saiz jumbo</strong> (cth. Jumbo XL 485×485×500mm, Used Golden 510×510×510mm) — untuk bantal, selimut, lampu lantai, dan barang ringan tetapi besar</li>
         </ul>
 
         <div class="article-callout article-callout--yellow">
@@ -533,7 +466,7 @@ const faqSchema = {
         <ul>
           <li><strong>Cermin &amp; lukisan</strong> — gunakan kotak cermin (<em>mirror box</em>) atau binkai dengan buih keras</li>
           <li><strong>Pakaian tergantung</strong> — gunakan <em>wardrobe box</em> yang mempunyai palang untuk baju bergantung</li>
-          <li><strong>Elektronik besar</strong> — simpan dalam kotak asal jika ada, atau gunakan kotak XL double wall</li>
+          <li><strong>Elektronik besar</strong> — simpan dalam kotak asal jika ada, atau gunakan kotak jumbo double wall (cth. Jumbo XL 485×485×500mm)</li>
           <li><strong>Dokumen penting</strong> — simpan dalam fail kalis air dan bawa bersama anda, jangan masuk dalam trak</li>
         </ul>
 
@@ -555,12 +488,12 @@ const faqSchema = {
               </tr>
             </thead>
             <tbody>
-              <tr><td>Bilik Tidur Utama</td><td>12–18 kotak</td><td>S, M, L</td></tr>
-              <tr><td>Bilik Tidur 2 &amp; 3</td><td>8–12 kotak setiap satu</td><td>S, M</td></tr>
-              <tr><td>Dapur</td><td>15–25 kotak</td><td>S, M (barang berat kecil)</td></tr>
-              <tr><td>Ruang Tamu &amp; Makan</td><td>8–15 kotak</td><td>M, L</td></tr>
-              <tr><td>Bilik Mandi</td><td>3–5 kotak</td><td>S, M</td></tr>
-              <tr><td>Stor / Garaj</td><td>10–20 kotak</td><td>L, XL</td></tr>
+              <tr><td>Bilik Tidur Utama</td><td>12–18 kotak</td><td>Kecil, sederhana &amp; besar</td></tr>
+              <tr><td>Bilik Tidur 2 &amp; 3</td><td>8–12 kotak setiap satu</td><td>Kecil &amp; sederhana</td></tr>
+              <tr><td>Dapur</td><td>15–25 kotak</td><td>Kecil (barang berat kecil)</td></tr>
+              <tr><td>Ruang Tamu &amp; Makan</td><td>8–15 kotak</td><td>Sederhana &amp; besar</td></tr>
+              <tr><td>Bilik Mandi</td><td>3–5 kotak</td><td>Kecil</td></tr>
+              <tr><td>Stor / Garaj</td><td>10–20 kotak</td><td>Besar &amp; jumbo</td></tr>
               <tr><td><strong>Jumlah (3 Bilik)</strong></td><td><strong>56–95 kotak</strong></td><td>Campuran semua saiz</td></tr>
             </tbody>
           </table>
@@ -586,7 +519,7 @@ const faqSchema = {
             <strong>WhatsApp kami</strong> — hantar mesej ke <a href={WA_LINK}>016-891 6381</a> dengan senarai kuantiti dan saiz yang dikehendaki. Kami akan sahkan ketersediaan dan hantar sebut harga dalam masa 1 hari perniagaan.
           </li>
           <li>
-            <strong>Atau beli dalam talian</strong> — lawati <a href="/shop">kedai dalam talian kami</a> untuk melihat semua produk dan harga. Tambah ke troli dan kami akan hubungi anda melalui WhatsApp untuk pengesahan.
+            <strong>Atau beli dalam talian</strong> — lawati kedai online kami di <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a> untuk melihat stok masa nyata, harga terkini, dan membuat pesanan terus. Anda juga boleh lihat katalog di <a href="/shop">laman shop kami</a>.
           </li>
           <li>
             <strong>Pembayaran &amp; penghantaran</strong> — selepas pengesahan, lakukan pembayaran dan kami akan susun penghantaran ke alamat anda di seluruh Semenanjung Malaysia.
@@ -617,8 +550,8 @@ const faqSchema = {
         <div class="sidebar-cta">
           <div class="tag tag--yellow">Dapatkan Kotak Anda</div>
           <h3>Pindah rumah? Kami ada kotak yang betul untuk anda.</h3>
-          <p>Kotak baru dari <strong>RM 1.90</strong> sekotak.<br />Kotak terpakai dari <strong>RM 0.90</strong> sekotak.</p>
-          <a href="/shop" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:0.75rem">Lihat Semua Produk</a>
+          <p>Kotak baru dari <strong>RM 1.10</strong> sekotak.<br />Kotak terpakai dari <strong>RM 0.90</strong> sekotak (ikut stok).</p>
+          <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:0.75rem">Lihat Stok &amp; Beli Online</a>
           <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="width:100%;justify-content:center">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             WhatsApp 016-891 6381
@@ -656,7 +589,7 @@ const faqSchema = {
 
         <div class="faq-item">
           <h3 class="faq-q">Di mana boleh beli kotak pindah rumah murah di Malaysia?</h3>
-          <p class="faq-a">Quinocycle Sdn. Bhd. di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor menjual kotak kardus pindah rumah borong dari <strong>RM 0.90 sekotak</strong> (terpakai) hingga RM 6.50 sekotak (baru XL). Penghantaran ke seluruh Semenanjung Malaysia. WhatsApp: 016-891 6381.</p>
+          <p class="faq-a">Quinocycle Sdn. Bhd. di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor menjual kotak kardus pindah rumah borong: <strong>13 model kotak terpakai dari RM 0.90 sekotak</strong> (ikut stok semasa) dan <strong>10 model kotak baru dari RM 1.10 hingga RM 38.00</strong> (jumbo cargo 760mm). Semak stok terkini di <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a>. Penghantaran ke seluruh Semenanjung Malaysia. WhatsApp: 016-891 6381.</p>
         </div>
 
         <div class="faq-item">
@@ -671,7 +604,7 @@ const faqSchema = {
 
         <div class="faq-item">
           <h3 class="faq-q">Apakah saiz kotak yang paling sesuai untuk pindah rumah?</h3>
-          <p class="faq-a">Gunakan <strong>Saiz S &amp; M</strong> untuk barang berat seperti buku, pinggan, dan alatan dapur. Gunakan <strong>Saiz L &amp; XL</strong> untuk barang ringan yang besar seperti bantal, selimut, dan pakaian. Ini memudahkan pengangkutan dan mengelakkan kotak daripada terkoyak akibat terlalu berat.</p>
+          <p class="faq-a">Gunakan <strong>saiz kecil &amp; sederhana</strong> (cth. Carton Box A4 310×220×220mm, Used Yellow 460×330×310mm) untuk barang berat seperti buku, pinggan, dan alatan dapur. Gunakan <strong>saiz besar &amp; jumbo</strong> (cth. NLN 590×390×390mm, Jumbo XL 485×485×500mm, Used Golden 510×510×510mm) untuk barang ringan yang besar seperti bantal, selimut, dan pakaian. Ini memudahkan pengangkutan dan mengelakkan kotak daripada terkoyak akibat terlalu berat.</p>
         </div>
 
         <div class="faq-item">
@@ -681,7 +614,7 @@ const faqSchema = {
 
         <div class="faq-item">
           <h3 class="faq-q">How much do moving boxes (carton boxes) cost in Malaysia?</h3>
-          <p class="faq-a">At Quinocycle Malaysia: <strong>New boxes</strong> — RM 1.90 (S), RM 2.80 (M), RM 4.50 (L), RM 6.50 (XL). <strong>Used/recycled boxes</strong> — RM 0.90 (S), RM 1.50 (M), RM 2.50 (L), RM 3.80 (XL). Wholesale pricing, minimum order RM 1,000. Located at Balakong, Selangor with delivery across Peninsular Malaysia.</p>
+          <p class="faq-a">At Quinocycle Malaysia: <strong>New boxes</strong> — from RM 1.10 (Mini XS) to RM 9.00 (Jumbo XL), with XXL cargo boxes at RM 28.00–38.00. <strong>Used/recycled boxes</strong> — from RM 0.90 (subject to stock; in-stock models currently from RM 1.70) up to RM 6.00 (Jumbo Golden). Check live stock at <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a>. Wholesale pricing, minimum order RM 1,000. Located at Balakong, Selangor with delivery across Peninsular Malaysia.</p>
         </div>
 
       </div>
@@ -694,7 +627,7 @@ const faqSchema = {
       <div class="article-cta-box">
         <div class="tag tag--yellow">Bersedia untuk Pindah?</div>
         <h2>Dapatkan kotak pindah rumah anda hari ini.</h2>
-        <p>Kotak baru dari RM 1.90 · Kotak terpakai dari RM 0.90 · Penghantaran ke seluruh Semenanjung Malaysia</p>
+        <p>Kotak baru dari RM 1.10 · Kotak terpakai dari RM 0.90 (ikut stok) · Penghantaran ke seluruh Semenanjung Malaysia</p>
         <div class="article-cta-box__btns">
           <a href="/shop" class="btn btn-primary btn-lg">Lihat Semua Produk</a>
           <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
