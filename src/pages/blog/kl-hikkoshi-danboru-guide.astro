@@ -1,0 +1,460 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: 'クアラルンプール引っ越しガイド — マレーシアで段ボール箱を安く買う方法',
+  description: 'KL・セランゴールでの引っ越しに必要な段ボールの入手方法を解説。中古段ボールはRM0.90〜、新品はRM1.10〜。3LDK相当なら50〜70箱が目安。バラコンの卸倉庫からモントキアラなどKL全域へ配達、RM300以上でKL・セランゴール送料無料。',
+  date: '2026-08-20',
+  readTime: '8分',
+  category: '引っ越しガイド',
+  author: 'Quinocycle Team',
+  slug: 'kl-hikkoshi-danboru-guide',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20like%20to%20ask%20about%20moving%20boxes.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd.",
+    "url": "https://www.quinocycle.com.my"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.quinocycle.com.my/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.quinocycle.com.my/blog/kl-hikkoshi-danboru-guide"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.quinocycle.com.my/images/blog-movers-guide.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  "keywords": "マレーシア 引っ越し, クアラルンプール 段ボール, マレーシア 段ボール 購入, KL 引越し, 段ボール 販売 マレーシア, 本帰国 荷造り, モントキアラ 引っ越し, Quinocycle Balakong"
+};
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "マレーシア・セランゴール州バラコンの段ボール箱卸売業者。新品・中古（工場一回使用グレード）の段ボールを倉庫価格で販売。KL・セランゴール全域に配達、オンラインストアでの注文にも対応。",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "priceRange": "RM0.90 – RM38.00",
+  "areaServed": "Kuala Lumpur & Selangor, Malaysia"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "クアラルンプールで引っ越し用の段ボールはどこで安く買えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "最も安いのは卸売倉庫からの直接購入です。セランゴール州バラコンのQuinocycleでは、中古段ボール（工場で一回だけ使われた検品済みの箱）が1箱RM0.90〜RM6.00、新品がRM1.10〜RM9.00で購入できます。オンラインストア shop.quinocycle.com から注文すれば自宅まで配達され、RM300以上の注文はKL・セランゴール送料無料です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "中古段ボールは衛生面で問題ありませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quinocycleの中古段ボールは、工場で一回だけ使用された「ワンスユース」グレードです。倉庫で一箱ずつ検品し、乾燥していること・臭いがないこと・構造に損傷がないことを確認したものだけを販売しています。数日間の引っ越し用途であれば新品と実用上ほぼ変わらず、価格は大幅に抑えられます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "日本語で問い合わせはできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "スタッフの対応言語は英語のため、恐れ入りますがWhatsApp（016-891 6381）へは英語でご連絡いただくと最も早く返信できます。簡単な英語で十分です。会話が不要な方は、オンラインストア shop.quinocycle.com からそのまま注文でき、商品は自宅まで配達されるので倉庫まで行く必要はありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "3LDK相当の住まいだと段ボールは何箱必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "3LDK相当のコンドミニアムや一軒家であれば、目安は50〜70箱です。書籍や食器は小さめの箱、衣類や日用品は中くらいの箱に分けるのが基本です。本帰国の船便向けには、T760（760×760×760mm）やBW800（800×400×800mm）といったXXLカーゴボックス（RM28〜RM38）も用意しています。"
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title={`${post.title} — Quinocycle Blog`}
+  description={post.description}
+  lang="ja"
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container article-hero__inner">
+      <a href="/blog" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        ブログ一覧へ戻る
+      </a>
+      <div class="tag tag--yellow" style="margin-top:1.5rem">{post.category}</div>
+      <h1 class="article-hero__title">{post.title}</h1>
+      <div class="article-meta">
+        <time datetime={post.date}>{new Date(post.date).toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        <span>·</span>
+        <span>読了目安 {post.readTime}</span>
+        <span>·</span>
+        <span>執筆：{post.author}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <div class="container" style="margin-bottom:2rem;margin-top:-1rem">
+    <img
+      src="/images/blog-movers-guide.jpg"
+      alt="マレーシア・クアラルンプールの引っ越し用段ボール箱 — セランゴール州バラコンのQuinocycle倉庫"
+      style="width:100%;max-height:460px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);display:block;"
+      loading="eager"
+      width="1280"
+      height="720"
+    />
+  </div>
+
+  <!-- Article Body -->
+  <article class="article-body">
+    <div class="container article-body__inner">
+      <div class="article-content">
+
+        <p class="article-lead">
+          モントキアラのコンドから別のユニットへ、アンパンからブキッビンタンへ、あるいは任期を終えて日本へ本帰国 — マレーシアでの引っ越しで最初につまずくのが、意外にも<strong>「段ボール箱はどこで買うのか」</strong>という問題です。日本のように引越し業者が資材一式を持ってきてくれるとは限らず、KLでは箱は自分で手配するケースが多いのが実情です。この記事では、マレーシアで段ボールを購入できる場所の比較、中古と新品の違い、必要な箱数の目安、そして実際の価格まで、KL在住の日本人の方に向けてまとめました。
+        </p>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>先に結論：</strong>一番安いのは卸売倉庫からの直接購入です。Quinocycle（セランゴール州バラコン）なら中古段ボールが1箱 <strong>RM0.90〜</strong>、新品が <strong>RM1.10〜</strong>。オンラインストア <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a> から注文すれば自宅まで配達（<strong>RM300以上でKL・セランゴール送料無料</strong>）。WhatsApp：<a href={WA_LINK}>016-891 6381</a>（英語でのご連絡が最も早く返信できます）。
+        </div>
+
+        <h2>マレーシアで段ボールはどこで買える？3つの選択肢</h2>
+
+        <p>
+          KLで引っ越し用の段ボールを手に入れる方法は、大きく分けて3つあります。
+        </p>
+
+        <ul>
+          <li><strong>スーパーマーケットでもらう。</strong>費用はかかりませんが、サイズがバラバラで数も揃わず、食品の臭いが残っていたり強度が不十分だったりすることも。数箱の小さな整理には使えても、家一軒分の引っ越しには現実的ではありません。</li>
+          <li><strong>ホームセンターや文具店で買う。</strong>確実に新品が手に入りますが、小売価格のため1箱あたりの単価が高く、50箱以上必要になる引っ越しでは合計金額がかさみます。車で持ち帰る手間もあります。</li>
+          <li><strong>卸売倉庫から直接買う。</strong>Quinocycleのような段ボール卸売業者から購入すると、小売店を介さない倉庫価格で、同じサイズの箱を必要な数だけまとめて揃えられます。中古なら1箱RM0.90から。オンライン注文で配達もされるため、実は一番手間がかからない方法です。</li>
+        </ul>
+
+        <h2>中古段ボール vs 新品 — どちらを選ぶべき？</h2>
+
+        <p>
+          「中古の段ボール」と聞くと不安に感じるかもしれませんが、Quinocycleで販売している中古箱は、<strong>工場で一回だけ使用された「ワンスユース」グレード</strong>です。何度も転売を繰り返したヨレヨレの箱ではありません。倉庫で一箱ずつ検品し、<strong>乾燥していること・臭いがないこと・構造に損傷がないこと</strong>を確認したものだけを出荷しています。
+        </p>
+
+        <p>
+          使い分けの目安はシンプルです。引っ越しで箱が活躍するのは数日間だけなので、<strong>ほとんどの荷物は中古で十分</strong>。一方、割れ物や長期保管する荷物、本帰国の船便に載せる荷物には、一度も使われていない新品を選ぶと安心です。詳しくは<a href="/used-carton-boxes">中古段ボールのページ（英語）</a>もご覧ください。
+        </p>
+
+        <h2>必要な箱数の目安 — 3LDKなら50〜70箱</h2>
+
+        <p>
+          日本人のお客様からよくいただく質問が「何箱必要ですか？」。目安として、<strong>3LDK相当のコンドミニアムや一軒家で50〜70箱</strong>です。単身のサービスアパートメントならその半分以下で収まることもありますが、家族での駐在や、数年分の荷物が増えたMM2Hのお住まいでは、思っている以上に箱を使います。
+        </p>
+
+        <ul>
+          <li><strong>本・食器・調味料</strong> — 重いものは小さめの箱へ。大きい箱に詰めると持ち上げられなくなります。</li>
+          <li><strong>衣類・日用品・キッチン用品</strong> — 中くらいの箱が主力。引っ越し全体の半分以上はこのサイズです。</li>
+          <li><strong>布団・クッション・かさばる軽いもの</strong> — 大きめの箱やXXLカーゴボックスへ。</li>
+        </ul>
+
+        <p>
+          箱数は少し多めに見積もるのが鉄則です。当日に足りなくなると荷造りが止まってしまいます。
+        </p>
+
+        <h2>実際の価格 — バラコン倉庫の卸価格</h2>
+
+        <p>
+          以下はQuinocycleの実際の販売価格です。在庫は入れ替わるため、最新の価格とサイズは<a href="/shop">ショップページ</a>またはオンラインストアでご確認ください。
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>種類</th>
+                <th>価格帯（1箱）</th>
+                <th>特徴・用途</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>中古段ボール</strong></td>
+                <td><strong>RM0.90 〜 RM6.00</strong></td>
+                <td>工場一回使用グレード。検品済み（乾燥・無臭・損傷なし）。引っ越しの主力に。現在の在庫最安値はRM1.70（在庫は変動します）</td>
+              </tr>
+              <tr>
+                <td><strong>新品段ボール</strong></td>
+                <td><strong>RM1.10 〜 RM9.00</strong></td>
+                <td>未使用。割れ物・長期保管・船便向け</td>
+              </tr>
+              <tr>
+                <td><strong>XXLカーゴボックス T760</strong></td>
+                <td rowspan="2"><strong>RM28 〜 RM38</strong></td>
+                <td>760 × 760 × 760mm。布団・大型の荷物・貨物の集約に</td>
+              </tr>
+              <tr>
+                <td><strong>XXLカーゴボックス BW800</strong></td>
+                <td>800 × 400 × 800mm。細長い荷物や衣類の大量梱包に</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="article-callout">
+          <strong>本帰国の方へ：</strong>日本への船便・航空便に荷物をまとめる際、T760やBW800のようなXXLカーゴボックスは小さい箱を集約するのに便利です。輸送会社の規定サイズ・重量は事前に各社へご確認ください。
+        </div>
+
+        <h2>注文方法 — 倉庫まで行く必要はありません</h2>
+
+        <p>
+          バラコンはKL中心部から車で30〜40分ほどかかりますが、<strong>わざわざ倉庫まで運転して行く必要はありません</strong>。注文方法は2つです。
+        </p>
+
+        <ol>
+          <li><strong>オンラインストアで注文する。</strong><a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a> で商品を選んでそのまま注文すれば、自宅やオフィスまで配達されます。会話は一切不要なので、英語でのやり取りに自信がない方にも一番簡単な方法です。</li>
+          <li><strong>WhatsAppで相談する。</strong>「3LDKで箱は何箱必要？」といった相談は <a href={WA_LINK}>016-891 6381</a> へ。スタッフの対応言語は英語のため、恐れ入りますが<strong>英語（簡単な英語で十分です）でメッセージをいただくと最も早く返信できます</strong>。必要な箱のリストを送っていただければ、見積もりと在庫状況をお答えします。</li>
+        </ol>
+
+        <p>
+          <strong>RM300以上のご注文はKL・セランゴール内の配達無料</strong>です。3LDKの引っ越し（50〜70箱）ならほとんどの場合この条件を満たします。倉庫での直接受け取りも可能です（月〜金 9:00〜17:00、土 9:00〜13:00）。
+        </p>
+
+        <h2>配達エリア — モントキアラからKLIAまで</h2>
+
+        <p>
+          配達対応エリアは、<strong>モントキアラ、ブキッビンタン、アンパン</strong>を含むクアラルンプール全域と、セランゴール州（カジャン、バンギ、サイバージャヤ、KLIA周辺を含む）です。日本人の方が多く住むエリアはすべてカバーしています。
+        </p>
+
+        <div class="article-callout">
+          <strong>正直にお伝えすると：</strong>Quinocycleは引越し業者ではなく、<strong>段ボール箱と梱包資材の販売会社</strong>です。荷物の運搬サービスは行っていません。引越し業者をご利用の場合は、業者の作業日より前に当社の箱で荷造りを済ませておくと、当日がスムーズに進みます。
+        </div>
+
+        <h2>まとめ</h2>
+
+        <p>
+          マレーシアでの引っ越しは、段ボールを「スーパーで集める」か「小売店で高く買う」の二択ではありません。卸売倉庫から直接買えば、中古RM0.90〜・新品RM1.10〜の倉庫価格で、同じ規格の箱を必要な数だけ揃えられます。3LDK相当なら50〜70箱が目安。<a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">オンラインストア</a>で注文すれば自宅まで届き、RM300以上でKL・セランゴールは送料無料です。英語ページは <a href="/moving-boxes-malaysia">English version</a> をご覧ください。よい引っ越しを！
+        </p>
+
+      </div><!-- /.article-content -->
+
+      <!-- Sidebar CTA -->
+      <aside class="article-sidebar">
+        <div class="sidebar-cta">
+          <div class="tag tag--yellow">引っ越し用段ボール</div>
+          <h3>バラコン倉庫からKL・セランゴール全域へ配達。</h3>
+          <p>中古段ボール <strong>RM0.90〜</strong>／箱<br />新品段ボール <strong>RM1.10〜</strong>／箱</p>
+          <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:0.75rem">オンラインストアで注文</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="width:100%;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp 016-891 6381
+          </a>
+          <p class="sidebar-cta__note">※スタッフは英語で対応します<br />月〜金 9:00–17:00 · 土 9:00–13:00<br />倉庫：Taming Jaya, Balakong, Selangor</p>
+        </div>
+
+        <div class="sidebar-links">
+          <div class="sidebar-links__title">関連ページ</div>
+          <a href="/moving-boxes-malaysia" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Moving Boxes Malaysia（English version）
+          </a>
+          <a href="/used-carton-boxes" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Used Carton Boxes（中古段ボール）
+          </a>
+          <a href="/shop" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            全商品を見る（Shop）
+          </a>
+          <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            オンラインストア shop.quinocycle.com
+          </a>
+        </div>
+      </aside>
+
+    </div><!-- /.article-body__inner -->
+  </article>
+
+  <!-- FAQ Section (AEO) -->
+  <section class="article-faq">
+    <div class="container">
+      <div class="section-eyebrow">FAQ</div>
+      <h2 class="section-title" style="margin-bottom:2rem">よくある質問<br /><span style="font-size:0.6em;opacity:0.6">マレーシアでの段ボール購入・引っ越し準備</span></h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3 class="faq-q">クアラルンプールで引っ越し用の段ボールはどこで安く買えますか？</h3>
+          <p class="faq-a">最も安いのは<strong>卸売倉庫からの直接購入</strong>です。セランゴール州バラコンのQuinocycleでは、中古段ボール（工場で一回だけ使われた検品済みの箱）が1箱<strong>RM0.90〜RM6.00</strong>、新品が<strong>RM1.10〜RM9.00</strong>で購入できます。オンラインストア shop.quinocycle.com から注文すれば自宅まで配達され、RM300以上の注文はKL・セランゴール送料無料です。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">中古段ボールは衛生面で問題ありませんか？</h3>
+          <p class="faq-a">Quinocycleの中古段ボールは、工場で一回だけ使用された<strong>「ワンスユース」グレード</strong>です。倉庫で一箱ずつ検品し、<strong>乾燥していること・臭いがないこと・構造に損傷がないこと</strong>を確認したものだけを販売しています。数日間の引っ越し用途であれば新品と実用上ほぼ変わらず、価格は大幅に抑えられます。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">日本語で問い合わせはできますか？</h3>
+          <p class="faq-a">スタッフの対応言語は英語のため、恐れ入りますがWhatsApp（<strong>016-891 6381</strong>）へは<strong>英語でご連絡いただくと最も早く返信できます</strong>。簡単な英語で十分です。会話が不要な方は、オンラインストア shop.quinocycle.com からそのまま注文でき、商品は自宅まで配達されるので倉庫まで行く必要はありません。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">3LDK相当の住まいだと段ボールは何箱必要ですか？</h3>
+          <p class="faq-a">3LDK相当のコンドミニアムや一軒家であれば、目安は<strong>50〜70箱</strong>です。書籍や食器は小さめの箱、衣類や日用品は中くらいの箱に分けるのが基本です。本帰国の船便向けには、T760（760×760×760mm）やBW800（800×400×800mm）といった<strong>XXLカーゴボックス（RM28〜RM38）</strong>も用意しています。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="article-cta-section">
+    <div class="container">
+      <div class="article-cta-box">
+        <div class="tag tag--yellow">KL・セランゴール配達対応</div>
+        <h2>引っ越し用の段ボール、今日注文できます。</h2>
+        <p>中古 RM0.90〜 · 新品 RM1.10〜 · RM300以上でKL・セランゴール送料無料 · モントキアラ／ブキッビンタン／アンパン配達可</p>
+        <div class="article-cta-box__btns">
+          <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">オンラインストアで注文</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsAppで問い合わせ（英語）
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.article-faq {
+  padding: 5rem 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.faq-list { display: flex; flex-direction: column; gap: 1.25rem; max-width: 860px; }
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.2s;
+}
+.faq-item:hover { border-color: var(--border-yellow); }
+.faq-q {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-1);
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+.faq-a {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: 0;
+}
+.article-cta-section { padding: 5rem 0; }
+.article-cta-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-yellow);
+  border-radius: var(--radius);
+  padding: 3rem;
+  text-align: center;
+  box-shadow: var(--glow-sm);
+}
+.article-cta-box h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 900;
+  color: var(--text-1);
+  margin: 1rem 0 0.75rem;
+}
+.article-cta-box p { color: var(--text-2); margin-bottom: 2rem; }
+.article-cta-box__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.article-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.article-table th {
+  background: var(--bg-3);
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-yellow);
+  white-space: nowrap;
+}
+.article-table td {
+  padding: 0.75rem 1rem;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.article-table tbody tr:hover td { background: var(--bg-card-hov); }
+.article-table td strong { color: var(--text-1); }
+</style>

@@ -1,0 +1,497 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: '马来西亚搬家纸箱指南 — 吉隆坡/雪兰莪哪里买纸箱最便宜？',
+  description: '搬家纸箱去哪里买最便宜？五金店一个纸箱要RM8–12，批发仓库二手纸箱从RM0.90起。二手 vs 全新纸箱对比、三房式约需50–70个纸箱、真实价格表、打包技巧 — 来自雪兰莪Balakong纸箱批发仓库的实用指南。',
+  date: '2026-08-20',
+  readTime: '8 分钟',
+  category: '搬家指南',
+  author: 'Quinocycle 团队',
+  slug: 'malaysia-banjia-zhixiang-guide',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20like%20to%20ask%20about%20moving%20boxes%20%2F%20carton%20boxes.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "zh-MY",
+  "author": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd.",
+    "url": "https://www.quinocycle.com.my"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.quinocycle.com.my/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.quinocycle.com.my/blog/malaysia-banjia-zhixiang-guide"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.quinocycle.com.my/images/blog-movers-guide.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  "keywords": "搬家纸箱, 纸箱 马来西亚, 二手纸箱, 纸箱批发, 吉隆坡纸箱, 雪兰莪纸箱, 搬家箱子, 纸皮箱, Quinocycle Balakong"
+};
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "纸箱批发商 — 全新与一次性使用工厂级二手纸箱，供搬家、网店、仓储与物流使用。仓库位于雪兰莪Balakong，配送范围覆盖整个西马。",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "priceRange": "RM0.90 – RM9.00 / 个",
+  "areaServed": "西马 (Peninsular Malaysia)"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "吉隆坡/雪兰莪哪里买搬家纸箱最便宜？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "最便宜的方式是直接向纸箱批发仓库购买，跳过零售中间商。五金店或文具店一个纸箱通常卖RM8–12，而Quinocycle位于雪兰莪Balakong的批发仓库，二手纸箱价格从RM0.90起（目前现货最低RM1.70，库存会轮换），全新纸箱从RM1.10起。KL和雪兰莪订单满RM300免运费，也可以自取。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "二手纸箱干净吗？可以用来搬家吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。Quinocycle的二手纸箱是一次性使用的工厂级纸箱 — 只被工厂使用过一次，之后逐个检查，必须干燥、无异味、结构完好才会出售。搬家只需要纸箱撑几天，二手纸箱是性价比最高的选择，价格通常只有全新纸箱的一半左右。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "三房式的家需要多少个搬家纸箱？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "三房式（3房）住家一般需要50–70个纸箱。单身公寓或一房式约15–25个，两房式约30–45个，四房式或有地住宅可能需要70–100个。建议以中号纸箱为主，重物（书本、厨具）用小号，轻而大的物品（棉被、枕头、衣服）才用大号。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "怎样向Quinocycle订购纸箱？可以用中文吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "两个方式：(1) WhatsApp 016-891 6381，发送你需要的尺寸和数量，我们会回复报价和现货情况 — 客服以英文/马来文回复最快，中文讯息我们也欢迎，会通过翻译处理；(2) 直接上网店 shop.quinocycle.com 下单。批发订单最低RM1,000，小数量（如一次搬家）请直接WhatsApp询价。KL和雪兰莪订单满RM300免运费。"
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title={`${post.title} — Quinocycle 博客`}
+  description={post.description}
+  lang="zh"
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container article-hero__inner">
+      <a href="/blog" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        返回博客
+      </a>
+      <div class="tag tag--yellow" style="margin-top:1.5rem">{post.category}</div>
+      <h1 class="article-hero__title">{post.title}</h1>
+      <div class="article-meta">
+        <time datetime={post.date}>{new Date(post.date).toLocaleDateString('zh-CN', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        <span>·</span>
+        <span>阅读时间 {post.readTime}</span>
+        <span>·</span>
+        <span>作者：{post.author}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <div class="container" style="margin-bottom:2rem;margin-top:-1rem">
+    <img
+      src="/images/blog-movers-guide.jpg"
+      alt="马来西亚搬家纸箱 — 吉隆坡雪兰莪二手纸箱与全新纸箱批发，Quinocycle Balakong 仓库"
+      style="width:100%;max-height:460px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);display:block;"
+      loading="eager"
+      width="1280"
+      height="720"
+    />
+  </div>
+
+  <!-- Article Body -->
+  <article class="article-body">
+    <div class="container article-body__inner">
+      <div class="article-content">
+
+        <p class="article-lead">
+          准备搬家，第一个头痛的问题往往不是搬运公司，而是<strong>搬家纸箱去哪里买、要买多少个、买二手还是全新</strong>。在马来西亚，同样一个纸箱，五金店卖RM8–12，批发仓库却从RM0.90起 — 差价可以去到十倍。这篇指南把吉隆坡和雪兰莪买纸箱的几个渠道、二手与全新的分别、每种房型需要的数量、以及我们Balakong仓库的真实价格，一次讲清楚。
+        </p>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>快速答案：</strong>吉隆坡/雪兰莪买搬家纸箱最便宜的方式是直接向<strong>纸箱批发仓库</strong>购买。Quinocycle二手纸箱从<strong>RM0.90</strong>起（现货最低RM1.70），全新纸箱从<strong>RM1.10</strong>起。仓库：No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor &bull; WhatsApp：<a href={WA_LINK}>016-891 6381</a> &bull; KL &amp; 雪兰莪订单满RM300免运费。
+        </div>
+
+        <h2>吉隆坡/雪兰莪哪里买搬家纸箱？三个渠道对比</h2>
+
+        <p>
+          在马来西亚买纸箱，普通消费者一般接触到三个渠道，价格和方便程度差很远：
+        </p>
+
+        <ul>
+          <li><strong>五金店 / 文具店 / 迷你市场</strong> — 最方便，走进去就能买，但一个中号纸箱通常卖<strong>RM8–12</strong>。买五十个搬家，光纸箱就要RM400–600。适合临时只缺一两个箱的情况。</li>
+          <li><strong>向搬运公司加购</strong> — 有些搬运公司提供纸箱配套，方便但价格已包含服务费，一般不便宜，而且尺寸选择有限。</li>
+          <li><strong>纸箱批发仓库（如Quinocycle）</strong> — 直接从仓库拿货，跳过零售环节。二手纸箱从<strong>RM0.90</strong>起，全新纸箱从<strong>RM1.10</strong>起。同样五十个箱，可能RM100左右就搞定。吉隆坡、蕉赖、加影、万宜、赛城、士毛月一带过来Balakong都不远，或者直接安排配送。</li>
+        </ul>
+
+        <p>
+          结论很直接：<strong>只买一两个，楼下五金店就好；一次搬家要几十个，直接找批发仓库</strong>，省下的钱够请一顿搬家饭。
+        </p>
+
+        <h2>二手纸箱 vs 全新纸箱：怎么选？</h2>
+
+        <p>
+          很多人一听"二手纸箱"就皱眉头，其实这是个误会。我们卖的二手纸箱是<strong>一次性使用的工厂级纸箱</strong> — 只被工厂用过一次装货，回收后逐个人工检查：必须<strong>干燥、无异味、结构完好</strong>才能上架。搬家只需要纸箱撑几天到一两周，二手纸箱绰绰有余。
+        </p>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>对比项目</th>
+                <th>二手纸箱</th>
+                <th>全新纸箱</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>价格</strong></td>
+                <td><strong>RM0.90 – RM6.00</strong> / 个</td>
+                <td>RM1.10 – RM9.00 / 个</td>
+              </tr>
+              <tr>
+                <td><strong>状态</strong></td>
+                <td>工厂一次性使用，逐个检查：干燥、无异味、无破损</td>
+                <td>全新未用，外观最整洁</td>
+              </tr>
+              <tr>
+                <td><strong>适合</strong></td>
+                <td>搬家、短期仓储、一般寄货 — 性价比之王</td>
+                <td>长期收藏储存、网店出货形象、装贵重物品</td>
+              </tr>
+              <tr>
+                <td><strong>环保</strong></td>
+                <td>循环再用，更环保</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><strong>库存</strong></td>
+                <td>款式随回收批次轮换，先到先得</td>
+                <td>常规尺寸稳定供应</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          简单的选择法：<strong>搬家选二手，长期储存或做生意出货选全新</strong>。预算允许的话也可以混搭 — 衣服棉被用二手箱，书本文件和易碎品用全新双坑纸箱。
+        </p>
+
+        <h2>不同房型需要多少个纸箱？</h2>
+
+        <p>
+          以我们多年供货给搬家客户的经验，数量大概是这样（以中号纸箱为主）：
+        </p>
+
+        <ul>
+          <li><strong>单身公寓 / 一房式：</strong>约 15–25 个</li>
+          <li><strong>两房式：</strong>约 30–45 个</li>
+          <li><strong>三房式：</strong>约 <strong>50–70 个</strong>（最常见的搬家规模）</li>
+          <li><strong>四房式 / 有地住宅：</strong>约 70–100 个，视杂物多少</li>
+        </ul>
+
+        <p>
+          建议宁可多订一成，也不要搬到一半没箱用 — 临时跑五金店补货，一个RM8–12，之前省下的钱就白省了。
+        </p>
+
+        <h2>Quinocycle 真实价格表（Balakong 仓库）</h2>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>类别</th>
+                <th>说明</th>
+                <th>价格 / 个</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>二手纸箱</strong></td>
+                <td>工厂一次性使用，逐个检查（干燥、无味、无破损）；库存轮换，现货最低目前RM1.70</td>
+                <td><strong>RM0.90 – RM6.00</strong></td>
+              </tr>
+              <tr>
+                <td><strong>全新纸箱</strong></td>
+                <td>全新未用，多种尺寸，适合搬家、网店出货与长期储存</td>
+                <td><strong>RM1.10 – RM9.00</strong></td>
+              </tr>
+              <tr>
+                <td><strong>XXL 货运纸箱</strong></td>
+                <td>T760（760 × 760 × 760mm）、BW800（800 × 400 × 800mm）— 大件物品与货运专用</td>
+                <td><strong>RM28 – RM38</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          完整的型号、尺寸和现货价格，可以浏览网店 <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a> 或本站的 <a href="/shop">产品页</a>。我们也有马来语的<a href="/kotak-pindah-rumah">搬家纸箱价格页（Kotak Pindah Rumah）</a>和英语的 <a href="/used-carton-boxes">used carton boxes</a> 页面，内容和价格是一样的。
+        </p>
+
+        <h2>打包小贴士：让纸箱物尽其用</h2>
+
+        <ol>
+          <li><strong>重物用小箱，轻物用大箱。</strong>书本、厨具、罐头装小箱；棉被、枕头、衣服才装大箱。每箱控制在15kg以内，一个人能搬得动。</li>
+          <li><strong>箱底胶纸贴"十"字。</strong>底部中缝贴一条，再横贴一条加固，重物不怕穿底。</li>
+          <li><strong>易碎品独立包裹，缝隙塞满。</strong>碗碟直立摆放（像放黑胶唱片那样），空隙用旧衣服或报纸填满，摇起来没声音才算合格。</li>
+          <li><strong>每箱写清楚房间 + 内容。</strong>例如"主人房 — 衣服"、"厨房 — 碗碟（易碎）"，搬到新家不用逐箱开盲盒。</li>
+          <li><strong>大件电器用XXL货运纸箱。</strong>风扇、落地灯、小家电这类又大又怕刮的物品，T760或BW800一箱搞定。</li>
+        </ol>
+
+        <h2>配送范围与订购方式</h2>
+
+        <p>
+          我们的仓库位于雪兰莪<strong>Balakong（巴拉贡/无拉港）Taming Jaya</strong>，日常配送覆盖吉隆坡、蕉赖、加影、万宜、赛城、士毛月，以至KLIA一带；其余西马地区也可以安排配送。<strong>KL &amp; 雪兰莪订单满RM300免运费</strong>。
+        </p>
+
+        <ol>
+          <li><strong>列好清单</strong> — 需要什么尺寸、各要多少个。</li>
+          <li><strong>WhatsApp <a href={WA_LINK}>016-891 6381</a></strong> — 发送清单，我们回复报价和现货情况。小提醒：客服以<strong>英文或马来文</strong>回复最快；中文讯息我们同样欢迎，会通过翻译处理，回复稍慢一点。</li>
+          <li><strong>或直接网购</strong> — 上 <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a> 自助下单，也可以选择到仓库自取。</li>
+        </ol>
+
+        <div class="article-callout">
+          <strong>订购须知：</strong>批发订单最低RM1,000；小数量（例如一次搬家的50–70个箱）直接WhatsApp询价即可。营业时间：周一至周五 9:00–17:00，周六 9:00–13:00。地址：No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor。
+        </div>
+
+        <h2>总结</h2>
+
+        <p>
+          在吉隆坡/雪兰莪买搬家纸箱，最省钱的路线只有一条：<strong>跳过零售，直接找批发仓库</strong>。二手纸箱RM0.90起、全新RM1.10起，对比五金店RM8–12一个，五十个箱就是几百令吉的差别。先算好数量（三房式约50–70个），重物小箱轻物大箱，WhatsApp发个清单过来 — 剩下的交给我们。
+        </p>
+
+      </div><!-- /.article-content -->
+
+      <!-- Sidebar CTA -->
+      <aside class="article-sidebar">
+        <div class="sidebar-cta">
+          <div class="tag tag--yellow">搬家纸箱</div>
+          <h3>批发价直取 — Balakong 仓库现货。</h3>
+          <p>二手纸箱 <strong>RM0.90</strong> 起。<br />全新纸箱 <strong>RM1.10</strong> 起。</p>
+          <a href="/shop" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:0.75rem">浏览全部纸箱</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="width:100%;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp 016-891 6381
+          </a>
+          <p class="sidebar-cta__note">周一至五 9am–5pm · 周六 9am–1pm<br />仓库：Taming Jaya, Balakong, Selangor</p>
+        </div>
+
+        <div class="sidebar-links">
+          <div class="sidebar-links__title">相关页面</div>
+          <a href="/kotak-pindah-rumah" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            搬家纸箱价格页（马来语）
+          </a>
+          <a href="/used-carton-boxes" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Used Carton Boxes（英语）
+          </a>
+          <a href="/shop" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            全部纸箱产品
+          </a>
+          <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            网店 shop.quinocycle.com
+          </a>
+        </div>
+      </aside>
+
+    </div><!-- /.article-body__inner -->
+  </article>
+
+  <!-- FAQ Section (AEO) -->
+  <section class="article-faq">
+    <div class="container">
+      <div class="section-eyebrow">常见问题</div>
+      <h2 class="section-title" style="margin-bottom:2rem">搬家纸箱 FAQ<br /><span style="font-size:0.6em;opacity:0.6">吉隆坡 / 雪兰莪 纸箱批发</span></h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3 class="faq-q">吉隆坡/雪兰莪哪里买搬家纸箱最便宜？</h3>
+          <p class="faq-a">最便宜的方式是直接向<strong>纸箱批发仓库</strong>购买，跳过零售中间商。五金店或文具店一个纸箱通常卖RM8–12，而Quinocycle位于雪兰莪Balakong的批发仓库，二手纸箱从<strong>RM0.90</strong>起（目前现货最低RM1.70，库存会轮换），全新纸箱从RM1.10起。KL和雪兰莪订单满RM300免运费，也可以自取。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">二手纸箱干净吗？可以用来搬家吗？</h3>
+          <p class="faq-a">可以。Quinocycle的二手纸箱是<strong>一次性使用的工厂级纸箱</strong> — 只被工厂使用过一次，之后逐个检查，必须干燥、无异味、结构完好才会出售。搬家只需要纸箱撑几天，二手纸箱是性价比最高的选择，价格通常只有全新纸箱的一半左右。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">三房式的家需要多少个搬家纸箱？</h3>
+          <p class="faq-a">三房式（3房）住家一般需要<strong>50–70个纸箱</strong>。单身公寓或一房式约15–25个，两房式约30–45个，四房式或有地住宅可能需要70–100个。建议以中号纸箱为主，重物（书本、厨具）用小号，轻而大的物品（棉被、枕头、衣服）才用大号。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">怎样向Quinocycle订购纸箱？可以用中文吗？</h3>
+          <p class="faq-a">两个方式：(1) <strong>WhatsApp 016-891 6381</strong>，发送你需要的尺寸和数量，我们会回复报价和现货情况 — 客服以英文/马来文回复最快，中文讯息我们也欢迎，会通过翻译处理；(2) 直接上网店 <strong>shop.quinocycle.com</strong> 下单。批发订单最低RM1,000，小数量（如一次搬家）请直接WhatsApp询价。KL和雪兰莪订单满RM300免运费。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="article-cta-section">
+    <div class="container">
+      <div class="article-cta-box">
+        <div class="tag tag--yellow">搬家省钱，从纸箱开始</div>
+        <h2>今天就订好你的搬家纸箱。</h2>
+        <p>二手纸箱 RM0.90 起 · 全新纸箱 RM1.10 起 · KL &amp; 雪兰莪订单满 RM300 免运费</p>
+        <div class="article-cta-box__btns">
+          <a href="/shop" class="btn btn-primary btn-lg">浏览全部纸箱</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            立即 WhatsApp 我们
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.article-faq {
+  padding: 5rem 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.faq-list { display: flex; flex-direction: column; gap: 1.25rem; max-width: 860px; }
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.2s;
+}
+.faq-item:hover { border-color: var(--border-yellow); }
+.faq-q {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-1);
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+.faq-a {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: 0;
+}
+.article-cta-section { padding: 5rem 0; }
+.article-cta-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-yellow);
+  border-radius: var(--radius);
+  padding: 3rem;
+  text-align: center;
+  box-shadow: var(--glow-sm);
+}
+.article-cta-box h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 900;
+  color: var(--text-1);
+  margin: 1rem 0 0.75rem;
+}
+.article-cta-box p { color: var(--text-2); margin-bottom: 2rem; }
+.article-cta-box__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.article-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.article-table th {
+  background: var(--bg-3);
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-yellow);
+  white-space: nowrap;
+}
+.article-table td {
+  padding: 0.75rem 1rem;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.article-table tbody tr:hover td { background: var(--bg-card-hov); }
+.article-table td strong { color: var(--text-1); }
+</style>

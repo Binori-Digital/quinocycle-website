@@ -1,0 +1,201 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CITY = 'Semenyih';
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! Saya nak beli kotak pindah rumah di ${CITY}.`)}`;
+
+const faqs = [
+  {
+    q: 'Ada kilang kotak di Semenyih?',
+    a: 'Tiada kilang atau gudang kotak borong yang beroperasi di dalam Semenyih sendiri. Quinocycle ialah gudang pembekal borong di Taming Jaya, Balakong — bukan cawangan di Semenyih — tetapi harga kami harga kilang, dan kami hantar terus ke Eco Majestic, Setia Ecohill, Bandar Rinching dan pekan Semenyih. Ketahui lebih lanjut tentang bagaimana kami dapatkan harga terus dari kilang di halaman kilang kotak kami.',
+  },
+  {
+    q: 'Berapa lama penghantaran kotak dari Balakong ke Semenyih?',
+    a: 'Gudang kami di Balakong hanya ±20–25 minit dari Semenyih melalui Kajang atau lebuhraya SILK. Pesanan yang disahkan melalui WhatsApp pada waktu pagi biasanya boleh dihantar pada hari yang sama; selewat-lewatnya keesokan hari bekerja. Penghantaran percuma untuk pesanan melebihi RM300 (kawasan KL & Selangor, termasuk Semenyih).',
+  },
+  {
+    q: 'Baru dapat kunci rumah di Eco Majestic / Setia Ecohill — berapa kotak patut saya beli?',
+    a: 'Untuk rumah teres 2 tingkat yang tipikal di taman-taman baru Semenyih, kebanyakan keluarga guna 50–70 kotak campuran saiz. Kotak terpakai dari RM0.90 sesuai untuk pakaian, buku dan mainan anak; kotak baru dari RM1.10 untuk pinggan mangkuk dan barang elektrik; dan kotak kargo XXL (RM28–RM38) untuk tilam kecil atau barang besar. Stok kotak terpakai berubah-ubah — pilihan termurah masa ini sekitar RM1.70 — jadi WhatsApp kami untuk senarai stok terkini.',
+  },
+  {
+    q: 'Saya pelajar Nottingham Malaysia, nak beli 10–15 kotak sahaja. Boleh ke?',
+    a: 'Boleh. Minimum pesanan borong kami RM1,000, tetapi untuk kuantiti kecil seperti keperluan pelajar keluar kolej atau rumah sewa, hantar sahaja senarai kuantiti anda melalui WhatsApp 016-891 6381 dan kami beri sebut harga terus, termasuk kos penghantaran ke kampus atau ke rumah sewa sekitar Semenyih dan Broga. Anda juga boleh order sendiri di shop.quinocycle.com.',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": `Quinocycle — Kotak Pindah Rumah ${CITY}`,
+  "description": `Pembekal kotak pindah rumah untuk kawasan ${CITY} — Eco Majestic, Setia Ecohill, Bandar Rinching & pekan Semenyih. Kotak kardus baru dan terpakai harga borong dari RM0.90 sekotak, penghantaran hari sama atau esok dari gudang Balakong (±20–25 minit).`,
+  "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/semenyih/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM9.00 sekotak",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["Semenyih","Eco Majestic","Setia Ecohill","Bandar Rinching","Taman Pelangi Semenyih","Broga"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Utama", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Kotak Pindah Rumah", "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/" },
+    { "@type": "ListItem", "position": 3, "name": CITY, "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/semenyih/" }
+  ]
+};
+---
+
+<Layout
+  lang="ms"
+  title={`Kotak Pindah Rumah ${CITY} — Rumah Baru Eco Majestic & Ecohill, dari RM0.90 | Quinocycle`}
+  description={`Baru dapat kunci rumah di ${CITY}? Kotak pindah dihantar ke Eco Majestic, Setia Ecohill & Bandar Rinching dari RM0.90 — percuma untuk order RM300+. WhatsApp 016-891 6381.`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Utama</a>
+      <span class="mx-2">/</span>
+      <a href="/kotak-pindah-rumah" class="hover:text-primary transition-colors">Kotak Pindah Rumah</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">{CITY}</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Kawasan Penghantaran Kami</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Kotak pindah rumah {CITY} <br /><span class="text-primary italic">— kunci rumah baru di tangan, kotak sampai esok.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      Ribuan keluarga sedang berpindah masuk ke <strong class="text-on-surface font-semibold">Eco Majestic, Setia Ecohill dan Bandar Rinching</strong> — dan setiap pindahan bermula dengan kotak yang betul. Gudang borong Quinocycle di Balakong cuma ±20–25 minit dari Semenyih: kotak terpakai dari <strong class="text-on-surface font-semibold">RM0.90</strong>, kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong>, penghantaran percuma untuk pesanan melebihi RM300.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Sekarang
+      </a>
+      <a href="/kotak-pindah-rumah#senarai-harga" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Senarai Harga Penuh
+      </a>
+    </div>
+  </section>
+
+  <!-- Local info -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Laluan Pantas Kajang–SILK</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Dari gudang Balakong ke Semenyih hanya ±20–25 minit melalui Kajang atau lebuhraya SILK. Sahkan pesanan waktu pagi dan kotak boleh tiba di Eco Majestic, Setia Ecohill atau Bandar Rinching pada hari yang sama — selewat-lewatnya esok. Percuma untuk pesanan RM300 ke atas.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">holiday_village</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Khas Untuk Taman Perumahan Baru</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Pindahan pertama ke rumah landed selalunya lebih besar dari jangkaan. Kami bantu anda kira campuran saiz yang betul — dari kotak kecil untuk buku hinggalah kotak kargo XXL (RM28–RM38) untuk barang besar — supaya sekali hantar, terus cukup.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">schedule</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Waktu Urusan</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Isnin–Jumaat: 9:00 pagi – 5:00 petang<br />
+          Sabtu: 9:00 pagi – 1:00 tengah hari<br />
+          Ahad &amp; cuti umum: tutup — WhatsApp 016-891 6381 tetap dibalas
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Kenapa penduduk Semenyih pilih Quinocycle?</h2>
+    <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
+      <p>
+        Semenyih hari ini bukan lagi pekan kecil di hujung Kajang. <strong class="text-on-surface font-semibold">Eco Majestic, Setia Ecohill dan Bandar Rinching</strong> membesar setiap tahun, dan setiap fasa baru yang siap bermakna ratusan keluarga menerima kunci serentak — kebanyakannya first-time mover yang baru pertama kali mengemas seisi rumah. Masalahnya, di sekitar pekan Semenyih dan laluan ke Broga, tiada pembekal kotak borong; pilihan yang ada cuma kedai hardware yang jual sekeping-sekeping pada harga runcit.
+      </p>
+      <p>
+        Di sinilah kedudukan kami jadi kelebihan anda. Gudang Quinocycle terletak di Taming Jaya, Balakong — <strong class="text-on-surface font-semibold">±20–25 minit sahaja dari Semenyih melalui Kajang atau lebuhraya SILK</strong>. Kami pembekal borong yang selama ini membekalkan syarikat mover dan penjual online di Lembah Klang, dan penghantaran ke Semenyih kami buat hari sama atau keesokan hari. Anda tak perlu berulang-alik dengan kereta penuh kotak; cukup hantar senarai melalui WhatsApp dan tunggu di rumah baru.
+      </p>
+      <p>
+        Soal harga, kami jual pada kadar pembekal. <a href="/kotak-terpakai" class="text-primary font-semibold hover:underline">Kotak terpakai</a> bermula RM0.90 hingga RM6.00 sekotak — pilihan paling jimat untuk pakaian, buku dan barang mainan anak (stok berubah mengikut kemasukan; pilihan termurah masa ini sekitar RM1.70). Kotak baru pula dari RM1.10 hingga RM9.00, dan untuk barang besar ada kotak kargo XXL RM28–RM38. Semuanya boleh disemak di kedai online kami, shop.quinocycle.com. Ramai yang bertanya sama ada kami ini kilang — jawapan jujurnya, kami gudang borong yang beli terus dari kilang, jadi anda dapat <a href="/kilang-kotak" class="text-primary font-semibold hover:underline">harga kilang tanpa perlu ke kilang</a>.
+      </p>
+      <p>
+        Satu lagi kumpulan yang kerap order dari kawasan ini: pelajar <strong class="text-on-surface font-semibold">University of Nottingham Malaysia</strong> yang berpindah masuk atau keluar dari kolej dan rumah sewa setiap semester. Untuk kuantiti kecil begini, minimum borong RM1,000 tidak terpakai — WhatsApp sahaja kuantiti anda dan kami beri sebut harga terus. Bagi keluarga yang berpindah penuh, anggaran selamat untuk rumah teres 2 tingkat ialah 50–70 kotak campuran saiz; tempah seminggu awal supaya sempat mengemas bilik demi bilik tanpa tergesa-gesa.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">Soalan lazim — kotak pindah {CITY}</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/15">
+        {faqs.map(f => (
+          <details class="group py-5">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              {f.q}
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <h2 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface mb-6">Kawasan berdekatan</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/kotak-pindah-rumah/kajang"   class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Kajang</a>
+      <a href="/kotak-pindah-rumah/bangi"    class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Bangi</a>
+      <a href="/kotak-pindah-rumah/balakong" class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Balakong</a>
+      <a href="/kotak-pindah-rumah"          class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Semua Kawasan →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Rumah baru di Semenyih menanti. Kotaknya biar kami uruskan.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        WhatsApp senarai saiz dan kuantiti anda — kami balas dengan sebut harga, cadangan campuran saiz untuk rumah anda, dan slot penghantaran ke Eco Majestic, Setia Ecohill, Bandar Rinching atau mana-mana kawasan Semenyih.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Lokasi Gudang (Balakong)
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

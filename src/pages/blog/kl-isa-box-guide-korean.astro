@@ -1,0 +1,458 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const post = {
+  title: '쿠알라룸푸르 이사 준비 가이드 — 말레이시아에서 이사 박스 저렴하게 사는 법',
+  description: '말레이시아 이사 준비, 박스부터 해결하세요. 쿠알라룸푸르 이사 박스를 도매 창고 가격(중고 RM0.90부터, 새 박스 RM1.10부터)으로 사는 법, 필요한 박스 개수, 귀국이사용 XXL 박스, 몬키아라·암팡 무료 배송 조건까지 — Balakong 도매 창고 Quinocycle의 실제 가격 가이드입니다.',
+  date: '2026-08-20',
+  readTime: '7분',
+  category: '이사 가이드',
+  author: 'Quinocycle Team',
+  slug: 'kl-isa-box-guide-korean',
+};
+
+const WA_LINK = 'https://wa.me/60168916381?text=Hi%20Quinocycle!%20I%20would%20like%20to%20order%20moving%20boxes.%20(Korean%20customer)';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "inLanguage": "ko",
+  "author": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn. Bhd.",
+    "url": "https://www.quinocycle.com.my"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.quinocycle.com.my/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.quinocycle.com.my/blog/kl-isa-box-guide-korean"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.quinocycle.com.my/images/blog-movers-guide.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  "keywords": "말레이시아 이사, 쿠알라룸푸르 이사 박스, 말레이시아 박스 구매, KL 이사짐, 귀국이사 박스, 몬키아라 이사, 암팡 이사, 말레이시아 이사 준비, Quinocycle Balakong"
+};
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle Sdn. Bhd.",
+  "description": "말레이시아 셀랑고르 Balakong의 카톤 박스 도매 창고. 이사·포장·물류용 새 박스와 공장 1회 사용 중고 박스를 도매가로 판매하며, KL과 셀랑고르 전역에 배송합니다.",
+  "url": "https://www.quinocycle.com.my",
+  "telephone": "+60168916381",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 3.0579,
+    "longitude": 101.7468
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "priceRange": "RM0.90 – RM38.00 / 박스",
+  "areaServed": "Kuala Lumpur & Selangor, Malaysia"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "쿠알라룸푸르에서 이사 박스는 어디서 사는 게 가장 저렴한가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "마트나 다이소, 철물점(hardware shop)에서 낱개로 사는 것보다 도매 창고에서 직접 사는 것이 훨씬 저렴합니다. Balakong의 Quinocycle 도매 창고에서는 공장 1회 사용 중고 박스가 RM0.90~RM6.00, 새 박스가 RM1.10~RM9.00입니다. 창고까지 갈 필요 없이 shop.quinocycle.com에서 온라인 주문하거나 WhatsApp(016-891 6381, 영어 메시지 권장)으로 주문하면 배송받을 수 있으며, RM300 이상 주문 시 KL·셀랑고르 무료 배송입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "방 3개 아파트 이사에는 박스가 몇 개나 필요한가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "방 3개(3-bedroom) 가정 기준 보통 50~70개가 필요합니다. 책·주방용품 같은 무거운 짐은 작은 박스에, 옷·이불처럼 가벼운 짐은 중간~큰 박스에 나누어 담는 것이 기본입니다. 중고 박스 기준으로 60개를 준비해도 약 RM102(개당 RM1.70 재고 기준)부터 시작할 수 있어 부담이 크지 않습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "중고 박스도 이사에 써도 괜찮은가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "괜찮습니다. Quinocycle의 중고 박스는 공장에서 한 번만 사용된 1회 사용 등급(once-used factory grade)으로, 판매 전 하나하나 검수하여 건조 상태·냄새 없음·구조 손상 없음을 확인합니다. 며칠이면 끝나는 이사에는 중고 박스가 가장 가성비가 좋고, 장기 보관이나 귀국이사 해운용으로는 새 박스를 권합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "한국어로 주문할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "주문은 WhatsApp 016-891 6381 또는 온라인 스토어 shop.quinocycle.com에서 가능합니다. 직원이 영어로 응대하므로, 영어로 메시지를 보내시면 가장 빠른 답변을 받으실 수 있습니다. 온라인 스토어에서 주문하면 대화 없이도 결제 후 배송까지 진행되므로 영어가 부담스러우면 온라인 주문이 편리합니다. Balakong 창고까지 직접 운전해 올 필요는 없습니다."
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title={`${post.title} — Quinocycle 블로그`}
+  description={post.description}
+  lang="ko"
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container article-hero__inner">
+      <a href="/blog" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        블로그로 돌아가기
+      </a>
+      <div class="tag tag--yellow" style="margin-top:1.5rem">{post.category}</div>
+      <h1 class="article-hero__title">{post.title}</h1>
+      <div class="article-meta">
+        <time datetime={post.date}>{new Date(post.date).toLocaleDateString('ko-KR', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        <span>·</span>
+        <span>읽는 시간 {post.readTime}</span>
+        <span>·</span>
+        <span>작성: {post.author}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <div class="container" style="margin-bottom:2rem;margin-top:-1rem">
+    <img
+      src="/images/blog-movers-guide.jpg"
+      alt="쿠알라룸푸르 이사 박스 — 말레이시아 셀랑고르 Balakong 도매 창고 Quinocycle의 이사용 카톤 박스"
+      style="width:100%;max-height:460px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);display:block;"
+      loading="eager"
+      width="1280"
+      height="720"
+    />
+  </div>
+
+  <!-- Article Body -->
+  <article class="article-body">
+    <div class="container article-body__inner">
+      <div class="article-content">
+
+        <p class="article-lead">
+          몬키아라에서 데사 파크시티로 집을 옮기든, 계약이 끝나 한국으로 돌아가는 귀국이사를 준비하든 — <strong>말레이시아 이사</strong>에서 의외로 골치 아픈 것이 이사 박스입니다. 한국처럼 이삿짐센터가 플라스틱 박스를 알아서 가져다주는 시스템이 아니라서, 박스는 직접 구해야 하는 경우가 많습니다. 이 글에서는 KL의 한국 교민들이 보통 박스를 어디서 구하는지, 도매 창고에서 사면 얼마나 저렴해지는지, 그리고 방 3개 집 기준 몇 개가 필요한지를 실제 가격과 함께 정리했습니다.
+        </p>
+
+        <div class="article-callout article-callout--yellow">
+          <strong>핵심 요약:</strong> 셀랑고르 Balakong의 도매 창고 <strong>Quinocycle</strong>에서 중고 박스 <strong>RM0.90</strong>부터, 새 박스 <strong>RM1.10</strong>부터 구매 가능. 창고 방문 없이 <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a>에서 온라인 주문 → 배송. <strong>RM300 이상 주문 시 KL·셀랑고르 무료 배송</strong> (몬키아라·암팡 포함). WhatsApp: <a href={WA_LINK}>016-891 6381</a> (영어 메시지 권장).
+        </div>
+
+        <h2>KL에서 이사 박스, 보통 어디서 살까?</h2>
+
+        <p>
+          <strong>말레이시아 박스 구매</strong>를 처음 알아보면 대부분 이런 경로를 거칩니다:
+        </p>
+
+        <ul>
+          <li><strong>마트 (Jaya Grocer, Village Grocer 등):</strong> 계산대 옆 빈 박스를 무료로 얻을 수 있지만, 크기가 제각각이고 과일 상자는 눅눅하거나 냄새가 배어 있는 경우가 많습니다. 50개 이상 필요한 이사에는 수량 확보 자체가 어렵습니다.</li>
+          <li><strong>다이소·문구점:</strong> 깨끗한 새 박스를 낱개로 살 수 있지만 개당 가격이 도매가의 몇 배 수준이고, 대부분 소형이라 이사용으로는 비효율적입니다.</li>
+          <li><strong>철물점(hardware shop):</strong> 동네 하드웨어 숍에서도 박스를 팔지만 재고와 크기가 매장마다 다르고, 역시 소매 마진이 붙습니다.</li>
+          <li><strong>도매 창고:</strong> 박스를 수만 개 단위로 취급하는 공급처에서 직접 사는 방법입니다. 개당 단가가 가장 낮고, 이사에 필요한 수량과 크기를 한 번에 맞출 수 있습니다.</li>
+        </ul>
+
+        <p>
+          Quinocycle은 셀랑고르 Balakong(Taming Jaya)에 창고를 둔 카톤 박스 도매 업체입니다. 원래 공장·물류회사에 대량 납품하는 곳이지만, 이사 준비하는 가정도 같은 도매가로 주문할 수 있습니다. 그리고 중요한 점 — <strong>Balakong까지 운전해서 올 필요가 없습니다.</strong> 온라인 스토어나 WhatsApp으로 주문하면 집 앞까지 배송됩니다.
+        </p>
+
+        <h2>중고 박스 vs 새 박스 — 어떤 걸 골라야 할까</h2>
+
+        <p>
+          도매 창고의 가장 큰 장점은 <strong>공장 1회 사용 중고 박스</strong>라는 선택지입니다. 공장에서 딱 한 번 사용된 박스를 하나하나 검수해서 — 건조 상태, 냄새 없음, 구조 손상 없음을 확인한 뒤 — 새 박스의 절반 이하 가격에 판매합니다. 마트에서 얻는 눅눅한 과일 상자와는 등급이 다릅니다.
+        </p>
+
+        <ul>
+          <li><strong>중고 박스 (RM0.90~RM6.00):</strong> 시내 이사처럼 며칠만 버티면 되는 용도에 가장 가성비가 좋습니다. 재고는 계속 순환하며, 현재 재고 기준 가장 저렴한 박스는 개당 <strong>RM1.70</strong>입니다.</li>
+          <li><strong>새 박스 (RM1.10~RM9.00):</strong> 장기 보관, 깨지기 쉬운 물건, 그리고 배로 몇 주씩 이동하는 귀국이사 짐에는 한 번도 사용되지 않은 새 박스가 안전합니다.</li>
+        </ul>
+
+        <p>
+          실전 팁: 두 가지를 섞으세요. 옷·책·주방용품은 중고 박스에, 전자제품·그릇·귀국이사 화물은 새 박스에 담으면 비용과 안전을 모두 잡을 수 있습니다. 중고 박스 상세는 <a href="/used-carton-boxes">used carton boxes</a> 페이지에서 확인할 수 있습니다.
+        </p>
+
+        <h2>몇 개나 필요할까? — KL 이사짐 박스 개수 계산</h2>
+
+        <p>
+          <strong>KL 이사짐</strong> 기준으로 방 3개(3-bedroom) 콘도·주택은 보통 <strong>박스 50~70개</strong>가 필요합니다. 스튜디오나 방 1개는 그 절반 이하로 잡으면 됩니다. 부족해서 이사 전날 밤에 박스를 찾아 헤매는 것보다, 넉넉히 주문하는 편이 낫습니다 — 중고 박스 60개를 개당 RM1.70에 사도 약 RM102이니, 박스 몇 개 더 주문하는 부담은 크지 않습니다.
+        </p>
+
+        <p>
+          담을 때의 원칙은 한국 이사와 같습니다: 책과 주방용품처럼 <strong>무거운 짐은 작은 박스에</strong>, 옷과 이불처럼 <strong>가볍고 부피 큰 짐은 큰 박스에</strong>. 박스 하나가 15kg을 넘지 않게 담아야 운반이 안전합니다.
+        </p>
+
+        <h2>실제 가격표 (Balakong 창고 도매가)</h2>
+
+        <div class="article-table-wrap">
+          <table class="article-table">
+            <thead>
+              <tr>
+                <th>종류</th>
+                <th>가격 / 박스</th>
+                <th>추천 용도</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>중고 박스</strong> (공장 1회 사용 등급)</td>
+                <td><strong>RM0.90 – RM6.00</strong></td>
+                <td>시내 이사, 일반 짐 — 가장 저렴한 선택 (현재 재고 최저가 RM1.70, 재고 순환)</td>
+              </tr>
+              <tr>
+                <td><strong>새 박스</strong></td>
+                <td><strong>RM1.10 – RM9.00</strong></td>
+                <td>깨지기 쉬운 물건, 장기 보관, 귀국이사 짐</td>
+              </tr>
+              <tr>
+                <td><strong>XXL 카고 박스 T760</strong><br />(760 × 760 × 760mm)</td>
+                <td><strong>RM28 – RM38</strong></td>
+                <td>귀국이사 해운·항공 화물 통합 포장</td>
+              </tr>
+              <tr>
+                <td><strong>XXL 카고 박스 BW800</strong><br />(800 × 400 × 800mm)</td>
+                <td><strong>RM28 – RM38</strong></td>
+                <td>대형 물품, 이삿짐 콘솔리데이션</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          전체 제품과 실시간 재고 가격은 <a href="/shop">온라인 숍</a>과 <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a>에서 확인할 수 있습니다.
+        </p>
+
+        <h2>귀국이사라면: XXL 카고 박스</h2>
+
+        <p>
+          한국으로 돌아가는 <strong>귀국이사</strong>는 시내 이사와 요구 조건이 다릅니다. 해운·항공 화물은 부피 기준으로 요금이 계산되는 경우가 많아, 작은 박스 여러 개보다 <strong>대형 박스에 짐을 통합(consolidation)</strong>하는 편이 유리할 때가 많습니다. Quinocycle의 XXL 카고 박스 두 종 — 정육면체형 <strong>T760</strong>(760×760×760mm)과 옷장형 <strong>BW800</strong>(800×400×800mm) — 은 이런 화물 통합 포장에 맞춰진 크기입니다. 개당 RM28~RM38로, 국제 배송용 대형 박스를 낱개 소매로 구하는 것보다 훨씬 저렴합니다. 이용 중인 국제 이사 업체나 포워더에게 박스 규격을 미리 확인한 뒤 주문하면 됩니다.
+        </p>
+
+        <h2>주문 방법 — Balakong까지 갈 필요 없습니다</h2>
+
+        <ol>
+          <li><strong>온라인 스토어:</strong> <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a>에서 박스를 골라 결제하면 배송까지 진행됩니다. 대화가 필요 없어 영어가 부담스러운 분께 가장 편한 방법입니다.</li>
+          <li><strong>WhatsApp:</strong> <a href={WA_LINK}>016-891 6381</a>로 필요한 수량과 배송 주소를 보내면 견적과 재고를 안내해 드립니다. 직원이 영어로 응대하므로, <strong>영어로 메시지를 보내시면 가장 빠른 답변</strong>을 받으실 수 있습니다.</li>
+          <li><strong>창고 방문 (선택):</strong> 직접 보고 싶다면 No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor로 오시면 됩니다. 영업시간: 월–금 9:00–17:00, 토 9:00–13:00.</li>
+        </ol>
+
+        <p>
+          배송 지역은 몬키아라, 암팡, 스리 하르타마스, 데사 파크시티를 포함한 KL 전역과 셀랑고르, 카장, 방이, 사이버자야, KLIA 인근까지입니다. <strong>RM300 이상 주문 시 KL·셀랑고르 무료 배송</strong>이며, 방 3개 이사 분량이면 대체로 무료 배송 조건을 넘깁니다.
+        </p>
+
+        <div class="article-callout">
+          <strong>참고:</strong> Quinocycle은 박스와 포장 자재를 판매하는 도매 업체이며, <strong>이사 대행(이삿짐센터) 서비스는 하지 않습니다.</strong> 이용하실 이사 업체를 따로 정하시고, 박스만 저희 창고에서 저렴하게 준비하시면 됩니다. 많은 고객이 이 조합으로 이사 비용을 줄입니다.
+        </div>
+
+        <h2>마무리</h2>
+
+        <p>
+          <strong>쿠알라룸푸르 이사 박스</strong>는 마트를 돌며 얻는 것도, 다이소에서 낱개로 사는 것도 아닌, 도매 창고에서 한 번에 배송받는 것이 가장 싸고 확실합니다. 방 3개 기준 50~70개를 기억하고, 시내 이사는 중고 박스(RM0.90부터), 귀국이사 화물은 새 박스와 XXL 카고 박스를 조합하세요. 궁금한 점은 WhatsApp <a href={WA_LINK}>016-891 6381</a>로 (영어로) 보내시면 됩니다. English version of this guide: <a href="/moving-boxes-malaysia">Moving Boxes Malaysia</a>.
+        </p>
+
+      </div><!-- /.article-content -->
+
+      <!-- Sidebar CTA -->
+      <aside class="article-sidebar">
+        <div class="sidebar-cta">
+          <div class="tag tag--yellow">이사 박스</div>
+          <h3>Balakong 도매 창고 — KL·셀랑고르 배송.</h3>
+          <p>중고 박스 <strong>RM0.90</strong>부터.<br />새 박스 <strong>RM1.10</strong>부터.<br />RM300 이상 무료 배송.</p>
+          <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:0.75rem">온라인 스토어에서 주문</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="width:100%;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp 016-891 6381
+          </a>
+          <p class="sidebar-cta__note">영어 메시지 시 가장 빠른 답변<br />월–금 9am–5pm · 토 9am–1pm<br />창고: Taming Jaya, Balakong, Selangor</p>
+        </div>
+
+        <div class="sidebar-links">
+          <div class="sidebar-links__title">관련 페이지</div>
+          <a href="/moving-boxes-malaysia" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Moving Boxes Malaysia (English)
+          </a>
+          <a href="/used-carton-boxes" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Used Carton Boxes (중고 박스)
+          </a>
+          <a href="/shop" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            전체 제품 보기 (Shop)
+          </a>
+          <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            온라인 스토어 (shop.quinocycle.com)
+          </a>
+        </div>
+      </aside>
+
+    </div><!-- /.article-body__inner -->
+  </article>
+
+  <!-- FAQ Section (AEO) -->
+  <section class="article-faq">
+    <div class="container">
+      <div class="section-eyebrow">자주 묻는 질문</div>
+      <h2 class="section-title" style="margin-bottom:2rem">FAQ<br /><span style="font-size:0.6em;opacity:0.6">말레이시아 이사 박스 구매</span></h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3 class="faq-q">쿠알라룸푸르에서 이사 박스는 어디서 사는 게 가장 저렴한가요?</h3>
+          <p class="faq-a">마트나 다이소, 철물점에서 낱개로 사는 것보다 <strong>도매 창고에서 직접 사는 것</strong>이 훨씬 저렴합니다. Balakong의 Quinocycle 도매 창고에서는 공장 1회 사용 중고 박스가 <strong>RM0.90~RM6.00</strong>, 새 박스가 <strong>RM1.10~RM9.00</strong>입니다. 창고까지 갈 필요 없이 <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a>에서 온라인 주문하거나 WhatsApp(016-891 6381, 영어 메시지 권장)으로 주문하면 배송받을 수 있으며, RM300 이상 주문 시 KL·셀랑고르 무료 배송입니다.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">방 3개 아파트 이사에는 박스가 몇 개나 필요한가요?</h3>
+          <p class="faq-a">방 3개(3-bedroom) 가정 기준 보통 <strong>50~70개</strong>가 필요합니다. 책·주방용품 같은 무거운 짐은 작은 박스에, 옷·이불처럼 가벼운 짐은 중간~큰 박스에 나누어 담는 것이 기본입니다. 중고 박스 기준으로 60개를 준비해도 약 RM102(개당 RM1.70 재고 기준)부터 시작할 수 있어 부담이 크지 않습니다.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">중고 박스도 이사에 써도 괜찮은가요?</h3>
+          <p class="faq-a">괜찮습니다. Quinocycle의 중고 박스는 공장에서 한 번만 사용된 <strong>1회 사용 등급(once-used factory grade)</strong>으로, 판매 전 하나하나 검수하여 건조 상태·냄새 없음·구조 손상 없음을 확인합니다. 며칠이면 끝나는 이사에는 중고 박스가 가장 가성비가 좋고, 장기 보관이나 귀국이사 해운용으로는 새 박스를 권합니다.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q">한국어로 주문할 수 있나요?</h3>
+          <p class="faq-a">주문은 WhatsApp <strong>016-891 6381</strong> 또는 온라인 스토어 <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer">shop.quinocycle.com</a>에서 가능합니다. 직원이 영어로 응대하므로, <strong>영어로 메시지를 보내시면 가장 빠른 답변</strong>을 받으실 수 있습니다. 온라인 스토어에서 주문하면 대화 없이도 결제 후 배송까지 진행되므로 영어가 부담스러우면 온라인 주문이 편리합니다. Balakong 창고까지 직접 운전해 올 필요는 없습니다.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="article-cta-section">
+    <div class="container">
+      <div class="article-cta-box">
+        <div class="tag tag--yellow">말레이시아 이사 준비</div>
+        <h2>이사 박스, 도매가로 배송받으세요.</h2>
+        <p>중고 박스 RM0.90부터 · 새 박스 RM1.10부터 · RM300 이상 KL·셀랑고르 무료 배송 (몬키아라·암팡 포함)</p>
+        <div class="article-cta-box__btns">
+          <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">온라인 스토어 바로가기</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp 문의 (영어)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.article-faq {
+  padding: 5rem 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.faq-list { display: flex; flex-direction: column; gap: 1.25rem; max-width: 860px; }
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.2s;
+}
+.faq-item:hover { border-color: var(--border-yellow); }
+.faq-q {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-1);
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+.faq-a {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: 0;
+}
+.article-cta-section { padding: 5rem 0; }
+.article-cta-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-yellow);
+  border-radius: var(--radius);
+  padding: 3rem;
+  text-align: center;
+  box-shadow: var(--glow-sm);
+}
+.article-cta-box h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 900;
+  color: var(--text-1);
+  margin: 1rem 0 0.75rem;
+}
+.article-cta-box p { color: var(--text-2); margin-bottom: 2rem; }
+.article-cta-box__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.article-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.article-table th {
+  background: var(--bg-3);
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-yellow);
+  white-space: nowrap;
+}
+.article-table td {
+  padding: 0.75rem 1rem;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.article-table tbody tr:hover td { background: var(--bg-card-hov); }
+.article-table td strong { color: var(--text-1); }
+</style>

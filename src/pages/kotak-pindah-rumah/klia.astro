@@ -1,0 +1,199 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CITY = 'KLIA & Sepang';
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Hi Quinocycle! Saya nak beli kotak kargo / kotak pindah untuk kawasan KLIA & Sepang.')}`;
+
+const faqs = [
+  {
+    q: 'Adakah kotak Quinocycle memenuhi syarat airline atau air freight di KLIA?',
+    a: 'Kotak kami — terutamanya Jumbo XXL Cargo Box T760 dan BW800 serta kotak double wall XL dan Large NLN — ialah kotak corrugated dua lapis yang kukuh dan sesuai untuk general cargo, excess baggage dan unaccompanied baggage. Namun kami tidak membuat sebarang tuntutan pensijilan air-freight: setiap airline dan freight forwarder ada had saiz, berat dan packing requirement masing-masing, jadi sila sahkan dimensi dan berat maksimum dengan airline atau forwarder anda sebelum membuat pesanan. Kongsi requirement itu melalui WhatsApp dan kami cadangkan saiz kotak yang paling padan.',
+  },
+  {
+    q: 'Berapa cepat kotak boleh sampai ke KLIA, Sepang atau Nilai?',
+    a: 'Gudang kami di Taming Jaya, Balakong — ±40–45 minit memandu ke KLIA melalui lebuhraya. Untuk penghantaran, pesanan yang disahkan biasanya sampai dalam 1 hari bekerja ke KLIA Aeropolis, Sepang, Salak Tinggi dan Nilai. Percuma untuk pesanan melebihi RM300 (kawasan KL & Selangor). WhatsApp 016-891 6381 dengan senarai saiz dan kuantiti untuk pengesahan slot penghantaran.',
+  },
+  {
+    q: 'Apa kotak paling sesuai untuk cargo consolidation atau shipment pukal?',
+    a: 'Untuk consolidation dan barangan pukal, pilihan utama ialah Jumbo XXL Cargo Box T760 (760×760×760mm, RM38.00) dan Jumbo XXL Cargo Box BW800 (800×400×800mm, RM28.00). Untuk shipment sederhana, Jumbo Size Box XL (485×485×500mm double wall, RM9.00) dan Large NLN (590×390×390mm double wall, RM8.00) menawarkan kekuatan double wall pada harga borong. Kotak terpakai dari RM0.90–RM6.00 (stok berubah) sesuai untuk inner packing atau penggunaan sekali hantar.',
+  },
+  {
+    q: 'Boleh saya order kuantiti borong untuk operasi freight forwarding?',
+    a: 'Boleh. Minimum pesanan borong ialah RM1,000 — sesuai untuk freight forwarder, cargo agent dan syarikat logistik di sekitar KLIA Aeropolis yang perlukan bekalan kotak berulang. Untuk kuantiti biasa, order terus di kedai online kami shop.quinocycle.com atau WhatsApp kami. Ambil sendiri di gudang Balakong juga dialu-alukan: Isnin–Jumaat 9:00 pagi–5:00 petang, Sabtu 9:00 pagi–1:00 tengah hari.',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle — Kotak Kargo & Pindah KLIA",
+  "description": "Pembekal kotak kargo dan kotak pindah untuk kawasan KLIA, Sepang, Nilai & Salak Tinggi — Jumbo XXL cargo box untuk air-cargo consolidation, excess baggage dan shipment pukal, plus kotak pindah rumah dari RM0.90. Penghantaran dalam 1 hari bekerja dari gudang Balakong.",
+  "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/klia/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM38.00 sekotak",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["KLIA","Sepang","Nilai","Salak Tinggi"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Utama", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Kotak Pindah Rumah", "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/" },
+    { "@type": "ListItem", "position": 3, "name": "KLIA & Sepang", "item": "https://www.quinocycle.com.my/kotak-pindah-rumah/klia/" }
+  ]
+};
+---
+
+<Layout
+  lang="ms"
+  title="Kotak Kargo & Pindah KLIA Sepang — Kotak XXL untuk Kargo Udara | Quinocycle"
+  description="Perlu cargo box di KLIA atau Sepang? Jumbo XXL cargo box (hingga 800mm) untuk air cargo, excess baggage & shipment pukal — hantar dalam 1 hari bekerja. WhatsApp 016-891 6381."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Utama</a>
+      <span class="mx-2">/</span>
+      <a href="/kotak-pindah-rumah" class="hover:text-primary transition-colors">Kotak Pindah Rumah</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">{CITY}</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Kawasan Penghantaran Kami</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Kotak pindah &amp; kargo KLIA <br /><span class="text-primary italic">— XXL cargo box untuk shipment besar.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      Freight forwarder di KLIA Aeropolis, bisnes di Sepang dan Nilai, atau traveler yang nak hantar excess baggage — Quinocycle bekalkan kotak dari gudang Balakong terus ke kawasan lapangan terbang. <strong class="text-on-surface font-semibold">Jumbo XXL Cargo Box hingga 800mm dari RM28.00</strong>, kotak double wall dari <strong class="text-on-surface font-semibold">RM8.00</strong>, kotak terpakai dari <strong class="text-on-surface font-semibold">RM0.90</strong> — penghantaran dalam 1 hari bekerja, percuma untuk pesanan melebihi RM300.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Sekarang
+      </a>
+      <a href="/kotak-pindah-rumah#senarai-harga" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Senarai Harga Penuh
+      </a>
+    </div>
+  </section>
+
+  <!-- Local info -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Hantar Ke KLIA, Sepang &amp; Nilai</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          KLIA Aeropolis, Salak Tinggi, bandar Sepang dan Nilai — ±40–45 minit dari gudang kami di Balakong. Pesanan yang disahkan biasanya sampai dalam 1 hari bekerja. Percuma untuk pesanan melebihi RM300 (KL &amp; Selangor).
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">package_2</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Kotak Kargo XXL Untuk Air Cargo</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Jumbo XXL Cargo Box T760 (760×760×760mm, RM38.00) dan BW800 (800×400×800mm, RM28.00) — saiz besar untuk cargo consolidation, excess baggage dan barangan pukal. Double wall XL dan Large NLN dari RM8.00 untuk shipment sederhana.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">home_work</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Pindah Rumah Kawasan Sepang</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Pindah ke Kota Warisan, Salak Tinggi atau Bandar Baru Nilai? Kotak pindah rumah terpakai dari RM0.90 dan kotak baru dari RM1.10 sekotak — harga borong, dihantar terus ke pintu rumah anda.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Pembekal kotak untuk koridor kargo KLIA</h2>
+    <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
+      <p>
+        Kawasan KLIA dan Sepang ialah nadi kargo udara Malaysia — beratus freight forwarder, cargo agent dan syarikat 3PL beroperasi di sekitar KLIA Aeropolis dan Salak Tinggi. Tapi bila stok packaging habis di tengah minggu sibuk, mencari <strong class="text-on-surface font-semibold">pembekal kotak borong yang boleh hantar cepat</strong> bukannya mudah. Quinocycle mengisi jurang itu: gudang kami di Taming Jaya, Balakong hanya ±40–45 minit melalui lebuhraya, dan pesanan yang disahkan biasanya sampai <strong class="text-on-surface font-semibold">dalam 1 hari bekerja</strong>.
+      </p>
+      <p>
+        Untuk operasi kargo, produk utama kami ialah kotak saiz besar yang sukar dicari di kedai biasa. <strong class="text-on-surface font-semibold">Jumbo XXL Cargo Box T760</strong> (760×760×760mm, RM38.00) dan <strong class="text-on-surface font-semibold">BW800</strong> (800×400×800mm, RM28.00) dibina untuk cargo consolidation — muatkan banyak parcel kecil ke dalam satu kotak besar untuk kurangkan handling. Untuk shipment sederhana, <strong class="text-on-surface font-semibold">Jumbo Size Box XL</strong> (485×485×500mm) dan <strong class="text-on-surface font-semibold">Large NLN</strong> (590×390×390mm) kedua-duanya double wall — dari RM8.00 sekotak di <a href="/shop" class="text-primary font-semibold hover:underline">kedai online kami</a>.
+      </p>
+      <p>
+        Bukan forwarder pun ada sebab untuk order. Traveler dan expat yang berlepas dari KLIA selalu perlukan kotak kukuh untuk <strong class="text-on-surface font-semibold">excess baggage atau unaccompanied baggage</strong> — kotak double wall kami sesuai untuk kegunaan itu, cuma sahkan had saiz dan berat dengan airline anda dahulu. Bisnes di Nilai dan Sepang yang hantar barang secara berkala boleh jimat dengan kotak terpakai dari RM0.90–RM6.00 (stok berubah ikut kemasukan) atau kotak baru dari RM1.10–RM7.00. Musim event besar di Sepang Circuit pula — pasukan logistik event boleh tempah awal kuantiti pukal supaya bekalan kotak tak jadi bottleneck.
+      </p>
+      <p>
+        Untuk bekalan berulang, minimum pesanan borong ialah RM1,000 — dan jika anda perlukan penerangan lanjut tentang gred kotak dan cara kami memproses stok, lawati halaman <a href="/kilang-kotak" class="text-primary font-semibold hover:underline">kilang kotak</a> kami. Pindah rumah ke Kota Warisan atau Bandar Baru Nilai? Semak <a href="/kotak-pindah-rumah" class="text-primary font-semibold hover:underline">senarai harga penuh kotak pindah rumah</a>, kemudian WhatsApp senarai saiz dan kuantiti anda — kami balas dengan sebut harga dan slot penghantaran.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">Soalan lazim — kotak kargo &amp; pindah {CITY}</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/15">
+        {faqs.map(f => (
+          <details class="group py-5">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              {f.q}
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <h2 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface mb-6">Kawasan berdekatan</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/kotak-pindah-rumah/putrajaya"  class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Putrajaya</a>
+      <a href="/kotak-pindah-rumah/cyberjaya"  class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Cyberjaya</a>
+      <a href="/kotak-pindah-rumah/bangi"      class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Bangi</a>
+      <a href="/kotak-pindah-rumah"            class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Semua Kawasan →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Perlu cargo box di KLIA atau Sepang? Mula dengan satu mesej.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        Hantar senarai saiz dan kuantiti kotak anda ke WhatsApp — kami balas dengan sebut harga dan aturkan penghantaran dalam 1 hari bekerja ke KLIA, Sepang, Salak Tinggi atau Nilai, atau sediakan pesanan untuk diambil di gudang Balakong.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Lokasi Gudang (Balakong)
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
