@@ -1,0 +1,202 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CITY = 'Ampang';
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! I'd like to order carton boxes delivered to ${CITY}.`)}`;
+
+const faqs = [
+  {
+    q: 'Is there a carton box shop in Ampang?',
+    a: 'Honestly — no, and we are not going to pretend otherwise. Quinocycle does not have a branch or shop in Ampang. What we have is a wholesale carton box warehouse in Taming Jaya, Balakong, about 25–30 minutes from Ampang via the MRR2. WhatsApp your order in the morning and we usually deliver to Ampang Jaya, Pandan Indah, Pandan Jaya or Taman Dagang the same day or next day — at warehouse prices, not retail hardware-shop prices.',
+  },
+  {
+    q: 'How much does delivery to Ampang cost?',
+    a: 'Free for orders above RM300 — Ampang falls within our free KL & Selangor delivery zone. For smaller quantities, send your list of sizes and quantities to WhatsApp 016-891 6381 and we will quote the delivery charge directly. You can also collect from our Balakong warehouse yourself, roughly 25–30 minutes away via the MRR2.',
+  },
+  {
+    q: 'How many boxes do I need to move out of an Ampang condo?',
+    a: 'A typical 3-bedroom home or condo needs 50–70 boxes. Ampang has a lot of high-rise units with tenants moving in and out, so a common order is a mix: small boxes for books and heavy items, medium and large for clothes and kitchenware. Not sure? WhatsApp us your unit size and we will suggest a quantity — smaller house-move quantities are handled via WhatsApp even below our RM1,000 wholesale minimum.',
+  },
+  {
+    q: 'What do carton boxes cost, and can I check stock before ordering?',
+    a: 'Used once-used boxes run RM0.90–RM6.00 per box (the cheapest currently in stock is RM1.70 — stock rotates as new lots arrive), new boxes RM1.10–RM9.00, and XXL cargo boxes RM28–RM38. Live stock and exact sizes are on our online store at shop.quinocycle.com, so you can see what is available for Ampang delivery before you commit.',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": `Quinocycle — Carton Box ${CITY}`,
+  "description": `Wholesale carton box supplier delivering to ${CITY} — Ampang Jaya, Pandan Indah, Pandan Jaya, Taman Dagang and the Ampang Point area. Used boxes from RM0.90, new boxes from RM1.10, same-day or next-day delivery from our Balakong warehouse.`,
+  "url": "https://www.quinocycle.com.my/carton-box/ampang/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM38.00 per box",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["Ampang","Ampang Jaya","Pandan Indah","Pandan Jaya","Taman Dagang","Ampang Point"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Carton Box", "item": "https://www.quinocycle.com.my/carton-box/" },
+    { "@type": "ListItem", "position": 3, "name": CITY, "item": "https://www.quinocycle.com.my/carton-box/ampang/" }
+  ]
+};
+---
+
+<Layout
+  lang="en"
+  title={`Carton Box ${CITY} — Wholesale from RM0.90, Same/Next-Day Delivery | Quinocycle`}
+  description={`Need carton boxes in ${CITY}? Used from RM0.90, new from RM1.10, delivered same or next day from Balakong — free above RM300. WhatsApp 016-891 6381 to order.`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/carton-box" class="hover:text-primary transition-colors">Carton Box</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">{CITY}</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Our Delivery Areas</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Carton box {CITY} <br /><span class="text-primary italic">— warehouse prices, delivered to your door.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      No wholesale box warehouse in Ampang? No problem. Quinocycle delivers straight from our Balakong warehouse to <strong class="text-on-surface font-semibold">Ampang Jaya, Pandan Indah, Pandan Jaya, Taman Dagang and the Ampang Point area</strong> — used boxes from <strong class="text-on-surface font-semibold">RM0.90</strong>, new boxes from <strong class="text-on-surface font-semibold">RM1.10</strong>, free delivery on orders above RM300.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Us Now
+      </a>
+      <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        See Live Stock &amp; Prices
+      </a>
+    </div>
+  </section>
+
+  <!-- Local info -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Same or Next-Day to Ampang</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Our Balakong warehouse is only ±25–30 minutes from Ampang via the MRR2. WhatsApp your order in the morning and we usually deliver to Ampang Jaya, Pandan Indah, Pandan Jaya or Taman Dagang the same day or next day — free for orders above RM300 (KL &amp; Selangor).
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">apartment</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Condo &amp; High-Rise Friendly</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Moving out of a high-rise near Ampang Point? Tell us your block and move date on WhatsApp — we bundle the right mix of sizes for a lift-lobby handover. A 3-bedroom unit typically needs 50–70 boxes; smaller house-move quantities are arranged via WhatsApp.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">storefront</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Or Collect from Balakong</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Prefer to pick up? Our warehouse is at No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor. Open Mon–Fri 9:00am–5:00pm, Sat 9:00am–1:00pm. WhatsApp first so your boxes are packed and ready when you arrive.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Why Ampang residents and businesses buy from us</h2>
+    <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
+      <p>
+        Ampang is one of the busiest moving corridors in the Klang Valley. Between the high-rise condos around Ampang Point with tenants rotating in and out every few months, the embassy row that brings a constant flow of international families, and the shops and offices along Pandan Indah and Pandan Jaya, somebody in Ampang is packing boxes every single week. What Ampang does not have is a <strong class="text-on-surface font-semibold">wholesale carton box warehouse</strong> — which usually means paying retail prices at a hardware shop, or waiting days for a courier.
+      </p>
+      <p>
+        Quinocycle fixes that with distance, not a storefront. Our warehouse sits in Taming Jaya, Balakong — roughly <strong class="text-on-surface font-semibold">25–30 minutes from Ampang via the MRR2</strong> — close enough that a WhatsApp order sent in the morning usually arrives the same day or next day. We supply movers, online sellers and factories across the Klang Valley at wholesale rates: used once-used boxes from RM0.90 to RM6.00 per box (the cheapest currently in stock is RM1.70 — stock rotates), new boxes from RM1.10 to RM9.00, and XXL cargo boxes at RM28–RM38 for bulky items and overseas shipments.
+      </p>
+      <p>
+        For businesses, our wholesale minimum is RM1,000 — popular with Pandan Indah retailers and online sellers who restock packaging monthly. For house moves, we handle smaller quantities via WhatsApp: message 016-891 6381 with your sizes and quantities, and we will quote and schedule delivery. A 3-bedroom home typically needs 50–70 boxes, and you can browse live stock anytime at <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:underline">shop.quinocycle.com</a> before ordering.
+      </p>
+      <p>
+        Ampang's international community is a big part of who we serve — families relocating in and out of Malaysia need sturdy boxes fast, often on embassy or company timelines. For Korean-speaking residents around Ampang, we have prepared a dedicated <a href="/blog/kl-isa-box-guide-korean" class="text-primary font-semibold hover:underline">한국어 가이드</a> covering box sizes, prices and how to order.
+      </p>
+      <p lang="ms">
+        <strong class="text-on-surface font-semibold">Ringkasan dalam Bahasa Malaysia:</strong> Quinocycle membekalkan kotak kardus borong dihantar ke Ampang — kotak terpakai dari RM0.90, kotak baru dari RM1.10, penghantaran hari sama atau esok dari gudang kami di Balakong (±25–30 minit melalui MRR2). Percuma untuk pesanan melebihi RM300. WhatsApp 016-891 6381 untuk sebut harga.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">FAQ — carton box {CITY}</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/15">
+        {faqs.map(f => (
+          <details class="group py-5">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              {f.q}
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <h2 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface mb-6">Nearby areas</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/kotak-pindah-rumah/kuala-lumpur" class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Moving Boxes Kuala Lumpur</a>
+      <a href="/kotak-pindah-rumah/cheras"       class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Moving Boxes Cheras</a>
+      <a href="/carton-box/setapak-selayang"     class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Carton Box Setapak &amp; Selayang</a>
+      <a href="/carton-box"                      class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">All Areas →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Need boxes in Ampang? Start with one message.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        Send your list of sizes and quantities on WhatsApp — we reply with a quote and arrange same or next-day delivery anywhere in Ampang, or prepare your order for collection at our Balakong warehouse.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Warehouse Location (Balakong)
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

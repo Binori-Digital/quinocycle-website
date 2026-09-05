@@ -1,0 +1,204 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const AREA = 'Setapak & Selayang';
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! I'd like to order carton boxes for delivery to ${AREA}.`)}`;
+
+const faqs = [
+  {
+    q: 'Do you have a carton box shop in Setapak or Selayang?',
+    a: 'No — and we would rather tell you that straight than pretend otherwise. Quinocycle operates from one warehouse only, at No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor. There is no branch or shop in Setapak, Wangsa Maju or Selayang. Instead, we deliver: WhatsApp your order and we arrange next-day delivery (often same-day for morning orders) anywhere in Setapak, Danau Kota, Wangsa Maju, Selayang Baru or Bandar Baru Selayang. Free delivery on orders above RM300.',
+  },
+  {
+    q: 'How fast can carton boxes reach Setapak or Selayang?',
+    a: 'The drive from our Balakong warehouse takes roughly 25–30 minutes via MRR2 or DUKE, so next-day delivery is standard — and morning orders often go out the same day. WhatsApp 016-891 6381 with your sizes and quantities, and we will confirm the delivery slot right away.',
+  },
+  {
+    q: 'What do carton boxes cost, and is there a minimum order?',
+    a: 'Used once-used boxes run RM0.90–RM6.00 per box (the cheapest in stock right now is RM1.70 — stock rotates, so check shop.quinocycle.com for live availability). New boxes are RM1.10–RM9.00, and XXL cargo boxes RM28–RM38. Our wholesale minimum is RM1,000, but smaller quantities — like a home move — can be arranged via WhatsApp. Delivery is free for KL & Selangor orders above RM300.',
+  },
+  {
+    q: 'How many boxes does a home move in Setapak or Selayang need?',
+    a: 'A 3-bedroom home typically needs 50–70 boxes. TAR UMT students moving in or out of a rented room usually manage with far fewer — mix small boxes for books and heavy items with medium ones for clothes. Send us a rough list of what you are packing on WhatsApp and we will suggest a size mix.',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle — Carton Box Setapak & Selayang",
+  "description": "Wholesale carton box supplier delivering to Setapak, Wangsa Maju, Danau Kota, Selayang Baru and Bandar Baru Selayang. Used boxes from RM0.90, new boxes from RM1.10, next-day delivery from our Balakong warehouse.",
+  "url": "https://www.quinocycle.com.my/carton-box/setapak-selayang/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM9.00 per box",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["Setapak","Wangsa Maju","Danau Kota","Selayang","Bandar Baru Selayang"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Carton Box", "item": "https://www.quinocycle.com.my/carton-box/" },
+    { "@type": "ListItem", "position": 3, "name": AREA, "item": "https://www.quinocycle.com.my/carton-box/setapak-selayang/" }
+  ]
+};
+---
+
+<Layout
+  lang="en"
+  title="Carton Box Setapak & Selayang — Wholesale from RM0.90 | Quinocycle"
+  description="Wholesale carton boxes delivered to Setapak, Wangsa Maju & Selayang — used from RM0.90, new from RM1.10, free delivery above RM300. WhatsApp 016-891 6381."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/carton-box" class="hover:text-primary transition-colors">Carton Box</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">{AREA}</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Our Delivery Areas</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Carton box Setapak &amp; Selayang <br /><span class="text-primary italic">— wholesale prices, delivered to your door.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      No box warehouse in KL's north? No problem. Quinocycle delivers straight from our Balakong warehouse to <strong class="text-on-surface font-semibold">Setapak, Wangsa Maju, Danau Kota, Selayang Baru and Bandar Baru Selayang</strong> — used boxes from <strong class="text-on-surface font-semibold">RM0.90</strong>, new boxes from <strong class="text-on-surface font-semibold">RM1.10</strong>, free delivery on orders above RM300.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Us Now
+      </a>
+      <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Browse Live Stock
+      </a>
+    </div>
+  </section>
+
+  <!-- Local info -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Delivered Across KL North</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Setapak, Danau Kota, Wangsa Maju, around Setapak Central, plus Selayang Baru and Bandar Baru Selayang — roughly 25–30 minutes from Balakong via MRR2 or DUKE. Next-day delivery is standard, and morning orders often arrive the same day. Free for orders above RM300 (KL &amp; Selangor).
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">storefront</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Or Self-Collect in Balakong</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Prefer to save every ringgit? Our warehouse is at No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor. WhatsApp first and your order will be packed and waiting when you arrive — no wandering the aisles.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">schedule</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Business Hours</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Monday–Friday: 9:00 am – 5:00 pm<br />
+          Saturday: 9:00 am – 1:00 pm<br />
+          Sunday &amp; public holidays: closed — but WhatsApp messages still get answered
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Why Setapak and Selayang order their boxes from us</h2>
+    <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
+      <p>
+        The north of Kuala Lumpur moves a lot of cardboard. Every semester, thousands of <strong class="text-on-surface font-semibold">TAR UMT students</strong> around Setapak and Wangsa Maju pack up rented rooms, shift between hostels, or head home with a semester's worth of belongings — and every one of them discovers that hardware shops charge retail prices for a single flimsy box. A few kilometres west, the traders at the <strong class="text-on-surface font-semibold">Selayang wholesale market</strong> go through packing cartons daily, repacking produce and dry goods for restaurants and retailers across the Klang Valley. And in between, families in Danau Kota, Selayang Baru and Bandar Baru Selayang are simply trying to move house without paying RM8–RM12 per box at the nearest convenience store.
+      </p>
+      <p>
+        Quinocycle is a wholesale carton box supplier operating from Taming Jaya, Balakong — about 25–30 minutes from Setapak Central or the Selayang market via MRR2 or DUKE. We stock two ranges. <strong class="text-on-surface font-semibold">Used once-used boxes from RM0.90 to RM6.00 each</strong> (the cheapest currently in stock is RM1.70 — stock rotates, so check <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:underline">shop.quinocycle.com</a> for live availability): factory-grade cartons that have carried one shipment, ideal for market traders and student moves where the box just needs to work. <strong class="text-on-surface font-semibold">New boxes from RM1.10 to RM9.00</strong> for cleaner presentation, plus XXL cargo boxes at RM28–RM38 for bulky loads.
+      </p>
+      <p>
+        Ordering is deliberately simple. WhatsApp <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:underline">016-891 6381</a> with your sizes and quantities, and we arrange delivery to your doorstep, stall or campus area — usually next-day, often same-day for morning orders. Delivery is free for KL &amp; Selangor orders above RM300. Our wholesale minimum is RM1,000, but smaller orders — a room move, a 3-bedroom house that needs 50–70 boxes — can be arranged over WhatsApp. Regular buyers like Selayang market traders can set up repeat orders so cartons simply turn up when needed.
+      </p>
+      <p>
+        One honest note: we do not have a shop in Setapak or Selayang, and we will not pretend to. Everything ships from one warehouse in Balakong — which is exactly why the prices stay at wholesale level. If you are near Batu Caves, the same delivery run covers you too.
+      </p>
+      <p lang="ms">
+        <strong class="text-on-surface font-semibold">Ringkasan dalam Bahasa Malaysia:</strong> Quinocycle membekalkan kotak kardus harga borong ke Setapak, Wangsa Maju, Danau Kota dan Selayang terus dari gudang kami di Balakong. Kotak terpakai dari RM0.90, kotak baru dari RM1.10, penghantaran percuma untuk pesanan melebihi RM300 — biasanya sampai keesokan hari. WhatsApp 016-891 6381 untuk sebut harga.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">Frequently asked questions — carton box {AREA}</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/15">
+        {faqs.map(f => (
+          <details class="group py-5">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              {f.q}
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <h2 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface mb-6">Nearby areas</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/kotak-pindah-rumah/kuala-lumpur" class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Kuala Lumpur</a>
+      <a href="/kotak-pindah-rumah/batu-caves"   class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Batu Caves</a>
+      <a href="/carton-box/ampang"               class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Carton Box Ampang</a>
+      <a href="/carton-box"                      class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">All Areas →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Need boxes in Setapak or Selayang? Start with one message.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        Send your box sizes and quantities to WhatsApp — we reply with a quote and arrange delivery to Setapak, Wangsa Maju or Selayang, or prepare your order for self-collection at our Balakong warehouse.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Warehouse Location (Balakong)
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

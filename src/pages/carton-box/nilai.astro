@@ -1,0 +1,204 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CITY = 'Nilai';
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! I'd like to order carton boxes for delivery to ${CITY}.`)}`;
+
+const faqs = [
+  {
+    q: 'Does Quinocycle have a shop or branch in Nilai?',
+    a: 'No — and we would rather tell you that straight than pretend otherwise. Quinocycle operates from a single warehouse at No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor, roughly 35–40 minutes from Nilai via the PLUS or ELITE highway. Everything ships from there. You can order through WhatsApp or our online store at shop.quinocycle.com, or drive up and collect in person — just message us first so your boxes are packed and ready.',
+  },
+  {
+    q: 'How much does delivery to Nilai cost?',
+    a: 'Nilai sits in Negeri Sembilan, just outside our KL & Selangor free-delivery zone (free for orders above RM300 within that zone). So delivery to Nilai, Bandar Baru Nilai or Nilai 3 is quoted individually — WhatsApp 016-891 6381 with your box sizes and quantities, and we reply with an honest delivery price before you commit. Typically your order arrives within 1 working day.',
+  },
+  {
+    q: 'What do carton boxes cost at wholesale price?',
+    a: 'Used once-used cartons run RM0.90–RM6.00 per box depending on size and stock (the cheapest in stock right now is RM1.70 — stock rotates weekly as new lots arrive). New boxes are RM1.10–RM9.00, and XXL cargo boxes for bulky or air-freight loads are RM28–RM38, including the T760 (760×760×760mm) and BW800 (800×400×800mm). Live stock and exact prices are always on shop.quinocycle.com.',
+  },
+  {
+    q: 'I buy goods in bulk at Nilai 3 — can I get cartons for repacking and shipping?',
+    a: 'That is exactly the kind of order we handle daily. Traders who buy carpets, textiles, toys or household goods wholesale at Nilai 3 often need 50–200 cartons to repack and forward stock. Send your sizes and quantities via WhatsApp and we quote wholesale pricing plus delivery to Nilai, usually arriving within 1 working day. For very large or heavy items, ask about our XXL cargo boxes.',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": `Quinocycle — Carton Box ${CITY}`,
+  "description": `Wholesale carton box supplier serving ${CITY}, Bandar Baru Nilai and Nilai 3 — used cartons from RM0.90, new boxes from RM1.10, XXL cargo boxes RM28–RM38. Delivered from our Balakong warehouse, typically within 1 working day.`,
+  "url": "https://www.quinocycle.com.my/carton-box/nilai/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM38.00 per box",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["Nilai","Bandar Baru Nilai","Nilai 3"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Carton Box", "item": "https://www.quinocycle.com.my/carton-box/" },
+    { "@type": "ListItem", "position": 3, "name": CITY, "item": "https://www.quinocycle.com.my/carton-box/nilai/" }
+  ]
+};
+---
+
+<Layout
+  lang="en"
+  title={`Carton Box ${CITY} — Wholesale from RM0.90, Next-Day Delivery | Quinocycle`}
+  description={`Need carton boxes in ${CITY}? Wholesale used cartons from RM0.90, new from RM1.10, delivered from Balakong within 1 working day. WhatsApp 016-891 6381 for a quote.`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/carton-box" class="hover:text-primary transition-colors">Carton Box</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">{CITY}</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Our Delivery Areas</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Carton box Nilai <br /><span class="text-primary italic">— wholesale prices, delivered in 1 working day.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      Trading at Nilai 3, running a factory in the industrial parks, or moving in or out of Bandar Baru Nilai? Quinocycle supplies <strong class="text-on-surface font-semibold">used once-used cartons from RM0.90</strong>, new boxes from <strong class="text-on-surface font-semibold">RM1.10</strong> and XXL cargo boxes from <strong class="text-on-surface font-semibold">RM28</strong> — shipped from our Balakong warehouse, about 35–40 minutes up the PLUS/ELITE highway, typically arriving within 1 working day.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Us Now
+      </a>
+      <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Browse Live Stock Online
+      </a>
+    </div>
+  </section>
+
+  <!-- Local info -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Delivery to Nilai — Quoted Honestly</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Nilai is in Negeri Sembilan, just outside our KL &amp; Selangor free-delivery zone — so instead of hiding the cost, we quote it upfront. WhatsApp your order and get a delivery price for Bandar Baru Nilai, Nilai 3 or the industrial parks before you pay a sen. Typically 1 working day.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">storefront</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Or Collect from Balakong</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Our warehouse sits at No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor — around 35–40 minutes from Nilai via the PLUS or ELITE highway. Message us first and your order will be packed and waiting when you arrive.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">schedule</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Business Hours</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Monday–Friday: 9:00am – 5:00pm<br />
+          Saturday: 9:00am – 1:00pm<br />
+          Sunday &amp; public holidays: closed — but WhatsApp messages still get answered, and shop.quinocycle.com shows live stock 24/7.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Why Nilai traders, factories and students order cartons from us</h2>
+    <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
+      <p>
+        Nilai punches well above its weight when it comes to moving goods. <strong class="text-on-surface font-semibold">Nilai 3 wholesale centre</strong> pulls in traders from across Malaysia who buy carpets, textiles, toys and household goods by the lot — and almost every one of them faces the same next step: repacking that stock into solid cartons so it survives the trip to a shop, a customer or a courier hub. Buying boxes piecemeal at retail prices eats straight into a trader's margin. Buying wholesale from a supplier is how the numbers stay sensible.
+      </p>
+      <p>
+        That is where Quinocycle comes in. We are a carton box supplier operating from Taming Jaya, Balakong — about 35–40 minutes from Nilai via the PLUS or ELITE highway — supplying movers, online sellers, factories and traders across the Klang Valley and beyond. <strong class="text-on-surface font-semibold">Used once-used cartons cost RM0.90–RM6.00 per box</strong> (the cheapest currently in stock is RM1.70; stock rotates as new factory lots arrive), new boxes run RM1.10–RM9.00, and every size with live availability is listed on <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:underline">shop.quinocycle.com</a>.
+      </p>
+      <p>
+        The factories and warehouses in Nilai's industrial parks order from us for the same reason the Nilai 3 traders do: consistent supply at wholesale rates, without maintaining their own carton inventory. And for bulky or export-bound loads, our <strong class="text-on-surface font-semibold">XXL cargo boxes (RM28–RM38)</strong> — the T760 at 760×760×760mm and the BW800 at 800×400×800mm — are built for the job. With KLIA just down the road, plenty of these end up as air-cargo boxes; see our <a href="/kotak-pindah-rumah/klia" class="text-primary font-semibold hover:underline">KLIA cargo box page</a> if that is your route.
+      </p>
+      <p>
+        Students count too. Every semester, USIM and INTI/Nilai University students moving in or out of hostels and rented rooms around Bandar Baru Nilai need a dozen cheap, sturdy boxes rather than a pallet-load — and a small mixed order of used cartons is usually the most economical answer. One honest note: Nilai is in Negeri Sembilan, outside our KL &amp; Selangor free-delivery zone (free above RM300 within that zone), so delivery to Nilai is quoted via WhatsApp — typically arriving within 1 working day. Message <strong class="text-on-surface font-semibold">016-891 6381</strong> with your sizes and quantities, and you will have a full price before you decide.
+      </p>
+      <p lang="ms">
+        <strong class="text-on-surface font-semibold">Ringkasan Bahasa Malaysia:</strong> Quinocycle membekalkan kotak kardus harga borong untuk kawasan Nilai, Bandar Baru Nilai dan Nilai 3 — kotak terpakai dari RM0.90, kotak baru dari RM1.10, dan kotak kargo XXL RM28–RM38. Semua penghantaran dibuat dari gudang kami di Balakong, Selangor (±35–40 minit dari Nilai), biasanya sampai dalam 1 hari bekerja. Oleh kerana Nilai berada di Negeri Sembilan, di luar zon penghantaran percuma KL &amp; Selangor, kos penghantaran akan disebut harga melalui WhatsApp 016-891 6381. Stok terkini boleh dilihat di shop.quinocycle.com.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">Frequently asked questions — carton box {CITY}</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/15">
+        {faqs.map(f => (
+          <details class="group py-5">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              {f.q}
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <h2 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface mb-6">Nearby areas</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/kotak-pindah-rumah/klia"     class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Cargo Boxes KLIA</a>
+      <a href="/kotak-pindah-rumah/bangi"    class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Bangi</a>
+      <a href="/kotak-pindah-rumah/semenyih" class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Semenyih</a>
+      <a href="/carton-box"                  class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">All Areas →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Need carton boxes in Nilai? Start with one message.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        Send your box sizes and quantities to WhatsApp — we reply with wholesale pricing and an upfront delivery quote to Nilai, Bandar Baru Nilai or Nilai 3, or pack your order for collection at our Balakong warehouse.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Warehouse Location (Balakong)
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

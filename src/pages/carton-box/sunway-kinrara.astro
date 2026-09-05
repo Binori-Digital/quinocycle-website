@@ -1,0 +1,204 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const AREA = 'Sunway & Bandar Kinrara';
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! I'd like to order carton boxes for delivery to ${AREA}.`)}`;
+
+const faqs = [
+  {
+    q: 'Does Quinocycle have a shop in Sunway or Bandar Kinrara?',
+    a: 'No — and we would rather tell you that straight than pretend otherwise. Our only warehouse is at No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor, roughly 20–25 minutes from Bandar Sunway and Bandar Kinrara via the LDP or Bukit Jalil highway. Instead of a shopfront, we deliver: WhatsApp your order in the morning and we arrange same-day or next-day delivery to Sunway Pyramid area, Sunway Geo, South Quay, or any BK section in Bandar Kinrara.',
+  },
+  {
+    q: 'How much do carton boxes cost for a Sunway or Kinrara move?',
+    a: 'Once-used boxes range from RM0.90 to RM6.00 per box depending on size and current stock (the cheapest in stock right now is RM1.70 — stock rotates daily). New boxes run RM1.10 to RM9.00, and XXL cargo boxes are RM28 to RM38. You can check live stock and prices anytime at shop.quinocycle.com, or WhatsApp 016-891 6381 for a quote.',
+  },
+  {
+    q: 'Is delivery to Bandar Sunway or Bandar Kinrara free?',
+    a: 'Delivery is free for orders above RM300 — both areas fall inside our free KL & Selangor delivery zone. For smaller orders, send your list of sizes and quantities via WhatsApp and we will quote the delivery charge directly. A typical 3-bedroom home needs 50–70 boxes, which usually clears the free-delivery threshold comfortably.',
+  },
+  {
+    q: 'I am a Sunway University or Monash student — can I order a small quantity?',
+    a: 'Yes. Our wholesale minimum is RM1,000, but smaller quantities are handled directly via WhatsApp 016-891 6381 — tell us how many boxes you need for your hostel or condo move and we will sort out pricing and delivery. During semester move-in and move-out weeks it helps to message a few days ahead, as student orders tend to cluster around the same dates.',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle — Carton Box Sunway & Kinrara",
+  "description": "Wholesale carton box supplier delivering to Bandar Sunway, Sunway South Quay and Bandar Kinrara (BK1–BK9). Used boxes from RM0.90, new from RM1.10 per box, same-day or next-day delivery from our Balakong warehouse.",
+  "url": "https://www.quinocycle.com.my/carton-box/sunway-kinrara/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM38.00 per box",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["Bandar Sunway","Bandar Kinrara","Sunway South Quay","Sunway Geo","Puchong"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Carton Box", "item": "https://www.quinocycle.com.my/carton-box/" },
+    { "@type": "ListItem", "position": 3, "name": "Sunway & Kinrara", "item": "https://www.quinocycle.com.my/carton-box/sunway-kinrara/" }
+  ]
+};
+---
+
+<Layout
+  lang="en"
+  title="Carton Box Sunway & Bandar Kinrara — Wholesale from RM0.90 | Quinocycle"
+  description="Wholesale carton boxes delivered same or next day to Bandar Sunway & Bandar Kinrara — used from RM0.90, free delivery above RM300. WhatsApp 016-891 6381."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/carton-box" class="hover:text-primary transition-colors">Carton Box</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">Sunway &amp; Kinrara</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Our Delivery Areas</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Carton box Sunway &amp; Bandar Kinrara <br /><span class="text-primary italic">— wholesale prices, delivered to your door.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      No box warehouse in Sunway or Kinrara? You don't need one. Quinocycle delivers straight from our supplier warehouse in Balakong — about <strong class="text-on-surface font-semibold">20–25 minutes via the LDP or Bukit Jalil highway</strong> — to Bandar Sunway, South Quay and every BK section of Bandar Kinrara. Used boxes from <strong class="text-on-surface font-semibold">RM0.90</strong>, new boxes from <strong class="text-on-surface font-semibold">RM1.10</strong>, free delivery on orders above RM300.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Us Now
+      </a>
+      <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Live Stock &amp; Prices
+      </a>
+    </div>
+  </section>
+
+  <!-- Local info -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Same or Next-Day Delivery</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Bandar Sunway (Sunway Pyramid, Sunway Geo, South Quay) and Bandar Kinrara BK1–BK9 — WhatsApp your order in the morning and we arrange delivery the same day or next day. Free for orders above RM300 (KL &amp; Selangor).
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">storefront</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Or Self-Collect in Balakong</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Want to save every ringgit? Our warehouse is at No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong — roughly 20–25 minutes from Sunway or Kinrara via the LDP / Bukit Jalil highway. WhatsApp first so your boxes are packed and ready when you arrive.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">schedule</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Business Hours</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Monday–Friday: 9:00 AM – 5:00 PM<br />
+          Saturday: 9:00 AM – 1:00 PM<br />
+          Sunday &amp; public holidays: closed — but we still reply to WhatsApp messages
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Why Sunway and Kinrara residents order boxes from us</h2>
+    <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
+      <p>
+        Bandar Sunway and Bandar Kinrara sit on opposite sides of the LDP, but they share the same problem: plenty of malls and convenience stores, and not a single wholesale carton box warehouse. When moving day approaches, most people end up buying boxes one at a time at retail prices, or ordering online and hoping they arrive before the truck does. The actual supplier is closer than you think — our Balakong warehouse is about <strong class="text-on-surface font-semibold">20–25 minutes away via the LDP or the Bukit Jalil highway</strong>, close enough for same-day or next-day delivery.
+      </p>
+      <p>
+        Sunway has a rhythm of its own. Every semester, thousands of <strong class="text-on-surface font-semibold">Sunway University and Monash students</strong> move into and out of hostels and condos around Sunway Geo and South Quay — usually needing ten to twenty boxes each, all in the same two weeks. Our wholesale minimum is RM1,000, but student-sized and household orders are handled directly through WhatsApp, so a small move never gets turned away. Message us a few days before move-in or move-out week and your boxes arrive before the rush.
+      </p>
+      <p>
+        Bandar Kinrara, on the Puchong side, is a different kind of mover. Across BK1 to BK9, young professionals in condos and serviced apartments change rentals often — a one-year lease ends, a new one starts, and suddenly you need 50–70 boxes for a 3-bedroom unit within a week. That is exactly the order size our warehouse handles daily. <strong class="text-on-surface font-semibold">Once-used boxes run RM0.90–RM6.00</strong> (the cheapest currently in stock is RM1.70 — stock rotates), new boxes RM1.10–RM9.00, and XXL cargo boxes RM28–RM38 for bulky items.
+      </p>
+      <p>
+        Ordering is simple: browse live stock at <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:underline">shop.quinocycle.com</a> or WhatsApp your list of sizes and quantities to <strong class="text-on-surface font-semibold">016-891 6381</strong>. Orders above RM300 get free delivery anywhere in KL and Selangor — which most household moves in Sunway or Kinrara reach easily. Mix sizes: small boxes for books and heavy items, medium and large for clothes and kitchenware, XXL for the awkward bulky things that never fit anywhere else.
+      </p>
+      <p class="text-sm border-l-4 border-primary pl-4">
+        <strong class="text-on-surface font-semibold">Ringkasan Bahasa Malaysia:</strong> Quinocycle membekalkan kotak kardus borong ke Bandar Sunway dan Bandar Kinrara terus dari gudang kami di Balakong (±20–25 minit melalui LDP). Kotak terpakai dari RM0.90, kotak baru dari RM1.10, penghantaran percuma untuk pesanan melebihi RM300. WhatsApp 016-891 6381 untuk sebut harga — penghantaran hari sama atau esok.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">FAQ — carton box Sunway &amp; Kinrara</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/15">
+        {faqs.map(f => (
+          <details class="group py-5">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              {f.q}
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <h2 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface mb-6">Nearby areas</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/kotak-pindah-rumah/puchong"      class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Puchong</a>
+      <a href="/carton-box/petaling-jaya"        class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Carton Box Petaling Jaya</a>
+      <a href="/kotak-pindah-rumah/kuala-lumpur" class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Kuala Lumpur</a>
+      <a href="/carton-box"                      class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">All Areas →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Moving in Sunway or Kinrara? Start with one message.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        Send your list of box sizes and quantities via WhatsApp — we reply with a quote and arrange delivery to Bandar Sunway, South Quay or any BK section of Bandar Kinrara, or prepare your order for collection at our Balakong warehouse.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Warehouse Location (Balakong)
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

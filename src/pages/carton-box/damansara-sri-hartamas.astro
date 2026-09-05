@@ -1,0 +1,204 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const AREA = 'Damansara & Sri Hartamas';
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Hi Quinocycle! I would like to order carton boxes for delivery to Damansara / Sri Hartamas.')}`;
+
+const faqs = [
+  {
+    q: 'Do you have a carton box shop in Damansara or Sri Hartamas?',
+    a: 'No — and we would rather be honest about that than pin a fake branch on the map. Quinocycle operates from a single wholesale warehouse at No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor. There is no shop in TTDI, Damansara Heights or Sri Hartamas. Instead, we deliver: WhatsApp your order and boxes arrive next day, often same day, roughly 30–35 minutes up the highway from our warehouse.',
+  },
+  {
+    q: 'How much does carton box delivery to Damansara or Sri Hartamas cost?',
+    a: 'Delivery is free for orders above RM300 — TTDI, Damansara Heights, Damansara Utama, Mutiara Damansara, Sri Hartamas and Desa Sri Hartamas all sit inside our free KL & Selangor delivery zone. For smaller quantities, send your list of sizes and quantities to WhatsApp 016-891 6381 and we will quote delivery directly.',
+  },
+  {
+    q: 'How many boxes do I need to move a landed home in TTDI or Damansara Heights?',
+    a: 'A 3-bedroom home typically needs 50–70 boxes. Larger landed homes in Damansara Heights or TTDI with studies, storerooms and full kitchens usually sit at the top of that range or beyond — order in two rounds if you are unsure. Mix small boxes for heavy items like books, and medium/large for clothing and kitchenware. Stock and live pricing are on our online store at shop.quinocycle.com.',
+  },
+  {
+    q: 'Can I buy boxes for storage or renovation, not just moving house?',
+    a: 'Yes. A large share of orders from Damansara and Sri Hartamas are for renovation packing and long-term storage rather than moving — the same double-wall cartons work for both. Once-used boxes run RM0.90–RM6.00 per box (the cheapest currently in stock is RM1.70; stock rotates), new boxes RM1.10–RM9.00, and XXL cargo boxes RM28–RM38. Wholesale minimum is RM1,000; smaller quantities can be arranged via WhatsApp.',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle — Carton Box Damansara & Sri Hartamas",
+  "description": "Wholesale carton box supplier delivering to TTDI, Damansara Heights, Damansara Utama, Mutiara Damansara, Sri Hartamas and Desa Sri Hartamas. Used boxes from RM0.90, new from RM1.10, next-day delivery from our Balakong warehouse.",
+  "url": "https://www.quinocycle.com.my/carton-box/damansara-sri-hartamas/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM9.00 per box",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["TTDI","Damansara Heights","Damansara Utama","Mutiara Damansara","Sri Hartamas","Desa Sri Hartamas"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Carton Box", "item": "https://www.quinocycle.com.my/carton-box/" },
+    { "@type": "ListItem", "position": 3, "name": AREA, "item": "https://www.quinocycle.com.my/carton-box/damansara-sri-hartamas/" }
+  ]
+};
+---
+
+<Layout
+  lang="en"
+  title="Carton Box Damansara & Sri Hartamas — Wholesale from RM0.90 | Quinocycle"
+  description="Carton boxes delivered to TTDI, Damansara Heights & Sri Hartamas — used from RM0.90, new from RM1.10, next day from Balakong. Free above RM300. WhatsApp 016-891 6381."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/carton-box" class="hover:text-primary transition-colors">Carton Box</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">{AREA}</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Our Delivery Areas</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Carton box Damansara &amp; Sri Hartamas <br /><span class="text-primary italic">— wholesale prices, delivered to your gate.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      Moving, renovating or clearing out a landed home in <strong class="text-on-surface font-semibold">TTDI, Damansara Heights, Damansara Utama, Mutiara Damansara, Sri Hartamas or Desa Sri Hartamas</strong>? Quinocycle delivers direct from our wholesale warehouse in Balakong — once-used boxes from <strong class="text-on-surface font-semibold">RM0.90</strong>, new boxes from <strong class="text-on-surface font-semibold">RM1.10</strong>, free delivery on orders above RM300.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Us Now
+      </a>
+      <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Live Stock &amp; Prices
+      </a>
+    </div>
+  </section>
+
+  <!-- Delivery info -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Next-Day to Damansara &amp; Hartamas</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          TTDI, Damansara Heights, Damansara Utama/Uptown, Mutiara Damansara, Sri Hartamas and Desa Sri Hartamas — WhatsApp your order and we deliver next day, often same day. Free for orders above RM300 (KL &amp; Selangor).
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">storefront</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Or Collect from Balakong</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Our warehouse is at No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor — about 30–35 minutes' drive from Damansara or Sri Hartamas. WhatsApp first so your order is packed and waiting when you arrive.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">schedule</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Business Hours</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Monday–Friday: 9:00 AM – 5:00 PM<br />
+          Saturday: 9:00 AM – 1:00 PM<br />
+          Sunday &amp; public holidays: closed — WhatsApp messages still get answered
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Why Damansara and Sri Hartamas order boxes from a Balakong warehouse</h2>
+    <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
+      <p>
+        Damansara and Sri Hartamas have no shortage of nice things — what they do not have is a <strong class="text-on-surface font-semibold">wholesale carton box supplier</strong>. When a family in TTDI or Damansara Heights needs sixty boxes for a move, or a Desa Sri Hartamas condo owner needs twenty for a renovation clear-out, the local options are hardware shops selling single boxes at retail prices, or online sellers with multi-day shipping. The actual supplier tier of the market sits in industrial areas like Balakong — which is only 30–35 minutes away by highway.
+      </p>
+      <p>
+        That is where Quinocycle comes in. We are a carton box wholesaler in Taming Jaya, Balakong, supplying movers, online sellers and factories across the Klang Valley — and we deliver the same wholesale stock to your doorstep. <strong class="text-on-surface font-semibold">WhatsApp your list of sizes and quantities, and we arrange next-day delivery — often same day for morning orders.</strong> No squeezing 60 boxes into an SUV outside a hardware shop in Uptown.
+      </p>
+      <p>
+        The pricing is wholesale, not retail: once-used boxes run RM0.90–RM6.00 per box (once-used factory grade, checked, dry and odour-free — the cheapest currently in stock is RM1.70, as stock rotates), new boxes RM1.10–RM9.00, and XXL cargo boxes RM28–RM38 for bulky items. Live stock and exact prices are always on our online store at <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:underline">shop.quinocycle.com</a>. Many landed-home customers here are not even moving — they order sturdy cartons for attic storage, decluttering before a renovation, or boxing up a home office. Same boxes, same prices.
+      </p>
+      <p>
+        For a full house move, plan on 50–70 boxes for a 3-bedroom home; larger landed properties in Damansara Heights or TTDI often need more. Wholesale orders start at RM1,000, but smaller household quantities are easily arranged over WhatsApp. And with Mont Kiara right next door to Sri Hartamas, we serve a large expat community too — Korean-speaking readers can use our <a href="/blog/kl-isa-box-guide-korean" class="text-primary font-semibold hover:underline">한국어 moving box guide</a>, and Japanese-speaking readers our <a href="/blog/kl-hikkoshi-danboru-guide" class="text-primary font-semibold hover:underline">日本語 引っ越しダンボールガイド</a>.
+      </p>
+      <p lang="ms">
+        <strong class="text-on-surface font-semibold">Ringkasan Bahasa Malaysia:</strong> Quinocycle membekalkan kotak kardus harga borong ke kawasan Damansara dan Sri Hartamas — kotak terpakai dari RM0.90, kotak baru dari RM1.10 sekotak. Gudang kami di Taming Jaya, Balakong (±30–35 minit memandu), dan penghantaran percuma untuk pesanan melebihi RM300 di KL &amp; Selangor. WhatsApp 016-891 6381 untuk sebut harga.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">FAQ — carton box {AREA}</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/15">
+        {faqs.map(f => (
+          <details class="group py-5">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              {f.q}
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <h2 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface mb-6">Nearby areas</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/carton-box/petaling-jaya"          class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Carton Box Petaling Jaya</a>
+      <a href="/kotak-pindah-rumah/kuala-lumpur"   class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Kuala Lumpur</a>
+      <a href="/carton-box/sunway-kinrara"         class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Carton Box Sunway &amp; Kinrara</a>
+      <a href="/carton-box"                        class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">All Areas →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Boxes for Damansara or Sri Hartamas? One message does it.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        Send your list of box sizes and quantities on WhatsApp — we reply with a quote and arrange delivery to TTDI, Damansara Heights, Mutiara Damansara or Sri Hartamas, or prepare your order for collection at our Balakong warehouse.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Warehouse Location (Balakong)
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

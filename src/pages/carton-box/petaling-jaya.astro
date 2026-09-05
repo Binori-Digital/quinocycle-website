@@ -1,0 +1,209 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CITY = 'Petaling Jaya';
+const WA_NUMBER = '60168916381';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinocycle! I'd like to order carton boxes for delivery to ${CITY}.`)}`;
+
+const faqs = [
+  {
+    q: 'Is there a carton box shop in Petaling Jaya?',
+    a: 'Honest answer: we do not have a shop or branch in PJ, and most "carton box shops" in PJ are hardware or stationery stores selling boxes one at a time at retail prices. Quinocycle is a wholesale carton warehouse in Taming Jaya, Balakong — about 30–35 minutes from PJ via the Federal Highway or NPE — and we deliver to SS2, Section 14, Section 17, Kelana Jaya and the rest of PJ, usually next-day and often same-day. You get warehouse wholesale pricing without leaving Petaling Jaya.',
+  },
+  {
+    q: 'How fast can you deliver carton boxes to PJ?',
+    a: 'WhatsApp your order to 016-891 6381 in the morning and we can usually arrange same-day delivery to Petaling Jaya; otherwise it arrives next working day. Our warehouse operates Monday–Friday 9:00am–5:00pm and Saturday 9:00am–1:00pm. Delivery is free for KL & Selangor orders above RM300 — PJ qualifies.',
+  },
+  {
+    q: 'What do carton boxes cost for a PJ online seller or SME?',
+    a: 'Used once-used boxes run RM0.90–RM6.00 per box depending on size and current stock (the cheapest in stock right now is RM1.70 — stock rotates, so check live availability at shop.quinocycle.com). New boxes are RM1.10–RM9.00, and XXL cargo boxes are RM28–RM38. Wholesale orders start from RM1,000; for smaller quantities, just WhatsApp us and we will sort something out.',
+  },
+  {
+    q: 'How many boxes do I need to move out of a PJ apartment or office?',
+    a: 'A typical 3-bedroom home needs 50–70 boxes; a PJ apartment or condo unit usually sits in the same range once you count the kitchen and wardrobes. For office relocations, count roughly one to two boxes per workstation plus extras for files and pantry items, then send us the list on WhatsApp — we will quote the mix of sizes and arrange delivery to your PJ address.',
+  },
+];
+
+const storeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Quinocycle — Carton Box Petaling Jaya",
+  "description": "Wholesale carton box supplier delivering to Petaling Jaya — SS2, Section 14, Section 17, Kelana Jaya and Damansara Jaya. Used boxes from RM0.90, new boxes from RM1.10, next-day (often same-day) delivery from our Balakong warehouse.",
+  "url": "https://www.quinocycle.com.my/carton-box/petaling-jaya/",
+  "telephone": "+60168916381",
+  "priceRange": "RM0.90 - RM9.00 per box",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
+    "addressLocality": "Balakong",
+    "addressRegion": "Selangor",
+    "postalCode": "43300",
+    "addressCountry": "MY"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 3.0579, "longitude": 101.7468 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ],
+  "areaServed": ["Petaling Jaya","SS2","Section 14 Petaling Jaya","Section 17 Petaling Jaya","Kelana Jaya","Damansara Jaya"]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Carton Box", "item": "https://www.quinocycle.com.my/carton-box/" },
+    { "@type": "ListItem", "position": 3, "name": CITY, "item": "https://www.quinocycle.com.my/carton-box/petaling-jaya/" }
+  ]
+};
+---
+
+<Layout
+  lang="en"
+  title="Carton Box Petaling Jaya (PJ) — Wholesale from RM0.90, Fast Delivery | Quinocycle"
+  description="Carton boxes delivered to Petaling Jaya — SS2, Section 14/17, Kelana Jaya. Used from RM0.90, new from RM1.10, free delivery above RM300. WhatsApp 016-891 6381."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-16 pb-12 px-6 md:px-8 max-w-7xl mx-auto">
+    <nav class="font-body text-xs text-secondary mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-primary transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/carton-box" class="hover:text-primary transition-colors">Carton Box</a>
+      <span class="mx-2">/</span>
+      <span class="text-on-surface font-semibold">{CITY}</span>
+    </nav>
+    <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Our Delivery Areas</span>
+    <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
+      Carton box Petaling Jaya <br /><span class="text-primary italic">— wholesale prices, delivered to your door.</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
+      No need to hunt for a box shop in PJ. Quinocycle delivers straight from our wholesale warehouse in Balakong to <strong class="text-on-surface font-semibold">SS2, Section 14, Section 17, Kelana Jaya and the Damansara Jaya edge</strong> — used once-used boxes from <strong class="text-on-surface font-semibold">RM0.90</strong>, new boxes from <strong class="text-on-surface font-semibold">RM1.10</strong> per box, free delivery for orders above RM300.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+        WhatsApp Us Now
+      </a>
+      <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Live Stock &amp; Prices
+      </a>
+    </div>
+  </section>
+
+  <!-- Local info -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Next-Day Delivery Across PJ</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Our Balakong warehouse is roughly 30–35 minutes from PJ via the Federal Highway or NPE. WhatsApp your order in the morning and we can often deliver the same day to SS2, Section 14/17, Kelana Jaya or Damansara Jaya — next working day at the latest.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">redeem</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Free Delivery Above RM300</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Petaling Jaya sits well inside our free KL &amp; Selangor delivery zone — any order above RM300 ships free. Wholesale orders start from RM1,000; for smaller quantities, message us on WhatsApp 016-891 6381 and we will work out delivery for you.
+        </p>
+      </div>
+      <div class="bg-surface rounded-3xl p-8">
+        <span class="material-symbols-outlined text-3xl text-primary mb-3 block">schedule</span>
+        <h2 class="font-headline font-bold text-lg text-on-surface mb-3">Order Hours</h2>
+        <p class="font-body text-sm text-secondary leading-relaxed">
+          Monday–Friday: 9:00am – 5:00pm<br />
+          Saturday: 9:00am – 1:00pm<br />
+          Sunday &amp; public holidays: closed — but WhatsApp messages still get answered, and live stock is always on <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:underline">shop.quinocycle.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="py-20 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Why PJ businesses and movers buy from us</h2>
+    <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
+      <p>
+        Petaling Jaya is one of the busiest commercial districts in the Klang Valley — thousands of online sellers running shops out of SS2 and Kelana Jaya, SMEs and agencies filling the office blocks of Section 14 and Section 17, and a constant churn of families moving in and out of its apartments and terrace houses. What PJ does not have is a <strong class="text-on-surface font-semibold">wholesale carton warehouse</strong>. Buying boxes retail at a hardware shop means paying several times the wholesale rate, and buying from marketplace listings means waiting days for stock that may not match the photos.
+      </p>
+      <p>
+        Quinocycle supplies cartons in bulk from our warehouse in Taming Jaya, Balakong — a 30–35 minute run to PJ via the Federal Highway or NPE. That distance is exactly why the numbers work: instead of paying PJ shop-lot rent, we pass warehouse pricing on and put the boxes on a lorry. <strong class="text-on-surface font-semibold">Used once-used boxes cost RM0.90–RM6.00 each</strong> (the cheapest currently in stock is RM1.70 — stock rotates weekly), new boxes run RM1.10–RM9.00, and XXL cargo boxes for bulky goods are RM28–RM38. Every price and every size is listed live on <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:underline">shop.quinocycle.com</a>, so you can check real-time availability before you order.
+      </p>
+      <p>
+        For PJ's e-commerce crowd, the maths matters most on repeat orders. If you ship dozens of parcels a week from SS2 or Kelana Jaya, shaving even fifty sen off each box compounds fast — our <a href="/blog/kotak-pos-barang" class="text-primary font-semibold hover:underline">guide to parcel boxes for online sellers</a> walks through picking the right sizes for courier rates. Wholesale orders start from RM1,000, which many PJ sellers hit in a single monthly restock; smaller top-ups are handled case by case over WhatsApp.
+      </p>
+      <p>
+        Moving house or relocating an office instead? A 3-bedroom home typically needs 50–70 boxes, and office moves in Section 14 or Section 17 usually mix standard cartons with a few XXL cargo boxes for equipment. Send your list to <strong class="text-on-surface font-semibold">WhatsApp 016-891 6381</strong> and we will quote a size mix, confirm stock, and schedule delivery to your PJ address — usually the next working day, often the same day if you message before noon.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 md:px-8">
+      <h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-8">FAQ — carton box {CITY}</h2>
+      <div class="flex flex-col divide-y divide-outline-variant/15">
+        {faqs.map(f => (
+          <details class="group py-5">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer list-none font-headline font-bold text-lg text-on-surface">
+              {f.q}
+              <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-45 flex-shrink-0" style="font-size:24px;">add</span>
+            </summary>
+            <p class="font-body text-sm text-secondary leading-relaxed mt-3">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- BM summary -->
+  <section class="py-12 px-6 md:px-8 max-w-3xl mx-auto">
+    <h2 class="font-headline text-xl font-extrabold tracking-tighter text-on-surface mb-4">Ringkasan dalam Bahasa Malaysia</h2>
+    <p class="font-body text-secondary leading-relaxed text-base">
+      Quinocycle membekalkan <strong class="text-on-surface font-semibold">kotak kardus borong dihantar ke Petaling Jaya</strong> — SS2, Seksyen 14, Seksyen 17 dan Kelana Jaya — terus dari gudang kami di Taming Jaya, Balakong. Kotak terpakai dari RM0.90, kotak baru dari RM1.10, penghantaran percuma untuk pesanan melebihi RM300 (KL &amp; Selangor). WhatsApp 016-891 6381 atau semak stok terkini di shop.quinocycle.com.
+    </p>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <h2 class="font-headline text-2xl font-extrabold tracking-tighter text-on-surface mb-6">Nearby areas</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/kotak-pindah-rumah/shah-alam"          class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Kotak Pindah Shah Alam</a>
+      <a href="/carton-box/sunway-kinrara"             class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Carton Box Sunway &amp; Kinrara</a>
+      <a href="/carton-box/damansara-sri-hartamas"     class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">Carton Box Damansara &amp; Sri Hartamas</a>
+      <a href="/carton-box"                            class="bg-surface-container-low hover:bg-primary-container text-on-surface px-6 py-3 rounded-full font-headline font-bold text-sm transition-colors">All Areas →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-primary-container text-on-primary-container">
+    <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">Need carton boxes in PJ? Start with one message.</h2>
+      <p class="font-body text-lg mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+        Send your sizes and quantities to WhatsApp — we reply with a quote and arrange delivery anywhere in Petaling Jaya, or prepare your order for self-collection at our Balakong warehouse.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
+          WhatsApp 016-891 6381
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Quinocycle+No.13+Jalan+Taming+P%2F1+Taming+Jaya+43300+Balakong+Selangor" target="_blank" rel="noopener noreferrer" class="bg-on-surface text-surface px-10 py-4 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-colors">
+          Warehouse Location (Balakong)
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
