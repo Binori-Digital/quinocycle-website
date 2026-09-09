@@ -3,6 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [master]
+  schedule:
+    # 16:05 UTC = 00:05 MYT — nightly rebuild so date-gated blog posts
+    # (src/content/posts/) go live automatically on their scheduled day.
+    - cron: '5 16 * * *'
   workflow_dispatch:
 
 permissions:

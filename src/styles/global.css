@@ -324,3 +324,14 @@
 .kotak-card__stock { font-size: 0.72rem; font-weight: 700; }
 .kotak-card__stock--in { color: #1b7a3d; }
 .kotak-card__stock--out { color: #a15c00; }
+
+/* --- Markdown-rendered elements inside .article-content (scheduled posts) --- */
+.article-content > table { display: block; width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); margin: 1.5rem 0; background: var(--bg-card); border-collapse: collapse; font-size: 0.9rem; }
+.article-content > table th { background: var(--yellow); color: var(--text-1); text-align: left; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.8rem 1rem; white-space: nowrap; }
+.article-content > table td { padding: 0.8rem 1rem; border-top: 1px solid var(--border); color: var(--text-2); vertical-align: middle; }
+.article-content > table tbody tr:nth-child(even) { background: var(--bg-base); }
+.article-content > table td strong { color: var(--text-1); }
+.article-content blockquote { background: #fffbe8; border: 1px solid var(--border); border-left: 4px solid var(--yellow); border-radius: var(--radius); padding: 1.1rem 1.4rem; margin: 1.75rem 0; font-size: 0.95rem; }
+.article-content blockquote p:last-child { margin-bottom: 0; }
+.article-content img { border-radius: var(--radius); margin: 1.5rem 0; }
+.article-content hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }

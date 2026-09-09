@@ -1,7 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { isLive } from '../../content/config';
 
-const posts = [
+const staticPosts = [
   // ── 2026-08-20 batch (multilingual guides: ZH / KO / JA) ──────────────────
   { slug: 'malaysia-banjia-zhixiang-guide', category: '搬家指南 · 中文', img: '/images/blog-movers-guide.jpg', title: '马来西亚搬家纸箱指南 — 吉隆坡/雪兰莪哪里买纸箱最便宜？', excerpt: '五金店一个纸箱要RM8–12，批发仓库二手纸箱从RM0.90起。二手 vs 全新对比、三房式约需50–70个纸箱、真实价格表与打包技巧。', date: '2026-08-20', readTime: '8 min' },
   { slug: 'kl-isa-box-guide-korean', category: '이사 가이드 · 한국어', img: '/images/blog-movers-guide.jpg', title: '쿠알라룸푸르 이사 준비 가이드 — 이사 박스 저렴하게 사는 법', excerpt: '도매 창고 가격(중고 RM0.90부터)으로 이사 박스 구매하기 — 필요한 박스 개수, 귀국이사용 XXL 박스, 몬키아라·암팡 배송 안내.', date: '2026-08-20', readTime: '7 min' },
@@ -554,6 +556,20 @@ const posts = [
     readTime: '4 min',
   },
 ];
+
+// Scheduled posts (src/content/posts/) — drip-published: a post only appears
+// once its date arrives (MYT). The nightly workflow rebuild flips them live.
+const scheduledPosts = (await getCollection('posts', ({ data }) => isLive(data.date))).map((p) => ({
+  slug: p.slug,
+  category: p.data.category,
+  img: p.data.img,
+  title: p.data.title,
+  excerpt: p.data.description,
+  date: p.data.date,
+  readTime: p.data.readTime,
+}));
+
+const posts = [...scheduledPosts, ...staticPosts].sort((a, b) => b.date.localeCompare(a.date));
 
 const categories = [
   'All',

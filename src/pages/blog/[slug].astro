@@ -1,0 +1,159 @@
+---
+import { getCollection } from 'astro:content';
+import { isLive } from '../../content/config';
+import Layout from '../../layouts/Layout.astro';
+import { SHOP_URL } from '../../data/catalog';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => isLive(data.date));
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const d = post.data;
+const isMS = d.lang === 'ms';
+const pageUrl = `https://www.quinocycle.com.my/blog/${post.slug}/`;
+const dateFmt = new Date(d.date).toLocaleDateString(isMS ? 'ms-MY' : 'en-MY', { day: 'numeric', month: 'long', year: 'numeric' });
+const WA_LINK = `https://wa.me/60168916381?text=${encodeURIComponent(
+  isMS ? 'Hi Quinocycle! Saya nak tanya tentang kotak & pembungkusan.' : 'Hi Quinocycle! I have a question about boxes & packaging.'
+)}`;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": d.title,
+  "description": d.description,
+  "image": new URL(d.img, Astro.site).href,
+  "datePublished": d.date,
+  "dateModified": d.date,
+  "inLanguage": isMS ? 'ms-MY' : d.lang === 'en' ? 'en-MY' : d.lang,
+  "author": { "@type": "Organization", "name": "Quinocycle Sdn Bhd", "url": "https://www.quinocycle.com.my/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Quinocycle Sdn Bhd",
+    "logo": { "@type": "ImageObject", "url": "https://www.quinocycle.com.my/favicon.png" }
+  },
+  "mainEntityOfPage": pageUrl,
+  "keywords": d.keywords.join(', '),
+  "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["#direct-answer"] }
+};
+
+const faqSchema = d.faqs.length ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": d.faqs.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+} : null;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": isMS ? 'Utama' : 'Home', "item": "https://www.quinocycle.com.my/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.quinocycle.com.my/blog/" },
+    { "@type": "ListItem", "position": 3, "name": d.title, "item": pageUrl }
+  ]
+};
+---
+
+<Layout lang={d.lang} title={`${d.title} | Quinocycle`} description={d.description} ogImage={d.img}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <article>
+    <!-- Hero -->
+    <header class="article-hero">
+      <div class="container article-hero__inner">
+        <a href="/blog/" class="article-back">← {isMS ? 'Kembali ke Blog' : 'Back to Blog'}</a>
+        <div class="article-meta" style="margin: 1rem 0 1.1rem;">
+          <span class="tag tag--yellow">{d.category}</span>
+          <time datetime={d.date}>{dateFmt}</time>
+          <span>· {d.readTime} {isMS ? 'bacaan' : 'read'}</span>
+        </div>
+        <h1 class="article-hero__title">{d.title}</h1>
+      </div>
+    </header>
+
+    <!-- Body -->
+    <div class="article-body">
+      <div class="container article-body__inner">
+        <div class="article-content">
+          <div class="article-callout article-callout--yellow" id="direct-answer">
+            <p class="article-lead" style="margin: 0;">{d.directAnswer}</p>
+          </div>
+
+          <img src={d.img} alt={d.title} loading="eager" style="border-radius: var(--radius); margin: 0 0 1.75rem; width: 100%; aspect-ratio: 16/9; object-fit: cover;" />
+
+          <Content />
+        </div>
+
+        <aside class="article-sidebar">
+          <div class="sidebar-cta">
+            <span class="tag tag--yellow">{isMS ? 'Harga Gudang' : 'Warehouse Prices'}</span>
+            <h3>{isMS ? 'Kotak dari RM0.90 sekotak — terus dari gudang Balakong' : 'Boxes from RM0.90 each — straight from our Balakong warehouse'}</h3>
+            <p>
+              {isMS
+                ? 'Kotak terpakai dari RM0.90, kotak baru dari RM1.10. Ambil sendiri di Balakong atau penghantaran percuma untuk pesanan RM300+ (KL & Selangor).'
+                : 'Used cartons from RM0.90, new cartons from RM1.10. Self-pickup in Balakong or free delivery on RM300+ orders (KL & Selangor).'}
+            </p>
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa">WhatsApp 016-891 6381</a>
+            <p class="sidebar-cta__note">
+              {isMS ? 'Isnin–Jumaat 9pg–5ptg · Sabtu 9pg–1tgh' : 'Mon–Fri 9am–5pm · Sat 9am–1pm'}
+            </p>
+          </div>
+          <div class="sidebar-links">
+            <p class="sidebar-links__title">{isMS ? 'Pautan Berguna' : 'Useful Links'}</p>
+            <a href={SHOP_URL} target="_blank" rel="noopener noreferrer" class="sidebar-link">{isMS ? 'Beli online — shop.quinocycle.com' : 'Buy online — shop.quinocycle.com'}</a>
+            <a href="/kotak-pindah-rumah/" class="sidebar-link">Kotak Pindah Rumah</a>
+            <a href="/carton-box/" class="sidebar-link">Carton Box — All Areas</a>
+            <a href="/used-carton-boxes/" class="sidebar-link">{isMS ? 'Kotak Terpakai (Used Boxes)' : 'Used Carton Boxes'}</a>
+            <a href="/blog/" class="sidebar-link">{isMS ? 'Semua Artikel' : 'All Articles'}</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    {d.faqs.length > 0 && (
+      <section class="article-faq">
+        <div class="container">
+          <h2 style="font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: var(--text-1); margin: 0 0 1.5rem;">
+            {isMS ? 'Soalan Lazim' : 'Frequently Asked Questions'}
+          </h2>
+          <div class="faq-list">
+            {d.faqs.map((f) => (
+              <div class="faq-item">
+                <h3 class="faq-q">{f.q}</h3>
+                <p class="faq-a">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- CTA -->
+    <section class="article-cta-section">
+      <div class="container">
+        <div class="article-cta-box">
+          <span class="tag tag--yellow">Quinocycle · Balakong, Selangor</span>
+          <h2>{isMS ? 'Perlukan kotak hari ini?' : 'Need boxes today?'}</h2>
+          <p>
+            {isMS
+              ? 'Stok sedia di gudang Taming Jaya, Balakong. WhatsApp senarai anda — kami balas waktu bekerja, siap untuk pickup atau penghantaran hari sama sekitar Lembah Klang.'
+              : 'Ready stock at our Taming Jaya, Balakong warehouse. WhatsApp us your list — same-day pickup or delivery around the Klang Valley.'}
+          </p>
+          <div class="article-cta-box__btns">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">WhatsApp 016-891 6381</a>
+            <a href={SHOP_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">{isMS ? 'Beli Online' : 'Shop Online'}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</Layout>
