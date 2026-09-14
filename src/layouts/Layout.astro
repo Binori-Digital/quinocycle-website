@@ -33,6 +33,11 @@ const navLinks = [
 
 const currentPath = Astro.url.pathname;
 
+// Holiday notice banner — shown sitewide until the holiday has passed.
+// Build-time gate (MYT): the nightly rebuild removes it automatically the day after.
+const todayMYT = new Date(Date.now() + 8 * 3600 * 1000).toISOString().slice(0, 10);
+const showHolidayNotice = todayMYT <= '2026-09-16';
+
 import '../styles/global.css';
 ---
 
@@ -197,6 +202,23 @@ import '../styles/global.css';
   </nav>
 
   <main class={heroMode ? '' : 'pt-[88px] md:pt-[96px]'}>
+    {showHolidayNotice && (
+      <aside
+        class={`bg-[#F5C400] text-[#1d1c16] border-b-4 border-[#1d1c16] ${heroMode ? 'pt-[88px] md:pt-0' : ''}`}
+        role="note"
+        aria-label="Notis cuti umum / Public holiday notice"
+      >
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-4 md:py-5 text-center">
+          <p class="font-headline font-extrabold text-base md:text-2xl tracking-tight leading-snug">
+            🇲🇾 NOTIS CUTI — HARI MALAYSIA: Gudang <span class="underline decoration-4 underline-offset-4">TUTUP</span> pada Rabu, 16 September 2026
+          </p>
+          <p class="font-body font-semibold text-xs md:text-base mt-1.5 leading-snug">
+            Warehouse CLOSED on Wed, 16 Sept 2026 for Malaysia Day · Buka semula / reopening Khamis (Thu), 17 Sept, 9:00 pagi ·
+            WhatsApp <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="underline decoration-2 underline-offset-2 font-bold">016-891 6381</a> tetap dibalas
+          </p>
+        </div>
+      </aside>
+    )}
     <slot />
   </main>
 
