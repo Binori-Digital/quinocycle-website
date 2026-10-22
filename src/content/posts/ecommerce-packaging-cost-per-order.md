@@ -1,6 +1,6 @@
 ---
 title: "Packaging Cost Per Order in Ecommerce: How to Calculate & Cut It"
-description: "Calculate true packaging cost per order in ecommerce: worked RM-per-parcel table, 5 levers to cut costs with used cartons from RM0.90, plus the 3–6% rule."
+description: "Calculate true packaging cost per order in ecommerce: worked RM-per-parcel table, 5 levers to cut costs with used cartons from RM1.10, plus the 3–6% rule."
 category: "Business Tips"
 img: "/images/blog-cut-packaging-costs.jpg"
 date: "2026-09-20"
@@ -15,18 +15,18 @@ keywords:
   - "wholesale packaging supplies klang valley"
   - "ecommerce shipping supplies cost"
   - "used carton box for ecommerce"
-directAnswer: "Your true packaging cost per order is box + tape + filler + label added together. A typical Malaysian online seller spends RM2.10 per parcel at warehouse prices (RM1.70 used box, RM0.10 tape, RM0.20 paper filler, RM0.10 label) — but RM4.00+ at retail prices. Healthy packaging cost is roughly 3–6% of order value."
+directAnswer: "Your true packaging cost per order is box + tape + filler + label added together. A typical Malaysian online seller spends RM2.30 per parcel at warehouse prices (RM1.90 used box, RM0.10 tape, RM0.20 paper filler, RM0.10 label) — but RM4.00+ at retail prices. Healthy packaging cost is roughly 3–6% of order value."
 faqs:
   - q: "How do I calculate packaging cost per order?"
     a: "Add up everything that leaves with one parcel: box, tape used, filler, label and pouch, plus any insert cards. Divide bulk purchase totals by units — a RM5 tape roll that seals 25 boxes costs RM0.20 per order. Most sellers who do this maths for the first time find their real packaging cost per parcel is 30–50% higher than they guessed."
   - q: "What percentage of order value should packaging cost be?"
     a: "As a working estimate, aim for packaging at around 3–6% of order value. On a RM50 order, that's RM1.50–RM3.00 per parcel. Below 3% you may be under-protecting and risking damage returns; consistently above 6–8% usually means oversized boxes, retail-priced supplies, or excessive filler eating your margin."
   - q: "How can I reduce packaging costs for my online business?"
-    a: "The five biggest levers: right-size your box so you stop paying for air and filler, switch non-fragile items to used cartons from RM0.90, buy wholesale direct from a warehouse instead of retail, standardise on 2–3 box sizes for bulk pricing, and swap heavy or costly filler for scrunched kraft paper."
+    a: "The five biggest levers: right-size your box so you stop paying for air and filler, switch non-fragile items to used cartons from RM1.10, buy wholesale direct from a warehouse instead of retail, standardise on 2–3 box sizes for bulk pricing, and swap heavy or costly filler for scrunched kraft paper."
   - q: "Are used carton boxes good enough for ecommerce orders?"
-    a: "For clothing, books, toys, homeware and other non-fragile products, yes — a good-grade used carton at RM0.90–RM3.50 protects just as well as a new box for these items, and many are double wall. Reserve new boxes for fragile, premium or gift products where presentation is part of the product."
+    a: "For clothing, books, toys, homeware and other non-fragile products, yes — a good-grade used carton at RM1.10–RM3.90 protects just as well as a new box for these items, and many are double wall. Reserve new boxes for fragile, premium or gift products where presentation is part of the product."
   - q: "Where can online sellers buy packaging wholesale in Malaysia?"
-    a: "Warehouse suppliers beat retail and even marketplace prices once you buy in volume. Quinocycle in Balakong, Selangor supplies used cartons from RM0.90 and new boxes from RM1.10, free delivery in KL & Selangor on RM300+ orders, and wholesale deals from RM1,000. Outside Selangor, courier delivery is quoted per order."
+    a: "Warehouse suppliers beat retail and even marketplace prices once you buy in volume. Quinocycle in Balakong, Selangor supplies used cartons from RM1.10 and new boxes from RM1.10, free delivery in KL & Selangor on RM300+ orders, and wholesale deals from RM1,000. Outside Selangor, courier delivery is quoted per order."
 ---
 
 Ask most online sellers what packaging costs them per order and you'll get a shrug, or a guess that's off by half. The box price they remember; the tape, filler, label pouch and thank-you card they don't. At 500 orders a month, that blind spot quietly eats hundreds of ringgit — often more than their ad budget waste. Let's do the actual maths, then pull the five levers that bring it down.
@@ -48,20 +48,20 @@ None of these look like money individually. Together, they routinely double the 
 
 ## Worked Example: One Seller, Real Numbers
 
-Take a clothing seller shipping in a small used double-wall carton (the MG, 380 × 230 × 270 mm, RM1.70 from our warehouse catalog):
+Take a clothing seller shipping in a small used double-wall carton (the MG, 380 × 230 × 270 mm, RM1.90 from our warehouse catalog):
 
 | Component | Warehouse habit | Retail habit |
 |---|---|---|
-| Box | RM1.70 (used MG) | RM3.50 (retail small box) |
+| Box | RM1.90 (used MG) | RM3.50 (retail small box) |
 | Tape | RM0.10 | RM0.20 (small retail rolls) |
 | Filler (kraft paper) | RM0.20 | RM0.30 (bubble wrap) |
 | Label + pouch | RM0.10 | RM0.10 |
-| **Per order** | **RM2.10** | **RM4.10** |
-| 100 orders/month | RM210 | RM410 |
-| 500 orders/month | RM1,050 | RM2,050 |
-| 1,000 orders/month | RM2,100 | RM4,100 |
+| **Per order** | **RM2.30** | **RM4.10** |
+| 100 orders/month | RM230 | RM410 |
+| 500 orders/month | RM1,150 | RM2,050 |
+| 1,000 orders/month | RM2,300 | RM4,100 |
 
-Same product, same protection, same courier — and a **RM2,000/month gap** at 1,000 orders. That's the cost of buying supplies reactively from retail shops versus deliberately from a warehouse.
+Same product, same protection, same courier — and a **RM1,800/month gap** at 1,000 orders. That's the cost of buying supplies reactively from retail shops versus deliberately from a warehouse.
 
 These are estimates, and your numbers will differ — which is exactly why you should run this table once with your own receipts. It takes twenty minutes and typically finds the single most fixable cost line in the business.
 
@@ -69,7 +69,7 @@ These are estimates, and your numbers will differ — which is exactly why you s
 
 A useful framing (as an estimate, not gospel): packaging should land around **3–6% of order value**.
 
-- **RM30 average order** → RM0.90–RM1.80 per parcel is healthy.
+- **RM30 average order** → RM1.10–RM1.80 per parcel is healthy.
 - **RM50 average order** → RM1.50–RM3.00.
 - **RM150 average order** → up to RM4.50–RM9.00 is defensible, especially for fragile or premium goods.
 
@@ -83,7 +83,7 @@ Every centimetre of empty space costs you twice: once in filler to occupy it, on
 
 ### 2. Switch non-fragile SKUs to used cartons
 
-[Used cartons](/used-carton-boxes/) start from RM0.90 versus RM1.10–RM8.00 for new equivalents, and good-grade ones — many double wall — protect clothing, books and homeware just as well. If half your orders can move to used boxes at, say, RM1.30 average saving, that's RM650/month back at 1,000 orders.
+[Used cartons](/used-carton-boxes/) start from RM1.10 versus RM1.10–RM10.00 for new equivalents, and good-grade ones — many double wall — protect clothing, books and homeware just as well. If half your orders can move to used boxes at, say, RM1.30 average saving, that's RM650/month back at 1,000 orders.
 
 ### 3. Buy wholesale, not retail
 
@@ -103,7 +103,7 @@ Scrunched kraft paper costs less than bubble wrap, weighs less (courier savings 
 
 A fair question at this point: if cost is the goal, why use a box at all? Poly mailers (flyer bags) cost RM0.20–RM0.50 each and suit soft, unbreakable goods — a single t-shirt, a scarf, a phone case. If that describes your whole catalog, mailers win on pure cost.
 
-But boxes earn their premium the moment any of these apply: the product can crease, crush or snap; the order bundles multiple items; the unboxing matters for reviews and repeat purchases; or the parcel will be stacked under others in a courier cage (it will). Many sellers run both — mailers for single soft items, a small used carton at RM1.70 for everything else — and let the order contents pick the packaging. What you shouldn't do is force fragile or multi-item orders into bags to chase the last 50 sen; that's how the damage costs in the next section show up.
+But boxes earn their premium the moment any of these apply: the product can crease, crush or snap; the order bundles multiple items; the unboxing matters for reviews and repeat purchases; or the parcel will be stacked under others in a courier cage (it will). Many sellers run both — mailers for single soft items, a small used carton at RM1.90 for everything else — and let the order contents pick the packaging. What you shouldn't do is force fragile or multi-item orders into bags to chase the last 50 sen; that's how the damage costs in the next section show up.
 
 ## Don't Cut What Protects the Product
 

@@ -1,6 +1,6 @@
 ---
 title: "Checklist Pindah Rumah 30 Hari — Jadual Lengkap Minggu Demi Minggu (Malaysia)"
-description: "Checklist pindah rumah 30 hari yang lengkap untuk Malaysia: jadual minggu demi minggu, senarai kotak & bahan packing yang diperlukan, kos sebenar dari RM0.90 sekotak, dan kesilapan biasa yang perlu dielakkan."
+description: "Checklist pindah rumah 30 hari yang lengkap untuk Malaysia: jadual minggu demi minggu, senarai kotak & bahan packing yang diperlukan, kos sebenar dari RM1.10 sekotak, dan kesilapan biasa yang perlu dielakkan."
 category: "Panduan Pindah Rumah"
 img: "/images/blog-movers-guide.jpg"
 date: "2026-09-09"
@@ -22,11 +22,11 @@ faqs:
   - q: "Berapa banyak kotak diperlukan untuk pindah rumah 3 bilik?"
     a: "Purata rumah 3 bilik di Malaysia perlukan 50–70 kotak campuran saiz S, M dan L. Apartment 2 bilik: 30–45 kotak. Guna kalkulator percuma di quinocycle.com.my untuk anggaran ikut bilik."
   - q: "Berapa kos kotak untuk pindah rumah?"
-    a: "Di gudang Quinocycle Balakong, kotak terpakai bermula RM0.90 dan kotak baru dari RM1.10 sekotak. Untuk 60 kotak campuran, bajet sekitar RM100–RM250 — jauh lebih murah daripada kedai hardware yang jual RM8–RM12 sekotak."
+    a: "Di gudang Quinocycle Balakong, kotak terpakai bermula RM1.10 dan kotak baru dari RM1.10 sekotak. Untuk 60 kotak campuran, bajet sekitar RM100–RM250 — jauh lebih murah daripada kedai hardware yang jual RM8–RM12 sekotak."
   - q: "Apa yang perlu dibuat seminggu sebelum pindah rumah?"
     a: "Confirm masa dengan syarikat lori, habiskan makanan dalam peti sejuk, packing semua kecuali keperluan harian, sediakan 'kotak keperluan segera' (dokumen, charger, toiletries, baju 3 hari), dan uruskan penutupan/pindahan akaun utiliti TNB, air dan internet."
   - q: "Di mana nak beli kotak pindah rumah murah di Selangor?"
-    a: "Beli terus dari gudang pembekal di Balakong, Selangor — Quinocycle jual harga borong: kotak terpakai dari RM0.90, kotak baru dari RM1.10. Ambil sendiri hari sama atau penghantaran percuma untuk pesanan RM300+ sekitar KL & Selangor. WhatsApp 016-891 6381."
+    a: "Beli terus dari gudang pembekal di Balakong, Selangor — Quinocycle jual harga borong: kotak terpakai dari RM1.10, kotak baru dari RM1.10. Ambil sendiri hari sama atau penghantaran percuma untuk pesanan RM300+ sekitar KL & Selangor. WhatsApp 016-891 6381."
 ---
 
 Pindah rumah tak perlu jadi mimpi ngeri — asalkan anda mula awal dan ikut jadual. Checklist 30 hari ini disusun mengikut minggu, berdasarkan pengalaman kami membekalkan kotak kepada beribu keluarga di Lembah Klang setiap tahun. Ikut turutan ini dan hari pindah anda akan berjalan lancar, tanpa panik saat akhir.
@@ -41,7 +41,7 @@ Minggu pertama bukan untuk packing — ia untuk **mengurangkan barang** dan meng
 - **Tempah kotak anda.** Rumah 3 bilik perlukan 50–70 kotak; apartment 2 bilik sekitar 30–45. Guna [kalkulator kotak percuma](/blog/berapa-kotak-diperlukan-pindah-rumah/) kami untuk kiraan ikut bilik.
 - **Maklumkan tuan rumah** (jika menyewa) mengikut notis dalam perjanjian — biasanya 1–2 bulan.
 
-> **Tip jimat:** Untuk barang biasa, [kotak terpakai](/kotak-terpakai/) dari RM0.90 berfungsi sama seperti kotak baru yang berharga RM8–RM12 di kedai hardware. Simpan kotak baru untuk barang pecah belah sahaja.
+> **Tip jimat:** Untuk barang biasa, [kotak terpakai](/kotak-terpakai/) dari RM1.10 berfungsi sama seperti kotak baru yang berharga RM8–RM12 di kedai hardware. Simpan kotak baru untuk barang pecah belah sahaja.
 
 ## Minggu 2 (Hari 21–15): Mula Packing Barang Jarang Guna
 
@@ -97,10 +97,10 @@ Ramai orang bazir ratusan ringgit beli kotak di kedai hardware pada harga runcit
 
 | Saiz kotak | Terpakai (dari) | Baru (dari) | Sesuai untuk |
 |---|---|---|---|
-| S (kecil) | RM0.90 | RM1.10 | Buku, barang berat |
-| M (sederhana) | RM1.70 | RM3.50 | Barang dapur, pakaian |
-| L (besar) | RM3.50 | RM8.00 | Barang rumah, pindah rumah |
-| XL (jumbo) | RM6.00 | RM9.00 | Bantal, selimut, barang ringan |
+| S (kecil) | RM1.10 | RM1.10 | Buku, barang berat |
+| M (sederhana) | RM1.90 | RM3.90 | Barang dapur, pakaian |
+| L (besar) | RM3.90 | RM9.00 | Barang rumah, pindah rumah |
+| XL (jumbo) | RM6.50 | RM10.00 | Bantal, selimut, barang ringan |
 
 Untuk 60 kotak campuran, bajet realistik ialah **RM100–RM250** sahaja jika beli terus dari gudang — berbanding RM500+ di kedai runcit. Lihat [senarai harga penuh kotak pindah rumah](/kotak-pindah-rumah/) atau beli terus di [shop.quinocycle.com](https://shop.quinocycle.com).
 
@@ -112,4 +112,4 @@ Untuk 60 kotak campuran, bajet realistik ialah **RM100–RM250** sahaja jika bel
 - **Beli kotak saat akhir di kedai runcit.** Bayar 5–8 kali ganda untuk kotak yang sama.
 - **Guna kotak buruk percuma.** Kotak basah atau lembik dari pasar boleh pecah di tangga — [baca perbandingan jujur kami](/blog/beza-kotak-baru-kotak-terpakai/) tentang bila kotak percuma berbaloi dan bila tidak.
 
-Sudah sedia? Cetak checklist ini, tampal atas peti sejuk, dan tanda setiap item. Dan bila tiba masa untuk kotak — kami sedia membantu, dari RM0.90 sekotak, terus dari gudang Balakong.
+Sudah sedia? Cetak checklist ini, tampal atas peti sejuk, dan tanda setiap item. Dan bila tiba masa untuk kotak — kami sedia membantu, dari RM1.10 sekotak, terus dari gudang Balakong.

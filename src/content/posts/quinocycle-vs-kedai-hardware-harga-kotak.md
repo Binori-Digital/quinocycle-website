@@ -1,6 +1,6 @@
 ---
 title: "Harga Kotak Kedai Hardware vs Gudang Borong: Beza Sampai 8 Kali"
-description: "Harga kotak kedai hardware biasanya RM8–RM12 sekotak; gudang borong jual dari RM0.90 terpakai. Jadual banding 10 vs 60 kotak & bila kedai tetap berbaloi."
+description: "Harga kotak kedai hardware biasanya RM8–RM12 sekotak; gudang borong jual dari RM1.10 terpakai. Jadual banding 10 vs 60 kotak & bila kedai tetap berbaloi."
 category: "Kotak Kardus Terpakai"
 img: "/images/box-used-pdc.png"
 date: "2026-09-25"
@@ -15,12 +15,12 @@ keywords:
   - "gudang kotak murah balakong"
   - "harga kotak pindah rumah 2026"
   - "kedai jual kotak dekat saya"
-directAnswer: "Kedai hardware dan kedai buku biasanya jual kotak pada harga runcit RM8–RM12 sekotak. Gudang pembekal borong pula jual dari RM0.90 untuk kotak terpakai dan RM1.10 untuk kotak baru. Untuk 60 kotak pindah rumah, bezanya boleh cecah RM400 lebih — tapi untuk 1–2 kotak segera, kedai berdekatan tetap masuk akal."
+directAnswer: "Kedai hardware dan kedai buku biasanya jual kotak pada harga runcit RM8–RM12 sekotak. Gudang pembekal borong pula jual dari RM1.10 untuk kotak terpakai dan RM1.10 untuk kotak baru. Untuk 60 kotak pindah rumah, bezanya boleh cecah RM400 lebih — tapi untuk 1–2 kotak segera, kedai berdekatan tetap masuk akal."
 faqs:
   - q: "Berapa harga kotak di kedai hardware Malaysia?"
     a: "Harga kotak kedai hardware dan kedai buku biasanya dalam lingkungan RM8–RM12 sekotak untuk saiz sederhana hingga besar. Ini harga runcit yang normal — kedai beli dari pemborong, tanggung kos sewa lot dan simpan stok kecil, jadi margin setiap kotak mesti tinggi untuk berbaloi."
   - q: "Kenapa harga kotak di gudang jauh lebih murah?"
-    a: "Gudang pembekal jual terus tanpa orang tengah, dalam kuantiti besar, dari lokasi perindustrian yang kos sewanya lebih rendah. Sebab itu kotak terpakai boleh dijual dari RM0.90 dan kotak baru dari RM1.10 — model yang sama mungkin melalui 2–3 lapisan margin sebelum sampai ke rak kedai runcit."
+    a: "Gudang pembekal jual terus tanpa orang tengah, dalam kuantiti besar, dari lokasi perindustrian yang kos sewanya lebih rendah. Sebab itu kotak terpakai boleh dijual dari RM1.10 dan kotak baru dari RM1.10 — model yang sama mungkin melalui 2–3 lapisan margin sebelum sampai ke rak kedai runcit."
   - q: "Bila patut beli kotak di kedai hardware sahaja?"
     a: "Bila anda perlukan 1–2 kotak segera dan kedai itu 5 minit dari rumah. Untuk kuantiti kecil, masa dan minyak lebih berharga daripada beza harga RM15–RM20. Tapi untuk 10 kotak ke atas, penjimatan beli terus dari gudang sudah melebihi kos perjalanan ke Balakong — apatah lagi ada penghantaran percuma untuk pesanan RM300+."
   - q: "Berapa jimat kalau beli 60 kotak dari gudang berbanding kedai?"
@@ -29,7 +29,7 @@ faqs:
     a: "Ya — harga rendah datang dari model perniagaan, bukan kualiti rendah. Malah banyak kotak terpakai gudang adalah double wall gred kilang yang lebih tebal daripada kotak baru single wall di kedai runcit. Yang penting tahu cara semak: dinding keras, sudut utuh, tiada kesan air."
 ---
 
-Pergi mana-mana kedai hardware atau kedai buku dan tanya harga kotak kosong — biasanya anda akan dengar angka antara RM8 hingga RM12 sekotak. Kemudian tengok harga gudang pembekal: dari RM0.90. Macam mana kotak yang serupa boleh beza harga sampai 8 kali ganda? Artikel ini kupas kenapa — secara jujur, tanpa kondem mana-mana pihak — dan bila setiap pilihan itu masuk akal.
+Pergi mana-mana kedai hardware atau kedai buku dan tanya harga kotak kosong — biasanya anda akan dengar angka antara RM8 hingga RM12 sekotak. Kemudian tengok harga gudang pembekal: dari RM1.10. Macam mana kotak yang serupa boleh beza harga sampai 8 kali ganda? Artikel ini kupas kenapa — secara jujur, tanpa kondem mana-mana pihak — dan bila setiap pilihan itu masuk akal.
 
 ## Harga Sebenar di Pasaran: Runcit vs Borong
 
@@ -39,8 +39,8 @@ Mari letak angka atas meja dulu. Ini julat harga tipikal di Lembah Klang tahun i
 |---|---|---|
 | Kedai hardware / kedai buku | RM8 – RM12 | Runcit, sekotak-sekotak |
 | Platform online (dengan pos) | RM4 – RM10 | Runcit + kos pos |
-| Gudang pembekal (terpakai) | RM0.90 – RM6.00 | Terus, ikut model |
-| Gudang pembekal (baru) | RM1.10 – RM9.00* | Terus, ikut model |
+| Gudang pembekal (terpakai) | RM1.10 – RM7.00 | Terus, ikut model |
+| Gudang pembekal (baru) | RM1.10 – RM10.00* | Terus, ikut model |
 
 *Kotak kargo XXL khas boleh sampai RM28–RM38, tapi itu kategori berbeza untuk kegunaan industri.
 
@@ -70,23 +70,23 @@ Dua senario biasa, dengan anggaran sebenar:
 
 | | Kedai hardware (RM8–RM12) | Gudang Quinocycle |
 |---|---|---|
-| **10 kotak** (kemas stor / pos barang) | RM80 – RM120 | RM17 – RM50 (cth. 10 × MG terpakai RM1.70 = RM17) |
+| **10 kotak** (kemas stor / pos barang) | RM80 – RM120 | RM19 – RM50 (cth. 10 × MG terpakai RM1.90 = RM19) |
 | **60 kotak** (pindah rumah 3 bilik) | RM480 – RM720 | RM100 – RM250 campuran saiz |
-| Penjimatan 10 kotak | — | RM60 – RM90 |
+| Penjimatan 10 kotak | — | RM60 – RM100 |
 | Penjimatan 60 kotak | — | **RM300 – RM500** |
 
 Untuk konteks, ini contoh sebenar campuran 60 kotak untuk pindah rumah 3 bilik, guna model dan harga semasa gudang kami:
 
 | Model (terpakai) | Saiz | Harga seunit | Kuantiti | Jumlah |
 |---|---|---|---|---|
-| MG (380 × 230 × 270 mm) | S | RM1.70 | 20 | RM34.00 |
-| Yellow (460 × 330 × 310 mm) | M | RM3.50 | 25 | RM87.50 |
-| PDC (590 × 380 × 380 mm) | L | RM5.00 | 15 | RM75.00 |
-| **Jumlah 60 kotak** | | | | **RM196.50** |
+| MG (380 × 230 × 270 mm) | S | RM1.90 | 20 | RM38.00 |
+| Yellow (460 × 330 × 310 mm) | M | RM3.90 | 25 | RM97.50 |
+| PDC (590 × 380 × 380 mm) | L | RM5.50 | 15 | RM82.50 |
+| **Jumlah 60 kotak** | | | | **RM218.00** |
 
-RM196.50 berbanding RM480–RM720 pada harga kedai — dan ketiga-tiga model ini double wall gred kilang. Lebihkan RM100 lagi pun (tambah kotak baru untuk pinggan mangkuk, tape, bubble wrap) masih jauh di bawah kos kedai untuk kotak kosong semata-mata. Senarai model penuh dan cara kira keperluan anda ada di [halaman kotak pindah rumah](/kotak-pindah-rumah/) dan [kalkulator kotak percuma](/blog/berapa-kotak-diperlukan-pindah-rumah/) kami.
+RM218.00 berbanding RM480–RM720 pada harga kedai — dan ketiga-tiga model ini double wall gred kilang. Lebihkan RM100 lagi pun (tambah kotak baru untuk pinggan mangkuk, tape, bubble wrap) masih jauh di bawah kos kedai untuk kotak kosong semata-mata. Senarai model penuh dan cara kira keperluan anda ada di [halaman kotak pindah rumah](/kotak-pindah-rumah/) dan [kalkulator kotak percuma](/blog/berapa-kotak-diperlukan-pindah-rumah/) kami.
 
-> **Tip nilai sebenar:** Kotak RM8–RM12 di kedai selalunya single wall biasa. Kotak terpakai RM3.50–RM5.00 dari gudang pula kebanyakannya double wall — dua lapis flute, asalnya dibuat untuk beban kilang. Kadang-kadang yang lebih murah itu juga yang lebih kuat. Cara semak kualitinya kami terangkan dalam [panduan gred kotak terpakai](/blog/gred-kotak-terpakai-cara-pilih/).
+> **Tip nilai sebenar:** Kotak RM8–RM12 di kedai selalunya single wall biasa. Kotak terpakai RM3.90–RM5.50 dari gudang pula kebanyakannya double wall — dua lapis flute, asalnya dibuat untuk beban kilang. Kadang-kadang yang lebih murah itu juga yang lebih kuat. Cara semak kualitinya kami terangkan dalam [panduan gred kotak terpakai](/blog/gred-kotak-terpakai-cara-pilih/).
 
 ## Bila Kedai Hardware TETAP Pilihan Yang Betul
 

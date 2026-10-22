@@ -1,6 +1,6 @@
 ---
 title: "Kos Pembungkusan Per Parcel: Kira Kos Sebenar & 5 Cara Jimat"
-description: "Kira kos pembungkusan per parcel dengan jadual contoh peniaga kuih, baju & gajet — 5 cara turunkan kos bawah RM1.50 termasuk kotak terpakai dari RM0.90."
+description: "Kira kos pembungkusan per parcel dengan jadual contoh peniaga kuih, baju & gajet — 5 cara turunkan kos bawah RM1.50 termasuk kotak terpakai dari RM1.10."
 category: "Ilmu Pembungkusan"
 img: "/images/blog-cut-packaging-costs.jpg"
 date: "2026-10-01"
@@ -15,18 +15,18 @@ keywords:
   - "kotak terpakai untuk bisnes"
   - "kos pos barang shopee tiktok"
   - "pembekal kotak borong selangor"
-directAnswer: "Kos pembungkusan sebenar satu parcel = kotak + tape + pelindung + label, dicampur semua. Contoh biasa di Malaysia: kotak terpakai RM1.70 + tape RM0.10 + kertas RM0.20 + label RM0.10 = RM2.10 se-parcel pada harga gudang. Peniaga yang beli runcit biasanya bayar RM4.00 ke atas untuk parcel yang sama."
+directAnswer: "Kos pembungkusan sebenar satu parcel = kotak + tape + pelindung + label, dicampur semua. Contoh biasa di Malaysia: kotak terpakai RM1.90 + tape RM0.10 + kertas RM0.20 + label RM0.10 = RM2.30 se-parcel pada harga gudang. Peniaga yang beli runcit biasanya bayar RM4.00 ke atas untuk parcel yang sama."
 faqs:
   - q: "Macam mana nak kira kos pembungkusan satu parcel?"
     a: "Campurkan semua yang keluar bersama parcel: harga kotak, tape yang digunakan, bahan pelindung, label dan kad. Untuk barang beli pukal, bahagikan dengan bilangan guna — tape RM5.00 yang cukup untuk 25 kotak bermakna RM0.20 se-parcel. Kebanyakan peniaga terkejut bila jumpa kos sebenar 30–50% lebih tinggi dari agakan mereka."
   - q: "Berapa kos pembungkusan yang berpatutan untuk bisnes online?"
     a: "Sebagai anggaran, kos pembungkusan yang sihat ialah sekitar 3–6% daripada nilai order. Untuk order RM40, itu bermakna RM1.20–RM2.40 se-parcel. Kalau kos anda konsisten melebihi julat ini, biasanya puncanya kotak terlebih besar, beli runcit, atau bahan pelindung berlebihan."
   - q: "Bila patut guna kotak terpakai untuk hantar barang?"
-    a: "Kotak terpakai dari RM0.90 sesuai untuk barang tak mudah pecah — baju, buku, mainan, barangan plastik dan bekas kering. Kebanyakan kotak terpakai gred baik dari pembekal adalah double wall dan masih kukuh. Simpan kotak baru untuk barangan fragile, kosmetik premium dan hadiah sahaja."
+    a: "Kotak terpakai dari RM1.10 sesuai untuk barang tak mudah pecah — baju, buku, mainan, barangan plastik dan bekas kering. Kebanyakan kotak terpakai gred baik dari pembekal adalah double wall dan masih kukuh. Simpan kotak baru untuk barangan fragile, kosmetik premium dan hadiah sahaja."
   - q: "Berapa jimat kalau beli kotak borong berbanding runcit?"
     a: "Bezanya besar: kotak yang sama dijual RM8–RM12 di kedai hardware boleh didapati RM1–RM5 terus dari gudang pembekal. Untuk peniaga 500 order sebulan, beza harga borong dan runcit mudah cecah RM800–RM1,000 sebulan — antara penjimatan paling cepat dalam bisnes online."
   - q: "Di mana nak beli kotak murah untuk bisnes kecil di Malaysia?"
-    a: "Beli terus dari gudang pembekal di Balakong, Selangor — Quinocycle jual kotak terpakai dari RM0.90 dan kotak baru dari RM1.10 pada harga borong. Penghantaran percuma untuk pesanan RM300+ sekitar KL & Selangor, dan deal pukal bermula RM1,000. WhatsApp 016-891 6381 untuk sebut harga."
+    a: "Beli terus dari gudang pembekal di Balakong, Selangor — Quinocycle jual kotak terpakai dari RM1.10 dan kotak baru dari RM1.10 pada harga borong. Penghantaran percuma untuk pesanan RM300+ sekitar KL & Selangor, dan deal pukal bermula RM1,000. WhatsApp 016-891 6381 untuk sebut harga."
 ---
 
 Tanya mana-mana peniaga online berapa kos packing satu parcel, dan kebanyakannya akan sebut harga kotak sahaja. Tape? Bubble wrap? Kad terima kasih? "Alah, benda kecil je." Tapi benda kecil itu, didarab 300 order sebulan, jadi ratusan ringgit yang senyap-senyap makan untung. Jom kira kos sebenar — dengan contoh tiga jenis peniaga berbeza — dan lima cara praktikal untuk turunkannya.
@@ -52,12 +52,12 @@ Tiga peniaga, tiga cara packing, tiga kos berbeza — semua guna harga dari kata
 
 | Komponen | Peniaga kuih raya | Peniaga baju | Peniaga gajet |
 |---|---|---|---|
-| Kotak | Kotak XS baru RM1.10 | Kotak Terpakai MG RM1.70 | Kotak Terpakai Bary (double wall) RM1.80 |
+| Kotak | Kotak XS baru RM1.10 | Kotak Terpakai MG RM1.90 | Kotak Terpakai Bary (double wall) RM1.90 |
 | Tape | RM0.10 | RM0.10 | RM0.15 (H-tape) |
 | Pelindung | Kertas RM0.20 | Tiada — baju sendiri kusyen | Bubble wrap RM0.50 |
 | Label + kad | RM0.20 | RM0.15 | RM0.15 |
-| **Kos se-parcel** | **RM1.60** | **RM1.95** | **RM2.60** |
-| 300 order sebulan | RM480 | RM585 | RM780 |
+| **Kos se-parcel** | **RM1.60** | **RM2.15** | **RM2.70** |
+| 300 order sebulan | RM480 | RM645 | RM810 |
 
 Tiga pengajaran dari jadual ini:
 
@@ -73,7 +73,7 @@ Kotak terlebih besar kena bayar dua kali: sekali untuk filler tambahan, sekali k
 
 ### 2. Tukar kepada kotak terpakai untuk produk tak fragile
 
-Ini penjimatan paling besar sekali harung. [Kotak terpakai](/kotak-terpakai/) bermula RM0.90, dan gred baik dari pembekal — kebanyakannya double wall — melindungi baju, buku dan barangan kering sama seperti kotak baru. Peniaga baju dalam jadual tadi boleh turun bawah RM1.50 se-parcel terus dengan langkah ini sahaja.
+Ini penjimatan paling besar sekali harung. [Kotak terpakai](/kotak-terpakai/) bermula RM1.10, dan gred baik dari pembekal — kebanyakannya double wall — melindungi baju, buku dan barangan kering sama seperti kotak baru. Peniaga baju dalam jadual tadi boleh turun bawah RM1.50 se-parcel terus dengan langkah ini sahaja.
 
 ### 3. Beli borong, bukan runcit
 
@@ -100,7 +100,7 @@ Tapi kotak berbaloi dengan harganya bila mana-mana satu ini berlaku:
 - **Unboxing penting** untuk review dan repeat order — kotak kemas dengan sticker nampak jauh lebih profesional daripada bag kusut.
 - Parcel akan **ditindih parcel lain** dalam sangkar courier — dan percayalah, ia akan ditindih.
 
-Ramai peniaga bijak guna kedua-duanya: flyer bag untuk item tunggal yang lembut, kotak terpakai RM1.70 untuk selebihnya. Biarkan kandungan order yang tentukan pembungkusan, bukan semata-mata harga.
+Ramai peniaga bijak guna kedua-duanya: flyer bag untuk item tunggal yang lembut, kotak terpakai RM1.90 untuk selebihnya. Biarkan kandungan order yang tentukan pembungkusan, bukan semata-mata harga.
 
 ## Kesilapan Biasa Bila Mengira Kos
 

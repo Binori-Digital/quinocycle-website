@@ -1,6 +1,6 @@
 ---
 title: "Moving from KL to Johor Bahru: 3-Week Checklist & Cost Guide (2026)"
-description: "Moving from KL to Johor Bahru? 3-week checklist: lorry costs RM1,000–RM2,500, double-wall boxes from RM5.00, JB utilities, parking permits & packing tips."
+description: "Moving from KL to Johor Bahru? 3-week checklist: lorry costs RM1,000–RM2,500, double-wall boxes from RM5.50, JB utilities, parking permits & packing tips."
 category: "Moving Tips"
 img: "/images/audience-mover.jpg"
 date: "2026-09-22"
@@ -15,14 +15,14 @@ keywords:
   - "moving boxes for long distance"
   - "relocate to JB for work"
   - "double wall boxes moving house"
-directAnswer: "Moving from KL to Johor Bahru (±350km, about 4 hours by highway) takes 3 weeks of preparation: book an interstate lorry (roughly RM1,000–RM2,500 for a 3-bedroom home), buy 50–70 wholesale boxes in the Klang Valley before you leave (from RM0.90 each), and sort out JB utilities and parking access in advance."
+directAnswer: "Moving from KL to Johor Bahru (±350km, about 4 hours by highway) takes 3 weeks of preparation: book an interstate lorry (roughly RM1,000–RM2,500 for a 3-bedroom home), buy 50–70 wholesale boxes in the Klang Valley before you leave (from RM1.10 each), and sort out JB utilities and parking access in advance."
 faqs:
   - q: "How much does it cost to move from KL to Johor Bahru?"
     a: "Market estimates for a KL to JB interstate move typically run RM1,000–RM2,500 for a 3-bedroom home using a 3-tonne lorry with movers, depending on volume, floor access and date. A studio or room move can be RM600–RM1,000. Add RM100–RM250 for boxes and packing materials if you buy wholesale."
   - q: "Is it cheaper to hire a lorry or self-drive multiple trips to JB?"
     a: "For a full household, one lorry trip almost always wins. Self-driving KL to JB costs roughly RM150–RM200 per round trip in fuel and tolls, so three trips already exceed RM500 — before counting your time, vehicle wear and two days of leave. Self-drive only makes sense for a single-room move that fits in one MPV load."
   - q: "What boxes should I use for a long-distance move to JB?"
-    a: "Use double-wall cartons for anything fragile or heavy — the 4-hour highway trip subjects boxes to constant vibration. Quinocycle's A3 double wall (RM5.00) suits kitchenware, while the large NLN (RM8.00) handles heavy household goods. Budget used double-wall boxes from RM1.70 work well for clothes and lasak items."
+    a: "Use double-wall cartons for anything fragile or heavy — the 4-hour highway trip subjects boxes to constant vibration. Quinocycle's A3 double wall (RM5.50) suits kitchenware, while the large NLN (RM9.00) handles heavy household goods. Budget used double-wall boxes from RM1.80 work well for clothes and lasak items."
   - q: "Where do I buy moving boxes before relocating from KL to JB?"
     a: "Buy wholesale in the Klang Valley before moving day — you pack in KL, so the boxes must be in KL. Quinocycle's Balakong warehouse offers free delivery around KL and Selangor for orders RM300 and above, with same-day pickup available. Once you're in JB, delivery from Selangor is quoted per order and no longer free."
   - q: "What admin do I need to settle when moving to Johor Bahru?"
@@ -52,10 +52,10 @@ A 20-minute move across town forgives lazy packing. Four hours of highway vibrat
 
 From the Quinocycle catalog, the interstate workhorses:
 
-- **A3 Medium (440 × 310 × 230 mm, double wall, RM5.00)** — plates, glassware, kitchen goods. Small enough that you can't overload it.
-- **NLN Large (590 × 390 × 390 mm, double wall, RM8.00)** — heavy household items, appliances, books in bulk.
-- **XL Jumbo (485 × 485 × 500 mm, double wall, RM9.00)** — pillows, comforters, bulky-but-light items.
-- **Used double-wall boxes from RM1.70** (like the MG) — clothes, toys, non-fragile goods. See the [used carton range](/used-carton-boxes/) for the honest budget option.
+- **A3 Medium (440 × 310 × 230 mm, double wall, RM5.50)** — plates, glassware, kitchen goods. Small enough that you can't overload it.
+- **NLN Large (590 × 390 × 390 mm, double wall, RM9.00)** — heavy household items, appliances, books in bulk.
+- **XL Jumbo (485 × 485 × 500 mm, double wall, RM10.00)** — pillows, comforters, bulky-but-light items.
+- **Used double-wall boxes from RM1.80** (like the Vita and MG) — clothes, toys, non-fragile goods. See the [used carton range](/used-carton-boxes/) for the honest budget option.
 
 Pack every box full — empty space lets contents shift with every lane change. Tape in an H-pattern top and bottom, keep each box under 15kg, and wrap fragiles individually with double the padding you'd use for a local move.
 
@@ -65,7 +65,7 @@ Pack every box full — empty space lets contents shift with every lane change. 
 
 Here's the part people get wrong: they plan to "sort out boxes later" — but you pack in KL, so the boxes need to reach you in KL, before the lorry comes.
 
-Buying wholesale in the Klang Valley is also simply cheaper. Hardware shops retail boxes at RM8–RM12 each; direct from our Balakong warehouse, used cartons start at RM0.90 and new ones at RM1.10. A typical 3-bedroom home needs 50–70 boxes — budget RM100–RM250 wholesale versus RM500+ retail.
+Buying wholesale in the Klang Valley is also simply cheaper. Hardware shops retail boxes at RM8–RM12 each; direct from our Balakong warehouse, used cartons start at RM1.10 and new ones at RM1.10. A typical 3-bedroom home needs 50–70 boxes — budget RM100–RM250 wholesale versus RM500+ retail.
 
 Being upfront: **free delivery applies to KL and Selangor orders of RM300+**. Once you're already in JB, shipping from Selangor gets quoted per order by courier or lorry — doable, but no longer free. So order early: browse the full [carton box range](/carton-box/), buy online at [shop.quinocycle.com](https://shop.quinocycle.com), or [WhatsApp 016-891 6381](https://wa.me/60168916381?text=Hi%2C%20I%27m%20moving%20from%20KL%20to%20JB%20and%20need%20boxes) for a same-day pickup at Balakong.
 

@@ -1,6 +1,6 @@
 ---
 title: "Single Wall vs Double Wall Carton Box: Which One Is Worth Your Money?"
-description: "Single wall vs double wall carton box compared: strength, weight and price from RM1.10 vs RM5.00, plus when triple wall makes sense — real Malaysian examples."
+description: "Single wall vs double wall carton box compared: strength, weight and price from RM1.10 vs RM5.50, plus when triple wall makes sense — real Malaysian examples."
 category: "Packaging Knowledge"
 img: "/images/blog-choose-box-size.jpg"
 date: "2026-09-10"
@@ -15,18 +15,18 @@ keywords:
   - "strong carton box for moving"
   - "2 ply vs 3 ply carton"
   - "heavy duty carton box klang valley"
-directAnswer: "A single wall carton has one corrugated layer and suits loads under roughly 10–15kg — like our A4 box at RM3.00. A double wall carton has two corrugated layers, carries roughly 20–30kg and resists stacking damage — like our A3 box at RM5.00. Triple wall is for industrial loads above 30kg and is rarely needed for home or e-commerce use."
+directAnswer: "A single wall carton has one corrugated layer and suits loads under roughly 10–15kg — like our A4 box at RM3.50. A double wall carton has two corrugated layers, carries roughly 20–30kg and resists stacking damage — like our A3 box at RM5.50. Triple wall is for industrial loads above 30kg and is rarely needed for home or e-commerce use."
 faqs:
   - q: "What is the difference between single wall and double wall carton boxes?"
     a: "A single wall carton box has one fluted (wavy) layer glued between two flat liners — three sheets of paper in total. A double wall carton box has two fluted layers and three liners, five sheets in total. The extra layer roughly doubles crush resistance, which matters for heavy contents, long storage and stacked deliveries."
   - q: "Is a double wall carton box worth the extra price?"
-    a: "For fragile or heavy items, yes. At Quinocycle a medium double wall box (A3) costs RM5.00 versus RM3.00 for a single wall A4 — about RM2 more for roughly double the stacking strength. For light items like clothing or pillows, the cheaper single wall carton box does the job fine."
+    a: "For fragile or heavy items, yes. At Quinocycle a medium double wall box (A3) costs RM5.50 versus RM3.50 for a single wall A4 — about RM2 more for roughly double the stacking strength. For light items like clothing or pillows, the cheaper single wall carton box does the job fine."
   - q: "How much weight can a single wall carton box hold?"
     a: "As a practical guide, a single wall carton box in good condition handles around 10–15kg. Push past that with books or canned goods and the base or corners start to fail, especially in humid Malaysian weather. For anything heavier, step up to a double wall carton or split the load into two boxes."
   - q: "When do I need a triple wall carton box?"
     a: "Triple wall cartons (three fluted layers, seven sheets of paper) are industrial-grade — machinery parts, export crates replacing wood, loads above 30kg. Most homes and online sellers in Malaysia never need one. Our XXL cargo boxes like the BW800 at RM28.00 already cover bulky shipments for the vast majority of buyers."
   - q: "Are used double wall carton boxes still strong?"
-    a: "Yes, if they are dry, square and not crushed at the corners. A used double wall carton that has only done one trip keeps most of its strength — our used MG double wall boxes at RM1.70 are a favourite with movers and online sellers precisely because they cost less than many new single wall boxes."
+    a: "Yes, if they are dry, square and not crushed at the corners. A used double wall carton that has only done one trip keeps most of its strength — our used MG double wall boxes at RM1.90 are a favourite with movers and online sellers precisely because they cost less than many new single wall boxes."
 ---
 
 Walk into any carton supplier and you'll hear the same question we get daily on WhatsApp: "Kotak ni berapa lapis?" — how many layers is this box? It's the right question to ask, because wall construction, not size, is what decides whether your box survives the journey. Here's the honest breakdown of single wall vs double wall (and the rare triple wall), with real prices from our Balakong warehouse.
@@ -47,7 +47,7 @@ Single wall is the workhorse of Malaysian e-commerce. Every Shopee and TikTok Sh
 
 **Pros:**
 
-- **Cheapest option.** Our new [A4 single wall box](https://shop.quinocycle.com) (310 × 220 × 220 mm) is RM3.00; the mini XS is just RM1.10. Used single wall starts even lower.
+- **Cheapest option.** Our new [A4 single wall box](https://shop.quinocycle.com) (310 × 220 × 220 mm) is RM3.50; the mini XS is just RM1.10. Used single wall starts even lower.
 - **Light.** Less paper means lower parcel weight — and with couriers charging by weight, a lighter box can genuinely trim your shipping bill.
 - **Easy to fold, cut and tape.** Faster packing at scale.
 - **Compact to store.** Flat-packed single wall takes noticeably less shelf space than double wall.
@@ -73,13 +73,13 @@ Add a second corrugated layer and the box changes character completely. Double w
 
 **Cons:**
 
-- **Costs more.** Our medium [A3 double wall box](/shop/) (440 × 310 × 230 mm) is RM5.00 versus RM3.00 for the single wall A4 — and the large NLN double wall (590 × 390 × 390 mm), our moving-day bestseller, is RM8.00.
+- **Costs more.** Our medium [A3 double wall box](/shop/) (440 × 310 × 230 mm) is RM5.50 versus RM3.50 for the single wall A4 — and the large NLN double wall (590 × 390 × 390 mm), our moving-day bestseller, is RM9.00.
 - **Heavier.** More paper per box adds up over a 60-box move — and over a courier invoice.
 - **Bulkier to store** flat-packed.
 
 **Best for:** kitchenware, glassware, electronics, house and office moves, boxes that will be stacked three high or more, long-term storage.
 
-> **Money-saving tip:** used double wall often beats new single wall on both price AND strength. Our used MG double wall box is RM1.70 — cheaper than a new single wall A4 at RM3.00, yet stronger. Browse the [used carton range](/used-carton-boxes/) before defaulting to new.
+> **Money-saving tip:** used double wall often beats new single wall on both price AND strength. Our used MG double wall box is RM1.90 — cheaper than a new single wall A4 at RM3.50, yet stronger. Browse the [used carton range](/used-carton-boxes/) before defaulting to new.
 
 ## Triple Wall: Almost Nobody Needs It (And That's Fine)
 
@@ -94,7 +94,7 @@ For homes and SMEs in Malaysia, triple wall is usually wasted money: it's expens
 | Layers of paper | 3 (1 flute) | 5 (2 flutes) | 7 (3 flutes) |
 | Practical load | ~10–15kg | ~20–30kg | 30kg+ |
 | Stacking strength | Basic | Strong | Industrial |
-| Price example (ours) | A4: RM3.00 | A3: RM5.00 | Custom only |
+| Price example (ours) | A4: RM3.50 | A3: RM5.50 | Custom only |
 | Weight per box | Lightest | Moderate | Heavy |
 | Best use | Parcels, light goods | Moving, fragile, storage | Machinery, export |
 | Reusability | 1–2 trips | Several trips | Many trips |
@@ -109,10 +109,10 @@ After supplying boxes to thousands of Klang Valley households and businesses, ou
 2. **Fragile contents, or boxes will be stacked?** Double wall, no debate. RM2 extra is cheaper than one broken plate.
 3. **Heavy AND fragile (glassware, appliances)?** Double wall PLUS good internal padding — the wall protects against crushing, padding protects against shock.
 4. **Mixed house move?** Mostly double wall for kitchen and stacking boxes, single wall for linens, clothes and soft toys. Check our [moving box packages](/carton-box/) for a ready-made mix.
-5. **Over 30kg?** Stop — split the load. Two RM5.00 boxes beat one RM28.00 box and one hospital visit for a strained back.
+5. **Over 30kg?** Stop — split the load. Two RM5.50 boxes beat one RM28.00 box and one hospital visit for a strained back.
 
 ## Real Prices, Real Boxes, No Guesswork
 
-Every price above is a live catalog price from our Balakong warehouse (single location — No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor), not a "from" teaser. Used cartons start at RM0.90, new from RM1.10, free delivery in KL & Selangor for orders RM300 and above, and same-day pickup is usually possible.
+Every price above is a live catalog price from our Balakong warehouse (single location — No.13, Jalan Taming P/1, Taming Jaya, Balakong, Selangor), not a "from" teaser. Used cartons start at RM1.10, new from RM1.10, free delivery in KL & Selangor for orders RM300 and above, and same-day pickup is usually possible.
 
 Not sure which wall your load needs? Send us a photo of what you're packing on [WhatsApp 016-891 6381](https://wa.me/60168916381?text=Hi%2C%20which%20carton%20wall%20type%20do%20I%20need%3F) and we'll tell you honestly — including when the cheaper box is the right answer.

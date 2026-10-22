@@ -98,7 +98,7 @@ Maklumkan 2–4 minggu awal, ikut keutamaan:
 
 Anggaran untuk pejabat SME: 2–3 kotak setiap staf, tambah kotak dokumen ikut jumlah laci fail, tambah 10–15 kotak untuk pantry dan ruang mesyuarat — pejabat 20 staf biasanya sekitar 80–120 kotak. Beli seminggu sebelum Jumaat supaya packing awal boleh terus jalan.
 
-Tak perlu kotak mahal untuk barang meja — [kotak terpakai](/kotak-terpakai/) dari RM0.90 memang memadai; simpan kotak baru double wall untuk barang IT dan pecah belah. Harga penuh di [shop.quinocycle.com](https://shop.quinocycle.com), penghantaran percuma sekitar KL & Selangor untuk pesanan RM300+, atau ambil terus hari sama di gudang Balakong. Kalau Jumaat baru perasan kotak tak cukup — [WhatsApp 016-891 6381](https://wa.me/60168916381?text=Hi%2C%20saya%20perlukan%20kotak%20untuk%20pindah%20pejabat%20hujung%20minggu%20ini) sebelum 5 petang, selalunya masih sempat.
+Tak perlu kotak mahal untuk barang meja — [kotak terpakai](/kotak-terpakai/) dari RM1.10 memang memadai; simpan kotak baru double wall untuk barang IT dan pecah belah. Harga penuh di [shop.quinocycle.com](https://shop.quinocycle.com), penghantaran percuma sekitar KL & Selangor untuk pesanan RM300+, atau ambil terus hari sama di gudang Balakong. Kalau Jumaat baru perasan kotak tak cukup — [WhatsApp 016-891 6381](https://wa.me/60168916381?text=Hi%2C%20saya%20perlukan%20kotak%20untuk%20pindah%20pejabat%20hujung%20minggu%20ini) sebelum 5 petang, selalunya masih sempat.
 
 ## Malam Ahad: Semakan Terakhir Sebelum Isnin
 

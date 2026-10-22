@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: 'Berapa harga kotak pindah untuk kawasan Seri Kembangan?',
-    a: 'Harga borong terus dari gudang: kotak terpakai saiz S dari RM0.90, saiz M RM3.00-RM3.50, saiz L RM5.00 sekotak. Kotak baru dari RM1.10 hingga RM8.00 ikut saiz. Penghantaran percuma ke Seri Kembangan untuk pesanan melebihi RM300 — atau ambil sendiri, langsung tiada kos hantar.',
+    a: 'Harga borong terus dari gudang: kotak terpakai saiz S dari RM1.10, saiz M RM1.90-RM4.50, saiz L RM3.90-RM7.00 sekotak. Kotak baru dari RM1.10 hingga RM10.00 ikut saiz. Penghantaran percuma ke Seri Kembangan untuk pesanan melebihi RM300 — atau ambil sendiri, langsung tiada kos hantar.',
   },
   {
     q: 'Saya pelajar UPM / penyewa bilik — boleh beli kuantiti kecil?',
@@ -28,10 +28,10 @@ const storeSchema = {
   "@context": "https://schema.org",
   "@type": "Store",
   "name": `Quinocycle — Kotak Pindah Rumah ${CITY}`,
-  "description": `Pembekal kotak pindah rumah untuk ${CITY}, Selangor. Kotak kardus baru dan terpakai harga borong dari RM0.90 sekotak — penghantaran pantas atau ambil sendiri di gudang Balakong, ±10 minit sahaja.`,
+  "description": `Pembekal kotak pindah rumah untuk ${CITY}, Selangor. Kotak kardus baru dan terpakai harga borong dari RM1.10 sekotak — penghantaran pantas atau ambil sendiri di gudang Balakong, ±10 minit sahaja.`,
   "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/seri-kembangan/",
   "telephone": "+60168916381",
-  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "priceRange": "RM1.10 - RM38.00 sekotak",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
@@ -71,8 +71,8 @@ const breadcrumbSchema = {
 
 <Layout
   lang="ms"
-  title={`Kotak Pindah Rumah ${CITY} — Gudang Borong ±10 Minit Sahaja, dari RM0.90 | Quinocycle`}
-  description={`Kotak pindah rumah ${CITY} dari RM0.90 sekotak. Gudang borong Quinocycle ±10 minit di Balakong — hantar ke Taman Equine, Serdang & UPM. WhatsApp 016-891 6381.`}
+  title={`Kotak Pindah Rumah ${CITY} — Gudang Borong ±10 Minit Sahaja, dari RM1.10 | Quinocycle`}
+  description={`Kotak pindah rumah ${CITY} dari RM1.10 sekotak. Gudang borong Quinocycle ±10 minit di Balakong — hantar ke Taman Equine, Serdang & UPM. WhatsApp 016-891 6381.`}
 >
   <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
@@ -92,7 +92,7 @@ const breadcrumbSchema = {
       Kotak pindah rumah {CITY} <br /><span class="text-primary italic">— anda jiran gudang borong.</span>
     </h1>
     <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
-      Daripada semua kawasan di Lembah Klang, Seri Kembangan adalah yang <strong class="text-on-surface font-semibold">paling hampir dengan gudang kotak Quinocycle</strong> — hanya ±5-10 minit memandu ke Taming Jaya, Balakong. Maksudnya: harga borong dari <strong class="text-on-surface font-semibold">RM0.90 sekotak</strong> untuk kotak terpakai, dari <strong class="text-on-surface font-semibold">RM1.10</strong> untuk kotak baru — hantar cepat ke rumah anda, atau singgah ambil dalam satu trip singkat.
+      Daripada semua kawasan di Lembah Klang, Seri Kembangan adalah yang <strong class="text-on-surface font-semibold">paling hampir dengan gudang kotak Quinocycle</strong> — hanya ±5-10 minit memandu ke Taming Jaya, Balakong. Maksudnya: harga borong dari <strong class="text-on-surface font-semibold">RM1.10 sekotak</strong> untuk kotak terpakai, dari <strong class="text-on-surface font-semibold">RM1.10</strong> untuk kotak baru — hantar cepat ke rumah anda, atau singgah ambil dalam satu trip singkat.
     </p>
     <div class="flex flex-wrap gap-4">
       <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
@@ -141,7 +141,7 @@ const breadcrumbSchema = {
         Ramai penduduk Taman Equine, Bukit Serdang dan Serdang Raya tak sedar yang pembekal kotak kardus borong terletak betul-betul di sebelah kawasan mereka. Gudang Quinocycle di Taming Jaya, Balakong hanya <strong class="text-on-surface font-semibold">±5-10 minit memandu</strong> dari kebanyakan taman di Seri Kembangan — lebih dekat daripada perjalanan anda ke The Mines atau South City Plaza pada waktu puncak. Jadi sebelum bayar RM8-RM12 sekotak di kedai hardware, semak dulu <a href="/blog/harga-kotak-pindah-rumah" class="text-primary font-semibold hover:underline">harga sebenar kotak pindah rumah</a> di gudang.
       </p>
       <p>
-        Pilihan paling jimat ialah <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">kotak terpakai gred sekali guna</a> — kotak kilang yang hanya digunakan sekali, disemak satu persatu, kering dan bebas bau, dari RM0.90 sekotak. Untuk pinggan mangkuk dan barang elektronik, tambah sedikit kotak baru dari RM1.10. Tak pasti yang mana satu sesuai? Baca <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan kotak baru vs kotak terpakai</a> — kebanyakan pelanggan akhirnya campur kedua-duanya.
+        Pilihan paling jimat ialah <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">kotak terpakai gred sekali guna</a> — kotak kilang yang hanya digunakan sekali, disemak satu persatu, kering dan bebas bau, dari RM1.10 sekotak. Untuk pinggan mangkuk dan barang elektronik, tambah sedikit kotak baru dari RM1.10. Tak pasti yang mana satu sesuai? Baca <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan kotak baru vs kotak terpakai</a> — kebanyakan pelanggan akhirnya campur kedua-duanya.
       </p>
       <p>
         Seri Kembangan juga kawasan pelajar: setiap semester, pelajar UPM dan penyewa sekitar Serdang berpindah masuk dan keluar. Untuk pindah bilik atau rumah sewa, anda tak perlu beli ikut kuantiti borong — WhatsApp sahaja berapa kotak yang anda perlukan dan kami bagi sebut harga kuantiti kecil. Sebagai panduan, satu bilik biasanya perlukan 10-15 kotak; rumah 3 bilik pula sekitar 50-70. Kira keperluan anda dengan <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="text-primary font-semibold hover:underline">panduan berapa kotak diperlukan untuk pindah rumah</a>.

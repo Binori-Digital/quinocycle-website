@@ -1,6 +1,6 @@
 ---
 title: "Reduce Parcel Damage in Ecommerce: 7 Fixes That Cut Returns"
-description: "Reduce parcel damage in ecommerce with the 5 cm void rule, H-taping and RM5.00 double-wall boxes — practical fixes that cut damage returns costing RM15+ each."
+description: "Reduce parcel damage in ecommerce with the 5 cm void rule, H-taping and RM5.50 double-wall boxes — practical fixes that cut damage returns costing RM15+ each."
 category: "Packaging Knowledge"
 img: "/images/blog-new-vs-used.jpg"
 date: "2026-09-28"
@@ -15,14 +15,14 @@ keywords:
   - "packaging to reduce returns"
   - "fragile item packing guide"
   - "courier damage prevention tips"
-directAnswer: "To reduce parcel damage in ecommerce, follow the 5 cm void rule (fill all gaps so contents cannot shift), use double-wall boxes like the RM5.00 A3 carton for fragile SKUs, H-tape every seam, add crush zones at corners, and drop-test from waist height. Spending RM1 more per box typically saves around RM15 per prevented damage return."
+directAnswer: "To reduce parcel damage in ecommerce, follow the 5 cm void rule (fill all gaps so contents cannot shift), use double-wall boxes like the RM5.50 A3 carton for fragile SKUs, H-tape every seam, add crush zones at corners, and drop-test from waist height. Spending RM1 more per box typically saves around RM15 per prevented damage return."
 faqs:
   - q: "Why do parcels get damaged during courier delivery?"
     a: "Most parcel damage comes from three causes: contents shifting inside a box with empty space, single-wall boxes crushing under stacked weight in courier hubs, and impacts on corners and edges during sorting. Parcels are typically handled, tossed and stacked many times between pickup and doorstep — packaging has to survive the worst handler, not the average one."
   - q: "What is the 5 cm void rule in packing?"
     a: "The 5 cm void rule says: leave roughly 5 cm of cushioned space between your product and every box wall, and fill all remaining gaps completely so nothing shifts. A parcel that rattles when shaken will be damaged eventually. Scrunched kraft paper or bubble wrap fills voids cheaply — the product should sit suspended, not touching any wall."
   - q: "Do I need double wall boxes for fragile items?"
-    a: "Yes, for glass, ceramics, electronics and liquids, double wall is the single biggest damage reducer. Two corrugated layers roughly double crush resistance and stacking strength. A double-wall A3 carton costs RM5.00 — usually RM1–RM2 more than a single-wall equivalent, and far cheaper than one damage-driven return."
+    a: "Yes, for glass, ceramics, electronics and liquids, double wall is the single biggest damage reducer. Two corrugated layers roughly double crush resistance and stacking strength. A double-wall A3 carton costs RM5.50 — usually RM1–RM2 more than a single-wall equivalent, and far cheaper than one damage-driven return."
   - q: "What is H-taping and does it really help?"
     a: "H-taping seals the centre seam plus both edge seams on the top and bottom of a carton, forming an H shape. It stops flaps popping open under pressure, keeps dust and moisture off contents, and adds surprising rigidity to the box ends. It uses about 50% more tape but is the cheapest strength upgrade available."
   - q: "How does parcel damage affect my Shopee or TikTok Shop seller rating?"
@@ -51,7 +51,7 @@ Scrunched kraft paper is the cheapest void fill; bubble wrap earns its cost on g
 
 If one line in this article saves you money, it's this one. For fragile products — glass, ceramics, electronics, bottled liquids — move to **double-wall cartons**. Two corrugated layers roughly double crush and stacking strength, which is precisely what protects the bottom box in a stacked courier cage.
 
-From our warehouse catalog, the workhorse is the **Medium Size Box A3** (440 × 310 × 230 mm, double wall, RM5.00) — sized for kitchenware and fragile goods. For bigger or heavier loads there's the double-wall **Large NLN** (590 × 390 × 390 mm, RM8.00), and on the budget end, used double-wall cartons like the **Bary** (300 × 200 × 250 mm, RM1.80) handle small electronics well. Curious why wall construction matters so much? Our [flute types guide](/blog/carton-box-flute-types-guide-0413/) explains the engineering, and our [ECT vs Mullen post](/blog/packaging-knowledge-ect-mullen-burst-test-0429/) covers how box strength is actually measured.
+From our warehouse catalog, the workhorse is the **Medium Size Box A3** (440 × 310 × 230 mm, double wall, RM5.50) — sized for kitchenware and fragile goods. For bigger or heavier loads there's the double-wall **Large NLN** (590 × 390 × 390 mm, RM9.00), and on the budget end, used double-wall cartons like the **Bary** (300 × 200 × 250 mm, RM1.90) handle small electronics well. Curious why wall construction matters so much? Our [flute types guide](/blog/carton-box-flute-types-guide-0413/) explains the engineering, and our [ECT vs Mullen post](/blog/packaging-knowledge-ect-mullen-burst-test-0429/) covers how box strength is actually measured.
 
 ## Fix 3: H-Tape Every Parcel
 

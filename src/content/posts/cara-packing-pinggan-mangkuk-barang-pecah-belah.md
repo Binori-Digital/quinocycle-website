@@ -1,6 +1,6 @@
 ---
 title: "Cara Packing Pinggan Mangkuk & Barang Pecah Belah: 7 Langkah Selamat"
-description: "Cara packing pinggan mangkuk dengan selamat: pinggan disusun menegak, gelas dibalut satu persatu, kotak double wall dari RM5.00. Panduan langkah demi langkah."
+description: "Cara packing pinggan mangkuk dengan selamat: pinggan disusun menegak, gelas dibalut satu persatu, kotak double wall dari RM5.50. Panduan langkah demi langkah."
 category: "Panduan Pindah Rumah"
 img: "/images/box-new-m.jpg"
 date: "2026-09-11"
@@ -15,10 +15,10 @@ keywords:
   - "balut pinggan tanpa bubble wrap"
   - "kotak double wall barang pecah belah"
   - "tips packing barang kaca malaysia"
-directAnswer: "Cara packing pinggan mangkuk yang selamat: lapik dasar kotak 5cm dengan kertas renyuk, balut setiap pinggan dan susun secara menegak (bukan bertindan), balut gelas satu persatu, dan guna kotak double wall seperti kotak A3 (RM5.00, 440 × 310 × 230 mm). Had berat sekotak: 10–15kg sahaja."
+directAnswer: "Cara packing pinggan mangkuk yang selamat: lapik dasar kotak 5cm dengan kertas renyuk, balut setiap pinggan dan susun secara menegak (bukan bertindan), balut gelas satu persatu, dan guna kotak double wall seperti kotak A3 (RM5.50, 440 × 310 × 230 mm). Had berat sekotak: 10–15kg sahaja."
 faqs:
   - q: "Kotak apa paling sesuai untuk packing pinggan mangkuk?"
-    a: "Kotak double wall (dua lapis) saiz sederhana — contohnya kotak baru A3 (440 × 310 × 230 mm, RM5.00) dari Quinocycle. Dinding dua lapis menyerap hentakan lebih baik dan tak mudah kemek. Elakkan kotak besar: bila penuh pinggan, beratnya boleh melebihi 20kg dan dasar kotak berisiko pecah."
+    a: "Kotak double wall (dua lapis) saiz sederhana — contohnya kotak baru A3 (440 × 310 × 230 mm, RM5.50) dari Quinocycle. Dinding dua lapis menyerap hentakan lebih baik dan tak mudah kemek. Elakkan kotak besar: bila penuh pinggan, beratnya boleh melebihi 20kg dan dasar kotak berisiko pecah."
   - q: "Kenapa pinggan perlu disusun menegak, bukan bertindan?"
     a: "Pinggan yang disusun menegak seperti rekod piring hitam jauh lebih kuat menahan tekanan dari tepi berbanding permukaan rata. Bila kotak terhentak, daya tersebar pada bucu pinggan yang paling tahan. Pinggan bertindan pula menghimpit satu sama lain — satu hentakan boleh pecahkan seluruh timbunan."
   - q: "Apa alternatif murah kalau tiada bubble wrap?"
@@ -26,7 +26,7 @@ faqs:
   - q: "Berapa berat maksimum kotak berisi pinggan mangkuk?"
     a: "Kekalkan bawah 15kg sekotak — idealnya 10–12kg untuk barang pecah belah. Lebih berat dari itu, dasar kotak mudah terlepas dan pengangkat cenderung mengalas kotak secara kasar. Guna kotak saiz sederhana supaya anda tak tergoda mengisi terlalu banyak."
   - q: "Perlukah kotak baru untuk barang pecah belah, atau kotak terpakai pun boleh?"
-    a: "Yang penting bukan baru atau terpakai, tapi struktur dinding. Kotak terpakai double wall gred baik (seperti kotak MG dari RM1.70) masih sangat kukuh untuk pinggan mangkuk. Elakkan hanya kotak yang lembik, basah atau sudah kemek teruk — itu yang bahaya."
+    a: "Yang penting bukan baru atau terpakai, tapi struktur dinding. Kotak terpakai double wall gred baik (seperti kotak MG dari RM1.90) masih sangat kukuh untuk pinggan mangkuk. Elakkan hanya kotak yang lembik, basah atau sudah kemek teruk — itu yang bahaya."
 ---
 
 Pinggan pecah adalah kerugian paling menyakitkan masa pindah rumah — bukan sebab harganya, tapi sebab ia sebenarnya boleh dielakkan 100%. Punca utamanya hampir selalu sama: kotak yang salah, susunan yang salah, atau tiada lapisan pelindung. Panduan ini tunjukkan cara packing pinggan mangkuk dan barang pecah belah langkah demi langkah, teknik yang sama digunakan syarikat pindah profesional.
@@ -37,8 +37,8 @@ Sebelum mula, sediakan semua bahan. Berhenti separuh jalan untuk cari surat khab
 
 | Bahan | Fungsi | Anggaran kos |
 |---|---|---|
-| Kotak double wall saiz M (cth: A3, 440 × 310 × 230 mm) | Kotak utama barang pecah belah | RM5.00 sekotak |
-| Kotak terpakai double wall (cth: MG) | Pilihan jimat, masih kukuh | dari RM1.70 |
+| Kotak double wall saiz M (cth: A3, 440 × 310 × 230 mm) | Kotak utama barang pecah belah | RM5.50 sekotak |
+| Kotak terpakai double wall (cth: MG) | Pilihan jimat, masih kukuh | dari RM1.90 |
 | Surat khabar / kertas pembalut | Balutan setiap item | Percuma–RM10 |
 | Tuala, baju, sarung bantal | Lapisan bawah & pengisi ruang | Percuma |
 | Tape pembungkus 48mm | Kunci dasar & penutup kotak | RM3–RM5 segulung |
@@ -97,7 +97,7 @@ Bubble wrap bagus, tapi untuk pindah rumah sekali, anda tak perlu berbelanja bes
 - **Sarung bantal** — pembalut pantas untuk periuk dan bekas besar.
 - **Surat khabar & kertas A4 terpakai** — pengisi ruang paling murah. Nota: dakwat surat khabar boleh melunturkan kesan pada pinggan cerah, jadi basuh selepas unpack.
 
-Dengan cara ini, kos sebenar packing barang pecah belah hanyalah kos kotak — dan jika anda ikut [perbandingan kotak baru vs terpakai](/blog/beza-kotak-baru-kotak-terpakai/) kami, kotak terpakai double wall gred baik dari RM1.70 sudah memadai untuk kebanyakan barang dapur.
+Dengan cara ini, kos sebenar packing barang pecah belah hanyalah kos kotak — dan jika anda ikut [perbandingan kotak baru vs terpakai](/blog/beza-kotak-baru-kotak-terpakai/) kami, kotak terpakai double wall gred baik dari RM1.80 sudah memadai untuk kebanyakan barang dapur.
 
 ## Tutup, Tampal & Label FRAGILE
 
@@ -112,6 +112,6 @@ Masa memunggah, pastikan pengangkat tahu kotak FRAGILE dinaikkan **paling akhir*
 
 ## Berapa Kotak & Berapa Kos?
 
-Untuk dapur rumah 3 bilik yang biasa, anggaran realistik ialah 8–12 kotak saiz M khusus untuk pinggan mangkuk dan barang kaca. Peruntukkan juga 1–2 jam masa packing untuk setiap kotak barang pecah belah — ini bahagian paling perlahan dalam seluruh pindahan, jadi mulakannya awal dan jangan tinggalkan ke malam sebelum pindah. Dengan kotak A3 double wall pada RM5.00 sekotak, bajet sekitar RM40–RM60 — jauh lebih murah daripada mengganti satu set pinggan yang pecah. Kalau nak jimat lagi, campurkan: kotak baru double wall untuk barang paling rapuh, kotak terpakai untuk periuk dan barang lasak.
+Untuk dapur rumah 3 bilik yang biasa, anggaran realistik ialah 8–12 kotak saiz M khusus untuk pinggan mangkuk dan barang kaca. Peruntukkan juga 1–2 jam masa packing untuk setiap kotak barang pecah belah — ini bahagian paling perlahan dalam seluruh pindahan, jadi mulakannya awal dan jangan tinggalkan ke malam sebelum pindah. Dengan kotak A3 double wall pada RM5.50 sekotak, bajet sekitar RM45–RM65 — jauh lebih murah daripada mengganti satu set pinggan yang pecah. Kalau nak jimat lagi, campurkan: kotak baru double wall untuk barang paling rapuh, kotak terpakai untuk periuk dan barang lasak.
 
 Tak pasti kombinasi mana sesuai? [WhatsApp kami di 016-891 6381](https://wa.me/60168916381?text=Hi%2C%20nak%20tanya%20kotak%20untuk%20packing%20pinggan%20mangkuk) dengan senarai barang dapur anda — kami cadangkan saiz dan kuantiti, dan boleh ambil hari yang sama di gudang Balakong.

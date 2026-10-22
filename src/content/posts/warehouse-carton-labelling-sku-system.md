@@ -26,7 +26,7 @@ faqs:
   - q: "Do I need WMS software or is a spreadsheet enough?"
     a: "Under roughly 500 SKUs and a handful of staff, a disciplined spreadsheet — SKU, location, running count, updated at receiving and packing — beats most WMS software: zero cost, no training, and everyone already knows Excel or Google Sheets. WMS earns its subscription when you hit multiple pickers, thousands of SKUs or barcode scanning needs."
   - q: "Where should labels go on stacked cartons in racking?"
-    a: "On the side facing the picking aisle, upper half of the panel, one consistent corner. Top-of-box labels vanish the moment another carton stacks on top. For uniform double-wall cartons like the RM3.50 Yellow box, pick one corner — say top-left of the aisle-facing side — and apply it identically on every box."
+    a: "On the side facing the picking aisle, upper half of the panel, one consistent corner. Top-of-box labels vanish the moment another carton stacks on top. For uniform double-wall cartons like the RM3.90 Yellow box, pick one corner — say top-left of the aisle-facing side — and apply it identically on every box."
 ---
 
 Walk into a struggling stockroom and you will see the same scene: cartons everywhere, contents a mystery, and one person — always just one — who "knows where everything is". That person is your labelling system, and they take annual leave. Replacing tribal memory with labels takes a day and less than RM100, and it is the foundation that layout and [picking methods](/blog/warehouse-stock-picking-methods/) are built on.
@@ -78,7 +78,7 @@ Now a picker heading for apparel scans for blue at walking pace instead of readi
 
 The honest advice: start handwritten. A marker pen system that runs every day beats a printer still in its box. The upgrade point is volume — past roughly 50 cartons a week, the printer pays for itself in labour within months, and thermal printing opens the door to barcodes later without changing your SKU system.
 
-> **Tip:** Whatever you print or write on, standardise the label position — same corner, same side, every carton. Uniform cartons make this effortless: on a stack of [Yellow used boxes](/used-carton-boxes/) (460 × 330 × 310 mm, RM3.50, double wall), identically-placed labels line up into a readable column, and a missing label is obvious immediately.
+> **Tip:** Whatever you print or write on, standardise the label position — same corner, same side, every carton. Uniform cartons make this effortless: on a stack of [Yellow used boxes](/used-carton-boxes/) (460 × 330 × 310 mm, RM3.90, double wall), identically-placed labels line up into a readable column, and a missing label is obvious immediately.
 
 ## The Running Count Sheet: Live Stock Without Software
 
@@ -100,4 +100,4 @@ WMS software earns its monthly fee when specific pains appear: multiple pickers 
 
 Day one: write the SKU master list and colour legend. Day two: label everything currently on the racking, oldest stock first (the date-in field will be an estimate — that is fine). From day three, enforce the one rule that keeps the whole system alive: nothing enters the stockroom unlabelled — not "will label later", not "it's obvious what's inside". Brief every staff member on the label format in one five-minute huddle, and pin an example label at the receiving area so there is never an excuse.
 
-Consistent labels work best on consistent cartons — one or two standard sizes that stack square and present labels at the same height. Our Balakong warehouse stocks uniform used cartons from RM0.90 and new from RM1.10; browse the [full carton range](/carton-box/) with exact dimensions or order at [shop.quinocycle.com](https://shop.quinocycle.com) — free delivery in KL and Selangor from RM300, wholesale rates from RM1,000. Or just [WhatsApp us a photo of your stockroom](https://wa.me/60168916381?text=Hi%2C%20I%20need%20uniform%20cartons%20for%20my%20stockroom) and we will recommend a carton size that fits your racking and your labels.
+Consistent labels work best on consistent cartons — one or two standard sizes that stack square and present labels at the same height. Our Balakong warehouse stocks uniform used cartons from RM1.10 and new from RM1.10; browse the [full carton range](/carton-box/) with exact dimensions or order at [shop.quinocycle.com](https://shop.quinocycle.com) — free delivery in KL and Selangor from RM300, wholesale rates from RM1,000. Or just [WhatsApp us a photo of your stockroom](https://wa.me/60168916381?text=Hi%2C%20I%20need%20uniform%20cartons%20for%20my%20stockroom) and we will recommend a carton size that fits your racking and your labels.

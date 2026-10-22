@@ -1,6 +1,6 @@
 ---
 title: "Gred Kotak Terpakai: 6 Pemeriksaan Wajib Sebelum Anda Beli"
-description: "Cara semak gred kotak terpakai sebelum beli: 6 pemeriksaan mudah dari dinding hingga bau. Kotak terpakai gred baik dari RM0.90 di gudang Balakong, Selangor."
+description: "Cara semak gred kotak terpakai sebelum beli: 6 pemeriksaan mudah dari dinding hingga bau. Kotak terpakai gred baik dari RM1.10 di gudang Balakong, Selangor."
 category: "Kotak Kardus Terpakai"
 img: "/images/box-used-yellow.png"
 date: "2026-09-15"
@@ -15,14 +15,14 @@ keywords:
   - "beza kotak terpakai gudang dan kedai"
   - "kotak terpakai untuk pindah rumah"
   - "kotak second hand malaysia"
-directAnswer: "Sebelum beli kotak terpakai, buat 6 pemeriksaan: tekan dinding (mesti masih keras), semak 4 sudut utuh, cari kesan air, hidu bau, periksa flap tidak koyak, dan anggar berapa kali kotak pernah diguna. Kotak terpakai gred baik dari gudang bermula RM0.90 dan mampu tanggung beban hampir sama seperti kotak baru."
+directAnswer: "Sebelum beli kotak terpakai, buat 6 pemeriksaan: tekan dinding (mesti masih keras), semak 4 sudut utuh, cari kesan air, hidu bau, periksa flap tidak koyak, dan anggar berapa kali kotak pernah diguna. Kotak terpakai gred baik dari gudang bermula RM1.10 dan mampu tanggung beban hampir sama seperti kotak baru."
 faqs:
   - q: "Apa maksud gred kotak terpakai?"
     a: "Gred kotak terpakai merujuk kepada keadaan fizikal kotak selepas penggunaan pertama: kekerasan dinding, keutuhan sudut dan flap, serta bebas kesan air dan bau. Kotak gred baik biasanya hanya sekali guna dari kilang atau pengimport, jadi kekuatannya masih hampir sama dengan kotak baru."
   - q: "Adakah kotak terpakai cukup kuat untuk pindah rumah?"
-    a: "Ya, asalkan gred baik. Kotak terpakai double wall seperti model PDC (590 × 380 × 380 mm, RM5.00) memang direka untuk barang berat dan ramai pelanggan guna untuk pindah rumah dan pejabat. Yang penting, buat 6 pemeriksaan asas dulu — terutama dinding masih keras dan sudut tidak lembik."
+    a: "Ya, asalkan gred baik. Kotak terpakai double wall seperti model PDC (590 × 380 × 380 mm, RM5.50) memang direka untuk barang berat dan ramai pelanggan guna untuk pindah rumah dan pejabat. Yang penting, buat 6 pemeriksaan asas dulu — terutama dinding masih keras dan sudut tidak lembik."
   - q: "Berapa harga kotak terpakai berkualiti di Selangor?"
-    a: "Di gudang Quinocycle Balakong, kotak terpakai gred baik bermula RM0.90 sekotak. Contoh model sedia ada: MG saiz kecil RM1.70, Yellow saiz sederhana RM3.50 dan PDC saiz besar RM5.00 — semuanya jauh lebih murah daripada harga runcit kedai yang biasa RM8–RM12."
+    a: "Di gudang Quinocycle Balakong, kotak terpakai gred baik bermula RM1.10 sekotak. Contoh model sedia ada: MG saiz kecil RM1.90, Yellow saiz sederhana RM3.90 dan PDC saiz besar RM5.50 — semuanya jauh lebih murah daripada harga runcit kedai yang biasa RM8–RM12."
   - q: "Kenapa kotak percuma belakang kedai tak disarankan?"
     a: "Kotak percuma belakang kedai selalunya sudah diguna berkali-kali, terdedah hujan dan lembap, dan mungkin pernah isi barang basah seperti sayur atau ikan. Dinding yang sudah lembik boleh pecah bila diangkat. Kotak terpakai gred gudang pula disusun kering, dipilih dari sumber sekali guna, dan disemak sebelum dijual."
   - q: "Bila wajib guna kotak baru dan bukan kotak terpakai?"
@@ -77,7 +77,7 @@ Ramai yang tanya: "Kenapa nak bayar untuk kotak terpakai kalau boleh dapat percu
 | Pendedahan cuaca | Disimpan kering dalam gudang | Kerap terdedah hujan & panas |
 | Isi kandungan asal | Barangan kering/perkilangan | Mungkin sayur, ikan, barang basah |
 | Saiz | Konsisten ikut model, senang susun | Rojak, susah susun dalam lori |
-| Harga | Dari RM0.90 sekotak | Percuma |
+| Harga | Dari RM1.10 sekotak | Percuma |
 
 Untuk 2–3 kotak barang ringan yang bukan nak diangkat jauh, kotak percuma okay sahaja. Tapi untuk pindah rumah penuh 50–70 kotak yang disusun bertindih dalam lori, ketidakpastian itu mahal — satu kotak pecah boleh rosakkan barang bernilai ratusan ringgit. Kami pernah kupas topik ini dengan lebih mendalam dalam [perbandingan kotak baru vs terpakai](/blog/beza-kotak-baru-kotak-terpakai/).
 
@@ -87,11 +87,11 @@ Ini beberapa model kotak terpakai yang ada dalam stok di gudang kami di Balakong
 
 | Model | Saiz | Dimensi | Dinding | Harga |
 |---|---|---|---|---|
-| MG | S (kecil) | 380 × 230 × 270 mm | Double wall | RM1.70 |
-| Bary | S (kecil) | 300 × 200 × 250 mm | Double wall | RM1.80 |
-| Yellow | M (sederhana) | 460 × 330 × 310 mm | Double wall | RM3.50 |
-| PDC | L (besar) | 590 × 380 × 380 mm | Double wall | RM5.00 |
-| Golden | XL (jumbo) | 510 × 510 × 510 mm | Double wall | RM6.00 |
+| MG | S (kecil) | 380 × 230 × 270 mm | Double wall | RM1.90 |
+| Bary | S (kecil) | 300 × 200 × 250 mm | Double wall | RM1.90 |
+| Yellow | M (sederhana) | 460 × 330 × 310 mm | Double wall | RM3.90 |
+| PDC | L (besar) | 590 × 380 × 380 mm | Double wall | RM5.50 |
+| Golden | XL (jumbo) | 510 × 510 × 510 mm | Double wall | RM6.50 |
 
 Perhatikan satu perkara: kebanyakan model ini **double wall** — dua lapis flute. Ini kotak yang asalnya dibuat untuk barangan perkilangan dan import, jadi walaupun terpakai, ia selalunya lebih kuat daripada kotak baru single wall yang nipis. Model dan stok berubah dari semasa ke semasa; senarai penuh dengan gambar ada di [shop.quinocycle.com](https://shop.quinocycle.com).
 

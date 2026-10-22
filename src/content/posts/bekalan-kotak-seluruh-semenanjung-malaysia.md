@@ -33,7 +33,7 @@ faqs:
 
 ## Satu Gudang, Seluruh Semenanjung
 
-Semua stok kami berada di satu lokasi: **No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor**. Tiada cawangan, tiada kedai francais, tiada ejen negeri. Model satu gudang inilah yang membolehkan harga kekal rendah — [kotak terpakai](/kotak-terpakai/) dari RM0.90 dan kotak baru dari RM1.10 — sebab tiada kos sewa kedai berganda yang perlu ditampung dalam harga kotak.
+Semua stok kami berada di satu lokasi: **No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor**. Tiada cawangan, tiada kedai francais, tiada ejen negeri. Model satu gudang inilah yang membolehkan harga kekal rendah — [kotak terpakai](/kotak-terpakai/) dari RM1.10 dan kotak baru dari RM1.10 — sebab tiada kos sewa kedai berganda yang perlu ditampung dalam harga kotak.
 
 Untuk pelanggan Lembah Klang, sistemnya mudah: ambil sendiri di gudang (Isnin–Jumaat 9am–5pm, Sabtu 9am–1pm) atau penghantaran percuma untuk pesanan RM300 ke atas. Untuk pelanggan luar Selangor pula — Johor, Penang, Perak, Melaka, Negeri Sembilan, Pahang, Kelantan, Terengganu, Kedah — kotak dihantar melalui **kurier atau lori, dengan kos dikuotkan ikut pesanan**.
 

@@ -26,7 +26,7 @@ faqs:
   - q: "Lebih baik simpan kotak flat-pack atau siap dipasang?"
     a: "Flat-pack hampir selalu lebih baik: jimat 80% ruang, kurang permukaan terdedah pada lembapan, dan lipatan tak tertekan lama. Pasang kotak hanya bila nak guna. Kecuali stok harian peniaga online — sediakan 10–20 kotak siap pasang untuk kelajuan, selebihnya kekal flat."
   - q: "Apa tanda kotak kardus dah tak selamat digunakan?"
-    a: "Lima tanda utama: dinding lembik bila ditekan, kesan air atau tompok kulat, penjuru remuk atau retak, warna kertas jadi gelap berbintik, dan bau hapak. Kotak macam ini hilang sebahagian besar kekuatannya — jangan guna untuk barang berat atau penghantaran pelanggan. Ganti dengan kotak baru dari RM1.10 atau terpakai dari RM0.90."
+    a: "Lima tanda utama: dinding lembik bila ditekan, kesan air atau tompok kulat, penjuru remuk atau retak, warna kertas jadi gelap berbintik, dan bau hapak. Kotak macam ini hilang sebahagian besar kekuatannya — jangan guna untuk barang berat atau penghantaran pelanggan. Ganti dengan kotak baru dari RM1.10 atau terpakai dari RM1.10."
 ---
 
 Beli kotak murah tapi simpan salah, akhirnya rugi juga — kotak lembik, berkulat, atau jadi buffet gegat sebelum sempat digunakan. Dalam iklim Malaysia dengan kelembapan purata sekitar 80% dan musim hujan yang panjang, kadbod adalah span gergasi yang menyerap air dari udara. Berita baiknya: dengan beberapa langkah mudah, stok kotak anda boleh kekal kuat setahun dua. Ini caranya, dari pengalaman kami menyimpan beribu-ribu kotak di gudang Balakong.
@@ -81,7 +81,7 @@ Ini anggaran praktikal — kotak 5 lapis (double wall) umumnya lebih tahan simpa
 - **Bau hapak** — tanda lembapan dah lama meresap. Bau ini juga melekat pada barang dalam kotak.
 - **Kesan serangga** — lubang halus, sisa kulit gegat, atau habuk kertas di tapak stok.
 
-Kotak macam ini masih boleh untuk kegunaan ringan (alas, kraf, kitar semula) tapi **jangan** untuk barang berat, barang fragile atau penghantaran kepada pelanggan. Kos ganti terlalu murah untuk berjudi — [kotak terpakai](/kotak-terpakai/) kami dari RM0.90, kotak baru dari RM1.10.
+Kotak macam ini masih boleh untuk kegunaan ringan (alas, kraf, kitar semula) tapi **jangan** untuk barang berat, barang fragile atau penghantaran kepada pelanggan. Kos ganti terlalu murah untuk berjudi — [kotak terpakai](/kotak-terpakai/) kami dari RM1.10, kotak baru dari RM1.10.
 
 ### Kotak Baru Sikit Lembap — Masih Boleh Selamat?
 

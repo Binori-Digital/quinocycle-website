@@ -33,7 +33,7 @@ const faqSchema = {
   "mainEntity": [
     { "@type": "Question", "name": "Berapa kotak yang saya perlukan untuk pindah rumah?", "acceptedAnswer": { "@type": "Answer", "text": "Jumlah kotak bergantung pada saiz rumah dan jumlah barang. Sebagai panduan umum: rumah 2-bilik memerlukan 50-80 kotak, rumah 3-bilik 80-120 kotak, dan rumah 4-bilik 120-150 kotak. Selalu beli 10-20% lebih banyak untuk memastikan anda tidak kehabisan kotak di tengah packing." } },
     { "@type": "Question", "name": "Apakah cara terbaik membungkus barang rapuh?", "acceptedAnswer": { "@type": "Answer", "text": "Untuk barang rapuh seperti cawan dan gelas, gulung setiap item dengan kertas berkualiti atau bubble wrap. Letakkan lapisan bubble wrap di dasar kotak, kemudian susun barang dengan rapi dan isi sela-sela dengan packing paper atau packing peanuts. Tutup kotak dan label dengan jelas 'FRAGILE' atau 'RAPUH'." } },
-    { "@type": "Question", "name": "Kotak pindah rumah baru atau terpakai — mana lebih baik?", "acceptedAnswer": { "@type": "Answer", "text": "Kotak pindah baru lebih kuat dan lebih sesuai untuk barang berharga atau rapuh. Kotak terpakai adalah pilihan yang cost-effective untuk pakaian, buku, dan barang yang tidak rapuh. Quinocycle menawarkan kotak baru dari RM 1.90/kotak dan terpakai dari RM 0.90/kotak. Gunakan kombinasi kedua-dua untuk mengoptimumkan kos." } },
+    { "@type": "Question", "name": "Kotak pindah rumah baru atau terpakai — mana lebih baik?", "acceptedAnswer": { "@type": "Answer", "text": "Kotak pindah baru lebih kuat dan lebih sesuai untuk barang berharga atau rapuh. Kotak terpakai adalah pilihan yang cost-effective untuk pakaian, buku, dan barang yang tidak rapuh. Quinocycle menawarkan kotak baru dari RM 1.90/kotak dan terpakai dari RM 1.10/kotak. Gunakan kombinasi kedua-dua untuk mengoptimumkan kos." } },
     { "@type": "Question", "name": "Bagaimana cara mengorganisir packing agar mudah?", "acceptedAnswer": { "@type": "Answer", "text": "Pack bilik demi bilik dan label setiap kotak dengan nama bilik dan senarai isi kandungan. Gunakan marker dan label sticker untuk penandaan yang jelas. Kemasan kotak dengan warna berbeza untuk bilik berbeza (contohnya, merah untuk bilik tidur, biru untuk dapur) juga memudahkan identifikasi. Siapkan 'kotak harian' dengan item yang anda perlukan pada hari pertama di rumah baru." } },
     { "@type": "Question", "name": "Bagaimana cara jimat wang pada kotak pindah?", "acceptedAnswer": { "@type": "Answer", "text": "Gunakan kotak terpakai yang masih berkualiti — ia menjimatkan sehingga 60% daripada kotak baru. Kumpul kotak dari kedai, restoran, atau rakan yang baru pindah. Jika anda menggunakan kurier seperti UPS atau DHL, minta kotak bekas mereka yang sering tersedia dengan percuma. Belanja dalam jumlah besar dari pembekal seperti Quinocycle untuk harga pukal yang lebih baik." } }
   ]
@@ -52,7 +52,7 @@ const localBusinessSchema = {
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
   ],
-  "priceRange": "RM 0.90 – RM 6.50 sekotak",
+  "priceRange": "RM 1.10 – RM 38.00 sekotak",
   "areaServed": "Semenanjung Malaysia"
 };
 ---
@@ -286,7 +286,7 @@ const localBusinessSchema = {
     </h3>
 
     <p class="font-body text-lg text-secondary leading-relaxed mb-4">
-      <strong>Kelebihan:</strong> Jauh lebih murah (dari RM 0.90 per kotak), ramah alam kerana dikitar semula, sesuai untuk barang yang tidak rapuh.
+      <strong>Kelebihan:</strong> Jauh lebih murah (dari RM 1.10 per kotak), ramah alam kerana dikitar semula, sesuai untuk barang yang tidak rapuh.
       <strong>Kekurangan:</strong> Mungkin kurang kuat, mungkin mengandungi tanda-tanda kegunaan sebelumnya, tidak sesuai untuk barang yang sangat rapuh.
       <strong>Ideal untuk:</strong> Pakaian, buku, mainan, dan barang lain yang tidak mudah rosak.
     </p>
@@ -304,7 +304,7 @@ const localBusinessSchema = {
         Quinocycle Sdn. Bhd. adalah pembekal terpercaya untuk kotak pindah rumah di seluruh Malaysia. Dengan pengalaman lebih 15 tahun sejak 2010, kami memahami kebutuhan unik pindahan di Selangor, Lembah Klang, Balakong, Cheras, Kajang, dan Seri Kembangan.
       </p>
       <p class="font-body text-lg text-secondary leading-relaxed mb-4">
-        Kami menawarkan kotak baru dari RM 1.90/kotak dan kotak terpakai dari RM 0.90/kotak dengan minimum pesanan hanya RM 1,000. Dengan penghantaran ke seluruh Semenanjung Malaysia dan sokongan pelanggan yang responsif, pindah rumah anda akan menjadi lebih mudah dan lebih hemat.
+        Kami menawarkan kotak baru dari RM 1.90/kotak dan kotak terpakai dari RM 1.10/kotak dengan minimum pesanan hanya RM 1,000. Dengan penghantaran ke seluruh Semenanjung Malaysia dan sokongan pelanggan yang responsif, pindah rumah anda akan menjadi lebih mudah dan lebih hemat.
       </p>
       <a href={WA_LINK} target="_blank" class="inline-flex items-center gap-2 bg-primary text-on-primary font-label font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-primary/90 transition-colors">
         Hubungi Quinocycle Untuk Kotak Pindah
@@ -339,7 +339,7 @@ const localBusinessSchema = {
           Kotak pindah rumah baru atau terpakai — mana lebih baik?
         </h3>
         <p class="font-body text-lg text-secondary leading-relaxed">
-          Kotak pindah baru lebih kuat dan lebih sesuai untuk barang berharga atau rapuh. Kotak terpakai adalah pilihan yang cost-effective untuk pakaian, buku, dan barang yang tidak rapuh. Quinocycle menawarkan kotak baru dari RM 1.90/kotak dan terpakai dari RM 0.90/kotak. Gunakan kombinasi kedua-dua untuk mengoptimumkan kos.
+          Kotak pindah baru lebih kuat dan lebih sesuai untuk barang berharga atau rapuh. Kotak terpakai adalah pilihan yang cost-effective untuk pakaian, buku, dan barang yang tidak rapuh. Quinocycle menawarkan kotak baru dari RM 1.90/kotak dan terpakai dari RM 1.10/kotak. Gunakan kombinasi kedua-dua untuk mengoptimumkan kos.
         </p>
       </div>
 

@@ -24,7 +24,7 @@ faqs:
   - q: "What's the cheapest way to waterproof moving boxes?"
     a: "Large garbage bags as inner liners cost under RM10 for a whole move: line the box, pack inside the bag, tie it off, then close the carton. Add a roll of stretch wrap (around RM10–RM20) for the outside of boxes with valuables, and you have double protection for under RM30."
   - q: "Should I use plastic containers instead of cardboard boxes in monsoon season?"
-    a: "A few plastic tubs are worth it for documents, electronics and photos — the irreplaceable items. But for a full 60-box move, lined double-wall cartons from RM1.70 each are far cheaper than buying dozens of tubs, and properly wrapped cardboard handles a dash through the rain perfectly well."
+    a: "A few plastic tubs are worth it for documents, electronics and photos — the irreplaceable items. But for a full 60-box move, lined double-wall cartons from RM1.80 each are far cheaper than buying dozens of tubs, and properly wrapped cardboard handles a dash through the rain perfectly well."
   - q: "What happens if my boxes get damp during the move?"
     a: "Unpack damp boxes first and immediately — cardboard wicks moisture inward over hours. Move contents out, wipe items dry, and stand the boxes open in an airflow (fan or under a ceiling fan) to dry. A box that dried after light rain is usually fine for storage, but discard any box that got soaked through, since its strength won't fully recover."
 ---
@@ -54,7 +54,7 @@ The takeaway: your monsoon strategy is 50% keeping boxes dry and 50% assuming so
 
 **Layer 3 — cover the gap.** The danger zone is the open 5–10 metres between your lift lobby and the lorry. A tarpaulin thrown over each trolley load, or two people walking an umbrella relay, closes that gap.
 
-Start with dry, sturdy boxes: **double-wall cartons** hold up far better in humidity than thin single-wall ones. Our [used double-wall boxes](/used-carton-boxes/) from RM1.70 handle monsoon moves fine when lined; browse the full range at [shop.quinocycle.com](https://shop.quinocycle.com).
+Start with dry, sturdy boxes: **double-wall cartons** hold up far better in humidity than thin single-wall ones. Our [used double-wall boxes](/used-carton-boxes/) from RM1.80 handle monsoon moves fine when lined; browse the full range at [shop.quinocycle.com](https://shop.quinocycle.com).
 
 > **Cheap insurance:** Pack one "wet day kit" and keep it accessible — old towels, two extra garbage bags, a roll of tape and a dry change of clothes per person. When a downpour starts mid-move, the crew that can dry their hands and re-tape a soggy box keeps working; everyone else stands around watching the rain.
 

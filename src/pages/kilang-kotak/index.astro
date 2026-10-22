@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: 'Berapa harga kotak dari kilang berbanding harga Quinocycle?',
-    a: 'Kilang kotak biasanya jual pada MOQ 1,000–5,000 unit satu saiz. Harga borong kami bermula RM0.90 sekotak (terpakai) dan RM1.10 (baru) — jauh lebih murah daripada kedai runcit (RM8–12 sekotak) dan hampir setara harga kilang, tanpa MOQ besar.',
+    a: 'Kilang kotak biasanya jual pada MOQ 1,000–5,000 unit satu saiz. Harga borong kami bermula RM1.10 sekotak (terpakai) dan RM1.10 (baru) — jauh lebih murah daripada kedai runcit (RM8–12 sekotak) dan hampir setara harga kilang, tanpa MOQ besar.',
   },
   {
     q: 'Saya cari kilang kotak berdekatan saya — kawasan mana anda serve?',
@@ -42,10 +42,10 @@ const storeSchema = {
   "@context": "https://schema.org",
   "@type": "Store",
   "name": "Quinocycle — Kotak Harga Kilang, Balakong Selangor",
-  "description": "Gudang pembekal kotak kardus borong di Balakong, Selangor. Harga kilang tanpa MOQ kilang — kotak baru & terpakai dari RM0.90 sekotak, stok sedia ada.",
+  "description": "Gudang pembekal kotak kardus borong di Balakong, Selangor. Harga kilang tanpa MOQ kilang — kotak baru & terpakai dari RM1.10 sekotak, stok sedia ada.",
   "url": "https://www.quinocycle.com.my/kilang-kotak/",
   "telephone": "+60168916381",
-  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "priceRange": "RM1.10 - RM38.00 sekotak",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
@@ -84,8 +84,8 @@ const breadcrumbSchema = {
 
 <Layout
   lang="ms"
-  title="Kilang Kotak? Dapatkan Harga Kilang Tanpa MOQ Kilang — dari RM0.90 | Quinocycle Selangor"
-  description="Cari kilang kotak murah di Selangor, KL, Cheras, Shah Alam atau Klang? Quinocycle jual kotak kardus pada harga kilang tanpa MOQ beribu unit — baru & terpakai dari RM0.90 sekotak, stok sedia di gudang Balakong. WhatsApp 016-891 6381."
+  title="Kilang Kotak? Dapatkan Harga Kilang Tanpa MOQ Kilang — dari RM1.10 | Quinocycle Selangor"
+  description="Cari kilang kotak murah di Selangor, KL, Cheras, Shah Alam atau Klang? Quinocycle jual kotak kardus pada harga kilang tanpa MOQ beribu unit — baru & terpakai dari RM1.10 sekotak, stok sedia di gudang Balakong. WhatsApp 016-891 6381."
 >
   <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
@@ -103,7 +103,7 @@ const breadcrumbSchema = {
       Cari kilang kotak murah? <br /><span class="text-primary italic">Dapatkan harga kilang di sini.</span>
     </h1>
     <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
-      Kilang kotak sebenar hanya layan pesanan beribu-ribu unit. Quinocycle beli terus dari kilang secara pukal dan jual kepada anda pada <strong class="text-on-surface font-semibold">harga hampir setara kilang</strong> — dari 50 unit sahaja, stok sedia ada di gudang Balakong, Selangor. Kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong>, kotak terpakai dari <strong class="text-on-surface font-semibold">RM0.90</strong> sekotak.
+      Kilang kotak sebenar hanya layan pesanan beribu-ribu unit. Quinocycle beli terus dari kilang secara pukal dan jual kepada anda pada <strong class="text-on-surface font-semibold">harga hampir setara kilang</strong> — dari 50 unit sahaja, stok sedia ada di gudang Balakong, Selangor. Kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong>, kotak terpakai dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak.
     </p>
     <div class="flex flex-wrap gap-4">
       <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
@@ -135,7 +135,7 @@ const breadcrumbSchema = {
           <tbody class="divide-y divide-outline-variant/15">
             {[
               ['Kuantiti minimum', '1,000–5,000 unit satu saiz', '50–200 unit ikut jenis kotak'],
-              ['Harga seunit', 'Paling rendah', 'Hampir setara — dari RM0.90'],
+              ['Harga seunit', 'Paling rendah', 'Hampir setara — dari RM1.10'],
               ['Stok sedia', 'Tiada — ikut jadual pengeluaran', 'Sedia di gudang, ambil hari ini'],
               ['Masa tunggu', '1–4 minggu pengeluaran', 'Hari sama / esok (Lembah Klang)'],
               ['Campur saiz', 'Tidak — satu saiz satu pesanan', 'Boleh campur semua saiz'],
@@ -181,12 +181,12 @@ const breadcrumbSchema = {
         <a href="/shop" class="bg-surface rounded-3xl p-8 hover:shadow-lg transition-shadow">
           <span class="material-symbols-outlined text-3xl text-primary mb-3 block">inventory_2</span>
           <h3 class="font-headline font-bold text-xl text-on-surface mb-2">Kotak Baru</h3>
-          <p class="font-body text-sm text-secondary leading-relaxed">4 saiz standard (XS hingga L), single &amp; double wall, dari RM1.10 sekotak. Untuk packaging produk, pos barang dan pindah.</p>
+          <p class="font-body text-sm text-secondary leading-relaxed">10 model standard (XS hingga XXL cargo), single &amp; double wall, dari RM1.10 sekotak. Untuk packaging produk, pos barang dan pindah.</p>
         </a>
         <a href="/used-carton-boxes" class="bg-surface rounded-3xl p-8 hover:shadow-lg transition-shadow">
           <span class="material-symbols-outlined text-3xl text-primary mb-3 block">recycling</span>
           <h3 class="font-headline font-bold text-xl text-on-surface mb-2">Kotak Terpakai</h3>
-          <p class="font-body text-sm text-secondary leading-relaxed">15 model gred sekali guna dari RM0.90 sekotak — disemak, kering, tidak berbau. Pilihan paling jimat.</p>
+          <p class="font-body text-sm text-secondary leading-relaxed">18 model gred sekali guna dari RM1.10 sekotak — disemak, kering, tidak berbau. Pilihan paling jimat.</p>
         </a>
         <a href="/kotak-pindah-rumah" class="bg-surface rounded-3xl p-8 hover:shadow-lg transition-shadow">
           <span class="material-symbols-outlined text-3xl text-primary mb-3 block">local_shipping</span>

@@ -1,6 +1,6 @@
 ---
 title: "Pindah Rumah KL ke Penang: Checklist 3 Minggu & Anggaran Kos (2026)"
-description: "Panduan pindah rumah KL ke Penang: anggaran kos lori RM1,000–RM2,500, checklist 3 minggu, tips packing untuk perjalanan 4 jam & beli kotak dari RM0.90."
+description: "Panduan pindah rumah KL ke Penang: anggaran kos lori RM1,000–RM2,500, checklist 3 minggu, tips packing untuk perjalanan 4 jam & beli kotak dari RM1.10."
 category: "Panduan Pindah Rumah"
 img: "/images/blog-movers-guide.jpg"
 date: "2026-09-17"
@@ -20,9 +20,9 @@ faqs:
   - q: "Berapa kos lori pindah rumah dari KL ke Penang?"
     a: "Anggaran pasaran untuk pindah antara negeri KL–Penang biasanya sekitar RM1,000–RM2,500 untuk rumah 3 bilik dengan lori 3-tan, termasuk 2–3 pekerja. Harga bergantung pada jumlah barang, aras tingkat (lif atau tangga) dan tarikh — hujung bulan dan cuti umum lebih mahal. Dapatkan 3 sebut harga untuk bandingan."
   - q: "Di mana patut beli kotak untuk pindah KL ke Penang?"
-    a: "Beli di Lembah Klang SEBELUM pindah — bukan selepas sampai. Gudang Quinocycle di Balakong jual kotak terpakai dari RM0.90 dan baru dari RM1.10, dengan penghantaran percuma untuk pesanan RM300+ sekitar KL & Selangor. Ke Penang pula, penghantaran perlu dikuotkan berasingan dan tidak percuma."
+    a: "Beli di Lembah Klang SEBELUM pindah — bukan selepas sampai. Gudang Quinocycle di Balakong jual kotak terpakai dari RM1.10 dan baru dari RM1.10, dengan penghantaran percuma untuk pesanan RM300+ sekitar KL & Selangor. Ke Penang pula, penghantaran perlu dikuotkan berasingan dan tidak percuma."
   - q: "Kotak jenis apa sesuai untuk perjalanan jauh 4 jam?"
-    a: "Untuk pindah antara negeri, guna kotak double wall (dua lapis) seperti kotak A3 (RM5.00) atau NLN besar (RM8.00). Getaran lebuh raya selama 4 jam melonggarkan susunan barang, jadi dinding kotak yang lebih tebal dan tape yang kemas sangat penting berbanding pindahan dekat."
+    a: "Untuk pindah antara negeri, guna kotak double wall (dua lapis) seperti kotak A3 (RM5.50) atau NLN besar (RM9.00). Getaran lebuh raya selama 4 jam melonggarkan susunan barang, jadi dinding kotak yang lebih tebal dan tape yang kemas sangat penting berbanding pindahan dekat."
   - q: "Macam mana nak urus utiliti bila pindah dari Selangor ke Penang?"
     a: "Anda perlu urus dua set akaun: tutup akaun Air Selangor dan pindah/tutup akaun TNB lama, kemudian buka akaun TNB di alamat baru dan daftar dengan PBA Pulau Pinang untuk bekalan air. Mohon 1–2 minggu awal supaya elektrik dan air sudah aktif pada hari anda sampai."
   - q: "Berapa lama masa perjalanan lori pindah dari KL ke Penang?"
@@ -61,7 +61,7 @@ Rumah 3 bilik biasanya perlukan 50–70 kotak. Kira keperluan anda dengan [kalku
 
 Pindahan dalam bandar melibatkan 20 minit perjalanan; barang yang dipack cincai pun selalunya selamat. Perjalanan lebuh raya 4–6 jam pula menguji setiap kotak dengan getaran berterusan, brek mengejut dan haba dalam tin lori. Naik taraf packing anda:
 
-- **Guna double wall untuk semua barang bernilai.** Kotak baru A3 (440 × 310 × 230 mm, RM5.00) untuk pinggan mangkuk, dan NLN besar (590 × 390 × 390 mm, RM8.00) untuk barang berat. Kotak terpakai double wall gred baik seperti PDC (RM5.00) pun sangat kukuh — lihat semua pilihan di [halaman kotak pindah rumah](/kotak-pindah-rumah/).
+- **Guna double wall untuk semua barang bernilai.** Kotak baru A3 (440 × 310 × 230 mm, RM5.50) untuk pinggan mangkuk, dan NLN besar (590 × 390 × 390 mm, RM9.00) untuk barang berat. Kotak terpakai double wall gred baik seperti PDC (RM5.50) pun sangat kukuh — lihat semua pilihan di [halaman kotak pindah rumah](/kotak-pindah-rumah/).
 - **Isi penuh setiap kotak.** Ruang kosong = barang bergerak = pecah. Sumbat ruang dengan kain atau kertas renyuk sehingga tiada bunyi bila digoncang.
 - **Tape corak H.** Satu jalur sepanjang garisan tengah, dua jalur menutup hujung — atas dan bawah kotak.
 - **Barang pecah belah dibalut individual** — ikut panduan penuh [cara packing pinggan mangkuk](/blog/cara-packing-pinggan-mangkuk-barang-pecah-belah/) kami. Untuk perjalanan jauh, gandakan lapisan.
@@ -103,7 +103,7 @@ Sasaran: elektrik, air dan internet semua aktif **sebelum** hari anda sampai. Si
 
 ## Selepas Sampai Di Penang
 
-Minggu pertama: kemas dapur dan bilik tidur dahulu, tukar alamat MyKad di JPN jika mahu, dan kenal pasti klinik serta pasar terdekat. Kotak kosong yang bertimbun? Lipat rata dan simpan yang masih elok — atau jual/kitar semula. Dan jika rakan atau keluarga di Lembah Klang pula yang nak pindah, mereka boleh dapatkan kotak yang sama dari gudang Balakong — [kotak terpakai](/kotak-terpakai/) dari RM0.90 memang penjimat terbaik untuk pindah rumah.
+Minggu pertama: kemas dapur dan bilik tidur dahulu, tukar alamat MyKad di JPN jika mahu, dan kenal pasti klinik serta pasar terdekat. Kotak kosong yang bertimbun? Lipat rata dan simpan yang masih elok — atau jual/kitar semula. Dan jika rakan atau keluarga di Lembah Klang pula yang nak pindah, mereka boleh dapatkan kotak yang sama dari gudang Balakong — [kotak terpakai](/kotak-terpakai/) dari RM1.10 memang penjimat terbaik untuk pindah rumah.
 
 Satu perkara terakhir: simpan resit kotak dan lori anda. Jika pindahan ini kerana penempatan kerja, sesetengah majikan membayar balik kos pindah — dan resit yang lengkap membuatkan tuntutan itu mudah diluluskan.
 

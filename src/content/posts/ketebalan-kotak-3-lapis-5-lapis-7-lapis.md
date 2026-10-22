@@ -1,6 +1,6 @@
 ---
 title: "Kotak 3 Lapis vs 5 Lapis vs 7 Lapis: Mana Patut Anda Beli? (2026)"
-description: "Panduan kotak 3 lapis vs 5 lapis: beza kekuatan, muatan 10–30kg, harga sebenar dari RM3.00 vs RM5.00, dan bila kotak 7 lapis cuma membazir duit anda."
+description: "Panduan kotak 3 lapis vs 5 lapis: beza kekuatan, muatan 10–30kg, harga sebenar dari RM3.50 vs RM5.50, dan bila kotak 7 lapis cuma membazir duit anda."
 category: "Ilmu Pembungkusan"
 img: "/images/product-new.jpg"
 date: "2026-09-27"
@@ -15,18 +15,18 @@ keywords:
   - "kotak 7 lapis"
   - "ketebalan kotak kardus"
   - "kotak kuat untuk pindah rumah"
-directAnswer: "Kotak 3 lapis (single wall) sesuai untuk barang bawah 10–15kg dan berharga dari RM1.10. Kotak 5 lapis (double wall) tahan sekitar 20–30kg dan sesuai untuk pindah rumah serta barang pecah belah — contohnya kotak A3 kami pada RM5.00. Kotak 7 lapis (triple wall) hanya perlu untuk muatan industri melebihi 30kg."
+directAnswer: "Kotak 3 lapis (single wall) sesuai untuk barang bawah 10–15kg dan berharga dari RM1.10. Kotak 5 lapis (double wall) tahan sekitar 20–30kg dan sesuai untuk pindah rumah serta barang pecah belah — contohnya kotak A3 kami pada RM5.50. Kotak 7 lapis (triple wall) hanya perlu untuk muatan industri melebihi 30kg."
 faqs:
   - q: "Apa maksud kotak 3 lapis dan 5 lapis?"
     a: "Lapisan merujuk kepada jumlah kepingan kertas dalam dinding kotak. Kotak 3 lapis ada satu lapisan beralun di tengah dua liner rata — dipanggil single wall. Kotak 5 lapis ada dua lapisan beralun dan tiga liner — dipanggil double wall. Lebih banyak lapis bermakna lebih kuat, lebih berat dan lebih mahal."
   - q: "Kotak 5 lapis boleh tahan berapa kilo?"
     a: "Anggaran praktikal, kotak 5 lapis yang elok boleh menampung sekitar 20–30kg jika diisi dengan betul. Kotak 3 lapis pula sekitar 10–15kg sahaja. Angka sebenar bergantung pada gred kertas, kelembapan dan cara susun — jadi tinggalkan margin, jangan isi sampai had maksimum."
   - q: "Kotak apa sesuai untuk pinggan mangkuk masa pindah rumah?"
-    a: "Guna kotak 5 lapis (double wall) seperti kotak A3 kami (440 × 310 × 230 mm, RM5.00). Dinding dua lapisan menyerap hentakan dan tahan himpitan bila kotak bertindan dalam lori. Susun pinggan secara menegak dengan balutan setiap keping — bukan bertindan mendatar."
+    a: "Guna kotak 5 lapis (double wall) seperti kotak A3 kami (440 × 310 × 230 mm, RM5.50). Dinding dua lapisan menyerap hentakan dan tahan himpitan bila kotak bertindan dalam lori. Susun pinggan secara menegak dengan balutan setiap keping — bukan bertindan mendatar."
   - q: "Perlu ke saya beli kotak 7 lapis?"
     a: "Untuk kegunaan rumah dan bisnes online, hampir pasti tidak. Kotak 7 lapis (triple wall) adalah gred industri untuk muatan 30kg ke atas seperti komponen mesin dan eksport. Kalau barang anda seberat itu, lebih praktikal pecahkan kepada dua kotak 5 lapis — lebih murah dan selamat diangkat."
   - q: "Kotak terpakai 5 lapis masih kuat ke?"
-    a: "Masih, selagi kotak itu kering, tegak dan penjurunya tak remuk. Kotak terpakai 5 lapis seperti model MG kami (RM1.70) kekal hampir semua kekuatan asalnya sebab baru guna sekali — malah lebih kuat daripada banyak kotak baru 3 lapis, pada harga lebih murah."
+    a: "Masih, selagi kotak itu kering, tegak dan penjurunya tak remuk. Kotak terpakai 5 lapis seperti model MG kami (RM1.90) kekal hampir semua kekuatan asalnya sebab baru guna sekali — malah lebih kuat daripada banyak kotak baru 3 lapis, pada harga lebih murah."
 ---
 
 Bila beli kotak, kebanyakan orang tengok saiz dulu — padahal ketebalan dinding lah yang menentukan sama ada barang anda selamat sampai atau pecah di tengah jalan. "3 lapis ke 5 lapis, bang?" ialah soalan paling kerap kami dapat di gudang Balakong. Ini jawapan penuh, dengan harga sebenar, supaya anda tak terlebih bayar untuk ketebalan yang tak perlu — dan tak berjimat di tempat yang salah.
@@ -54,7 +54,7 @@ Cara kedua: rasa ketebalannya. Dinding 3 lapis biasanya sekitar 3mm; dinding 5 l
 
 **Kelebihan:**
 
-- **Paling murah.** Kotak baru XS dari RM1.10, kotak A4 (310 × 220 × 220 mm) cuma RM3.00.
+- **Paling murah.** Kotak baru XS dari RM1.10, kotak A4 (310 × 220 × 220 mm) cuma RM3.50.
 - **Ringan** — penting untuk peniaga online sebab courier caj ikut berat. Kotak lebih ringan = kos pos lebih rendah, order demi order.
 - **Cepat dilipat dan jimat ruang stor** bila flat-pack.
 
@@ -79,12 +79,12 @@ Tambah satu lagi lapisan beralun, dan kotak jadi lain macam terus. Ini pilihan d
 
 **Kekurangan:**
 
-- **Lebih mahal.** Kotak A3 5 lapis (440 × 310 × 230 mm) berharga RM5.00 berbanding A4 3 lapis RM3.00. Kotak besar NLN 5 lapis untuk pindah rumah: RM8.00.
+- **Lebih mahal.** Kotak A3 5 lapis (440 × 310 × 230 mm) berharga RM5.50 berbanding A4 3 lapis RM3.50. Kotak besar NLN 5 lapis untuk pindah rumah: RM9.00.
 - **Lebih berat dan tebal** — makan ruang stor dan tambah sikit berat penghantaran.
 
 **Sesuai untuk:** pindah rumah dan pejabat, pinggan mangkuk, elektronik, kotak yang akan bertindan 3 tingkat ke atas, simpanan jangka panjang.
 
-> **Rahsia jimat:** kotak **terpakai 5 lapis** selalunya lebih murah daripada kotak **baru 3 lapis** — tapi lebih kuat. Kotak terpakai MG kami (double wall) cuma RM1.70, kalah harga kotak baru A4 RM3.00. Untuk pindah rumah, ini kombinasi harga-kekuatan paling bijak. Lihat stok di [halaman kotak terpakai](/kotak-terpakai/).
+> **Rahsia jimat:** kotak **terpakai 5 lapis** selalunya lebih murah daripada kotak **baru 3 lapis** — tapi lebih kuat. Kotak terpakai MG kami (double wall) cuma RM1.90, kalah harga kotak baru A4 RM3.50. Untuk pindah rumah, ini kombinasi harga-kekuatan paling bijak. Lihat stok di [halaman kotak terpakai](/kotak-terpakai/).
 
 ## Kotak 7 Lapis: Bila Perlu (Jarang Sangat)
 
@@ -99,7 +99,7 @@ Kalau muatan anda memang besar, pilihan lebih praktikal ialah kotak kargo XXL ka
 | Keping kertas | 3 | 5 | 7 |
 | Muatan anggaran | 10–15kg | 20–30kg | 30kg+ |
 | Tahan tindanan | Asas | Kuat | Industri |
-| Contoh harga kami | A4: RM3.00 | A3: RM5.00 | Custom sahaja |
+| Contoh harga kami | A4: RM3.50 | A3: RM5.50 | Custom sahaja |
 | Guna berulang | 1–2 kali | Beberapa kali | Banyak kali |
 | Sesuai untuk | Parcel, barang ringan | Pindah, fragile, stor | Mesin, eksport |
 
@@ -113,13 +113,13 @@ Angka muatan ialah anggaran praktikal — kekuatan sebenar turut bergantung pada
 
 ### Contoh Kiraan Sebenar: Pindah Rumah 60 Kotak
 
-Katakan anda perlukan 60 kotak untuk rumah 3 bilik. Kalau ikut naluri "semua mesti tebal" dan ambil 60 kotak 5 lapis baru pada purata RM6–RM8, bajet kotak sahaja dah RM360–RM480. Strategi campuran jauh lebih bijak:
+Katakan anda perlukan 60 kotak untuk rumah 3 bilik. Kalau ikut naluri "semua mesti tebal" dan ambil 60 kotak 5 lapis baru pada purata RM7–RM9, bajet kotak sahaja dah RM420–RM540. Strategi campuran jauh lebih bijak:
 
 - 20 kotak 5 lapis (dapur, pinggan, elektronik) — campuran baru A3 dan terpakai MG/Yellow: sekitar RM60–RM100.
 - 30 kotak 3 lapis terpakai (baju, cadar, mainan, barang ringan): sekitar RM30–RM60.
-- 10 kotak besar/XL untuk barang kembung ringan: sekitar RM60–RM90.
+- 10 kotak besar/XL untuk barang kembung ringan: sekitar RM65–RM100.
 
-Jumlah: sekitar **RM150–RM250** — separuh daripada harga "semua tebal", dengan perlindungan yang betul di tempat yang betul. Itulah gunanya faham beza lapisan: bukan untuk beli kotak paling kuat, tapi untuk letak duit pada kotak yang betul.
+Jumlah: sekitar **RM160–RM260** — separuh daripada harga "semua tebal", dengan perlindungan yang betul di tempat yang betul. Itulah gunanya faham beza lapisan: bukan untuk beli kotak paling kuat, tapi untuk letak duit pada kotak yang betul.
 
 Formula ringkas kami selepas membekal beribu pelanggan Lembah Klang: **berat atau fragile atau bertindan → 5 lapis. Selain itu → 3 lapis.** Untuk padankan pula dengan saiz yang betul (sama penting dengan ketebalan), rujuk [panduan saiz kotak](/blog/carton-box-sizes-guide-malaysia/) kami.
 

@@ -22,7 +22,7 @@ const kawasan = [
 const faqs = [
   {
     q: 'Di mana boleh beli kotak terpakai berdekatan saya?',
-    a: 'Gudang Quinocycle di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor — 13 model kotak terpakai (stok berpusing). Kalau anda di Cheras, Seri Kembangan, Kajang, Puchong, Bangi, Shah Alam atau KL, kami hantar terus (percuma untuk pesanan RM300+ di KL & Selangor). Boleh juga ambil sendiri di gudang.',
+    a: 'Gudang Quinocycle di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor — 18 model kotak terpakai (stok berpusing). Kalau anda di Cheras, Seri Kembangan, Kajang, Puchong, Bangi, Shah Alam atau KL, kami hantar terus (percuma untuk pesanan RM300+ di KL & Selangor). Boleh juga ambil sendiri di gudang.',
   },
   {
     q: 'Kotak terpakai untuk dijual ini — keadaan macam mana?',
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: 'Berapa harga kotak terpakai?',
-    a: 'Dari RM0.90 sekotak (saiz S single wall) hingga RM5.00 (saiz L double wall). Ini harga borong tetap — jimat 50-60% berbanding kotak baru yang sama saiz.',
+    a: 'Dari RM1.10 sekotak (saiz S single wall) hingga RM7.00 (saiz L double wall), dan RM15.00 untuk kotak kargo XXL. Ini harga borong tetap — jimat 50-60% berbanding kotak baru yang sama saiz.',
   },
   {
     q: 'Kotak terpakai sesuai untuk apa?',
@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     q: 'Kenapa beli kotak terpakai dan bukan minta kotak percuma?',
-    a: 'Kotak percuma dari pasaraya saiznya tidak seragam, kekuatannya tidak dijamin, dan mencarinya makan masa. Dengan RM0.90 sekotak anda dapat saiz seragam yang mudah disusun, kekuatan yang disemak, dan stok sedia dalam kuantiti yang anda perlukan. Baca panduan penuh kami tentang kotak percuma.',
+    a: 'Kotak percuma dari pasaraya saiznya tidak seragam, kekuatannya tidak dijamin, dan mencarinya makan masa. Dengan RM1.10 sekotak anda dapat saiz seragam yang mudah disusun, kekuatan yang disemak, dan stok sedia dalam kuantiti yang anda perlukan. Baca panduan penuh kami tentang kotak percuma.',
   },
 ];
 
@@ -46,10 +46,10 @@ const storeSchema = {
   "@context": "https://schema.org",
   "@type": "Store",
   "name": "Quinocycle — Kotak Terpakai Murah Balakong, Selangor",
-  "description": "Pembekal kotak terpakai murah untuk dijual secara borong — 13 model gred sekali guna dari RM0.90 sekotak (ikut stok). Gudang di Balakong, penghantaran KL & Selangor.",
+  "description": "Pembekal kotak terpakai murah untuk dijual secara borong — 18 model gred sekali guna dari RM1.10 sekotak (ikut stok). Gudang di Balakong, penghantaran KL & Selangor.",
   "url": "https://www.quinocycle.com.my/kotak-terpakai/",
   "telephone": "+60168916381",
-  "priceRange": "RM0.90 - RM5.00 sekotak",
+  "priceRange": "RM1.10 - RM15.00 sekotak",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
@@ -88,8 +88,8 @@ const breadcrumbSchema = {
 
 <Layout
   lang="ms"
-  title="Kotak Terpakai Murah Untuk Dijual — 13 Model dari RM0.90 | Quinocycle Balakong"
-  description="Kotak terpakai murah untuk dijual di Selangor & KL. 13 model gred sekali guna dari RM0.90 sekotak (ikut stok) — disemak, kering, tidak berbau. Gudang di Balakong berdekatan Cheras, Kajang, Puchong. Hantar atau ambil sendiri. WhatsApp 016-891 6381."
+  title="Kotak Terpakai Murah Untuk Dijual — 18 Model dari RM1.10 | Quinocycle Balakong"
+  description="Kotak terpakai murah untuk dijual di Selangor & KL. 18 model gred sekali guna dari RM1.10 sekotak (ikut stok) — disemak, kering, tidak berbau. Gudang di Balakong berdekatan Cheras, Kajang, Puchong. Hantar atau ambil sendiri. WhatsApp 016-891 6381."
 >
   <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
@@ -104,10 +104,10 @@ const breadcrumbSchema = {
     </nav>
     <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Gred Sekali Guna · Disemak Satu Per Satu</span>
     <h1 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-6 max-w-4xl">
-      Kotak terpakai murah <br /><span class="text-primary italic">untuk dijual — dari RM0.90.</span>
+      Kotak terpakai murah <br /><span class="text-primary italic">untuk dijual — dari RM1.10.</span>
     </h1>
     <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
-      13 model kotak terpakai gred sekali guna di gudang Balakong (8 ada stok hari ini) — <strong class="text-on-surface font-semibold">kering, tidak berbau, disemak satu per satu</strong>. Jimat 50–60% berbanding kotak baru untuk pindah rumah, pos barang dan simpanan. Hantar ke seluruh KL &amp; Selangor atau ambil sendiri.
+      18 model kotak terpakai gred sekali guna di gudang Balakong (16 ada stok hari ini) — <strong class="text-on-surface font-semibold">kering, tidak berbau, disemak satu per satu</strong>. Jimat 50–60% berbanding kotak baru untuk pindah rumah, pos barang dan simpanan. Hantar ke seluruh KL &amp; Selangor atau ambil sendiri.
     </p>
     <div class="flex flex-wrap gap-4">
       <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
@@ -162,7 +162,7 @@ const breadcrumbSchema = {
         Kotak terpakai kami adalah <strong class="text-on-surface font-semibold">gred sekali guna dari kilang</strong> — kotak yang digunakan sekali sahaja untuk penghantaran pukal, kemudian dikumpul, disemak dan disusun semula di gudang kami. Bukan kotak kutipan yang lembik, berbau atau koyak.
       </p>
       <p>
-        Setiap kotak melalui semakan sama: kering sepenuhnya, tiada bau, tiada kerosakan pada dinding atau flap. Model double wall (dua lapisan) seperti MG, Bary, BT, Yellow, Vital dan PDC cukup kuat untuk buku berat, peralatan dapur dan kegunaan pindah rumah penuh — pada harga 50–60% lebih murah daripada kotak baru.
+        Setiap kotak melalui semakan sama: kering sepenuhnya, tiada bau, tiada kerosakan pada dinding atau flap. Model double wall (dua lapisan) seperti MG, Bary, Tyson, Yellow, Vita dan PDC cukup kuat untuk buku berat, peralatan dapur dan kegunaan pindah rumah penuh — pada harga 50–60% lebih murah daripada kotak baru.
       </p>
       <p>
         Sebab itu pelanggan terbesar kami ialah syarikat mover dan penjual online yang menggunakan ratusan kotak sebulan — mereka kira setiap sen. Baca <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan penuh kotak baru vs terpakai</a>, atau <a href="/blog/kotak-percuma-pindah-rumah" class="text-primary font-semibold hover:underline">kenapa kotak terpakai lebih berbaloi daripada kotak percuma</a>.

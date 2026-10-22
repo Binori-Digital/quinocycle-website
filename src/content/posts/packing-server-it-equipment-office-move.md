@@ -1,6 +1,6 @@
 ---
 title: "Packing IT Equipment for an Office Move: Servers, PCs & Monitors"
-description: "Packing IT equipment for an office move: double-wall cartons from RM5, numbered workstation kits, anti-static rules, backups and drive chain of custody."
+description: "Packing IT equipment for an office move: double-wall cartons from RM5.50, numbered workstation kits, anti-static rules, backups and drive chain of custody."
 category: "Moving Tips"
 img: "/images/audience-online.jpg"
 date: "2026-09-26"
@@ -15,10 +15,10 @@ keywords:
   - "workstation packing kit numbering"
   - "data backup before office move"
   - "moving office computers malaysia"
-directAnswer: "Pack IT equipment for an office move in numbered workstation kits: photograph all cabling first, back up every machine, bag cables per desk, and pack monitors and PCs upright in double-wall cartons (from RM5 at wholesale) with 5 cm of padding all round. Servers move last, powered down properly, with drives under a signed chain-of-custody list."
+directAnswer: "Pack IT equipment for an office move in numbered workstation kits: photograph all cabling first, back up every machine, bag cables per desk, and pack monitors and PCs upright in double-wall cartons (from RM5.50 at wholesale) with 5 cm of padding all round. Servers move last, powered down properly, with drives under a signed chain-of-custody list."
 faqs:
   - q: "What boxes should I use to pack computers and monitors for an office move?"
-    a: "Use double-wall cartons only — single-wall boxes crush under stacking and offer little impact protection for electronics. A medium double-wall box like the A3 (440 × 310 × 230 mm, RM5) suits desktop PCs, while larger monitors need the NLN double-wall (590 × 390 × 390 mm, RM8). Original boxes with moulded foam are better still if kept."
+    a: "Use double-wall cartons only — single-wall boxes crush under stacking and offer little impact protection for electronics. A medium double-wall box like the A3 (440 × 310 × 230 mm, RM5.50) suits desktop PCs, while larger monitors need the NLN double-wall (590 × 390 × 390 mm, RM9). Original boxes with moulded foam are better still if kept."
   - q: "Do I really need anti-static protection when moving office PCs?"
     a: "For assembled, closed PCs and monitors, ordinary bubble wrap on the outside of the casing is fine. Anti-static bags matter for exposed components: loose RAM, graphics cards, bare hard drives and motherboards. Never wrap bare components directly in regular plastic or styrofoam, which build static charge — use anti-static bags, then padding."
   - q: "How should hard drives and servers be transported during an office relocation?"
@@ -56,11 +56,11 @@ The original box with its moulded foam is always first choice — if your office
 
 | Equipment | Recommended carton | Size & price | Packing note |
 |---|---|---|---|
-| Desktop PC (tower) | Medium A3, double wall | 440 × 310 × 230 mm — RM5.00 | Upright, 5 cm padding all round |
-| Monitor to 27" | Large NLN, double wall | 590 × 390 × 390 mm — RM8.00 | Vertical, screen faced with foam or cardboard sheet |
-| Keyboards, docks, phones | Used MG, double wall | 380 × 230 × 270 mm — RM1.70 | Group by workstation number |
-| Cables & peripherals | Used Bary, double wall | 300 × 200 × 250 mm — RM1.80 | One zip-lock bag per desk |
-| Printers (desktop) | Used PDC, double wall | 590 × 380 × 380 mm — RM5.00 | Remove cartridges, tape lids shut |
+| Desktop PC (tower) | Medium A3, double wall | 440 × 310 × 230 mm — RM5.50 | Upright, 5 cm padding all round |
+| Monitor to 27" | Large NLN, double wall | 590 × 390 × 390 mm — RM9.00 | Vertical, screen faced with foam or cardboard sheet |
+| Keyboards, docks, phones | Used MG, double wall | 380 × 230 × 270 mm — RM1.90 | Group by workstation number |
+| Cables & peripherals | Used Bary, double wall | 300 × 200 × 250 mm — RM1.90 | One zip-lock bag per desk |
+| Printers (desktop) | Used PDC, double wall | 590 × 380 × 380 mm — RM5.50 | Remove cartridges, tape lids shut |
 
 All five are stocked at our Balakong warehouse — browse exact dimensions at [shop.quinocycle.com](https://shop.quinocycle.com) or see the [full carton box range](/carton-box/).
 

@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: 'Berapa harga kotak pindah rumah untuk kawasan Cheras?',
-    a: 'Harga sama seperti harga gudang: kotak terpakai gred sekali guna dari RM0.90 hingga RM5.00 sekotak, kotak baru dari RM1.10 hingga RM8.00 sekotak. Penghantaran ke Cheras percuma untuk pesanan melebihi RM300 — kebanyakan pesanan pindah rumah 3 bilik memang melepasi jumlah ini.',
+    a: 'Harga sama seperti harga gudang: kotak terpakai gred sekali guna dari RM1.10 hingga RM7.00 sekotak, kotak baru dari RM1.10 hingga RM10.00 sekotak. Penghantaran ke Cheras percuma untuk pesanan melebihi RM300 — kebanyakan pesanan pindah rumah 3 bilik memang melepasi jumlah ini.',
   },
   {
     q: 'Boleh saya ambil sendiri kotak berdekatan Cheras?',
@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: 'Where can I buy carton boxes in Cheras? (English)',
-    a: 'Quinocycle is a wholesale carton box warehouse in Balakong, right next to Cheras, and we deliver new and used carton boxes to most Cheras neighbourhoods the same day or next day. Used boxes start from RM0.90 each (stock rotates — the cheapest currently in stock is around RM1.70) and new boxes from RM1.10, with free delivery across KL and Selangor for orders above RM300. Order via WhatsApp 016-891 6381 or check live stock at shop.quinocycle.com.',
+    a: 'Quinocycle is a wholesale carton box warehouse in Balakong, right next to Cheras, and we deliver new and used carton boxes to most Cheras neighbourhoods the same day or next day. Used boxes start from RM1.10 each (stock rotates — the RM1.10 model is currently in stock) and new boxes from RM1.10, with free delivery across KL and Selangor for orders above RM300. Order via WhatsApp 016-891 6381 or check live stock at shop.quinocycle.com.',
   },
 ];
 
@@ -32,10 +32,10 @@ const storeSchema = {
   "@context": "https://schema.org",
   "@type": "Store",
   "name": `Quinocycle — Kotak Pindah Rumah ${CITY}`,
-  "description": `Pembekal kotak pindah rumah untuk ${CITY}, Selangor. Kotak kardus baru dan terpakai harga borong dari RM0.90 sekotak — penghantaran hari sama dari gudang Balakong bersebelahan, atau ambil sendiri ±10-15 minit memandu.`,
+  "description": `Pembekal kotak pindah rumah untuk ${CITY}, Selangor. Kotak kardus baru dan terpakai harga borong dari RM1.10 sekotak — penghantaran hari sama dari gudang Balakong bersebelahan, atau ambil sendiri ±10-15 minit memandu.`,
   "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/cheras/",
   "telephone": "+60168916381",
-  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "priceRange": "RM1.10 - RM38.00 sekotak",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
 
 <Layout
   lang="ms"
-  title={`Kotak Pindah Rumah ${CITY} — Penghantaran Hari Sama dari Gudang Sebelah, dari RM0.90 | Quinocycle`}
-  description={`Kotak pindah rumah ${CITY} dari RM0.90 sekotak — hantar hari sama ke Bandar Tun Hussein Onn, Alam Damai, Taman Connaught & Batu 9-11. WhatsApp 016-891 6381.`}
+  title={`Kotak Pindah Rumah ${CITY} — Penghantaran Hari Sama dari Gudang Sebelah, dari RM1.10 | Quinocycle`}
+  description={`Kotak pindah rumah ${CITY} dari RM1.10 sekotak — hantar hari sama ke Bandar Tun Hussein Onn, Alam Damai, Taman Connaught & Batu 9-11. WhatsApp 016-891 6381.`}
 >
   <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
@@ -96,7 +96,7 @@ const breadcrumbSchema = {
       Kotak pindah rumah {CITY} <br /><span class="text-primary italic">— gudang kami di sebelah sahaja.</span>
     </h1>
     <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
-      Gudang pembekal Quinocycle terletak di Taming Jaya, Balakong — <strong class="text-on-surface font-semibold">±10-15 minit memandu</strong> dari kebanyakan taman di Cheras. Sebab itu penduduk Bandar Tun Hussein Onn, Alam Damai dan Taman Connaught selalunya terima kotak <strong class="text-on-surface font-semibold">hari yang sama</strong>, pada harga borong: kotak terpakai dari <strong class="text-on-surface font-semibold">RM0.90</strong>, kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak.
+      Gudang pembekal Quinocycle terletak di Taming Jaya, Balakong — <strong class="text-on-surface font-semibold">±10-15 minit memandu</strong> dari kebanyakan taman di Cheras. Sebab itu penduduk Bandar Tun Hussein Onn, Alam Damai dan Taman Connaught selalunya terima kotak <strong class="text-on-surface font-semibold">hari yang sama</strong>, pada harga borong: kotak terpakai dari <strong class="text-on-surface font-semibold">RM1.10</strong>, kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak.
     </p>
     <div class="flex flex-wrap gap-4">
       <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
@@ -145,7 +145,7 @@ const breadcrumbSchema = {
         Cheras adalah antara kawasan perumahan paling padat di Lembah Klang — dari rumah teres di Batu 9, Batu 10 dan Batu 11, ke kondo dan townhouse di Bandar Tun Hussein Onn dan Alam Damai, hinggalah apartmen sekitar Taman Connaught. Setiap hujung bulan ada sahaja keluarga yang berpindah masuk atau keluar. Masalahnya, kotak yang dijual di kedai hardware atau pasaraya sekitar Cheras biasanya <strong class="text-on-surface font-semibold">berharga RM8 hingga RM12 sekotak</strong> — dan itu pun stoknya terhad.
       </p>
       <p>
-        Apa yang ramai tak sedar: pembekal kotak borong sebenarnya terletak betul-betul di sebelah Cheras. Gudang Quinocycle di Taming Jaya, Balakong membekalkan kotak kepada syarikat mover dan penjual online di seluruh Lembah Klang, dan kami jual pada <strong class="text-on-surface font-semibold">harga borong yang sama kepada individu</strong>. Untuk jimat maksimum, pilih <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">kotak terpakai gred sekali guna</a> dari RM0.90 sekotak — setiap satu disemak, kering dan bebas bau. Untuk pinggan mangkuk dan barang pecah belah, tambah beberapa kotak baru dari RM1.10. Tak pasti yang mana satu? Baca <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan kotak baru vs kotak terpakai</a> kami.
+        Apa yang ramai tak sedar: pembekal kotak borong sebenarnya terletak betul-betul di sebelah Cheras. Gudang Quinocycle di Taming Jaya, Balakong membekalkan kotak kepada syarikat mover dan penjual online di seluruh Lembah Klang, dan kami jual pada <strong class="text-on-surface font-semibold">harga borong yang sama kepada individu</strong>. Untuk jimat maksimum, pilih <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">kotak terpakai gred sekali guna</a> dari RM1.10 sekotak — setiap satu disemak, kering dan bebas bau. Untuk pinggan mangkuk dan barang pecah belah, tambah beberapa kotak baru dari RM1.10. Tak pasti yang mana satu? Baca <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan kotak baru vs kotak terpakai</a> kami.
       </p>
       <p>
         Kedudukan yang dekat ini juga bermakna penghantaran ke Cheras jarang mengambil masa lebih sehari. Pesanan yang masuk waktu pagi selalunya sampai ke Bandar Damai Perdana atau Bandar Tun Hussein Onn petang yang sama — dan <strong class="text-on-surface font-semibold">percuma jika jumlah pesanan melebihi RM300</strong>. Rumah 3 bilik biasanya perlukan 50-70 kotak, jadi kebanyakan pesanan pindah rumah memang layak penghantaran percuma. Kalau anda jenis yang suka tengok dulu sebelum beli, ambil sendiri pun mudah: ±10-15 minit memandu ke Balakong melalui Lebuhraya Silk atau Grand Saga, elak waktu puncak dan anda boleh berpatah balik dengan satu trip kereta sahaja.
@@ -178,7 +178,7 @@ const breadcrumbSchema = {
   <section class="py-16 px-6 md:px-8 max-w-3xl mx-auto">
     <h2 class="font-headline text-2xl md:text-3xl font-extrabold tracking-tighter text-on-surface mb-5">Carton Box Cheras — Wholesale Prices, Delivered</h2>
     <div class="font-body text-secondary leading-relaxed flex flex-col gap-4">
-      <p>Need carton boxes in Cheras? Quinocycle is a wholesale carton box warehouse in Taming Jaya, Balakong — just 10 to 15 minutes from most parts of Cheras, including Bandar Tun Hussein Onn and Taman Connaught. Because the warehouse sits right next door, orders confirmed in the morning usually arrive the same afternoon, and next working day at the latest. Used carton boxes cost RM0.90 to RM6.00 each (stock rotates, with the cheapest boxes currently in stock at around RM1.70), new boxes run RM1.10 to RM9.00, and XXL cargo boxes for bulky items are RM28 to RM38.</p>
+      <p>Need carton boxes in Cheras? Quinocycle is a wholesale carton box warehouse in Taming Jaya, Balakong — just 10 to 15 minutes from most parts of Cheras, including Bandar Tun Hussein Onn and Taman Connaught. Because the warehouse sits right next door, orders confirmed in the morning usually arrive the same afternoon, and next working day at the latest. Used carton boxes cost RM1.10 to RM7.00 each (stock rotates, with the cheapest boxes currently in stock at RM1.10), new boxes run RM1.10 to RM10.00, and XXL cargo boxes for bulky items are RM28 to RM38.</p>
       <p>Delivery is free throughout KL and Selangor for orders above RM300 — a threshold most house moves clear easily at wholesale prices. Send your size list to WhatsApp 016-891 6381, or browse <a href="/carton-box" class="text-primary font-semibold hover:underline">all carton box delivery areas</a> and <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:underline">live stock &amp; prices</a>.</p>
     </div>
   </section>

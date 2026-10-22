@@ -92,7 +92,7 @@ Kalau nilai RM10 tak berbaloi dengan perjalanan, kebanyakan majlis perbandaran d
 
 ## Pilihan 5: Ada Stok Pukal? Kami Memang Cari
 
-Ini fakta yang ramai tak tahu: Quinocycle sendiri ialah **bisnes kitar semula kotak**. Separuh daripada katalog kami ialah [kotak terpakai gred baik](/kotak-terpakai/) dari RM0.90 — kotak yang diselamatkan daripada aliran buangan, digredkan, dan dijual semula pada harga jauh lebih rendah daripada kotak baru. Setiap kotak terpakai yang dijual semula ialah satu kotak yang tak perlu dikilang baru.
+Ini fakta yang ramai tak tahu: Quinocycle sendiri ialah **bisnes kitar semula kotak**. Separuh daripada katalog kami ialah [kotak terpakai gred baik](/kotak-terpakai/) dari RM1.10 — kotak yang diselamatkan daripada aliran buangan, digredkan, dan dijual semula pada harga jauh lebih rendah daripada kotak baru. Setiap kotak terpakai yang dijual semula ialah satu kotak yang tak perlu dikilang baru.
 
 Jujurnya: kami **tiada skim buy-back automatik** untuk 60 kotak pindah rumah orang perseorangan — kos logistik untuk kutipan kecil tidak masuk akal untuk kedua-dua pihak. Tetapi kami **sentiasa mencari stok kotak terpakai berkualiti secara pukal**: kuantiti besar, saiz seragam, keadaan baik — jenis stok yang biasanya datang dari kilang, gudang atau operasi e-dagang yang bertukar pembungkusan.
 

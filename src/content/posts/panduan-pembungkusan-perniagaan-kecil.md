@@ -15,18 +15,18 @@ keywords:
   - "kotak custom untuk bisnes"
   - "stok kotak bisnes online"
   - "pembekal kotak bisnes kecil selangor"
-directAnswer: "Perniagaan kecil hanya perlukan 2–3 saiz kotak standard untuk bermula: satu kecil (contoh kotak XS RM1.10 atau A4 RM3.00), satu sederhana (kotak terpakai Yellow RM3.50), dan satu besar jika perlu. Kira stok sebulan dengan formula: purata order seminggu × 6. Simpan kotak flat-pack — 200 kotak hanya makan ruang satu rak."
+directAnswer: "Perniagaan kecil hanya perlukan 2–3 saiz kotak standard untuk bermula: satu kecil (contoh kotak XS RM1.10 atau A4 RM3.50), satu sederhana (kotak terpakai Yellow RM3.90), dan satu besar jika perlu. Kira stok sebulan dengan formula: purata order seminggu × 6. Simpan kotak flat-pack — 200 kotak hanya makan ruang satu rak."
 faqs:
   - q: "Berapa saiz kotak yang perlu ada untuk bisnes kecil?"
     a: "Dua hingga tiga saiz sahaja. Lebih daripada itu, packing jadi lambat, stok bersepah dan anda hilang kelayakan harga pukal. Pilih satu saiz untuk order tunggal, satu untuk order biasa, dan satu untuk bundle — kombinasi ini biasanya menampung 90% daripada semua pesanan bisnes kecil."
   - q: "Apa kotak yang sesuai untuk bakeri rumah?"
-    a: "Untuk kuih dan bakeri rumah, kotak XS baru (170 × 115 × 150 mm, RM1.10) sesuai untuk tempahan kecil, dan kotak A4 (310 × 220 × 220 mm, RM3.00) untuk tempahan besar atau berbilang bekas. Guna kotak baru untuk makanan — lebih bersih dan kemas di mata pelanggan."
+    a: "Untuk kuih dan bakeri rumah, kotak XS baru (170 × 115 × 150 mm, RM1.10) sesuai untuk tempahan kecil, dan kotak A4 (310 × 220 × 220 mm, RM3.50) untuk tempahan besar atau berbilang bekas. Guna kotak baru untuk makanan — lebih bersih dan kemas di mata pelanggan."
   - q: "Berapa banyak stok kotak patut disimpan sebulan?"
     a: "Formula mudah: purata order seminggu darab 6 minggu. Contoh 30 order seminggu bermakna simpan sekitar 180 kotak. Enam minggu memberi ruang untuk lonjakan jualan musim perayaan dan promosi tanpa risiko kehabisan kotak di saat akhir, sedangkan kotak flat-pack hampir tak makan ruang."
   - q: "Bila patut tukar ke kotak custom berjenama?"
     a: "Tunggu sehingga volume konsisten melebihi 500–1,000 kotak sebulan dan jenama anda sudah stabil, kerana kotak custom perlukan kuantiti minimum dan kos seunit lebih tinggi. Sebelum itu, sticker logo dan tisu pembungkus atas kotak standard memberi kesan berjenama pada kos jauh lebih rendah."
   - q: "Di mana bisnes kecil boleh beli kotak murah di Selangor?"
-    a: "Terus dari gudang pembekal untuk elak markup runcit — kotak yang sama berharga RM8–RM12 di kedai hardware dijual RM1–RM5 di gudang. Quinocycle di Balakong, Selangor membekalkan kotak baru dari RM1.10 dan terpakai dari RM0.90, dengan penghantaran percuma sekitar KL & Selangor untuk pesanan RM300+."
+    a: "Terus dari gudang pembekal untuk elak markup runcit — kotak yang sama berharga RM8–RM12 di kedai hardware dijual RM1–RM5 di gudang. Quinocycle di Balakong, Selangor membekalkan kotak baru dari RM1.10 dan terpakai dari RM1.10, dengan penghantaran percuma sekitar KL & Selangor untuk pesanan RM300+."
 ---
 
 Baru nak mula bakeri rumah, butik online atau kedai runcit kecil? Antara seratus benda dalam kepala anda, pembungkusan selalunya jadi fikiran terakhir — sampailah order pertama masuk dan anda tercari-cari kotak di kedai hardware pada harga RM8 sekotak. Panduan ini susun semuanya sekali: saiz kotak yang patut dipilih, berapa stok nak simpan, cara simpan, dan bila baru berbaloi naik taraf ke kotak custom.
@@ -45,14 +45,14 @@ Dari katalog gudang kami di Balakong, ini kombinasi permulaan yang kami syorkan:
 
 | Jenis bisnes | Saiz 1 (kecil) | Saiz 2 (sederhana) | Saiz 3 (jika perlu) |
 |---|---|---|---|
-| Bakeri / kuih rumah | Kotak XS baru — RM1.10 | Kotak A4 baru — RM3.00 | Kotak Dokumen JPM — RM3.50 |
-| Butik / baju online | Kotak A4 baru — RM3.00 | Kotak Terpakai MG — RM1.70 | Kotak Terpakai Yellow — RM3.50 |
-| Kedai runcit / borong kecil | Kotak Terpakai Bary — RM1.80 | Kotak Terpakai Vital — RM3.50 | Kotak Terpakai PDC — RM5.00 |
+| Bakeri / kuih rumah | Kotak XS baru — RM1.10 | Kotak A4 baru — RM3.50 | Kotak Dokumen JPM — RM3.50 |
+| Butik / baju online | Kotak A4 baru — RM3.50 | Kotak Terpakai MG — RM1.90 | Kotak Terpakai Yellow — RM3.90 |
+| Kedai runcit / borong kecil | Kotak Terpakai Bary — RM1.90 | Kotak Terpakai TX — RM4.50 | Kotak Terpakai PDC — RM5.50 |
 
 Panduan memilih antara baru dan terpakai:
 
 - **Kotak baru** untuk makanan, kosmetik dan produk yang imej penting — bersih, kemas, konsisten.
-- **[Kotak terpakai](/kotak-terpakai/)** dari RM0.90 untuk baju, barangan kering dan stok kedai — fungsi sama, kos separuh, dan kebanyakan gred baik adalah double wall.
+- **[Kotak terpakai](/kotak-terpakai/)** dari RM1.10 untuk baju, barangan kering dan stok kedai — fungsi sama, kos separuh, dan kebanyakan gred baik adalah double wall.
 
 Selain kotak, lengkapkan dengan tape 48mm (lebih kurang 2 gulung untuk setiap 50 kotak), kertas kraft untuk pelindung, marker dan sticker logo. Untuk bisnes yang jual secara live di TikTok atau Shopee, [panduan kotak penjual live](/blog/kotak-untuk-bisnes-tiktok-shop-shopee/) kami ada tips packing pantas dan unboxing bajet.
 

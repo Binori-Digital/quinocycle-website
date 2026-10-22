@@ -8,11 +8,11 @@ const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinoc
 const faqs = [
   {
     q: 'Di mana nak beli kotak pindah rumah murah di Kuala Lumpur?',
-    a: 'Tak perlu ke kedai — Quinocycle menghantar terus ke seluruh KL: Cheras, Bukit Jalil, Sri Petaling, Old Klang Road, Setapak, Wangsa Maju, Mont Kiara dan Bangsar. Harga borong dari RM0.90 sekotak, penghantaran percuma untuk pesanan melebihi RM300. Kalau nak ambil sendiri, gudang kami di Taming Jaya, Balakong — ±30 minit memandu dari pusat bandar KL.',
+    a: 'Tak perlu ke kedai — Quinocycle menghantar terus ke seluruh KL: Cheras, Bukit Jalil, Sri Petaling, Old Klang Road, Setapak, Wangsa Maju, Mont Kiara dan Bangsar. Harga borong dari RM1.10 sekotak, penghantaran percuma untuk pesanan melebihi RM300. Kalau nak ambil sendiri, gudang kami di Taming Jaya, Balakong — ±30 minit memandu dari pusat bandar KL.',
   },
   {
     q: 'Kenapa harga kotak di kedai KL sampai RM8-RM12 sekotak?',
-    a: 'Kedai runcit dan kedai hardware di KL menanggung sewa lot kedai dan margin orang tengah, jadi kotak yang sama dijual RM8 hingga RM12. Quinocycle ialah pembekal borong — kami jual terus dari gudang: kotak terpakai dari RM0.90, kotak baru dari RM1.10 sekotak, dihantar ke depan pintu anda.',
+    a: 'Kedai runcit dan kedai hardware di KL menanggung sewa lot kedai dan margin orang tengah, jadi kotak yang sama dijual RM8 hingga RM12. Quinocycle ialah pembekal borong — kami jual terus dari gudang: kotak terpakai dari RM1.10, kotak baru dari RM1.10 sekotak, dihantar ke depan pintu anda.',
   },
   {
     q: 'Berapa lama penghantaran kotak ke kawasan Kuala Lumpur?',
@@ -28,10 +28,10 @@ const storeSchema = {
   "@context": "https://schema.org",
   "@type": "Store",
   "name": `Quinocycle — Kotak Pindah Rumah ${CITY}`,
-  "description": `Pembekal kotak pindah rumah untuk ${CITY}. Kotak kardus baru dan terpakai harga borong dari RM0.90 sekotak — penghantaran ke seluruh KL, percuma untuk pesanan RM300+. Gudang di Balakong, Selangor.`,
+  "description": `Pembekal kotak pindah rumah untuk ${CITY}. Kotak kardus baru dan terpakai harga borong dari RM1.10 sekotak — penghantaran ke seluruh KL, percuma untuk pesanan RM300+. Gudang di Balakong, Selangor.`,
   "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/kuala-lumpur/",
   "telephone": "+60168916381",
-  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "priceRange": "RM1.10 - RM38.00 sekotak",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
@@ -71,8 +71,8 @@ const breadcrumbSchema = {
 
 <Layout
   lang="ms"
-  title={`Kotak Pindah Rumah ${CITY} — Harga Borong Dihantar ke Pintu, dari RM0.90 | Quinocycle`}
-  description={`Kotak pindah rumah dihantar ke seluruh ${CITY} — Cheras, Bukit Jalil, Setapak, Mont Kiara. Harga borong dari RM0.90 sekotak, percuma untuk order RM300+. WhatsApp 016-891 6381.`}
+  title={`Kotak Pindah Rumah ${CITY} — Harga Borong Dihantar ke Pintu, dari RM1.10 | Quinocycle`}
+  description={`Kotak pindah rumah dihantar ke seluruh ${CITY} — Cheras, Bukit Jalil, Setapak, Mont Kiara. Harga borong dari RM1.10 sekotak, percuma untuk order RM300+. WhatsApp 016-891 6381.`}
 >
   <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
@@ -92,7 +92,7 @@ const breadcrumbSchema = {
       Kotak pindah rumah {CITY} <br /><span class="text-primary italic">— harga borong, hantar ke pintu.</span>
     </h1>
     <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
-      Di KL, kotak yang sama dijual RM8–RM12 di kedai runcit dan mall. Quinocycle ialah pembekal borong dari <strong class="text-on-surface font-semibold">Balakong — ±30 minit dari pusat bandar</strong> — jadi anda dapat kotak terpakai dari <strong class="text-on-surface font-semibold">RM0.90</strong> dan kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak, dihantar terus ke kondo atau rumah anda. Percuma untuk pesanan melebihi RM300.
+      Di KL, kotak yang sama dijual RM8–RM12 di kedai runcit dan mall. Quinocycle ialah pembekal borong dari <strong class="text-on-surface font-semibold">Balakong — ±30 minit dari pusat bandar</strong> — jadi anda dapat kotak terpakai dari <strong class="text-on-surface font-semibold">RM1.10</strong> dan kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak, dihantar terus ke kondo atau rumah anda. Percuma untuk pesanan melebihi RM300.
     </p>
     <div class="flex flex-wrap gap-4">
       <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
@@ -141,7 +141,7 @@ const breadcrumbSchema = {
         Nak pindah rumah di KL memang mencabar — dan mencari kotak yang berkualiti pada harga berpatutan adalah salah satu masalahnya. Kebanyakan kedai yang jual kotak di KL ialah kedai runcit dalam mall atau kedai hardware, dan harganya <strong class="text-on-surface font-semibold">RM8 hingga RM12 untuk satu kotak</strong>. Untuk pindah rumah 3 bilik yang perlukan 50–70 kotak, itu bermakna RM400 hingga RM800 hanya untuk kotak kosong — lihat <a href="/blog/harga-kotak-pindah-rumah" class="text-primary font-semibold hover:underline">perbandingan harga kotak pindah rumah</a> untuk angka penuh.
       </p>
       <p>
-        Quinocycle ialah pembekal borong yang membekalkan kotak kepada syarikat mover dan penjual online di seluruh Lembah Klang. Gudang kami di Balakong hanya ±30 minit dari pusat bandar KL — cukup dekat untuk hantar kotak yang sama <strong class="text-on-surface font-semibold">terus ke depan pintu anda pada harga borong</strong>: <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">kotak terpakai gred sekali guna</a> (disemak, kering, tiada bau) dari RM0.90, <a href="/shop" class="text-primary font-semibold hover:underline">kotak baru</a> dari RM1.10 sekotak. Baca <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbezaan kotak baru dan kotak terpakai</a> untuk pilih yang sesuai dengan bajet anda.
+        Quinocycle ialah pembekal borong yang membekalkan kotak kepada syarikat mover dan penjual online di seluruh Lembah Klang. Gudang kami di Balakong hanya ±30 minit dari pusat bandar KL — cukup dekat untuk hantar kotak yang sama <strong class="text-on-surface font-semibold">terus ke depan pintu anda pada harga borong</strong>: <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">kotak terpakai gred sekali guna</a> (disemak, kering, tiada bau) dari RM1.10, <a href="/shop" class="text-primary font-semibold hover:underline">kotak baru</a> dari RM1.10 sekotak. Baca <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbezaan kotak baru dan kotak terpakai</a> untuk pilih yang sesuai dengan bajet anda.
       </p>
       <p>
         Sama ada anda duduk kondo di Bukit Jalil atau Sri Petaling, rumah teres di Cheras KL atau Setapak, apartmen di Wangsa Maju, atau unit servis di Mont Kiara dan Bangsar — sistemnya sama: WhatsApp senarai saiz dan kuantiti, dapat sebut harga, dan kotak sampai ke lobi atau porch anda. Tak perlu sumbat 60 kotak dalam kereta, tak perlu cari parking di mall. Penduduk Old Klang Road dan Cheras KL yang nak jimat lagi boleh terus ambil sendiri di gudang Balakong.

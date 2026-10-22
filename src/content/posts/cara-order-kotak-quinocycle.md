@@ -20,7 +20,7 @@ faqs:
   - q: "Bagaimana cara order kotak melalui WhatsApp Quinocycle?"
     a: "WhatsApp 016-891 6381 dengan senarai ringkas: saiz kotak (atau barang yang nak diisi), kuantiti, dan lokasi anda. Kami balas dengan cadangan model, harga dan jumlah quote. Selepas bayar, pilih sama ada ambil sendiri di Balakong (boleh hari sama) atau penghantaran ke alamat anda."
   - q: "Boleh tak beli kotak Quinocycle secara online?"
-    a: "Boleh. Kedai online kami di shop.quinocycle.com senaraikan semua model kotak baru dan terpakai dengan gambar, dimensi dan harga semasa — dari RM0.90 untuk kotak terpakai dan RM1.10 untuk kotak baru. Order macam beli di mana-mana kedai online biasa, dan stok yang dipaparkan ialah stok sebenar gudang."
+    a: "Boleh. Kedai online kami di shop.quinocycle.com senaraikan semua model kotak baru dan terpakai dengan gambar, dimensi dan harga semasa — dari RM1.10 untuk kotak terpakai dan RM1.10 untuk kotak baru. Order macam beli di mana-mana kedai online biasa, dan stok yang dipaparkan ialah stok sebenar gudang."
   - q: "Di mana lokasi gudang kotak Quinocycle dan apa waktu operasinya?"
     a: "Gudang kami di No.13, Jalan Taming P/1, Taming Jaya, 43300 Balakong, Selangor. Waktu operasi: Isnin–Jumaat 9 pagi–5 petang, Sabtu 9 pagi–1 tengah hari, Ahad dan cuti umum tutup. Walk-in dialu-alukan — anda boleh tengok dan pilih stok sendiri sebelum beli."
   - q: "Berapa minimum order untuk penghantaran percuma?"
@@ -48,7 +48,7 @@ Satu lagi kelebihan yang ramai tak sedar: quote WhatsApp itu rekod bertulis. Har
 
 Untuk yang suka self-service, [shop.quinocycle.com](https://shop.quinocycle.com) ialah katalog penuh kami secara online:
 
-- Semua model dipaparkan dengan **gambar sebenar, dimensi dalam mm dan harga semasa** — kotak terpakai dari RM0.90, kotak baru dari RM1.10.
+- Semua model dipaparkan dengan **gambar sebenar, dimensi dalam mm dan harga semasa** — kotak terpakai dari RM1.10, kotak baru dari RM1.10.
 - Stok yang anda nampak ialah **stok sebenar gudang** — kalau boleh add to cart, memang ada.
 - Checkout macam kedai online biasa, kemudian kami proses dan hantar.
 
@@ -88,9 +88,9 @@ Tiada jawapan salah — malah ramai pelanggan campurkan: mula dengan walk-in unt
 
 Untuk bagi gambaran lebih jelas, ini tiga senario order tipikal dan anggaran kosnya berdasarkan harga semasa gudang:
 
-**Senario 1 — Pindah rumah 3 bilik (WhatsApp + penghantaran).** 20 kotak terpakai MG kecil (RM1.70 = RM34), 25 kotak terpakai Yellow sederhana (RM3.50 = RM87.50), 15 kotak terpakai PDC besar (RM5.00 = RM75) dan beberapa kotak baru double wall A3 (RM5.00) untuk pinggan mangkuk. Jumlah sekitar RM220–RM250 — bawah RM300, jadi tambah sedikit lagi atau pilih pickup percuma di Balakong.
+**Senario 1 — Pindah rumah 3 bilik (WhatsApp + penghantaran).** 20 kotak terpakai MG kecil (RM1.90 = RM38), 25 kotak terpakai Yellow sederhana (RM3.90 = RM97.50), 15 kotak terpakai PDC besar (RM5.50 = RM82.50) dan beberapa kotak baru double wall A3 (RM5.50) untuk pinggan mangkuk. Jumlah sekitar RM240–RM270 — bawah RM300, jadi tambah sedikit lagi atau pilih pickup percuma di Balakong.
 
-**Senario 2 — Peniaga online (reorder bulanan di shop).** 100 kotak terpakai MG untuk pos barang = RM170 sebulan. Order kedua dan seterusnya ambil masa 2 minit di [shop.quinocycle.com](https://shop.quinocycle.com) sebab model dah tetap.
+**Senario 2 — Peniaga online (reorder bulanan di shop).** 100 kotak terpakai MG untuk pos barang = RM190 sebulan. Order kedua dan seterusnya ambil masa 2 minit di [shop.quinocycle.com](https://shop.quinocycle.com) sebab model dah tetap.
 
 **Senario 3 — Syarikat kecil (borong WhatsApp).** Kilang kecil perlukan 300+ kotak sebulan campuran saiz — nilai melebihi RM1,000, jadi layak harga borong. WhatsApp anggaran kuantiti bulanan, dapat quote khas, dan jadualkan penghantaran berkala.
 

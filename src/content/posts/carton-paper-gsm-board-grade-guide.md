@@ -26,7 +26,7 @@ faqs:
   - q: "Does higher GSM always mean a stronger carton box?"
     a: "Mostly, but not automatically. GSM tells you paper weight, not the whole story — fibre quality (kraft vs recycled), flute profile and wall count matter too. A well-made 125 GSM kraft box can outperform a 150 GSM box built from poor recycled fibre. That is why performance tests like ECT and the Mullen burst test exist."
   - q: "What GSM carton box do I need for heavy items?"
-    a: "For loads above roughly 15kg, look for 150 GSM or higher liners on a double wall board, or simply buy a box sold for heavy duty use — like our double wall NLN at RM8.00. For typical parcels under 10kg, a standard single wall board with 125–150 GSM liners is usually enough and cheaper."
+    a: "For loads above roughly 15kg, look for 150 GSM or higher liners on a double wall board, or simply buy a box sold for heavy duty use — like our double wall NLN at RM9.00. For typical parcels under 10kg, a standard single wall board with 125–150 GSM liners is usually enough and cheaper."
 ---
 
 Two cartons can look identical on the shelf, yet one collapses under 15kg while the other shrugs off 30kg. The difference is invisible: the grade and weight of the paper it's made from. Understanding GSM and board grades takes ten minutes to learn and permanently changes how you buy boxes — because you'll finally know what you're paying for (and what a supplier might be quietly leaving out).
@@ -80,9 +80,9 @@ One more factor that matters especially in Malaysia: humidity. Paper loses stiff
 
 GSM and grade are the main reason carton prices vary so much for the "same size" box. A few honest rules of thumb from the warehouse floor:
 
-- **Under 10kg, single trip?** A standard board around K125–K150 single wall does the job. Don't pay heavy-duty prices for parcel duty — our new A4 box at RM3.00 covers most e-commerce needs.
-- **15kg+, stacking, or fragile?** Step up to double wall rather than chasing ultra-high GSM single wall. Two modest flute layers beat one heavy one for crush protection — that's why our NLN double wall (RM8.00) is the moving-day standard.
-- **Buying used?** A used carton keeps most of its original board strength if it's dry and square. A used double wall box from a high-grade original (like our EVER "super solid" model, RM4.00 when in stock) often outperforms cheap new boxes. Browse [used carton boxes](/used-carton-boxes/) with this lens and the value jumps out.
+- **Under 10kg, single trip?** A standard board around K125–K150 single wall does the job. Don't pay heavy-duty prices for parcel duty — our new A4 box at RM3.50 covers most e-commerce needs.
+- **15kg+, stacking, or fragile?** Step up to double wall rather than chasing ultra-high GSM single wall. Two modest flute layers beat one heavy one for crush protection — that's why our NLN double wall (RM9.00) is the moving-day standard.
+- **Buying used?** A used carton keeps most of its original board strength if it's dry and square. A used double wall box from a high-grade original (like our TX model, RM4.50) often outperforms cheap new boxes. Browse [used carton boxes](/used-carton-boxes/) with this lens and the value jumps out.
 - **Sizing still matters as much as grade.** The strongest board can't save an oversized box with contents rattling inside — pair this guide with our [carton size guide](/blog/carton-box-sizes-guide-malaysia/).
 
 ## Five Questions to Ask Any Carton Supplier
@@ -93,4 +93,4 @@ GSM and grade are the main reason carton prices vary so much for the "same size"
 4. **"Is this rated for stacking, and roughly what load?"** — Honest suppliers give ranges, not miracles.
 5. **"Can I inspect a sample first?"** — Any supplier with real stock will say yes. At our Balakong warehouse you can press, flex and load-test boxes before buying a single unit.
 
-We're happy to answer all five for any box in our catalog — message us on [WhatsApp 016-891 6381](https://wa.me/60168916381?text=Hi%2C%20what%27s%20the%20board%20grade%20for%20your%20boxes%3F) or browse the full range with prices at [shop.quinocycle.com](https://shop.quinocycle.com). New boxes from RM1.10, used from RM0.90, free delivery in KL & Selangor for orders RM300+, and bulk pricing kicks in from RM1,000. Knowing your GSM won't make boxes cheaper — but it guarantees you'll never overpay for paper you didn't get.
+We're happy to answer all five for any box in our catalog — message us on [WhatsApp 016-891 6381](https://wa.me/60168916381?text=Hi%2C%20what%27s%20the%20board%20grade%20for%20your%20boxes%3F) or browse the full range with prices at [shop.quinocycle.com](https://shop.quinocycle.com). New boxes from RM1.10, used from RM1.10, free delivery in KL & Selangor for orders RM300+, and bulk pricing kicks in from RM1,000. Knowing your GSM won't make boxes cheaper — but it guarantees you'll never overpay for paper you didn't get.

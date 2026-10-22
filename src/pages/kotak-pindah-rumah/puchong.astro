@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: 'Where can I buy carton boxes in Puchong? (English)',
-    a: 'Quinocycle is a wholesale carton box warehouse in Balakong that delivers straight to Puchong, usually same-day or next-day when you order in the morning. Used boxes start from RM0.90 each (stock rotates) and new boxes from RM1.10, with free delivery across KL and Selangor for orders above RM300. Send your size list via WhatsApp 016-891 6381 or browse live stock at shop.quinocycle.com.',
+    a: 'Quinocycle is a wholesale carton box warehouse in Balakong that delivers straight to Puchong, usually same-day or next-day when you order in the morning. Used boxes start from RM1.10 each (stock rotates) and new boxes from RM1.10, with free delivery across KL and Selangor for orders above RM300. Send your size list via WhatsApp 016-891 6381 or browse live stock at shop.quinocycle.com.',
   },
 ];
 
@@ -32,10 +32,10 @@ const storeSchema = {
   "@context": "https://schema.org",
   "@type": "Store",
   "name": `Quinocycle — Kotak Pindah Rumah ${CITY}`,
-  "description": `Pembekal kotak pindah rumah untuk kawasan ${CITY} — Bandar Puteri, Puchong Jaya, Bandar Kinrara & Puchong Perdana. Kotak kardus baru dan terpakai harga borong dari RM0.90 sekotak, penghantaran hari sama atau esok dari gudang Balakong.`,
+  "description": `Pembekal kotak pindah rumah untuk kawasan ${CITY} — Bandar Puteri, Puchong Jaya, Bandar Kinrara & Puchong Perdana. Kotak kardus baru dan terpakai harga borong dari RM1.10 sekotak, penghantaran hari sama atau esok dari gudang Balakong.`,
   "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/puchong/",
   "telephone": "+60168916381",
-  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "priceRange": "RM1.10 - RM38.00 sekotak",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
 
 <Layout
   lang="ms"
-  title={`Kotak Pindah Rumah ${CITY} — Order Pagi Sampai Hari Sama, dari RM0.90 | Quinocycle`}
-  description={`Perlu kotak pindah rumah di ${CITY}? Kami hantar ke Bandar Puteri, Puchong Jaya & Kinrara — kotak dari RM0.90, percuma untuk order RM300+. WhatsApp 016-891 6381.`}
+  title={`Kotak Pindah Rumah ${CITY} — Order Pagi Sampai Hari Sama, dari RM1.10 | Quinocycle`}
+  description={`Perlu kotak pindah rumah di ${CITY}? Kami hantar ke Bandar Puteri, Puchong Jaya & Kinrara — kotak dari RM1.10, percuma untuk order RM300+. WhatsApp 016-891 6381.`}
 >
   <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
@@ -96,7 +96,7 @@ const breadcrumbSchema = {
       Kotak pindah rumah {CITY} <br /><span class="text-primary italic">— order pagi, terima hari sama.</span>
     </h1>
     <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
-      Tak ada gudang kotak borong di Puchong? Tak jadi masalah. Quinocycle menghantar terus dari gudang pembekal kami di Balakong ke <strong class="text-on-surface font-semibold">Bandar Puteri, Puchong Jaya, Bandar Kinrara dan Puchong Perdana</strong> — kotak terpakai dari <strong class="text-on-surface font-semibold">RM0.90</strong>, kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak, penghantaran percuma untuk pesanan melebihi RM300.
+      Tak ada gudang kotak borong di Puchong? Tak jadi masalah. Quinocycle menghantar terus dari gudang pembekal kami di Balakong ke <strong class="text-on-surface font-semibold">Bandar Puteri, Puchong Jaya, Bandar Kinrara dan Puchong Perdana</strong> — kotak terpakai dari <strong class="text-on-surface font-semibold">RM1.10</strong>, kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak, penghantaran percuma untuk pesanan melebihi RM300.
     </p>
     <div class="flex flex-wrap gap-4">
       <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
@@ -148,7 +148,7 @@ const breadcrumbSchema = {
         Quinocycle ialah pembekal kotak kardus yang beroperasi dari Taming Jaya, Balakong — kami membekalkan kepada syarikat mover, penjual online dan kilang di seluruh Lembah Klang. Untuk Puchong, sistemnya mudah: <strong class="text-on-surface font-semibold">WhatsApp senarai saiz dan kuantiti anda waktu pagi, dan kami aturkan penghantaran hari yang sama atau keesokan hari</strong>. Tak perlu keluar rumah, tak perlu sumbat 60 kotak dalam kereta.
       </p>
       <p>
-        Harganya harga borong, bukan harga runcit. <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">Kotak terpakai</a> bermula dari RM0.90 sekotak — gred sekali guna dari kilang, setiap satu disemak, kering dan bebas bau. Kotak baru pula dari RM1.10 di <a href="/shop" class="text-primary font-semibold hover:underline">kedai online kami</a>. Tak pasti yang mana sesuai? Baca <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan kotak baru vs terpakai</a> — ramai pelanggan Puchong akhirnya campurkan kedua-duanya: terpakai untuk pakaian dan buku, baru untuk pinggan mangkuk.
+        Harganya harga borong, bukan harga runcit. <a href="/used-carton-boxes" class="text-primary font-semibold hover:underline">Kotak terpakai</a> bermula dari RM1.10 sekotak — gred sekali guna dari kilang, setiap satu disemak, kering dan bebas bau. Kotak baru pula dari RM1.10 di <a href="/shop" class="text-primary font-semibold hover:underline">kedai online kami</a>. Tak pasti yang mana sesuai? Baca <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan kotak baru vs terpakai</a> — ramai pelanggan Puchong akhirnya campurkan kedua-duanya: terpakai untuk pakaian dan buku, baru untuk pinggan mangkuk.
       </p>
       <p>
         Untuk kondo dan rumah teres di Puchong, anggaran biasa ialah 50–70 kotak bagi kediaman 3 bilik — guna <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="text-primary font-semibold hover:underline">panduan kiraan kotak kami</a> untuk angka yang lebih tepat, dan semak <a href="/kotak-pindah-rumah" class="text-primary font-semibold hover:underline">senarai harga penuh kotak pindah rumah</a> sebelum order. Tip daripada kami: tempah kotak seminggu dua sebelum tarikh pindah dan mula pack bilik yang jarang digunakan dahulu — lagi banyak tip dalam <a href="/blog/tips-pindah-rumah-packing-malaysia" class="text-primary font-semibold hover:underline">panduan packing pindah rumah</a> kami.
@@ -178,7 +178,7 @@ const breadcrumbSchema = {
   <section class="py-16 px-6 md:px-8 max-w-3xl mx-auto">
     <h2 class="font-headline text-2xl md:text-3xl font-extrabold tracking-tighter text-on-surface mb-5">Carton Box Puchong — Wholesale Prices, Delivered</h2>
     <div class="font-body text-secondary leading-relaxed flex flex-col gap-4">
-      <p>Looking for a carton box supplier in Puchong? There is no wholesale box warehouse inside Puchong itself, but Quinocycle is only 25–30 minutes away in Balakong — and we deliver to Bandar Puteri, Puchong Jaya, Bandar Kinrara and the areas around IOI Mall the same day or next day when you confirm your order in the morning. Used carton boxes run from RM0.90 to RM6.00 each (the cheapest size currently in stock is around RM1.70, and stock rotates), while brand-new boxes cost RM1.10 to RM9.00.</p>
+      <p>Looking for a carton box supplier in Puchong? There is no wholesale box warehouse inside Puchong itself, but Quinocycle is only 25–30 minutes away in Balakong — and we deliver to Bandar Puteri, Puchong Jaya, Bandar Kinrara and the areas around IOI Mall the same day or next day when you confirm your order in the morning. Used carton boxes run from RM1.10 to RM7.00 each (the cheapest size currently in stock is RM1.10, and stock rotates), while brand-new boxes cost RM1.10 to RM10.00.</p>
       <p>These are wholesale prices, not the RM8–RM12 per piece you would pay at a hardware shop. Delivery is free for orders above RM300 anywhere in KL and Selangor, and a typical 3-bedroom Puchong home needs 50–70 mixed-size boxes. WhatsApp 016-891 6381 with your list, or explore <a href="/carton-box" class="text-primary font-semibold hover:underline">all carton box delivery areas</a> and <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:underline">live stock &amp; prices</a>.</p>
     </div>
   </section>

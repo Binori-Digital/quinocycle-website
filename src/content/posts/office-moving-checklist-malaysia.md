@@ -26,7 +26,7 @@ faqs:
   - q: "Who must be notified when a company changes its registered address in Malaysia?"
     a: "Notify SSM of a registered office address change within 14 days (usually via your company secretary), then LHDN, your bank, insurers, licensing bodies and local council. Update clients, suppliers, couriers and online listings such as Google Business Profile so invoices and deliveries don't go to the old office."
   - q: "Where can an office buy moving boxes in bulk in Klang Valley?"
-    a: "Buy wholesale direct from a supplier warehouse instead of retail. Quinocycle in Balakong, Selangor sells used cartons from RM0.90 and new from RM1.10, with free delivery in KL and Selangor for orders RM300 and above, and same-day pickup for urgent office moves. WhatsApp 016-891 6381 with your headcount."
+    a: "Buy wholesale direct from a supplier warehouse instead of retail. Quinocycle in Balakong, Selangor sells used cartons from RM1.10 and new from RM1.10, with free delivery in KL and Selangor for orders RM300 and above, and same-day pickup for urgent office moves. WhatsApp 016-891 6381 with your headcount."
 ---
 
 An office move fails in the details: a missing server cable, a client invoice sent to the old address, forty unlabelled boxes nobody can trace to a department. The fix is not working harder in the final week — it is starting eight weeks early with a countdown everyone can see. This checklist is built for Malaysian offices of roughly 10–50 staff, and it complements our [30-day home moving checklist](/blog/pindah-rumah-checklist-30-hari/) if some of your team are relocating homes at the same time.
@@ -69,7 +69,7 @@ Now translate headcount into cartons. The working formula for a typical office:
 - **10–15 boxes** for the pantry, reception and each meeting room
 - **Add 10% spare** — moving day always finds more
 
-A 20-staff office lands around 80–120 boxes. For desk items, [used cartons](/used-carton-boxes/) from RM0.90 do the same job as new ones at a fraction of the price; keep new double-wall boxes for fragile and heavy items. Orders of RM300 and above get free delivery around KL and Selangor, straight from our Balakong warehouse.
+A 20-staff office lands around 80–120 boxes. For desk items, [used cartons](/used-carton-boxes/) from RM1.10 do the same job as new ones at a fraction of the price; keep new double-wall boxes for fragile and heavy items. Orders of RM300 and above get free delivery around KL and Selangor, straight from our Balakong warehouse.
 
 > **Tip:** Never let staff pack files into large cartons. A big box packed solid with paper can exceed 25 kg — the base tears, the files scatter, and someone hurts their back. Small document boxes only for paper; big boxes for light, bulky items.
 
@@ -101,4 +101,4 @@ Before Monday 9am the bar is deliberately low: internet up, phones ringing, each
 
 ## Boxes Sorted in One Message
 
-The cheapest way to buy office moving boxes in Malaysia is wholesale, direct from the warehouse — used from RM0.90, new from RM1.10, document boxes at RM3.50, all listed with exact sizes at [shop.quinocycle.com](https://shop.quinocycle.com). If you are moving within KL or Selangor, [WhatsApp us your headcount and move date](https://wa.me/60168916381?text=Hi%2C%20I%20need%20boxes%20for%20an%20office%20move) and we will recommend a box mix, with free delivery for orders RM300 and above or same-day pickup at Balakong.
+The cheapest way to buy office moving boxes in Malaysia is wholesale, direct from the warehouse — used from RM1.10, new from RM1.10, document boxes at RM3.50, all listed with exact sizes at [shop.quinocycle.com](https://shop.quinocycle.com). If you are moving within KL or Selangor, [WhatsApp us your headcount and move date](https://wa.me/60168916381?text=Hi%2C%20I%20need%20boxes%20for%20an%20office%20move) and we will recommend a box mix, with free delivery for orders RM300 and above or same-day pickup at Balakong.

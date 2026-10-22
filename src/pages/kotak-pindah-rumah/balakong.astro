@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: 'Berapa harga kotak pindah di Balakong?',
-    a: 'Kerana anda beli terus dari gudang, harganya harga borong: kotak terpakai dari RM0.90 sekotak, kotak baru dari RM1.10 sekotak. Tiada kos penghantaran jika ambil sendiri di Balakong.',
+    a: 'Kerana anda beli terus dari gudang, harganya harga borong: kotak terpakai dari RM1.10 sekotak, kotak baru dari RM1.10 sekotak. Tiada kos penghantaran jika ambil sendiri di Balakong.',
   },
   {
     q: 'Boleh dapat kotak hari yang sama di Balakong?',
@@ -28,10 +28,10 @@ const storeSchema = {
   "@context": "https://schema.org",
   "@type": "Store",
   "name": `Quinocycle — Kotak Pindah Rumah ${CITY}`,
-  "description": `Kedai kotak pindah rumah di ${CITY}, Selangor. Kotak kardus baru dan terpakai harga borong dari RM0.90 sekotak — ambil sendiri di gudang atau penghantaran hari sama.`,
+  "description": `Kedai kotak pindah rumah di ${CITY}, Selangor. Kotak kardus baru dan terpakai harga borong dari RM1.10 sekotak — ambil sendiri di gudang atau penghantaran hari sama.`,
   "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/balakong/",
   "telephone": "+60168916381",
-  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "priceRange": "RM1.10 - RM38.00 sekotak",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
@@ -71,8 +71,8 @@ const breadcrumbSchema = {
 
 <Layout
   lang="ms"
-  title={`Kotak Pindah Rumah ${CITY} — Ambil Sendiri di Gudang, dari RM0.90 | Quinocycle`}
-  description={`Cari kotak pindah rumah di ${CITY}? Gudang Quinocycle di Taming Jaya, Balakong jual kotak kardus baru & terpakai harga borong dari RM0.90 sekotak. Ambil sendiri hari sama atau penghantaran percuma (order RM300+). WhatsApp 016-891 6381.`}
+  title={`Kotak Pindah Rumah ${CITY} — Ambil Sendiri di Gudang, dari RM1.10 | Quinocycle`}
+  description={`Cari kotak pindah rumah di ${CITY}? Gudang Quinocycle di Taming Jaya, Balakong jual kotak kardus baru & terpakai harga borong dari RM1.10 sekotak. Ambil sendiri hari sama atau penghantaran percuma (order RM300+). WhatsApp 016-891 6381.`}
 >
   <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
@@ -92,7 +92,7 @@ const breadcrumbSchema = {
       Kotak pindah rumah {CITY} <br /><span class="text-primary italic">— terus dari gudang.</span>
     </h1>
     <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
-      Ini bukan kedai runcit — ini gudang pembekal. Quinocycle beroperasi di <strong class="text-on-surface font-semibold">Taming Jaya, Balakong</strong>, jadi penduduk Balakong dapat harga borong terus tanpa orang tengah: kotak terpakai dari <strong class="text-on-surface font-semibold">RM0.90</strong>, kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak. Ambil sendiri hari yang sama, atau kami hantar.
+      Ini bukan kedai runcit — ini gudang pembekal. Quinocycle beroperasi di <strong class="text-on-surface font-semibold">Taming Jaya, Balakong</strong>, jadi penduduk Balakong dapat harga borong terus tanpa orang tengah: kotak terpakai dari <strong class="text-on-surface font-semibold">RM1.10</strong>, kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak. Ambil sendiri hari yang sama, atau kami hantar.
     </p>
     <div class="flex flex-wrap gap-4">
       <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
@@ -138,7 +138,7 @@ const breadcrumbSchema = {
     <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface mb-6">Kenapa penduduk Balakong beli kotak dari kami?</h2>
     <div class="font-body text-secondary leading-relaxed flex flex-col gap-5 text-base md:text-lg">
       <p>
-        Kalau anda tinggal di Balakong, Taming Jaya, Balakong Jaya atau Bandar Damai Perdana dan sedang merancang pindah rumah, anda sebenarnya tinggal <strong class="text-on-surface font-semibold">beberapa minit dari pembekal kotak borong</strong>. Kebanyakan orang pergi ke kedai hardware atau beli online — dan bayar RM8 hingga RM12 untuk satu kotak yang sama yang kami jual dari RM0.90.
+        Kalau anda tinggal di Balakong, Taming Jaya, Balakong Jaya atau Bandar Damai Perdana dan sedang merancang pindah rumah, anda sebenarnya tinggal <strong class="text-on-surface font-semibold">beberapa minit dari pembekal kotak borong</strong>. Kebanyakan orang pergi ke kedai hardware atau beli online — dan bayar RM8 hingga RM12 untuk satu kotak yang sama yang kami jual dari RM1.10.
       </p>
       <p>
         Gudang kami membekalkan kotak kardus kepada syarikat mover, penjual online dan kilang di seluruh Lembah Klang — dan kami jual pada <strong class="text-on-surface font-semibold">harga borong yang sama kepada individu</strong> yang datang terus. Pilih kotak terpakai gred sekali guna untuk jimat maksimum, atau kotak baru untuk barang pecah belah. Semua stok boleh dilihat dan disemak sendiri sebelum beli.

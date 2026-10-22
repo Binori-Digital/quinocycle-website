@@ -8,7 +8,7 @@ const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Quinoc
 const faqs = [
   {
     q: 'Ada kilang kotak di Shah Alam?',
-    a: 'Soal jujur, jawapan jujur: Quinocycle bukan kilang, dan kami tidak tahu ada kilang kotak yang melayan pembeli runcit di Shah Alam. Kami ialah gudang pembekal borong di Taming Jaya, Balakong — kotak dibeli terus pada skala besar, jadi harganya setara harga kilang: kotak terpakai dari RM0.90, kotak baru dari RM1.10 sekotak. Untuk Shah Alam, anda tak perlu jejak kilang pun — kami hantar ke pintu rumah anda dalam 1 hari bekerja, percuma untuk pesanan melebihi RM300.',
+    a: 'Soal jujur, jawapan jujur: Quinocycle bukan kilang, dan kami tidak tahu ada kilang kotak yang melayan pembeli runcit di Shah Alam. Kami ialah gudang pembekal borong di Taming Jaya, Balakong — kotak dibeli terus pada skala besar, jadi harganya setara harga kilang: kotak terpakai dari RM1.10, kotak baru dari RM1.10 sekotak. Untuk Shah Alam, anda tak perlu jejak kilang pun — kami hantar ke pintu rumah anda dalam 1 hari bekerja, percuma untuk pesanan melebihi RM300.',
     href: '/kilang-kotak',
     linkText: 'Lihat harga kilang dari gudang pembekal →',
   },
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: 'Saya pelajar UITM nak pindah rumah sewa — boleh order kuantiti kecil?',
-    a: 'Boleh dibincang. Kuantiti minimum kami ialah 50–200 unit sesaiz untuk harga borong penuh, tapi untuk kuantiti lebih kecil hantar sahaja senarai anda ke WhatsApp 016-891 6381 dan kami beri sebut harga. Tip untuk pelajar: kotak terpakai dari RM0.90 paling jimat untuk bajet pelajar, dan kalau satu rumah sewa gabungkan pesanan sampai melebihi RM300, penghantaran ke Seksyen 7 terus percuma.',
+    a: 'Boleh dibincang. Kuantiti minimum kami ialah 50–200 unit sesaiz untuk harga borong penuh, tapi untuk kuantiti lebih kecil hantar sahaja senarai anda ke WhatsApp 016-891 6381 dan kami beri sebut harga. Tip untuk pelajar: kotak terpakai dari RM1.10 paling jimat untuk bajet pelajar, dan kalau satu rumah sewa gabungkan pesanan sampai melebihi RM300, penghantaran ke Seksyen 7 terus percuma.',
   },
   {
     q: 'Kami operasi kilang di Seksyen 15 — boleh bekal kotak packing secara tetap?',
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'Where can I buy carton boxes in Shah Alam? (English)',
-    a: 'Quinocycle supplies carton boxes to Shah Alam at wholesale rates from our Balakong warehouse, with next-working-day delivery to every seksyen from Seksyen 7 to U10 and i-City. Used boxes go from RM0.90 apiece with stock that rotates weekly, and new boxes from RM1.10, so students and factories alike pay far below retail. Orders above RM300 ship free within KL and Selangor — WhatsApp 016-891 6381 or order online at shop.quinocycle.com.',
+    a: 'Quinocycle supplies carton boxes to Shah Alam at wholesale rates from our Balakong warehouse, with next-working-day delivery to every seksyen from Seksyen 7 to U10 and i-City. Used boxes go from RM1.10 apiece with stock that rotates weekly, and new boxes from RM1.10, so students and factories alike pay far below retail. Orders above RM300 ship free within KL and Selangor — WhatsApp 016-891 6381 or order online at shop.quinocycle.com.',
   },
 ];
 
@@ -34,10 +34,10 @@ const storeSchema = {
   "@context": "https://schema.org",
   "@type": "Store",
   "name": `Quinocycle — Kotak Pindah Rumah ${CITY}`,
-  "description": `Pembekal kotak pindah rumah untuk ${CITY} — Seksyen 7, Seksyen 13, U8, U10, i-City hingga kawasan perindustrian Seksyen 15 & 23. Kotak kardus baru dan terpakai harga borong dari RM0.90 sekotak, dihantar dalam 1 hari bekerja dari gudang Balakong.`,
+  "description": `Pembekal kotak pindah rumah untuk ${CITY} — Seksyen 7, Seksyen 13, U8, U10, i-City hingga kawasan perindustrian Seksyen 15 & 23. Kotak kardus baru dan terpakai harga borong dari RM1.10 sekotak, dihantar dalam 1 hari bekerja dari gudang Balakong.`,
   "url": "https://www.quinocycle.com.my/kotak-pindah-rumah/shah-alam/",
   "telephone": "+60168916381",
-  "priceRange": "RM0.90 - RM8.00 sekotak",
+  "priceRange": "RM1.10 - RM38.00 sekotak",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "No.13, Jalan Taming P/1, Taming Jaya",
@@ -77,8 +77,8 @@ const breadcrumbSchema = {
 
 <Layout
   lang="ms"
-  title={`Kotak Pindah Rumah ${CITY} — Harga Kilang Sampai ke Seksyen Anda, dari RM0.90 | Quinocycle`}
-  description={`Tak perlu cari kilang kotak di ${CITY}. Kami hantar kotak pindah harga borong ke Seksyen 7, 13, U8, U10 & i-City dalam 1 hari bekerja — dari RM0.90, percuma untuk order RM300+. WhatsApp 016-891 6381.`}
+  title={`Kotak Pindah Rumah ${CITY} — Harga Kilang Sampai ke Seksyen Anda, dari RM1.10 | Quinocycle`}
+  description={`Tak perlu cari kilang kotak di ${CITY}. Kami hantar kotak pindah harga borong ke Seksyen 7, 13, U8, U10 & i-City dalam 1 hari bekerja — dari RM1.10, percuma untuk order RM300+. WhatsApp 016-891 6381.`}
 >
   <script type="application/ld+json" set:html={JSON.stringify(storeSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
@@ -98,7 +98,7 @@ const breadcrumbSchema = {
       Kotak pindah rumah {CITY} <br /><span class="text-primary italic">— harga kilang, tanpa cari kilang.</span>
     </h1>
     <p class="font-body text-lg md:text-xl text-secondary max-w-2xl leading-relaxed mb-8">
-      Ramai yang google "kilang kotak Shah Alam" sebelum pindah — padahal yang anda perlukan bukan kilangnya, tapi harganya. Quinocycle ialah gudang pembekal borong di Balakong yang menghantar terus ke <strong class="text-on-surface font-semibold">Seksyen 7, Seksyen 13, U8, U10 dan sekitar i-City</strong> dalam 1 hari bekerja: kotak terpakai dari <strong class="text-on-surface font-semibold">RM0.90</strong>, kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak — percuma untuk pesanan melebihi RM300.
+      Ramai yang google "kilang kotak Shah Alam" sebelum pindah — padahal yang anda perlukan bukan kilangnya, tapi harganya. Quinocycle ialah gudang pembekal borong di Balakong yang menghantar terus ke <strong class="text-on-surface font-semibold">Seksyen 7, Seksyen 13, U8, U10 dan sekitar i-City</strong> dalam 1 hari bekerja: kotak terpakai dari <strong class="text-on-surface font-semibold">RM1.10</strong>, kotak baru dari <strong class="text-on-surface font-semibold">RM1.10</strong> sekotak — percuma untuk pesanan melebihi RM300.
     </p>
     <div class="flex flex-wrap gap-4">
       <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3.5 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-[#1ebd5a] transition-colors">
@@ -147,7 +147,7 @@ const breadcrumbSchema = {
         Shah Alam bandar yang besar — dari Seksyen 7 dan Seksyen 13 di tengah bandar hinggalah U8 dan U10 di sebelah barat. Tapi besar mana pun, satu benda susah dijumpai: <strong class="text-on-surface font-semibold">pembekal kotak pada harga borong</strong>. Yang ada cuma kedai hardware dan kedai alat tulis yang jual kotak sekeping RM8 hingga RM12. Sebab itulah ramai penduduk Shah Alam akhirnya menaip "kilang kotak Shah Alam" di Google — dan sebab itulah halaman ini wujud. Kami bukan kilang; kami <a href="/kilang-kotak" class="text-primary font-semibold hover:underline">gudang pembekal yang jual pada harga kilang</a>, dan kami hantar terus ke seksyen anda dalam 1 hari bekerja.
       </p>
       <p>
-        Pilihan paling jimat ialah <a href="/kotak-terpakai" class="text-primary font-semibold hover:underline">kotak terpakai</a> dari RM0.90 sekotak — gred sekali guna dari kilang, setiap unit disemak, kering dan bebas bau, jadi selamat untuk pakaian, buku dan barang dapur. Kotak baru pula bermula RM1.10 sekotak dan boleh ditempah melalui <a href="/shop" class="text-primary font-semibold hover:underline">kedai online kami</a>. Kalau masih timbang-timbang, <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan kotak baru vs terpakai</a> kami huraikan bila berbaloi bayar lebih — dan bila tak perlu langsung.
+        Pilihan paling jimat ialah <a href="/kotak-terpakai" class="text-primary font-semibold hover:underline">kotak terpakai</a> dari RM1.10 sekotak — gred sekali guna dari kilang, setiap unit disemak, kering dan bebas bau, jadi selamat untuk pakaian, buku dan barang dapur. Kotak baru pula bermula RM1.10 sekotak dan boleh ditempah melalui <a href="/shop" class="text-primary font-semibold hover:underline">kedai online kami</a>. Kalau masih timbang-timbang, <a href="/blog/beza-kotak-baru-kotak-terpakai" class="text-primary font-semibold hover:underline">perbandingan kotak baru vs terpakai</a> kami huraikan bila berbaloi bayar lebih — dan bila tak perlu langsung.
       </p>
       <p>
         Untuk pelajar UITM yang bertukar semester atau berpindah rumah sewa sekitar Seksyen 7 dan i-City, kotak terpakai memang penyelamat bajet. Satu lagi helah yang pelanggan pelajar kami selalu guna: gabungkan pesanan satu rumah sewa supaya melebihi RM300 — penghantaran terus jadi percuma. Tak pasti berapa banyak kotak cukup? Guna <a href="/blog/berapa-kotak-diperlukan-pindah-rumah" class="text-primary font-semibold hover:underline">panduan kiraan kotak</a> kami; anggaran kasar untuk rumah 3 bilik ialah 50–70 kotak campuran saiz S dan M.
@@ -183,7 +183,7 @@ const breadcrumbSchema = {
   <section class="py-16 px-6 md:px-8 max-w-3xl mx-auto">
     <h2 class="font-headline text-2xl md:text-3xl font-extrabold tracking-tighter text-on-surface mb-5">Carton Box Shah Alam — Wholesale Prices, Delivered</h2>
     <div class="font-body text-secondary leading-relaxed flex flex-col gap-4">
-      <p>Searching for a carton box supplier in Shah Alam? Quinocycle is a wholesale warehouse in Balakong, about 35–40 minutes away, and we deliver to every corner of the city — Seksyen 7, Seksyen 13, U8, U10 and around i-City — within one working day. Used carton boxes range from RM0.90 to RM6.00 each (stock rotates, with the cheapest in-stock size around RM1.70) and new boxes from RM1.10 to RM9.00. UITM students moving between rented rooms and factories in Seksyen 15 needing regular packing supplies both buy at the same warehouse rate.</p>
+      <p>Searching for a carton box supplier in Shah Alam? Quinocycle is a wholesale warehouse in Balakong, about 35–40 minutes away, and we deliver to every corner of the city — Seksyen 7, Seksyen 13, U8, U10 and around i-City — within one working day. Used carton boxes range from RM1.10 to RM7.00 each (stock rotates, with the cheapest in-stock size at RM1.10) and new boxes from RM1.10 to RM10.00. UITM students moving between rented rooms and factories in Seksyen 15 needing regular packing supplies both buy at the same warehouse rate.</p>
       <p>Orders above RM300 get free delivery across KL and Selangor, so pooling a housemate order pays off. WhatsApp your list to 016-891 6381, then browse <a href="/carton-box" class="text-primary font-semibold hover:underline">all carton box delivery areas</a> and <a href="https://shop.quinocycle.com" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:underline">live stock &amp; prices</a>.</p>
     </div>
   </section>

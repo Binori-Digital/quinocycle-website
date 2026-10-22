@@ -1,6 +1,6 @@
 ---
 title: "Packing Materials Checklist Malaysia: Everything You Need (2026)"
-description: "Complete packing materials checklist for Malaysia: boxes from RM0.90, tape per 50 boxes, bubble wrap vs paper, and quantity tables for moves & online shops."
+description: "Complete packing materials checklist for Malaysia: boxes from RM1.10, tape per 50 boxes, bubble wrap vs paper, and quantity tables for moves & online shops."
 category: "Packaging Knowledge"
 img: "/images/product-new.jpg"
 date: "2026-09-18"
@@ -15,7 +15,7 @@ keywords:
   - "carton box and bubble wrap supplier"
   - "how much tape for moving boxes"
   - "packing materials wholesale klang valley"
-directAnswer: "A complete packing materials checklist covers 6 items: carton boxes (from RM0.90 used, RM1.10 new), OPP tape (about 2 rolls of 48mm per 50 boxes), protective wrap (bubble wrap, paper or cloth), stretch film for bundling, markers and labels, and a box cutter. A 3-bedroom house move needs roughly 50–70 boxes plus 4–6 tape rolls."
+directAnswer: "A complete packing materials checklist covers 6 items: carton boxes (from RM1.10 used, RM1.10 new), OPP tape (about 2 rolls of 48mm per 50 boxes), protective wrap (bubble wrap, paper or cloth), stretch film for bundling, markers and labels, and a box cutter. A 3-bedroom house move needs roughly 50–70 boxes plus 4–6 tape rolls."
 faqs:
   - q: "What packing materials do I need for moving house in Malaysia?"
     a: "The core packing materials list: 50–70 carton boxes for a 3-bedroom home, 4–6 rolls of 48mm OPP tape, bubble wrap or old newspaper for fragile items, a marker per packer, a box cutter, and stretch film if you're wrapping furniture. Total materials budget is typically RM150–RM350 if you buy from a warehouse supplier."
@@ -26,7 +26,7 @@ faqs:
   - q: "What packing materials does a small online business need monthly?"
     a: "A shop doing 100 orders a month typically needs 100–120 boxes in 2–3 standard sizes, 4–5 rolls of tape, one 100m roll of bubble wrap or a bundle of kraft paper, thermal or A6 labels, and pouches for the airway bill. Budget around RM200–RM400 monthly depending on box size and condition."
   - q: "Where can I buy packing materials cheaply in Klang Valley?"
-    a: "Buy direct from a warehouse supplier rather than hardware or stationery shops, which charge retail markups of 3–8x on boxes. Quinocycle's warehouse in Balakong, Selangor supplies used cartons from RM0.90 and new boxes from RM1.10, with free delivery in KL & Selangor for orders RM300 and above."
+    a: "Buy direct from a warehouse supplier rather than hardware or stationery shops, which charge retail markups of 3–8x on boxes. Quinocycle's warehouse in Balakong, Selangor supplies used cartons from RM1.10 and new boxes from RM1.10, with free delivery in KL & Selangor for orders RM300 and above."
 ---
 
 Nothing stalls a packing day faster than running out of tape at 10pm, or discovering your "big enough" box collection is three boxes short. Whether you're moving house or shipping 100 parcels a month for your online shop, the materials list is nearly identical — only the quantities change. Here's the complete checklist, with realistic quantities and Malaysian prices, so you buy everything once and get on with it.
@@ -50,12 +50,12 @@ Boxes are 60–70% of your materials budget, so this is where choosing well matt
 
 | Box | Size (mm) | Price | Best for |
 |---|---|---|---|
-| Used Carton MG (double wall) | 380 × 230 × 270 | RM1.70 | Books, heavy dense items |
-| Small Size Carton Box A4 (new) | 310 × 220 × 220 | RM3.00 | Apparel, online orders |
-| Used Carton Box Yellow (double wall) | 460 × 330 × 310 | RM3.50 | Kitchenware, general packing |
-| Medium Size Box A3 (new, double wall) | 440 × 310 × 230 | RM5.00 | Fragile goods, plates |
-| Used Carton Box PDC (double wall) | 590 × 380 × 380 | RM5.00 | House/office moving, files |
-| Jumbo Size Box XL (new, double wall) | 485 × 485 × 500 | RM9.00 | Pillows, blankets, bulky light items |
+| Used Carton MG (double wall) | 380 × 230 × 270 | RM1.90 | Books, heavy dense items |
+| Small Size Carton Box A4 (new) | 310 × 220 × 220 | RM3.50 | Apparel, online orders |
+| Used Carton Box Yellow (double wall) | 460 × 330 × 310 | RM3.90 | Kitchenware, general packing |
+| Medium Size Box A3 (new, double wall) | 440 × 310 × 230 | RM5.50 | Fragile goods, plates |
+| Used Carton Box PDC (double wall) | 590 × 380 × 380 | RM5.50 | House/office moving, files |
+| Jumbo Size Box XL (new, double wall) | 485 × 485 × 500 | RM10.00 | Pillows, blankets, bulky light items |
 
 The golden rule: **small boxes for heavy things, big boxes for light things.** A jumbo box full of books can hit 30kg — it will burst, or your back will.
 
@@ -107,7 +107,7 @@ Two complete shopping lists, side by side:
 | Markers | 2–3 | 1–2 |
 | Estimated budget | RM150–RM350 | RM200–RM400/month |
 
-Both budgets assume warehouse prices — [used cartons](/used-carton-boxes/) from RM0.90 and new from RM1.10 — not the RM8–RM12 per box you'll pay at retail.
+Both budgets assume warehouse prices — [used cartons](/used-carton-boxes/) from RM1.10 and new from RM1.10 — not the RM8–RM12 per box you'll pay at retail.
 
 ## What NOT to Waste Money On
 

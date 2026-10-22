@@ -1,6 +1,6 @@
 ---
 title: "Warehouse Stock Picking Methods: Which of the 4 Fits Your Business?"
-description: "Warehouse stock picking methods compared for Malaysian SMEs: single order, batch, zone and wave picking, FIFO tips, and how RM3.50 uniform cartons speed packing."
+description: "Warehouse stock picking methods compared for Malaysian SMEs: single order, batch, zone and wave picking, FIFO tips, and how RM3.90 uniform cartons speed packing."
 category: "Warehouse Packaging"
 img: "/images/audience-logistics.jpg"
 date: "2026-09-14"
@@ -24,7 +24,7 @@ faqs:
   - q: "Should cartoned stock be picked FIFO or LIFO?"
     a: "FIFO (first in, first out) for anything with expiry dates, warranty periods or packaging that yellows over time — old stock ships first. LIFO is only acceptable for identical, non-perishable items where digging out older cartons costs more time than it saves. Most Malaysian e-commerce stock should run FIFO."
   - q: "How do consistent carton sizes speed up order picking and packing?"
-    a: "Uniform cartons stack in stable, countable columns, so pickers verify quantities at a glance instead of opening boxes. At the packing table, one or two standard sizes like a RM3.50 medium box remove the which-box-fits decision, saving 20–30 seconds per order and simplifying postage rate calculations."
+    a: "Uniform cartons stack in stable, countable columns, so pickers verify quantities at a glance instead of opening boxes. At the packing table, one or two standard sizes like a RM3.90 medium box remove the which-box-fits decision, saving 20–30 seconds per order and simplifying postage rate calculations."
   - q: "How can I reduce picking errors without buying WMS software?"
     a: "Label every carton on the side facing the aisle, keep one SKU per location, pick in a fixed route sorted by location code, and verify with a quantity count at packing. These basics typically cut mispicks dramatically for SMEs — software helps, but tidy locations and clear carton labels come first."
 ---
@@ -52,7 +52,7 @@ Batch picking groups similar orders — say, 10 orders that all contain items fr
 
 For a typical Shopee or TikTok Shop seller doing 30–80 orders daily, batch picking commonly cuts walking time by around half. The discipline that makes it work: never sort in the aisle, and cap batches at what one trolley carries reliably — over-stuffed batches are where mispicks breed.
 
-> **Tip:** Use a sturdy open carton as a picking tote — a used [Vital medium box](/used-carton-boxes/) (530 × 380 × 260 mm, RM3.50) rides a trolley well, and its shallow depth stops items burying each other. When it wears out, RM3.50 replaces it.
+> **Tip:** Use a sturdy open carton as a picking tote — a used [Tyson box](/used-carton-boxes/) (430 × 300 × 160 mm, RM2.00) rides a trolley well, and its shallow depth stops items burying each other. When it wears out, RM2.00 replaces it.
 
 ## Zone and Wave Picking: When You Grow Into Them
 
@@ -83,6 +83,6 @@ If your cartons sit more than a couple of months, FIFO with a marker-pen date on
 
 Mixed, scavenged cartons in a dozen sizes stack into wobbly pyramids that hide stock and collapse counts. Standardise on one or two sizes and three things happen: columns stack stable and countable at a glance, locations hold predictable quantities, and the packing table stops playing box-size roulette on every order.
 
-A practical Malaysian SME setup is one medium workhorse — the used [Yellow box](/kotak-terpakai/) (460 × 330 × 310 mm, RM3.50, double wall) or new [Q440](/shop/) (440 × 310 × 310 mm, RM3.50) — plus one small size for dense items. Double wall matters for stock that gets picked from, restacked and picked again; single-wall boxes go soft after a few cycles. The full size list with exact dimensions is at [shop.quinocycle.com](https://shop.quinocycle.com), or [WhatsApp us your product sizes](https://wa.me/60168916381?text=Hi%2C%20I%20need%20uniform%20cartons%20for%20my%20warehouse) and we will suggest a standard carton for your racking — free delivery in KL and Selangor from RM300, wholesale pricing from RM1,000.
+A practical Malaysian SME setup is one medium workhorse — the used [Yellow box](/kotak-terpakai/) (460 × 330 × 310 mm, RM3.90, double wall) or new [Q440](/shop/) (440 × 310 × 310 mm, RM3.90) — plus one small size for dense items. Double wall matters for stock that gets picked from, restacked and picked again; single-wall boxes go soft after a few cycles. The full size list with exact dimensions is at [shop.quinocycle.com](https://shop.quinocycle.com), or [WhatsApp us your product sizes](https://wa.me/60168916381?text=Hi%2C%20I%20need%20uniform%20cartons%20for%20my%20warehouse) and we will suggest a standard carton for your racking — free delivery in KL and Selangor from RM300, wholesale pricing from RM1,000.
 
 Pick the method that matches today's order volume, not the warehouse you hope to have in two years. Graduating from single order to batch to waves takes a week of adjustment each time — far cheaper than running the wrong system for a year while the orders, and the walking, pile up.
